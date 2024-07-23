@@ -8,7 +8,6 @@ const { frontContent, backContent } = Astro.props;
       <p>{frontContent}</p>
     </div>
     <div class="flip-card-back">
-
       <p>{backContent}</p>
     </div>
   </div>
@@ -20,8 +19,8 @@ const { frontContent, backContent } = Astro.props;
     width: 100%;
     aspect-ratio: 2/3;
     perspective: 1000px;
+    cursor: pointer;
   }
-
   .flip-card-inner {
     position: relative;
     width: 100%;
@@ -30,11 +29,9 @@ const { frontContent, backContent } = Astro.props;
     transition: transform 0.6s;
     transform-style: preserve-3d;
   }
-
-  .flip-card:hover .flip-card-inner {
+  .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
   }
-
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -46,15 +43,21 @@ const { frontContent, backContent } = Astro.props;
     justify-content: center;
     border-radius: 70px;
   }
-
   .flip-card-front {
     background-color: hsl(313, 80%, 70%);
     color: black;
   }
-
   .flip-card-back {
     background-color: hsl(313, 34%, 88%);
     color: black;
     transform: rotateY(180deg);
   }
 </style>
+
+<script>
+  document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', function() {
+      this.classList.toggle('flipped');
+    });
+  });
+</script>
