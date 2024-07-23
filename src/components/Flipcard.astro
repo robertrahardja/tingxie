@@ -55,9 +55,10 @@ const { frontContent, backContent } = Astro.props;
 </style>
 
 <script>
-  document.querySelectorAll('.flip-card').forEach(card => {
-    card.addEventListener('click', function() {
-      this.classList.toggle('flipped');
+  document.querySelectorAll('.flip-card').forEach((card) => {
+    card.addEventListener('click', (event) => {
+      const target = event.currentTarget as HTMLElement;
+      target.classList.toggle('flipped');
     });
   });
 </script>
