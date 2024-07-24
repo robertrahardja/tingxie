@@ -1,9 +1,9 @@
 ---
 ---
-<button id="playButton">Play Audio test</button>
-<audio id="audioPlayer" src="/public/translate_tts.mp3"></audio>
+<button id="playButton">Play Audio </button>
+<audio id="audioPlayer" src="/translate_tts.mp3"></audio>
 
-<script>
+<script client:load>
   document.addEventListener('DOMContentLoaded', () => {
     const playButton = document.getElementById('playButton') as HTMLButtonElement;
     const audioPlayer = document.getElementById('audioPlayer') as HTMLAudioElement;
