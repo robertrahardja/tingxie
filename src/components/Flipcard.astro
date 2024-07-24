@@ -1,17 +1,29 @@
 ---
 const { frontContent, backContent } = Astro.props;
----
 
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <p>{frontContent}</p>
-    </div>
-    <div class="flip-card-back">
-      <p>{backContent}</p>
+const test = [
+
+{ frontContent: "今天",
+  backContent: "jīn tiān" }
+  ,
+  { frontContent: "明天",
+backContent: "míng tiān" }
+]
+---
+{
+test.map((item) => (
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <p>{item.frontContent}</p>
+      </div>
+      <div class="flip-card-back">
+        <p>{item.backContent}</p>
+      </div>
     </div>
   </div>
-</div>
+))}
+
 
 <style>
   .flip-card {
