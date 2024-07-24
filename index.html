@@ -1,6 +1,28 @@
 <!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.12.2"><title>Astro</title><style>.flip-card[data-astro-cid-quyfdlrb]{background-color:transparent;width:100%;aspect-ratio:2/3;perspective:1000px;cursor:pointer}.flip-card-inner[data-astro-cid-quyfdlrb]{position:relative;width:100%;height:100%;text-align:center;transition:transform .6s;transform-style:preserve-3d}.flip-card[data-astro-cid-quyfdlrb].flipped .flip-card-inner[data-astro-cid-quyfdlrb]{transform:rotateY(180deg)}.flip-card-front[data-astro-cid-quyfdlrb],.flip-card-back[data-astro-cid-quyfdlrb]{position:absolute;width:100%;height:100%;backface-visibility:hidden;font-size:5rem;display:flex;align-items:center;justify-content:center;border-radius:70px}.flip-card-front[data-astro-cid-quyfdlrb]{background-color:#f075d5;color:#000}.flip-card-back[data-astro-cid-quyfdlrb]{background-color:#ebd6e6;color:#000;transform:rotateY(180deg)}
-</style><script type="module">document.querySelectorAll(".flip-card").forEach(e=>{e.addEventListener("click",t=>{t.currentTarget.classList.toggle("flipped")})});document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("playButton"),t=document.getElementById("audioPlayer");e&&t&&(e.addEventListener("click",()=>{t.paused?(t.play(),e.textContent="Pause Audio"):(t.pause(),e.textContent="Play Audio")}),t.addEventListener("ended",()=>{e.textContent="Play Audio"}))});
+</style><script type="module">document.querySelectorAll(".flip-card").forEach(e=>{e.addEventListener("click",t=>{t.currentTarget.classList.toggle("flipped")})});
 </script></head> <body>
 hello
 there
-<button id="playButton">Play Audio test</button> <audio id="audioPlayer" src="/public/translate_tts.mp3"></audio>  <div class="flip-card" data-astro-cid-quyfdlrb><div class="flip-card-inner" data-astro-cid-quyfdlrb><div class="flip-card-front" data-astro-cid-quyfdlrb><p data-astro-cid-quyfdlrb>今天</p></div><div class="flip-card-back" data-astro-cid-quyfdlrb><p data-astro-cid-quyfdlrb>jīn tiān</p></div></div></div><div class="flip-card" data-astro-cid-quyfdlrb><div class="flip-card-inner" data-astro-cid-quyfdlrb><div class="flip-card-front" data-astro-cid-quyfdlrb><p data-astro-cid-quyfdlrb>明天</p></div><div class="flip-card-back" data-astro-cid-quyfdlrb><p data-astro-cid-quyfdlrb>míng tiān</p></div></div></div> </body></html>
+<button id="playButton">Play Audio </button> <audio id="audioPlayer" src="/translate_tts.mp3"></audio> <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const playButton = document.getElementById('playButton') ;
+    const audioPlayer = document.getElementById('audioPlayer') ;
+
+    if (playButton && audioPlayer) {
+      playButton.addEventListener('click', () => {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+          playButton.textContent = 'Pause Audio';
+        } else {
+          audioPlayer.pause();
+          playButton.textContent = 'Play Audio';
+        }
+      });
+
+      // Add this event listener to handle when audio ends
+      audioPlayer.addEventListener('ended', () => {
+        playButton.textContent = 'Play Audio';
+      });
+    }
+  });
+</script> <div class="flip-card" data-astro-cid-quyfdlrb><div class="flip-card-inner" data-astro-cid-quyfdlrb><div class="flip-card-front" data-astro-cid-quyfdlrb><p data-astro-cid-quyfdlrb>今天</p></div><div class="flip-card-back" data-astro-cid-quyfdlrb><p data-astro-cid-quyfdlrb>jīn tiān</p></div></div></div><div class="flip-card" data-astro-cid-quyfdlrb><div class="flip-card-inner" data-astro-cid-quyfdlrb><div class="flip-card-front" data-astro-cid-quyfdlrb><p data-astro-cid-quyfdlrb>明天</p></div><div class="flip-card-back" data-astro-cid-quyfdlrb><p data-astro-cid-quyfdlrb>míng tiān</p></div></div></div> </body></html>
