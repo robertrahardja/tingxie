@@ -3,7 +3,7 @@
 <button id="playButton">Play Audio </button>
 <audio id="audioPlayer" src="/translate_tts.mp3"></audio>
 
-<script client:load>
+<script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
     const playButton = document.getElementById('playButton') as HTMLButtonElement;
     const audioPlayer = document.getElementById('audioPlayer') as HTMLAudioElement;
