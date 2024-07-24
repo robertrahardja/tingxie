@@ -1,14 +1,19 @@
 ---
+const audioPath = '/translate_tts.mp3';
 ---
-<button id="playButton">Play Audio test</button>
-<audio id="audioPlayer" src={import.meta.env.BASE_URL + '/translate_tts.mp3'}></audio>
 
-<script is:inline>
+<button id="playButton">Play Audio test</button>
+<audio id="audioPlayer"></audio>
+
+<script define:vars={{ audioPath }}>
   document.addEventListener('DOMContentLoaded', () => {
     const playButton = document.getElementById('playButton');
     const audioPlayer = document.getElementById('audioPlayer');
     
     if (playButton && audioPlayer) {
+      // Set the audio source dynamically
+      audioPlayer.src = audioPath;
+
       playButton.addEventListener('click', () => {
         if (audioPlayer.paused) {
           audioPlayer.play().catch(e => console.error('Audio playback failed', e));
@@ -18,7 +23,7 @@
           playButton.textContent = 'Play Audio';
         }
       });
-
+      
       audioPlayer.addEventListener('ended', () => {
         playButton.textContent = 'Play Audio';
       });
