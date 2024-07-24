@@ -1,25 +1,28 @@
 ---
 ---
-
 <button id="playButton">Play Audio test</button>
-
 <audio id="audioPlayer" src="/public/translate_tts.mp3"></audio>
 
 <script>
-  const playButton = document.getElementById('playButton');
-  const audioPlayer = document.getElementById('audioPlayer');
+  document.addEventListener('DOMContentLoaded', () => {
+    const playButton = document.getElementById('playButton') as HTMLButtonElement;
+    const audioPlayer = document.getElementById('audioPlayer') as HTMLAudioElement;
 
-  playButton.addEventListener('click', () => {
-    if (audioPlayer.paused) {
-      audioPlayer.play();
-      playButton.textContent = 'Pause Audio';
-    } else {
-      audioPlayer.pause();
-      playButton.textContent = 'Play Audio';
+    if (playButton && audioPlayer) {
+      playButton.addEventListener('click', () => {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+          playButton.textContent = 'Pause Audio';
+        } else {
+          audioPlayer.pause();
+          playButton.textContent = 'Play Audio';
+        }
+      });
+
+      // Add this event listener to handle when audio ends
+      audioPlayer.addEventListener('ended', () => {
+        playButton.textContent = 'Play Audio';
+      });
     }
-  });
-// Add this event listener to handle when audio ends
-  audioPlayer.addEventListener('ended', () => {
-    playButton.textContent = 'Play Audio';
   });
 </script>
