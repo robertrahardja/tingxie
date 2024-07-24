@@ -3,15 +3,15 @@
 </script></head> <body>
 hello
 there
-<button id="playButton">Play Audio </button> <audio id="audioPlayer" src="/translate_tts.mp3"></audio> <script>
+<button id="playButton">Play Audio test</button> <audio id="audioPlayer" src="/tingxietranslate_tts.mp3"></audio> <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const playButton = document.getElementById('playButton') ;
-    const audioPlayer = document.getElementById('audioPlayer') ;
-
+    const playButton = document.getElementById('playButton');
+    const audioPlayer = document.getElementById('audioPlayer');
+    
     if (playButton && audioPlayer) {
       playButton.addEventListener('click', () => {
         if (audioPlayer.paused) {
-          audioPlayer.play();
+          audioPlayer.play().catch(e => console.error('Audio playback failed', e));
           playButton.textContent = 'Pause Audio';
         } else {
           audioPlayer.pause();
@@ -19,7 +19,6 @@ there
         }
       });
 
-      // Add this event listener to handle when audio ends
       audioPlayer.addEventListener('ended', () => {
         playButton.textContent = 'Play Audio';
       });
