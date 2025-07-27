@@ -5,22 +5,31 @@ An interactive web application designed to help students practice Chinese vocabu
 ## Features
 
 ### 📚 Vocabulary Practice
-- Interactive flashcards with Chinese characters, pinyin, and English meanings
-- Click to reveal/hide meanings
+- Interactive flip cards with numbers on front, Chinese characters on back
+- Audio playback for each word with automatic card flipping
+- Displays pinyin and English meanings
 - Shuffle functionality for random practice
-- Organized by weekly lessons
+- Organized by weekly lessons with themed vocabulary
 
 ### 🎧 Dictation Practice (听写)
 - Audio-based word practice (audio files to be added)
-- Progress tracking
-- Randomized word order
-- Visual feedback for completed words
+- Progress tracking with visual progress bar
+- Randomized word order for better learning
+- Shows Chinese characters after each word
+- Automatic progression through vocabulary list
 
-### 🗣️ Oral Practice
-- Timed speaking exercises (2 minutes)
-- Multiple practice topics
-- Visual recording indicator
-- Topic rotation for variety
+### 🎤 Oral Practice
+- Scenario-based speaking exercises with reveal buttons
+- Highlighted sentences for memorization practice
+- Built-in audio recording with visual indicators
+- 2-minute timer for practice sessions
+- Save and playback recordings
+
+### 📝 Comprehensive Exercises
+- Checkbox tracking for homework completion
+- Progress saved to browser's localStorage
+- Generate learning reports
+- Track completion across multiple weeks
 
 ## Getting Started
 
@@ -73,12 +82,42 @@ The application includes 4 weeks of vocabulary:
 - Safari
 - Edge
 
+## Audio File Structure
+
+Place audio files in the following structure:
+```
+audio/
+├── week1/
+│   ├── nihao.mp3
+│   ├── xiexie.mp3
+│   └── ...
+├── week2/
+│   ├── xuexiao.mp3
+│   ├── jiaoshi.mp3
+│   └── ...
+├── week3/
+│   └── ...
+└── week4/
+    └── ...
+```
+
+## Key Improvements from P2HCL Template
+
+- **Flip Card Design**: Cards now show numbers on front with audio buttons, Chinese characters on back
+- **Instructions Section**: Clear usage instructions at the top of the page
+- **Enhanced UI**: Better color scheme with gradients and improved typography
+- **Progress Tracking**: All progress is saved to localStorage
+- **Recording Features**: Built-in audio recording for oral practice
+- **Exercise Tracking**: Checkbox system for tracking homework completion
+
 ## Future Enhancements
 - [ ] Add actual audio recordings for dictation
 - [ ] Implement speech recognition for oral practice
 - [ ] Add more vocabulary weeks
-- [ ] Create student progress tracking
+- [ ] Create student progress tracking dashboard
 - [ ] Add printable practice sheets
+- [ ] Export progress reports as PDF
+- [ ] Add parent/teacher portal
 
 ## Contributing
 Feel free to submit issues and enhancement requests!
