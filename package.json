@@ -1,0 +1,20 @@
+{
+  "name": "tingxie",
+  "version": "1.0.0",
+  "description": "Chinese Homework Helper",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "serve": "nodemon --exec 'http-server -p 8000' --ext html,css,js"
+  },
+  "keywords": ["chinese", "homework", "education"],
+  "author": "Robert Rahardja",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
