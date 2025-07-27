@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理页面 - 中文作业助手</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Admin-specific styles */
+        .admin-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .admin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .admin-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .vocab-input-form {
+            display: grid;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .input-with-button {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .input-with-button input {
+            flex: 1;
+        }
+        
+        .fetch-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .fetch-btn:hover {
+            background: #5a5cd8;
+            transform: translateY(-1px);
+        }
+        
+        .fetch-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .vocab-table th, .vocab-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .vocab-table th {
+            background: #f7f7f7;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .vocab-table tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .edit-btn, .delete-btn, .play-btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .edit-btn {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .delete-btn {
+            background: #f44336;
+            color: white;
+        }
+        
+        .play-btn {
+            background: #2196f3;
+            color: white;
+        }
+        
+        .batch-upload {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .upload-area {
+            border: 2px dashed #667eea;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            background: #f9f9ff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .upload-area:hover {
+            background: #f0f0ff;
+            border-color: #5a5cd8;
+        }
+        
+        .upload-area.dragging {
+            background: #e0e0ff;
+            border-color: #4040d0;
+        }
+        
+        .status-message {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        .status-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status-message.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        .export-import-section {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .export-import-section > div {
+            flex: 1;
+        }
+        
+        .password-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fff3cd;
+            border-radius: 10px;
+            border: 1px solid #ffeaa7;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-header">
+        <h1>词汇管理系统 Vocabulary Management</h1>
+        <p>添加和管理中文词汇 | Add and manage Chinese vocabulary</p>
+    </div>
+    
+    <div class="admin-container">
+        <!-- Password Protection -->
+        <div id="password-section" class="admin-section password-section">
+            <h2>🔒 管理员登录 Admin Login</h2>
+            <div class="form-group">
+                <label for="admin-password">密码 Password:</label>
+                <input type="password" id="admin-password" placeholder="输入管理员密码">
+                <button class="btn btn-primary" onclick="checkPassword()" style="margin-top: 10px;">登录 Login</button>
+            </div>
+        </div>
+        
+        <!-- Main Admin Content (Hidden by default) -->
+        <div id="admin-content" class="hidden">
+            <!-- Add New Vocabulary -->
+            <div class="admin-section">
+                <h2>📝 添加新词汇 Add New Vocabulary</h2>
+                
+                <div class="status-message" id="status-message"></div>
+                
+                <form class="vocab-input-form" id="vocab-form">
+                    <div class="form-group">
+                        <label for="week-select">选择周 Select Week:</label>
+                        <select id="week-select">
+                            <option value="1">第一周 Week 1</option>
+                            <option value="2">第二周 Week 2</option>
+                            <option value="3">第三周 Week 3</option>
+                            <option value="4">第四周 Week 4</option>
+                            <option value="5">第五周 Week 5 (新)</option>
+                            <option value="6">第六周 Week 6 (新)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="chinese-input">中文 Chinese Characters:</label>
+                        <div class="input-with-button">
+                            <input type="text" id="chinese-input" placeholder="例如：你好" required>
+                            <button type="button" class="fetch-btn" onclick="fetchPinyin()">
+                                获取拼音 Get Pinyin <span id="pinyin-spinner" class="loading-spinner hidden"></span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pinyin-input">拼音 Pinyin:</label>
+                        <input type="text" id="pinyin-input" placeholder="例如：nǐ hǎo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="meaning-input">英文意思 English Meaning:</label>
+                        <input type="text" id="meaning-input" placeholder="例如：Hello" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>音频 Audio:</label>
+                        <div class="input-with-button">
+                            <input type="text" id="audio-status" placeholder="点击生成音频" readonly>
+                            <button type="button" class="fetch-btn" onclick="generateAudio()">
+                                生成音频 Generate Audio <span id="audio-spinner" class="loading-spinner hidden"></span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">添加词汇 Add Vocabulary</button>
+                </form>
+            </div>
+            
+            <!-- Current Vocabulary List -->
+            <div class="admin-section">
+                <h2>📚 当前词汇列表 Current Vocabulary</h2>
+                
+                <div class="form-group">
+                    <label for="week-filter">筛选周 Filter by Week:</label>
+                    <select id="week-filter" onchange="loadVocabularyList()">
+                        <option value="all">所有周 All Weeks</option>
+                        <option value="1">第一周 Week 1</option>
+                        <option value="2">第二周 Week 2</option>
+                        <option value="3">第三周 Week 3</option>
+                        <option value="4">第四周 Week 4</option>
+                    </select>
+                </div>
+                
+                <table class="vocab-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>中文 Chinese</th>
+                            <th>拼音 Pinyin</th>
+                            <th>英文 English</th>
+                            <th>音频 Audio</th>
+                            <th>操作 Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vocab-list">
+                        <!-- Vocabulary items will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Batch Upload -->
+            <div class="admin-section batch-upload">
+                <h2>📤 批量上传 Batch Upload</h2>
+                
+                <div class="upload-area" id="upload-area" ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                    <p style="font-size: 1.2em; margin-bottom: 10px;">📁 拖拽CSV文件到这里</p>
+                    <p>或者</p>
+                    <input type="file" id="file-input" accept=".csv" style="display: none;" onchange="handleFileSelect(event)">
+                    <button class="btn btn-primary" onclick="document.getElementById('file-input').click()">选择文件 Choose File</button>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                        CSV格式：chinese,pinyin,meaning,audio_filename
+                    </p>
+                </div>
+                
+                <div class="export-import-section">
+                    <div>
+                        <h3>导出数据 Export Data</h3>
+                        <button class="btn btn-success" onclick="exportVocabulary()">导出所有词汇 Export All Vocabulary</button>
+                    </div>
+                    <div>
+                        <h3>导入数据 Import Data</h3>
+                        <button class="btn btn-warning" onclick="importVocabulary()">从JSON导入 Import from JSON</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="admin.js"></script>
+</body>
+</html>

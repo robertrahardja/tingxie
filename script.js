@@ -1,5 +1,5 @@
 // Enhanced vocabulary data structure
-const vocabularyData = {
+let vocabularyData = {
     1: [
         { id: 1, chinese: '你好', pinyin: 'nǐ hǎo', meaning: 'Hello', audio: 'nihao.mp3' },
         { id: 2, chinese: '谢谢', pinyin: 'xiè xie', meaning: 'Thank you', audio: 'xiexie.mp3' },
@@ -494,8 +494,28 @@ function loadSavedProgress() {
     }
 }
 
+// Load custom vocabulary if available
+function loadCustomVocabulary() {
+    const customVocab = localStorage.getItem('customVocabulary');
+    if (customVocab) {
+        try {
+            const parsed = JSON.parse(customVocab);
+            // Merge with default vocabulary
+            Object.keys(parsed).forEach(week => {
+                if (parsed[week] && parsed[week].length > 0) {
+                    vocabularyData[week] = parsed[week];
+                }
+            });
+            console.log('Loaded custom vocabulary');
+        } catch (error) {
+            console.error('Error loading custom vocabulary:', error);
+        }
+    }
+}
+
 // Initialize
 window.onload = function() {
+    loadCustomVocabulary();
     loadVocabulary();
     loadDictationWords();
     loadSavedProgress();
