@@ -6,6 +6,7 @@ class TingxieApp {
         this.showImportantOnly = false;
         this.currentWords = [];
         this.revealedItems = new Set();
+        this.lastScrollY = 0;
         
         this.init();
     }
@@ -89,6 +90,9 @@ class TingxieApp {
 
         // Touch event optimization for mobile
         this.addTouchEventListeners();
+        
+        // Scroll event for hiding menu
+        this.setupScrollListener();
     }
 
     addTouchEventListeners() {
@@ -323,6 +327,47 @@ class TingxieApp {
         
         menuToggle.classList.remove('active');
         navMenu.classList.remove('active');
+    }
+
+    setupScrollListener() {
+        let ticking = false;
+        
+        const updateNavbar = () => {
+            const currentScrollY = window.scrollY;
+            const navbar = document.querySelector('.main-nav');
+            
+            // Only hide on mobile devices (screen width < 768px)
+            if (window.innerWidth < 768) {
+                if (currentScrollY > this.lastScrollY && currentScrollY > 60) {
+                    // Scrolling down & past threshold
+                    navbar.classList.add('hide-on-scroll');
+                } else {
+                    // Scrolling up or at top
+                    navbar.classList.remove('hide-on-scroll');
+                }
+            } else {
+                // Always show on desktop/tablet
+                navbar.classList.remove('hide-on-scroll');
+            }
+            
+            this.lastScrollY = currentScrollY;
+            ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateNavbar);
+                ticking = true;
+            }
+        });
+
+        // Also handle window resize
+        window.addEventListener('resize', () => {
+            const navbar = document.querySelector('.main-nav');
+            if (window.innerWidth >= 768) {
+                navbar.classList.remove('hide-on-scroll');
+            }
+        });
     }
 }
 

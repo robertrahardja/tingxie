@@ -5,76 +5,286 @@
     {
       "row": 1,
       "words": [
-        {"simplified": "楼下", "traditional": "樓下", "pinyin": "lóu xià", "audio": "audio/楼下.mp3", "important": true},
-        {"simplified": "逛夜市", "traditional": "逛夜市", "pinyin": "guàng yè shì", "audio": "audio/逛夜市.mp3", "important": true},
-        {"simplified": "热闹", "traditional": "熱鬧", "pinyin": "rè nào", "audio": "audio/热闹.mp3", "important": true},
-        {"simplified": "五颜六色", "traditional": "五顏六色", "pinyin": "wǔ yán liù sè", "audio": "audio/五颜六色.mp3", "important": false}
+        {
+          "simplified": "楼下",
+          "traditional": "樓下",
+          "pinyin": "lóu xià",
+          "audio": "audio/楼下.mp3",
+          "important": true
+        },
+        {
+          "simplified": "逛夜市",
+          "traditional": "逛夜市",
+          "pinyin": "guàng yè shì",
+          "audio": "audio/逛夜市.mp3",
+          "important": true
+        },
+        {
+          "simplified": "热闹",
+          "traditional": "熱鬧",
+          "pinyin": "rè nào",
+          "audio": "audio/热闹.mp3",
+          "important": true
+        },
+        {
+          "simplified": "五颜六色",
+          "traditional": "五顏六色",
+          "pinyin": "wǔ yán liù sè",
+          "audio": "audio/五颜六色.mp3",
+          "important": true
+        }
       ]
     },
     {
       "row": 2,
       "words": [
-        {"simplified": "饮料摊", "traditional": "飲料攤", "pinyin": "yǐn liào tān", "audio": "audio/饮料摊.mp3", "important": false},
-        {"simplified": "射气球", "traditional": "射氣球", "pinyin": "shè qì qiú", "audio": "audio/射气球.mp3", "important": false},
-        {"simplified": "套圈圈", "traditional": "套圈圈", "pinyin": "tào quān quān", "audio": "audio/套圈圈.mp3", "important": false},
-        {"simplified": "碰碰车", "traditional": "碰碰車", "pinyin": "pèng pèng chē", "audio": "audio/碰碰车.mp3", "important": false}
+        {
+          "simplified": "饮料摊",
+          "traditional": "飲料攤",
+          "pinyin": "yǐn liào tān",
+          "audio": "audio/饮料摊.mp3",
+          "important": false
+        },
+        {
+          "simplified": "射气球",
+          "traditional": "射氣球",
+          "pinyin": "shè qì qiú",
+          "audio": "audio/射气球.mp3",
+          "important": false
+        },
+        {
+          "simplified": "套圈圈",
+          "traditional": "套圈圈",
+          "pinyin": "tào quān quān",
+          "audio": "audio/套圈圈.mp3",
+          "important": false
+        },
+        {
+          "simplified": "碰碰车",
+          "traditional": "碰碰車",
+          "pinyin": "pèng pèng chē",
+          "audio": "audio/碰碰车.mp3",
+          "important": false
+        }
       ]
     },
     {
       "row": 3,
       "words": [
-        {"simplified": "辉辉", "traditional": "輝輝", "pinyin": "huī huī", "audio": "audio/辉辉.mp3", "important": false},
-        {"simplified": "引来", "traditional": "引來", "pinyin": "yǐn lái", "audio": "audio/引来.mp3", "important": false},
-        {"simplified": "一群群", "traditional": "一群群", "pinyin": "yī qún qún", "audio": "audio/一群群.mp3", "important": false},
-        {"simplified": "但是", "traditional": "但是", "pinyin": "dàn shì", "audio": "audio/但是.mp3", "important": false},
-        {"simplified": "烤香肠", "traditional": "烤香腸", "pinyin": "kǎo xiāng cháng", "audio": "audio/烤香肠.mp3", "important": true}
+        {
+          "simplified": "辉辉",
+          "traditional": "輝輝",
+          "pinyin": "huī huī",
+          "audio": "audio/辉辉.mp3",
+          "important": false
+        },
+        {
+          "simplified": "引来",
+          "traditional": "引來",
+          "pinyin": "yǐn lái",
+          "audio": "audio/引来.mp3",
+          "important": false
+        },
+        {
+          "simplified": "一群群",
+          "traditional": "一群群",
+          "pinyin": "yī qún qún",
+          "audio": "audio/一群群.mp3",
+          "important": false
+        },
+        {
+          "simplified": "但是",
+          "traditional": "但是",
+          "pinyin": "dàn shì",
+          "audio": "audio/但是.mp3",
+          "important": false
+        },
+        {
+          "simplified": "烤香肠",
+          "traditional": "烤香腸",
+          "pinyin": "kǎo xiāng cháng",
+          "audio": "audio/烤香肠.mp3",
+          "important": true
+        }
       ]
     },
     {
       "row": 4,
       "words": [
-        {"simplified": "炸鸡翅", "traditional": "炸雞翅", "pinyin": "zhá jī chì", "audio": "audio/炸鸡翅.mp3", "important": false},
-        {"simplified": "踢足球", "traditional": "踢足球", "pinyin": "tī zú qiú", "audio": "audio/踢足球.mp3", "important": false},
-        {"simplified": "放风筝", "traditional": "放風箏", "pinyin": "fàng fēng zhēng", "audio": "audio/放风筝.mp3", "important": false},
-        {"simplified": "长椅", "traditional": "長椅", "pinyin": "cháng yǐ", "audio": "audio/长椅.mp3", "important": false},
-        {"simplified": "安静", "traditional": "安靜", "pinyin": "ān jìng", "audio": "audio/安静.mp3", "important": false}
+        {
+          "simplified": "炸鸡翅",
+          "traditional": "炸雞翅",
+          "pinyin": "zhá jī chì",
+          "audio": "audio/炸鸡翅.mp3",
+          "important": true
+        },
+        {
+          "simplified": "踢足球",
+          "traditional": "踢足球",
+          "pinyin": "tī zú qiú",
+          "audio": "audio/踢足球.mp3",
+          "important": true
+        },
+        {
+          "simplified": "放风筝",
+          "traditional": "放風箏",
+          "pinyin": "fàng fēng zhēng",
+          "audio": "audio/放风筝.mp3",
+          "important": false
+        },
+        {
+          "simplified": "长椅",
+          "traditional": "長椅",
+          "pinyin": "cháng yǐ",
+          "audio": "audio/长椅.mp3",
+          "important": true
+        },
+        {
+          "simplified": "安静",
+          "traditional": "安靜",
+          "pinyin": "ān jìng",
+          "audio": "audio/安静.mp3",
+          "important": true
+        }
       ]
     },
     {
       "row": 5,
       "words": [
-        {"simplified": "新加坡", "traditional": "新加坡", "pinyin": "xīn jiā pō", "audio": "audio/新加坡.mp3", "important": false},
-        {"simplified": "城市", "traditional": "城市", "pinyin": "chéng shì", "audio": "audio/城市.mp3", "important": false},
-        {"simplified": "到处都是", "traditional": "到處都是", "pinyin": "dào chù dōu shì", "audio": "audio/到处都是.mp3", "important": true},
-        {"simplified": "市区", "traditional": "市區", "pinyin": "shì qū", "audio": "audio/市区.mp3", "important": false}
+        {
+          "simplified": "新加坡",
+          "traditional": "新加坡",
+          "pinyin": "xīn jiā pō",
+          "audio": "audio/新加坡.mp3",
+          "important": true
+        },
+        {
+          "simplified": "城市",
+          "traditional": "城市",
+          "pinyin": "chéng shì",
+          "audio": "audio/城市.mp3",
+          "important": false
+        },
+        {
+          "simplified": "到处都是",
+          "traditional": "到處都是",
+          "pinyin": "dào chù dōu shì",
+          "audio": "audio/到处都是.mp3",
+          "important": true
+        },
+        {
+          "simplified": "市区",
+          "traditional": "市區",
+          "pinyin": "shì qū",
+          "audio": "audio/市区.mp3",
+          "important": true
+        }
       ]
     },
     {
       "row": 6,
       "words": [
-        {"simplified": "街道", "traditional": "街道", "pinyin": "jiē dào", "audio": "audio/街道.mp3", "important": false},
-        {"simplified": "干净", "traditional": "乾淨", "pinyin": "gān jìng", "audio": "audio/干净.mp3", "important": false},
-        {"simplified": "整齐", "traditional": "整齊", "pinyin": "zhěng qí", "audio": "audio/整齐.mp3", "important": false},
-        {"simplified": "参观", "traditional": "參觀", "pinyin": "cān guān", "audio": "audio/参观.mp3", "important": false},
-        {"simplified": "植物园", "traditional": "植物園", "pinyin": "zhí wù yuán", "audio": "audio/植物园.mp3", "important": false}
+        {
+          "simplified": "街道",
+          "traditional": "街道",
+          "pinyin": "jiē dào",
+          "audio": "audio/街道.mp3",
+          "important": false
+        },
+        {
+          "simplified": "干净",
+          "traditional": "乾淨",
+          "pinyin": "gān jìng",
+          "audio": "audio/干净.mp3",
+          "important": true
+        },
+        {
+          "simplified": "整齐",
+          "traditional": "整齊",
+          "pinyin": "zhěng qí",
+          "audio": "audio/整齐.mp3",
+          "important": false
+        },
+        {
+          "simplified": "参观",
+          "traditional": "參觀",
+          "pinyin": "cān guān",
+          "audio": "audio/参观.mp3",
+          "important": true
+        },
+        {
+          "simplified": "植物园",
+          "traditional": "植物園",
+          "pinyin": "zhí wù yuán",
+          "audio": "audio/植物园.mp3",
+          "important": false
+        }
       ]
     },
     {
       "row": 7,
       "words": [
-        {"simplified": "美术馆", "traditional": "美術館", "pinyin": "měi shù guǎn", "audio": "audio/美术馆.mp3", "important": false},
-        {"simplified": "东海岸公园", "traditional": "東海岸公園", "pinyin": "dōng hǎi àn gōng yuán", "audio": "audio/东海岸公园.mp3", "important": true},
-        {"simplified": "野餐", "traditional": "野餐", "pinyin": "yě cān", "audio": "audio/野餐.mp3", "important": false},
-        {"simplified": "游泳", "traditional": "游泳", "pinyin": "yóu yǒng", "audio": "audio/游泳.mp3", "important": false}
+        {
+          "simplified": "美术馆",
+          "traditional": "美術館",
+          "pinyin": "měi shù guǎn",
+          "audio": "audio/美术馆.mp3",
+          "important": false
+        },
+        {
+          "simplified": "东海岸公园",
+          "traditional": "東海岸公園",
+          "pinyin": "dōng hǎi àn gōng yuán",
+          "audio": "audio/东海岸公园.mp3",
+          "important": true
+        },
+        {
+          "simplified": "野餐",
+          "traditional": "野餐",
+          "pinyin": "yě cān",
+          "audio": "audio/野餐.mp3",
+          "important": false
+        },
+        {
+          "simplified": "游泳",
+          "traditional": "游泳",
+          "pinyin": "yóu yǒng",
+          "audio": "audio/游泳.mp3",
+          "important": true
+        }
       ]
     },
     {
       "row": 8,
       "words": [
-        {"simplified": "玩泥沙", "traditional": "玩泥沙", "pinyin": "wán ní shā", "audio": "audio/玩泥沙.mp3", "important": false},
-        {"simplified": "捡贝壳", "traditional": "撿貝殼", "pinyin": "jiǎn bèi ké", "audio": "audio/捡贝壳.mp3", "important": false},
-        {"simplified": "离开", "traditional": "離開", "pinyin": "lí kāi", "audio": "audio/离开.mp3", "important": false},
-        {"simplified": "国家", "traditional": "國家", "pinyin": "guó jiā", "audio": "audio/国家.mp3", "important": true}
+        {
+          "simplified": "玩泥沙",
+          "traditional": "玩泥沙",
+          "pinyin": "wán ní shā",
+          "audio": "audio/玩泥沙.mp3",
+          "important": false
+        },
+        {
+          "simplified": "捡贝壳",
+          "traditional": "撿貝殼",
+          "pinyin": "jiǎn bèi ké",
+          "audio": "audio/捡贝壳.mp3",
+          "important": false
+        },
+        {
+          "simplified": "离开",
+          "traditional": "離開",
+          "pinyin": "lí kāi",
+          "audio": "audio/离开.mp3",
+          "important": false
+        },
+        {
+          "simplified": "国家",
+          "traditional": "國家",
+          "pinyin": "guó jiā",
+          "audio": "audio/国家.mp3",
+          "important": true
+        }
       ]
     }
   ],
