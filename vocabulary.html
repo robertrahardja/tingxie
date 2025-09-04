@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词汇表 - 听写练习</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="vocabulary.html" class="nav-item active">词汇表</a>
+                <a href="progress.html" class="nav-item">学习进度</a>
+                <a href="settings.html" class="nav-item">设置</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <div class="header-row">
+                <h1>词汇表</h1>
+                <div class="controls">
+                    <button id="filter-toggle" class="filter-btn">全部词语</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="vocabulary-main">
+            <div class="vocab-grid" id="vocab-grid">
+                <!-- Vocabulary items will be loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="vocabulary.js"></script>
+</body>
+</html>

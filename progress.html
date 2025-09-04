@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习进度 - 听写练习</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="vocabulary.html" class="nav-item">词汇表</a>
+                <a href="progress.html" class="nav-item active">学习进度</a>
+                <a href="settings.html" class="nav-item">设置</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <div class="header-row">
+                <h1>学习进度</h1>
+            </div>
+        </header>
+
+        <main class="progress-main">
+            <div class="progress-stats">
+                <div class="stat-card">
+                    <div class="stat-number">35</div>
+                    <div class="stat-label">总词汇量</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">已掌握</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">学习中</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">待学习</div>
+                </div>
+            </div>
+
+            <div class="progress-chart">
+                <h3>学习完成度</h3>
+                <div class="progress-ring">
+                    <svg>
+                        <circle class="progress-bg" cx="60" cy="60" r="50"></circle>
+                        <circle class="progress-fill" cx="60" cy="60" r="50"></circle>
+                    </svg>
+                    <div class="progress-text">34%</div>
+                </div>
+                <p>继续努力！你已经掌握了 12 个词汇</p>
+            </div>
+
+            <div class="progress-chart">
+                <h3>本周学习记录</h3>
+                <div class="week-progress">
+                    <div class="day-progress">
+                        <div class="day-name">一</div>
+                        <div class="day-bar">
+                            <div class="day-fill" style="height: 80%"></div>
+                        </div>
+                        <div class="day-count">8</div>
+                    </div>
+                    <div class="day-progress">
+                        <div class="day-name">二</div>
+                        <div class="day-bar">
+                            <div class="day-fill" style="height: 60%"></div>
+                        </div>
+                        <div class="day-count">6</div>
+                    </div>
+                    <div class="day-progress">
+                        <div class="day-name">三</div>
+                        <div class="day-bar">
+                            <div class="day-fill" style="height: 100%"></div>
+                        </div>
+                        <div class="day-count">10</div>
+                    </div>
+                    <div class="day-progress">
+                        <div class="day-name">四</div>
+                        <div class="day-bar">
+                            <div class="day-fill" style="height: 40%"></div>
+                        </div>
+                        <div class="day-count">4</div>
+                    </div>
+                    <div class="day-progress">
+                        <div class="day-name">五</div>
+                        <div class="day-bar">
+                            <div class="day-fill" style="height: 90%"></div>
+                        </div>
+                        <div class="day-count">9</div>
+                    </div>
+                    <div class="day-progress">
+                        <div class="day-name">六</div>
+                        <div class="day-bar">
+                            <div class="day-fill" style="height: 70%"></div>
+                        </div>
+                        <div class="day-count">7</div>
+                    </div>
+                    <div class="day-progress">
+                        <div class="day-name">日</div>
+                        <div class="day-bar">
+                            <div class="day-fill" style="height: 50%"></div>
+                        </div>
+                        <div class="day-count">5</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="progress.js"></script>
+</body>
+</html>

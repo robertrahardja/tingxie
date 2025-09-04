@@ -3,242 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中文作业助手 - 听写与口语练习</title>
+    <title>听写练习</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item active">听写练习</a>
+                <a href="vocabulary.html" class="nav-item">词汇表</a>
+                <a href="progress.html" class="nav-item">学习进度</a>
+                <a href="settings.html" class="nav-item">设置</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <div class="header">
-            <h1>中文作业助手</h1>
-            <p>Chinese Homework Helper</p>
-            <div class="week-info" id="week-info">第1周 Week 1</div>
-        </div>
-        
-        <div class="instructions">
-            <h3>📱 使用说明 Instructions</h3>
-            <ul>
-                <li>词汇练习：点击喇叭按钮 🔊 听词语发音，卡片会自动翻转显示中文字词</li>
-                <li>听写练习：听音频写出正确的中文词语，可重复播放</li>
-                <li>口语练习：先自己练习说，然后点击"显示句子"查看参考答案</li>
-                <li>黄色标记的句子需要重点练习和背诵</li>
-                <li>完成练习后记得勾选综合练习项目</li>
-            </ul>
-        </div>
-        
-        <div class="tabs">
-            <div class="tab active" onclick="switchTab('vocabulary')">📝 词汇 Vocabulary</div>
-            <div class="tab" onclick="switchTab('dictation')">🎧 听写 Dictation</div>
-            <div class="tab" onclick="switchTab('oral')">🎤 口语 Oral Practice</div>
-            <div class="tab" onclick="switchTab('exercises')">📚 综合练习 Exercises</div>
-        </div>
-        
-        <div class="content">
-            <!-- Vocabulary Section -->
-            <div id="vocabulary" class="section active">
-                <h2 class="section-title">
-                    <span class="icon">📝</span>
-                    词汇练习 Vocabulary Practice
-                </h2>
-                
-                <div class="week-selector">
-                    <label for="week-select-vocab">选择周 Select Week:</label>
-                    <select id="week-select-vocab" onchange="loadVocabulary()">
-                        <option value="1">第一周 Week 1 - 基础问候</option>
-                        <option value="2">第二周 Week 2 - 学校生活</option>
-                        <option value="3">第三周 Week 3 - 时间表达</option>
-                        <option value="4">第四周 Week 4 - 家庭成员</option>
-                    </select>
-                </div>
-                
-                <p>点击喇叭听发音，学习正确读音和写法：</p>
-                <div class="vocab-grid" id="vocab-grid">
-                    <!-- Vocabulary cards will be loaded here -->
-                </div>
-                
-                <div class="practice-controls">
-                    <button class="btn btn-primary" onclick="shuffleCards()">🔀 打乱顺序</button>
-                    <button class="btn btn-success" onclick="flipAllCards()">👀 显示全部</button>
-                    <button class="btn btn-warning" onclick="resetAllCards()">🔄 重置卡片</button>
+        <header>
+            <div class="header-row">
+                <h1>听写练习</h1>
+                <div class="controls">
+                    <button id="filter-toggle" class="filter-btn">重要词语</button>
+                    <div class="progress">
+                        <span id="current-set">1</span> / <span id="total-sets">0</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Dictation Section -->
-            <div id="dictation" class="section">
-                <h2 class="section-title">
-                    <span class="icon">🎧</span>
-                    听写练习 Dictation Practice
-                </h2>
-                
-                <div class="week-selector">
-                    <label for="week-select-dictation">选择周 Select Week:</label>
-                    <select id="week-select-dictation" onchange="loadDictationWords()">
-                        <option value="1">第一周 Week 1 - 基础问候</option>
-                        <option value="2">第二周 Week 2 - 学校生活</option>
-                        <option value="3">第三周 Week 3 - 时间表达</option>
-                        <option value="4">第四周 Week 4 - 家庭成员</option>
-                    </select>
-                </div>
-                
-                <div class="practice-area">
-                    <div class="current-word" id="current-word">
-                        准备开始 Ready to Start
-                    </div>
-                    <div class="word-info" id="word-info"></div>
-                    
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progress-fill"></div>
+        </header>
+
+        <main>
+            <div class="navigation">
+                <button id="prev-btn" class="nav-btn" disabled>上一个</button>
+                <button id="next-btn" class="nav-btn">下一个</button>
+            </div>
+
+            <div id="word-card" class="word-card">
+                <div class="word-section">
+                    <div class="word-item audio-item" id="audio" data-type="audio">
+                        <button class="audio-btn covered">🔊</button>
                     </div>
                     
-                    <div class="practice-controls">
-                        <button class="btn btn-primary" id="start-btn" onclick="startDictation()">▶️ 开始练习</button>
-                        <button class="btn btn-success" id="play-btn" onclick="playCurrentWord()" disabled>🔊 重播</button>
-                        <button class="btn btn-warning" id="next-btn" onclick="nextWord()" disabled>⏭️ 下一个</button>
+                    <div class="word-item" id="simplified" data-type="simplified">
+                        <div class="content covered">简单</div>
                     </div>
                     
-                    <div class="score-display" id="score-display"></div>
-                </div>
-                
-                <div class="word-list">
-                    <h3>本周词汇列表 This Week's Vocabulary</h3>
-                    <ul id="word-list"></ul>
+                    <div class="word-item" id="traditional" data-type="traditional">
+                        <div class="content covered">繁体</div>
+                    </div>
+                    
+                    <div class="word-item" id="pinyin" data-type="pinyin">
+                        <div class="content covered">拼音</div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Oral Practice Section -->
-            <div id="oral" class="section">
-                <h2 class="section-title">
-                    <span class="icon">🎤</span>
-                    口语练习 Oral Practice
-                </h2>
-                
-                <p>先看场景标题，自己练习说句子，然后点击"显示句子"查看参考答案。<span class="highlight">黄色标记的句子要重点练习</span>：</p>
-                
-                <div class="oral-scenario">
-                    <div class="scenario-title">场景1：自我介绍</div>
-                    <div class="scenario-content">
-                        <button class="reveal-btn" onclick="revealText('scenario1')">👀 显示句子</button>
-                        <p class="scenario-text" id="scenario1">
-                            <span class="highlight">大家好！我叫小明，今年八岁。</span>
-                            我是二年级的学生。我喜欢学中文，也喜欢画画。
-                            很高兴认识大家！
-                        </p>
-                    </div>
-                    <button class="practice-btn" onclick="toggleRecorder('recorder1')">🎙️ 开始练习</button>
-                    <div class="audio-recorder" id="recorder1">
-                        <button class="record-btn" onclick="toggleRecording(this, 'oral1')">🔴 录音</button>
-                        <button class="record-btn" onclick="playRecording('oral1')">▶️ 播放</button>
-                        <button class="record-btn" onclick="saveRecording('oral1')">💾 保存</button>
-                    </div>
-                </div>
-                
-                <div class="oral-scenario">
-                    <div class="scenario-title">场景2：介绍家人</div>
-                    <div class="scenario-content">
-                        <button class="reveal-btn" onclick="revealText('scenario2')">👀 显示句子</button>
-                        <p class="scenario-text" id="scenario2">
-                            <span class="highlight">我家有四口人：爸爸、妈妈、妹妹和我。</span>
-                            我爸爸是老师，妈妈是医生。
-                            我妹妹今年五岁，她很可爱。
-                            我们一家人很幸福。
-                        </p>
-                    </div>
-                    <button class="practice-btn" onclick="toggleRecorder('recorder2')">🎙️ 开始练习</button>
-                    <div class="audio-recorder" id="recorder2">
-                        <button class="record-btn" onclick="toggleRecording(this, 'oral2')">🔴 录音</button>
-                        <button class="record-btn" onclick="playRecording('oral2')">▶️ 播放</button>
-                        <button class="record-btn" onclick="saveRecording('oral2')">💾 保存</button>
-                    </div>
-                </div>
-                
-                <div class="oral-scenario">
-                    <div class="scenario-title">场景3：谈论爱好</div>
-                    <div class="scenario-content">
-                        <button class="reveal-btn" onclick="revealText('scenario3')">👀 显示句子</button>
-                        <p class="scenario-text" id="scenario3">
-                            <span class="highlight">我有很多爱好。我最喜欢看书和画画。</span>
-                            周末的时候，我经常和朋友一起踢足球。
-                            我也喜欢听音乐，特别是中文歌曲。
-                            这些爱好让我的生活很充实。
-                        </p>
-                    </div>
-                    <button class="practice-btn" onclick="toggleRecorder('recorder3')">🎙️ 开始练习</button>
-                    <div class="audio-recorder" id="recorder3">
-                        <button class="record-btn" onclick="toggleRecording(this, 'oral3')">🔴 录音</button>
-                        <button class="record-btn" onclick="playRecording('oral3')">▶️ 播放</button>
-                        <button class="record-btn" onclick="saveRecording('oral3')">💾 保存</button>
-                    </div>
-                </div>
-                
-                <div class="timer" id="timer" style="display: none;">2:00</div>
-                <div id="recording-indicator" class="recording-indicator" style="display: none;">
-                    <div class="recording-dot"></div>
-                    正在录音 Recording
+
+            <div class="set-complete" id="set-complete" style="display: none;">
+                <div class="complete-message">
+                    <h2>✅ 本组完成!</h2>
+                    <p>所有内容都已显示</p>
+                    <button id="next-set-btn" class="next-set-btn">下一组</button>
                 </div>
             </div>
-            
-            <!-- Exercises Section -->
-            <div id="exercises" class="section">
-                <h2 class="section-title">
-                    <span class="icon">📚</span>
-                    综合练习 Comprehensive Exercises
-                </h2>
-                
-                <p>完成以下练习项目，点击"完成"按钮标记进度：</p>
-                
-                <div class="exercise-item">
-                    <div>
-                        <input type="checkbox" id="ex1">
-                        <label for="ex1">完成本周课本练习（第__页）</label>
-                    </div>
-                    <button class="check-btn" onclick="markComplete(this, 'ex1')">✓ 完成</button>
-                </div>
-                
-                <div class="exercise-item">
-                    <div>
-                        <input type="checkbox" id="ex2">
-                        <label for="ex2">抄写本周生词，每个词3遍</label>
-                    </div>
-                    <button class="check-btn" onclick="markComplete(this, 'ex2')">✓ 完成</button>
-                </div>
-                
-                <div class="exercise-item">
-                    <div>
-                        <input type="checkbox" id="ex3">
-                        <label for="ex3">用本周词汇造句（至少5个句子）</label>
-                    </div>
-                    <button class="check-btn" onclick="markComplete(this, 'ex3')">✓ 完成</button>
-                </div>
-                
-                <div class="exercise-item">
-                    <div>
-                        <input type="checkbox" id="ex4">
-                        <label for="ex4">朗读课文3遍并录音</label>
-                    </div>
-                    <button class="check-btn" onclick="markComplete(this, 'ex4')">✓ 完成</button>
-                </div>
-                
-                <div class="exercise-item">
-                    <div>
-                        <input type="checkbox" id="ex5">
-                        <label for="ex5">复习上周学过的内容</label>
-                    </div>
-                    <button class="check-btn" onclick="markComplete(this, 'ex5')">✓ 完成</button>
-                </div>
-                
-                <div style="margin-top: 30px; text-align: center;">
-                    <button class="btn btn-primary" onclick="generateReport()">📊 生成学习报告</button>
-                    <button class="btn btn-success" onclick="saveProgress()">💾 保存进度</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            Made with ❤️ for Chinese learners | 为中文学习者用心制作
-            <br>
-            <a href="admin.html" style="color: white; opacity: 0.7; text-decoration: none; font-size: 0.8em;">🔧 管理员 Admin</a>
-        </div>
+        </main>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

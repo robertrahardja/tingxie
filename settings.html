@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置 - 听写练习</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="vocabulary.html" class="nav-item">词汇表</a>
+                <a href="progress.html" class="nav-item">学习进度</a>
+                <a href="settings.html" class="nav-item active">设置</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <div class="header-row">
+                <h1>设置</h1>
+            </div>
+        </header>
+
+        <main class="settings-main">
+            <div class="settings-section">
+                <div class="settings-title">学习设置</div>
+                <div class="setting-item">
+                    <div class="setting-label">自动播放音频</div>
+                    <div class="setting-toggle active" data-setting="autoplay"></div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">显示繁体字</div>
+                    <div class="setting-toggle active" data-setting="traditional"></div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">显示拼音</div>
+                    <div class="setting-toggle active" data-setting="pinyin"></div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">振动反馈</div>
+                    <div class="setting-toggle" data-setting="vibration"></div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <div class="settings-title">显示设置</div>
+                <div class="setting-item">
+                    <div class="setting-label">深色模式</div>
+                    <div class="setting-toggle" data-setting="darkmode"></div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">大字体模式</div>
+                    <div class="setting-toggle" data-setting="largefont"></div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">简化界面</div>
+                    <div class="setting-toggle" data-setting="simplified"></div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <div class="settings-title">其他设置</div>
+                <div class="setting-item">
+                    <div class="setting-label">学习提醒</div>
+                    <div class="setting-toggle active" data-setting="reminders"></div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">数据统计</div>
+                    <div class="setting-toggle active" data-setting="analytics"></div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <div class="settings-title">数据管理</div>
+                <div class="setting-item">
+                    <button class="setting-btn">导出学习数据</button>
+                </div>
+                <div class="setting-item">
+                    <button class="setting-btn">重置学习进度</button>
+                </div>
+                <div class="setting-item">
+                    <button class="setting-btn danger">清除所有数据</button>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <div class="settings-title">关于</div>
+                <div class="about-info">
+                    <p><strong>听写练习</strong> v1.0.0</p>
+                    <p>帮助孩子练习中文听写的移动应用</p>
+                    <p>适用于iPad和iPhone设备</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
