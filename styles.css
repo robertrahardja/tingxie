@@ -558,19 +558,61 @@ main {
     }
     
     .word-section {
+        display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 40px;
         align-items: center;
+        max-width: 700px;
+        margin: 0 auto;
     }
     
     .audio-item {
-        grid-column: 1 / -1;
-        margin-bottom: 30px;
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 0;
+    }
+    
+    #simplified {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    #traditional {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    #pinyin {
+        grid-column: 2;
+        grid-row: 2;
     }
     
     .content {
         font-size: 48px;
         padding: 35px;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+    .word-section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 35px;
+        max-width: 800px;
+        height: auto;
+    }
+    
+    .audio-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .word-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -932,13 +974,53 @@ main {
         margin-bottom: 20px;
     }
     
+    .word-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .audio-item {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 0;
+    }
+    
+    #simplified {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    #traditional {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    #pinyin {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
     .word-item {
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .content {
-        padding: 15px;
+        padding: 12px;
+        font-size: 20px;
+        min-height: 50px;
+    }
+    
+    .audio-btn {
         font-size: 24px;
-        min-height: 55px;
+        min-width: 60px;
+        min-height: 60px;
+        padding: 15px;
     }
 }
