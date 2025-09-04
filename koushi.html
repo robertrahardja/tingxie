@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>口试练习 - 植物园</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .koushi-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .koushi-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .koushi-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .picture-section {
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .picture-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: scale(1.3);
+            object-fit: contain;
+        }
+        
+        .vocab-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .vocab-table th,
+        .vocab-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .vocab-table th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+        
+        .vocab-table td {
+            font-size: 16px;
+        }
+        
+        .audio-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .audio-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .audio-btn:hover {
+            background: #45a049;
+        }
+        
+        .audio-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .scroll-btn {
+            background: #2196F3;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 15px;
+        }
+        
+        .scroll-btn:hover {
+            background: #1976D2;
+        }
+        
+        .text-section {
+            background: #f8f9fa;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        
+        .text-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .text-section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .text-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            line-height: 1.8;
+            font-size: 16px;
+            color: #444;
+        }
+        
+        .text-content p {
+            margin-bottom: 20px;
+        }
+        
+        .text-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Mobile Portrait */
+        @media (max-width: 768px) {
+            .koushi-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .koushi-container {
+                padding: 15px;
+            }
+            
+            .picture-section img {
+                width: 100%;
+                height: auto;
+                transform: scale(1.3);
+                object-fit: contain;
+            }
+            
+            .vocab-table th,
+            .vocab-table td {
+                padding: 8px;
+                font-size: 14px;
+            }
+            
+            .audio-btn {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+            
+            .audio-controls {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .scroll-btn {
+                padding: 12px 24px;
+                font-size: 16px;
+                margin-left: 0;
+            }
+            
+            .text-section {
+                padding: 30px 0;
+                margin-top: 30px;
+            }
+            
+            .text-section h2 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            
+            .text-content {
+                padding: 20px;
+                font-size: 15px;
+                line-height: 1.6;
+            }
+        }
+        
+        /* iPad Portrait */
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+            .koushi-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .picture-section img {
+                max-width: 80%;
+            }
+        }
+        
+        /* iPad Landscape */
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            .koushi-content {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .koushi-container {
+                padding: 15px;
+            }
+            
+            .picture-section img {
+                width: 100%;
+                height: auto;
+                max-height: 60vh;
+                object-fit: contain;
+                transform: scale(1.3);
+            }
+        }
+        
+        /* Large Mobile Landscape */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .koushi-content {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .koushi-header h1 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+            
+            .picture-section img {
+                width: 100%;
+                height: auto;
+                max-height: 50vh;
+                object-fit: contain;
+                transform: scale(1.3);
+            }
+            
+            .picture-section h3,
+            .vocab-section h3 {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+            
+            .vocab-table th,
+            .vocab-table td {
+                padding: 6px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="vocabulary.html" class="nav-item">词汇表</a>
+                <a href="progress.html" class="nav-item">学习进度</a>
+                <a href="koushi.html" class="nav-item active">口试</a>
+                <a href="settings.html" class="nav-item">设置</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="koushi-container">
+        <div class="koushi-header">
+            <h1>口试练习 - 植物园</h1>
+        </div>
+
+        <div class="audio-controls">
+            <button id="play-audio" class="audio-btn">🔊 播放音频</button>
+            <button id="scroll-to-text" class="scroll-btn">📖 查看参考答案</button>
+        </div>
+
+        <div class="koushi-content">
+            <div class="picture-section">
+                <h3>练习图片</h3>
+                <img id="exercise-image" src="data/koushi/scan/pic.png" alt="植物园练习图片" onerror="this.style.display='none'; document.getElementById('image-error').style.display='block';">
+                <div id="image-error" style="display:none; padding: 20px; background: #f0f0f0; border-radius: 8px; margin-top: 10px;">
+                    <p>图片加载失败，请检查文件路径</p>
+                </div>
+            </div>
+
+            <div class="vocab-section">
+                <h3>参考词语</h3>
+                <table class="vocab-table" id="vocab-table">
+                    <thead>
+                        <tr>
+                            <th>词语</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Vocabulary will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Extracted Text Section -->
+        <div class="text-section" id="text-section">
+            <div class="text-container">
+                <h2>参考答案</h2>
+                <div class="text-content" id="text-content">
+                    <!-- Text will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="koushi-audio" preload="metadata">
+        <source src="data/koushi/audio/P2HCL W35口试.m4a" type="audio/mp4">
+        您的浏览器不支持音频播放。
+    </audio>
+
+    <script>
+        // Load extracted text data
+        async function loadExtractedText() {
+            try {
+                const response = await fetch('data/koushi/scan/extracted_texts.json');
+                const data = await response.json();
+                const textContent = document.getElementById('text-content');
+                
+                // Convert \n\n to paragraph breaks
+                const paragraphs = data.content.split('\n\n');
+                textContent.innerHTML = paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
+            } catch (error) {
+                console.error('Failed to load extracted text:', error);
+                document.getElementById('text-content').innerHTML = '<p>文本加载失败</p>';
+            }
+        }
+
+        // Load vocabulary data
+        async function loadVocabulary() {
+            try {
+                const response = await fetch('data/koushi/scan/vocabulary_table.json');
+                const data = await response.json();
+                const tbody = document.querySelector('#vocab-table tbody');
+                
+                data.vocabulary.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.word}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Failed to load vocabulary:', error);
+                document.querySelector('#vocab-table tbody').innerHTML = '<tr><td>词汇加载失败</td></tr>';
+            }
+        }
+
+        // Audio controls
+        const playButton = document.getElementById('play-audio');
+        const audio = document.getElementById('koushi-audio');
+
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play()
+                    .then(() => {
+                        playButton.textContent = '⏸️ 暂停音频';
+                    })
+                    .catch(error => {
+                        console.error('Audio play failed:', error);
+                        alert('音频播放失败，请检查文件路径');
+                    });
+            } else {
+                audio.pause();
+                playButton.textContent = '🔊 播放音频';
+            }
+        });
+
+        audio.addEventListener('ended', () => {
+            playButton.textContent = '🔊 播放音频';
+        });
+
+        audio.addEventListener('pause', () => {
+            playButton.textContent = '🔊 播放音频';
+        });
+
+        // Scroll to text functionality
+        document.getElementById('scroll-to-text').addEventListener('click', () => {
+            document.getElementById('text-section').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+
+        // Mobile navigation
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            loadVocabulary();
+            loadExtractedText();
+        });
+    </script>
+</body>
+</html>
