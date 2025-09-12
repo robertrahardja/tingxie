@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         .koushi-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
         }
         
         .koushi-header {
@@ -19,24 +19,24 @@
         }
         
         .koushi-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            display: block;
+            width: 100%;
             margin-bottom: 30px;
         }
         
         .picture-section {
             text-align: center;
-            overflow: hidden;
+            width: 100%;
+            padding: 0;
         }
         
         .picture-section img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transform: scale(1.3);
+            border-radius: 0;
+            box-shadow: none;
             object-fit: contain;
+            display: block;
         }
         
         .vocab-section {
@@ -113,8 +113,8 @@
         
         .text-section {
             background: #f8f9fa;
-            padding: 40px 0;
-            margin-top: 40px;
+            padding: 40px 20px;
+            margin-top: 0;
         }
         
         .text-container {
@@ -156,13 +156,12 @@
             }
             
             .koushi-container {
-                padding: 15px;
+                padding: 0;
             }
             
             .picture-section img {
                 width: 100%;
                 height: auto;
-                transform: scale(1.3);
                 object-fit: contain;
             }
             
@@ -225,7 +224,7 @@
             }
             
             .koushi-container {
-                padding: 15px;
+                padding: 0;
             }
             
             .picture-section img {
@@ -233,7 +232,6 @@
                 height: auto;
                 max-height: 60vh;
                 object-fit: contain;
-                transform: scale(1.3);
             }
         }
         
@@ -254,7 +252,6 @@
                 height: auto;
                 max-height: 50vh;
                 object-fit: contain;
-                transform: scale(1.3);
             }
             
             .picture-section h3,
@@ -299,24 +296,10 @@
         <div class="koushi-content">
             <div class="picture-section">
                 <h3>练习图片</h3>
-                <img id="exercise-image" src="data/koushi/scan/pic.png" alt="植物园练习图片" onerror="this.style.display='none'; document.getElementById('image-error').style.display='block';">
+                <img id="exercise-image" src="data/koushi/pic.png" alt="植物园练习图片" onerror="this.style.display='none'; document.getElementById('image-error').style.display='block';">
                 <div id="image-error" style="display:none; padding: 20px; background: #f0f0f0; border-radius: 8px; margin-top: 10px;">
                     <p>图片加载失败，请检查文件路径</p>
                 </div>
-            </div>
-
-            <div class="vocab-section">
-                <h3>参考词语</h3>
-                <table class="vocab-table" id="vocab-table">
-                    <thead>
-                        <tr>
-                            <th>词语</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Vocabulary will be loaded here -->
-                    </tbody>
-                </table>
             </div>
         </div>
 
@@ -332,7 +315,7 @@
     </div>
 
     <audio id="koushi-audio" preload="metadata">
-        <source src="data/koushi/audio/P2HCL W35口试.m4a" type="audio/mp4">
+        <source src="data/koushi/read.mp3" type="audio/mpeg">
         您的浏览器不支持音频播放。
     </audio>
 
@@ -340,7 +323,7 @@
         // Load extracted text data
         async function loadExtractedText() {
             try {
-                const response = await fetch('data/koushi/scan/extracted_texts.json');
+                const response = await fetch('data/koushi/extracted_texts.json');
                 const data = await response.json();
                 const textContent = document.getElementById('text-content');
                 
@@ -350,26 +333,6 @@
             } catch (error) {
                 console.error('Failed to load extracted text:', error);
                 document.getElementById('text-content').innerHTML = '<p>文本加载失败</p>';
-            }
-        }
-
-        // Load vocabulary data
-        async function loadVocabulary() {
-            try {
-                const response = await fetch('data/koushi/scan/vocabulary_table.json');
-                const data = await response.json();
-                const tbody = document.querySelector('#vocab-table tbody');
-                
-                data.vocabulary.forEach(item => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${item.word}</td>
-                    `;
-                    tbody.appendChild(row);
-                });
-            } catch (error) {
-                console.error('Failed to load vocabulary:', error);
-                document.querySelector('#vocab-table tbody').innerHTML = '<tr><td>词汇加载失败</td></tr>';
             }
         }
 
@@ -416,7 +379,6 @@
 
         // Load data when page loads
         document.addEventListener('DOMContentLoaded', () => {
-            loadVocabulary();
             loadExtractedText();
         });
     </script>
