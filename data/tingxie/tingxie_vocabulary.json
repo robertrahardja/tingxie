@@ -1,0 +1,197 @@
+{
+  "title": "复习词语 (下周听写)",
+  "lesson": "听写练习",
+  "vocabulary": [
+    {
+      "row": 1,
+      "words": [
+        {
+          "simplified": "生活",
+          "traditional": "生活",
+          "pinyin": "shēng huó",
+          "english": "life; to live",
+          "audio": "audio/生活.mp3",
+          "important": true
+        },
+        {
+          "simplified": "珍惜",
+          "traditional": "珍惜",
+          "pinyin": "zhēn xī",
+          "english": "to cherish; to treasure",
+          "audio": "audio/珍惜.mp3",
+          "important": false
+        },
+        {
+          "simplified": "一滴水",
+          "traditional": "一滴水",
+          "pinyin": "yī dī shuǐ",
+          "english": "a drop of water",
+          "audio": "audio/一滴水.mp3",
+          "important": false
+        },
+        {
+          "simplified": "外婆",
+          "traditional": "外婆",
+          "pinyin": "wài pó",
+          "english": "grandmother (maternal)",
+          "audio": "audio/外婆.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "words": [
+        {
+          "simplified": "告诉",
+          "traditional": "告訴",
+          "pinyin": "gào sù",
+          "english": "to tell; to inform",
+          "audio": "audio/告诉.mp3",
+          "important": true
+        },
+        {
+          "simplified": "浪费",
+          "traditional": "浪費",
+          "pinyin": "làng fèi",
+          "english": "to waste",
+          "audio": "audio/浪费.mp3",
+          "important": false
+        },
+        {
+          "simplified": "节约",
+          "traditional": "節約",
+          "pinyin": "jié yuē",
+          "english": "to save; to economize",
+          "audio": "audio/节约.mp3",
+          "important": true
+        },
+        {
+          "simplified": "浇花",
+          "traditional": "澆花",
+          "pinyin": "jiāo huā",
+          "english": "to water flowers",
+          "audio": "audio/浇花.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "words": [
+        {
+          "simplified": "洗厕所",
+          "traditional": "洗廁所",
+          "pinyin": "xǐ cè suǒ",
+          "english": "to clean the toilet",
+          "audio": "audio/洗厕所.mp3",
+          "important": true
+        },
+        {
+          "simplified": "马桶",
+          "traditional": "馬桶",
+          "pinyin": "mǎ tǒng",
+          "english": "toilet bowl",
+          "audio": "audio/马桶.mp3",
+          "important": false
+        },
+        {
+          "simplified": "不断",
+          "traditional": "不斷",
+          "pinyin": "bú duàn",
+          "english": "continuously; constantly",
+          "audio": "audio/不断.mp3",
+          "important": false
+        },
+        {
+          "simplified": "直线",
+          "traditional": "直線",
+          "pinyin": "zhí xiàn",
+          "english": "straight line",
+          "audio": "audio/直线.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "words": [
+        {
+          "simplified": "猜谜语",
+          "traditional": "猜謎語",
+          "pinyin": "cāi mí yǔ",
+          "english": "to guess riddles",
+          "audio": "audio/猜谜语.mp3",
+          "important": true
+        },
+        {
+          "simplified": "摇头",
+          "traditional": "搖頭",
+          "pinyin": "yáo tóu",
+          "english": "to shake one's head",
+          "audio": "audio/摇头.mp3",
+          "important": false
+        },
+        {
+          "simplified": "口渴",
+          "traditional": "口渴",
+          "pinyin": "kǒu kě",
+          "english": "thirsty",
+          "audio": "audio/口渴.mp3",
+          "important": true
+        },
+        {
+          "simplified": "喝水",
+          "traditional": "喝水",
+          "pinyin": "hē shuǐ",
+          "english": "to drink water",
+          "audio": "audio/喝水.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "words": [
+        {
+          "simplified": "不停地流",
+          "traditional": "不停地流",
+          "pinyin": "bù tíng de liú",
+          "english": "to flow continuously",
+          "audio": "audio/不停地流.mp3",
+          "important": false
+        },
+        {
+          "simplified": "连忙",
+          "traditional": "連忙",
+          "pinyin": "lián máng",
+          "english": "hurriedly; at once",
+          "audio": "audio/连忙.mp3",
+          "important": true
+        },
+        {
+          "simplified": "重要",
+          "traditional": "重要",
+          "pinyin": "zhòng yào",
+          "english": "important",
+          "audio": "audio/重要.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "words": [
+        {
+          "simplified": "低下了头",
+          "traditional": "低下了頭",
+          "pinyin": "dī xià le tóu",
+          "english": "lowered one's head",
+          "audio": "audio/低下了头.mp3",
+          "important": false
+        }
+      ]
+    }
+  ],
+  "note": "*深色部分是识写的词语，**浅色部分是识读的词语。"
+}

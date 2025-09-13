@@ -21,7 +21,7 @@ class TingxieApp {
 
     async loadData() {
         try {
-            const response = await fetch('tingxie_vocabulary.json');
+            const response = await fetch('data/tingxie/tingxie_vocabulary.json');
             this.data = await response.json();
         } catch (error) {
             console.error('Error loading data:', error);
@@ -79,6 +79,10 @@ class TingxieApp {
             this.revealItem('pinyin');
         });
 
+        document.getElementById('english').addEventListener('click', () => {
+            this.revealItem('english');
+        });
+
         document.getElementById('audio').addEventListener('click', () => {
             this.revealItem('audio');
         });
@@ -97,7 +101,7 @@ class TingxieApp {
 
     addTouchEventListeners() {
         const touchElements = [
-            'simplified', 'traditional', 'pinyin', 'audio',
+            'simplified', 'traditional', 'pinyin', 'english', 'audio',
             'prev-btn', 'next-btn', 'filter-toggle', 'next-set-btn'
         ];
 
@@ -168,6 +172,7 @@ class TingxieApp {
         document.querySelector('#simplified .content').textContent = word.simplified;
         document.querySelector('#traditional .content').textContent = word.traditional;
         document.querySelector('#pinyin .content').textContent = word.pinyin;
+        document.querySelector('#english .content').textContent = word.english || 'English';
 
         // Reset all items to covered state
         this.resetItemStates();
@@ -175,7 +180,7 @@ class TingxieApp {
     }
 
     resetItemStates() {
-        const items = ['simplified', 'traditional', 'pinyin'];
+        const items = ['simplified', 'traditional', 'pinyin', 'english'];
         items.forEach(type => {
             const content = document.querySelector(`#${type} .content`);
             content.classList.add('covered');
@@ -185,6 +190,8 @@ class TingxieApp {
                 content.textContent = '繁体';
             } else if (type === 'pinyin') {
                 content.textContent = '拼音';
+            } else if (type === 'english') {
+                content.textContent = 'English';
             }
         });
 
@@ -224,6 +231,8 @@ class TingxieApp {
                     content.textContent = '繁体';
                 } else if (type === 'pinyin') {
                     content.textContent = '拼音';
+                } else if (type === 'english') {
+                    content.textContent = 'English';
                 }
                 this.revealedItems.delete(type);
             }
@@ -243,7 +252,7 @@ class TingxieApp {
     }
 
     checkSetComplete() {
-        const requiredItems = ['simplified', 'traditional', 'pinyin', 'audio'];
+        const requiredItems = ['simplified', 'traditional', 'pinyin', 'english', 'audio'];
         const allRevealed = requiredItems.every(item => this.revealedItems.has(item));
         
         if (allRevealed) {
