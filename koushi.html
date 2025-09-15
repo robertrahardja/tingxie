@@ -314,7 +314,7 @@
         </div>
     </div>
 
-    <audio id="koushi-audio" preload="metadata">
+    <audio id="koushi-audio" preload="auto">
         <source src="data/koushi/read.mp3" type="audio/mpeg">
         您的浏览器不支持音频播放。
     </audio>
@@ -326,7 +326,7 @@
                 const response = await fetch('data/koushi/extracted_texts.json');
                 const data = await response.json();
                 const textContent = document.getElementById('text-content');
-                
+
                 // Convert \n\n to paragraph breaks
                 const paragraphs = data.content.split('\n\n');
                 textContent.innerHTML = paragraphs.map(p => `<p>${p.trim()}</p>`).join('');
@@ -340,16 +340,64 @@
         const playButton = document.getElementById('play-audio');
         const audio = document.getElementById('koushi-audio');
 
-        playButton.addEventListener('click', () => {
+        // Add error handling for audio loading
+        audio.addEventListener('error', (e) => {
+            console.error('Audio loading error:', e);
+            console.error('Audio error code:', audio.error?.code);
+            console.error('Audio error message:', audio.error?.message);
+            playButton.textContent = '❌ 音频加载失败';
+            playButton.disabled = true;
+        });
+
+        audio.addEventListener('loadeddata', () => {
+            console.log('Audio loaded successfully');
+            playButton.disabled = false;
+        });
+
+        audio.addEventListener('canplay', () => {
+            console.log('Audio can play');
+        });
+
+        playButton.addEventListener('click', async () => {
+            console.log('Play button clicked');
+            console.log('Audio paused:', audio.paused);
+            console.log('Audio readyState:', audio.readyState);
+            console.log('Audio src:', audio.src);
+
             if (audio.paused) {
-                audio.play()
-                    .then(() => {
-                        playButton.textContent = '⏸️ 暂停音频';
-                    })
-                    .catch(error => {
-                        console.error('Audio play failed:', error);
-                        alert('音频播放失败，请检查文件路径');
-                    });
+                // Reset audio to start if needed
+                if (audio.readyState === 0) {
+                    console.log('Loading audio...');
+                    audio.load();
+                    // Wait a bit for audio to load
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+
+                try {
+                    playButton.disabled = true;
+                    playButton.textContent = '⏳ 加载中...';
+
+                    await audio.play();
+                    playButton.textContent = '⏸️ 暂停音频';
+                    playButton.disabled = false;
+                    console.log('Audio playing');
+                } catch (error) {
+                    console.error('Audio play failed:', error);
+                    console.error('Error name:', error.name);
+                    console.error('Error message:', error.message);
+
+                    // More specific error messages
+                    if (error.name === 'NotAllowedError') {
+                        alert('浏览器阻止了音频播放。请确保允许此网站播放音频。');
+                    } else if (error.name === 'NotSupportedError') {
+                        alert('音频格式不受支持。');
+                    } else {
+                        alert(`音频播放失败: ${error.message}`);
+                    }
+
+                    playButton.textContent = '🔊 播放音频';
+                    playButton.disabled = false;
+                }
             } else {
                 audio.pause();
                 playButton.textContent = '🔊 播放音频';
@@ -361,7 +409,9 @@
         });
 
         audio.addEventListener('pause', () => {
-            playButton.textContent = '🔊 播放音频';
+            if (!audio.ended) {
+                playButton.textContent = '🔊 播放音频';
+            }
         });
 
         // Scroll to text functionality
