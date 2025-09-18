@@ -48,18 +48,18 @@ def download_tts_audio(text, filename):
 
 def main():
     # Load vocabulary JSON
-    with open('tingxie_vocabulary.json', 'r', encoding='utf-8') as f:
+    with open('../data/tingxie/tingxie_vocabulary.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     # Create audio directory if it doesn't exist
-    os.makedirs('audio', exist_ok=True)
+    os.makedirs('../audio', exist_ok=True)
     
     # Download audio for each word
     for row in data['vocabulary']:
         for word in row['words']:
             simplified = word['simplified']
             # Create filename from simplified Chinese
-            filename = f"audio/{simplified}.mp3"
+            filename = f"../audio/{simplified}.mp3"
             
             if not os.path.exists(filename):
                 print(f"Downloading audio for: {simplified}")

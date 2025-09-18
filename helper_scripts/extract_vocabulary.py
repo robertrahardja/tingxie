@@ -10,7 +10,7 @@ This script takes a Chinese vocabulary PDF file and:
 5. Downloads audio files for each word
 6. Generates a complete JSON with all data
 
-Usage: python3 extract_vocabulary.py <pdf_path>
+Usage: python3 helper_scripts/extract_vocabulary.py <pdf_path>
 """
 
 import sys
@@ -156,7 +156,7 @@ def process_vocabulary(vocab_data):
     print("Processing vocabulary data...")
     
     # Create audio directory
-    os.makedirs('audio', exist_ok=True)
+    os.makedirs('../audio', exist_ok=True)
     
     processed_vocab = {
         "title": vocab_data["title"],
@@ -184,7 +184,7 @@ def process_vocabulary(vocab_data):
             }
             
             # Download audio file
-            audio_file = f"audio/{word}.mp3"
+            audio_file = f"../audio/{word}.mp3"
             if not os.path.exists(audio_file):
                 print(f"Downloading audio for: {word}")
                 success = download_tts_audio(word, audio_file)
@@ -204,7 +204,7 @@ def process_vocabulary(vocab_data):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python3 extract_vocabulary.py <pdf_path>")
+        print("Usage: python3 helper_scripts/extract_vocabulary.py <pdf_path>")
         print("\nThis script will:")
         print("1. Extract vocabulary from Chinese PDF")
         print("2. Convert to traditional characters")
@@ -225,13 +225,13 @@ def main():
     final_vocab = process_vocabulary(vocab_data)
     
     # Save to JSON file
-    output_file = "tingxie_vocabulary.json"
+    output_file = "../data/tingxie/tingxie_vocabulary.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(final_vocab, f, ensure_ascii=False, indent=2)
     
     print(f"\nCompleted! Generated:")
     print(f"- {output_file} (vocabulary JSON)")
-    print(f"- audio/ folder with {len([f for f in os.listdir('audio') if f.endswith('.mp3')])} MP3 files")
+    print(f"- ../audio/ folder with {len([f for f in os.listdir('../audio') if f.endswith('.mp3')])} MP3 files")
     print("\nNext steps:")
     print("1. Review the JSON file for accuracy")
     print("2. Test audio files")

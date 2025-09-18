@@ -1,171 +1,153 @@
-class VocabularyApp {
+import { BaseApp } from './js/BaseApp.js';
+import { getAudioPlayer } from './js/AudioPlayer.js';
+import { CONSTANTS, CSS_CLASSES, ELEMENT_IDS } from './js/constants.js';
+
+class VocabularyApp extends BaseApp {
     constructor() {
-        this.data = null;
-        this.showImportantOnly = false;
-        this.lastScrollY = 0;
+        super();
+        this.audioPlayer = getAudioPlayer();
+        this.vocabGrid = null;
         this.init();
     }
 
     async init() {
-        await this.loadData();
+        const dataLoaded = await this.loadData();
+        if (!dataLoaded) return;
+
+        this.cacheElements();
         this.setupEventListeners();
         this.renderVocabulary();
     }
 
-    async loadData() {
-        try {
-            const response = await fetch('tingxie_vocabulary.json');
-            this.data = await response.json();
-        } catch (error) {
-            console.error('Error loading data:', error);
-        }
+    cacheElements() {
+        this.vocabGrid = document.getElementById(ELEMENT_IDS.VOCAB_GRID);
     }
 
     setupEventListeners() {
-        // Menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', () => {
-            this.toggleMenu();
-        });
-
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', () => {
-                this.closeMenu();
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            const navMenu = document.getElementById('nav-menu');
-            const menuToggle = document.getElementById('menu-toggle');
-            
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                this.closeMenu();
-            }
-        });
-
-        // Filter toggle
-        document.getElementById('filter-toggle').addEventListener('click', () => {
-            this.toggleFilter();
-        });
-
-        // Scroll event for hiding menu
-        this.setupScrollListener();
+        this.setupBaseEventListeners();
     }
 
-    toggleFilter() {
-        this.showImportantOnly = !this.showImportantOnly;
-        const filterBtn = document.getElementById('filter-toggle');
-        
-        if (this.showImportantOnly) {
-            filterBtn.textContent = '重要词语';
-        } else {
-            filterBtn.textContent = '全部词语';
-        }
-
+    onFilterChange() {
         this.renderVocabulary();
     }
 
     renderVocabulary() {
-        const grid = document.getElementById('vocab-grid');
-        grid.innerHTML = '';
+        if (!this.vocabGrid) return;
 
-        if (!this.data || !this.data.vocabulary) return;
+        this.clearGrid();
+
+        if (!this.data?.vocabulary) return;
+
+        const fragment = document.createDocumentFragment();
 
         this.data.vocabulary.forEach(row => {
             row.words.forEach(word => {
                 if (!this.showImportantOnly || word.important) {
                     const wordCard = this.createWordCard(word);
-                    grid.appendChild(wordCard);
+                    fragment.appendChild(wordCard);
                 }
             });
         });
+
+        this.vocabGrid.appendChild(fragment);
+        this.preloadVisibleAudio();
+    }
+
+    clearGrid() {
+        if (this.vocabGrid) {
+            this.vocabGrid.innerHTML = '';
+        }
     }
 
     createWordCard(word) {
         const card = document.createElement('div');
-        card.className = `vocab-card ${word.important ? 'important' : ''}`;
-        
-        card.innerHTML = `
-            <div class="vocab-simplified">${word.simplified}</div>
-            <div class="vocab-traditional">${word.traditional}</div>
-            <div class="vocab-pinyin">${word.pinyin}</div>
-            <button class="vocab-audio" data-audio="${word.audio}">🔊</button>
-            ${word.important ? '<div class="important-badge">重点</div>' : ''}
-        `;
+        card.className = this.getCardClassName(word);
 
-        card.querySelector('.vocab-audio').addEventListener('click', (e) => {
-            this.playAudio(e.target.dataset.audio);
-        });
+        card.appendChild(this.createCardElement('vocab-simplified', word.simplified));
+        card.appendChild(this.createCardElement('vocab-traditional', word.traditional));
+        card.appendChild(this.createCardElement('vocab-pinyin', word.pinyin));
+        card.appendChild(this.createAudioButton(word.audio));
+
+        if (word.important) {
+            card.appendChild(this.createImportantBadge());
+        }
 
         return card;
     }
 
-    async playAudio(audioPath) {
-        try {
-            const audio = new Audio(audioPath);
-            await audio.play();
-        } catch (error) {
-            console.warn('Audio playback failed:', error);
+    getCardClassName(word) {
+        const classes = [CSS_CLASSES.VOCAB_CARD];
+        if (word.important) {
+            classes.push(CSS_CLASSES.IMPORTANT);
         }
+        return classes.join(' ');
     }
 
-    toggleMenu() {
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        
-        menuToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
+    createCardElement(className, text) {
+        const element = document.createElement('div');
+        element.className = className;
+        element.textContent = text;
+        return element;
     }
 
-    closeMenu() {
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        
-        menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-    }
-
-    setupScrollListener() {
-        let ticking = false;
-        
-        const updateNavbar = () => {
-            const currentScrollY = window.scrollY;
-            const navbar = document.querySelector('.main-nav');
-            
-            // Only hide on mobile devices (screen width < 768px)
-            if (window.innerWidth < 768) {
-                if (currentScrollY > this.lastScrollY && currentScrollY > 60) {
-                    // Scrolling down & past threshold
-                    navbar.classList.add('hide-on-scroll');
-                } else {
-                    // Scrolling up or at top
-                    navbar.classList.remove('hide-on-scroll');
-                }
-            } else {
-                // Always show on desktop/tablet
-                navbar.classList.remove('hide-on-scroll');
-            }
-            
-            this.lastScrollY = currentScrollY;
-            ticking = false;
-        };
-
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateNavbar);
-                ticking = true;
-            }
+    createAudioButton(audioPath) {
+        const button = document.createElement('button');
+        button.className = 'vocab-audio';
+        button.textContent = '🔊';
+        button.setAttribute('data-audio', audioPath);
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.playAudio(audioPath);
         });
+        return button;
+    }
 
-        // Also handle window resize
-        window.addEventListener('resize', () => {
-            const navbar = document.querySelector('.main-nav');
-            if (window.innerWidth >= 768) {
-                navbar.classList.remove('hide-on-scroll');
+    createImportantBadge() {
+        const badge = document.createElement('div');
+        badge.className = CSS_CLASSES.IMPORTANT_BADGE;
+        badge.textContent = CONSTANTS.UI_LABELS.IMPORTANT_BADGE;
+        return badge;
+    }
+
+    playAudio(audioPath) {
+        this.audioPlayer.play(audioPath);
+    }
+
+    preloadVisibleAudio() {
+        if (!this.vocabGrid) return;
+
+        // Use Intersection Observer to preload audio for visible cards
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const audioBtn = entry.target.querySelector('.vocab-audio');
+                        if (audioBtn) {
+                            const audioPath = audioBtn.getAttribute('data-audio');
+                            if (audioPath) {
+                                this.audioPlayer.preload([audioPath]);
+                            }
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                root: null,
+                rootMargin: '50px'
             }
-        });
+        );
+
+        const cards = this.vocabGrid.querySelectorAll(`.${CSS_CLASSES.VOCAB_CARD}`);
+        cards.forEach(card => observer.observe(card));
+    }
+
+    destroy() {
+        super.destroy();
+        this.clearGrid();
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new VocabularyApp();
+    window.vocabularyApp = new VocabularyApp();
 });

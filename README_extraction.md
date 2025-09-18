@@ -11,7 +11,7 @@ This tool extracts Chinese vocabulary from PDF files and generates a complete JS
 ## Quick Start
 
 ```bash
-python3 extract_vocabulary.py docs/tingxie.pdf
+python3 helper_scripts/extract_vocabulary.py docs/tingxie.pdf
 ```
 
 ## What It Does
@@ -78,12 +78,12 @@ pip install requests
 
 ### Basic Usage
 ```bash
-python3 extract_vocabulary.py my_vocabulary.pdf
+python3 helper_scripts/extract_vocabulary.py my_vocabulary.pdf
 ```
 
 ### With Custom Output
 ```bash
-python3 extract_vocabulary.py lesson1.pdf
+python3 helper_scripts/extract_vocabulary.py lesson1.pdf
 # Creates: tingxie_vocabulary.json + audio/ folder
 ```
 
@@ -99,7 +99,7 @@ For scanned PDFs, you'll need to:
 
 - `tingxie_vocabulary.json` - Complete vocabulary data
 - `audio/` - Folder with MP3 pronunciation files
-- `extract_vocabulary.py` - The processor script
+- `helper_scripts/extract_vocabulary.py` - The processor script
 
 ## Customization
 

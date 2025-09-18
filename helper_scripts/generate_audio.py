@@ -24,11 +24,11 @@ def generate_audio_file(text, output_path):
 
 def main():
     # Load vocabulary data
-    with open('tingxie_vocabulary.json', 'r', encoding='utf-8') as f:
+    with open('../data/tingxie/tingxie_vocabulary.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     # Create audio directory if it doesn't exist
-    os.makedirs('audio', exist_ok=True)
+    os.makedirs('../audio', exist_ok=True)
     
     # Track statistics
     total = 0
@@ -41,14 +41,14 @@ def main():
         for word in row['words']:
             total += 1
             simplified = word['simplified']
-            audio_path = word['audio']
-            
+            audio_path = f"../{word['audio']}"
+
             # Check if file already exists
             if os.path.exists(audio_path):
                 print(f"⊙ Skipping (exists): {audio_path}")
                 skipped += 1
                 continue
-            
+
             # Generate the audio file
             if generate_audio_file(simplified, audio_path):
                 generated += 1
