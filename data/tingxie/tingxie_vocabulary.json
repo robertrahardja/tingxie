@@ -6,276 +6,6 @@
       "row": 1,
       "words": [
         {
-          "simplified": "宠物",
-          "traditional": "寵物",
-          "pinyin": "chǒng wù",
-          "english": "pet",
-          "audio": "audio/宠物.mp3",
-          "important": true
-        },
-        {
-          "simplified": "小狗",
-          "traditional": "小狗",
-          "pinyin": "xiǎo gǒu",
-          "english": "puppy; small dog",
-          "audio": "audio/小狗.mp3",
-          "important": true
-        },
-        {
-          "simplified": "聪明",
-          "traditional": "聰明",
-          "pinyin": "cōng míng",
-          "english": "smart; intelligent",
-          "audio": "audio/聪明.mp3",
-          "important": true
-        },
-        {
-          "simplified": "吐出来",
-          "traditional": "吐出來",
-          "pinyin": "tǔ chū lái",
-          "english": "to spit out; to vomit",
-          "audio": "audio/吐出来.mp3",
-          "important": true
-        },
-        {
-          "simplified": "兽医",
-          "traditional": "獸醫",
-          "pinyin": "shòu yī",
-          "english": "veterinarian",
-          "audio": "audio/兽医.mp3",
-          "important": true
-        }
-      ]
-    },
-    {
-      "row": 2,
-      "words": [
-        {
-          "simplified": "漂亮",
-          "traditional": "漂亮",
-          "pinyin": "piào liang",
-          "english": "beautiful; pretty",
-          "audio": "audio/漂亮.mp3",
-          "important": true
-        },
-        {
-          "simplified": "觉得",
-          "traditional": "覺得",
-          "pinyin": "jué de",
-          "english": "to feel; to think",
-          "audio": "audio/觉得.mp3",
-          "important": true
-        },
-        {
-          "simplified": "小岛",
-          "traditional": "小島",
-          "pinyin": "xiǎo dǎo",
-          "english": "small island",
-          "audio": "audio/小岛.mp3",
-          "important": true
-        },
-        {
-          "simplified": "弃破",
-          "traditional": "棄破",
-          "pinyin": "qì pò",
-          "english": "abandoned and broken",
-          "audio": "audio/弃破.mp3",
-          "important": true
-        },
-        {
-          "simplified": "争吵",
-          "traditional": "爭吵",
-          "pinyin": "zhēng chǎo",
-          "english": "to quarrel; to argue",
-          "audio": "audio/争吵.mp3",
-          "important": true
-        }
-      ]
-    },
-    {
-      "row": 3,
-      "words": [
-        {
-          "simplified": "应该",
-          "traditional": "應該",
-          "pinyin": "yīng gāi",
-          "english": "should; ought to",
-          "audio": "audio/应该.mp3",
-          "important": true
-        },
-        {
-          "simplified": "不能",
-          "traditional": "不能",
-          "pinyin": "bù néng",
-          "english": "cannot; unable",
-          "audio": "audio/不能.mp3",
-          "important": true
-        },
-        {
-          "simplified": "一道彩虹",
-          "traditional": "一道彩虹",
-          "pinyin": "yī dào cǎi hóng",
-          "english": "a rainbow",
-          "audio": "audio/一道彩虹.mp3",
-          "important": true
-        },
-        {
-          "simplified": "亮晶晶",
-          "traditional": "亮晶晶",
-          "pinyin": "liàng jīng jīng",
-          "english": "sparkling; shiny",
-          "audio": "audio/亮晶晶.mp3",
-          "important": true
-        },
-        {
-          "simplified": "分工合作",
-          "traditional": "分工合作",
-          "pinyin": "fēn gōng hé zuò",
-          "english": "division of labor and cooperation",
-          "audio": "audio/分工合作.mp3",
-          "important": true
-        }
-      ]
-    },
-    {
-      "row": 4,
-      "words": [
-        {
-          "simplified": "玉米",
-          "traditional": "玉米",
-          "pinyin": "yù mǐ",
-          "english": "corn; maize",
-          "audio": "audio/玉米.mp3",
-          "important": true
-        },
-        {
-          "simplified": "比较",
-          "traditional": "比較",
-          "pinyin": "bǐ jiào",
-          "english": "to compare; relatively",
-          "audio": "audio/比较.mp3",
-          "important": true
-        },
-        {
-          "simplified": "白菜汤",
-          "traditional": "白菜湯",
-          "pinyin": "bái cài tāng",
-          "english": "cabbage soup",
-          "audio": "audio/白菜汤.mp3",
-          "important": true
-        },
-        {
-          "simplified": "或者",
-          "traditional": "或者",
-          "pinyin": "huò zhě",
-          "english": "or; perhaps",
-          "audio": "audio/或者.mp3",
-          "important": true
-        },
-        {
-          "simplified": "煮饭",
-          "traditional": "煮飯",
-          "pinyin": "zhǔ fàn",
-          "english": "to cook rice",
-          "audio": "audio/煮饭.mp3",
-          "important": true
-        }
-      ]
-    },
-    {
-      "row": 5,
-      "words": [
-        {
-          "simplified": "果实",
-          "traditional": "果實",
-          "pinyin": "guǒ shí",
-          "english": "fruit; fruits",
-          "audio": "audio/果实.mp3",
-          "important": true
-        },
-        {
-          "simplified": "考试",
-          "traditional": "考試",
-          "pinyin": "kǎo shì",
-          "english": "exam; test",
-          "audio": "audio/考试.mp3",
-          "important": true
-        },
-        {
-          "simplified": "伤心地哭",
-          "traditional": "傷心地哭",
-          "pinyin": "shāng xīn de kū",
-          "english": "to cry sadly",
-          "audio": "audio/伤心地哭.mp3",
-          "important": true
-        },
-        {
-          "simplified": "附近",
-          "traditional": "附近",
-          "pinyin": "fù jìn",
-          "english": "nearby; vicinity",
-          "audio": "audio/附近.mp3",
-          "important": true
-        },
-        {
-          "simplified": "时候",
-          "traditional": "時候",
-          "pinyin": "shí hòu",
-          "english": "time; moment",
-          "audio": "audio/时候.mp3",
-          "important": true
-        }
-      ]
-    },
-    {
-      "row": 6,
-      "words": [
-        {
-          "simplified": "借书",
-          "traditional": "借書",
-          "pinyin": "jiè shū",
-          "english": "to borrow books",
-          "audio": "audio/借书.mp3",
-          "important": true
-        },
-        {
-          "simplified": "开始",
-          "traditional": "開始",
-          "pinyin": "kāi shǐ",
-          "english": "to begin; to start",
-          "audio": "audio/开始.mp3",
-          "important": true
-        },
-        {
-          "simplified": "各种各样",
-          "traditional": "各種各樣",
-          "pinyin": "gè zhǒng gè yàng",
-          "english": "all kinds of; various",
-          "audio": "audio/各种各样.mp3",
-          "important": true
-        },
-        {
-          "simplified": "讲故事",
-          "traditional": "講故事",
-          "pinyin": "jiǎng gù shì",
-          "english": "to tell a story",
-          "audio": "audio/讲故事.mp3",
-          "important": true
-        },
-        {
-          "simplified": "一首英文歌",
-          "traditional": "一首英文歌",
-          "pinyin": "yī shǒu yīng wén gē",
-          "english": "an English song",
-          "audio": "audio/一首英文歌.mp3",
-          "important": true
-        }
-      ]
-    },
-    {
-      "row": 7,
-      "words": [
-        {
           "simplified": "美丽",
           "traditional": "美麗",
           "pinyin": "měi lì",
@@ -318,7 +48,7 @@
       ]
     },
     {
-      "row": 8,
+      "row": 2,
       "words": [
         {
           "simplified": "大扫除",
@@ -363,7 +93,7 @@
       ]
     },
     {
-      "row": 9,
+      "row": 3,
       "words": [
         {
           "simplified": "主人",
@@ -408,7 +138,7 @@
       ]
     },
     {
-      "row": 10,
+      "row": 4,
       "words": [
         {
           "simplified": "排队",
@@ -453,7 +183,7 @@
       ]
     },
     {
-      "row": 11,
+      "row": 5,
       "words": [
         {
           "simplified": "哪里",
@@ -498,7 +228,7 @@
       ]
     },
     {
-      "row": 12,
+      "row": 6,
       "words": [
         {
           "simplified": "回答问题",
@@ -543,7 +273,7 @@
       ]
     },
     {
-      "row": 13,
+      "row": 7,
       "words": [
         {
           "simplified": "奶茶",
@@ -588,7 +318,7 @@
       ]
     },
     {
-      "row": 14,
+      "row": 8,
       "words": [
         {
           "simplified": "医生",
