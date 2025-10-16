@@ -6,43 +6,43 @@
       "row": 1,
       "words": [
         {
-          "simplified": "美丽",
-          "traditional": "美麗",
-          "pinyin": "měi lì",
-          "english": "beautiful",
-          "audio": "audio/美丽.mp3",
+          "simplified": "音乐室",
+          "traditional": "音樂室",
+          "pinyin": "yīn yuè shì",
+          "english": "music room",
+          "audio": "audio/音乐室.mp3",
           "important": true
         },
         {
-          "simplified": "新加坡",
-          "traditional": "新加坡",
-          "pinyin": "xīn jiā pō",
-          "english": "Singapore",
-          "audio": "audio/新加坡.mp3",
+          "simplified": "哪里",
+          "traditional": "哪裡",
+          "pinyin": "nǎ lǐ",
+          "english": "where",
+          "audio": "audio/哪里.mp3",
+          "important": false
+        },
+        {
+          "simplified": "顶楼",
+          "traditional": "頂樓",
+          "pinyin": "dǐng lóu",
+          "english": "top floor",
+          "audio": "audio/顶楼.mp3",
           "important": true
         },
         {
-          "simplified": "合适",
-          "traditional": "合適",
-          "pinyin": "hé shì",
-          "english": "suitable; appropriate",
-          "audio": "audio/合适.mp3",
+          "simplified": "往右转",
+          "traditional": "往右轉",
+          "pinyin": "wǎng yòu zhuǎn",
+          "english": "turn right",
+          "audio": "audio/往右转.mp3",
           "important": true
         },
         {
-          "simplified": "年级",
-          "traditional": "年級",
-          "pinyin": "nián jí",
-          "english": "grade; year level",
-          "audio": "audio/年级.mp3",
-          "important": true
-        },
-        {
-          "simplified": "兄弟",
-          "traditional": "兄弟",
-          "pinyin": "xiōng dì",
-          "english": "brother; brothers",
-          "audio": "audio/兄弟.mp3",
+          "simplified": "美术室",
+          "traditional": "美術室",
+          "pinyin": "měi shù shì",
+          "english": "art room",
+          "audio": "audio/美术室.mp3",
           "important": true
         }
       ]
@@ -51,146 +51,11 @@
       "row": 2,
       "words": [
         {
-          "simplified": "大扫除",
-          "traditional": "大掃除",
-          "pinyin": "dà sǎo chú",
-          "english": "spring cleaning; general cleaning",
-          "audio": "audio/大扫除.mp3",
-          "important": true
-        },
-        {
-          "simplified": "时候",
-          "traditional": "時候",
-          "pinyin": "shí hòu",
-          "english": "time; when",
-          "audio": "audio/时候.mp3",
-          "important": true
-        },
-        {
-          "simplified": "表演",
-          "traditional": "表演",
-          "pinyin": "biǎo yǎn",
-          "english": "to perform; performance",
-          "audio": "audio/表演.mp3",
-          "important": true
-        },
-        {
-          "simplified": "拿着",
-          "traditional": "拿著",
-          "pinyin": "ná zhe",
-          "english": "holding; carrying",
-          "audio": "audio/拿着.mp3",
-          "important": true
-        },
-        {
-          "simplified": "庆祝",
-          "traditional": "慶祝",
-          "pinyin": "qìng zhù",
-          "english": "to celebrate",
-          "audio": "audio/庆祝.mp3",
-          "important": true
-        }
-      ]
-    },
-    {
-      "row": 3,
-      "words": [
-        {
-          "simplified": "主人",
-          "traditional": "主人",
-          "pinyin": "zhǔ rén",
-          "english": "owner; master; host",
-          "audio": "audio/主人.mp3",
-          "important": true
-        },
-        {
-          "simplified": "非常",
-          "traditional": "非常",
-          "pinyin": "fēi cháng",
-          "english": "very; extremely",
-          "audio": "audio/非常.mp3",
-          "important": true
-        },
-        {
-          "simplified": "第一",
-          "traditional": "第一",
-          "pinyin": "dì yī",
-          "english": "first; number one",
-          "audio": "audio/第一.mp3",
-          "important": true
-        },
-        {
-          "simplified": "筷子",
-          "traditional": "筷子",
-          "pinyin": "kuài zi",
-          "english": "chopsticks",
-          "audio": "audio/筷子.mp3",
-          "important": true
-        },
-        {
-          "simplified": "伸出舌头",
-          "traditional": "伸出舌頭",
-          "pinyin": "shēn chū shé tóu",
-          "english": "to stick out tongue",
-          "audio": "audio/伸出舌头.mp3",
-          "important": true
-        }
-      ]
-    },
-    {
-      "row": 4,
-      "words": [
-        {
-          "simplified": "排队",
-          "traditional": "排隊",
-          "pinyin": "pái duì",
-          "english": "to queue; to line up",
-          "audio": "audio/排队.mp3",
-          "important": true
-        },
-        {
-          "simplified": "从前",
-          "traditional": "從前",
-          "pinyin": "cóng qián",
-          "english": "in the past; formerly",
-          "audio": "audio/从前.mp3",
-          "important": true
-        },
-        {
-          "simplified": "然后",
-          "traditional": "然後",
-          "pinyin": "rán hòu",
-          "english": "then; afterwards",
-          "audio": "audio/然后.mp3",
-          "important": true
-        },
-        {
-          "simplified": "每一页",
-          "traditional": "每一頁",
-          "pinyin": "měi yī yè",
-          "english": "every page",
-          "audio": "audio/每一页.mp3",
-          "important": true
-        },
-        {
-          "simplified": "彩色笔",
-          "traditional": "彩色筆",
-          "pinyin": "cǎi sè bǐ",
-          "english": "colored pen; marker",
-          "audio": "audio/彩色笔.mp3",
-          "important": true
-        }
-      ]
-    },
-    {
-      "row": 5,
-      "words": [
-        {
-          "simplified": "哪里",
-          "traditional": "哪裡",
-          "pinyin": "nǎ lǐ",
-          "english": "where",
-          "audio": "audio/哪里.mp3",
+          "simplified": "雾边",
+          "traditional": "霧邊",
+          "pinyin": "wù biān",
+          "english": "fog side",
+          "audio": "audio/雾边.mp3",
           "important": true
         },
         {
@@ -202,11 +67,93 @@
           "important": true
         },
         {
+          "simplified": "运动",
+          "traditional": "運動",
+          "pinyin": "yùn dòng",
+          "english": "sports; exercise",
+          "audio": "audio/运动.mp3",
+          "important": true
+        },
+        {
+          "simplified": "足球场",
+          "traditional": "足球場",
+          "pinyin": "zú qiú chǎng",
+          "english": "soccer field",
+          "audio": "audio/足球场.mp3",
+          "important": true
+        },
+        {
+          "simplified": "操场",
+          "traditional": "操場",
+          "pinyin": "cāo chǎng",
+          "english": "playground; field",
+          "audio": "audio/操场.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "words": [
+        {
+          "simplified": "新加坡",
+          "traditional": "新加坡",
+          "pinyin": "xīn jiā pō",
+          "english": "Singapore",
+          "audio": "audio/新加坡.mp3",
+          "important": true
+        },
+        {
+          "simplified": "奶奶",
+          "traditional": "奶奶",
+          "pinyin": "nǎi nai",
+          "english": "grandmother (paternal)",
+          "audio": "audio/奶奶.mp3",
+          "important": true
+        },
+        {
+          "simplified": "迷路",
+          "traditional": "迷路",
+          "pinyin": "mí lù",
+          "english": "to get lost",
+          "audio": "audio/迷路.mp3",
+          "important": true
+        },
+        {
           "simplified": "很久",
           "traditional": "很久",
           "pinyin": "hěn jiǔ",
           "english": "a long time",
           "audio": "audio/很久.mp3",
+          "important": false
+        },
+        {
+          "simplified": "从前",
+          "traditional": "從前",
+          "pinyin": "cóng qián",
+          "english": "in the past; formerly",
+          "audio": "audio/从前.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "words": [
+        {
+          "simplified": "向前直走",
+          "traditional": "向前直走",
+          "pinyin": "xiàng qián zhí zǒu",
+          "english": "go straight ahead",
+          "audio": "audio/向前直走.mp3",
+          "important": false
+        },
+        {
+          "simplified": "就是",
+          "traditional": "就是",
+          "pinyin": "jiù shì",
+          "english": "exactly; just",
+          "audio": "audio/就是.mp3",
           "important": true
         },
         {
@@ -218,24 +165,40 @@
           "important": true
         },
         {
-          "simplified": "向前直走",
-          "traditional": "向前直走",
-          "pinyin": "xiàng qián zhí zǒu",
-          "english": "go straight ahead",
-          "audio": "audio/向前直走.mp3",
+          "simplified": "办法",
+          "traditional": "辦法",
+          "pinyin": "bàn fǎ",
+          "english": "method; way",
+          "audio": "audio/办法.mp3",
           "important": true
-        }
-      ]
-    },
-    {
-      "row": 6,
-      "words": [
+        },
         {
           "simplified": "回答问题",
           "traditional": "回答問題",
           "pinyin": "huí dá wèn tí",
           "english": "to answer questions",
           "audio": "audio/回答问题.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "words": [
+        {
+          "simplified": "灯光",
+          "traditional": "燈光",
+          "pinyin": "dēng guāng",
+          "english": "light; lighting",
+          "audio": "audio/灯光.mp3",
+          "important": true
+        },
+        {
+          "simplified": "停一停",
+          "traditional": "停一停",
+          "pinyin": "tíng yī tíng",
+          "english": "stop for a moment",
+          "audio": "audio/停一停.mp3",
           "important": true
         },
         {
@@ -247,19 +210,48 @@
           "important": true
         },
         {
+          "simplified": "等一等",
+          "traditional": "等一等",
+          "pinyin": "děng yī děng",
+          "english": "wait a moment",
+          "audio": "audio/等一等.mp3",
+          "important": true
+        },
+        {
           "simplified": "应该",
           "traditional": "應該",
           "pinyin": "yīng gāi",
           "english": "should; ought to",
           "audio": "audio/应该.mp3",
           "important": true
-        },
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "words": [
         {
           "simplified": "行人天桥",
           "traditional": "行人天橋",
           "pinyin": "xíng rén tiān qiáo",
           "english": "pedestrian bridge",
           "audio": "audio/行人天桥.mp3",
+          "important": false
+        },
+        {
+          "simplified": "安全",
+          "traditional": "安全",
+          "pinyin": "ān quán",
+          "english": "safe; safety",
+          "audio": "audio/安全.mp3",
+          "important": true
+        },
+        {
+          "simplified": "才能",
+          "traditional": "才能",
+          "pinyin": "cái néng",
+          "english": "only then can; ability",
+          "audio": "audio/才能.mp3",
           "important": true
         },
         {
@@ -269,6 +261,14 @@
           "english": "each other; mutual",
           "audio": "audio/互相.mp3",
           "important": true
+        },
+        {
+          "simplified": "邻居",
+          "traditional": "鄰居",
+          "pinyin": "lín jū",
+          "english": "neighbor",
+          "audio": "audio/邻居.mp3",
+          "important": true
         }
       ]
     },
@@ -276,11 +276,64 @@
       "row": 7,
       "words": [
         {
+          "simplified": "不想",
+          "traditional": "不想",
+          "pinyin": "bù xiǎng",
+          "english": "don't want to",
+          "audio": "audio/不想.mp3",
+          "important": true
+        },
+        {
+          "simplified": "照相",
+          "traditional": "照相",
+          "pinyin": "zhào xiàng",
+          "english": "to take a photo",
+          "audio": "audio/照相.mp3",
+          "important": true
+        },
+        {
+          "simplified": "骑脚踏车",
+          "traditional": "騎腳踏車",
+          "pinyin": "qí jiǎo tà chē",
+          "english": "to ride a bicycle",
+          "audio": "audio/骑脚踏车.mp3",
+          "important": false
+        },
+        {
+          "simplified": "美丽极了",
+          "traditional": "美麗極了",
+          "pinyin": "měi lì jí le",
+          "english": "extremely beautiful",
+          "audio": "audio/美丽极了.mp3",
+          "important": false
+        },
+        {
           "simplified": "奶茶",
           "traditional": "奶茶",
           "pinyin": "nǎi chá",
           "english": "milk tea",
           "audio": "audio/奶茶.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "words": [
+        {
+          "simplified": "咖啡",
+          "traditional": "咖啡",
+          "pinyin": "kā fēi",
+          "english": "coffee",
+          "audio": "audio/咖啡.mp3",
+          "important": true
+        },
+        {
+          "simplified": "糖果",
+          "traditional": "糖果",
+          "pinyin": "táng guǒ",
+          "english": "candy; sweets",
+          "audio": "audio/糖果.mp3",
           "important": true
         },
         {
@@ -292,11 +345,32 @@
           "important": true
         },
         {
-          "simplified": "懂事",
-          "traditional": "懂事",
-          "pinyin": "dǒng shì",
-          "english": "sensible; well-behaved",
-          "audio": "audio/懂事.mp3",
+          "simplified": "早餐",
+          "traditional": "早餐",
+          "pinyin": "zǎo cān",
+          "english": "breakfast",
+          "audio": "audio/早餐.mp3",
+          "important": true
+        },
+        {
+          "simplified": "排队",
+          "traditional": "排隊",
+          "pinyin": "pái duì",
+          "english": "to queue; to line up",
+          "audio": "audio/排队.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "words": [
+        {
+          "simplified": "食物",
+          "traditional": "食物",
+          "pinyin": "shí wù",
+          "english": "food",
+          "audio": "audio/食物.mp3",
           "important": true
         },
         {
@@ -308,24 +382,154 @@
           "important": true
         },
         {
+          "simplified": "分工合作",
+          "traditional": "分工合作",
+          "pinyin": "fēn gōng hé zuò",
+          "english": "division of labor; cooperation",
+          "audio": "audio/分工合作.mp3",
+          "important": true
+        },
+        {
+          "simplified": "走进",
+          "traditional": "走進",
+          "pinyin": "zǒu jìn",
+          "english": "to walk into",
+          "audio": "audio/走进.mp3",
+          "important": true
+        },
+        {
+          "simplified": "懂事",
+          "traditional": "懂事",
+          "pinyin": "dǒng shì",
+          "english": "sensible; well-behaved",
+          "audio": "audio/懂事.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "words": [
+        {
+          "simplified": "做完",
+          "traditional": "做完",
+          "pinyin": "zuò wán",
+          "english": "to finish doing",
+          "audio": "audio/做完.mp3",
+          "important": true
+        },
+        {
           "simplified": "收拾",
           "traditional": "收拾",
           "pinyin": "shōu shi",
           "english": "to tidy up; to pack",
           "audio": "audio/收拾.mp3",
           "important": true
+        },
+        {
+          "simplified": "冰水",
+          "traditional": "冰水",
+          "pinyin": "bīng shuǐ",
+          "english": "ice water",
+          "audio": "audio/冰水.mp3",
+          "important": true
+        },
+        {
+          "simplified": "温水",
+          "traditional": "溫水",
+          "pinyin": "wēn shuǐ",
+          "english": "warm water",
+          "audio": "audio/温水.mp3",
+          "important": true
+        },
+        {
+          "simplified": "特别",
+          "traditional": "特別",
+          "pinyin": "tè bié",
+          "english": "special; especially",
+          "audio": "audio/特别.mp3",
+          "important": true
         }
       ]
     },
     {
-      "row": 8,
+      "row": 11,
       "words": [
+        {
+          "simplified": "炒饭",
+          "traditional": "炒飯",
+          "pinyin": "chǎo fàn",
+          "english": "fried rice",
+          "audio": "audio/炒饭.mp3",
+          "important": true
+        },
+        {
+          "simplified": "闻到",
+          "traditional": "聞到",
+          "pinyin": "wén dào",
+          "english": "to smell",
+          "audio": "audio/闻到.mp3",
+          "important": true
+        },
+        {
+          "simplified": "香味",
+          "traditional": "香味",
+          "pinyin": "xiāng wèi",
+          "english": "fragrance; aroma",
+          "audio": "audio/香味.mp3",
+          "important": true
+        },
+        {
+          "simplified": "油炸",
+          "traditional": "油炸",
+          "pinyin": "yóu zhá",
+          "english": "deep-fried",
+          "audio": "audio/油炸.mp3",
+          "important": true
+        },
         {
           "simplified": "医生",
           "traditional": "醫生",
           "pinyin": "yī shēng",
           "english": "doctor",
           "audio": "audio/医生.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "words": [
+        {
+          "simplified": "护士",
+          "traditional": "護士",
+          "pinyin": "hù shì",
+          "english": "nurse",
+          "audio": "audio/护士.mp3",
+          "important": true
+        },
+        {
+          "simplified": "看病",
+          "traditional": "看病",
+          "pinyin": "kàn bìng",
+          "english": "to see a doctor",
+          "audio": "audio/看病.mp3",
+          "important": true
+        },
+        {
+          "simplified": "照顾",
+          "traditional": "照顧",
+          "pinyin": "zhào gù",
+          "english": "to take care of",
+          "audio": "audio/照顾.mp3",
+          "important": true
+        },
+        {
+          "simplified": "小贩",
+          "traditional": "小販",
+          "pinyin": "xiǎo fàn",
+          "english": "hawker; vendor",
+          "audio": "audio/小贩.mp3",
           "important": true
         },
         {
@@ -334,6 +538,35 @@
           "pinyin": "mài cài",
           "english": "to sell vegetables",
           "audio": "audio/卖菜.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "words": [
+        {
+          "simplified": "阿姨",
+          "traditional": "阿姨",
+          "pinyin": "ā yí",
+          "english": "auntie",
+          "audio": "audio/阿姨.mp3",
+          "important": true
+        },
+        {
+          "simplified": "教师",
+          "traditional": "教師",
+          "pinyin": "jiào shī",
+          "english": "teacher",
+          "audio": "audio/教师.mp3",
+          "important": true
+        },
+        {
+          "simplified": "爷爷",
+          "traditional": "爺爺",
+          "pinyin": "yé ye",
+          "english": "grandfather (paternal)",
+          "audio": "audio/爷爷.mp3",
           "important": true
         },
         {
@@ -342,6 +575,51 @@
           "pinyin": "zhòng huā",
           "english": "to plant flowers",
           "audio": "audio/种花.mp3",
+          "important": false
+        },
+        {
+          "simplified": "演员",
+          "traditional": "演員",
+          "pinyin": "yǎn yuán",
+          "english": "actor; actress",
+          "audio": "audio/演员.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "words": [
+        {
+          "simplified": "发生火灾",
+          "traditional": "發生火災",
+          "pinyin": "fā shēng huǒ zāi",
+          "english": "fire broke out",
+          "audio": "audio/发生火灾.mp3",
+          "important": true
+        },
+        {
+          "simplified": "消防员",
+          "traditional": "消防員",
+          "pinyin": "xiāo fáng yuán",
+          "english": "firefighter",
+          "audio": "audio/消防员.mp3",
+          "important": false
+        },
+        {
+          "simplified": "灭火",
+          "traditional": "滅火",
+          "pinyin": "miè huǒ",
+          "english": "to put out a fire",
+          "audio": "audio/灭火.mp3",
+          "important": true
+        },
+        {
+          "simplified": "抓住",
+          "traditional": "抓住",
+          "pinyin": "zhuā zhù",
+          "english": "to catch; to grasp",
+          "audio": "audio/抓住.mp3",
           "important": true
         },
         {
@@ -350,6 +628,19 @@
           "pinyin": "huài rén",
           "english": "bad person; villain",
           "audio": "audio/坏人.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "words": [
+        {
+          "simplified": "保护",
+          "traditional": "保護",
+          "pinyin": "bǎo hù",
+          "english": "to protect",
+          "audio": "audio/保护.mp3",
           "important": true
         },
         {
@@ -358,6 +649,2002 @@
           "pinyin": "hài pà",
           "english": "to be afraid; to fear",
           "audio": "audio/害怕.mp3",
+          "important": false
+        },
+        {
+          "simplified": "建造",
+          "traditional": "建造",
+          "pinyin": "jiàn zào",
+          "english": "to build; to construct",
+          "audio": "audio/建造.mp3",
+          "important": true
+        },
+        {
+          "simplified": "都是",
+          "traditional": "都是",
+          "pinyin": "dōu shì",
+          "english": "all are; both are",
+          "audio": "audio/都是.mp3",
+          "important": true
+        },
+        {
+          "simplified": "房子",
+          "traditional": "房子",
+          "pinyin": "fáng zi",
+          "english": "house",
+          "audio": "audio/房子.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "words": [
+        {
+          "simplified": "窗外",
+          "traditional": "窗外",
+          "pinyin": "chuāng wài",
+          "english": "outside the window",
+          "audio": "audio/窗外.mp3",
+          "important": true
+        },
+        {
+          "simplified": "黑暗",
+          "traditional": "黑暗",
+          "pinyin": "hēi àn",
+          "english": "dark; darkness",
+          "audio": "audio/黑暗.mp3",
+          "important": true
+        },
+        {
+          "simplified": "乌云",
+          "traditional": "烏雲",
+          "pinyin": "wū yún",
+          "english": "dark clouds",
+          "audio": "audio/乌云.mp3",
+          "important": false
+        },
+        {
+          "simplified": "闪电",
+          "traditional": "閃電",
+          "pinyin": "shǎn diàn",
+          "english": "lightning",
+          "audio": "audio/闪电.mp3",
+          "important": false
+        },
+        {
+          "simplified": "刮风",
+          "traditional": "颳風",
+          "pinyin": "guā fēng",
+          "english": "windy; blowing wind",
+          "audio": "audio/刮风.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "words": [
+        {
+          "simplified": "带着",
+          "traditional": "帶著",
+          "pinyin": "dài zhe",
+          "english": "carrying; bringing",
+          "audio": "audio/带着.mp3",
+          "important": true
+        },
+        {
+          "simplified": "雨伞",
+          "traditional": "雨傘",
+          "pinyin": "yǔ sǎn",
+          "english": "umbrella",
+          "audio": "audio/雨伞.mp3",
+          "important": false
+        },
+        {
+          "simplified": "淋湿",
+          "traditional": "淋濕",
+          "pinyin": "lín shī",
+          "english": "to get wet (from rain)",
+          "audio": "audio/淋湿.mp3",
+          "important": false
+        },
+        {
+          "simplified": "很冷",
+          "traditional": "很冷",
+          "pinyin": "hěn lěng",
+          "english": "very cold",
+          "audio": "audio/很冷.mp3",
+          "important": false
+        },
+        {
+          "simplified": "记得",
+          "traditional": "記得",
+          "pinyin": "jì de",
+          "english": "to remember",
+          "audio": "audio/记得.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "words": [
+        {
+          "simplified": "阴天",
+          "traditional": "陰天",
+          "pinyin": "yīn tiān",
+          "english": "cloudy day; overcast",
+          "audio": "audio/阴天.mp3",
+          "important": false
+        },
+        {
+          "simplified": "敢风筝",
+          "traditional": "敢風箏",
+          "pinyin": "gǎn fēng zhēng",
+          "english": "dare to fly kite",
+          "audio": "audio/敢风筝.mp3",
+          "important": true
+        },
+        {
+          "simplified": "晴天",
+          "traditional": "晴天",
+          "pinyin": "qíng tiān",
+          "english": "sunny day; clear sky",
+          "audio": "audio/晴天.mp3",
+          "important": true
+        },
+        {
+          "simplified": "很热",
+          "traditional": "很熱",
+          "pinyin": "hěn rè",
+          "english": "very hot",
+          "audio": "audio/很热.mp3",
+          "important": true
+        },
+        {
+          "simplified": "忘记",
+          "traditional": "忘記",
+          "pinyin": "wàng jì",
+          "english": "to forget",
+          "audio": "audio/忘记.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "words": [
+        {
+          "simplified": "着急",
+          "traditional": "著急",
+          "pinyin": "zháo jí",
+          "english": "anxious; worried",
+          "audio": "audio/着急.mp3",
+          "important": true
+        },
+        {
+          "simplified": "摔了摔",
+          "traditional": "摔了摔",
+          "pinyin": "shuāi le shuāi",
+          "english": "fell down",
+          "audio": "audio/摔了摔.mp3",
+          "important": true
+        },
+        {
+          "simplified": "孩子",
+          "traditional": "孩子",
+          "pinyin": "hái zi",
+          "english": "child",
+          "audio": "audio/孩子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "问题",
+          "traditional": "問題",
+          "pinyin": "wèn tí",
+          "english": "question; problem",
+          "audio": "audio/问题.mp3",
+          "important": false
+        },
+        {
+          "simplified": "好呢",
+          "traditional": "好呢",
+          "pinyin": "hǎo ne",
+          "english": "good (question particle)",
+          "audio": "audio/好呢.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "words": [
+        {
+          "simplified": "门铃响了",
+          "traditional": "門鈴響了",
+          "pinyin": "mén líng xiǎng le",
+          "english": "the doorbell rang",
+          "audio": "audio/门铃响了.mp3",
+          "important": false
+        },
+        {
+          "simplified": "蚂蚁",
+          "traditional": "螞蟻",
+          "pinyin": "mǎ yǐ",
+          "english": "ant",
+          "audio": "audio/蚂蚁.mp3",
+          "important": true
+        },
+        {
+          "simplified": "爬来爬去",
+          "traditional": "爬來爬去",
+          "pinyin": "pá lái pá qù",
+          "english": "crawling around",
+          "audio": "audio/爬来爬去.mp3",
+          "important": true
+        },
+        {
+          "simplified": "蜜蜂",
+          "traditional": "蜜蜂",
+          "pinyin": "mì fēng",
+          "english": "bee",
+          "audio": "audio/蜜蜂.mp3",
+          "important": true
+        },
+        {
+          "simplified": "花丛",
+          "traditional": "花叢",
+          "pinyin": "huā cóng",
+          "english": "flower bushes",
+          "audio": "audio/花丛.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 21,
+      "words": [
+        {
+          "simplified": "池塘",
+          "traditional": "池塘",
+          "pinyin": "chí táng",
+          "english": "pond",
+          "audio": "audio/池塘.mp3",
+          "important": true
+        },
+        {
+          "simplified": "树枝",
+          "traditional": "樹枝",
+          "pinyin": "shù zhī",
+          "english": "tree branch",
+          "audio": "audio/树枝.mp3",
+          "important": false
+        },
+        {
+          "simplified": "清水",
+          "traditional": "清水",
+          "pinyin": "qīng shuǐ",
+          "english": "clear water",
+          "audio": "audio/清水.mp3",
+          "important": true
+        },
+        {
+          "simplified": "跳来跳去",
+          "traditional": "跳來跳去",
+          "pinyin": "tiào lái tiào qù",
+          "english": "jumping around",
+          "audio": "audio/跳来跳去.mp3",
+          "important": false
+        },
+        {
+          "simplified": "事情",
+          "traditional": "事情",
+          "pinyin": "shì qíng",
+          "english": "matter; thing",
+          "audio": "audio/事情.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "words": [
+        {
+          "simplified": "青蛙",
+          "traditional": "青蛙",
+          "pinyin": "qīng wā",
+          "english": "frog",
+          "audio": "audio/青蛙.mp3",
+          "important": true
+        },
+        {
+          "simplified": "提害虫",
+          "traditional": "提害蟲",
+          "pinyin": "tí hài chóng",
+          "english": "to catch pests",
+          "audio": "audio/提害虫.mp3",
+          "important": true
+        },
+        {
+          "simplified": "眼睛",
+          "traditional": "眼睛",
+          "pinyin": "yǎn jīng",
+          "english": "eye",
+          "audio": "audio/眼睛.mp3",
+          "important": true
+        },
+        {
+          "simplified": "让开",
+          "traditional": "讓開",
+          "pinyin": "ràng kāi",
+          "english": "get out of the way",
+          "audio": "audio/让开.mp3",
+          "important": true
+        },
+        {
+          "simplified": "掉下来",
+          "traditional": "掉下來",
+          "pinyin": "diào xià lái",
+          "english": "to fall down",
+          "audio": "audio/掉下来.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "words": [
+        {
+          "simplified": "泥土",
+          "traditional": "泥土",
+          "pinyin": "ní tǔ",
+          "english": "soil; mud",
+          "audio": "audio/泥土.mp3",
+          "important": false
+        },
+        {
+          "simplified": "成为",
+          "traditional": "成為",
+          "pinyin": "chéng wéi",
+          "english": "to become",
+          "audio": "audio/成为.mp3",
+          "important": true
+        },
+        {
+          "simplified": "鸟窝",
+          "traditional": "鳥窩",
+          "pinyin": "niǎo wō",
+          "english": "bird's nest",
+          "audio": "audio/鸟窝.mp3",
+          "important": true
+        },
+        {
+          "simplified": "叶子",
+          "traditional": "葉子",
+          "pinyin": "yè zi",
+          "english": "leaf",
+          "audio": "audio/叶子.mp3",
+          "important": false
+        },
+        {
+          "simplified": "好像",
+          "traditional": "好像",
+          "pinyin": "hǎo xiàng",
+          "english": "to seem like",
+          "audio": "audio/好像.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "words": [
+        {
+          "simplified": "结出",
+          "traditional": "結出",
+          "pinyin": "jié chū",
+          "english": "to produce (fruit)",
+          "audio": "audio/结出.mp3",
+          "important": true
+        },
+        {
+          "simplified": "帮助",
+          "traditional": "幫助",
+          "pinyin": "bāng zhù",
+          "english": "to help",
+          "audio": "audio/帮助.mp3",
+          "important": true
+        },
+        {
+          "simplified": "甜甜的",
+          "traditional": "甜甜的",
+          "pinyin": "tián tián de",
+          "english": "sweet",
+          "audio": "audio/甜甜的.mp3",
+          "important": true
+        },
+        {
+          "simplified": "喜欢",
+          "traditional": "喜歡",
+          "pinyin": "xǐ huān",
+          "english": "to like",
+          "audio": "audio/喜欢.mp3",
+          "important": true
+        },
+        {
+          "simplified": "纸船",
+          "traditional": "紙船",
+          "pinyin": "zhǐ chuán",
+          "english": "paper boat",
+          "audio": "audio/纸船.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "words": [
+        {
+          "simplified": "机器人",
+          "traditional": "機器人",
+          "pinyin": "jī qì rén",
+          "english": "robot",
+          "audio": "audio/机器人.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一块",
+          "traditional": "一塊",
+          "pinyin": "yī kuài",
+          "english": "together; a piece",
+          "audio": "audio/一块.mp3",
+          "important": false
+        },
+        {
+          "simplified": "跟着",
+          "traditional": "跟著",
+          "pinyin": "gēn zhe",
+          "english": "to follow",
+          "audio": "audio/跟着.mp3",
+          "important": true
+        },
+        {
+          "simplified": "跳棋",
+          "traditional": "跳棋",
+          "pinyin": "tiào qí",
+          "english": "checkers",
+          "audio": "audio/跳棋.mp3",
+          "important": true
+        },
+        {
+          "simplified": "塔积木",
+          "traditional": "塔積木",
+          "pinyin": "tǎ jī mù",
+          "english": "to stack blocks",
+          "audio": "audio/塔积木.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "words": [
+        {
+          "simplified": "布娃娃",
+          "traditional": "布娃娃",
+          "pinyin": "bù wá wa",
+          "english": "doll",
+          "audio": "audio/布娃娃.mp3",
+          "important": false
+        },
+        {
+          "simplified": "好吧",
+          "traditional": "好吧",
+          "pinyin": "hǎo ba",
+          "english": "okay; alright",
+          "audio": "audio/好吧.mp3",
+          "important": true
+        },
+        {
+          "simplified": "许多",
+          "traditional": "許多",
+          "pinyin": "xǔ duō",
+          "english": "many; much",
+          "audio": "audio/许多.mp3",
+          "important": true
+        },
+        {
+          "simplified": "跳绳",
+          "traditional": "跳繩",
+          "pinyin": "tiào shéng",
+          "english": "to jump rope",
+          "audio": "audio/跳绳.mp3",
+          "important": true
+        },
+        {
+          "simplified": "捏泥巴",
+          "traditional": "捏泥巴",
+          "pinyin": "niē ní bā",
+          "english": "to play with clay",
+          "audio": "audio/捏泥巴.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "words": [
+        {
+          "simplified": "拼图",
+          "traditional": "拼圖",
+          "pinyin": "pīn tú",
+          "english": "jigsaw puzzle",
+          "audio": "audio/拼图.mp3",
+          "important": false
+        },
+        {
+          "simplified": "更多",
+          "traditional": "更多",
+          "pinyin": "gèng duō",
+          "english": "more",
+          "audio": "audio/更多.mp3",
+          "important": true
+        },
+        {
+          "simplified": "过去",
+          "traditional": "過去",
+          "pinyin": "guò qù",
+          "english": "to go over; past",
+          "audio": "audio/过去.mp3",
+          "important": true
+        },
+        {
+          "simplified": "好吗",
+          "traditional": "好嗎",
+          "pinyin": "hǎo ma",
+          "english": "okay?",
+          "audio": "audio/好吗.mp3",
+          "important": true
+        },
+        {
+          "simplified": "最好",
+          "traditional": "最好",
+          "pinyin": "zuì hǎo",
+          "english": "best; had better",
+          "audio": "audio/最好.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "words": [
+        {
+          "simplified": "大象",
+          "traditional": "大象",
+          "pinyin": "dà xiàng",
+          "english": "elephant",
+          "audio": "audio/大象.mp3",
+          "important": true
+        },
+        {
+          "simplified": "依追我跑",
+          "traditional": "依追我跑",
+          "pinyin": "yī zhuī wǒ pǎo",
+          "english": "chasing each other",
+          "audio": "audio/依追我跑.mp3",
+          "important": false
+        },
+        {
+          "simplified": "老鹰捉小鸡",
+          "traditional": "老鷹捉小雞",
+          "pinyin": "lǎo yīng zhuō xiǎo jī",
+          "english": "eagle catches chick (game)",
+          "audio": "audio/老鹰捉小鸡.mp3",
+          "important": true
+        },
+        {
+          "simplified": "礼物",
+          "traditional": "禮物",
+          "pinyin": "lǐ wù",
+          "english": "gift; present",
+          "audio": "audio/礼物.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一张生日卡",
+          "traditional": "一張生日卡",
+          "pinyin": "yī zhāng shēng rì kǎ",
+          "english": "a birthday card",
+          "audio": "audio/一张生日卡.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "words": [
+        {
+          "simplified": "客厅",
+          "traditional": "客廳",
+          "pinyin": "kè tīng",
+          "english": "living room",
+          "audio": "audio/客厅.mp3",
+          "important": true
+        },
+        {
+          "simplified": "桌子",
+          "traditional": "桌子",
+          "pinyin": "zhuō zi",
+          "english": "table; desk",
+          "audio": "audio/桌子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "永远年轻",
+          "traditional": "永遠年輕",
+          "pinyin": "yǒng yuǎn nián qīng",
+          "english": "forever young",
+          "audio": "audio/永远年轻.mp3",
+          "important": true
+        },
+        {
+          "simplified": "长命百岁",
+          "traditional": "長命百歲",
+          "pinyin": "cháng mìng bǎi suì",
+          "english": "long life",
+          "audio": "audio/长命百岁.mp3",
+          "important": true
+        },
+        {
+          "simplified": "健康幸福",
+          "traditional": "健康幸福",
+          "pinyin": "jiàn kāng xìng fú",
+          "english": "healthy and happy",
+          "audio": "audio/健康幸福.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "words": [
+        {
+          "simplified": "写字",
+          "traditional": "寫字",
+          "pinyin": "xiě zì",
+          "english": "to write characters",
+          "audio": "audio/写字.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一首歌",
+          "traditional": "一首歌",
+          "pinyin": "yī shǒu gē",
+          "english": "a song",
+          "audio": "audio/一首歌.mp3",
+          "important": true
+        },
+        {
+          "simplified": "许愿",
+          "traditional": "許願",
+          "pinyin": "xǔ yuàn",
+          "english": "to make a wish",
+          "audio": "audio/许愿.mp3",
+          "important": true
+        },
+        {
+          "simplified": "吹蜡烛",
+          "traditional": "吹蠟燭",
+          "pinyin": "chuī là zhú",
+          "english": "to blow out candles",
+          "audio": "audio/吹蜡烛.mp3",
+          "important": true
+        },
+        {
+          "simplified": "蛋糕",
+          "traditional": "蛋糕",
+          "pinyin": "dàn gāo",
+          "english": "cake",
+          "audio": "audio/蛋糕.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "words": [
+        {
+          "simplified": "电影票",
+          "traditional": "電影票",
+          "pinyin": "diàn yǐng piào",
+          "english": "movie ticket",
+          "audio": "audio/电影票.mp3",
+          "important": true
+        },
+        {
+          "simplified": "宝贝",
+          "traditional": "寶貝",
+          "pinyin": "bǎo bèi",
+          "english": "baby; treasure",
+          "audio": "audio/宝贝.mp3",
+          "important": true
+        },
+        {
+          "simplified": "活动",
+          "traditional": "活動",
+          "pinyin": "huó dòng",
+          "english": "activity",
+          "audio": "audio/活动.mp3",
+          "important": true
+        },
+        {
+          "simplified": "哪些",
+          "traditional": "哪些",
+          "pinyin": "nǎ xiē",
+          "english": "which ones",
+          "audio": "audio/哪些.mp3",
+          "important": true
+        },
+        {
+          "simplified": "奇怪",
+          "traditional": "奇怪",
+          "pinyin": "qí guài",
+          "english": "strange; odd",
+          "audio": "audio/奇怪.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "words": [
+        {
+          "simplified": "宠物",
+          "traditional": "寵物",
+          "pinyin": "chǒng wù",
+          "english": "pet",
+          "audio": "audio/宠物.mp3",
+          "important": false
+        },
+        {
+          "simplified": "小狗",
+          "traditional": "小狗",
+          "pinyin": "xiǎo gǒu",
+          "english": "puppy; small dog",
+          "audio": "audio/小狗.mp3",
+          "important": false
+        },
+        {
+          "simplified": "洗澡",
+          "traditional": "洗澡",
+          "pinyin": "xǐ zǎo",
+          "english": "to take a bath",
+          "audio": "audio/洗澡.mp3",
+          "important": true
+        },
+        {
+          "simplified": "聪明",
+          "traditional": "聰明",
+          "pinyin": "cōng míng",
+          "english": "smart; clever",
+          "audio": "audio/聪明.mp3",
+          "important": false
+        },
+        {
+          "simplified": "乖巧",
+          "traditional": "乖巧",
+          "pinyin": "guāi qiǎo",
+          "english": "well-behaved; obedient",
+          "audio": "audio/乖巧.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "words": [
+        {
+          "simplified": "总是",
+          "traditional": "總是",
+          "pinyin": "zǒng shì",
+          "english": "always",
+          "audio": "audio/总是.mp3",
+          "important": true
+        },
+        {
+          "simplified": "迎接",
+          "traditional": "迎接",
+          "pinyin": "yíng jiē",
+          "english": "to welcome; to greet",
+          "audio": "audio/迎接.mp3",
+          "important": true
+        },
+        {
+          "simplified": "吐出来",
+          "traditional": "吐出來",
+          "pinyin": "tǔ chū lái",
+          "english": "to spit out",
+          "audio": "audio/吐出来.mp3",
+          "important": false
+        },
+        {
+          "simplified": "兽医",
+          "traditional": "獸醫",
+          "pinyin": "shòu yī",
+          "english": "veterinarian",
+          "audio": "audio/兽医.mp3",
+          "important": true
+        },
+        {
+          "simplified": "金鱼",
+          "traditional": "金魚",
+          "pinyin": "jīn yú",
+          "english": "goldfish",
+          "audio": "audio/金鱼.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 34,
+      "words": [
+        {
+          "simplified": "漂亮",
+          "traditional": "漂亮",
+          "pinyin": "piào liang",
+          "english": "pretty; beautiful",
+          "audio": "audio/漂亮.mp3",
+          "important": false
+        },
+        {
+          "simplified": "睡觉",
+          "traditional": "睡覺",
+          "pinyin": "shuì jiào",
+          "english": "to sleep",
+          "audio": "audio/睡觉.mp3",
+          "important": true
+        },
+        {
+          "simplified": "党得",
+          "traditional": "黨得",
+          "pinyin": "dǎng de",
+          "english": "to block",
+          "audio": "audio/党得.mp3",
+          "important": true
+        },
+        {
+          "simplified": "羽毛",
+          "traditional": "羽毛",
+          "pinyin": "yǔ máo",
+          "english": "feather",
+          "audio": "audio/羽毛.mp3",
+          "important": true
+        },
+        {
+          "simplified": "救员",
+          "traditional": "救員",
+          "pinyin": "jiù yuán",
+          "english": "rescuer",
+          "audio": "audio/救员.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "words": [
+        {
+          "simplified": "小猫",
+          "traditional": "小貓",
+          "pinyin": "xiǎo māo",
+          "english": "kitten; small cat",
+          "audio": "audio/小猫.mp3",
+          "important": true
+        },
+        {
+          "simplified": "小兔",
+          "traditional": "小兔",
+          "pinyin": "xiǎo tù",
+          "english": "small rabbit",
+          "audio": "audio/小兔.mp3",
+          "important": true
+        },
+        {
+          "simplified": "丢石头",
+          "traditional": "丟石頭",
+          "pinyin": "diū shí tóu",
+          "english": "to throw stones",
+          "audio": "audio/丢石头.mp3",
+          "important": false
+        },
+        {
+          "simplified": "晚上",
+          "traditional": "晚上",
+          "pinyin": "wǎn shàng",
+          "english": "evening; night",
+          "audio": "audio/晚上.mp3",
+          "important": true
+        },
+        {
+          "simplified": "做梦",
+          "traditional": "做夢",
+          "pinyin": "zuò mèng",
+          "english": "to dream",
+          "audio": "audio/做梦.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "words": [
+        {
+          "simplified": "小鸟",
+          "traditional": "小鳥",
+          "pinyin": "xiǎo niǎo",
+          "english": "little bird",
+          "audio": "audio/小鸟.mp3",
+          "important": false
+        },
+        {
+          "simplified": "那里",
+          "traditional": "那裡",
+          "pinyin": "nà lǐ",
+          "english": "there",
+          "audio": "audio/那里.mp3",
+          "important": true
+        },
+        {
+          "simplified": "围了过来",
+          "traditional": "圍了過來",
+          "pinyin": "wéi le guò lái",
+          "english": "surrounded; gathered around",
+          "audio": "audio/围了过来.mp3",
+          "important": true
+        },
+        {
+          "simplified": "认识",
+          "traditional": "認識",
+          "pinyin": "rèn shi",
+          "english": "to know; to recognize",
+          "audio": "audio/认识.mp3",
+          "important": false
+        },
+        {
+          "simplified": "醒来",
+          "traditional": "醒來",
+          "pinyin": "xǐng lái",
+          "english": "to wake up",
+          "audio": "audio/醒来.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 37,
+      "words": [
+        {
+          "simplified": "以前",
+          "traditional": "以前",
+          "pinyin": "yǐ qián",
+          "english": "before; in the past",
+          "audio": "audio/以前.mp3",
+          "important": true
+        },
+        {
+          "simplified": "弄破",
+          "traditional": "弄破",
+          "pinyin": "nòng pò",
+          "english": "to break; to damage",
+          "audio": "audio/弄破.mp3",
+          "important": true
+        },
+        {
+          "simplified": "讨厌",
+          "traditional": "討厭",
+          "pinyin": "tǎo yàn",
+          "english": "to hate; annoying",
+          "audio": "audio/讨厌.mp3",
+          "important": true
+        },
+        {
+          "simplified": "撞倒",
+          "traditional": "撞倒",
+          "pinyin": "zhuàng dǎo",
+          "english": "to knock down",
+          "audio": "audio/撞倒.mp3",
+          "important": true
+        },
+        {
+          "simplified": "受伤",
+          "traditional": "受傷",
+          "pinyin": "shòu shāng",
+          "english": "to be injured",
+          "audio": "audio/受伤.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 38,
+      "words": [
+        {
+          "simplified": "争吵",
+          "traditional": "爭吵",
+          "pinyin": "zhēng chǎo",
+          "english": "to argue; to quarrel",
+          "audio": "audio/争吵.mp3",
+          "important": true
+        },
+        {
+          "simplified": "推倒",
+          "traditional": "推倒",
+          "pinyin": "tuī dǎo",
+          "english": "to push down",
+          "audio": "audio/推倒.mp3",
+          "important": true
+        },
+        {
+          "simplified": "应该",
+          "traditional": "應該",
+          "pinyin": "yīng gāi",
+          "english": "should; ought to",
+          "audio": "audio/应该.mp3",
+          "important": true
+        },
+        {
+          "simplified": "不能",
+          "traditional": "不能",
+          "pinyin": "bù néng",
+          "english": "cannot; should not",
+          "audio": "audio/不能.mp3",
+          "important": false
+        },
+        {
+          "simplified": "你争我抢",
+          "traditional": "你爭我搶",
+          "pinyin": "nǐ zhēng wǒ qiǎng",
+          "english": "to fight over something",
+          "audio": "audio/你争我抢.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 39,
+      "words": [
+        {
+          "simplified": "很难",
+          "traditional": "很難",
+          "pinyin": "hěn nán",
+          "english": "very difficult",
+          "audio": "audio/很难.mp3",
+          "important": true
+        },
+        {
+          "simplified": "怎么办呢",
+          "traditional": "怎麼辦呢",
+          "pinyin": "zěn me bàn ne",
+          "english": "what to do?",
+          "audio": "audio/怎么办呢.mp3",
+          "important": true
+        },
+        {
+          "simplified": "容易",
+          "traditional": "容易",
+          "pinyin": "róng yì",
+          "english": "easy",
+          "audio": "audio/容易.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一道彩虹",
+          "traditional": "一道彩虹",
+          "pinyin": "yī dào cǎi hóng",
+          "english": "a rainbow",
+          "audio": "audio/一道彩虹.mp3",
+          "important": false
+        },
+        {
+          "simplified": "亮晶晶",
+          "traditional": "亮晶晶",
+          "pinyin": "liàng jīng jīng",
+          "english": "shiny; sparkling",
+          "audio": "audio/亮晶晶.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 40,
+      "words": [
+        {
+          "simplified": "粗和细",
+          "traditional": "粗和細",
+          "pinyin": "cū hé xì",
+          "english": "thick and thin",
+          "audio": "audio/粗和细.mp3",
+          "important": true
+        },
+        {
+          "simplified": "脸上",
+          "traditional": "臉上",
+          "pinyin": "liǎn shàng",
+          "english": "on the face",
+          "audio": "audio/脸上.mp3",
+          "important": true
+        },
+        {
+          "simplified": "分工合作",
+          "traditional": "分工合作",
+          "pinyin": "fēn gōng hé zuò",
+          "english": "division of labor; cooperation",
+          "audio": "audio/分工合作.mp3",
+          "important": true
+        },
+        {
+          "simplified": "玉米",
+          "traditional": "玉米",
+          "pinyin": "yù mǐ",
+          "english": "corn",
+          "audio": "audio/玉米.mp3",
+          "important": true
+        },
+        {
+          "simplified": "黄瓜",
+          "traditional": "黃瓜",
+          "pinyin": "huáng guā",
+          "english": "cucumber",
+          "audio": "audio/黄瓜.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 41,
+      "words": [
+        {
+          "simplified": "比较",
+          "traditional": "比較",
+          "pinyin": "bǐ jiào",
+          "english": "to compare; relatively",
+          "audio": "audio/比较.mp3",
+          "important": false
+        },
+        {
+          "simplified": "就是",
+          "traditional": "就是",
+          "pinyin": "jiù shì",
+          "english": "exactly; just",
+          "audio": "audio/就是.mp3",
+          "important": true
+        },
+        {
+          "simplified": "番茄汤",
+          "traditional": "番茄湯",
+          "pinyin": "fān qié tāng",
+          "english": "tomato soup",
+          "audio": "audio/番茄汤.mp3",
+          "important": true
+        },
+        {
+          "simplified": "白菜汤",
+          "traditional": "白菜湯",
+          "pinyin": "bái cài tāng",
+          "english": "cabbage soup",
+          "audio": "audio/白菜汤.mp3",
+          "important": true
+        },
+        {
+          "simplified": "或者",
+          "traditional": "或者",
+          "pinyin": "huò zhě",
+          "english": "or",
+          "audio": "audio/或者.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 42,
+      "words": [
+        {
+          "simplified": "扁豆",
+          "traditional": "扁豆",
+          "pinyin": "biǎn dòu",
+          "english": "hyacinth bean",
+          "audio": "audio/扁豆.mp3",
+          "important": true
+        },
+        {
+          "simplified": "煮饭",
+          "traditional": "煮飯",
+          "pinyin": "zhǔ fàn",
+          "english": "to cook rice",
+          "audio": "audio/煮饭.mp3",
+          "important": true
+        },
+        {
+          "simplified": "豆芽",
+          "traditional": "豆芽",
+          "pinyin": "dòu yá",
+          "english": "bean sprouts",
+          "audio": "audio/豆芽.mp3",
+          "important": true
+        },
+        {
+          "simplified": "紫色",
+          "traditional": "紫色",
+          "pinyin": "zǐ sè",
+          "english": "purple",
+          "audio": "audio/紫色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "果实",
+          "traditional": "果實",
+          "pinyin": "guǒ shí",
+          "english": "fruit",
+          "audio": "audio/果实.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 43,
+      "words": [
+        {
+          "simplified": "树根",
+          "traditional": "樹根",
+          "pinyin": "shù gēn",
+          "english": "tree root",
+          "audio": "audio/树根.mp3",
+          "important": true
+        },
+        {
+          "simplified": "考试",
+          "traditional": "考試",
+          "pinyin": "kǎo shì",
+          "english": "exam; test",
+          "audio": "audio/考试.mp3",
+          "important": false
+        },
+        {
+          "simplified": "黑色",
+          "traditional": "黑色",
+          "pinyin": "hēi sè",
+          "english": "black",
+          "audio": "audio/黑色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "伤心地哭",
+          "traditional": "傷心地哭",
+          "pinyin": "shāng xīn de kū",
+          "english": "to cry sadly",
+          "audio": "audio/伤心地哭.mp3",
+          "important": false
+        },
+        {
+          "simplified": "挖花生",
+          "traditional": "挖花生",
+          "pinyin": "wā huā shēng",
+          "english": "to dig up peanuts",
+          "audio": "audio/挖花生.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 44,
+      "words": [
+        {
+          "simplified": "老鼠",
+          "traditional": "老鼠",
+          "pinyin": "lǎo shǔ",
+          "english": "mouse; rat",
+          "audio": "audio/老鼠.mp3",
+          "important": true
+        },
+        {
+          "simplified": "拔萝卜",
+          "traditional": "拔蘿蔔",
+          "pinyin": "bá luó bo",
+          "english": "to pull up radish",
+          "audio": "audio/拔萝卜.mp3",
+          "important": true
+        },
+        {
+          "simplified": "小猪",
+          "traditional": "小豬",
+          "pinyin": "xiǎo zhū",
+          "english": "piglet",
+          "audio": "audio/小猪.mp3",
+          "important": true
+        },
+        {
+          "simplified": "摘果子",
+          "traditional": "摘果子",
+          "pinyin": "zhāi guǒ zi",
+          "english": "to pick fruit",
+          "audio": "audio/摘果子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "附近",
+          "traditional": "附近",
+          "pinyin": "fù jìn",
+          "english": "nearby; vicinity",
+          "audio": "audio/附近.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 45,
+      "words": [
+        {
+          "simplified": "时候",
+          "traditional": "時候",
+          "pinyin": "shí hòu",
+          "english": "time; when",
+          "audio": "audio/时候.mp3",
+          "important": false
+        },
+        {
+          "simplified": "借书",
+          "traditional": "借書",
+          "pinyin": "jiè shū",
+          "english": "to borrow books",
+          "audio": "audio/借书.mp3",
+          "important": false
+        },
+        {
+          "simplified": "指着",
+          "traditional": "指著",
+          "pinyin": "zhǐ zhe",
+          "english": "pointing at",
+          "audio": "audio/指着.mp3",
+          "important": true
+        },
+        {
+          "simplified": "开始",
+          "traditional": "開始",
+          "pinyin": "kāi shǐ",
+          "english": "to begin; start",
+          "audio": "audio/开始.mp3",
+          "important": false
+        },
+        {
+          "simplified": "保持安静",
+          "traditional": "保持安靜",
+          "pinyin": "bǎo chí ān jìng",
+          "english": "to keep quiet",
+          "audio": "audio/保持安静.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 46,
+      "words": [
+        {
+          "simplified": "大声讲话",
+          "traditional": "大聲講話",
+          "pinyin": "dà shēng jiǎng huà",
+          "english": "to speak loudly",
+          "audio": "audio/大声讲话.mp3",
+          "important": true
+        },
+        {
+          "simplified": "满意",
+          "traditional": "滿意",
+          "pinyin": "mǎn yì",
+          "english": "satisfied",
+          "audio": "audio/满意.mp3",
+          "important": true
+        },
+        {
+          "simplified": "各种各样",
+          "traditional": "各種各樣",
+          "pinyin": "gè zhǒng gè yàng",
+          "english": "all kinds of",
+          "audio": "audio/各种各样.mp3",
+          "important": true
+        },
+        {
+          "simplified": "讲故事",
+          "traditional": "講故事",
+          "pinyin": "jiǎng gù shì",
+          "english": "to tell a story",
+          "audio": "audio/讲故事.mp3",
+          "important": false
+        },
+        {
+          "simplified": "知道",
+          "traditional": "知道",
+          "pinyin": "zhī dào",
+          "english": "to know",
+          "audio": "audio/知道.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 47,
+      "words": [
+        {
+          "simplified": "答案",
+          "traditional": "答案",
+          "pinyin": "dá àn",
+          "english": "answer",
+          "audio": "audio/答案.mp3",
+          "important": true
+        },
+        {
+          "simplified": "有趣",
+          "traditional": "有趣",
+          "pinyin": "yǒu qù",
+          "english": "interesting",
+          "audio": "audio/有趣.mp3",
+          "important": true
+        },
+        {
+          "simplified": "绘本",
+          "traditional": "繪本",
+          "pinyin": "huì běn",
+          "english": "picture book",
+          "audio": "audio/绘本.mp3",
+          "important": false
+        },
+        {
+          "simplified": "好几次",
+          "traditional": "好幾次",
+          "pinyin": "hǎo jǐ cì",
+          "english": "several times",
+          "audio": "audio/好几次.mp3",
+          "important": true
+        },
+        {
+          "simplified": "几遍",
+          "traditional": "幾遍",
+          "pinyin": "jǐ biàn",
+          "english": "how many times",
+          "audio": "audio/几遍.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 48,
+      "words": [
+        {
+          "simplified": "书架",
+          "traditional": "書架",
+          "pinyin": "shū jià",
+          "english": "bookshelf",
+          "audio": "audio/书架.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一首英文歌",
+          "traditional": "一首英文歌",
+          "pinyin": "yī shǒu yīng wén gē",
+          "english": "an English song",
+          "audio": "audio/一首英文歌.mp3",
+          "important": false
+        },
+        {
+          "simplified": "箱子",
+          "traditional": "箱子",
+          "pinyin": "xiāng zi",
+          "english": "box; suitcase",
+          "audio": "audio/箱子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "文具盒",
+          "traditional": "文具盒",
+          "pinyin": "wén jù hé",
+          "english": "pencil case",
+          "audio": "audio/文具盒.mp3",
+          "important": true
+        },
+        {
+          "simplified": "楼下",
+          "traditional": "樓下",
+          "pinyin": "lóu xià",
+          "english": "downstairs",
+          "audio": "audio/楼下.mp3",
+          "important": false
+        }
+      ]
+    },
+    {
+      "row": 49,
+      "words": [
+        {
+          "simplified": "连夜市",
+          "traditional": "連夜市",
+          "pinyin": "lián yè shì",
+          "english": "night market",
+          "audio": "audio/连夜市.mp3",
+          "important": true
+        },
+        {
+          "simplified": "热闹",
+          "traditional": "熱鬧",
+          "pinyin": "rè nào",
+          "english": "lively; bustling",
+          "audio": "audio/热闹.mp3",
+          "important": true
+        },
+        {
+          "simplified": "五颜六色",
+          "traditional": "五顏六色",
+          "pinyin": "wǔ yán liù sè",
+          "english": "colorful",
+          "audio": "audio/五颜六色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "筷料难",
+          "traditional": "筷料難",
+          "pinyin": "kuài liào nán",
+          "english": "difficult materials",
+          "audio": "audio/筷料难.mp3",
+          "important": true
+        },
+        {
+          "simplified": "射气球",
+          "traditional": "射氣球",
+          "pinyin": "shè qì qiú",
+          "english": "to shoot balloons",
+          "audio": "audio/射气球.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 50,
+      "words": [
+        {
+          "simplified": "套圈圈",
+          "traditional": "套圈圈",
+          "pinyin": "tào quān quān",
+          "english": "ring toss game",
+          "audio": "audio/套圈圈.mp3",
+          "important": true
+        },
+        {
+          "simplified": "碰碰车",
+          "traditional": "碰碰車",
+          "pinyin": "pèng pèng chē",
+          "english": "bumper cars",
+          "audio": "audio/碰碰车.mp3",
+          "important": true
+        },
+        {
+          "simplified": "二降降",
+          "traditional": "二降降",
+          "pinyin": "èr jiàng jiàng",
+          "english": "second descent",
+          "audio": "audio/二降降.mp3",
+          "important": true
+        },
+        {
+          "simplified": "引来",
+          "traditional": "引來",
+          "pinyin": "yǐn lái",
+          "english": "to attract",
+          "audio": "audio/引来.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一群群",
+          "traditional": "一群群",
+          "pinyin": "yī qún qún",
+          "english": "groups of",
+          "audio": "audio/一群群.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 51,
+      "words": [
+        {
+          "simplified": "但是",
+          "traditional": "但是",
+          "pinyin": "dàn shì",
+          "english": "but; however",
+          "audio": "audio/但是.mp3",
+          "important": true
+        },
+        {
+          "simplified": "烤香肠",
+          "traditional": "烤香腸",
+          "pinyin": "kǎo xiāng cháng",
+          "english": "grilled sausage",
+          "audio": "audio/烤香肠.mp3",
+          "important": true
+        },
+        {
+          "simplified": "炸鸡翅",
+          "traditional": "炸雞翅",
+          "pinyin": "zhá jī chì",
+          "english": "fried chicken wings",
+          "audio": "audio/炸鸡翅.mp3",
+          "important": true
+        },
+        {
+          "simplified": "踢足球",
+          "traditional": "踢足球",
+          "pinyin": "tī zú qiú",
+          "english": "to play soccer",
+          "audio": "audio/踢足球.mp3",
+          "important": true
+        },
+        {
+          "simplified": "放风筝",
+          "traditional": "放風箏",
+          "pinyin": "fàng fēng zhēng",
+          "english": "to fly a kite",
+          "audio": "audio/放风筝.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 52,
+      "words": [
+        {
+          "simplified": "长椅",
+          "traditional": "長椅",
+          "pinyin": "cháng yǐ",
+          "english": "bench",
+          "audio": "audio/长椅.mp3",
+          "important": true
+        },
+        {
+          "simplified": "安静",
+          "traditional": "安靜",
+          "pinyin": "ān jìng",
+          "english": "quiet",
+          "audio": "audio/安静.mp3",
+          "important": true
+        },
+        {
+          "simplified": "新加坡",
+          "traditional": "新加坡",
+          "pinyin": "xīn jiā pō",
+          "english": "Singapore",
+          "audio": "audio/新加坡.mp3",
+          "important": true
+        },
+        {
+          "simplified": "城市",
+          "traditional": "城市",
+          "pinyin": "chéng shì",
+          "english": "city",
+          "audio": "audio/城市.mp3",
+          "important": false
+        },
+        {
+          "simplified": "到处都是",
+          "traditional": "到處都是",
+          "pinyin": "dào chù dōu shì",
+          "english": "everywhere",
+          "audio": "audio/到处都是.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "words": [
+        {
+          "simplified": "市区",
+          "traditional": "市區",
+          "pinyin": "shì qū",
+          "english": "downtown; city center",
+          "audio": "audio/市区.mp3",
+          "important": true
+        },
+        {
+          "simplified": "街道",
+          "traditional": "街道",
+          "pinyin": "jiē dào",
+          "english": "street",
+          "audio": "audio/街道.mp3",
+          "important": true
+        },
+        {
+          "simplified": "千海",
+          "traditional": "千海",
+          "pinyin": "qiān hǎi",
+          "english": "thousand seas",
+          "audio": "audio/千海.mp3",
+          "important": true
+        },
+        {
+          "simplified": "整齐",
+          "traditional": "整齊",
+          "pinyin": "zhěng qí",
+          "english": "neat; tidy",
+          "audio": "audio/整齐.mp3",
+          "important": true
+        },
+        {
+          "simplified": "参观",
+          "traditional": "參觀",
+          "pinyin": "cān guān",
+          "english": "to visit",
+          "audio": "audio/参观.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 54,
+      "words": [
+        {
+          "simplified": "植物园",
+          "traditional": "植物園",
+          "pinyin": "zhí wù yuán",
+          "english": "botanical garden",
+          "audio": "audio/植物园.mp3",
+          "important": true
+        },
+        {
+          "simplified": "美术馆",
+          "traditional": "美術館",
+          "pinyin": "měi shù guǎn",
+          "english": "art gallery",
+          "audio": "audio/美术馆.mp3",
+          "important": true
+        },
+        {
+          "simplified": "东海岸公园",
+          "traditional": "東海岸公園",
+          "pinyin": "dōng hǎi àn gōng yuán",
+          "english": "East Coast Park",
+          "audio": "audio/东海岸公园.mp3",
+          "important": true
+        },
+        {
+          "simplified": "野餐",
+          "traditional": "野餐",
+          "pinyin": "yě cān",
+          "english": "picnic",
+          "audio": "audio/野餐.mp3",
+          "important": true
+        },
+        {
+          "simplified": "游泳",
+          "traditional": "游泳",
+          "pinyin": "yóu yǒng",
+          "english": "to swim",
+          "audio": "audio/游泳.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 55,
+      "words": [
+        {
+          "simplified": "玩泥沙",
+          "traditional": "玩泥沙",
+          "pinyin": "wán ní shā",
+          "english": "to play with sand",
+          "audio": "audio/玩泥沙.mp3",
+          "important": true
+        },
+        {
+          "simplified": "捡贝壳",
+          "traditional": "撿貝殼",
+          "pinyin": "jiǎn bèi ké",
+          "english": "to pick up seashells",
+          "audio": "audio/捡贝壳.mp3",
+          "important": true
+        },
+        {
+          "simplified": "离开",
+          "traditional": "離開",
+          "pinyin": "lí kāi",
+          "english": "to leave",
+          "audio": "audio/离开.mp3",
+          "important": true
+        },
+        {
+          "simplified": "国家",
+          "traditional": "國家",
+          "pinyin": "guó jiā",
+          "english": "country; nation",
+          "audio": "audio/国家.mp3",
+          "important": true
+        },
+        {
+          "simplified": "生活",
+          "traditional": "生活",
+          "pinyin": "shēng huó",
+          "english": "life; to live",
+          "audio": "audio/生活.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 56,
+      "words": [
+        {
+          "simplified": "珍惜",
+          "traditional": "珍惜",
+          "pinyin": "zhēn xī",
+          "english": "to cherish",
+          "audio": "audio/珍惜.mp3",
+          "important": false
+        },
+        {
+          "simplified": "一滴水",
+          "traditional": "一滴水",
+          "pinyin": "yī dī shuǐ",
+          "english": "a drop of water",
+          "audio": "audio/一滴水.mp3",
+          "important": false
+        },
+        {
+          "simplified": "外婆",
+          "traditional": "外婆",
+          "pinyin": "wài pó",
+          "english": "maternal grandmother",
+          "audio": "audio/外婆.mp3",
+          "important": false
+        },
+        {
+          "simplified": "告诉",
+          "traditional": "告訴",
+          "pinyin": "gào sù",
+          "english": "to tell",
+          "audio": "audio/告诉.mp3",
+          "important": false
+        },
+        {
+          "simplified": "浪费",
+          "traditional": "浪費",
+          "pinyin": "làng fèi",
+          "english": "to waste",
+          "audio": "audio/浪费.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 57,
+      "words": [
+        {
+          "simplified": "节约",
+          "traditional": "節約",
+          "pinyin": "jié yuē",
+          "english": "to save; to economize",
+          "audio": "audio/节约.mp3",
+          "important": true
+        },
+        {
+          "simplified": "洗花",
+          "traditional": "洗花",
+          "pinyin": "xǐ huā",
+          "english": "to wash flowers",
+          "audio": "audio/洗花.mp3",
+          "important": false
+        },
+        {
+          "simplified": "洗厕所",
+          "traditional": "洗廁所",
+          "pinyin": "xǐ cè suǒ",
+          "english": "to clean the toilet",
+          "audio": "audio/洗厕所.mp3",
+          "important": true
+        },
+        {
+          "simplified": "马桶",
+          "traditional": "馬桶",
+          "pinyin": "mǎ tǒng",
+          "english": "toilet",
+          "audio": "audio/马桶.mp3",
+          "important": false
+        },
+        {
+          "simplified": "不断",
+          "traditional": "不斷",
+          "pinyin": "bù duàn",
+          "english": "continuous; constantly",
+          "audio": "audio/不断.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 58,
+      "words": [
+        {
+          "simplified": "一直线",
+          "traditional": "一直線",
+          "pinyin": "yī zhí xiàn",
+          "english": "straight line",
+          "audio": "audio/一直线.mp3",
+          "important": false
+        },
+        {
+          "simplified": "猜谜语",
+          "traditional": "猜謎語",
+          "pinyin": "cāi mí yǔ",
+          "english": "to guess riddles",
+          "audio": "audio/猜谜语.mp3",
+          "important": true
+        },
+        {
+          "simplified": "摇头",
+          "traditional": "搖頭",
+          "pinyin": "yáo tóu",
+          "english": "to shake head",
+          "audio": "audio/摇头.mp3",
+          "important": true
+        },
+        {
+          "simplified": "口渴",
+          "traditional": "口渴",
+          "pinyin": "kǒu kě",
+          "english": "thirsty",
+          "audio": "audio/口渴.mp3",
+          "important": false
+        },
+        {
+          "simplified": "喝水",
+          "traditional": "喝水",
+          "pinyin": "hē shuǐ",
+          "english": "to drink water",
+          "audio": "audio/喝水.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 59,
+      "words": [
+        {
+          "simplified": "不停地流",
+          "traditional": "不停地流",
+          "pinyin": "bù tíng de liú",
+          "english": "flowing continuously",
+          "audio": "audio/不停地流.mp3",
+          "important": true
+        },
+        {
+          "simplified": "连忙",
+          "traditional": "連忙",
+          "pinyin": "lián máng",
+          "english": "hastily; promptly",
+          "audio": "audio/连忙.mp3",
+          "important": false
+        },
+        {
+          "simplified": "重要",
+          "traditional": "重要",
+          "pinyin": "zhòng yào",
+          "english": "important",
+          "audio": "audio/重要.mp3",
+          "important": true
+        },
+        {
+          "simplified": "低下头",
+          "traditional": "低下頭",
+          "pinyin": "dī xià tóu",
+          "english": "to lower one's head",
+          "audio": "audio/低下头.mp3",
           "important": true
         }
       ]

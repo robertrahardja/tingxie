@@ -1,45 +1,22 @@
 #!/usr/bin/env python3
 import os
 import time
+import json
 import requests
 from urllib.parse import quote
 
-# New tingxie vocabulary words from image
-vocabulary = [
-    "美丽", "新加坡", "合适", "年级", "兄弟",
-    "大扫除", "时候", "表演", "拿着", "庆祝",
-    "主人", "非常", "第一", "筷子", "伸出舌头",
-    "排队", "从前", "然后", "每一页", "彩色笔",
-    "哪里", "不远处", "很久", "已经", "向前直走",
-    "回答问题", "明亮", "应该", "行人天桥", "互相",
-    "奶茶", "星期天", "懂事", "找座位", "收拾",
-    "医生", "卖菜", "种花", "坏人", "害怕"
-]
+# Load vocabulary from JSON file
+def load_vocabulary():
+    """Load all unique words from tingxie_vocabulary.json"""
+    with open('data/tingxie/tingxie_vocabulary.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
 
-# Remove duplicates
-vocabulary = list(dict.fromkeys(vocabulary))
+    words = set()
+    for row in data['vocabulary']:
+        for word_entry in row['words']:
+            words.add(word_entry['simplified'])
 
-def generate_audio_shtooka(text, filename):
-    """Generate audio file using Shtooka service"""
-    try:
-        # Using shtooka.net API
-        encoded_text = quote(text)
-        url = f"http://shtooka.net/speak/mandarin/{encoded_text}"
-
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
-        }
-
-        response = requests.get(url, headers=headers, timeout=10)
-
-        if response.status_code == 200 and len(response.content) > 1000:
-            with open(filename, 'wb') as f:
-                f.write(response.content)
-            return True
-        return False
-    except Exception as e:
-        print(f"Shtooka error for {text}: {e}")
-        return False
+    return sorted(list(words))
 
 def generate_audio_google(text, filename):
     """Generate audio file using Google Translate TTS"""
@@ -61,40 +38,45 @@ def generate_audio_google(text, filename):
             return True
         return False
     except Exception as e:
-        print(f"Google TTS error for {text}: {e}")
+        print(f"  Error: {e}")
         return False
 
+# Load vocabulary from JSON
+print("Loading vocabulary from JSON...")
+vocabulary = load_vocabulary()
+print(f"Found {len(vocabulary)} unique words\n")
+
 # Generate audio files for all vocabulary
-print("Generating audio files...")
+print("Generating audio files using Google TTS...")
 os.makedirs('audio', exist_ok=True)
 
 successful = 0
 failed = []
+skipped = 0
 
-for word in vocabulary:
+for i, word in enumerate(vocabulary, 1):
     filename = f"audio/{word}.mp3"
     if os.path.exists(filename):
-        print(f"Skipping {word} - file already exists")
-        successful += 1
+        skipped += 1
         continue
 
-    print(f"Generating audio for: {word}")
+    print(f"[{i}/{len(vocabulary)}] {word}...", end=" ")
 
-    # Try Google TTS first
     if generate_audio_google(word, filename):
         successful += 1
-        print(f"✓ Generated {filename} (Google TTS)")
-    # Fallback to Shtooka
-    elif generate_audio_shtooka(word, filename):
-        successful += 1
-        print(f"✓ Generated {filename} (Shtooka)")
+        print("✓")
     else:
         failed.append(word)
-        print(f"✗ Failed to generate audio for {word}")
+        print("✗")
 
     # Small delay to avoid rate limiting
     time.sleep(0.3)
 
-print(f"\nCompleted: {successful}/{len(vocabulary)} audio files generated")
+print(f"\nCompleted:")
+print(f"  - Skipped (already exist): {skipped}")
+print(f"  - Successfully generated: {successful}")
+print(f"  - Failed: {len(failed)}")
+print(f"  - Total: {skipped + successful}/{len(vocabulary)}")
+
 if failed:
-    print(f"Failed words: {', '.join(failed)}")
+    print(f"\nFailed words ({len(failed)}): {', '.join(failed)}")
