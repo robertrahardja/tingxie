@@ -244,10 +244,10 @@ class TingxieApp extends BaseApp {
         if (reviewToggle) {
             if (this.reviewMode) {
                 reviewToggle.classList.add(CSS_CLASSES.ACTIVE);
-                reviewToggle.textContent = CONSTANTS.UI_LABELS.REVIEW_MODE;
+                reviewToggle.textContent = CONSTANTS.UI_LABELS.ALL_MODE;
             } else {
                 reviewToggle.classList.remove(CSS_CLASSES.ACTIVE);
-                reviewToggle.textContent = CONSTANTS.UI_LABELS.ALL_MODE;
+                reviewToggle.textContent = CONSTANTS.UI_LABELS.REVIEW_MODE;
             }
         }
 
