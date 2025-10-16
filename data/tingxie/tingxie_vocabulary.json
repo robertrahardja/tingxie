@@ -1687,14 +1687,6 @@
           "important": true
         },
         {
-          "simplified": "应该",
-          "traditional": "應該",
-          "pinyin": "yīng gāi",
-          "english": "should; ought to",
-          "audio": "audio/应该.mp3",
-          "important": true
-        },
-        {
           "simplified": "不能",
           "traditional": "不能",
           "pinyin": "bù néng",
@@ -1777,14 +1769,6 @@
           "important": true
         },
         {
-          "simplified": "分工合作",
-          "traditional": "分工合作",
-          "pinyin": "fēn gōng hé zuò",
-          "english": "division of labor; cooperation",
-          "audio": "audio/分工合作.mp3",
-          "important": true
-        },
-        {
           "simplified": "玉米",
           "traditional": "玉米",
           "pinyin": "yù mǐ",
@@ -1812,14 +1796,6 @@
           "english": "to compare; relatively",
           "audio": "audio/比较.mp3",
           "important": false
-        },
-        {
-          "simplified": "就是",
-          "traditional": "就是",
-          "pinyin": "jiù shì",
-          "english": "exactly; just",
-          "audio": "audio/就是.mp3",
-          "important": true
         },
         {
           "simplified": "番茄汤",
@@ -2314,14 +2290,6 @@
           "pinyin": "ān jìng",
           "english": "quiet",
           "audio": "audio/安静.mp3",
-          "important": true
-        },
-        {
-          "simplified": "新加坡",
-          "traditional": "新加坡",
-          "pinyin": "xīn jiā pō",
-          "english": "Singapore",
-          "audio": "audio/新加坡.mp3",
           "important": true
         },
         {
