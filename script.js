@@ -240,14 +240,19 @@ class TingxieApp extends BaseApp {
     toggleReviewMode() {
         this.reviewMode = !this.reviewMode;
         const reviewToggle = document.getElementById(ELEMENT_IDS.REVIEW_TOGGLE);
+        const filterToggle = document.getElementById(ELEMENT_IDS.FILTER_TOGGLE);
 
         if (reviewToggle) {
             if (this.reviewMode) {
                 reviewToggle.classList.add(CSS_CLASSES.ACTIVE);
                 reviewToggle.textContent = CONSTANTS.UI_LABELS.ALL_MODE;
+                // Hide filter button in review mode
+                if (filterToggle) filterToggle.style.display = 'none';
             } else {
                 reviewToggle.classList.remove(CSS_CLASSES.ACTIVE);
                 reviewToggle.textContent = CONSTANTS.UI_LABELS.REVIEW_MODE;
+                // Show filter button when not in review mode
+                if (filterToggle) filterToggle.style.display = '';
             }
         }
 
