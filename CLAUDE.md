@@ -48,7 +48,9 @@ The codebase uses **class-based inheritance** with a shared base class:
   - Word-by-word reveal system with covered/uncovered states
   - Audio playback with preloading
   - Progress tracking across word sets
-  - Set completion detection (when all 5 items revealed)
+  - Self-assessment system (会/不会 buttons) for tracking known/unknown words
+  - Review mode for practicing unknown words
+  - Cloud synchronization via Cloudflare KV for cross-device progress
 
 - **VocabularyApp** (vocabulary.js) - Extends BaseApp for vocabulary browsing
   - Grid display of all vocabulary
@@ -71,6 +73,15 @@ The codebase uses **class-based inheritance** with a shared base class:
 - UI labels (Chinese text)
 - Paths and configuration values
 - Error messages
+
+### Cloud Sync System
+
+**CloudSync.js** handles cross-device progress synchronization:
+- Generates unique student IDs based on browser fingerprint
+- Syncs known/unknown words to Cloudflare KV
+- Merges progress from multiple devices (union of sets)
+- Automatic sync on app startup and after each assessment
+- API endpoint: `/api/progress` (Cloudflare Pages Function)
 
 ### Data Format
 
@@ -154,7 +165,13 @@ if (element) {
 ### State Management
 - App state stored in class properties
 - No external state management library
-- localStorage used for persistence (lessons progress)
+- localStorage used for local persistence:
+  - `tingxie_known_words` - Words marked as known (会)
+  - `tingxie_unknown_words` - Words marked as unknown (不会)
+  - Koushi lesson progress
+- Cloudflare KV used for cross-device sync:
+  - Key format: `student:{studentId}:tingxie:progress`
+  - Contains knownWords, unknownWords arrays, and lastUpdated timestamp
 
 ### CSS Classes
 Use constants instead of hardcoding:
@@ -170,6 +187,14 @@ element.classList.add('covered');            // Avoid
 2. Add simplified, traditional, pinyin, English, audio path
 3. Set `important: true` for key words
 4. Run `python3 generate_audio.py` to download MP3 files
+
+### Self-Assessment System
+Students can mark words as known (会 ✓) or unknown (不会 ✗):
+- **Known words**: Marked when student is confident
+- **Unknown words**: Automatically available in review mode
+- Progress syncs across devices via Cloudflare KV
+- Review mode button appears when there are unknown words
+- Filter button (重要词语) is hidden in review mode
 
 ### Creating New Lesson Pages
 1. Use `update_lessons.py` as reference for lesson data structure
@@ -204,7 +229,11 @@ tingxie/
 ├── js/
 │   ├── BaseApp.js          # Base class
 │   ├── AudioPlayer.js      # Audio singleton
+│   ├── CloudSync.js        # Cloud sync functionality
 │   └── constants.js        # Configuration
+├── functions/
+│   └── api/
+│       └── progress.js     # Cloudflare Pages Function for KV operations
 ├── data/
 │   ├── tingxie/
 │   │   └── tingxie_vocabulary.json
@@ -212,6 +241,8 @@ tingxie/
 │       ├── Koushi25.pdf
 │       └── vocabulary_table.json
 ├── audio/                  # MP3 pronunciation files
+├── wrangler.toml           # Cloudflare configuration
+├── .dev.vars               # Local environment variables (gitignored)
 ├── generate_audio.py       # Audio downloader (ttsMP3.com)
 ├── generate_audio_alt.py   # Alternative audio source
 └── update_lessons.py       # Lesson updater script
@@ -222,5 +253,21 @@ tingxie/
 - All audio files must exist in `audio/` directory with exact filename match to JSON
 - Traditional Chinese is the primary display (Singapore education standard)
 - Filter system affects both display and navigation (word count changes)
-- Set completion in tingxie requires all 5 items revealed (simplified, traditional, pinyin, english, audio)
-- Lesson progress is per-device (localStorage), not synced
+- Self-assessment buttons (会/不会) are always visible and not tied to item revelation
+- Tingxie progress syncs across devices via Cloudflare KV (localStorage + cloud)
+- Koushi lesson progress is per-device only (localStorage), not synced
+- Progress counter displayed prominently inside word card for easy tracking
+- Review mode filters to show only unknown words and hides the importance filter button
+
+## Deployment
+
+The app is deployed on **Cloudflare Pages** with Git integration:
+- **Account**: robertrahardja@gmail.com
+- **Account ID**: 8bd804c6c83f8c21095206344daf4a16
+- **KV Namespace**: STUDENT_PROGRESS (ID: 7b92b749c283431582ccc77724f1cbdb)
+- **Deployment**: Automatic on git push to main branch
+- **API Endpoint**: `/api/progress` via Pages Functions
+
+### Environment Variables
+- `.dev.vars` (local only, gitignored): Contains CLOUDFLARE_API_TOKEN
+- Cloudflare Pages binding: `STUDENT_PROGRESS` KV namespace bound in Pages settings
