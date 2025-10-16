@@ -16,7 +16,12 @@ export const CONSTANTS = {
         ENGLISH: 'English',
         ALL_WORDS: '全部词语',
         IMPORTANT_WORDS: '重要词语',
-        IMPORTANT_BADGE: '重点'
+        IMPORTANT_BADGE: '重点',
+        SELF_ASSESS_TITLE: '你会这个词吗？',
+        KNOW_BTN: '会 ✓',
+        DONT_KNOW_BTN: '不会 ✗',
+        REVIEW_MODE: '复习模式',
+        ALL_MODE: '全部模式'
     },
 
     // Data paths
@@ -49,6 +54,10 @@ export const ELEMENT_IDS = {
     NEXT_BTN: 'next-btn',
     NEXT_SET_BTN: 'next-set-btn',
     SET_COMPLETE: 'set-complete',
+    SELF_ASSESS: 'self-assess',
+    KNOW_BTN: 'know-btn',
+    DONT_KNOW_BTN: 'dont-know-btn',
+    REVIEW_TOGGLE: 'review-toggle',
     CURRENT_SET: 'current-set',
     TOTAL_SETS: 'total-sets',
     SIMPLIFIED: 'simplified',

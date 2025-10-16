@@ -1,0 +1,108 @@
+/**
+ * CloudSync.js
+ * Handles syncing student progress with Cloudflare KV
+ */
+
+export class CloudSync {
+    constructor(apiBaseUrl = '') {
+        this.apiBaseUrl = apiBaseUrl;
+        this.studentId = this.getOrCreateStudentId();
+    }
+
+    /**
+     * Get or create a unique student ID
+     * Stored in localStorage for device persistence
+     */
+    getOrCreateStudentId() {
+        let studentId = localStorage.getItem('tingxie_student_id');
+
+        if (!studentId) {
+            // Generate a unique ID: timestamp + random string
+            studentId = `student_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+            localStorage.setItem('tingxie_student_id', studentId);
+        }
+
+        return studentId;
+    }
+
+    /**
+     * Fetch student progress from Cloudflare KV
+     */
+    async fetchProgress() {
+        try {
+            const response = await fetch(
+                `${this.apiBaseUrl}/api/progress?studentId=${encodeURIComponent(this.studentId)}`
+            );
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            return {
+                knownWords: new Set(data.knownWords || []),
+                unknownWords: new Set(data.unknownWords || []),
+                lastUpdated: data.lastUpdated
+            };
+        } catch (error) {
+            console.error('Failed to fetch progress from cloud:', error);
+            return null;
+        }
+    }
+
+    /**
+     * Save student progress to Cloudflare KV
+     */
+    async saveProgress(knownWords, unknownWords) {
+        try {
+            const response = await fetch(`${this.apiBaseUrl}/api/progress`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    studentId: this.studentId,
+                    knownWords: Array.from(knownWords),
+                    unknownWords: Array.from(unknownWords)
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            return data.success;
+        } catch (error) {
+            console.error('Failed to save progress to cloud:', error);
+            return false;
+        }
+    }
+
+    /**
+     * Merge local and cloud progress
+     * Strategy: Union of sets (student knows word if marked on any device)
+     */
+    mergeProgress(local, cloud) {
+        const merged = {
+            knownWords: new Set([...local.knownWords]),
+            unknownWords: new Set([...local.unknownWords])
+        };
+
+        // Add cloud known words to merged
+        cloud.knownWords.forEach(word => {
+            merged.knownWords.add(word);
+            // Remove from unknown if it's in known
+            merged.unknownWords.delete(word);
+        });
+
+        // Add cloud unknown words (but only if not already known)
+        cloud.unknownWords.forEach(word => {
+            if (!merged.knownWords.has(word)) {
+                merged.unknownWords.add(word);
+            }
+        });
+
+        return merged;
+    }
+}

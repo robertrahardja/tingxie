@@ -1,6 +1,7 @@
 import { BaseApp } from './js/BaseApp.js';
 import { getAudioPlayer } from './js/AudioPlayer.js';
 import { CONSTANTS, CSS_CLASSES, ELEMENT_IDS } from './js/constants.js';
+import { CloudSync } from './js/CloudSync.js';
 
 class TingxieApp extends BaseApp {
     constructor() {
@@ -11,8 +12,42 @@ class TingxieApp extends BaseApp {
         this.revealedItems = new Set();
         this.audioPlayer = getAudioPlayer();
         this.wordLabels = this.createWordLabelsMap();
+        this.reviewMode = false;
+        this.knownWords = this.loadKnownWords();
+        this.unknownWords = this.loadUnknownWords();
+        this.cloudSync = new CloudSync();
+        this.syncInProgress = false;
 
         this.init();
+    }
+
+    loadKnownWords() {
+        const stored = localStorage.getItem('tingxie_known_words');
+        return stored ? new Set(JSON.parse(stored)) : new Set();
+    }
+
+    loadUnknownWords() {
+        const stored = localStorage.getItem('tingxie_unknown_words');
+        return stored ? new Set(JSON.parse(stored)) : new Set();
+    }
+
+    saveKnownWords() {
+        localStorage.setItem('tingxie_known_words', JSON.stringify([...this.knownWords]));
+    }
+
+    saveUnknownWords() {
+        localStorage.setItem('tingxie_unknown_words', JSON.stringify([...this.unknownWords]));
+    }
+
+    /**
+     * Save progress both locally and to cloud
+     */
+    async saveProgressToCloud() {
+        await this.cloudSync.saveProgress(this.knownWords, this.unknownWords);
+    }
+
+    getWordId(word) {
+        return `${word.simplified}_${word.traditional}`;
     }
 
     createWordLabelsMap() {
@@ -28,6 +63,9 @@ class TingxieApp extends BaseApp {
         const dataLoaded = await this.loadData();
         if (!dataLoaded) return;
 
+        // Sync with cloud on startup
+        await this.syncWithCloud();
+
         this.setupEventListeners();
         this.updateWordsList();
         this.displayCurrentWord();
@@ -35,17 +73,58 @@ class TingxieApp extends BaseApp {
         this.preloadAudioForCurrentWords();
     }
 
+    /**
+     * Sync progress with Cloudflare KV
+     * Merges local and cloud data, then saves back to cloud
+     */
+    async syncWithCloud() {
+        if (this.syncInProgress) return;
+
+        this.syncInProgress = true;
+        try {
+            const cloudProgress = await this.cloudSync.fetchProgress();
+
+            if (cloudProgress) {
+                // Merge local and cloud progress
+                const local = {
+                    knownWords: this.knownWords,
+                    unknownWords: this.unknownWords
+                };
+
+                const merged = this.cloudSync.mergeProgress(local, cloudProgress);
+
+                // Update local state
+                this.knownWords = merged.knownWords;
+                this.unknownWords = merged.unknownWords;
+
+                // Save merged data back to localStorage and cloud
+                this.saveKnownWords();
+                this.saveUnknownWords();
+
+                console.log('✓ Synced with cloud:', {
+                    known: this.knownWords.size,
+                    unknown: this.unknownWords.size
+                });
+            }
+        } catch (error) {
+            console.error('Cloud sync failed:', error);
+        } finally {
+            this.syncInProgress = false;
+        }
+    }
+
     setupEventListeners() {
         this.setupBaseEventListeners();
         this.setupNavigationListeners();
         this.setupWordItemListeners();
+        this.setupSelfAssessListeners();
+        this.setupReviewModeListener();
         this.setupTouchOptimization();
     }
 
     setupNavigationListeners() {
         const prevBtn = document.getElementById(ELEMENT_IDS.PREV_BTN);
         const nextBtn = document.getElementById(ELEMENT_IDS.NEXT_BTN);
-        const nextSetBtn = document.getElementById(ELEMENT_IDS.NEXT_SET_BTN);
 
         if (prevBtn) {
             prevBtn.addEventListener('click', () => this.previousWord());
@@ -54,9 +133,26 @@ class TingxieApp extends BaseApp {
         if (nextBtn) {
             nextBtn.addEventListener('click', () => this.nextWord());
         }
+    }
 
-        if (nextSetBtn) {
-            nextSetBtn.addEventListener('click', () => this.nextSet());
+    setupSelfAssessListeners() {
+        const knowBtn = document.getElementById(ELEMENT_IDS.KNOW_BTN);
+        const dontKnowBtn = document.getElementById(ELEMENT_IDS.DONT_KNOW_BTN);
+
+        if (knowBtn) {
+            knowBtn.addEventListener('click', () => this.markWordAsKnown());
+        }
+
+        if (dontKnowBtn) {
+            dontKnowBtn.addEventListener('click', () => this.markWordAsUnknown());
+        }
+    }
+
+    setupReviewModeListener() {
+        const reviewToggle = document.getElementById(ELEMENT_IDS.REVIEW_TOGGLE);
+
+        if (reviewToggle) {
+            reviewToggle.addEventListener('click', () => this.toggleReviewMode());
         }
     }
 
@@ -76,7 +172,8 @@ class TingxieApp extends BaseApp {
             ELEMENT_IDS.SIMPLIFIED, ELEMENT_IDS.TRADITIONAL,
             ELEMENT_IDS.PINYIN, ELEMENT_IDS.ENGLISH, ELEMENT_IDS.AUDIO,
             ELEMENT_IDS.PREV_BTN, ELEMENT_IDS.NEXT_BTN,
-            ELEMENT_IDS.FILTER_TOGGLE, ELEMENT_IDS.NEXT_SET_BTN
+            ELEMENT_IDS.FILTER_TOGGLE, ELEMENT_IDS.REVIEW_TOGGLE,
+            ELEMENT_IDS.KNOW_BTN, ELEMENT_IDS.DONT_KNOW_BTN
         ];
 
         touchElements.forEach(id => {
@@ -112,7 +209,13 @@ class TingxieApp extends BaseApp {
 
         this.data.vocabulary.forEach((row, rowIndex) => {
             row.words.forEach((word, wordIndex) => {
-                if (!this.showImportantOnly || word.important) {
+                const matchesFilter = !this.showImportantOnly || word.important;
+                const wordId = this.getWordId(word);
+
+                // In review mode, only show unknown words
+                const matchesReviewMode = !this.reviewMode || this.unknownWords.has(wordId);
+
+                if (matchesFilter && matchesReviewMode) {
                     this.currentWords.push({
                         ...word,
                         rowIndex,
@@ -122,6 +225,39 @@ class TingxieApp extends BaseApp {
                 }
             });
         });
+
+        // Show/hide review button based on whether there are unknown words
+        this.updateReviewButtonVisibility();
+    }
+
+    updateReviewButtonVisibility() {
+        const reviewToggle = document.getElementById(ELEMENT_IDS.REVIEW_TOGGLE);
+        if (reviewToggle) {
+            reviewToggle.style.display = this.unknownWords.size > 0 ? '' : 'none';
+        }
+    }
+
+    toggleReviewMode() {
+        this.reviewMode = !this.reviewMode;
+        const reviewToggle = document.getElementById(ELEMENT_IDS.REVIEW_TOGGLE);
+
+        if (reviewToggle) {
+            if (this.reviewMode) {
+                reviewToggle.classList.add(CSS_CLASSES.ACTIVE);
+                reviewToggle.textContent = CONSTANTS.UI_LABELS.REVIEW_MODE;
+            } else {
+                reviewToggle.classList.remove(CSS_CLASSES.ACTIVE);
+                reviewToggle.textContent = CONSTANTS.UI_LABELS.ALL_MODE;
+            }
+        }
+
+        this.currentWordIndex = 0;
+        this.currentSetIndex = 0;
+        this.updateWordsList();
+        this.displayCurrentWord();
+        this.updateProgress();
+        this.resetRevealedItems();
+        this.preloadAudioForCurrentWords();
     }
 
     preloadAudioForCurrentWords() {
@@ -195,8 +331,6 @@ class TingxieApp extends BaseApp {
         } else {
             this.handleTextReveal(type, word);
         }
-
-        this.checkSetComplete();
     }
 
     handleAudioReveal(word) {
@@ -229,31 +363,37 @@ class TingxieApp extends BaseApp {
         }
     }
 
-    checkSetComplete() {
-        const requiredItems = ['simplified', 'traditional', 'pinyin', 'english', 'audio'];
-        const allRevealed = requiredItems.every(item => this.revealedItems.has(item));
+    markWordAsKnown() {
+        if (this.currentWords.length === 0) return;
 
-        if (allRevealed) {
-            setTimeout(() => this.showSetComplete(), CONSTANTS.SET_COMPLETE_DELAY);
-        }
+        const word = this.currentWords[this.currentWordIndex];
+        const wordId = this.getWordId(word);
+
+        this.knownWords.add(wordId);
+        this.unknownWords.delete(wordId);
+
+        this.saveKnownWords();
+        this.saveUnknownWords();
+        this.saveProgressToCloud(); // Sync to cloud
+
+        this.updateReviewButtonVisibility();
+        this.nextWord();
     }
 
-    showSetComplete() {
-        const element = document.getElementById(ELEMENT_IDS.SET_COMPLETE);
-        if (element) {
-            element.style.display = 'flex';
-        }
-    }
+    markWordAsUnknown() {
+        if (this.currentWords.length === 0) return;
 
-    hideSetComplete() {
-        const element = document.getElementById(ELEMENT_IDS.SET_COMPLETE);
-        if (element) {
-            element.style.display = 'none';
-        }
-    }
+        const word = this.currentWords[this.currentWordIndex];
+        const wordId = this.getWordId(word);
 
-    nextSet() {
-        this.hideSetComplete();
+        this.unknownWords.add(wordId);
+        this.knownWords.delete(wordId);
+
+        this.saveKnownWords();
+        this.saveUnknownWords();
+        this.saveProgressToCloud(); // Sync to cloud
+
+        this.updateReviewButtonVisibility();
         this.nextWord();
     }
 

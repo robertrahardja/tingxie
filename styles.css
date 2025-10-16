@@ -330,55 +330,67 @@ main {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.set-complete {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-.complete-message {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 90%;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
-
-.complete-message h2 {
-    font-size: 24px;
+.self-assess-controls {
+    margin-top: 20px;
     margin-bottom: 15px;
-    color: #4CAF50;
 }
 
-.complete-message p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 25px;
+.assess-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
 }
 
-.next-set-btn {
-    background: linear-gradient(45deg, #4CAF50 0%, #45a049 100%);
-    color: white;
+.assess-btn {
+    flex: 1;
     border: none;
-    padding: 15px 30px;
-    border-radius: 25px;
+    padding: 16px 20px;
+    border-radius: 15px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    min-height: 50px;
+    min-height: 56px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-.next-set-btn:active {
+.know-btn {
+    background: linear-gradient(45deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+}
+
+.dont-know-btn {
+    background: linear-gradient(45deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+}
+
+.assess-btn:active {
     transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.review-btn {
+    background: rgba(255,193,7,0.9);
+    color: #333;
+    border: 2px solid #ffc107;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 48px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.review-btn:active {
+    transform: scale(0.98);
+}
+
+.review-btn.active {
+    background: #ffc107;
+    color: white;
 }
 
 @media (min-width: 768px) {
@@ -491,27 +503,19 @@ main {
         border: 3px dashed #ccc;
     }
     
-    .complete-message {
-        padding: 45px 35px;
-        border-radius: 25px;
-        max-width: 450px;
+    .self-assess-controls {
+        margin-top: 25px;
     }
-    
-    .complete-message h2 {
-        font-size: 28px;
-        margin-bottom: 18px;
+
+    .assess-buttons {
+        gap: 20px;
     }
-    
-    .complete-message p {
-        font-size: 17px;
-        margin-bottom: 28px;
-    }
-    
-    .next-set-btn {
-        padding: 16px 35px;
-        font-size: 18px;
-        border-radius: 25px;
-        min-height: 55px;
+
+    .assess-btn {
+        padding: 18px 30px;
+        font-size: 20px;
+        border-radius: 18px;
+        min-height: 64px;
     }
 }
 

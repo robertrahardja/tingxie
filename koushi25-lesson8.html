@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第八课：植物园 - 口试练习</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f5f5f5;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .lesson-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .lesson-header h1 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+
+        .lesson-header .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .picture-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .picture-display {
+            width: 100%;
+            min-height: 400px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 144px;
+            color: #ddd;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-text {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 1.8;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .vocab-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .vocab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .vocab-card.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .vocab-card.learned {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+        }
+
+        .vocab-card.learned .vocab-pinyin,
+        .vocab-card.learned .vocab-english {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .vocab-card.learned::after {
+            content: '✓';
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: white;
+            color: #4CAF50;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .vocab-chinese {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .vocab-pinyin {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .vocab-card.active .vocab-pinyin {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .vocab-english {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .vocab-card.active .vocab-english {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .practice-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .practice-modal.show {
+            display: flex;
+        }
+
+        .practice-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+        }
+
+        .practice-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            color: #ddd;
+        }
+
+        .practice-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .practice-word {
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .practice-pinyin {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .practice-meaning {
+            font-size: 18px;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .practice-example {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .practice-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .practice-btn {
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .practice-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .practice-btn.secondary {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .practice-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            background: #e0e0e0;
+            transform: rotate(90deg);
+        }
+
+        .controls-bar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .control-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #4CAF50;
+            color: white;
+        }
+
+        .control-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .progress-info {
+            font-size: 16px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .vocab-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 10px;
+            }
+
+            .vocab-chinese {
+                font-size: 24px;
+            }
+
+            .practice-word {
+                font-size: 48px;
+            }
+
+            .lesson-header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="koushi25.html" class="nav-item">← 返回课程列表</a>
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="koushi.html" class="nav-item">口试</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="lesson-header">
+        <h1>第八课：植物园</h1>
+        <div class="subtitle">Botanical Garden - 场景词汇练习</div>
+    </div>
+
+    <div class="content-container">
+        <div class="controls-bar">
+            <button class="control-btn" onclick="playAllAudio()">🔊 播放所有词汇</button>
+            <div class="progress-info">
+                <span>已学习: </span>
+                <span id="learned-count">0</span> / <span id="total-count">15</span>
+            </div>
+            <button class="control-btn" onclick="resetProgress()">🔄 重置进度</button>
+        </div>
+
+        <div class="picture-container">
+            <div class="picture-display">🌳</div>
+            <div class="story-text">
+                这张图片描绘的是植物园里的情景。我想现在应该是下午的时候，这里有很多人，非常热闹。
+
+池塘边有一棵大树，有一个小男孩爬在树上，用树枝打乌窝里的小鸟。看到他的行为，我感到十分生气。我认为他这样做是不对的。我们应该爱护小动物，不应该伤害它们。如果当时我在场，我会上前阻止他。
+
+在大树下，有三个人在表演，他们有的在摇沙链，有的一点弹吉他，还有的在吹口琴，旁边的小朋友听了，都拍手叫好。在草地上，有一位老师指着树木，正在教三名学生认识植物，同学们听得非常认真，其中一个小男孩还在专心地做笔记。
+
+在他们的后面，有三个男同学坐在席子上野餐，他们一边谈天，一边吃东西。他们随手把垃圾去了草地上。看到小男孩的行为，我感到十分生气。我认为他们这样做是不对的。在公共场所玩球是很危险的，一不小心就有可能造成别人受伤，他们应该注意安全。
+
+总的来说，植物园里风景迷人，大家在这里玩得非常开心。</div>
+        </div>
+
+        <div class="vocab-grid" id="vocab-grid">
+            <!-- Vocabulary cards will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Practice Modal -->
+    <div class="practice-modal" id="practice-modal">
+        <div class="practice-content">
+            <button class="close-modal" onclick="closePractice()">✕</button>
+            <div class="practice-image" id="practice-image">
+                <!-- Image will be inserted here dynamically -->
+            </div>
+            <div class="practice-word" id="practice-word"></div>
+            <div class="practice-pinyin" id="practice-pinyin"></div>
+            <div class="practice-meaning" id="practice-meaning"></div>
+            <div class="practice-example" id="practice-example"></div>
+            <div class="practice-actions">
+                <button class="practice-btn primary" onclick="playWordAudio()">🔊 发音</button>
+                <button class="practice-btn primary" id="learn-toggle-btn" onclick="toggleLearned()">✓ 标记已学会</button>
+                <button class="practice-btn secondary" onclick="closePractice()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Vocabulary data for Lesson 1 (Playground) with image URLs
+        const vocabulary = [
+            {
+                chinese: "植物园",
+                pinyin: "zhí wù yuán",
+                english: "botanical garden",
+                example: "植物园里的情景。",
+                image: "https://cdn.pixabay.com/photo/2015/04/23/21/59/hot-air-balloon-736879_640.jpg"
+            },
+            {
+                chinese: "池塘",
+                pinyin: "chí táng",
+                english: "pond",
+                example: "池塘边有一棵大树。",
+                image: "https://cdn.pixabay.com/photo/2014/11/21/03/17/pond-540036_640.jpg"
+            },
+            {
+                chinese: "大树",
+                pinyin: "dà shù",
+                english: "big tree",
+                example: "池塘边有一棵大树。",
+                image: "https://cdn.pixabay.com/photo/2015/03/26/09/54/tree-690085_640.jpg"
+            },
+            {
+                chinese: "树枝",
+                pinyin: "shù zhī",
+                english: "tree branch",
+                example: "用树枝打鸟窝里的小鸟。",
+                image: "https://cdn.pixabay.com/photo/2015/04/19/08/32/branch-729755_640.jpg"
+            },
+            {
+                chinese: "鸟窝",
+                pinyin: "niǎo wō",
+                english: "bird nest",
+                example: "打鸟窝里的小鸟。",
+                image: "https://cdn.pixabay.com/photo/2020/03/31/19/20/nest-4988891_640.jpg"
+            },
+            {
+                chinese: "小鸟",
+                pinyin: "xiǎo niǎo",
+                english: "bird",
+                example: "鸟窝里的小鸟。",
+                image: "https://cdn.pixabay.com/photo/2017/05/08/13/15/bird-2295436_640.jpg"
+            },
+            {
+                chinese: "爱护",
+                pinyin: "ài hù",
+                english: "care for",
+                example: "我们应该爱护小动物。",
+                image: "https://cdn.pixabay.com/photo/2016/01/19/17/48/caring-1149873_640.jpg"
+            },
+            {
+                chinese: "表演",
+                pinyin: "biǎo yǎn",
+                english: "perform",
+                example: "有三个人在表演。",
+                image: "https://cdn.pixabay.com/photo/2016/11/22/19/15/audience-1850130_640.jpg"
+            },
+            {
+                chinese: "吉他",
+                pinyin: "jí tā",
+                english: "guitar",
+                example: "有的在弹吉他。",
+                image: "https://cdn.pixabay.com/photo/2017/05/01/18/18/guitar-2276181_640.jpg"
+            },
+            {
+                chinese: "口琴",
+                pinyin: "kǒu qín",
+                english: "harmonica",
+                example: "有的在吹口琴。",
+                image: "https://cdn.pixabay.com/photo/2019/05/31/14/19/harmonica-4242553_640.jpg"
+            },
+            {
+                chinese: "野餐",
+                pinyin: "yě cān",
+                english: "picnic",
+                example: "男同学坐在席子上野餐。",
+                image: "https://cdn.pixabay.com/photo/2017/06/06/22/37/picnic-2378566_640.jpg"
+            },
+            {
+                chinese: "席子",
+                pinyin: "xí zi",
+                english: "mat",
+                example: "坐在席子上野餐。",
+                image: "https://cdn.pixabay.com/photo/2019/04/07/20/24/mat-4110606_640.jpg"
+            }
+        ];
+
+        let currentWord = null;
+        let learnedWords = new Set();
+
+        // Load progress from localStorage
+        function loadProgress() {
+            const saved = localStorage.getItem('koushi25_lesson8_learned');
+            if (saved) {
+                learnedWords = new Set(JSON.parse(saved));
+            }
+            updateProgressDisplay();
+        }
+
+        // Save progress to localStorage
+        function saveProgress() {
+            localStorage.setItem('koushi25_lesson8_learned', JSON.stringify(Array.from(learnedWords)));
+            const progress = (learnedWords.size / vocabulary.length) * 100;
+            localStorage.setItem('koushi25_lesson8_progress', progress.toFixed(0));
+        }
+
+        // Update progress display
+        function updateProgressDisplay() {
+            document.getElementById('learned-count').textContent = learnedWords.size;
+            document.getElementById('total-count').textContent = vocabulary.length;
+        }
+
+        // Create vocabulary cards
+        function createVocabCards() {
+            const grid = document.getElementById('vocab-grid');
+            grid.innerHTML = '';
+
+            vocabulary.forEach((word, index) => {
+                const card = document.createElement('div');
+                card.className = 'vocab-card';
+                if (learnedWords.has(word.chinese)) {
+                    card.classList.add('learned');
+                }
+
+                card.innerHTML = `
+                    <div class="vocab-chinese">${word.chinese}</div>
+                    <div class="vocab-pinyin">${word.pinyin}</div>
+                    <div class="vocab-english">${word.english}</div>
+                `;
+
+                card.onclick = () => openPractice(word);
+                grid.appendChild(card);
+            });
+        }
+
+        // Open practice modal
+        function openPractice(word) {
+            currentWord = word;
+            document.getElementById('practice-word').textContent = word.chinese;
+            document.getElementById('practice-pinyin').textContent = word.pinyin;
+            document.getElementById('practice-meaning').textContent = word.english;
+            document.getElementById('practice-example').textContent = word.example;
+
+            // Load image
+            const imageContainer = document.getElementById('practice-image');
+
+            if (word.image) {
+                // Create new image element
+                const img = document.createElement('img');
+                img.src = word.image;
+                img.alt = word.english;
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                img.style.borderRadius = '12px';
+
+                img.onerror = function() {
+                    // If image fails to load, show placeholder
+                    imageContainer.style.background = '#f0f0f0';
+                    imageContainer.innerHTML = '<div style="font-size: 18px; color: #666; padding: 80px 0;">图片加载失败</div>';
+                };
+
+                img.onload = function() {
+                    // Image loaded successfully
+                    imageContainer.style.background = 'none';
+                };
+
+                // Clear container and add image
+                imageContainer.innerHTML = '';
+                imageContainer.appendChild(img);
+            } else {
+                // No image URL provided
+                imageContainer.innerHTML = '<div style="font-size: 18px; color: #666; padding: 80px 0;">暂无图片</div>';
+            }
+
+            // Update button text based on learned status
+            const toggleBtn = document.getElementById('learn-toggle-btn');
+            if (learnedWords.has(word.chinese)) {
+                toggleBtn.textContent = '✗ 标记未学会';
+                toggleBtn.style.background = '#ff6b6b';
+            } else {
+                toggleBtn.textContent = '✓ 标记已学会';
+                toggleBtn.style.background = '';
+            }
+
+            document.getElementById('practice-modal').classList.add('show');
+        }
+
+        // Close practice modal
+        function closePractice() {
+            document.getElementById('practice-modal').classList.remove('show');
+            currentWord = null;
+        }
+
+        // Toggle word learned status
+        function toggleLearned() {
+            if (currentWord) {
+                if (learnedWords.has(currentWord.chinese)) {
+                    // Remove from learned
+                    learnedWords.delete(currentWord.chinese);
+                } else {
+                    // Add to learned
+                    learnedWords.add(currentWord.chinese);
+                }
+                saveProgress();
+                createVocabCards();
+                updateProgressDisplay();
+
+                // Update button text
+                const toggleBtn = document.getElementById('learn-toggle-btn');
+                if (learnedWords.has(currentWord.chinese)) {
+                    toggleBtn.textContent = '✗ 标记未学会';
+                    toggleBtn.style.background = '#ff6b6b';
+                } else {
+                    toggleBtn.textContent = '✓ 标记已学会';
+                    toggleBtn.style.background = '';
+                }
+            }
+        }
+
+        // Play word audio (placeholder)
+        function playWordAudio() {
+            if (currentWord) {
+                // In a real implementation, this would play TTS audio
+                const utterance = new SpeechSynthesisUtterance(currentWord.chinese);
+                utterance.lang = 'zh-CN';
+                utterance.rate = 0.8;
+                speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Play all audio (placeholder)
+        function playAllAudio() {
+            let index = 0;
+            function playNext() {
+                if (index < vocabulary.length) {
+                    const utterance = new SpeechSynthesisUtterance(vocabulary[index].chinese);
+                    utterance.lang = 'zh-CN';
+                    utterance.rate = 0.8;
+                    utterance.onend = () => {
+                        index++;
+                        setTimeout(playNext, 500);
+                    };
+                    speechSynthesis.speak(utterance);
+                }
+            }
+            playNext();
+        }
+
+        // Reset progress
+        function resetProgress() {
+            if (confirm('确定要重置学习进度吗？')) {
+                learnedWords.clear();
+                saveProgress();
+                createVocabCards();
+                updateProgressDisplay();
+            }
+        }
+
+        // Mobile navigation
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProgress();
+            createVocabCards();
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePractice();
+            }
+        });
+    </script>
+</body>
+</html>

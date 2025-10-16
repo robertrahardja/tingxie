@@ -52,3 +52,8 @@ package-lock.json
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Cloudflare
+.dev.vars
+.wrangler/
+wrangler.toml

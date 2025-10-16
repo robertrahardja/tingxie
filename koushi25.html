@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>口试练习 - Week 37 课堂讲义</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .lesson-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .lesson-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            color: white;
+        }
+
+        .lesson-content {
+            padding: 20px;
+        }
+
+        .lesson-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .lesson-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .vocab-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .vocab-chip {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+
+        .header-container {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header-container h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .lesson-grid {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+
+            .header-container h1 {
+                font-size: 28px;
+            }
+
+            .stats-container {
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="koushi.html" class="nav-item">口试</a>
+                <a href="koushi25.html" class="nav-item active">课堂讲义37</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-container">
+        <h1>P2HCL 课堂讲义 37</h1>
+        <div class="header-subtitle">Week 37 (15/09/2025 - 21/09/2025)</div>
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">10</div>
+                <div class="stat-label">场景练习</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="total-words">150+</div>
+                <div class="stat-label">词汇总数</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="progress-percent">0%</div>
+                <div class="stat-label">完成进度</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lesson-grid">
+        <a href="koushi25-lesson1.html" class="lesson-card">
+            <div class="lesson-image">🎪</div>
+            <div class="lesson-content">
+                <div class="lesson-title">第一课：游乐场</div>
+                <div class="lesson-subtitle">Playground Activities</div>
+                <div class="vocab-preview">
+                    <span class="vocab-chip">沙子</span>
+                    <span class="vocab-chip">踢</span>
+                    <span class="vocab-chip">滑梯</span>
+                    <span class="vocab-chip">+12</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="koushi25-lesson2.html" class="lesson-card">
+            <div class="lesson-image">🏠</div>
+            <div class="lesson-content">
+                <div class="lesson-title">第二课：客厅</div>
+                <div class="lesson-subtitle">Living Room & Dining</div>
+                <div class="vocab-preview">
+                    <span class="vocab-chip">饭桌</span>
+                    <span class="vocab-chip">豆腐</span>
+                    <span class="vocab-chip">白菜</span>
+                    <span class="vocab-chip">+10</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="koushi25-lesson3.html" class="lesson-card">
+            <div class="lesson-image">🚌</div>
+            <div class="lesson-content">
+                <div class="lesson-title">第三课：巴士站</div>
+                <div class="lesson-subtitle">Bus Station</div>
+                <div class="vocab-preview">
+                    <span class="vocab-chip">德士</span>
+                    <span class="vocab-chip">阿姨</span>
+                    <span class="vocab-chip">印度</span>
+                    <span class="vocab-chip">+8</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="koushi25-lesson4.html" class="lesson-card">
+            <div class="lesson-image">📚</div>
+            <div class="lesson-content">
+                <div class="lesson-title">第四课：图书馆</div>
+                <div class="lesson-subtitle">Library</div>
+                <div class="vocab-preview">
+                    <span class="vocab-chip">借书</span>
+                    <span class="vocab-chip">书架</span>
+                    <span class="vocab-chip">管理员</span>
+                    <span class="vocab-chip">+12</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="koushi25-lesson5.html" class="lesson-card">
+            <div class="lesson-image">🏢</div>
+            <div class="lesson-content">
+                <div class="lesson-title">第五课：组屋楼下</div>
+                <div class="lesson-subtitle">Void Deck</div>
+                <div class="vocab-preview">
+                    <span class="vocab-chip">电梯</span>
+                    <span class="vocab-chip">垃圾桶</span>
+                    <span class="vocab-chip">墙壁</span>
+                    <span class="vocab-chip">+10</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="koushi25-lesson6.html" class="lesson-card">
+            <div class="lesson-image">🛒</div>
+            <div class="lesson-content">
+                <div class="lesson-title">第六课：巴刹</div>
+                <div class="lesson-subtitle">Market</div>
+                <div class="vocab-preview">
+                    <span class="vocab-chip">青菜</span>
+                    <span class="vocab-chip">苹果</span>
+                    <span class="vocab-chip">篮子</span>
+                    <span class="vocab-chip">+15</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="koushi25-lesson7.html" class="lesson-card">
+            <div class="lesson-image">🏞️</div>
+            <div class="lesson-content">
+                <div class="lesson-title">第七课：公园</div>
+                <div class="lesson-subtitle">Park</div>
+                <div class="vocab-preview">
+                    <span class="vocab-chip">草丛</span>
+                    <span class="vocab-chip">跳绳</span>
+                    <span class="vocab-chip">风筝</span>
+                    <span class="vocab-chip">+12</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="koushi25-lesson8.html" class="lesson-card">
+            <div class="lesson-image">🌳</div>
+            <div class="lesson-content">
+                <div class="lesson-title">第八课：植物园</div>
+                <div class="lesson-subtitle">Botanical Garden</div>
+                <div class="vocab-preview">
+                    <span class="vocab-chip">大树</span>
+                    <span class="vocab-chip">小鸟</span>
+                    <span class="vocab-chip">吉他</span>
+                    <span class="vocab-chip">+10</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="koushi25-lesson9.html" class="lesson-card">
+            <div class="lesson-image">🍔</div>
+            <div class="lesson-content">
+                <div class="lesson-title">第九课：快餐店</div>
+                <div class="lesson-subtitle">Fast Food Restaurant</div>
+                <div class="vocab-preview">
+                    <span class="vocab-chip">厕所</span>
+                    <span class="vocab-chip">洗手盆</span>
+                    <span class="vocab-chip">擦手</span>
+                    <span class="vocab-chip">+14</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="koushi25-lesson10.html" class="lesson-card">
+            <div class="lesson-image">📖</div>
+            <div class="lesson-content">
+                <div class="lesson-title">口试目录</div>
+                <div class="lesson-subtitle">Exam Vocabulary List</div>
+                <div class="vocab-preview">
+                    <span class="vocab-chip">W37-W40</span>
+                    <span class="vocab-chip">重点词汇</span>
+                    <span class="vocab-chip">复习</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        // Mobile navigation
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Load and calculate progress
+        function updateProgress() {
+            const lessons = 10;
+            let completedLessons = 0;
+
+            // Check localStorage for progress
+            for (let i = 1; i <= lessons; i++) {
+                const lessonProgress = localStorage.getItem(`koushi25_lesson${i}_progress`);
+                if (lessonProgress && parseFloat(lessonProgress) > 0) {
+                    completedLessons += parseFloat(lessonProgress) / 100;
+                    // Update individual lesson progress bar
+                    const cards = document.querySelectorAll('.lesson-card');
+                    if (cards[i-1]) {
+                        const progressFill = cards[i-1].querySelector('.progress-fill');
+                        if (progressFill) {
+                            progressFill.style.width = lessonProgress + '%';
+                        }
+                    }
+                }
+            }
+
+            const totalProgress = Math.round((completedLessons / lessons) * 100);
+            document.getElementById('progress-percent').textContent = totalProgress + '%';
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', updateProgress);
+    </script>
+</body>
+</html>

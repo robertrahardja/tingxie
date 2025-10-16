@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一课：游乐场 - 口试练习</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f5f5f5;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .lesson-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .lesson-header h1 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+
+        .lesson-header .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .picture-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .picture-display {
+            width: 100%;
+            min-height: 400px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 144px;
+            color: #ddd;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-text {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 1.8;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .vocab-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .vocab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .vocab-card.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .vocab-card.learned {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+        }
+
+        .vocab-card.learned .vocab-pinyin,
+        .vocab-card.learned .vocab-english {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .vocab-card.learned::after {
+            content: '✓';
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: white;
+            color: #4CAF50;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .vocab-chinese {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .vocab-pinyin {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .vocab-card.active .vocab-pinyin {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .vocab-english {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .vocab-card.active .vocab-english {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .practice-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .practice-modal.show {
+            display: flex;
+        }
+
+        .practice-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+        }
+
+        .practice-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            color: #ddd;
+        }
+
+        .practice-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .practice-word {
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .practice-pinyin {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .practice-meaning {
+            font-size: 18px;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .practice-example {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .practice-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .practice-btn {
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .practice-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .practice-btn.secondary {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .practice-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            background: #e0e0e0;
+            transform: rotate(90deg);
+        }
+
+        .controls-bar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .control-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #4CAF50;
+            color: white;
+        }
+
+        .control-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .progress-info {
+            font-size: 16px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .vocab-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 10px;
+            }
+
+            .vocab-chinese {
+                font-size: 24px;
+            }
+
+            .practice-word {
+                font-size: 48px;
+            }
+
+            .lesson-header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="koushi25.html" class="nav-item">← 返回课程列表</a>
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="koushi.html" class="nav-item">口试</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="lesson-header">
+        <h1>第一课：游乐场</h1>
+        <div class="subtitle">Playground Activities - 场景词汇练习</div>
+    </div>
+
+    <div class="content-container">
+        <div class="controls-bar">
+            <button class="control-btn" onclick="playAllAudio()">🔊 播放所有词汇</button>
+            <div class="progress-info">
+                <span>已学习: </span>
+                <span id="learned-count">0</span> / <span id="total-count">15</span>
+            </div>
+            <button class="control-btn" onclick="resetProgress()">🔄 重置进度</button>
+        </div>
+
+        <div class="picture-container">
+            <div class="picture-display">🎪</div>
+            <div class="story-text">
+                这张图片描绘的是游乐场里的情景，我想现在应该是下午的时候，这里有很多小朋友在玩耍，热闹极了。
+
+                在沙坑里，一个顽皮的男孩把沙子踢到女孩的身上。女孩赶快闭上双眼，她看起来十分生气。男孩却露心出开心的笑容。看到男孩的行为，我感到很生气。我认为他这样做是不对的。这是一种非常危险的行为，一不小心就有可能发生意外。如果当时我在场，我会上前阻止他。
+
+                在他们的旁边，有一个女孩在滑滑梯，她玩得不亦乐乎。女孩的旁边，还有一个女孩在荡秋千，她看起来高兴极了。
+
+                不远处，有两个男孩在骑木马。其中一个男孩一边吃糖果，一边把包装纸丢在地上。看到男孩的行为，我感到十分生气。我认为他这样做是不对的。乱丢垃圾是一种没有公德心的行为，他不应该为了一时方便就乱丢垃圾。
+            </div>
+        </div>
+
+        <div class="vocab-grid" id="vocab-grid">
+            <!-- Vocabulary cards will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Practice Modal -->
+    <div class="practice-modal" id="practice-modal">
+        <div class="practice-content">
+            <button class="close-modal" onclick="closePractice()">✕</button>
+            <div class="practice-image" id="practice-image">
+                <!-- Image will be inserted here dynamically -->
+            </div>
+            <div class="practice-word" id="practice-word"></div>
+            <div class="practice-pinyin" id="practice-pinyin"></div>
+            <div class="practice-meaning" id="practice-meaning"></div>
+            <div class="practice-example" id="practice-example"></div>
+            <div class="practice-actions">
+                <button class="practice-btn primary" onclick="playWordAudio()">🔊 发音</button>
+                <button class="practice-btn primary" id="learn-toggle-btn" onclick="toggleLearned()">✓ 标记已学会</button>
+                <button class="practice-btn secondary" onclick="closePractice()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Vocabulary data for Lesson 1 (Playground) with image URLs
+        const vocabulary = [
+            {
+                chinese: "游乐场",
+                pinyin: "yóu lè chǎng",
+                english: "playground",
+                example: "小朋友们在游乐场里玩得很开心。",
+                image: "https://img.freepik.com/free-photo/children-s-playground-park_1398-289.jpg"
+            },
+            {
+                chinese: "沙坑",
+                pinyin: "shā kēng",
+                english: "sandpit",
+                example: "孩子们喜欢在沙坑里堆沙堡。",
+                image: "https://media.istockphoto.com/id/1150931058/photo/kids-playing-in-sandbox.jpg?s=612x612&w=0&k=20&c=KxNO37JvLzC2q9Vf9gZ9SzQwpR0O4ZdGY0H5P5gH9gE="
+            },
+            {
+                chinese: "顽皮",
+                pinyin: "wán pí",
+                english: "naughty",
+                example: "这个顽皮的男孩把沙子踢到别人身上。",
+                image: "https://cdn.pixabay.com/photo/2015/09/22/01/17/boy-950966_640.jpg"
+            },
+            {
+                chinese: "踢",
+                pinyin: "tī",
+                english: "kick",
+                example: "不要踢沙子，这样很危险。",
+                image: "https://cdn.pixabay.com/photo/2016/06/15/01/11/soccer-1457988_640.jpg"
+            },
+            {
+                chinese: "闭",
+                pinyin: "bì",
+                english: "close",
+                example: "沙子飞过来时，她赶快闭上眼睛。",
+                image: "https://media.istockphoto.com/id/1369508766/photo/beautiful-successful-latin-woman-smiling.jpg?s=612x612&w=0&k=20&c=LwW6R9KdGhLr5J6xGZa8xZfU4aU2bJYsZkJp8VZeC3A="
+            },
+            {
+                chinese: "双眼",
+                pinyin: "shuāng yǎn",
+                english: "both eyes",
+                example: "她闭上双眼避开飞来的沙子。",
+                image: "https://t3.ftcdn.net/jpg/01/97/11/64/360_F_197116416_hpfTtXSoJMvMqU99n6hGP4xX0ejYa4M7.jpg"
+            },
+            {
+                chinese: "露出",
+                pinyin: "lù chū",
+                english: "reveal/show",
+                example: "他露出开心的笑容。",
+                image: "https://img.freepik.com/free-photo/happy-child-playing-autumn-park_1303-9185.jpg"
+            },
+            {
+                chinese: "生气",
+                pinyin: "shēng qì",
+                english: "angry",
+                example: "看到他的行为，我感到很生气。",
+                image: "https://cdn.pixabay.com/photo/2016/01/19/17/16/angry-1149462_640.jpg"
+            },
+            {
+                chinese: "危险",
+                pinyin: "wēi xiǎn",
+                english: "dangerous",
+                example: "在游乐场里做危险的动作是不对的。",
+                image: "https://cdn.pixabay.com/photo/2017/06/21/07/33/background-2426328_640.jpg"
+            },
+            {
+                chinese: "意外",
+                pinyin: "yì wài",
+                english: "accident",
+                example: "不小心就可能发生意外。",
+                image: "https://cdn.pixabay.com/photo/2016/04/18/22/05/seashells-1337565_640.jpg"
+            },
+            {
+                chinese: "阻止",
+                pinyin: "zǔ zhǐ",
+                english: "stop/prevent",
+                example: "我会上前阻止他的危险行为。",
+                image: "https://t3.ftcdn.net/jpg/00/70/16/48/360_F_70164823_TFAoh2eXFbLRn5INtpZDkWqvHTC9zHGG.jpg"
+            },
+            {
+                chinese: "滑梯",
+                pinyin: "huá tī",
+                english: "slide",
+                example: "女孩在滑滑梯，玩得不亦乐乎。",
+                image: "https://img.freepik.com/free-photo/girl-sliding-down-slide-playground_1303-12679.jpg"
+            },
+            {
+                chinese: "荡秋千",
+                pinyin: "dàng qiū qiān",
+                english: "swing",
+                example: "她在荡秋千，看起来很高兴。",
+                image: "https://img.freepik.com/free-photo/happy-child-playing-swing-playground_1150-6070.jpg"
+            },
+            {
+                chinese: "骑木马",
+                pinyin: "qí mù mǎ",
+                english: "ride rocking horse",
+                example: "两个男孩在骑木马。",
+                image: "https://cdn.pixabay.com/photo/2017/02/08/02/11/toys-2047705_640.jpg"
+            },
+            {
+                chinese: "包装纸",
+                pinyin: "bāo zhuāng zhǐ",
+                english: "wrapper",
+                example: "他把糖果的包装纸丢在地上。",
+                image: "https://img.freepik.com/free-photo/colorful-candy-wrappers-white-background_23-2148181379.jpg"
+            }
+        ];
+
+        let currentWord = null;
+        let learnedWords = new Set();
+
+        // Load progress from localStorage
+        function loadProgress() {
+            const saved = localStorage.getItem('koushi25_lesson1_learned');
+            if (saved) {
+                learnedWords = new Set(JSON.parse(saved));
+            }
+            updateProgressDisplay();
+        }
+
+        // Save progress to localStorage
+        function saveProgress() {
+            localStorage.setItem('koushi25_lesson1_learned', JSON.stringify(Array.from(learnedWords)));
+            const progress = (learnedWords.size / vocabulary.length) * 100;
+            localStorage.setItem('koushi25_lesson1_progress', progress.toFixed(0));
+        }
+
+        // Update progress display
+        function updateProgressDisplay() {
+            document.getElementById('learned-count').textContent = learnedWords.size;
+            document.getElementById('total-count').textContent = vocabulary.length;
+        }
+
+        // Create vocabulary cards
+        function createVocabCards() {
+            const grid = document.getElementById('vocab-grid');
+            grid.innerHTML = '';
+
+            vocabulary.forEach((word, index) => {
+                const card = document.createElement('div');
+                card.className = 'vocab-card';
+                if (learnedWords.has(word.chinese)) {
+                    card.classList.add('learned');
+                }
+
+                card.innerHTML = `
+                    <div class="vocab-chinese">${word.chinese}</div>
+                    <div class="vocab-pinyin">${word.pinyin}</div>
+                    <div class="vocab-english">${word.english}</div>
+                `;
+
+                card.onclick = () => openPractice(word);
+                grid.appendChild(card);
+            });
+        }
+
+        // Open practice modal
+        function openPractice(word) {
+            currentWord = word;
+            document.getElementById('practice-word').textContent = word.chinese;
+            document.getElementById('practice-pinyin').textContent = word.pinyin;
+            document.getElementById('practice-meaning').textContent = word.english;
+            document.getElementById('practice-example').textContent = word.example;
+
+            // Load image
+            const imageContainer = document.getElementById('practice-image');
+
+            if (word.image) {
+                // Create new image element
+                const img = document.createElement('img');
+                img.src = word.image;
+                img.alt = word.english;
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                img.style.borderRadius = '12px';
+
+                img.onerror = function() {
+                    // If image fails to load, show placeholder
+                    imageContainer.style.background = '#f0f0f0';
+                    imageContainer.innerHTML = '<div style="font-size: 18px; color: #666; padding: 80px 0;">图片加载失败</div>';
+                };
+
+                img.onload = function() {
+                    // Image loaded successfully
+                    imageContainer.style.background = 'none';
+                };
+
+                // Clear container and add image
+                imageContainer.innerHTML = '';
+                imageContainer.appendChild(img);
+            } else {
+                // No image URL provided
+                imageContainer.innerHTML = '<div style="font-size: 18px; color: #666; padding: 80px 0;">暂无图片</div>';
+            }
+
+            // Update button text based on learned status
+            const toggleBtn = document.getElementById('learn-toggle-btn');
+            if (learnedWords.has(word.chinese)) {
+                toggleBtn.textContent = '✗ 标记未学会';
+                toggleBtn.style.background = '#ff6b6b';
+            } else {
+                toggleBtn.textContent = '✓ 标记已学会';
+                toggleBtn.style.background = '';
+            }
+
+            document.getElementById('practice-modal').classList.add('show');
+        }
+
+        // Close practice modal
+        function closePractice() {
+            document.getElementById('practice-modal').classList.remove('show');
+            currentWord = null;
+        }
+
+        // Toggle word learned status
+        function toggleLearned() {
+            if (currentWord) {
+                if (learnedWords.has(currentWord.chinese)) {
+                    // Remove from learned
+                    learnedWords.delete(currentWord.chinese);
+                } else {
+                    // Add to learned
+                    learnedWords.add(currentWord.chinese);
+                }
+                saveProgress();
+                createVocabCards();
+                updateProgressDisplay();
+
+                // Update button text
+                const toggleBtn = document.getElementById('learn-toggle-btn');
+                if (learnedWords.has(currentWord.chinese)) {
+                    toggleBtn.textContent = '✗ 标记未学会';
+                    toggleBtn.style.background = '#ff6b6b';
+                } else {
+                    toggleBtn.textContent = '✓ 标记已学会';
+                    toggleBtn.style.background = '';
+                }
+            }
+        }
+
+        // Play word audio (placeholder)
+        function playWordAudio() {
+            if (currentWord) {
+                // In a real implementation, this would play TTS audio
+                const utterance = new SpeechSynthesisUtterance(currentWord.chinese);
+                utterance.lang = 'zh-CN';
+                utterance.rate = 0.8;
+                speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Play all audio (placeholder)
+        function playAllAudio() {
+            let index = 0;
+            function playNext() {
+                if (index < vocabulary.length) {
+                    const utterance = new SpeechSynthesisUtterance(vocabulary[index].chinese);
+                    utterance.lang = 'zh-CN';
+                    utterance.rate = 0.8;
+                    utterance.onend = () => {
+                        index++;
+                        setTimeout(playNext, 500);
+                    };
+                    speechSynthesis.speak(utterance);
+                }
+            }
+            playNext();
+        }
+
+        // Reset progress
+        function resetProgress() {
+            if (confirm('确定要重置学习进度吗？')) {
+                learnedWords.clear();
+                saveProgress();
+                createVocabCards();
+                updateProgressDisplay();
+            }
+        }
+
+        // Mobile navigation
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProgress();
+            createVocabCards();
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePractice();
+            }
+        });
+    </script>
+</body>
+</html>
