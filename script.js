@@ -436,12 +436,23 @@ class TingxieApp extends BaseApp {
     updateProgress() {
         const currentSet = document.getElementById(ELEMENT_IDS.CURRENT_SET);
         const totalSets = document.getElementById(ELEMENT_IDS.TOTAL_SETS);
+        const currentSetCard = document.getElementById('current-set-card');
+        const totalSetsCard = document.getElementById('total-sets-card');
+
+        const current = this.currentSetIndex + 1;
+        const total = this.currentWords.length;
 
         if (currentSet) {
-            currentSet.textContent = this.currentSetIndex + 1;
+            currentSet.textContent = current;
         }
         if (totalSets) {
-            totalSets.textContent = this.currentWords.length;
+            totalSets.textContent = total;
+        }
+        if (currentSetCard) {
+            currentSetCard.textContent = current;
+        }
+        if (totalSetsCard) {
+            totalSetsCard.textContent = total;
         }
     }
 

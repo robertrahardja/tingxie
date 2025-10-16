@@ -204,8 +204,18 @@ main {
     margin-bottom: 15px;
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.card-progress {
+    font-size: 36px;
+    font-weight: bold;
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
 .word-section {
@@ -455,6 +465,11 @@ main {
         margin-bottom: 25px;
         border-radius: 25px;
         box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    }
+
+    .card-progress {
+        font-size: 48px;
+        margin-bottom: 30px;
     }
     
     .word-section {
