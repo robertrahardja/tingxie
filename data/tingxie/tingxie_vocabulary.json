@@ -64,7 +64,7 @@
           "pinyin": "guò qù",
           "english": "to go over; past",
           "audio": "audio/过去.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "现在",
@@ -80,7 +80,7 @@
           "pinyin": "hé shì",
           "english": "suitable; appropriate",
           "audio": "audio/合适.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "试一试",
@@ -88,7 +88,7 @@
           "pinyin": "shì yī shì",
           "english": "to give it a try",
           "audio": "audio/试一试.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -117,7 +117,7 @@
           "pinyin": "bān jí",
           "english": "class",
           "audio": "audio/班级.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "折衣服",
@@ -133,7 +133,7 @@
           "pinyin": "bāng zhù",
           "english": "to help",
           "audio": "audio/帮助.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -244,7 +244,7 @@
           "pinyin": "xìng fú",
           "english": "happy; happiness",
           "audio": "audio/幸福.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "时候",
@@ -281,7 +281,7 @@
           "pinyin": "bài nián",
           "english": "to pay a New Year visit",
           "audio": "audio/拜年.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "拿着",
@@ -289,7 +289,7 @@
           "pinyin": "ná zhe",
           "english": "holding; carrying",
           "audio": "audio/拿着.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "您好",
@@ -326,7 +326,7 @@
           "pinyin": "rèn zhēn",
           "english": "serious; earnest",
           "audio": "audio/认真.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "年花",
@@ -358,7 +358,7 @@
           "pinyin": "qìng zhù",
           "english": "to celebrate",
           "audio": "audio/庆祝.mp3",
-          "important": false
+          "important": true
         }
       ]
     },
@@ -379,7 +379,7 @@
           "pinyin": "wǔ lóng wǔ shī",
           "english": "dragon and lion dance",
           "audio": "audio/舞龙舞狮.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "主人",
@@ -424,7 +424,7 @@
           "pinyin": "ěr duo",
           "english": "ear",
           "audio": "audio/耳朵.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "请客",
@@ -493,7 +493,7 @@
           "pinyin": "dì yī",
           "english": "first; number one",
           "audio": "audio/第一.mp3",
-          "important": false
+          "important": true
         }
       ]
     },
@@ -612,7 +612,7 @@
           "pinyin": "cóng qián",
           "english": "in the past; formerly",
           "audio": "audio/从前.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "观众",
@@ -620,7 +620,7 @@
           "pinyin": "guān zhòng",
           "english": "audience",
           "audio": "audio/观众.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "三角形",
@@ -628,7 +628,7 @@
           "pinyin": "sān jiǎo xíng",
           "english": "triangle",
           "audio": "audio/三角形.mp3",
-          "important": false
+          "important": true
         }
       ]
     },
@@ -702,7 +702,7 @@
           "pinyin": "bù xiǎng",
           "english": "don't want to",
           "audio": "audio/不想.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "黄色",
@@ -739,7 +739,7 @@
           "pinyin": "yún duǒ",
           "english": "cloud",
           "audio": "audio/云朵.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "天空",
@@ -747,7 +747,7 @@
           "pinyin": "tiān kōng",
           "english": "sky",
           "audio": "audio/天空.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "太阳",
@@ -755,7 +755,7 @@
           "pinyin": "tài yáng",
           "english": "sun",
           "audio": "audio/太阳.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "一棵树",
@@ -821,7 +821,7 @@
           "pinyin": "měi shù shì",
           "english": "art room",
           "audio": "audio/美术室.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "旁边",
@@ -866,7 +866,7 @@
           "pinyin": "cāo chǎng",
           "english": "playground; field",
           "audio": "audio/操场.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "奶奶",
@@ -882,7 +882,7 @@
           "pinyin": "mí lù",
           "english": "to get lost",
           "audio": "audio/迷路.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "很久",
@@ -911,7 +911,7 @@
           "pinyin": "jiù shì",
           "english": "exactly; just",
           "audio": "audio/就是.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "已经",
@@ -988,7 +988,7 @@
           "pinyin": "xíng rén tiān qiáo",
           "english": "pedestrian bridge",
           "audio": "audio/行人天桥.mp3",
-          "important": false
+          "important": true
         }
       ]
     },
@@ -1054,7 +1054,7 @@
           "pinyin": "měi lì jí le",
           "english": "extremely beautiful",
           "audio": "audio/美丽极了.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "奶茶",
@@ -1205,7 +1205,7 @@
           "pinyin": "wén dào",
           "english": "to smell",
           "audio": "audio/闻到.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "香味",
@@ -1213,7 +1213,7 @@
           "pinyin": "xiāng wèi",
           "english": "fragrance; aroma",
           "audio": "audio/香味.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -1226,7 +1226,7 @@
           "pinyin": "yóu zhá",
           "english": "deep-fried",
           "audio": "audio/油炸.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "医生",
@@ -1242,7 +1242,7 @@
           "pinyin": "hù shì",
           "english": "nurse",
           "audio": "audio/护士.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "看病",
@@ -1250,7 +1250,7 @@
           "pinyin": "kàn bìng",
           "english": "to see a doctor",
           "audio": "audio/看病.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "照顾",
@@ -1258,7 +1258,7 @@
           "pinyin": "zhào gù",
           "english": "to take care of",
           "audio": "audio/照顾.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -1271,7 +1271,7 @@
           "pinyin": "xiǎo fàn",
           "english": "hawker; vendor",
           "audio": "audio/小贩.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "卖菜",
@@ -1279,7 +1279,7 @@
           "pinyin": "mài cài",
           "english": "to sell vegetables",
           "audio": "audio/卖菜.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "阿姨",
@@ -1287,7 +1287,7 @@
           "pinyin": "ā yí",
           "english": "auntie",
           "audio": "audio/阿姨.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "教师",
@@ -1324,7 +1324,7 @@
           "pinyin": "yǎn yuán",
           "english": "actor; actress",
           "audio": "audio/演员.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "发生火灾",
@@ -1340,7 +1340,7 @@
           "pinyin": "xiāo fáng yuán",
           "english": "firefighter",
           "audio": "audio/消防员.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "灭火",
@@ -1369,7 +1369,7 @@
           "pinyin": "huài rén",
           "english": "bad person; villain",
           "audio": "audio/坏人.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "保护",
@@ -1377,7 +1377,7 @@
           "pinyin": "bǎo hù",
           "english": "to protect",
           "audio": "audio/保护.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "害怕",
@@ -1385,7 +1385,7 @@
           "pinyin": "hài pà",
           "english": "to be afraid; to fear",
           "audio": "audio/害怕.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "建造",
@@ -1393,7 +1393,7 @@
           "pinyin": "jiàn zào",
           "english": "to build; to construct",
           "audio": "audio/建造.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -1422,7 +1422,7 @@
           "pinyin": "chuāng wài",
           "english": "outside the window",
           "audio": "audio/窗外.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "黑暗",
@@ -1430,7 +1430,7 @@
           "pinyin": "hēi àn",
           "english": "dark; darkness",
           "audio": "audio/黑暗.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "乌云",
@@ -1438,7 +1438,7 @@
           "pinyin": "wū yún",
           "english": "dark clouds",
           "audio": "audio/乌云.mp3",
-          "important": false
+          "important": true
         }
       ]
     },
@@ -1451,7 +1451,7 @@
           "pinyin": "shǎn diàn",
           "english": "lightning",
           "audio": "audio/闪电.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "刮风",
@@ -1459,7 +1459,7 @@
           "pinyin": "guā fēng",
           "english": "windy; blowing wind",
           "audio": "audio/刮风.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "带着",
@@ -1475,7 +1475,7 @@
           "pinyin": "yǔ sǎn",
           "english": "umbrella",
           "audio": "audio/雨伞.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "淋湿",
@@ -1496,7 +1496,7 @@
           "pinyin": "hěn lěng",
           "english": "very cold",
           "audio": "audio/很冷.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "记得",
@@ -1504,7 +1504,7 @@
           "pinyin": "jì de",
           "english": "to remember",
           "audio": "audio/记得.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "阴天",
@@ -1528,7 +1528,7 @@
           "pinyin": "qíng tiān",
           "english": "sunny day; clear sky",
           "audio": "audio/晴天.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -1541,7 +1541,7 @@
           "pinyin": "hěn rè",
           "english": "very hot",
           "audio": "audio/很热.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "忘记",
@@ -1549,7 +1549,7 @@
           "pinyin": "wàng jì",
           "english": "to forget",
           "audio": "audio/忘记.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "着急",
@@ -1565,7 +1565,7 @@
           "pinyin": "mō le mō",
           "english": "to touch; to feel",
           "audio": "audio/摸了摸.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "孩子",
@@ -1586,7 +1586,7 @@
           "pinyin": "wèn tí",
           "english": "question; problem",
           "audio": "audio/问题.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "好呢",
@@ -1594,7 +1594,7 @@
           "pinyin": "hǎo ne",
           "english": "good (question particle)",
           "audio": "audio/好呢.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "门铃响了",
@@ -1610,7 +1610,7 @@
           "pinyin": "mǎ yǐ",
           "english": "ant",
           "audio": "audio/蚂蚁.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "爬来爬去",
@@ -1631,7 +1631,7 @@
           "pinyin": "mì fēng",
           "english": "bee",
           "audio": "audio/蜜蜂.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "花丛",
@@ -1647,7 +1647,7 @@
           "pinyin": "chí táng",
           "english": "pond",
           "audio": "audio/池塘.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "树枝",
@@ -1655,7 +1655,7 @@
           "pinyin": "shù zhī",
           "english": "tree branch",
           "audio": "audio/树枝.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "清水",
@@ -1663,7 +1663,7 @@
           "pinyin": "qīng shuǐ",
           "english": "clear water",
           "audio": "audio/清水.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -1676,7 +1676,7 @@
           "pinyin": "tiào lái tiào qù",
           "english": "jumping around",
           "audio": "audio/跳来跳去.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "事情",
@@ -1684,7 +1684,7 @@
           "pinyin": "shì qíng",
           "english": "matter; thing",
           "audio": "audio/事情.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "青蛙",
@@ -1692,7 +1692,7 @@
           "pinyin": "qīng wā",
           "english": "frog",
           "audio": "audio/青蛙.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "捉害虫",
@@ -1721,7 +1721,7 @@
           "pinyin": "ràng kāi",
           "english": "get out of the way",
           "audio": "audio/让开.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "掉下来",
@@ -1745,7 +1745,7 @@
           "pinyin": "chéng wéi",
           "english": "to become",
           "audio": "audio/成为.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "鸟窝",
@@ -1766,7 +1766,7 @@
           "pinyin": "yè zi",
           "english": "leaf",
           "audio": "audio/叶子.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "好像",
@@ -1774,7 +1774,7 @@
           "pinyin": "hǎo xiàng",
           "english": "to seem like",
           "audio": "audio/好像.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "结出",
@@ -1782,7 +1782,7 @@
           "pinyin": "jié chū",
           "english": "to produce (fruit)",
           "audio": "audio/结出.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "甜甜的",
@@ -1790,7 +1790,7 @@
           "pinyin": "tián tián de",
           "english": "sweet",
           "audio": "audio/甜甜的.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "喜欢",
@@ -1798,7 +1798,7 @@
           "pinyin": "xǐ huān",
           "english": "to like",
           "audio": "audio/喜欢.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -1827,7 +1827,7 @@
           "pinyin": "yī kuài",
           "english": "together; a piece",
           "audio": "audio/一块.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "跟着",
@@ -1843,7 +1843,7 @@
           "pinyin": "tiào qí",
           "english": "checkers",
           "audio": "audio/跳棋.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -1856,7 +1856,7 @@
           "pinyin": "tǎ jī mù",
           "english": "to stack blocks",
           "audio": "audio/塔积木.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "布娃娃",
@@ -1864,7 +1864,7 @@
           "pinyin": "bù wá wa",
           "english": "doll",
           "audio": "audio/布娃娃.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "好吧",
@@ -1880,7 +1880,7 @@
           "pinyin": "xǔ duō",
           "english": "many; much",
           "audio": "audio/许多.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "跳绳",
@@ -1888,7 +1888,7 @@
           "pinyin": "tiào shéng",
           "english": "to jump rope",
           "audio": "audio/跳绳.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -1901,7 +1901,7 @@
           "pinyin": "niē ní bā",
           "english": "to play with clay",
           "audio": "audio/捏泥巴.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "拼图",
@@ -1909,7 +1909,7 @@
           "pinyin": "pīn tú",
           "english": "jigsaw puzzle",
           "audio": "audio/拼图.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "更多",
@@ -1978,7 +1978,7 @@
           "pinyin": "yī zhāng shēng rì kǎ",
           "english": "a birthday card",
           "audio": "audio/一张生日卡.mp3",
-          "important": false
+          "important": true
         }
       ]
     },
@@ -1991,7 +1991,7 @@
           "pinyin": "kè tīng",
           "english": "living room",
           "audio": "audio/客厅.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "桌子",
@@ -2044,7 +2044,7 @@
           "pinyin": "yī shǒu gē",
           "english": "a song",
           "audio": "audio/一首歌.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "许愿",
@@ -2052,7 +2052,7 @@
           "pinyin": "xǔ yuàn",
           "english": "to make a wish",
           "audio": "audio/许愿.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "吹蜡烛",
@@ -2068,7 +2068,7 @@
           "pinyin": "dàn gāo",
           "english": "cake",
           "audio": "audio/蛋糕.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2081,7 +2081,7 @@
           "pinyin": "diàn yǐng piào",
           "english": "movie ticket",
           "audio": "audio/电影票.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "宝贝",
@@ -2097,7 +2097,7 @@
           "pinyin": "huó dòng",
           "english": "activity",
           "audio": "audio/活动.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "哪些",
@@ -2113,7 +2113,7 @@
           "pinyin": "qí guài",
           "english": "strange; odd",
           "audio": "audio/奇怪.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2142,7 +2142,7 @@
           "pinyin": "xǐ zǎo",
           "english": "to take a bath",
           "audio": "audio/洗澡.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "聪明",
@@ -2158,7 +2158,7 @@
           "pinyin": "guāi qiǎo",
           "english": "well-behaved; obedient",
           "audio": "audio/乖巧.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2179,7 +2179,7 @@
           "pinyin": "yíng jiē",
           "english": "to welcome; to greet",
           "audio": "audio/迎接.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "吐出来",
@@ -2203,7 +2203,7 @@
           "pinyin": "jīn yú",
           "english": "goldfish",
           "audio": "audio/金鱼.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2224,7 +2224,7 @@
           "pinyin": "shuì jiào",
           "english": "to sleep",
           "audio": "audio/睡觉.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "觉得",
@@ -2240,7 +2240,7 @@
           "pinyin": "yǔ máo",
           "english": "feather",
           "audio": "audio/羽毛.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "救员",
@@ -2248,7 +2248,7 @@
           "pinyin": "jiù yuán",
           "english": "rescuer",
           "audio": "audio/救员.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2277,7 +2277,7 @@
           "pinyin": "diū shí tóu",
           "english": "to throw stones",
           "audio": "audio/丢石头.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "晚上",
@@ -2359,7 +2359,7 @@
           "pinyin": "nòng pò",
           "english": "to break; to damage",
           "audio": "audio/弄破.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "讨厌",
@@ -2367,7 +2367,7 @@
           "pinyin": "tǎo yàn",
           "english": "to hate; annoying",
           "audio": "audio/讨厌.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "撞倒",
@@ -2375,7 +2375,7 @@
           "pinyin": "zhuàng dǎo",
           "english": "to knock down",
           "audio": "audio/撞倒.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "受伤",
@@ -2404,7 +2404,7 @@
           "pinyin": "tuī dǎo",
           "english": "to push down",
           "audio": "audio/推倒.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "不能",
@@ -2412,7 +2412,7 @@
           "pinyin": "bù néng",
           "english": "cannot; should not",
           "audio": "audio/不能.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "你争我抢",
@@ -2420,7 +2420,7 @@
           "pinyin": "nǐ zhēng wǒ qiǎng",
           "english": "to fight over something",
           "audio": "audio/你争我抢.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "很难",
@@ -2465,7 +2465,7 @@
           "pinyin": "liàng jīng jīng",
           "english": "shiny; sparkling",
           "audio": "audio/亮晶晶.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "粗和细",
@@ -2473,7 +2473,7 @@
           "pinyin": "cū hé xì",
           "english": "thick and thin",
           "audio": "audio/粗和细.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2510,7 +2510,7 @@
           "pinyin": "bǐ jiào",
           "english": "to compare; relatively",
           "audio": "audio/比较.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "番茄汤",
@@ -2518,7 +2518,7 @@
           "pinyin": "fān qié tāng",
           "english": "tomato soup",
           "audio": "audio/番茄汤.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2555,7 +2555,7 @@
           "pinyin": "zhǔ fàn",
           "english": "to cook rice",
           "audio": "audio/煮饭.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "豆芽",
@@ -2563,7 +2563,7 @@
           "pinyin": "dòu yá",
           "english": "bean sprouts",
           "audio": "audio/豆芽.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2576,7 +2576,7 @@
           "pinyin": "zǐ sè",
           "english": "purple",
           "audio": "audio/紫色.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "果实",
@@ -2592,7 +2592,7 @@
           "pinyin": "shù gēn",
           "english": "tree root",
           "audio": "audio/树根.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "考试",
@@ -2600,7 +2600,7 @@
           "pinyin": "kǎo shì",
           "english": "exam; test",
           "audio": "audio/考试.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "黑色",
@@ -2621,7 +2621,7 @@
           "pinyin": "shāng xīn de kū",
           "english": "to cry sadly",
           "audio": "audio/伤心地哭.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "挖花生",
@@ -2629,7 +2629,7 @@
           "pinyin": "wā huā shēng",
           "english": "to dig up peanuts",
           "audio": "audio/挖花生.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "老鼠",
@@ -2637,7 +2637,7 @@
           "pinyin": "lǎo shǔ",
           "english": "mouse; rat",
           "audio": "audio/老鼠.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "拔萝卜",
@@ -2653,7 +2653,7 @@
           "pinyin": "xiǎo zhū",
           "english": "piglet",
           "audio": "audio/小猪.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2666,7 +2666,7 @@
           "pinyin": "zhāi guǒ zi",
           "english": "to pick fruit",
           "audio": "audio/摘果子.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "附近",
@@ -2674,7 +2674,7 @@
           "pinyin": "fù jìn",
           "english": "nearby; vicinity",
           "audio": "audio/附近.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "借书",
@@ -2682,7 +2682,7 @@
           "pinyin": "jiè shū",
           "english": "to borrow books",
           "audio": "audio/借书.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "指着",
@@ -2690,7 +2690,7 @@
           "pinyin": "zhǐ zhe",
           "english": "pointing at",
           "audio": "audio/指着.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "开始",
@@ -2711,7 +2711,7 @@
           "pinyin": "bǎo chí ān jìng",
           "english": "to keep quiet",
           "audio": "audio/保持安静.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "大声讲话",
@@ -2727,7 +2727,7 @@
           "pinyin": "mǎn yì",
           "english": "satisfied",
           "audio": "audio/满意.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "讲故事",
@@ -2735,7 +2735,7 @@
           "pinyin": "jiǎng gù shì",
           "english": "to tell a story",
           "audio": "audio/讲故事.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "知道",
@@ -2756,7 +2756,7 @@
           "pinyin": "dá àn",
           "english": "answer",
           "audio": "audio/答案.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "有趣",
@@ -2764,7 +2764,7 @@
           "pinyin": "yǒu qù",
           "english": "interesting",
           "audio": "audio/有趣.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "绘本",
@@ -2801,7 +2801,7 @@
           "pinyin": "shū jià",
           "english": "bookshelf",
           "audio": "audio/书架.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "一首英文歌",
@@ -2809,7 +2809,7 @@
           "pinyin": "yī shǒu yīng wén gē",
           "english": "an English song",
           "audio": "audio/一首英文歌.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "箱子",
@@ -2817,7 +2817,7 @@
           "pinyin": "xiāng zi",
           "english": "box; suitcase",
           "audio": "audio/箱子.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "文具盒",
@@ -2833,7 +2833,7 @@
           "pinyin": "lóu xià",
           "english": "downstairs",
           "audio": "audio/楼下.mp3",
-          "important": false
+          "important": true
         }
       ]
     },
@@ -2870,7 +2870,7 @@
           "pinyin": "yǐn liào tān",
           "english": "beverage stall",
           "audio": "audio/饮料摊.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "射气球",
@@ -2878,7 +2878,7 @@
           "pinyin": "shè qì qiú",
           "english": "to shoot balloons",
           "audio": "audio/射气球.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2891,7 +2891,7 @@
           "pinyin": "tào quān quān",
           "english": "ring toss game",
           "audio": "audio/套圈圈.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "碰碰车",
@@ -2899,7 +2899,7 @@
           "pinyin": "pèng pèng chē",
           "english": "bumper cars",
           "audio": "audio/碰碰车.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "一阵阵",
@@ -2907,7 +2907,7 @@
           "pinyin": "yī zhèn zhèn",
           "english": "wave after wave; bursts of",
           "audio": "audio/一阵阵.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "引来",
@@ -2915,7 +2915,7 @@
           "pinyin": "yǐn lái",
           "english": "to attract",
           "audio": "audio/引来.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "一群群",
@@ -2923,7 +2923,7 @@
           "pinyin": "yī qún qún",
           "english": "groups of",
           "audio": "audio/一群群.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -2936,7 +2936,7 @@
           "pinyin": "dàn shì",
           "english": "but; however",
           "audio": "audio/但是.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "烤香肠",
@@ -2968,7 +2968,7 @@
           "pinyin": "fàng fēng zhēng",
           "english": "to fly a kite",
           "audio": "audio/放风筝.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -3026,7 +3026,7 @@
           "pinyin": "jiē dào",
           "english": "street",
           "audio": "audio/街道.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "干净",
@@ -3042,7 +3042,7 @@
           "pinyin": "zhěng qí",
           "english": "neat; tidy",
           "audio": "audio/整齐.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "参观",
@@ -3058,7 +3058,7 @@
           "pinyin": "zhí wù yuán",
           "english": "botanical garden",
           "audio": "audio/植物园.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -3071,7 +3071,7 @@
           "pinyin": "měi shù guǎn",
           "english": "art gallery",
           "audio": "audio/美术馆.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "东海岸公园",
@@ -3087,7 +3087,7 @@
           "pinyin": "yě cān",
           "english": "picnic",
           "audio": "audio/野餐.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "游泳",
@@ -3103,7 +3103,7 @@
           "pinyin": "wán ní shā",
           "english": "to play with sand",
           "audio": "audio/玩泥沙.mp3",
-          "important": true
+          "important": false
         }
       ]
     },
@@ -3116,7 +3116,7 @@
           "pinyin": "jiǎn bèi ké",
           "english": "to pick up seashells",
           "audio": "audio/捡贝壳.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "离开",
@@ -3124,7 +3124,7 @@
           "pinyin": "lí kāi",
           "english": "to leave",
           "audio": "audio/离开.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "国家",
@@ -3169,7 +3169,7 @@
           "pinyin": "gào sù",
           "english": "to tell",
           "audio": "audio/告诉.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "浪费",
@@ -3177,7 +3177,7 @@
           "pinyin": "làng fèi",
           "english": "to waste",
           "audio": "audio/浪费.mp3",
-          "important": true
+          "important": false
         },
         {
           "simplified": "节约",
@@ -3259,7 +3259,7 @@
           "pinyin": "kǒu kě",
           "english": "thirsty",
           "audio": "audio/口渴.mp3",
-          "important": false
+          "important": true
         },
         {
           "simplified": "喝水",
@@ -3283,7 +3283,7 @@
           "pinyin": "lián máng",
           "english": "hastily; promptly",
           "audio": "audio/连忙.mp3",
-          "important": false
+          "important": true
         }
       ]
     },
@@ -3304,7 +3304,7 @@
           "pinyin": "dī xià tóu",
           "english": "to lower one's head",
           "audio": "audio/低下头.mp3",
-          "important": true
+          "important": false
         }
       ]
     }
