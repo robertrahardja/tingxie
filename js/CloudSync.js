@@ -51,32 +51,50 @@ export class CloudSync {
     }
 
     /**
-     * Save student progress to Cloudflare KV
+     * Save student progress to Cloudflare KV with retry logic
      */
-    async saveProgress(knownWords, unknownWords) {
-        try {
-            const response = await fetch(`${this.apiBaseUrl}/api/progress`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    studentId: this.studentId,
-                    knownWords: Array.from(knownWords),
-                    unknownWords: Array.from(unknownWords)
-                })
-            });
+    async saveProgress(knownWords, unknownWords, retries = 3) {
+        for (let attempt = 1; attempt <= retries; attempt++) {
+            try {
+                const response = await fetch(`${this.apiBaseUrl}/api/progress`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        studentId: this.studentId,
+                        // Convert Sets to Arrays and remove duplicates
+                        knownWords: Array.from(new Set(knownWords)),
+                        unknownWords: Array.from(new Set(unknownWords))
+                    })
+                });
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                if (data.success) {
+                    console.log(`✓ Progress saved to cloud (attempt ${attempt}/${retries})`);
+                    return true;
+                }
+
+                throw new Error('Save returned success: false');
+            } catch (error) {
+                console.error(`Failed to save progress (attempt ${attempt}/${retries}):`, error);
+
+                // If this was the last attempt, return false
+                if (attempt === retries) {
+                    return false;
+                }
+
+                // Wait before retrying (exponential backoff)
+                await new Promise(resolve => setTimeout(resolve, attempt * 1000));
             }
-
-            const data = await response.json();
-            return data.success;
-        } catch (error) {
-            console.error('Failed to save progress to cloud:', error);
-            return false;
         }
+
+        return false;
     }
 
     /**

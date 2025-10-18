@@ -65,17 +65,11 @@ class DashboardApp extends BaseApp {
             loading.style.display = 'block';
             errorContainer.style.display = 'none';
 
-            // Try to fetch progress from cloud
+            // Fetch progress from cloud ONLY (no localStorage fallback)
             let progress = await this.cloudSync.fetchProgress();
 
-            // If cloud fetch fails (local dev), fall back to localStorage
+            // If no progress found, show empty state
             if (!progress || (!progress.knownWords && !progress.unknownWords)) {
-                console.log('Cloud sync unavailable, using localStorage');
-                progress = this.getLocalProgress();
-            }
-
-            // If still no data, show empty state
-            if (!progress.knownWords && !progress.unknownWords) {
                 progress = {
                     knownWords: new Set(),
                     unknownWords: new Set(),
@@ -102,38 +96,17 @@ class DashboardApp extends BaseApp {
             errorContainer.style.display = 'block';
             errorContainer.innerHTML = `
                 <div class="error-message">
-                    无法加载数据。请确保：<br>
-                    1. 孩子已经开始使用听写练习<br>
-                    2. 已经标记了一些词语（会/不会）<br>
+                    无法连接到服务器。请确保：<br>
+                    1. 网络连接正常<br>
+                    2. 孩子已经开始使用听写练习<br>
+                    3. 已经标记了一些词语（会/不会）<br>
                     <br>
-                    Unable to load data. Please ensure:<br>
-                    1. Your child has started using the Tingxie app<br>
-                    2. Some words have been marked (会/不会)
+                    Unable to connect to server. Please ensure:<br>
+                    1. Internet connection is working<br>
+                    2. Your child has started using the Tingxie app<br>
+                    3. Some words have been marked (会/不会)
                 </div>
             `;
-        }
-    }
-
-    /**
-     * Get progress from localStorage (fallback for local dev)
-     */
-    getLocalProgress() {
-        try {
-            const known = localStorage.getItem('tingxie_known_words');
-            const unknown = localStorage.getItem('tingxie_unknown_words');
-
-            return {
-                knownWords: known ? new Set(JSON.parse(known)) : new Set(),
-                unknownWords: unknown ? new Set(JSON.parse(unknown)) : new Set(),
-                lastUpdated: null
-            };
-        } catch (error) {
-            console.error('Failed to load from localStorage:', error);
-            return {
-                knownWords: new Set(),
-                unknownWords: new Set(),
-                lastUpdated: null
-            };
         }
     }
 

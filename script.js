@@ -22,28 +22,69 @@ class TingxieApp extends BaseApp {
     }
 
     loadKnownWords() {
-        const stored = localStorage.getItem('tingxie_known_words');
-        return stored ? new Set(JSON.parse(stored)) : new Set();
+        // Progress loaded from cloud on init, return empty set for now
+        return new Set();
     }
 
     loadUnknownWords() {
-        const stored = localStorage.getItem('tingxie_unknown_words');
-        return stored ? new Set(JSON.parse(stored)) : new Set();
-    }
-
-    saveKnownWords() {
-        localStorage.setItem('tingxie_known_words', JSON.stringify([...this.knownWords]));
-    }
-
-    saveUnknownWords() {
-        localStorage.setItem('tingxie_unknown_words', JSON.stringify([...this.unknownWords]));
+        // Progress loaded from cloud on init, return empty set for now
+        return new Set();
     }
 
     /**
-     * Save progress both locally and to cloud
+     * Save progress to Cloudflare KV only
+     * Returns true if successful, false otherwise
      */
-    async saveProgressToCloud() {
-        await this.cloudSync.saveProgress(this.knownWords, this.unknownWords);
+    async saveProgress() {
+        const success = await this.cloudSync.saveProgress(this.knownWords, this.unknownWords);
+
+        if (!success) {
+            console.error('Failed to save progress to cloud');
+            this.showSaveError();
+        }
+
+        return success;
+    }
+
+    /**
+     * Show error notification when save fails
+     */
+    showSaveError() {
+        // Create error notification if it doesn't exist
+        let errorNotif = document.getElementById('save-error-notif');
+
+        if (!errorNotif) {
+            errorNotif = document.createElement('div');
+            errorNotif.id = 'save-error-notif';
+            errorNotif.style.cssText = `
+                position: fixed;
+                top: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #e74c3c;
+                color: white;
+                padding: 16px 24px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                z-index: 10000;
+                font-size: 14px;
+                text-align: center;
+                max-width: 90%;
+                animation: slideDown 0.3s ease;
+            `;
+            document.body.appendChild(errorNotif);
+        }
+
+        errorNotif.innerHTML = `
+            ⚠️ 保存失败！请检查网络连接。<br>
+            <small>Save failed! Please check your internet connection.</small>
+        `;
+        errorNotif.style.display = 'block';
+
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+            errorNotif.style.display = 'none';
+        }, 5000);
     }
 
     getWordId(word) {
@@ -74,8 +115,8 @@ class TingxieApp extends BaseApp {
     }
 
     /**
-     * Sync progress with Cloudflare KV
-     * Merges local and cloud data, then saves back to cloud
+     * Load progress from Cloudflare KV on startup
+     * No localStorage - cloud is single source of truth
      */
     async syncWithCloud() {
         if (this.syncInProgress) return;
@@ -84,30 +125,21 @@ class TingxieApp extends BaseApp {
         try {
             const cloudProgress = await this.cloudSync.fetchProgress();
 
-            if (cloudProgress) {
-                // Merge local and cloud progress
-                const local = {
-                    knownWords: this.knownWords,
-                    unknownWords: this.unknownWords
-                };
+            if (cloudProgress && (cloudProgress.knownWords || cloudProgress.unknownWords)) {
+                // Load progress from cloud (Sets already prevent duplicates)
+                this.knownWords = cloudProgress.knownWords || new Set();
+                this.unknownWords = cloudProgress.unknownWords || new Set();
 
-                const merged = this.cloudSync.mergeProgress(local, cloudProgress);
-
-                // Update local state
-                this.knownWords = merged.knownWords;
-                this.unknownWords = merged.unknownWords;
-
-                // Save merged data back to localStorage and cloud
-                this.saveKnownWords();
-                this.saveUnknownWords();
-
-                console.log('✓ Synced with cloud:', {
+                console.log('✓ Loaded progress from cloud:', {
                     known: this.knownWords.size,
                     unknown: this.unknownWords.size
                 });
+            } else {
+                console.log('No existing progress found, starting fresh');
             }
         } catch (error) {
-            console.error('Cloud sync failed:', error);
+            console.error('Failed to load progress from cloud:', error);
+            alert('无法连接到服务器。请检查网络连接。\n\nUnable to connect to server. Please check your internet connection.');
         } finally {
             this.syncInProgress = false;
         }
@@ -368,35 +400,35 @@ class TingxieApp extends BaseApp {
         }
     }
 
-    markWordAsKnown() {
+    async markWordAsKnown() {
         if (this.currentWords.length === 0) return;
 
         const word = this.currentWords[this.currentWordIndex];
         const wordId = this.getWordId(word);
 
+        // Sets automatically prevent duplicates
         this.knownWords.add(wordId);
         this.unknownWords.delete(wordId);
 
-        this.saveKnownWords();
-        this.saveUnknownWords();
-        this.saveProgressToCloud(); // Sync to cloud
+        // Save to cloud only (no localStorage)
+        await this.saveProgress();
 
         this.updateReviewButtonVisibility();
         this.nextWord();
     }
 
-    markWordAsUnknown() {
+    async markWordAsUnknown() {
         if (this.currentWords.length === 0) return;
 
         const word = this.currentWords[this.currentWordIndex];
         const wordId = this.getWordId(word);
 
+        // Sets automatically prevent duplicates
         this.unknownWords.add(wordId);
         this.knownWords.delete(wordId);
 
-        this.saveKnownWords();
-        this.saveUnknownWords();
-        this.saveProgressToCloud(); // Sync to cloud
+        // Save to cloud only (no localStorage)
+        await this.saveProgress();
 
         this.updateReviewButtonVisibility();
         this.nextWord();

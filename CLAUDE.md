@@ -77,11 +77,15 @@ The codebase uses **class-based inheritance** with a shared base class:
 ### Cloud Sync System
 
 **CloudSync.js** handles cross-device progress synchronization:
-- Generates unique student IDs based on browser fingerprint
-- Syncs known/unknown words to Cloudflare KV
-- Merges progress from multiple devices (union of sets)
-- Automatic sync on app startup and after each assessment
+- Generates unique student IDs (timestamp + random string)
+- Student ID stored in localStorage for device persistence
+- **Saves ONLY to Cloudflare KV** - No localStorage for progress
+- Automatic deduplication - Sets prevent duplicate word entries
+- Retry logic: 3 attempts with exponential backoff (1s, 2s, 3s)
+- Loads progress from cloud on app startup
+- Saves progress after each assessment (会/不会)
 - API endpoint: `/api/progress` (Cloudflare Pages Function)
+- Visual error notification if save fails
 
 ### Data Format
 
@@ -165,13 +169,15 @@ if (element) {
 ### State Management
 - App state stored in class properties
 - No external state management library
-- localStorage used for local persistence:
-  - `tingxie_known_words` - Words marked as known (会)
-  - `tingxie_unknown_words` - Words marked as unknown (不会)
-  - Koushi lesson progress
-- Cloudflare KV used for cross-device sync:
+- **Tingxie Progress Storage**:
+  - **ONLY Cloudflare KV** - Single source of truth
+  - No localStorage for progress data
   - Key format: `student:{studentId}:tingxie:progress`
-  - Contains knownWords, unknownWords arrays, and lastUpdated timestamp
+  - Contains unique knownWords, unknownWords arrays (duplicates removed), and lastUpdated timestamp
+  - Student ID stored in localStorage: `tingxie_student_id` (device-specific identifier)
+  - Automatic retry logic (3 attempts with exponential backoff)
+  - Visual error notification if save fails
+- **Koushi lesson progress**: localStorage only (not synced)
 
 ### CSS Classes
 Use constants instead of hardcoding:
@@ -192,7 +198,11 @@ element.classList.add('covered');            // Avoid
 Students can mark words as known (会 ✓) or unknown (不会 ✗):
 - **Known words**: Marked when student is confident
 - **Unknown words**: Automatically available in review mode
-- Progress syncs across devices via Cloudflare KV
+- **Progress saved ONLY to Cloudflare KV** - No localStorage
+- Automatic deduplication - same word marked multiple times won't create duplicates
+- Progress syncs across devices via Cloudflare KV (single source of truth)
+- Retry logic: 3 attempts with exponential backoff (1s, 2s, 3s delays)
+- Visual error notification appears if save fails after all retries
 - Review mode button appears when there are unknown words
 - Filter button (重要词语) is hidden in review mode
 
@@ -254,10 +264,14 @@ tingxie/
 - Traditional Chinese is the primary display (Singapore education standard)
 - Filter system affects both display and navigation (word count changes)
 - Self-assessment buttons (会/不会) are always visible and not tied to item revelation
-- Tingxie progress syncs across devices via Cloudflare KV (localStorage + cloud)
-- Koushi lesson progress is per-device only (localStorage), not synced
+- **Tingxie progress**: Cloudflare KV ONLY (single source of truth, no localStorage)
+- **Koushi lesson progress**: localStorage only (per-device, not synced)
+- Student ID persists in localStorage to identify the student across sessions
+- Automatic deduplication ensures same word marked multiple times = no duplicates
+- Retry logic (3 attempts) with visual error feedback if save fails
 - Progress counter displayed prominently inside word card for easy tracking
 - Review mode filters to show only unknown words and hides the importance filter button
+- Dashboard loads progress from cloud only (no localStorage fallback)
 
 ## Deployment
 

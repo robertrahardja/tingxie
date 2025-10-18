@@ -88,9 +88,14 @@ async function handleSaveProgress(request, env, corsHeaders) {
     }
 
     const key = `student:${studentId}:tingxie:progress`;
+
+    // Remove duplicates by converting to Set and back to Array
+    const uniqueKnownWords = [...new Set(knownWords || [])];
+    const uniqueUnknownWords = [...new Set(unknownWords || [])];
+
     const progress = {
-      knownWords: knownWords || [],
-      unknownWords: unknownWords || [],
+      knownWords: uniqueKnownWords,
+      unknownWords: uniqueUnknownWords,
       lastUpdated: Date.now()
     };
 
