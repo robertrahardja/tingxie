@@ -18,6 +18,13 @@ class TingxieApp extends BaseApp {
         this.cloudSync = new CloudSync();
         this.syncInProgress = false;
 
+        // Remember positions for each filter mode
+        this.savedPositions = {
+            allWords: 0,           // Position in all words mode
+            importantWords: 0,     // Position in important words only mode
+            reviewMode: 0          // Position in review mode
+        };
+
         this.init();
     }
 
@@ -225,9 +232,35 @@ class TingxieApp extends BaseApp {
     }
 
     onFilterChange() {
-        this.currentWordIndex = 0;
-        this.currentSetIndex = 0;
+        // Remember the current word before switching
+        const currentWord = this.currentWords[this.currentWordIndex];
+        const currentWordId = currentWord ? this.getWordId(currentWord) : null;
+
+        // Save current position before switching
+        this.saveCurrentPosition();
+
         this.updateWordsList();
+
+        // Try to find the same word in the new filtered list
+        let foundWord = false;
+        if (currentWordId) {
+            const newIndex = this.currentWords.findIndex(word =>
+                this.getWordId(word) === currentWordId
+            );
+
+            if (newIndex !== -1) {
+                // Word found in new list, jump to it
+                this.currentWordIndex = newIndex;
+                this.currentSetIndex = newIndex;
+                foundWord = true;
+            }
+        }
+
+        // If word not found, restore the saved position for this filter mode
+        if (!foundWord) {
+            this.restorePositionForCurrentMode();
+        }
+
         this.displayCurrentWord();
         this.updateProgress();
         this.resetRevealedItems();
@@ -270,6 +303,13 @@ class TingxieApp extends BaseApp {
     }
 
     toggleReviewMode() {
+        // Remember the current word before switching
+        const currentWord = this.currentWords[this.currentWordIndex];
+        const currentWordId = currentWord ? this.getWordId(currentWord) : null;
+
+        // Save current position before switching
+        this.saveCurrentPosition();
+
         this.reviewMode = !this.reviewMode;
         const reviewToggle = document.getElementById(ELEMENT_IDS.REVIEW_TOGGLE);
         const filterToggle = document.getElementById(ELEMENT_IDS.FILTER_TOGGLE);
@@ -288,9 +328,28 @@ class TingxieApp extends BaseApp {
             }
         }
 
-        this.currentWordIndex = 0;
-        this.currentSetIndex = 0;
         this.updateWordsList();
+
+        // Try to find the same word in the new filtered list
+        let foundWord = false;
+        if (currentWordId) {
+            const newIndex = this.currentWords.findIndex(word =>
+                this.getWordId(word) === currentWordId
+            );
+
+            if (newIndex !== -1) {
+                // Word found in new list, jump to it
+                this.currentWordIndex = newIndex;
+                this.currentSetIndex = newIndex;
+                foundWord = true;
+            }
+        }
+
+        // If word not found, restore the saved position for this mode
+        if (!foundWord) {
+            this.restorePositionForCurrentMode();
+        }
+
         this.displayCurrentWord();
         this.updateProgress();
         this.resetRevealedItems();
@@ -443,6 +502,9 @@ class TingxieApp extends BaseApp {
             this.currentSetIndex = 0;
         }
 
+        // Save position whenever we navigate
+        this.saveCurrentPosition();
+
         this.displayCurrentWord();
         this.updateProgress();
         this.preloadAudioForCurrentWords();
@@ -456,6 +518,9 @@ class TingxieApp extends BaseApp {
             this.currentWordIndex = this.currentWords.length - 1;
             this.currentSetIndex = this.currentWords.length - 1;
         }
+
+        // Save position whenever we navigate
+        this.saveCurrentPosition();
 
         this.displayCurrentWord();
         this.updateProgress();
@@ -495,6 +560,46 @@ class TingxieApp extends BaseApp {
 
     resetRevealedItems() {
         this.revealedItems.clear();
+    }
+
+    /**
+     * Save the current position for the current filter mode
+     */
+    saveCurrentPosition() {
+        const mode = this.getCurrentMode();
+        this.savedPositions[mode] = this.currentWordIndex;
+    }
+
+    /**
+     * Restore the saved position for the current filter mode
+     */
+    restorePositionForCurrentMode() {
+        const mode = this.getCurrentMode();
+        const savedIndex = this.savedPositions[mode] || 0;
+
+        // Make sure the saved index is valid for the current word list
+        if (savedIndex < this.currentWords.length) {
+            this.currentWordIndex = savedIndex;
+            this.currentSetIndex = savedIndex;
+        } else {
+            // Saved position is out of bounds, reset to start
+            this.currentWordIndex = 0;
+            this.currentSetIndex = 0;
+            this.savedPositions[mode] = 0;
+        }
+    }
+
+    /**
+     * Get the current filter mode as a string key
+     */
+    getCurrentMode() {
+        if (this.reviewMode) {
+            return 'reviewMode';
+        } else if (this.showImportantOnly) {
+            return 'importantWords';
+        } else {
+            return 'allWords';
+        }
     }
 
     destroy() {

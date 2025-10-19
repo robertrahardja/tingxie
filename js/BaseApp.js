@@ -11,16 +11,70 @@ export class BaseApp {
 
     async loadData() {
         try {
-            const response = await fetch(CONSTANTS.DATA_PATH);
+            // Try to load from localStorage cache first
+            const cachedData = localStorage.getItem('vocabulary_cache');
+            const cacheTimestamp = localStorage.getItem('vocabulary_cache_timestamp');
+            const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
+
+            // Use cache if it's fresh
+            if (cachedData && cacheTimestamp) {
+                const age = Date.now() - parseInt(cacheTimestamp);
+                if (age < CACHE_DURATION) {
+                    console.log('Using cached vocabulary data');
+                    this.data = JSON.parse(cachedData);
+                    // Fetch new data in background to update cache
+                    this.refreshCacheInBackground();
+                    return true;
+                }
+            }
+
+            // Fetch from API
+            const response = await fetch('/api/vocabulary');
             if (!response.ok) {
+                // If API fails and we have cache, use it
+                if (cachedData) {
+                    console.log('API failed, using stale cache');
+                    this.data = JSON.parse(cachedData);
+                    return true;
+                }
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
+
             this.data = await response.json();
+
+            // Update cache
+            localStorage.setItem('vocabulary_cache', JSON.stringify(this.data));
+            localStorage.setItem('vocabulary_cache_timestamp', Date.now().toString());
+
             return true;
         } catch (error) {
             console.error(CONSTANTS.ERRORS.DATA_LOAD, error);
+
+            // Final fallback: try cached data even if stale
+            const cachedData = localStorage.getItem('vocabulary_cache');
+            if (cachedData) {
+                console.log('Using stale cache as fallback');
+                this.data = JSON.parse(cachedData);
+                return true;
+            }
+
             this.handleDataLoadError(error);
             return false;
+        }
+    }
+
+    async refreshCacheInBackground() {
+        try {
+            const response = await fetch('/api/vocabulary');
+            if (response.ok) {
+                const newData = await response.json();
+                localStorage.setItem('vocabulary_cache', JSON.stringify(newData));
+                localStorage.setItem('vocabulary_cache_timestamp', Date.now().toString());
+                console.log('Cache refreshed in background');
+            }
+        } catch (error) {
+            // Silent fail - we're already using cache
+            console.log('Background cache refresh failed');
         }
     }
 
@@ -71,10 +125,12 @@ export class BaseApp {
         if (!filterBtn) return;
 
         if (this.showImportantOnly) {
-            filterBtn.textContent = CONSTANTS.UI_LABELS.IMPORTANT_WORDS;
+            // Currently showing important words only, button should say "全部词语" (click to see all)
+            filterBtn.textContent = CONSTANTS.UI_LABELS.ALL_WORDS;
             filterBtn.classList.add(CSS_CLASSES.ACTIVE);
         } else {
-            filterBtn.textContent = CONSTANTS.UI_LABELS.ALL_WORDS;
+            // Currently showing all words, button should say "重要词语" (click to see important)
+            filterBtn.textContent = CONSTANTS.UI_LABELS.IMPORTANT_WORDS;
             filterBtn.classList.remove(CSS_CLASSES.ACTIVE);
         }
 
