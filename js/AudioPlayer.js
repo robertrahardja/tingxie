@@ -22,9 +22,10 @@ export class AudioPlayer {
 
             if (!audio) {
                 audio = new Audio();
-                audio.src = audioPath;
+                // Convert relative path to absolute if needed
+                const absolutePath = audioPath.startsWith('http') ? audioPath : (audioPath.startsWith('/') ? audioPath : '/' + audioPath);
+                audio.src = absolutePath;
                 audio.crossOrigin = 'anonymous';
-                audio.type = 'audio/mpeg';
                 // Cache the audio object for better performance
                 this.audioCache.set(audioPath, audio);
             }
@@ -54,9 +55,10 @@ export class AudioPlayer {
         audioPaths.forEach(path => {
             if (path && !this.audioCache.has(path)) {
                 const audio = new Audio();
-                audio.src = path;
+                // Convert relative path to absolute if needed
+                const absolutePath = path.startsWith('http') ? path : (path.startsWith('/') ? path : '/' + path);
+                audio.src = absolutePath;
                 audio.crossOrigin = 'anonymous';
-                audio.type = 'audio/mpeg';
                 audio.preload = 'auto';
                 this.audioCache.set(path, audio);
             }
