@@ -8,6 +8,9 @@ class LatestApp extends BaseApp {
         super();
         this.cloudSync = new CloudSync();
         this.filteredWords = [];
+        this.currentIndex = 0;
+        this.knownWords = new Set();
+        this.unknownWords = new Set();
     }
 
     async init() {
@@ -45,13 +48,18 @@ class LatestApp extends BaseApp {
 
     async loadProgress(studentId) {
         try {
-            const progress = await this.cloudSync.loadProgress(studentId);
+            const progress = await this.cloudSync.fetchProgress();
             if (progress) {
-                this.knownWords = new Set(progress.knownWords || []);
-                this.unknownWords = new Set(progress.unknownWords || []);
+                this.knownWords = progress.knownWords || new Set();
+                this.unknownWords = progress.unknownWords || new Set();
+            } else {
+                this.knownWords = new Set();
+                this.unknownWords = new Set();
             }
         } catch (error) {
             console.log('Could not load progress from cloud:', error.message);
+            this.knownWords = new Set();
+            this.unknownWords = new Set();
         }
     }
 
@@ -217,8 +225,7 @@ class LatestApp extends BaseApp {
 
     async saveProgress() {
         try {
-            const studentId = this.cloudSync.getOrCreateStudentId();
-            await this.cloudSync.saveProgress(studentId, Array.from(this.knownWords), Array.from(this.unknownWords));
+            await this.cloudSync.saveProgress(Array.from(this.knownWords), Array.from(this.unknownWords));
         } catch (error) {
             console.error('Error saving progress:', error);
         }
