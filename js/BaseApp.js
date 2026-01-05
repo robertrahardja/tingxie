@@ -33,11 +33,18 @@ export class BaseApp {
             }
 
             // Fetch from API
-            const response = await fetch('/api/vocabulary');
+            let response = await fetch('/api/vocabulary');
+
+            // Fallback for local development: try loading the file directly
             if (!response.ok) {
-                // If API fails and we have cache, use it
+                console.log('API endpoint not available, trying direct file load');
+                response = await fetch('/data/tingxie/tingxie_vocabulary.json');
+            }
+
+            if (!response.ok) {
+                // If both fail and we have cache, use it
                 if (cachedData) {
-                    console.log('API failed, using stale cache');
+                    console.log('All sources failed, using stale cache');
                     this.data = JSON.parse(cachedData);
                     return true;
                 }

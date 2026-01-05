@@ -35,6 +35,15 @@ export class CloudSync {
             );
 
             if (!response.ok) {
+                // For local development without API endpoints, return empty progress
+                if (response.status === 404) {
+                    console.log('Cloud API not available (local development mode)');
+                    return {
+                        knownWords: new Set(),
+                        unknownWords: new Set(),
+                        lastUpdated: null
+                    };
+                }
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
@@ -45,8 +54,13 @@ export class CloudSync {
                 lastUpdated: data.lastUpdated
             };
         } catch (error) {
-            console.error('Failed to fetch progress from cloud:', error);
-            return null;
+            console.log('Cloud sync not available - using local mode only');
+            // Return empty progress to allow local-only operation
+            return {
+                knownWords: new Set(),
+                unknownWords: new Set(),
+                lastUpdated: null
+            };
         }
     }
 
@@ -68,6 +82,12 @@ export class CloudSync {
                         unknownWords: Array.from(new Set(unknownWords))
                     })
                 });
+
+                // For local development without API endpoints, silently succeed
+                if (response.status === 404) {
+                    console.log('Cloud API not available (local development mode) - progress not saved to cloud');
+                    return true; // Return true to not show error to user
+                }
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);

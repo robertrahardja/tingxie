@@ -55,7 +55,7 @@ export default {
           cacheControl = 'public, max-age=300'; // 5 minutes
         } else if (pathname.endsWith('.html')) {
           cacheControl = 'no-cache, must-revalidate'; // Always revalidate
-        } else if (/\.(mp3|png|jpg|jpeg|gif|svg|woff|woff2|ttf)$/i.test(pathname)) {
+        } else if (/\.(mp3|wav|aiff|aif|png|jpg|jpeg|gif|svg|woff|woff2|ttf)$/i.test(pathname)) {
           cacheControl = 'public, max-age=86400'; // 24 hours
         }
 
@@ -72,7 +72,7 @@ export default {
 
       // For SPA routing, fallback to index.html ONLY for HTML routes
       // Don't fallback for JS, CSS, JSON, or other assets
-      const isAssetPath = /\.(js|css|json|mp3|png|jpg|jpeg|gif|svg|woff|woff2|ttf)$/i.test(pathname);
+      const isAssetPath = /\.(js|css|json|mp3|wav|aiff|aif|png|jpg|jpeg|gif|svg|woff|woff2|ttf)$/i.test(pathname);
 
       if (!isAssetPath) {
         const fallback = await env.ASSETS.get('index.html');
@@ -243,6 +243,9 @@ function getContentType(pathname) {
     js: 'application/javascript',
     json: 'application/json',
     mp3: 'audio/mpeg',
+    wav: 'audio/wav',
+    aiff: 'audio/aiff',
+    aif: 'audio/aiff',
     png: 'image/png',
     jpg: 'image/jpeg',
     jpeg: 'image/jpeg',

@@ -33,17 +33,53 @@ export class AudioPlayer {
                 }
 
                 // Create audio blob from response
+                // Handle both WAV and MP3 formats
                 const blob = await response.blob();
+
+                // Determine the correct MIME type by inspecting file bytes
+                let mimeType = 'audio/mpeg'; // default to MP3
+                const arrayBuffer = await blob.slice(0, 12).arrayBuffer();
+                const view = new Uint8Array(arrayBuffer);
+
+                // Log the first few bytes for debugging
+                const hexBytes = Array.from(view.slice(0, 4)).map(b => '0x' + b.toString(16).toUpperCase()).join(' ');
+                console.log('First 4 bytes:', hexBytes);
+
+                // Check for RIFF header (WAV files start with 0x52, 0x49, 0x46, 0x46 = "RIFF")
+                if (view[0] === 0x52 && view[1] === 0x49 && view[2] === 0x46 && view[3] === 0x46) {
+                    mimeType = 'audio/wav';
+                    console.log('Detected WAV format');
+                }
+                // Check for FORM header (AIFF files start with 0x46, 0x4F, 0x52, 0x4D = "FORM")
+                else if (view[0] === 0x46 && view[1] === 0x4F && view[2] === 0x52 && view[3] === 0x4D) {
+                    // Try audio/aiff first, then audio/x-aiff as fallback
+                    // Most browsers don't support AIFF - we may need to convert these files
+                    mimeType = 'audio/x-aiff';
+                    console.log('Detected AIFF format - note: browsers may not support AIFF natively');
+                } else {
+                    console.log('Not WAV/AIFF, using audio/mpeg');
+                }
+
+                // Create audio element with proper MIME type
+                audio = new Audio();
+                audio.crossOrigin = 'anonymous';
                 const blobUrl = URL.createObjectURL(blob);
 
-                audio = new Audio();
-                audio.src = blobUrl;
-                audio.crossOrigin = 'anonymous';
+                // Use source element with proper MIME type
+                const source = document.createElement('source');
+                source.src = blobUrl;
+                source.type = mimeType;
+                audio.appendChild(source);
+
+                // Add error handler to audio element
+                audio.addEventListener('error', (e) => {
+                    console.error('Audio element error:', e.target.error?.code, 'Type:', mimeType);
+                });
 
                 // Cache the audio object for better performance
                 this.audioCache.set(audioPath, audio);
 
-                console.log('Audio loaded successfully:', absolutePath);
+                console.log('Audio loaded successfully:', absolutePath, 'Format:', mimeType);
             }
 
             this.currentAudio = audio;
