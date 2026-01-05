@@ -7,9 +7,14 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // Handle API progress routes
-    if (url.pathname.startsWith('/api/progress')) {
-      return await handleProgress(request, env);
+    // Handle API routes
+    if (url.pathname.startsWith('/api/')) {
+      if (url.pathname === '/api/vocabulary') {
+        return await handleVocabularyRequest(env);
+      }
+      if (url.pathname.startsWith('/api/progress')) {
+        return await handleProgress(request, env);
+      }
     }
 
     // Serve static assets using the ASSETS binding
@@ -49,6 +54,34 @@ export default {
     }
   },
 };
+
+/**
+ * Handle /api/vocabulary request
+ */
+async function handleVocabularyRequest(env) {
+  try {
+    const response = await env.ASSETS.fetch(
+      new Request(new URL('https://assets.example.com/data/tingxie/tingxie_vocabulary.json'))
+    );
+
+    if (response.status === 200) {
+      return new Response(response.body, {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    return new Response(JSON.stringify({ error: 'Vocabulary data not found' }), {
+      status: 404,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+}
 
 /**
  * Handle /api/progress requests
