@@ -21,7 +21,10 @@ export class AudioPlayer {
             let audio = this.audioCache.get(audioPath);
 
             if (!audio) {
-                audio = new Audio(audioPath);
+                audio = new Audio();
+                audio.src = audioPath;
+                audio.crossOrigin = 'anonymous';
+                audio.type = 'audio/mpeg';
                 // Cache the audio object for better performance
                 this.audioCache.set(audioPath, audio);
             }
@@ -50,7 +53,10 @@ export class AudioPlayer {
 
         audioPaths.forEach(path => {
             if (path && !this.audioCache.has(path)) {
-                const audio = new Audio(path);
+                const audio = new Audio();
+                audio.src = path;
+                audio.crossOrigin = 'anonymous';
+                audio.type = 'audio/mpeg';
                 audio.preload = 'auto';
                 this.audioCache.set(path, audio);
             }

@@ -64,6 +64,8 @@ export default {
           headers: {
             'Content-Type': contentType,
             'Cache-Control': cacheControl,
+            'Access-Control-Allow-Origin': '*',
+            'Cross-Origin-Resource-Policy': 'cross-origin',
           },
         });
       }
