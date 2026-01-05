@@ -9,6 +9,7 @@ class TingxieApp extends BaseApp {
         this.currentWordIndex = 0;
         this.currentSetIndex = 0;
         this.currentWords = [];
+        this.currentWord = null;  // Store current word for reveal handlers
         this.revealedItems = new Set();
         this.audioPlayer = getAudioPlayer();
         this.wordLabels = this.createWordLabelsMap();
@@ -378,6 +379,7 @@ class TingxieApp extends BaseApp {
         if (this.currentWords.length === 0) return;
 
         const word = this.currentWords[this.currentWordIndex];
+        this.currentWord = word;  // Store for reveal handlers
 
         // Reset to covered state with placeholder text
         // Content will be updated when user clicks to reveal
@@ -418,14 +420,12 @@ class TingxieApp extends BaseApp {
     }
 
     revealItem(type) {
-        if (this.currentWords.length === 0) return;
-
-        const word = this.currentWords[this.currentWordIndex];
+        if (!this.currentWord) return;
 
         if (type === 'audio') {
-            this.handleAudioReveal(word);
+            this.handleAudioReveal(this.currentWord);
         } else {
-            this.handleTextReveal(type, word);
+            this.handleTextReveal(type, this.currentWord);
         }
     }
 
