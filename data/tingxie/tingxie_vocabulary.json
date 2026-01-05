@@ -3307,6 +3307,107 @@
           "important": false
         }
       ]
+    },
+    {
+      "row": 4,
+      "words": [
+        {
+          "simplified": "成为军人",
+          "traditional": "成為軍人",
+          "pinyin": "chéng wéi jūn rén",
+          "english": "to become a soldier",
+          "audio": "audio/成为军人.mp3",
+          "important": true
+        },
+        {
+          "simplified": "努力",
+          "traditional": "努力",
+          "pinyin": "nǔ lì",
+          "english": "to make effort",
+          "audio": "audio/努力.mp3",
+          "important": true
+        },
+        {
+          "simplified": "练习",
+          "traditional": "練習",
+          "pinyin": "liàn xí",
+          "english": "to practice",
+          "audio": "audio/练习.mp3",
+          "important": true
+        },
+        {
+          "simplified": "交功课",
+          "traditional": "交功課",
+          "pinyin": "jiāo gōng kè",
+          "english": "to submit homework",
+          "audio": "audio/交功课.mp3",
+          "important": true
+        },
+        {
+          "simplified": "希望",
+          "traditional": "希望",
+          "pinyin": "xī wàng",
+          "english": "to hope/hope",
+          "audio": "audio/希望.mp3",
+          "important": true
+        },
+        {
+          "simplified": "举手",
+          "traditional": "舉手",
+          "pinyin": "jǔ shǒu",
+          "english": "to raise one's hand",
+          "audio": "audio/举手.mp3",
+          "important": true
+        },
+        {
+          "simplified": "读一遍",
+          "traditional": "讀一遍",
+          "pinyin": "dú yī biàn",
+          "english": "to read once",
+          "audio": "audio/读一遍.mp3",
+          "important": true
+        },
+        {
+          "simplified": "将来",
+          "traditional": "將來",
+          "pinyin": "jiāng lái",
+          "english": "future/in the future",
+          "audio": "audio/将来.mp3",
+          "important": true
+        },
+        {
+          "simplified": "司机",
+          "traditional": "司機",
+          "pinyin": "sī jī",
+          "english": "driver",
+          "audio": "audio/司机.mp3",
+          "important": true
+        },
+        {
+          "simplified": "你追我赶",
+          "traditional": "你追我趕",
+          "pinyin": "nǐ zhuī wǒ gǎn",
+          "english": "to chase each other competitively",
+          "audio": "audio/你追我赶.mp3",
+          "important": true
+        },
+        {
+          "simplified": "复习",
+          "traditional": "複習",
+          "pinyin": "fù xí",
+          "english": "to review",
+          "audio": "audio/复习.mp3",
+          "important": true
+        },
+        {
+          "simplified": "实现愿望",
+          "traditional": "實現願望",
+          "pinyin": "shí xiàn yuàn wàng",
+          "english": "to realize a wish/dream",
+          "audio": "audio/实现愿望.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }

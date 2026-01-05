@@ -1,13 +1,12 @@
-name = "tingxie-api"
+name = "tingxie"
 main = "src/index.js"
 compatibility_date = "2025-01-05"
 
-# Static assets
-[assets]
-directory = "."
+# R2 bucket for static assets
+[[r2_buckets]]
 binding = "ASSETS"
-not_found_handling = "single-page-application"
-run_worker_first = true
+bucket_name = "tingxie-assets"
+preview_bucket_name = "tingxie-assets-preview"
 
 # KV Namespace binding for student progress
 [[kv_namespaces]]

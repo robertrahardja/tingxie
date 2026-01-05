@@ -17,7 +17,7 @@ export default {
       }
     }
 
-    // Serve static assets using the ASSETS binding
+    // Serve static assets from R2
     try {
       let pathname = url.pathname;
 
@@ -26,29 +26,47 @@ export default {
         pathname = pathname.slice(1);
       }
 
+      // Decode URL-encoded characters
+      pathname = decodeURIComponent(pathname);
+
       // Handle root path
       if (pathname === '' || pathname === '/') {
         pathname = 'index.html';
       }
 
-      // Try to get the requested asset
-      const response = await env.ASSETS.fetch(new Request(new URL(`https://assets.example.com/${pathname}`)));
+      // Try to get the requested asset from R2
+      const object = await env.ASSETS.get(pathname);
 
-      if (response.status === 200) {
-        return new Response(response.body, {
-          status: response.status,
-          headers: response.headers,
+      if (object !== null) {
+        // Determine content type
+        const contentType = getContentType(pathname);
+        return new Response(object.body, {
+          status: 200,
+          headers: {
+            'Content-Type': contentType,
+            'Cache-Control': 'public, max-age=3600',
+          },
         });
       }
 
-      // For SPA routing, fallback to index.html
-      const fallbackResponse = await env.ASSETS.fetch(
-        new Request(new URL('https://assets.example.com/index.html'))
-      );
-      return new Response(fallbackResponse.body, {
-        status: 200,
-        headers: fallbackResponse.headers,
-      });
+      // For SPA routing, fallback to index.html ONLY for HTML routes
+      // Don't fallback for JS, CSS, JSON, or other assets
+      const isAssetPath = /\.(js|css|json|mp3|png|jpg|jpeg|gif|svg|woff|woff2|ttf)$/i.test(pathname);
+
+      if (!isAssetPath) {
+        const fallback = await env.ASSETS.get('index.html');
+        if (fallback !== null) {
+          return new Response(fallback.body, {
+            status: 200,
+            headers: {
+              'Content-Type': 'text/html',
+              'Cache-Control': 'public, max-age=3600',
+            },
+          });
+        }
+      }
+
+      return new Response('Not found', { status: 404 });
     } catch (e) {
       return new Response('Error serving asset: ' + e.message, { status: 500 });
     }
@@ -60,12 +78,10 @@ export default {
  */
 async function handleVocabularyRequest(env) {
   try {
-    const response = await env.ASSETS.fetch(
-      new Request(new URL('https://assets.example.com/data/tingxie/tingxie_vocabulary.json'))
-    );
+    const object = await env.ASSETS.get('data/tingxie/tingxie_vocabulary.json');
 
-    if (response.status === 200) {
-      return new Response(response.body, {
+    if (object !== null) {
+      return new Response(object.body, {
         status: 200,
         headers: { 'Content-Type': 'application/json' },
       });
