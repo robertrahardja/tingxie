@@ -188,7 +188,7 @@ class LatestApp extends BaseApp {
     async playAudio(word) {
         try {
             const audioPlayer = getAudioPlayer();
-            await audioPlayer.play(word.simplified);
+            await audioPlayer.play(word.audio);
             const audioBtn = document.querySelector(`#${ELEMENT_IDS.AUDIO} .audio-btn`);
             if (audioBtn) {
                 audioBtn.classList.remove(CSS_CLASSES.COVERED);
