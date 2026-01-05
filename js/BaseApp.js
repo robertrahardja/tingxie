@@ -12,8 +12,12 @@ export class BaseApp {
     async loadData() {
         try {
             // Try to load from localStorage cache first
-            const cachedData = localStorage.getItem('vocabulary_cache');
-            const cacheTimestamp = localStorage.getItem('vocabulary_cache_timestamp');
+            const CACHE_VERSION = 'v2'; // Increment this to bust cache
+            const cacheKey = `vocabulary_cache_${CACHE_VERSION}`;
+            const cacheTimestampKey = `vocabulary_cache_timestamp_${CACHE_VERSION}`;
+
+            const cachedData = localStorage.getItem(cacheKey);
+            const cacheTimestamp = localStorage.getItem(cacheTimestampKey);
             const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
 
             // Use cache if it's fresh
@@ -42,16 +46,24 @@ export class BaseApp {
 
             this.data = await response.json();
 
-            // Update cache
-            localStorage.setItem('vocabulary_cache', JSON.stringify(this.data));
-            localStorage.setItem('vocabulary_cache_timestamp', Date.now().toString());
+            // Update cache with versioned keys
+            localStorage.setItem(cacheKey, JSON.stringify(this.data));
+            localStorage.setItem(cacheTimestampKey, Date.now().toString());
 
             return true;
         } catch (error) {
             console.error(CONSTANTS.ERRORS.DATA_LOAD, error);
 
-            // Final fallback: try cached data even if stale
-            const cachedData = localStorage.getItem('vocabulary_cache');
+            // Final fallback: try cached data even if stale (check both versioned and old keys)
+            const CACHE_VERSION = 'v2';
+            const cacheKey = `vocabulary_cache_${CACHE_VERSION}`;
+            let cachedData = localStorage.getItem(cacheKey);
+
+            // Also check old cache key as fallback
+            if (!cachedData) {
+                cachedData = localStorage.getItem('vocabulary_cache');
+            }
+
             if (cachedData) {
                 console.log('Using stale cache as fallback');
                 this.data = JSON.parse(cachedData);
@@ -65,11 +77,15 @@ export class BaseApp {
 
     async refreshCacheInBackground() {
         try {
+            const CACHE_VERSION = 'v2';
+            const cacheKey = `vocabulary_cache_${CACHE_VERSION}`;
+            const cacheTimestampKey = `vocabulary_cache_timestamp_${CACHE_VERSION}`;
+
             const response = await fetch('/api/vocabulary');
             if (response.ok) {
                 const newData = await response.json();
-                localStorage.setItem('vocabulary_cache', JSON.stringify(newData));
-                localStorage.setItem('vocabulary_cache_timestamp', Date.now().toString());
+                localStorage.setItem(cacheKey, JSON.stringify(newData));
+                localStorage.setItem(cacheTimestampKey, Date.now().toString());
                 console.log('Cache refreshed in background');
             }
         } catch (error) {
