@@ -180,10 +180,10 @@ class ReviewApp extends BaseApp {
                 if (elem) {
                     const content = elem.querySelector('.content');
                     if (content) {
-                        content.textContent = value;
                         content.addEventListener('click', () => {
+                            content.textContent = value;
                             content.classList.remove(CSS_CLASSES.COVERED);
-                        });
+                        }, { once: true });
                     }
                 }
             }
