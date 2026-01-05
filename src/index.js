@@ -17,80 +17,13 @@ export default {
       }
     }
 
-    // Serve static assets from R2
-    try {
-      let pathname = url.pathname;
-
-      // Remove leading slash
-      if (pathname.startsWith('/')) {
-        pathname = pathname.slice(1);
-      }
-
-      // Decode URL-encoded characters
-      pathname = decodeURIComponent(pathname);
-
-      // Handle root path - redirect to latest.html
-      if (pathname === '' || pathname === '/') {
-        return new Response(null, {
-          status: 302,
-          headers: {
-            'Location': '/latest.html',
-          },
-        });
-      }
-
-      // Try to get the requested asset from R2
-      const object = await env.ASSETS.get(pathname);
-
-      if (object !== null) {
-        // Determine content type
-        const contentType = getContentType(pathname);
-
-        // Set cache duration based on file type
-        // JS/CSS: short cache (5 minutes) for quick updates
-        // HTML: no cache to always get latest
-        // Media/fonts: long cache (24 hours)
-        let cacheControl = 'public, max-age=3600';
-        if (pathname.endsWith('.js') || pathname.endsWith('.css')) {
-          cacheControl = 'public, max-age=300'; // 5 minutes
-        } else if (pathname.endsWith('.html')) {
-          cacheControl = 'no-cache, must-revalidate'; // Always revalidate
-        } else if (/\.(mp3|wav|aiff|aif|png|jpg|jpeg|gif|svg|woff|woff2|ttf)$/i.test(pathname)) {
-          cacheControl = 'public, max-age=86400'; // 24 hours
-        }
-
-        return new Response(object.body, {
-          status: 200,
-          headers: {
-            'Content-Type': contentType,
-            'Cache-Control': cacheControl,
-            'Access-Control-Allow-Origin': '*',
-            'Cross-Origin-Resource-Policy': 'cross-origin',
-          },
-        });
-      }
-
-      // For SPA routing, fallback to index.html ONLY for HTML routes
-      // Don't fallback for JS, CSS, JSON, or other assets
-      const isAssetPath = /\.(js|css|json|mp3|wav|aiff|aif|png|jpg|jpeg|gif|svg|woff|woff2|ttf)$/i.test(pathname);
-
-      if (!isAssetPath) {
-        const fallback = await env.ASSETS.get('index.html');
-        if (fallback !== null) {
-          return new Response(fallback.body, {
-            status: 200,
-            headers: {
-              'Content-Type': 'text/html',
-              'Cache-Control': 'public, max-age=3600',
-            },
-          });
-        }
-      }
-
-      return new Response('Not found', { status: 404 });
-    } catch (e) {
-      return new Response('Error serving asset: ' + e.message, { status: 500 });
+    // Handle root path - redirect to latest.html
+    if (url.pathname === '' || url.pathname === '/') {
+      return Response.redirect(new URL('/latest.html', url.origin), 302);
     }
+
+    // Serve static assets from Worker assets binding
+    return await env.ASSETS.fetch(request);
   },
 };
 
@@ -99,10 +32,12 @@ export default {
  */
 async function handleVocabularyRequest(env) {
   try {
-    const object = await env.ASSETS.get('data/tingxie/tingxie_vocabulary.json');
+    // Fetch the vocabulary JSON file using the assets binding
+    const assetRequest = new Request('https://dummy.com/data/tingxie/tingxie_vocabulary.json');
+    const response = await env.ASSETS.fetch(assetRequest);
 
-    if (object !== null) {
-      return new Response(object.body, {
+    if (response.ok) {
+      return new Response(response.body, {
         status: 200,
         headers: { 'Content-Type': 'application/json' },
       });
@@ -232,25 +167,3 @@ async function handleSaveProgress(request, env, corsHeaders) {
   }
 }
 
-/**
- * Get content type based on file extension
- */
-function getContentType(pathname) {
-  const ext = pathname.split('.').pop();
-  const types = {
-    html: 'text/html',
-    css: 'text/css',
-    js: 'application/javascript',
-    json: 'application/json',
-    mp3: 'audio/mpeg',
-    wav: 'audio/wav',
-    aiff: 'audio/aiff',
-    aif: 'audio/aiff',
-    png: 'image/png',
-    jpg: 'image/jpeg',
-    jpeg: 'image/jpeg',
-    gif: 'image/gif',
-    svg: 'image/svg+xml',
-  };
-  return types[ext] || 'application/octet-stream';
-}
