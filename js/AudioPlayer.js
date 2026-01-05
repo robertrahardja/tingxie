@@ -17,17 +17,33 @@ export class AudioPlayer {
             // Stop any currently playing audio
             this.stop();
 
+            // Convert relative path to absolute if needed
+            const absolutePath = audioPath.startsWith('http') ? audioPath : (audioPath.startsWith('/') ? audioPath : '/' + audioPath);
+
+            console.log('Attempting to play audio:', absolutePath);
+
             // Check cache first
             let audio = this.audioCache.get(audioPath);
 
             if (!audio) {
+                // Fetch audio first to verify it loads
+                const response = await fetch(absolutePath);
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch audio: ${response.status} ${response.statusText}`);
+                }
+
+                // Create audio blob from response
+                const blob = await response.blob();
+                const blobUrl = URL.createObjectURL(blob);
+
                 audio = new Audio();
-                // Convert relative path to absolute if needed
-                const absolutePath = audioPath.startsWith('http') ? audioPath : (audioPath.startsWith('/') ? audioPath : '/' + audioPath);
-                audio.src = absolutePath;
+                audio.src = blobUrl;
                 audio.crossOrigin = 'anonymous';
+
                 // Cache the audio object for better performance
                 this.audioCache.set(audioPath, audio);
+
+                console.log('Audio loaded successfully:', absolutePath);
             }
 
             this.currentAudio = audio;
@@ -35,6 +51,7 @@ export class AudioPlayer {
             return true;
         } catch (error) {
             console.warn(CONSTANTS.ERRORS.AUDIO_PLAYBACK, error);
+            console.log('Failed audio path was:', audioPath);
             return false;
         }
     }
