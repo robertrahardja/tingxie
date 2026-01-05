@@ -29,9 +29,14 @@ export default {
       // Decode URL-encoded characters
       pathname = decodeURIComponent(pathname);
 
-      // Handle root path
+      // Handle root path - redirect to review.html
       if (pathname === '' || pathname === '/') {
-        pathname = 'index.html';
+        return new Response(null, {
+          status: 302,
+          headers: {
+            'Location': '/review.html',
+          },
+        });
       }
 
       // Try to get the requested asset from R2
