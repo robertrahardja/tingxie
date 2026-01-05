@@ -40,11 +40,25 @@ export default {
       if (object !== null) {
         // Determine content type
         const contentType = getContentType(pathname);
+
+        // Set cache duration based on file type
+        // JS/CSS: short cache (5 minutes) for quick updates
+        // HTML: no cache to always get latest
+        // Media/fonts: long cache (24 hours)
+        let cacheControl = 'public, max-age=3600';
+        if (pathname.endsWith('.js') || pathname.endsWith('.css')) {
+          cacheControl = 'public, max-age=300'; // 5 minutes
+        } else if (pathname.endsWith('.html')) {
+          cacheControl = 'no-cache, must-revalidate'; // Always revalidate
+        } else if (/\.(mp3|png|jpg|jpeg|gif|svg|woff|woff2|ttf)$/i.test(pathname)) {
+          cacheControl = 'public, max-age=86400'; // 24 hours
+        }
+
         return new Response(object.body, {
           status: 200,
           headers: {
             'Content-Type': contentType,
-            'Cache-Control': 'public, max-age=3600',
+            'Cache-Control': cacheControl,
           },
         });
       }
