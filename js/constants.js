@@ -10,7 +10,7 @@ export const CONSTANTS = {
 
     // UI Text labels
     UI_LABELS: {
-        SIMPLIFIED: '简单',
+        SIMPLIFIED: '简体',
         TRADITIONAL: '繁体',
         PINYIN: '拼音',
         ENGLISH: 'English',
