@@ -151,43 +151,53 @@ class ReviewApp extends BaseApp {
 
         const word = this.filteredWords[this.currentIndex];
 
-        // Reset covered state
-        Object.keys(ELEMENT_IDS).forEach(key => {
-            const id = ELEMENT_IDS[key];
-            const elem = document.getElementById(id);
-            if (elem && id !== ELEMENT_IDS.MENU_TOGGLE && id !== ELEMENT_IDS.NAV_MENU) {
-                const content = elem.querySelector('.content');
-                if (content) {
-                    content.classList.add(CSS_CLASSES.COVERED);
-                } else if (elem.classList) {
-                    elem.classList.add(CSS_CLASSES.COVERED);
+        // Label map for placeholder text
+        const labelMap = {
+            simplified: CONSTANTS.UI_LABELS.SIMPLIFIED,
+            traditional: CONSTANTS.UI_LABELS.TRADITIONAL,
+            pinyin: CONSTANTS.UI_LABELS.PINYIN,
+            english: CONSTANTS.UI_LABELS.ENGLISH
+        };
+
+        // Reset covered state and remove old event listeners by cloning
+        ['simplified', 'traditional', 'pinyin', 'english'].forEach(key => {
+            const elem = document.getElementById(key);
+            if (elem) {
+                const oldContent = elem.querySelector('.content');
+                if (oldContent) {
+                    const newContent = oldContent.cloneNode(false);
+                    newContent.textContent = labelMap[key];
+                    newContent.classList.add(CSS_CLASSES.COVERED);
+
+                    const value = word[key];
+                    newContent.addEventListener('click', () => {
+                        if (newContent.classList.contains(CSS_CLASSES.COVERED)) {
+                            // Reveal: show answer
+                            newContent.textContent = value;
+                            newContent.classList.remove(CSS_CLASSES.COVERED);
+                        } else {
+                            // Cover: show title
+                            newContent.textContent = labelMap[key];
+                            newContent.classList.add(CSS_CLASSES.COVERED);
+                        }
+                    });
+
+                    oldContent.replaceWith(newContent);
                 }
             }
         });
 
-        // Show audio button
+        // Reset audio button with toggle
         const audioBtn = document.querySelector(`#${ELEMENT_IDS.AUDIO} .audio-btn`);
         if (audioBtn) {
-            audioBtn.classList.add(CSS_CLASSES.COVERED);
-            audioBtn.addEventListener('click', () => this.playAudio(word), { once: true });
+            const newAudioBtn = audioBtn.cloneNode(true);
+            newAudioBtn.classList.add(CSS_CLASSES.COVERED);
+            newAudioBtn.addEventListener('click', () => {
+                this.playAudio(word);
+                newAudioBtn.classList.toggle(CSS_CLASSES.COVERED);
+            });
+            audioBtn.replaceWith(newAudioBtn);
         }
-
-        // Add click handlers for reveal
-        Object.entries(word).forEach(([key, value]) => {
-            const elemId = key === 'simplified' ? 'simplified' : key === 'traditional' ? 'traditional' : key === 'pinyin' ? 'pinyin' : key === 'english' ? 'english' : null;
-            if (elemId) {
-                const elem = document.getElementById(elemId);
-                if (elem) {
-                    const content = elem.querySelector('.content');
-                    if (content) {
-                        content.addEventListener('click', () => {
-                            content.textContent = value;
-                            content.classList.remove(CSS_CLASSES.COVERED);
-                        }, { once: true });
-                    }
-                }
-            }
-        });
 
         this.updateProgress();
     }
