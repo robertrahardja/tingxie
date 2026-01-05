@@ -1,0 +1,15 @@
+name = "tingxie-api"
+main = "src/index.js"
+compatibility_date = "2025-01-05"
+
+# Static assets
+[assets]
+directory = "."
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = true
+
+# KV Namespace binding for student progress
+[[kv_namespaces]]
+binding = "STUDENT_PROGRESS"
+id = "4bd6c52a06154d7698baf19811292707"

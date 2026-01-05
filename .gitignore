@@ -56,4 +56,3 @@ __pycache__/
 # Cloudflare
 .dev.vars
 .wrangler/
-wrangler.toml
