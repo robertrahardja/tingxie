@@ -1,0 +1,28 @@
+# Git files
+.git/
+.gitignore
+
+# Node modules
+node_modules/
+
+# Development files
+.dev.vars
+.wrangler/
+
+# Documentation
+*.md
+CLAUDE.md
+README.md
+
+# Scripts
+*.py
+*.sh
+
+# Source code (Worker code, not assets)
+src/
+
+# Config files
+wrangler.toml
+package.json
+package-lock.json
+.assetsignore
