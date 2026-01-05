@@ -29,12 +29,12 @@ export default {
       // Decode URL-encoded characters
       pathname = decodeURIComponent(pathname);
 
-      // Handle root path - redirect to review.html
+      // Handle root path - redirect to latest.html
       if (pathname === '' || pathname === '/') {
         return new Response(null, {
           status: 302,
           headers: {
-            'Location': '/review.html',
+            'Location': '/latest.html',
           },
         });
       }
