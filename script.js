@@ -379,10 +379,9 @@ class TingxieApp extends BaseApp {
 
         const word = this.currentWords[this.currentWordIndex];
 
-        // First reset to covered state with placeholder
+        // Reset to covered state with placeholder text
+        // Content will be updated when user clicks to reveal
         this.resetItemStates();
-        // Then update word content (but it stays hidden behind the placeholder)
-        this.updateWordContent(word);
         this.updateNavigationButtons();
     }
 

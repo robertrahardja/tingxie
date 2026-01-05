@@ -259,7 +259,7 @@ main {
 
 .content.covered {
     background: #f0f0f0;
-    color: transparent;
+    color: #999;
     font-size: 18px;
     border: 3px dashed #ccc;
 }
