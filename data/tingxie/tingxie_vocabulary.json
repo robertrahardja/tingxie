@@ -134,6 +134,126 @@
           "english": "to help",
           "audio": "audio/帮助.mp3",
           "important": false
+        },
+        {
+          "simplified": "姓名",
+          "traditional": "姓名",
+          "pinyin": "xìng míng",
+          "english": "name",
+          "audio": "audio/姓名.mp3",
+          "important": true
+        },
+        {
+          "simplified": "肥瘦",
+          "traditional": "肥瘦",
+          "pinyin": "féi shòu",
+          "english": "fat or thin",
+          "audio": "audio/肥瘦.mp3",
+          "important": true
+        },
+        {
+          "simplified": "意思",
+          "traditional": "意思",
+          "pinyin": "yì si",
+          "english": "meaning",
+          "audio": "audio/意思.mp3",
+          "important": true
+        },
+        {
+          "simplified": "懂事",
+          "traditional": "懂事",
+          "pinyin": "dǒng shi",
+          "english": "sensible, mature",
+          "audio": "audio/懂事.mp3",
+          "important": true
+        },
+        {
+          "simplified": "聪明",
+          "traditional": "聰明",
+          "pinyin": "cōng míng",
+          "english": "intelligent, clever",
+          "audio": "audio/聪明.mp3",
+          "important": true
+        },
+        {
+          "simplified": "头发卷卷",
+          "traditional": "頭髮卷卷",
+          "pinyin": "tóu fa juǎn juǎn",
+          "english": "curly hair",
+          "audio": "audio/头发卷卷.mp3",
+          "important": true
+        },
+        {
+          "simplified": "因为",
+          "traditional": "因為",
+          "pinyin": "yīn wèi",
+          "english": "because",
+          "audio": "audio/因为.mp3",
+          "important": true
+        },
+        {
+          "simplified": "语言",
+          "traditional": "語言",
+          "pinyin": "yǔ yán",
+          "english": "language",
+          "audio": "audio/语言.mp3",
+          "important": true
+        },
+        {
+          "simplified": "谈天",
+          "traditional": "談天",
+          "pinyin": "tán tiān",
+          "english": "to chat, to talk",
+          "audio": "audio/谈天.mp3",
+          "important": true
+        },
+        {
+          "simplified": "相信",
+          "traditional": "相信",
+          "pinyin": "xiāng xìn",
+          "english": "to believe, to trust",
+          "audio": "audio/相信.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一定",
+          "traditional": "一定",
+          "pinyin": "yī dìng",
+          "english": "definitely, certainly",
+          "audio": "audio/一定.mp3",
+          "important": true
+        },
+        {
+          "simplified": "矮小",
+          "traditional": "矮小",
+          "pinyin": "ǎi xiǎo",
+          "english": "short and small",
+          "audio": "audio/矮小.mp3",
+          "important": true
+        },
+        {
+          "simplified": "姐姐",
+          "traditional": "姐姐",
+          "pinyin": "jiě jie",
+          "english": "older sister",
+          "audio": "audio/姐姐.mp3",
+          "important": true
+        },
+        {
+          "simplified": "后退",
+          "traditional": "後退",
+          "pinyin": "hòu tuì",
+          "english": "to retreat, to step back",
+          "audio": "audio/后退.mp3",
+          "important": true
+        },
+        {
+          "simplified": "问题奇怪",
+          "traditional": "問題奇怪",
+          "pinyin": "wèn tí qí guài",
+          "english": "strange questions",
+          "audio": "audio/问题奇怪.mp3",
+          "important": true
         }
       ]
     },
