@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Instructions Glossary | 指示词汇</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4A90A4;
+            --primary-dark: #357a8c;
+            --secondary: #FF6B6B;
+            --accent: #FFE66D;
+            --bg: #F8F9FA;
+            --card-bg: #FFFFFF;
+            --text: #2D3436;
+            --text-light: #636E72;
+            --success: #00B894;
+            --error: #E17055;
+            --border-radius: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding-bottom: 100px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .nav-tabs {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 76px;
+            z-index: 99;
+        }
+
+        .nav-tab {
+            flex: 1;
+            padding: 14px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .content {
+            padding: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Glossary View */
+        .glossary-section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .term-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .term-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .term-chinese {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .audio-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: var(--primary);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        .audio-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .audio-btn:active {
+            transform: scale(0.95);
+        }
+
+        .audio-btn.playing {
+            animation: pulse 0.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .term-pinyin {
+            font-size: 0.95rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .term-english {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .term-explanation {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* Quiz View */
+        .quiz-container {
+            display: none;
+        }
+
+        .quiz-container.active {
+            display: block;
+        }
+
+        .glossary-container.active {
+            display: block;
+        }
+
+        .glossary-container {
+            display: none;
+        }
+
+        .quiz-progress {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+
+        .quiz-score {
+            background: linear-gradient(135deg, var(--success), #00a884);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .quiz-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .quiz-question-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .quiz-term {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .quiz-audio-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            background: var(--primary);
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            transition: all 0.2s;
+        }
+
+        .quiz-audio-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .quiz-audio-btn.playing {
+            animation: pulse 0.5s ease-in-out infinite;
+        }
+
+        .quiz-pinyin {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .quiz-option {
+            padding: 16px;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+        }
+
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: #f0f7fa;
+        }
+
+        .quiz-option.correct {
+            background: #d4edda;
+            border-color: var(--success);
+            color: #155724;
+        }
+
+        .quiz-option.incorrect {
+            background: #f8d7da;
+            border-color: var(--error);
+            color: #721c24;
+        }
+
+        .quiz-option.disabled {
+            pointer-events: none;
+        }
+
+        .quiz-feedback {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: none;
+        }
+
+        .quiz-feedback.correct {
+            display: block;
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .quiz-feedback.incorrect {
+            display: block;
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .quiz-next-btn {
+            margin-top: 16px;
+            padding: 14px 28px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: none;
+        }
+
+        .quiz-next-btn.visible {
+            display: inline-block;
+        }
+
+        .quiz-results {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .results-score {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .results-message {
+            font-size: 1.2rem;
+            color: var(--text);
+            margin-bottom: 24px;
+        }
+
+        .restart-btn {
+            padding: 14px 32px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Back button */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        /* Category filter */
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .category-btn {
+            padding: 8px 14px;
+            border: 2px solid var(--primary);
+            background: white;
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .category-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="lessons.html" class="back-link">← Back to Lessons</a>
+        <h1>Instructions Glossary</h1>
+        <p>指示词汇 | zhǐ shì cí huì</p>
+    </div>
+
+    <div class="nav-tabs">
+        <button class="nav-tab active" data-view="glossary">Learn</button>
+        <button class="nav-tab" data-view="quiz">Quiz</button>
+    </div>
+
+    <div class="content">
+        <!-- Glossary View -->
+        <div class="glossary-container active">
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="vocabulary">Vocabulary</button>
+                <button class="category-btn" data-category="exercises">Exercises</button>
+                <button class="category-btn" data-category="reading">Reading</button>
+                <button class="category-btn" data-category="oral">Oral</button>
+            </div>
+
+            <div id="glossary-content"></div>
+        </div>
+
+        <!-- Quiz View -->
+        <div class="quiz-container">
+            <div class="quiz-progress">
+                Question <span id="current-q">1</span> of <span id="total-q">10</span>
+                <div class="quiz-score">Score: <span id="quiz-score">0</span></div>
+            </div>
+
+            <div id="quiz-content"></div>
+        </div>
+    </div>
+
+    <script>
+        // Instruction terms data
+        const instructionTerms = [
+            // Vocabulary Section
+            {
+                category: "vocabulary",
+                chinese: "字词学习",
+                pinyin: "zì cí xué xí",
+                english: "Vocabulary Learning",
+                explanation: "The section for learning new words and phrases"
+            },
+            {
+                category: "vocabulary",
+                chinese: "序号",
+                pinyin: "xù hào",
+                english: "Serial Number",
+                explanation: "The number or order of items in a list"
+            },
+            {
+                category: "vocabulary",
+                chinese: "识写字词",
+                pinyin: "shí xiě zì cí",
+                english: "Words to Read and Write",
+                explanation: "Words that students must learn to both recognize and write"
+            },
+            {
+                category: "vocabulary",
+                chinese: "识读字词",
+                pinyin: "shí dú zì cí",
+                english: "Words to Read",
+                explanation: "Words that students only need to recognize and read, not write"
+            },
+            {
+                category: "vocabulary",
+                chinese: "解释",
+                pinyin: "jiě shì",
+                english: "Definition / Explanation",
+                explanation: "The meaning or definition of a word"
+            },
+            {
+                category: "vocabulary",
+                chinese: "构词",
+                pinyin: "gòu cí",
+                english: "Word Formation",
+                explanation: "How words are formed or combined with other characters"
+            },
+            {
+                category: "vocabulary",
+                chinese: "搭配",
+                pinyin: "dā pèi",
+                english: "Word Combinations",
+                explanation: "Words that commonly go together"
+            },
+            {
+                category: "vocabulary",
+                chinese: "例句",
+                pinyin: "lì jù",
+                english: "Example Sentence",
+                explanation: "A sentence showing how to use the word"
+            },
+            {
+                category: "vocabulary",
+                chinese: "读一读",
+                pinyin: "dú yī dú",
+                english: "Read It",
+                explanation: "Instruction to read the following content aloud"
+            },
+            {
+                category: "vocabulary",
+                chinese: "词语搭配",
+                pinyin: "cí yǔ dā pèi",
+                english: "Word Collocations",
+                explanation: "Common word pairings and phrases"
+            },
+            {
+                category: "vocabulary",
+                chinese: "听写词语",
+                pinyin: "tīng xiě cí yǔ",
+                english: "Dictation Words",
+                explanation: "Words for spelling practice - listen and write"
+            },
+
+            // Exercises Section
+            {
+                category: "exercises",
+                chinese: "语文应用",
+                pinyin: "yǔ wén yìng yòng",
+                english: "Chinese Application",
+                explanation: "Exercises to apply Chinese language skills"
+            },
+            {
+                category: "exercises",
+                chinese: "从所提供的选项中选出正确的答案",
+                pinyin: "cóng suǒ tí gōng de xuǎn xiàng zhōng xuǎn chū zhèng què de dá àn",
+                english: "Choose the correct answer from the options provided",
+                explanation: "Multiple choice question instruction"
+            },
+            {
+                category: "exercises",
+                chinese: "本页得分",
+                pinyin: "běn yè dé fēn",
+                english: "Score for this page",
+                explanation: "The marks earned on this page"
+            },
+            {
+                category: "exercises",
+                chinese: "选出适当的词语",
+                pinyin: "xuǎn chū shì dàng de cí yǔ",
+                english: "Select the appropriate word",
+                explanation: "Choose the right word to fill in the blank"
+            },
+            {
+                category: "exercises",
+                chinese: "把代表它的数字填写在括号里",
+                pinyin: "bǎ dài biǎo tā de shù zì tián xiě zài kuò hào lǐ",
+                english: "Write the number representing it in the brackets",
+                explanation: "Write your answer number inside the parentheses"
+            },
+            {
+                category: "exercises",
+                chinese: "改写句子",
+                pinyin: "gǎi xiě jù zi",
+                english: "Rewrite Sentences",
+                explanation: "Change or rewrite the sentence in a different way"
+            },
+            {
+                category: "exercises",
+                chinese: "把两个句子合并成一个完整的句子",
+                pinyin: "bǎ liǎng gè jù zi hé bìng chéng yī gè wán zhěng de jù zi",
+                english: "Combine two sentences into one complete sentence",
+                explanation: "Join two sentences together into one"
+            },
+            {
+                category: "exercises",
+                chinese: "加上适当的标点符号",
+                pinyin: "jiā shàng shì dàng de biāo diǎn fú hào",
+                english: "Add appropriate punctuation",
+                explanation: "Put in the correct punctuation marks"
+            },
+            {
+                category: "exercises",
+                chinese: "组句成段",
+                pinyin: "zǔ jù chéng duàn",
+                english: "Arrange sentences into paragraph",
+                explanation: "Put sentences in order to form a paragraph"
+            },
+            {
+                category: "exercises",
+                chinese: "按正确的顺序将句子排列出来",
+                pinyin: "àn zhèng què de shùn xù jiāng jù zi pái liè chū lái",
+                english: "Arrange sentences in the correct order",
+                explanation: "Put the sentences in the right sequence"
+            },
+            {
+                category: "exercises",
+                chinese: "在括号里写上序号",
+                pinyin: "zài kuò hào lǐ xiě shàng xù hào",
+                english: "Write the serial number in the brackets",
+                explanation: "Number the items in order in the parentheses"
+            },
+
+            // Reading Section
+            {
+                category: "reading",
+                chinese: "阅读计划",
+                pinyin: "yuè dú jì huà",
+                english: "Reading Plan",
+                explanation: "A schedule or plan for reading activities"
+            },
+            {
+                category: "reading",
+                chinese: "阅读作品",
+                pinyin: "yuè dú zuò pǐn",
+                english: "Reading Material",
+                explanation: "The book or text being read"
+            },
+            {
+                category: "reading",
+                chinese: "阅读时间",
+                pinyin: "yuè dú shí jiān",
+                english: "Reading Time",
+                explanation: "How long spent reading"
+            },
+            {
+                category: "reading",
+                chinese: "分钟",
+                pinyin: "fēn zhōng",
+                english: "Minutes",
+                explanation: "Unit of time measurement"
+            },
+            {
+                category: "reading",
+                chinese: "考查情况",
+                pinyin: "kǎo chá qíng kuàng",
+                english: "Assessment Status",
+                explanation: "How well the student performed"
+            },
+            {
+                category: "reading",
+                chinese: "考查标准",
+                pinyin: "kǎo chá biāo zhǔn",
+                english: "Assessment Criteria",
+                explanation: "The standards used to evaluate performance"
+            },
+            {
+                category: "reading",
+                chinese: "请家长在以上的时间栏里签名",
+                pinyin: "qǐng jiā zhǎng zài yǐ shàng de shí jiān lán lǐ qiān míng",
+                english: "Please have parents sign in the time column above",
+                explanation: "Parent signature required for verification"
+            },
+            {
+                category: "reading",
+                chinese: "阅读，是生命的源泉",
+                pinyin: "yuè dú, shì shēng mìng de yuán quán",
+                english: "Reading is the source of life",
+                explanation: "A motivational phrase about the importance of reading"
+            },
+
+            // Oral Practice Section
+            {
+                category: "oral",
+                chinese: "看图说话",
+                pinyin: "kàn tú shuō huà",
+                english: "Picture Description",
+                explanation: "Describe what you see in a picture - oral practice"
+            },
+            {
+                category: "oral",
+                chinese: "描述图片",
+                pinyin: "miáo shù tú piàn",
+                english: "Describe the Picture",
+                explanation: "Tell what is happening in the picture"
+            },
+            {
+                category: "oral",
+                chinese: "感受",
+                pinyin: "gǎn shòu",
+                english: "Feeling (F)",
+                explanation: "FORIF: Express how you feel about what you see"
+            },
+            {
+                category: "oral",
+                chinese: "看法",
+                pinyin: "kàn fǎ",
+                english: "Opinion (O)",
+                explanation: "FORIF: Share your thoughts or opinion"
+            },
+            {
+                category: "oral",
+                chinese: "原因",
+                pinyin: "yuán yīn",
+                english: "Reason (R)",
+                explanation: "FORIF: Give reasons to support your opinion"
+            },
+            {
+                category: "oral",
+                chinese: "如果",
+                pinyin: "rú guǒ",
+                english: "If (IF)",
+                explanation: "FORIF: Suggest what you would do if you were in the situation"
+            }
+        ];
+
+        // Category names
+        const categoryNames = {
+            vocabulary: "Vocabulary Terms",
+            exercises: "Exercise Instructions",
+            reading: "Reading Terms",
+            oral: "Oral Practice Terms"
+        };
+
+        // State
+        let currentView = 'glossary';
+        let currentCategory = 'all';
+        let quizQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        // Render glossary
+        function renderGlossary() {
+            const container = document.getElementById('glossary-content');
+            const filteredTerms = currentCategory === 'all'
+                ? instructionTerms
+                : instructionTerms.filter(t => t.category === currentCategory);
+
+            // Group by category
+            const grouped = {};
+            filteredTerms.forEach(term => {
+                if (!grouped[term.category]) {
+                    grouped[term.category] = [];
+                }
+                grouped[term.category].push(term);
+            });
+
+            let html = '';
+            for (const [category, terms] of Object.entries(grouped)) {
+                html += `
+                    <div class="glossary-section">
+                        <h2 class="section-title">${categoryNames[category]}</h2>
+                        ${terms.map(term => `
+                            <div class="term-card">
+                                <div class="term-header">
+                                    <button class="audio-btn" onclick="playAudio('${term.chinese}', this)">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                        </svg>
+                                    </button>
+                                    <div class="term-chinese">${term.chinese}</div>
+                                </div>
+                                <div class="term-pinyin">${term.pinyin}</div>
+                                <div class="term-english">${term.english}</div>
+                                <div class="term-explanation">${term.explanation}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            container.innerHTML = html;
+        }
+
+        // Generate quiz questions
+        function generateQuiz() {
+            // Shuffle and pick 10 questions
+            const shuffled = [...instructionTerms].sort(() => Math.random() - 0.5);
+            quizQuestions = shuffled.slice(0, 10);
+            currentQuestionIndex = 0;
+            score = 0;
+            document.getElementById('quiz-score').textContent = '0';
+            document.getElementById('total-q').textContent = quizQuestions.length;
+            renderQuestion();
+        }
+
+        // Render current question
+        function renderQuestion() {
+            const container = document.getElementById('quiz-content');
+
+            if (currentQuestionIndex >= quizQuestions.length) {
+                // Show results
+                const percentage = Math.round((score / quizQuestions.length) * 100);
+                let message = '';
+                if (percentage === 100) {
+                    message = 'Perfect! Excellent work!';
+                } else if (percentage >= 80) {
+                    message = 'Great job! Keep it up!';
+                } else if (percentage >= 60) {
+                    message = 'Good effort! Review and try again!';
+                } else {
+                    message = 'Keep practicing! You can do it!';
+                }
+
+                container.innerHTML = `
+                    <div class="quiz-results">
+                        <div class="results-score">${score}/${quizQuestions.length}</div>
+                        <div class="results-message">${message}</div>
+                        <button class="restart-btn" onclick="generateQuiz()">Try Again</button>
+                    </div>
+                `;
+                return;
+            }
+
+            const question = quizQuestions[currentQuestionIndex];
+            document.getElementById('current-q').textContent = currentQuestionIndex + 1;
+
+            // Generate wrong options (3 random different answers)
+            const wrongOptions = instructionTerms
+                .filter(t => t.chinese !== question.chinese)
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 3)
+                .map(t => t.english);
+
+            // Combine and shuffle options
+            const options = [question.english, ...wrongOptions].sort(() => Math.random() - 0.5);
+
+            container.innerHTML = `
+                <div class="quiz-card">
+                    <div class="quiz-question-label">What does this mean?</div>
+                    <button class="quiz-audio-btn" onclick="playAudio('${question.chinese}', this)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                        </svg>
+                    </button>
+                    <div class="quiz-term">${question.chinese}</div>
+                    <div class="quiz-pinyin">${question.pinyin}</div>
+                    <div class="quiz-options">
+                        ${options.map((opt, i) => `
+                            <button class="quiz-option" data-answer="${opt}" onclick="checkAnswer(this, '${opt.replace(/'/g, "\\'")}', '${question.english.replace(/'/g, "\\'")}')">${opt}</button>
+                        `).join('')}
+                    </div>
+                    <div class="quiz-feedback" id="feedback"></div>
+                    <button class="quiz-next-btn" id="next-btn" onclick="nextQuestion()">Next Question</button>
+                </div>
+            `;
+        }
+
+        // Check answer
+        function checkAnswer(button, selected, correct) {
+            const options = document.querySelectorAll('.quiz-option');
+            options.forEach(opt => {
+                opt.classList.add('disabled');
+                if (opt.dataset.answer === correct) {
+                    opt.classList.add('correct');
+                }
+            });
+
+            const feedback = document.getElementById('feedback');
+
+            if (selected === correct) {
+                score++;
+                document.getElementById('quiz-score').textContent = score;
+                feedback.textContent = 'Correct!';
+                feedback.className = 'quiz-feedback correct';
+            } else {
+                button.classList.add('incorrect');
+                feedback.textContent = `Incorrect. The answer is: ${correct}`;
+                feedback.className = 'quiz-feedback incorrect';
+            }
+
+            document.getElementById('next-btn').classList.add('visible');
+        }
+
+        // Next question
+        function nextQuestion() {
+            currentQuestionIndex++;
+            renderQuestion();
+        }
+
+        // Tab switching
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const view = tab.dataset.view;
+                currentView = view;
+
+                document.querySelector('.glossary-container').classList.toggle('active', view === 'glossary');
+                document.querySelector('.quiz-container').classList.toggle('active', view === 'quiz');
+
+                if (view === 'quiz') {
+                    generateQuiz();
+                }
+            });
+        });
+
+        // Category filter
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                renderGlossary();
+            });
+        });
+
+        // Audio player singleton
+        let audioElement = null;
+        let currentPlayingBtn = null;
+
+        function playAudio(chinese, button) {
+            // Stop any current playback
+            if (audioElement) {
+                audioElement.pause();
+                audioElement.currentTime = 0;
+            }
+            if (currentPlayingBtn) {
+                currentPlayingBtn.classList.remove('playing');
+            }
+
+            // Create audio element if needed
+            if (!audioElement) {
+                audioElement = new Audio();
+            }
+
+            const audioPath = `audio/${chinese}.mp3`;
+            audioElement.src = audioPath;
+
+            // Add playing animation
+            if (button) {
+                button.classList.add('playing');
+                currentPlayingBtn = button;
+            }
+
+            audioElement.play().catch(err => {
+                console.error('Audio playback error:', err);
+            });
+
+            audioElement.onended = () => {
+                if (currentPlayingBtn) {
+                    currentPlayingBtn.classList.remove('playing');
+                    currentPlayingBtn = null;
+                }
+            };
+
+            audioElement.onerror = () => {
+                if (currentPlayingBtn) {
+                    currentPlayingBtn.classList.remove('playing');
+                    currentPlayingBtn = null;
+                }
+            };
+        }
+
+        // Initial render
+        renderGlossary();
+    </script>
+</body>
+</html>

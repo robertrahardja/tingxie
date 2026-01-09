@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课文学习 - P2HCL Lessons</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header-container {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header-container h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            padding: 0 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .lesson-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .lesson-card:active {
+            transform: scale(0.98);
+        }
+
+        .lesson-header {
+            width: 100%;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .lesson-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .lesson-header-text {
+            color: white;
+        }
+
+        .lesson-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .lesson-title-english {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .lesson-content {
+            padding: 20px;
+        }
+
+        .lesson-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .section-chip {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .section-chip.write {
+            background: #fff0f0;
+            color: #e53e3e;
+        }
+
+        .section-chip.read {
+            background: #f0fff4;
+            color: #38a169;
+        }
+
+        .section-chip.phrases {
+            background: #fff5f0;
+            color: #dd6b20;
+        }
+
+        .section-chip.dictation {
+            background: #f0f0ff;
+            color: #5a67d8;
+        }
+
+        .section-chip.oral {
+            background: #faf0ff;
+            color: #9f7aea;
+        }
+
+        .word-count {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .empty-state h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .tools-section {
+            max-width: 1200px;
+            margin: 0 auto 30px;
+            padding: 0 20px;
+        }
+
+        .tools-title {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .tools-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .tool-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        .tool-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #4A90A4, #357a8c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .tool-info h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .tool-info p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .lesson-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px 30px;
+            }
+
+            .header-container h1 {
+                font-size: 28px;
+            }
+
+            .lesson-title {
+                font-size: 20px;
+            }
+
+            .lesson-number {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="lessons.html" class="nav-item active">课文学习</a>
+                <a href="koushi25.html" class="nav-item">口试练习</a>
+                <a href="dashboard.html" class="nav-item">家长看板</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-container">
+        <h1>课文学习</h1>
+        <div class="header-subtitle">P2 Higher Chinese Level - Weekly Lessons</div>
+    </div>
+
+    <div class="tools-section">
+        <div class="tools-title">Learning Tools</div>
+        <div class="tools-grid">
+            <a href="instructions.html" class="tool-card">
+                <div class="tool-icon">📖</div>
+                <div class="tool-info">
+                    <h3>Instructions Glossary</h3>
+                    <p>Learn common worksheet instructions</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="lesson-grid" id="lesson-grid">
+        <!-- Lessons will be loaded dynamically -->
+    </div>
+
+    <script>
+        // Mobile navigation
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a nav item
+        navMenu.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Available lessons - add new lessons here
+        const availableLessons = [
+            { file: 'lesson2.json', number: 2 }
+            // Add more lessons as they become available:
+            // { file: 'lesson3.json', number: 3 },
+        ];
+
+        async function loadLessons() {
+            const grid = document.getElementById('lesson-grid');
+
+            if (availableLessons.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📚</div>
+                        <h2>课程即将推出</h2>
+                        <p>Lessons coming soon!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            for (const lesson of availableLessons) {
+                try {
+                    const response = await fetch(`data/lessons/${lesson.file}`);
+                    const data = await response.json();
+
+                    const writeCount = data.sections.shiXieZiCi?.words?.length || 0;
+                    const readCount = data.sections.shiDuZiCi?.words?.length || 0;
+                    const phraseCount = data.sections.ciYuDaPei?.phrases?.length || 0;
+                    const dictationCount = data.sections.tingXieCiYu?.words?.length || 0;
+                    const hasOral = !!data.sections.kanTuShuoHua;
+
+                    const totalWords = writeCount + readCount;
+
+                    // Get progress from localStorage
+                    const progress = localStorage.getItem(`lesson${data.lesson}_progress`) || 0;
+
+                    const card = document.createElement('a');
+                    card.href = `lesson${data.lesson}.html`;
+                    card.className = 'lesson-card';
+                    card.innerHTML = `
+                        <div class="lesson-header">
+                            <div class="lesson-number">${data.lesson}</div>
+                            <div class="lesson-header-text">
+                                <div class="lesson-title">第${data.lesson}课：${data.title}</div>
+                                <div class="lesson-title-english">${data.titleEnglish}</div>
+                            </div>
+                        </div>
+                        <div class="lesson-content">
+                            <div class="lesson-sections">
+                                ${writeCount > 0 ? `<span class="section-chip write">识写 ${writeCount}</span>` : ''}
+                                ${readCount > 0 ? `<span class="section-chip read">识读 ${readCount}</span>` : ''}
+                                ${phraseCount > 0 ? `<span class="section-chip phrases">词语搭配 ${phraseCount}</span>` : ''}
+                                ${dictationCount > 0 ? `<span class="section-chip dictation">听写 ${dictationCount}</span>` : ''}
+                                ${hasOral ? `<span class="section-chip oral">看图说话</span>` : ''}
+                            </div>
+                            <div class="word-count">${totalWords} vocabulary words</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${progress}%"></div>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                } catch (error) {
+                    console.error(`Error loading ${lesson.file}:`, error);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadLessons);
+    </script>
+</body>
+</html>

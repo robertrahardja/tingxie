@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Study - 第二课</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .study-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+
+        .study-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .study-progress {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .study-type {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            margin-top: 5px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 4px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: white;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        /* Flashcard */
+        .flashcard-container {
+            perspective: 1000px;
+            margin-bottom: 25px;
+        }
+
+        .flashcard {
+            background: white;
+            border-radius: 20px;
+            min-height: 400px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-front,
+        .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .flashcard-back {
+            transform: rotateY(180deg);
+            background: white;
+            overflow-y: auto;
+        }
+
+        /* Front of card */
+        .front-chinese {
+            font-size: 72px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .front-badge {
+            background: #667eea;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .front-badge.read {
+            background: #38a169;
+        }
+
+        .front-audio-btn {
+            background: linear-gradient(45deg, #ff6b6b 0%, #ffd93d 100%);
+            border: none;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            font-size: 32px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+            margin-top: 20px;
+        }
+
+        .front-hint {
+            position: absolute;
+            bottom: 20px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Back of card */
+        .back-content {
+            width: 100%;
+            text-align: left;
+        }
+
+        .back-chinese {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .back-pinyin {
+            font-size: 20px;
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .back-section {
+            margin-bottom: 18px;
+        }
+
+        .back-label {
+            font-size: 11px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .back-value {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .back-value.english {
+            color: #666;
+            font-style: italic;
+        }
+
+        .back-combos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .back-combo {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+
+        .back-example {
+            background: #f8f9ff;
+            padding: 12px;
+            border-radius: 10px;
+            border-left: 3px solid #667eea;
+        }
+
+        .back-example-chinese {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .back-example-english {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Navigation buttons */
+        .study-nav {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .study-nav-btn {
+            flex: 1;
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 16px;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .study-nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .study-nav-btn:not(:disabled):active {
+            transform: scale(0.98);
+        }
+
+        /* Assessment buttons */
+        .study-assess {
+            display: flex;
+            gap: 15px;
+        }
+
+        .assess-btn {
+            flex: 1;
+            border: none;
+            padding: 18px;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .assess-btn.know {
+            background: linear-gradient(45deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+        }
+
+        .assess-btn.dont-know {
+            background: linear-gradient(45deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+        }
+
+        .assess-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Completion screen */
+        .completion-screen {
+            display: none;
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .completion-screen.active {
+            display: block;
+        }
+
+        .completion-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .completion-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .completion-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .completion-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .completion-btn {
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+        }
+
+        .completion-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .completion-btn.secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .front-chinese {
+                font-size: 56px;
+            }
+
+            .flashcard {
+                min-height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="lessons.html" class="nav-item active">课文学习</a>
+                <a href="koushi25.html" class="nav-item">口试练习</a>
+                <a href="dashboard.html" class="nav-item">家长看板</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="study-container">
+        <div class="study-header">
+            <div class="study-progress" id="study-progress">1 / 14</div>
+            <div class="study-type" id="study-type">识写字词 - Words to Write</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="flashcard-container" id="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-front">
+                    <div class="front-badge" id="front-badge">识写</div>
+                    <div class="front-chinese" id="front-chinese">美丽</div>
+                    <button class="front-audio-btn" id="front-audio-btn">
+                        <span>&#128266;</span>
+                    </button>
+                    <div class="front-hint">Tap to flip</div>
+                </div>
+                <div class="flashcard-back">
+                    <div class="back-content">
+                        <div class="back-chinese" id="back-chinese">美丽</div>
+                        <div class="back-pinyin" id="back-pinyin">měi lì</div>
+
+                        <div class="back-section">
+                            <div class="back-label">English</div>
+                            <div class="back-value english" id="back-english">beautiful</div>
+                        </div>
+
+                        <div class="back-section">
+                            <div class="back-label">Definition</div>
+                            <div class="back-value" id="back-definition">美丽的定义</div>
+                            <div class="back-value english" id="back-definition-english">Definition in English</div>
+                        </div>
+
+                        <div class="back-section" id="back-combos-section">
+                            <div class="back-label">Word Combinations</div>
+                            <div class="back-combos" id="back-combos"></div>
+                        </div>
+
+                        <div class="back-section">
+                            <div class="back-label">Example Sentence</div>
+                            <div class="back-example">
+                                <div class="back-example-chinese" id="back-example">例句</div>
+                                <div class="back-example-english" id="back-example-english">Example in English</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="study-nav">
+            <button class="study-nav-btn" id="prev-btn" disabled>Previous</button>
+            <button class="study-nav-btn" id="next-btn">Next</button>
+        </div>
+
+        <div class="study-assess">
+            <button class="assess-btn dont-know" id="dont-know-btn">Don't Know</button>
+            <button class="assess-btn know" id="know-btn">Know</button>
+        </div>
+
+        <div class="completion-screen" id="completion-screen">
+            <div class="completion-icon">&#127881;</div>
+            <div class="completion-title">Study Session Complete!</div>
+            <div class="completion-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="known-count">0</div>
+                    <div class="stat-label">Known</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="unknown-count">0</div>
+                    <div class="stat-label">Need Review</div>
+                </div>
+            </div>
+            <div class="completion-actions">
+                <button class="completion-btn primary" id="review-unknown-btn">Review Unknown Words</button>
+                <button class="completion-btn secondary" id="restart-btn">Start Over</button>
+            </div>
+        </div>
+
+        <a href="lesson2.html" class="back-link">&#8592; Back to Lesson</a>
+    </div>
+
+    <script>
+        // Mobile navigation
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // State
+        let words = [];
+        let currentIndex = 0;
+        let knownWords = [];
+        let unknownWords = [];
+        let studyType = 'write'; // 'write' or 'read'
+
+        // Audio
+        let audioElement = null;
+        function playAudio(path) {
+            if (!audioElement) {
+                audioElement = new Audio();
+            }
+            audioElement.src = path;
+            audioElement.play().catch(e => console.log('Audio play failed:', e));
+        }
+
+        // Get URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        studyType = urlParams.get('type') || 'write';
+
+        // DOM elements
+        const flashcard = document.getElementById('flashcard');
+        const flashcardContainer = document.getElementById('flashcard-container');
+        const completionScreen = document.getElementById('completion-screen');
+        const studyProgress = document.getElementById('study-progress');
+        const studyTypeLabel = document.getElementById('study-type');
+        const progressFill = document.getElementById('progress-fill');
+
+        // Flashcard flip
+        flashcard.addEventListener('click', (e) => {
+            if (e.target.closest('.front-audio-btn')) return;
+            flashcard.classList.toggle('flipped');
+        });
+
+        // Audio button
+        document.getElementById('front-audio-btn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            const word = words[currentIndex];
+            if (word && word.audio) {
+                playAudio(word.audio);
+            }
+        });
+
+        // Navigation
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showWord();
+            }
+        });
+
+        document.getElementById('next-btn').addEventListener('click', () => {
+            if (currentIndex < words.length - 1) {
+                currentIndex++;
+                showWord();
+            }
+        });
+
+        // Assessment
+        document.getElementById('know-btn').addEventListener('click', () => {
+            const word = words[currentIndex];
+            if (!knownWords.includes(word.simplified)) {
+                knownWords.push(word.simplified);
+                // Remove from unknown if present
+                const idx = unknownWords.indexOf(word.simplified);
+                if (idx > -1) unknownWords.splice(idx, 1);
+            }
+            saveProgress();
+            nextWord();
+        });
+
+        document.getElementById('dont-know-btn').addEventListener('click', () => {
+            const word = words[currentIndex];
+            if (!unknownWords.includes(word.simplified)) {
+                unknownWords.push(word.simplified);
+                // Remove from known if present
+                const idx = knownWords.indexOf(word.simplified);
+                if (idx > -1) knownWords.splice(idx, 1);
+            }
+            saveProgress();
+            nextWord();
+        });
+
+        function nextWord() {
+            if (currentIndex < words.length - 1) {
+                currentIndex++;
+                showWord();
+            } else {
+                showCompletion();
+            }
+        }
+
+        function saveProgress() {
+            const learnedWords = JSON.parse(localStorage.getItem('lesson2_learned') || '[]');
+            knownWords.forEach(w => {
+                if (!learnedWords.includes(w)) learnedWords.push(w);
+            });
+            localStorage.setItem('lesson2_learned', JSON.stringify(learnedWords));
+        }
+
+        function showWord() {
+            const word = words[currentIndex];
+
+            // Reset flip
+            flashcard.classList.remove('flipped');
+
+            // Update front
+            document.getElementById('front-chinese').textContent = word.traditional || word.simplified;
+            document.getElementById('front-badge').textContent = word.type === 'write' ? '识写' : '识读';
+            document.getElementById('front-badge').className = `front-badge ${word.type === 'read' ? 'read' : ''}`;
+
+            // Update back
+            document.getElementById('back-chinese').textContent = word.traditional || word.simplified;
+            document.getElementById('back-pinyin').textContent = word.pinyin;
+            document.getElementById('back-english').textContent = word.english;
+            document.getElementById('back-definition').textContent = word.definition;
+            document.getElementById('back-definition-english').textContent = word.definitionEnglish || '';
+            document.getElementById('back-example').textContent = word.exampleSentence;
+            document.getElementById('back-example-english').textContent = word.exampleSentenceEnglish || '';
+
+            // Combinations
+            const combosSection = document.getElementById('back-combos-section');
+            const combosContainer = document.getElementById('back-combos');
+            if (word.combinations && word.combinations.length > 0) {
+                combosSection.style.display = 'block';
+                combosContainer.innerHTML = word.combinations.map(c => `<span class="back-combo">${c}</span>`).join('');
+            } else {
+                combosSection.style.display = 'none';
+            }
+
+            // Update progress
+            studyProgress.textContent = `${currentIndex + 1} / ${words.length}`;
+            progressFill.style.width = `${((currentIndex + 1) / words.length) * 100}%`;
+
+            // Update nav buttons
+            document.getElementById('prev-btn').disabled = currentIndex === 0;
+            document.getElementById('next-btn').disabled = currentIndex === words.length - 1;
+        }
+
+        function showCompletion() {
+            flashcardContainer.style.display = 'none';
+            document.querySelector('.study-nav').style.display = 'none';
+            document.querySelector('.study-assess').style.display = 'none';
+            completionScreen.classList.add('active');
+
+            document.getElementById('known-count').textContent = knownWords.length;
+            document.getElementById('unknown-count').textContent = unknownWords.length;
+
+            // Hide review button if no unknown words
+            document.getElementById('review-unknown-btn').style.display =
+                unknownWords.length > 0 ? 'block' : 'none';
+        }
+
+        // Completion actions
+        document.getElementById('restart-btn').addEventListener('click', () => {
+            currentIndex = 0;
+            knownWords = [];
+            unknownWords = [];
+            completionScreen.classList.remove('active');
+            flashcardContainer.style.display = 'block';
+            document.querySelector('.study-nav').style.display = 'flex';
+            document.querySelector('.study-assess').style.display = 'flex';
+            showWord();
+        });
+
+        document.getElementById('review-unknown-btn').addEventListener('click', () => {
+            // Filter to only unknown words
+            words = words.filter(w => unknownWords.includes(w.simplified));
+            currentIndex = 0;
+            unknownWords = [];
+
+            completionScreen.classList.remove('active');
+            flashcardContainer.style.display = 'block';
+            document.querySelector('.study-nav').style.display = 'flex';
+            document.querySelector('.study-assess').style.display = 'flex';
+            showWord();
+        });
+
+        // Load data
+        async function loadLesson() {
+            try {
+                const response = await fetch('data/lessons/lesson2.json');
+                const data = await response.json();
+
+                if (studyType === 'write') {
+                    words = data.sections.shiXieZiCi?.words || [];
+                    studyTypeLabel.textContent = '识写字词 - Words to Write';
+                } else {
+                    words = data.sections.shiDuZiCi?.words || [];
+                    studyTypeLabel.textContent = '识读字词 - Words to Read';
+                }
+
+                if (words.length > 0) {
+                    showWord();
+                }
+            } catch (error) {
+                console.error('Error loading lesson:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadLesson);
+    </script>
+</body>
+</html>

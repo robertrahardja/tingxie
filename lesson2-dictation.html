@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>听写练习 - 第二课</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dictation-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+
+        .dictation-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .dictation-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .dictation-subtitle {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            margin-top: 5px;
+        }
+
+        .dictation-progress {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin-top: 15px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 4px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: white;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        /* Main card */
+        .dictation-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .dictation-number {
+            font-size: 16px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        /* Audio button */
+        .dictation-audio-btn {
+            background: linear-gradient(45deg, #ff6b6b 0%, #ffd93d 100%);
+            border: none;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            font-size: 48px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            box-shadow: 0 6px 25px rgba(255,107,107,0.4);
+            transition: transform 0.2s;
+        }
+
+        .dictation-audio-btn:active {
+            transform: scale(0.95);
+        }
+
+        .dictation-audio-btn.playing {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .audio-hint {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 25px;
+        }
+
+        /* Answer section */
+        .answer-section {
+            border-top: 2px dashed #e0e0e0;
+            padding-top: 25px;
+        }
+
+        .answer-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .answer-display {
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .answer-hidden {
+            font-size: 48px;
+            color: #ccc;
+        }
+
+        .answer-chinese {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            display: none;
+        }
+
+        .answer-pinyin {
+            font-size: 18px;
+            color: #667eea;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .answer-english {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .reveal-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .reveal-btn:active {
+            transform: scale(0.98);
+        }
+
+        .revealed .answer-hidden { display: none; }
+        .revealed .answer-chinese { display: block; }
+        .revealed .answer-pinyin { display: block; }
+        .revealed .answer-english { display: block; }
+        .revealed .reveal-btn { display: none; }
+
+        /* Assessment buttons */
+        .assess-section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .revealed .assess-section {
+            display: block;
+        }
+
+        .assess-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .assess-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .assess-btn {
+            flex: 1;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .assess-btn.correct {
+            background: linear-gradient(45deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+        }
+
+        .assess-btn.wrong {
+            background: linear-gradient(45deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+        }
+
+        .assess-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Navigation */
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn {
+            flex: 1;
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .nav-btn:not(:disabled):active {
+            transform: scale(0.98);
+        }
+
+        /* Mode selector */
+        .mode-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.2);
+            padding: 5px;
+            border-radius: 12px;
+        }
+
+        .mode-btn {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: rgba(255,255,255,0.8);
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .mode-btn.active {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Results */
+        .results-screen {
+            display: none;
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .results-screen.active {
+            display: block;
+        }
+
+        .results-icon {
+            font-size: 72px;
+            margin-bottom: 20px;
+        }
+
+        .results-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .results-score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .results-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+        }
+
+        .result-stat {
+            text-align: center;
+        }
+
+        .result-stat-number {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .result-stat-number.correct { color: #4CAF50; }
+        .result-stat-number.wrong { color: #ff6b6b; }
+
+        .result-stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .wrong-words {
+            background: #fff0f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .wrong-words-title {
+            font-size: 14px;
+            color: #e53e3e;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .wrong-word-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #ffe0e0;
+        }
+
+        .wrong-word-item:last-child {
+            border-bottom: none;
+        }
+
+        .wrong-word-chinese {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .wrong-word-pinyin {
+            font-size: 14px;
+            color: #667eea;
+        }
+
+        .results-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .result-btn {
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+        }
+
+        .result-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .result-btn.secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .answer-chinese {
+                font-size: 36px;
+            }
+
+            .dictation-audio-btn {
+                width: 80px;
+                height: 80px;
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="lessons.html" class="nav-item active">课文学习</a>
+                <a href="koushi25.html" class="nav-item">口试练习</a>
+                <a href="dashboard.html" class="nav-item">家长看板</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dictation-container">
+        <div class="dictation-header">
+            <div class="dictation-title">听写练习</div>
+            <div class="dictation-subtitle">第二课 - Dictation Practice</div>
+            <div class="dictation-progress" id="progress-text">1 / 15</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="practice">Practice Mode</button>
+            <button class="mode-btn" data-mode="test">Test Mode</button>
+        </div>
+
+        <div class="dictation-card" id="dictation-card">
+            <div class="dictation-number" id="word-number">Word 1</div>
+
+            <button class="dictation-audio-btn" id="audio-btn">
+                <span>&#128266;</span>
+            </button>
+            <div class="audio-hint">Listen to the word and write it down</div>
+
+            <div class="answer-section" id="answer-section">
+                <div class="answer-label">Answer:</div>
+                <div class="answer-display">
+                    <div class="answer-hidden">???</div>
+                    <div class="answer-chinese" id="answer-chinese"></div>
+                </div>
+                <div class="answer-pinyin" id="answer-pinyin"></div>
+                <div class="answer-english" id="answer-english"></div>
+                <button class="reveal-btn" id="reveal-btn">Show Answer</button>
+
+                <div class="assess-section">
+                    <div class="assess-label">Did you get it right?</div>
+                    <div class="assess-buttons">
+                        <button class="assess-btn wrong" id="wrong-btn">Wrong</button>
+                        <button class="assess-btn correct" id="correct-btn">Correct</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="nav-btn" id="prev-btn" disabled>Previous</button>
+            <button class="nav-btn" id="skip-btn">Skip</button>
+        </div>
+
+        <div class="results-screen" id="results-screen">
+            <div class="results-icon" id="results-icon">&#127942;</div>
+            <div class="results-title" id="results-title">Great Job!</div>
+            <div class="results-score" id="results-score">100%</div>
+
+            <div class="results-stats">
+                <div class="result-stat">
+                    <div class="result-stat-number correct" id="correct-count">0</div>
+                    <div class="result-stat-label">Correct</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-stat-number wrong" id="wrong-count">0</div>
+                    <div class="result-stat-label">Wrong</div>
+                </div>
+            </div>
+
+            <div class="wrong-words" id="wrong-words" style="display: none;">
+                <div class="wrong-words-title">Words to Review:</div>
+                <div id="wrong-words-list"></div>
+            </div>
+
+            <div class="results-actions">
+                <button class="result-btn primary" id="review-wrong-btn">Review Wrong Words</button>
+                <button class="result-btn secondary" id="restart-btn">Start Over</button>
+            </div>
+        </div>
+
+        <a href="lesson2.html" class="back-link">&#8592; Back to Lesson</a>
+    </div>
+
+    <script>
+        // Mobile navigation
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // State
+        let words = [];
+        let currentIndex = 0;
+        let correctWords = [];
+        let wrongWords = [];
+        let mode = 'practice'; // 'practice' or 'test'
+
+        // Audio
+        let audioElement = null;
+        function playAudio(path) {
+            if (!audioElement) {
+                audioElement = new Audio();
+            }
+            audioElement.src = path;
+
+            const btn = document.getElementById('audio-btn');
+            btn.classList.add('playing');
+            audioElement.play().catch(e => console.log('Audio play failed:', e));
+            audioElement.onended = () => btn.classList.remove('playing');
+        }
+
+        // DOM Elements
+        const dictationCard = document.getElementById('dictation-card');
+        const resultsScreen = document.getElementById('results-screen');
+        const answerSection = document.getElementById('answer-section');
+        const progressText = document.getElementById('progress-text');
+        const progressFill = document.getElementById('progress-fill');
+
+        // Mode selector
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                mode = btn.dataset.mode;
+                resetTest();
+            });
+        });
+
+        // Audio button
+        document.getElementById('audio-btn').addEventListener('click', () => {
+            const word = words[currentIndex];
+            if (word) {
+                // Try to find audio - construct path based on word
+                const audioPath = `audio/${word.chinese}.mp3`;
+                playAudio(audioPath);
+            }
+        });
+
+        // Reveal button
+        document.getElementById('reveal-btn').addEventListener('click', () => {
+            answerSection.classList.add('revealed');
+        });
+
+        // Assessment buttons
+        document.getElementById('correct-btn').addEventListener('click', () => {
+            const word = words[currentIndex];
+            if (!correctWords.find(w => w.chinese === word.chinese)) {
+                correctWords.push(word);
+                // Remove from wrong if present
+                wrongWords = wrongWords.filter(w => w.chinese !== word.chinese);
+            }
+            nextWord();
+        });
+
+        document.getElementById('wrong-btn').addEventListener('click', () => {
+            const word = words[currentIndex];
+            if (!wrongWords.find(w => w.chinese === word.chinese)) {
+                wrongWords.push(word);
+                // Remove from correct if present
+                correctWords = correctWords.filter(w => w.chinese !== word.chinese);
+            }
+            nextWord();
+        });
+
+        // Navigation
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showWord();
+            }
+        });
+
+        document.getElementById('skip-btn').addEventListener('click', () => {
+            nextWord();
+        });
+
+        function nextWord() {
+            if (currentIndex < words.length - 1) {
+                currentIndex++;
+                showWord();
+            } else {
+                showResults();
+            }
+        }
+
+        function showWord() {
+            const word = words[currentIndex];
+
+            // Reset reveal state
+            answerSection.classList.remove('revealed');
+
+            // Update display
+            document.getElementById('word-number').textContent = `Word ${currentIndex + 1}`;
+            document.getElementById('answer-chinese').textContent = word.chinese;
+            document.getElementById('answer-pinyin').textContent = word.pinyin;
+            document.getElementById('answer-english').textContent = word.english;
+
+            // Update progress
+            progressText.textContent = `${currentIndex + 1} / ${words.length}`;
+            progressFill.style.width = `${((currentIndex + 1) / words.length) * 100}%`;
+
+            // Update nav
+            document.getElementById('prev-btn').disabled = currentIndex === 0;
+
+            // Auto-play audio in test mode
+            if (mode === 'test') {
+                setTimeout(() => {
+                    const audioPath = `audio/${word.chinese}.mp3`;
+                    playAudio(audioPath);
+                }, 500);
+            }
+        }
+
+        function showResults() {
+            dictationCard.style.display = 'none';
+            document.querySelector('.nav-buttons').style.display = 'none';
+            resultsScreen.classList.add('active');
+
+            const total = words.length;
+            const correct = correctWords.length;
+            const wrong = wrongWords.length;
+            const skipped = total - correct - wrong;
+
+            const score = Math.round((correct / total) * 100);
+
+            document.getElementById('results-score').textContent = `${score}%`;
+            document.getElementById('correct-count').textContent = correct;
+            document.getElementById('wrong-count').textContent = wrong + skipped;
+
+            // Set icon and title based on score
+            const icon = document.getElementById('results-icon');
+            const title = document.getElementById('results-title');
+
+            if (score >= 90) {
+                icon.textContent = '&#127942;'; // trophy
+                title.textContent = 'Excellent!';
+            } else if (score >= 70) {
+                icon.textContent = '&#127881;'; // party
+                title.textContent = 'Great Job!';
+            } else if (score >= 50) {
+                icon.textContent = '&#128170;'; // muscle
+                title.textContent = 'Keep Practicing!';
+            } else {
+                icon.textContent = '&#128218;'; // book
+                title.textContent = 'More Practice Needed';
+            }
+
+            // Show wrong words
+            const wrongWordsContainer = document.getElementById('wrong-words');
+            const wrongWordsList = document.getElementById('wrong-words-list');
+
+            if (wrong + skipped > 0) {
+                wrongWordsContainer.style.display = 'block';
+                const allWrong = [...wrongWords, ...words.filter(w =>
+                    !correctWords.find(c => c.chinese === w.chinese) &&
+                    !wrongWords.find(wr => wr.chinese === w.chinese)
+                )];
+
+                wrongWordsList.innerHTML = allWrong.map(w => `
+                    <div class="wrong-word-item">
+                        <span class="wrong-word-chinese">${w.chinese}</span>
+                        <span class="wrong-word-pinyin">${w.pinyin}</span>
+                    </div>
+                `).join('');
+
+                document.getElementById('review-wrong-btn').style.display = 'block';
+            } else {
+                wrongWordsContainer.style.display = 'none';
+                document.getElementById('review-wrong-btn').style.display = 'none';
+            }
+        }
+
+        function resetTest() {
+            currentIndex = 0;
+            correctWords = [];
+            wrongWords = [];
+
+            resultsScreen.classList.remove('active');
+            dictationCard.style.display = 'block';
+            document.querySelector('.nav-buttons').style.display = 'flex';
+
+            if (words.length > 0) {
+                showWord();
+            }
+        }
+
+        // Results actions
+        document.getElementById('restart-btn').addEventListener('click', resetTest);
+
+        document.getElementById('review-wrong-btn').addEventListener('click', () => {
+            // Filter to only wrong/skipped words
+            const allWrong = [...wrongWords, ...words.filter(w =>
+                !correctWords.find(c => c.chinese === w.chinese) &&
+                !wrongWords.find(wr => wr.chinese === w.chinese)
+            )];
+
+            if (allWrong.length > 0) {
+                words = allWrong;
+                correctWords = [];
+                wrongWords = [];
+                currentIndex = 0;
+
+                resultsScreen.classList.remove('active');
+                dictationCard.style.display = 'block';
+                document.querySelector('.nav-buttons').style.display = 'flex';
+                showWord();
+            }
+        });
+
+        // Load data
+        async function loadLesson() {
+            try {
+                const response = await fetch('data/lessons/lesson2.json');
+                const data = await response.json();
+
+                words = data.sections.tingXieCiYu?.words || [];
+
+                if (words.length > 0) {
+                    showWord();
+                }
+            } catch (error) {
+                console.error('Error loading lesson:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadLesson);
+    </script>
+</body>
+</html>

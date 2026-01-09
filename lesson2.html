@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二课 - 我的朋友和家人</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header-container {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .back-btn {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-wrapper {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-container h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .header-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .section-nav {
+            display: flex;
+            gap: 10px;
+            padding: 15px 20px;
+            background: white;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            position: sticky;
+            top: 60px;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .section-tab {
+            flex-shrink: 0;
+            padding: 10px 18px;
+            border-radius: 25px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .section-tab.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .section-tab:active {
+            transform: scale(0.95);
+        }
+
+        .lesson-section {
+            padding: 25px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .section-description {
+            font-size: 14px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        /* Word Cards Grid */
+        .word-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .word-card-item {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .word-card-item:active {
+            transform: scale(0.98);
+        }
+
+        .word-card-item.write {
+            border-left-color: #e53e3e;
+        }
+
+        .word-card-item.read {
+            border-left-color: #38a169;
+        }
+
+        .word-card-item.learned {
+            background: #f0fff4;
+        }
+
+        .word-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .word-chinese {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .word-badge {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .word-badge.write {
+            background: #fff0f0;
+            color: #e53e3e;
+        }
+
+        .word-badge.read {
+            background: #f0fff4;
+            color: #38a169;
+        }
+
+        .word-pinyin {
+            font-size: 16px;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .word-english {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .word-audio-btn {
+            background: linear-gradient(45deg, #ff6b6b 0%, #ffd93d 100%);
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(255,107,107,0.3);
+            flex-shrink: 0;
+        }
+
+        /* Phrase Grid */
+        .phrase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .phrase-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .phrase-card:active {
+            transform: scale(0.98);
+            background: #f0f4ff;
+        }
+
+        .phrase-chinese {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .phrase-pinyin {
+            font-size: 13px;
+            color: #667eea;
+            margin-bottom: 3px;
+        }
+
+        .phrase-english {
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* Dictation Section */
+        .dictation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .dictation-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .dictation-card.revealed {
+            background: #f0f4ff;
+        }
+
+        .dictation-number {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            font-size: 12px;
+            color: #999;
+            font-weight: 600;
+        }
+
+        .dictation-chinese {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .dictation-hidden {
+            font-size: 22px;
+            color: #ccc;
+        }
+
+        .dictation-pinyin {
+            font-size: 12px;
+            color: #667eea;
+        }
+
+        /* Oral Section */
+        .oral-container {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .oral-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .oral-topic {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .oral-topic-english {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .oral-content {
+            padding: 25px;
+        }
+
+        .oral-section {
+            margin-bottom: 25px;
+        }
+
+        .oral-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .oral-label {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .oral-chinese {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .oral-english {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .forif-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .forif-card {
+            background: #f8f9ff;
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .forif-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.1);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 25px;
+            text-align: center;
+            color: white;
+        }
+
+        .modal-chinese {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .modal-pinyin {
+            font-size: 22px;
+            opacity: 0.9;
+        }
+
+        .modal-body {
+            padding: 25px;
+        }
+
+        .modal-row {
+            margin-bottom: 20px;
+        }
+
+        .modal-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .modal-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .modal-value {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .modal-value.english {
+            color: #666;
+            font-style: italic;
+        }
+
+        .modal-combos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .combo-chip {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+
+        .modal-example {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 3px solid #667eea;
+        }
+
+        .modal-example-chinese {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .modal-example-english {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .modal-audio-btn {
+            width: 100%;
+            background: linear-gradient(45deg, #ff6b6b 0%, #ffd93d 100%);
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .learn-btn {
+            width: 100%;
+            background: #4CAF50;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .learn-btn.learned {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        /* Practice mode link */
+        .practice-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .practice-link {
+            flex: 1;
+            min-width: 140px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .practice-link:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 768px) {
+            .word-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container h1 {
+                font-size: 26px;
+            }
+
+            .modal-chinese {
+                font-size: 42px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="lessons.html" class="nav-item active">课文学习</a>
+                <a href="koushi25.html" class="nav-item">口试练习</a>
+                <a href="dashboard.html" class="nav-item">家长看板</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-container">
+        <div class="header-wrapper">
+            <a href="lessons.html" class="back-btn">&#8592;</a>
+            <h1 id="lesson-title">第二课：我的朋友和家人</h1>
+            <div class="header-subtitle" id="lesson-subtitle">My Friends and Family</div>
+        </div>
+    </div>
+
+    <div class="section-nav" id="section-nav">
+        <button class="section-tab active" data-section="shiXieZiCi">识写字词</button>
+        <button class="section-tab" data-section="shiDuZiCi">识读字词</button>
+        <button class="section-tab" data-section="ciYuDaPei">词语搭配</button>
+        <button class="section-tab" data-section="tingXieCiYu">听写词语</button>
+        <button class="section-tab" data-section="kanTuShuoHua">看图说话</button>
+    </div>
+
+    <!-- 识写字词 Section -->
+    <div class="lesson-section" id="section-shiXieZiCi">
+        <div class="section-header">
+            <div class="section-title">识写字词</div>
+            <div class="section-subtitle">Words to Write</div>
+            <div class="section-description">Must recognize AND write these words</div>
+        </div>
+        <div class="word-grid" id="shiXieZiCi-grid"></div>
+        <div class="practice-links">
+            <a href="lesson2-study.html?type=write" class="practice-link">Study Mode</a>
+            <a href="lesson2-dictation.html" class="practice-link">Practice Dictation</a>
+        </div>
+    </div>
+
+    <!-- 识读字词 Section -->
+    <div class="lesson-section" id="section-shiDuZiCi" style="display: none;">
+        <div class="section-header">
+            <div class="section-title">识读字词</div>
+            <div class="section-subtitle">Words to Read</div>
+            <div class="section-description">Only need to recognize and read these words (not write)</div>
+        </div>
+        <div class="word-grid" id="shiDuZiCi-grid"></div>
+        <div class="practice-links">
+            <a href="lesson2-study.html?type=read" class="practice-link">Study Mode</a>
+        </div>
+    </div>
+
+    <!-- 词语搭配 Section -->
+    <div class="lesson-section" id="section-ciYuDaPei" style="display: none;">
+        <div class="section-header">
+            <div class="section-title">词语搭配</div>
+            <div class="section-subtitle">Word Collocations</div>
+            <div class="section-description">Practice reading these phrases</div>
+        </div>
+        <div class="phrase-grid" id="ciYuDaPei-grid"></div>
+    </div>
+
+    <!-- 听写词语 Section -->
+    <div class="lesson-section" id="section-tingXieCiYu" style="display: none;">
+        <div class="section-header">
+            <div class="section-title">听写词语</div>
+            <div class="section-subtitle">Dictation Words</div>
+            <div class="section-description">Words for spelling dictation test - tap to reveal</div>
+        </div>
+        <div class="dictation-grid" id="tingXieCiYu-grid"></div>
+        <div class="practice-links">
+            <a href="lesson2-dictation.html" class="practice-link">Practice Dictation Test</a>
+        </div>
+    </div>
+
+    <!-- 看图说话 Section -->
+    <div class="lesson-section" id="section-kanTuShuoHua" style="display: none;">
+        <div class="section-header">
+            <div class="section-title">看图说话</div>
+            <div class="section-subtitle">Picture Description</div>
+            <div class="section-description">Oral exam practice with FORIF framework</div>
+        </div>
+        <div class="oral-container" id="kanTuShuoHua-content"></div>
+    </div>
+
+    <!-- Word Detail Modal -->
+    <div class="modal-overlay" id="word-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-chinese" id="modal-chinese"></div>
+                <div class="modal-pinyin" id="modal-pinyin"></div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="modal-label">English</div>
+                    <div class="modal-value english" id="modal-english"></div>
+                </div>
+                <div class="modal-row">
+                    <div class="modal-label">Definition (解释)</div>
+                    <div class="modal-value" id="modal-definition"></div>
+                    <div class="modal-value english" id="modal-definition-english" style="margin-top: 5px;"></div>
+                </div>
+                <div class="modal-row" id="modal-combos-row">
+                    <div class="modal-label">Word Combinations (搭配/构词)</div>
+                    <div class="modal-combos" id="modal-combos"></div>
+                </div>
+                <div class="modal-row">
+                    <div class="modal-label">Example Sentence (例句)</div>
+                    <div class="modal-example">
+                        <div class="modal-example-chinese" id="modal-example"></div>
+                        <div class="modal-example-english" id="modal-example-english"></div>
+                    </div>
+                </div>
+                <button class="modal-audio-btn" id="modal-audio-btn">
+                    <span>Play Audio</span>
+                </button>
+                <button class="learn-btn" id="modal-learn-btn">Mark as Learned</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile navigation
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navMenu.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Lesson data
+        let lessonData = null;
+        let learnedWords = JSON.parse(localStorage.getItem('lesson2_learned') || '[]');
+        let currentWord = null;
+
+        // Audio player
+        let audioElement = null;
+
+        function playAudio(path) {
+            if (!audioElement) {
+                audioElement = new Audio();
+            }
+            audioElement.src = path;
+            audioElement.play().catch(e => console.log('Audio play failed:', e));
+        }
+
+        // Section navigation
+        const sectionTabs = document.querySelectorAll('.section-tab');
+        sectionTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const section = tab.dataset.section;
+
+                // Update tabs
+                sectionTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.toggle('active');
+
+                // Show/hide sections
+                document.querySelectorAll('.lesson-section').forEach(s => {
+                    s.style.display = 'none';
+                });
+                document.getElementById(`section-${section}`).style.display = 'block';
+            });
+        });
+
+        // Modal handling
+        const modal = document.getElementById('word-modal');
+        const modalClose = document.getElementById('modal-close');
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        function openWordModal(word) {
+            currentWord = word;
+            document.getElementById('modal-chinese').textContent = word.traditional || word.simplified;
+            document.getElementById('modal-pinyin').textContent = word.pinyin;
+            document.getElementById('modal-english').textContent = word.english;
+            document.getElementById('modal-definition').textContent = word.definition;
+            document.getElementById('modal-definition-english').textContent = word.definitionEnglish || '';
+            document.getElementById('modal-example').textContent = word.exampleSentence;
+            document.getElementById('modal-example-english').textContent = word.exampleSentenceEnglish || '';
+
+            // Combinations
+            const combosContainer = document.getElementById('modal-combos');
+            const combosRow = document.getElementById('modal-combos-row');
+            if (word.combinations && word.combinations.length > 0) {
+                combosRow.style.display = 'block';
+                combosContainer.innerHTML = word.combinations.map((combo, i) => {
+                    const english = word.combinationsEnglish?.[i] || '';
+                    return `<span class="combo-chip" title="${english}">${combo}</span>`;
+                }).join('');
+            } else {
+                combosRow.style.display = 'none';
+            }
+
+            // Learn button
+            const learnBtn = document.getElementById('modal-learn-btn');
+            const isLearned = learnedWords.includes(word.simplified);
+            learnBtn.textContent = isLearned ? 'Learned' : 'Mark as Learned';
+            learnBtn.classList.toggle('learned', isLearned);
+
+            modal.classList.add('active');
+        }
+
+        // Audio button in modal
+        document.getElementById('modal-audio-btn').addEventListener('click', () => {
+            if (currentWord && currentWord.audio) {
+                playAudio(currentWord.audio);
+            }
+        });
+
+        // Learn button in modal
+        document.getElementById('modal-learn-btn').addEventListener('click', () => {
+            if (!currentWord) return;
+
+            const index = learnedWords.indexOf(currentWord.simplified);
+            if (index === -1) {
+                learnedWords.push(currentWord.simplified);
+            } else {
+                learnedWords.splice(index, 1);
+            }
+
+            localStorage.setItem('lesson2_learned', JSON.stringify(learnedWords));
+
+            // Update button
+            const learnBtn = document.getElementById('modal-learn-btn');
+            const isLearned = learnedWords.includes(currentWord.simplified);
+            learnBtn.textContent = isLearned ? 'Learned' : 'Mark as Learned';
+            learnBtn.classList.toggle('learned', isLearned);
+
+            // Update card
+            updateWordCardStatus(currentWord.simplified);
+        });
+
+        function updateWordCardStatus(simplified) {
+            document.querySelectorAll('.word-card-item').forEach(card => {
+                if (card.dataset.simplified === simplified) {
+                    card.classList.toggle('learned', learnedWords.includes(simplified));
+                }
+            });
+        }
+
+        // Render functions
+        function renderWordCards(words, containerId, type) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = words.map(word => {
+                const isLearned = learnedWords.includes(word.simplified);
+                return `
+                    <div class="word-card-item ${type} ${isLearned ? 'learned' : ''}"
+                         data-simplified="${word.simplified}"
+                         data-word='${JSON.stringify(word)}'>
+                        <div class="word-main">
+                            <div>
+                                <div class="word-chinese">${word.traditional || word.simplified}</div>
+                                <div class="word-pinyin">${word.pinyin}</div>
+                                <div class="word-english">${word.english}</div>
+                            </div>
+                            <button class="word-audio-btn" data-audio="${word.audio}">
+                                <span>&#128266;</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Add click handlers
+            container.querySelectorAll('.word-card-item').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('.word-audio-btn')) {
+                        e.stopPropagation();
+                        const audio = e.target.closest('.word-audio-btn').dataset.audio;
+                        if (audio) playAudio(audio);
+                        return;
+                    }
+                    const word = JSON.parse(card.dataset.word);
+                    openWordModal(word);
+                });
+            });
+        }
+
+        function renderPhrases(phrases, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = phrases.map(phrase => `
+                <div class="phrase-card">
+                    <div class="phrase-chinese">${phrase.chinese}</div>
+                    <div class="phrase-pinyin">${phrase.pinyin}</div>
+                    <div class="phrase-english">${phrase.english}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderDictation(words, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = words.map((word, i) => `
+                <div class="dictation-card" data-index="${i}">
+                    <div class="dictation-number">${i + 1}</div>
+                    <div class="dictation-hidden">???</div>
+                    <div class="dictation-chinese" style="display: none;">${word.chinese}</div>
+                    <div class="dictation-pinyin" style="display: none;">${word.pinyin}</div>
+                </div>
+            `).join('');
+
+            // Toggle reveal on click
+            container.querySelectorAll('.dictation-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('revealed');
+                    const hidden = card.querySelector('.dictation-hidden');
+                    const chinese = card.querySelector('.dictation-chinese');
+                    const pinyin = card.querySelector('.dictation-pinyin');
+
+                    if (card.classList.contains('revealed')) {
+                        hidden.style.display = 'none';
+                        chinese.style.display = 'block';
+                        pinyin.style.display = 'block';
+                    } else {
+                        hidden.style.display = 'block';
+                        chinese.style.display = 'none';
+                        pinyin.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        function renderOral(oralData, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = `
+                <div class="oral-header">
+                    <div class="oral-topic">${oralData.topic}</div>
+                    <div class="oral-topic-english">${oralData.topicEnglish}</div>
+                </div>
+                <div class="oral-content">
+                    <div class="oral-section">
+                        <div class="oral-label">${oralData.sections.description.label}</div>
+                        <div class="oral-chinese">${oralData.sections.description.chinese}</div>
+                        <div class="oral-english">${oralData.sections.description.english}</div>
+                    </div>
+
+                    <div class="forif-grid">
+                        <div class="forif-card">
+                            <div class="forif-label">${oralData.sections.feeling.label} (${oralData.sections.feeling.labelEnglish})</div>
+                            <div class="oral-chinese">${oralData.sections.feeling.chinese}</div>
+                            <div class="oral-english">${oralData.sections.feeling.english}</div>
+                        </div>
+                        <div class="forif-card">
+                            <div class="forif-label">${oralData.sections.opinion.label} (${oralData.sections.opinion.labelEnglish})</div>
+                            <div class="oral-chinese">${oralData.sections.opinion.chinese}</div>
+                            <div class="oral-english">${oralData.sections.opinion.english}</div>
+                        </div>
+                        <div class="forif-card">
+                            <div class="forif-label">${oralData.sections.reason.label} (${oralData.sections.reason.labelEnglish})</div>
+                            <div class="oral-chinese">${oralData.sections.reason.chinese}</div>
+                            <div class="oral-english">${oralData.sections.reason.english}</div>
+                        </div>
+                        <div class="forif-card">
+                            <div class="forif-label">${oralData.sections.ifStatement.label} (${oralData.sections.ifStatement.labelEnglish})</div>
+                            <div class="oral-chinese">${oralData.sections.ifStatement.chinese}</div>
+                            <div class="oral-english">${oralData.sections.ifStatement.english}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Load lesson data
+        async function loadLesson() {
+            try {
+                const response = await fetch('data/lessons/lesson2.json');
+                lessonData = await response.json();
+
+                // Update header
+                document.getElementById('lesson-title').textContent = `第${lessonData.lesson}课：${lessonData.title}`;
+                document.getElementById('lesson-subtitle').textContent = lessonData.titleEnglish;
+                document.title = `第${lessonData.lesson}课 - ${lessonData.title}`;
+
+                // Render sections
+                if (lessonData.sections.shiXieZiCi) {
+                    renderWordCards(lessonData.sections.shiXieZiCi.words, 'shiXieZiCi-grid', 'write');
+                }
+                if (lessonData.sections.shiDuZiCi) {
+                    renderWordCards(lessonData.sections.shiDuZiCi.words, 'shiDuZiCi-grid', 'read');
+                }
+                if (lessonData.sections.ciYuDaPei) {
+                    renderPhrases(lessonData.sections.ciYuDaPei.phrases, 'ciYuDaPei-grid');
+                }
+                if (lessonData.sections.tingXieCiYu) {
+                    renderDictation(lessonData.sections.tingXieCiYu.words, 'tingXieCiYu-grid');
+                }
+                if (lessonData.sections.kanTuShuoHua) {
+                    renderOral(lessonData.sections.kanTuShuoHua, 'kanTuShuoHua-content');
+                }
+
+            } catch (error) {
+                console.error('Error loading lesson:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadLesson);
+    </script>
+</body>
+</html>
