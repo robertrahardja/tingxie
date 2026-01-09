@@ -189,10 +189,20 @@ element.classList.add('covered');            // Avoid
 ## Common Tasks
 
 ### Adding New Vocabulary Words
-1. Edit `data/tingxie/tingxie_vocabulary.json`
-2. Add simplified, traditional, pinyin, English, audio path
-3. Set `important: true` for key words
-4. Run `python3 generate_audio.py` to download MP3 files
+
+**IMPORTANT:** See `ADDING_WORDS.md` for complete step-by-step guide.
+
+Quick overview:
+1. Add new row to `data/tingxie/tingxie_vocabulary.json` with next available row number
+2. For "latest words": Update `CONSTANTS.VOCABULARY.LATEST_ROW_NUMBER` in `js/constants.js` to point to new row
+3. Generate audio: `python3 download_google_audio.py` (downloads all new word audio files)
+4. Deploy: `git add . && git commit -m "..." && git push && npx wrangler deploy`
+
+**Key Points:**
+- Each word set is a separate "row" in the vocabulary JSON
+- The "latest words" app displays whichever row is configured in `js/constants.js`
+- This explicit configuration prevents confusion about which words show where
+- Audio files must match the filenames referenced in the JSON
 
 ### Self-Assessment System
 Students can mark words as known (会 ✓) or unknown (不会 ✗):

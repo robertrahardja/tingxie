@@ -14,36 +14,67 @@ class LatestApp extends BaseApp {
     }
 
     async init() {
-        console.log('Initializing LatestApp...');
+        console.log('Initializing LatestApp (Latest Words Practice)...');
 
         // Load vocabulary data from API
         if (!await this.loadData()) {
+            console.error('Failed to load vocabulary data');
             return;
         }
 
-        // Extract only row 4 (the 12 new words)
+        // Extract latest words from configured row
+        // See constants.js VOCABULARY.LATEST_ROW_NUMBER to update which row is "latest"
         this.allWords = this.extractLatestWords();
-        console.log(`Loaded ${this.allWords.length} latest words`);
+        if (this.allWords.length === 0) {
+            console.error('No latest words found to display');
+            return;
+        }
 
-        // Load student progress
+        // Load student progress from cloud
         const studentId = this.cloudSync.getOrCreateStudentId();
         await this.loadProgress(studentId);
 
-        // Set up UI
+        // Set up UI and display first word
         this.setupUI();
         this.updateProgress();
         this.showWord();
 
-        console.log('LatestApp initialized');
+        console.log('LatestApp initialized successfully');
     }
 
     extractLatestWords() {
-        // Return only row 4 (the last row with 12 new words)
-        if (this.data && this.data.vocabulary && this.data.vocabulary.length > 0) {
-            const lastRow = this.data.vocabulary[this.data.vocabulary.length - 1];
-            return lastRow.words || [];
+        /**
+         * Loads the current set of "latest words" for students to practice.
+         *
+         * The latest words are stored in a specific row of the vocabulary data.
+         * This row number is configured in CONSTANTS.VOCABULARY.LATEST_ROW_NUMBER
+         *
+         * When new words need to be added:
+         * 1. Add a new row to data/tingxie/tingxie_vocabulary.json with incrementing row number
+         * 2. Update CONSTANTS.VOCABULARY.LATEST_ROW_NUMBER to point to that row
+         * 3. Deploy the changes
+         *
+         * This explicit approach prevents confusion about which words are "latest"
+         * and makes it clear where to update the configuration.
+         */
+        if (!this.data || !this.data.vocabulary) {
+            console.warn('No vocabulary data available');
+            return [];
         }
-        return [];
+
+        const latestRowNumber = CONSTANTS.VOCABULARY.LATEST_ROW_NUMBER;
+        const latestRow = this.data.vocabulary.find(row => row.row === latestRowNumber);
+
+        if (!latestRow) {
+            console.error(
+                `Latest words row not found. Expected row ${latestRowNumber} ` +
+                `in tingxie_vocabulary.json. Available rows: ${this.data.vocabulary.map(r => r.row).join(', ')}`
+            );
+            return [];
+        }
+
+        console.log(`Loaded ${latestRow.words.length} words from row ${latestRowNumber}`);
+        return latestRow.words || [];
     }
 
     async loadProgress(studentId) {

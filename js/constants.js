@@ -27,6 +27,16 @@ export const CONSTANTS = {
     // Data paths
     DATA_PATH: 'data/tingxie/tingxie_vocabulary.json',
 
+    // Vocabulary row configuration
+    // IMPORTANT: Update these values when adding new word sets
+    // To add new words:
+    // 1. Add new row to tingxie_vocabulary.json with incrementing row number
+    // 2. Update LATEST_ROW_NUMBER to point to the new row
+    VOCABULARY: {
+        LATEST_ROW_NUMBER: 76,  // Current "latest words" set - update when adding new words
+        REVIEW_MODE_NAME: 'UNKNOWN_WORDS'  // Filter mode for review
+    },
+
     // Error messages
     ERRORS: {
         DATA_LOAD: '无法加载词汇数据，请刷新页面重试',
