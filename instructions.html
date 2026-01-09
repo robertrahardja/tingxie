@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Instructions Glossary | 指示词汇</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         * {
             margin: 0;
@@ -367,22 +368,6 @@
             cursor: pointer;
         }
 
-        /* Back button */
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 8px;
-        }
-
-        .back-link:hover {
-            opacity: 1;
-        }
-
         /* Category filter */
         .category-filter {
             display: flex;
@@ -410,8 +395,24 @@
     </style>
 </head>
 <body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="lessons.html" class="nav-item">课文学习</a>
+                <a href="instructions.html" class="nav-item active">指示词汇</a>
+                <a href="koushi25.html" class="nav-item">口试练习</a>
+                <a href="dashboard.html" class="nav-item">家长看板</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="header">
-        <a href="lessons.html" class="back-link">← Back to Lessons</a>
         <h1>Instructions Glossary</h1>
         <p>指示词汇 | zhǐ shì cí huì</p>
     </div>
@@ -951,6 +952,31 @@
 
         // Initial render
         renderGlossary();
+
+        // Mobile navigation
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a nav item
+        navMenu.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
