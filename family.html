@@ -6,7 +6,6 @@
     <title>家庭称呼 - Family Relationships</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
-    <script src="js/family-tree.js"></script>
     <style>
         .family-container {
             max-width: 800px;
@@ -122,67 +121,21 @@
             font-size: 1.3rem;
         }
 
-        .tree-controls {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .tree-btn {
-            background: #4a90d9;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-
-        .tree-btn:hover {
-            background: #357abd;
-        }
-
-        .tree-btn:active {
-            background: #2d6aa3;
-        }
-
         .tree-container {
             display: flex;
             justify-content: center;
             overflow: auto;
             -webkit-overflow-scrolling: touch;
-            padding: 20px 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #f9f9f9;
-        }
-
-        #familyTreeCanvas {
-            cursor: grab;
-            border: 1px solid #ccc;
+            padding: 20px;
             background: white;
+            border-radius: 8px;
         }
 
-        #familyTreeCanvas:active {
-            cursor: grabbing;
-        }
-
-        .scroll-hint {
-            text-align: center;
-            color: #666;
-            font-size: 0.85rem;
-            margin-top: 10px;
-            font-style: italic;
-        }
-
-        @media (max-width: 600px) {
-            .scroll-hint {
-                color: #ff6b6b;
-                font-weight: 600;
-            }
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
         }
 
         .note {
@@ -246,21 +199,94 @@
         <!-- Family Tree Visualization -->
         <div class="tree-section">
             <h2>🌳 家庭关系图 Family Tree</h2>
-            <div class="tree-controls">
-                <button onclick="zoomIn()" class="tree-btn">放大 Zoom In (+)</button>
-                <button onclick="zoomOut()" class="tree-btn">缩小 Zoom Out (-)</button>
-                <button onclick="resetZoom()" class="tree-btn">重置 Reset</button>
-            </div>
             <div class="tree-container">
-                <canvas id="familyTreeCanvas"
-                        onmousedown="handleMouseDown(event)"
-                        onmousemove="handleMouseMove(event)"
-                        onmouseup="handleMouseUp(event)"
-                        ontouchstart="handleTouchStart(event)"
-                        ontouchmove="handleTouchMove(event)"
-                        ontouchend="handleTouchEnd(event)"></canvas>
+                <div class="mermaid">
+flowchart TD
+    %% Paternal Grandparents
+    爷爷["👴 爷爷<br/>Paternal Grandfather"]:::male
+    奶奶["👵 奶奶<br/>Paternal Grandmother"]:::female
+
+    %% Maternal Grandparents
+    外公["👴 外公<br/>Maternal Grandfather"]:::male
+    外婆["👵 外婆<br/>Maternal Grandmother"]:::female
+
+    %% Parents
+    爸爸["👨 爸爸<br/>Father"]:::male
+    妈妈["👩 妈妈<br/>Mother"]:::female
+
+    %% Paternal Uncles/Aunts
+    伯伯["👨 伯伯<br/>Dad's Older Brother"]:::male
+    叔叔["👨 叔叔<br/>Dad's Younger Brother"]:::male
+    姑妈["👩 姑妈<br/>Dad's Sister"]:::female
+
+    %% Maternal Uncles/Aunts
+    舅舅["👨 舅舅<br/>Mom's Brother"]:::male
+    姨妈["👩 姨妈<br/>Mom's Older Sister"]:::female
+    阿姨["👩 阿姨<br/>Mom's Younger Sister"]:::female
+
+    %% You and Siblings
+    你["🟡 你/我<br/>YOU"]:::highlight
+    哥哥["👦 哥哥<br/>Older Brother"]:::male
+    姐姐["👧 姐姐<br/>Older Sister"]:::female
+    弟弟["👦 弟弟<br/>Younger Brother"]:::male
+    妹妹["👧 妹妹<br/>Younger Sister"]:::female
+
+    %% Your Spouse and Children
+    妻子["💑 妻子/老婆<br/>Wife"]:::female
+    儿子["👦 儿子<br/>Son"]:::male
+    女儿["👧 女儿<br/>Daughter"]:::female
+
+    %% Connections - Grandparents to Parents
+    爷爷 --> 爸爸
+    奶奶 --> 爸爸
+    外公 --> 妈妈
+    外婆 --> 妈妈
+
+    %% Parents to You
+    爸爸 --> 你
+    妈妈 --> 你
+
+    %% Uncle/Aunt connections
+    爷爷 --> 伯伯
+    奶奶 --> 伯伯
+    爷爷 --> 叔叔
+    奶奶 --> 叔叔
+    爷爷 --> 姑妈
+    奶奶 --> 姑妈
+
+    外公 --> 舅舅
+    外婆 --> 舅舅
+    外公 --> 姨妈
+    外婆 --> 姨妈
+    外公 --> 阿姨
+    外婆 --> 阿姨
+
+    %% Siblings
+    爸爸 --> 哥哥
+    妈妈 --> 哥哥
+    爸爸 --> 姐姐
+    妈妈 --> 姐姐
+    爸爸 --> 弟弟
+    妈妈 --> 弟弟
+    爸爸 --> 妹妹
+    妈妈 --> 妹妹
+
+    %% Spouse connection (dashed)
+    你 -.- 妻子
+
+    %% Children
+    你 --> 儿子
+    妻子 --> 儿子
+    你 --> 女儿
+    妻子 --> 女儿
+
+    %% Styles
+    classDef male fill:#80ccff,stroke:#333,stroke-width:2px,color:#000
+    classDef female fill:#ffb3d9,stroke:#333,stroke-width:2px,color:#000
+    classDef highlight fill:#ffd700,stroke:#333,stroke-width:3px,color:#000
+                </div>
             </div>
-            <div class="scroll-hint">👆 Click and drag to move 点击拖动移动 | Blue=男 Male | Pink=女 Female | Gold=你 You</div>
+            <div class="scroll-hint" style="text-align: center; color: #666; font-size: 0.85rem; margin-top: 10px;">Blue=男 Male | Pink=女 Female | Gold=你 You</div>
         </div>
 
         <!-- Immediate Family -->
@@ -429,11 +455,18 @@
                 container.appendChild(createFamilyCard(item));
             });
         });
+    </script>
 
-        // Initialize family tree on page load
-        window.addEventListener('load', () => {
-            if (typeof drawTree === 'function') {
-                drawTree();
+    <!-- Mermaid.js for family tree visualization -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
             }
         });
     </script>
