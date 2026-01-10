@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家庭称呼 - Family Relationships</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .family-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px 20px 20px;
+        }
+
+        .family-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .family-header h1 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .family-header p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .category-section {
+            margin-bottom: 40px;
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .family-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .family-card:active {
+            transform: scale(0.98);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        .family-card .english {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .family-card .chinese {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .family-card .pinyin {
+            color: #4a90d9;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .family-card .audio-btn {
+            background: #4a90d9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            width: 100%;
+            transition: background 0.2s;
+        }
+
+        .family-card .audio-btn:hover {
+            background: #357abd;
+        }
+
+        .family-card .audio-btn:active {
+            background: #2d6aa3;
+        }
+
+        .tree-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #856404;
+        }
+
+        @media (max-width: 600px) {
+            .family-container {
+                padding: 70px 15px 20px 15px;
+            }
+
+            .family-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .family-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-header {
+                font-size: 1.1rem;
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="handwriting.html" class="nav-item">笔画练习</a>
+                <a href="family.html" class="nav-item active">家庭称呼</a>
+                <a href="instructions.html" class="nav-item">指示词汇</a>
+                <a href="dashboard.html" class="nav-item">家长看板</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="family-container">
+        <header class="family-header">
+            <h1>家庭称呼 Family Relationships</h1>
+            <p>点击卡片听发音 Tap cards to hear pronunciation</p>
+        </header>
+
+        <div class="note">
+            <strong>💡 提示 Tip:</strong> Chinese family terms are very specific about age order and which side of the family. Pay attention to these details!
+        </div>
+
+        <!-- Immediate Family -->
+        <div class="category-section">
+            <div class="category-header">👨‍👩‍👧‍👦 Your Immediate Family 直系亲属</div>
+            <div class="family-grid" id="immediate-family"></div>
+        </div>
+
+        <!-- Grandparents -->
+        <div class="category-section">
+            <div class="category-header">👴👵 Grandparents 祖父母/外祖父母</div>
+            <div class="family-grid" id="grandparents"></div>
+        </div>
+
+        <!-- Uncles -->
+        <div class="category-section">
+            <div class="category-header">👨 Uncles 伯伯/叔叔/舅舅</div>
+            <div class="family-grid" id="uncles"></div>
+        </div>
+
+        <!-- Aunts -->
+        <div class="category-section">
+            <div class="category-header">👩 Aunts 姑妈/姨妈/伯母/婶婶</div>
+            <div class="family-grid" id="aunts"></div>
+        </div>
+
+        <!-- Cousins -->
+        <div class="category-section">
+            <div class="category-header">👫 Cousins 堂兄弟姐妹/表兄弟姐妹</div>
+            <div class="family-grid" id="cousins"></div>
+        </div>
+
+        <!-- Nephews & Nieces -->
+        <div class="category-section">
+            <div class="category-header">👶 Nephews & Nieces 侄子/侄女/外甥</div>
+            <div class="family-grid" id="nephews-nieces"></div>
+        </div>
+
+        <!-- In-Laws -->
+        <div class="category-section">
+            <div class="category-header">💑 In-Laws 姻亲</div>
+            <div class="family-grid" id="in-laws"></div>
+        </div>
+    </div>
+
+    <script type="module">
+        // Menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+
+        // Family data
+        const familyData = {
+            'immediate-family': [
+                { english: "Your Mom", chinese: "妈妈", pinyin: "māma" },
+                { english: "Your Dad", chinese: "爸爸", pinyin: "bàba" },
+                { english: "Your Wife", chinese: "妻子 / 老婆", pinyin: "qīzi / lǎopó" },
+                { english: "Your Husband", chinese: "丈夫 / 老公", pinyin: "zhàngfū / lǎogōng" },
+                { english: "Your older brother", chinese: "哥哥", pinyin: "gēgē" },
+                { english: "Your older sister", chinese: "姐姐", pinyin: "jiějiě" },
+                { english: "Your younger brother", chinese: "弟弟", pinyin: "dìdì" },
+                { english: "Your younger sister", chinese: "妹妹", pinyin: "mèimei" },
+                { english: "Your son", chinese: "儿子", pinyin: "érzi" },
+                { english: "Your daughter", chinese: "女儿", pinyin: "nǚ'ér" }
+            ],
+            'grandparents': [
+                { english: "Grandmother (Dad's side)", chinese: "奶奶", pinyin: "nǎinai" },
+                { english: "Grandmother (Mom's side)", chinese: "外婆", pinyin: "wàipó" },
+                { english: "Grandfather (Dad's side)", chinese: "爷爷", pinyin: "yéyé" },
+                { english: "Grandfather (Mom's side)", chinese: "外公", pinyin: "wàigōng" }
+            ],
+            'uncles': [
+                { english: "Dad's older brother", chinese: "伯伯", pinyin: "bóbo" },
+                { english: "Dad's younger brother", chinese: "叔叔", pinyin: "shūshu" },
+                { english: "Dad's sister's husband", chinese: "姑夫", pinyin: "gūfū" },
+                { english: "Mom's brother", chinese: "舅舅", pinyin: "jiùjiu" }
+            ],
+            'aunts': [
+                { english: "Dad's older sister", chinese: "姑妈", pinyin: "gūmā" },
+                { english: "Dad's younger sister", chinese: "姑姑", pinyin: "gūgū" },
+                { english: "Dad's older brother's wife", chinese: "伯母", pinyin: "bómǔ" },
+                { english: "Dad's younger brother's wife", chinese: "婶婶", pinyin: "shěnshěn" },
+                { english: "Mom's older sister", chinese: "姨妈", pinyin: "yímā" },
+                { english: "Mom's younger sister", chinese: "阿姨", pinyin: "āyí" },
+                { english: "Mom's brother's wife", chinese: "舅母", pinyin: "jiùmǔ" }
+            ],
+            'cousins': [
+                { english: "Dad's sibling's son (older)", chinese: "堂兄", pinyin: "táng xiōng" },
+                { english: "Dad's sibling's son (younger)", chinese: "堂弟", pinyin: "táng dì" },
+                { english: "Dad's sibling's daughter (older)", chinese: "堂姐", pinyin: "táng jiě" },
+                { english: "Dad's sibling's daughter (younger)", chinese: "堂妹", pinyin: "táng mèi" },
+                { english: "Mom's sibling's son (older)", chinese: "表哥", pinyin: "biǎo gē" },
+                { english: "Mom's sibling's son (younger)", chinese: "表弟", pinyin: "biǎo dì" },
+                { english: "Mom's sibling's daughter (older)", chinese: "表姐", pinyin: "biǎo jiě" },
+                { english: "Mom's sibling's daughter (younger)", chinese: "表妹", pinyin: "biǎo mèi" }
+            ],
+            'nephews-nieces': [
+                { english: "Brother's son", chinese: "侄子", pinyin: "zhízi" },
+                { english: "Sister's son", chinese: "外甥", pinyin: "wàishēng" },
+                { english: "Brother's daughter", chinese: "侄女", pinyin: "zhínǚ" },
+                { english: "Sister's daughter", chinese: "外甥女", pinyin: "wàishengnǚ" }
+            ],
+            'in-laws': [
+                { english: "Husband's father", chinese: "公公", pinyin: "gōnggong" },
+                { english: "Wife's father", chinese: "岳父", pinyin: "yuèfù" },
+                { english: "Husband's mother", chinese: "婆婆", pinyin: "pópo" },
+                { english: "Wife's mother", chinese: "岳母", pinyin: "yuèmǔ" },
+                { english: "Older sister's husband", chinese: "姐夫", pinyin: "jiěfū" },
+                { english: "Younger sister's husband", chinese: "妹夫", pinyin: "mèifū" },
+                { english: "Older brother's wife", chinese: "嫂子", pinyin: "sǎozi" },
+                { english: "Younger brother's wife", chinese: "弟妇", pinyin: "dìfù" }
+            ]
+        };
+
+        // Audio player
+        const audioPlayer = new Audio();
+
+        function playAudio(chinese) {
+            // Extract first word if there are multiple options (e.g., "妻子 / 老婆" -> "妻子")
+            const firstWord = chinese.split('/')[0].trim();
+            const audioPath = `audio/${firstWord}.mp3`;
+
+            audioPlayer.src = audioPath;
+            audioPlayer.play().catch(err => {
+                console.log('Audio not available:', audioPath);
+            });
+        }
+
+        function createFamilyCard(data) {
+            const card = document.createElement('div');
+            card.className = 'family-card';
+
+            card.innerHTML = `
+                <div class="english">${data.english}</div>
+                <div class="chinese">${data.chinese}</div>
+                <div class="pinyin">${data.pinyin}</div>
+                <button class="audio-btn">🔊 听发音 Play Audio</button>
+            `;
+
+            const audioBtn = card.querySelector('.audio-btn');
+            audioBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                playAudio(data.chinese);
+            });
+
+            card.addEventListener('click', () => {
+                playAudio(data.chinese);
+            });
+
+            return card;
+        }
+
+        // Render all categories
+        Object.keys(familyData).forEach(categoryId => {
+            const container = document.getElementById(categoryId);
+            familyData[categoryId].forEach(item => {
+                container.appendChild(createFamilyCard(item));
+            });
+        });
+    </script>
+</body>
+</html>
