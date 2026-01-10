@@ -156,18 +156,22 @@
             background: white;
             border-radius: 8px;
             width: 100%;
+            max-width: 100%;
         }
 
         .mermaid {
-            width: 100%;
+            display: inline-block;
+            min-width: 100%;
             min-height: 600px;
             transform-origin: top left;
             transition: transform 0.2s ease;
         }
 
         .mermaid svg {
-            max-width: none;
-            height: auto;
+            display: block;
+            max-width: none !important;
+            width: auto !important;
+            height: auto !important;
         }
 
         @media (max-width: 768px) {
@@ -335,7 +339,7 @@ flowchart TD
                 </div>
             </div>
             <div class="scroll-hint" style="text-align: center; color: #666; font-size: 0.85rem; margin-top: 10px;">
-                👆 Scroll to view full diagram | Blue=男 Male | Pink=女 Female | Gold=你 You
+                👆 Click/Touch and drag to move | Zoom to enlarge | Blue=男 Male | Pink=女 Female | Gold=你 You
             </div>
         </div>
 
@@ -507,31 +511,102 @@ flowchart TD
         });
     </script>
 
-    <!-- Zoom controls for family tree -->
+    <!-- Zoom and Pan controls for family tree -->
     <script>
         let currentZoom = 1;
+        let panX = 0;
+        let panY = 0;
+        let isDragging = false;
+        let startX = 0;
+        let startY = 0;
+        let scrollLeft = 0;
+        let scrollTop = 0;
 
         function zoomIn() {
             currentZoom = Math.min(currentZoom + 0.2, 3);
-            applyZoom();
+            applyTransform();
         }
 
         function zoomOut() {
             currentZoom = Math.max(currentZoom - 0.2, 0.5);
-            applyZoom();
+            applyTransform();
         }
 
         function resetZoom() {
             currentZoom = 1;
-            applyZoom();
-        }
+            panX = 0;
+            panY = 0;
+            applyTransform();
 
-        function applyZoom() {
-            const mermaidDiv = document.querySelector('.mermaid');
-            if (mermaidDiv) {
-                mermaidDiv.style.transform = `scale(${currentZoom})`;
+            // Reset scroll position
+            const container = document.querySelector('.tree-container');
+            if (container) {
+                container.scrollLeft = 0;
+                container.scrollTop = 0;
             }
         }
+
+        function applyTransform() {
+            const mermaidDiv = document.querySelector('.mermaid');
+            if (mermaidDiv) {
+                mermaidDiv.style.transform = `translate(${panX}px, ${panY}px) scale(${currentZoom})`;
+            }
+        }
+
+        // Touch and mouse drag support
+        window.addEventListener('load', () => {
+            const container = document.querySelector('.tree-container');
+            const mermaidDiv = document.querySelector('.mermaid');
+
+            if (!container || !mermaidDiv) return;
+
+            // Mouse events
+            mermaidDiv.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                mermaidDiv.style.cursor = 'grabbing';
+                startX = e.pageX - panX;
+                startY = e.pageY - panY;
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                panX = e.pageX - startX;
+                panY = e.pageY - startY;
+                applyTransform();
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    mermaidDiv.style.cursor = 'grab';
+                }
+            });
+
+            // Touch events
+            mermaidDiv.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1) {
+                    isDragging = true;
+                    startX = e.touches[0].pageX - panX;
+                    startY = e.touches[0].pageY - panY;
+                }
+            });
+
+            mermaidDiv.addEventListener('touchmove', (e) => {
+                if (!isDragging || e.touches.length !== 1) return;
+                e.preventDefault();
+                panX = e.touches[0].pageX - startX;
+                panY = e.touches[0].pageY - startY;
+                applyTransform();
+            });
+
+            mermaidDiv.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            // Set initial cursor
+            mermaidDiv.style.cursor = 'grab';
+        });
     </script>
 
     <!-- Mermaid.js for family tree visualization -->
