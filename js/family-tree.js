@@ -1,5 +1,5 @@
-var rowHeight = 50;
-var columnWidth = 80;
+var rowHeight = 80;
+var columnWidth = 120;
 var boxHeight = 60;
 var boxWidth = 60;
 var circleRadius = 15; // 1/4 of original (was 30)
