@@ -122,20 +122,33 @@
         }
 
         .tree-container {
-            display: flex;
-            justify-content: center;
             overflow: auto;
             -webkit-overflow-scrolling: touch;
             padding: 20px;
             background: white;
             border-radius: 8px;
+            width: 100%;
         }
 
         .mermaid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 400px;
+            width: 100%;
+            min-height: 600px;
+        }
+
+        .mermaid svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .tree-container {
+                overflow-x: auto;
+                overflow-y: auto;
+            }
+
+            .mermaid {
+                min-height: 500px;
+            }
         }
 
         .note {
@@ -286,7 +299,9 @@ flowchart TD
     classDef highlight fill:#ffd700,stroke:#333,stroke-width:3px,color:#000
                 </div>
             </div>
-            <div class="scroll-hint" style="text-align: center; color: #666; font-size: 0.85rem; margin-top: 10px;">Blue=男 Male | Pink=女 Female | Gold=你 You</div>
+            <div class="scroll-hint" style="text-align: center; color: #666; font-size: 0.85rem; margin-top: 10px;">
+                👆 Scroll to view full diagram | Blue=男 Male | Pink=女 Female | Gold=你 You
+            </div>
         </div>
 
         <!-- Immediate Family -->
@@ -464,9 +479,16 @@ flowchart TD
             startOnLoad: true,
             theme: 'default',
             flowchart: {
-                useMaxWidth: true,
+                useMaxWidth: false,
                 htmlLabels: true,
-                curve: 'basis'
+                curve: 'basis',
+                nodeSpacing: 100,
+                rankSpacing: 100,
+                padding: 20
+            },
+            themeVariables: {
+                fontSize: '18px',
+                fontFamily: 'Arial, sans-serif'
             }
         });
     </script>
