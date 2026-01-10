@@ -1,8 +1,6 @@
 var rowHeight = 80;
 var columnWidth = 120;
-var boxHeight = 60;
-var boxWidth = 60;
-var circleRadius = 15; // 1/4 of original (was 30)
+var circleRadius = 15;
 var canvasPadding = 30;
 var zoomLevel = 1;
 var translationOffsetX = 0;
@@ -11,13 +9,19 @@ var overallTranslationOffsetX = 0;
 var overallTranslationOffsetY = 0;
 var clickLocationX = 0;
 var clickLocationY = 0;
-var lastTranslationX = 0;
-var lastTranslationY = 0;
 var maleColor = "#80ccff";
 var femaleColor = "#ffb3d9";
 var numAncestorGenerations = 1;
 var originX = columnWidth + canvasPadding;
 var originY = rowHeight * 2 + canvasPadding;
+
+// Single source of truth for position calculations
+function getPersonPosition(colOffset, rowOffset) {
+  return {
+    x: originX + (colOffset * columnWidth) + (columnWidth / 2),
+    y: originY + (rowOffset * rowHeight) + (rowHeight / 2)
+  };
+}
 
 var family = {
   person: {name: "你/我", gender: "Male", notes: "You"},
@@ -153,108 +157,89 @@ function drawTree() {
   ctx.lineWidth = 2;
   ctx.strokeStyle = "#555555";
 
-  drawChildrenConnectors(ctx);
-  drawAncestors(ctx, family, 0, 0);
-
-  // Draw your siblings
-  family.siblings.forEach(function (sibling, i) {
-    drawSiblingConnector(ctx, originX + (columnWidth / 2), originY + (rowHeight / 2), i + 1);
-  });
-
-  if (family.families[0].spouse) {
-    drawSpouseConnector(ctx, originX + (columnWidth / 2), originY + (rowHeight / 2));
+  // Draw grandparents
+  if (family.father && family.father.father) {
+    drawPerson(ctx, -1, -4, maleColor, family.father.father);
+  }
+  if (family.father && family.father.mother) {
+    drawPerson(ctx, -1, -3, femaleColor, family.father.mother);
+  }
+  if (family.mother && family.mother.father) {
+    drawPerson(ctx, 1, -4, maleColor, family.mother.father);
+  }
+  if (family.mother && family.mother.mother) {
+    drawPerson(ctx, 1, -3, femaleColor, family.mother.mother);
   }
 
-  // person (you)
-  drawPerson(ctx, originX, originY, 0, 0, "#ffd700", family.person);
-
-  // parents
+  // Draw connectors from grandparents to parents
   if (family.father) {
-    drawPerson(ctx, originX, originY, -1, -2, maleColor, family.father);
+    var fatherPos = getPersonPosition(-1, -2);
+    var patGrandpaPos = getPersonPosition(-1, -4);
+    var patGrandmaPos = getPersonPosition(-1, -3);
+    drawVerticalConnector(ctx, patGrandpaPos, patGrandmaPos);
+    drawVerticalConnector(ctx, patGrandmaPos, fatherPos);
   }
   if (family.mother) {
-    drawPerson(ctx, originX, originY, 1, -2, femaleColor, family.mother);
+    var motherPos = getPersonPosition(1, -2);
+    var matGrandpaPos = getPersonPosition(1, -4);
+    var matGrandmaPos = getPersonPosition(1, -3);
+    drawVerticalConnector(ctx, matGrandpaPos, matGrandmaPos);
+    drawVerticalConnector(ctx, matGrandmaPos, motherPos);
   }
 
-  // YOUR siblings and their families
-  family.siblings.forEach(function (sibling, i) {
-    var color = (sibling.gender === "Male") ? maleColor : femaleColor;
-    drawPerson(ctx, originX, originY, i + 1, 0, color, sibling);
+  // Draw parents
+  if (family.father) {
+    drawPerson(ctx, -1, -2, maleColor, family.father);
+  }
+  if (family.mother) {
+    drawPerson(ctx, 1, -2, femaleColor, family.mother);
+  }
 
-    // Draw sibling's spouse if exists
-    if (sibling.families && sibling.families[0] && sibling.families[0].spouse) {
-      var spouseColor = (sibling.families[0].spouse.gender === "Male") ? maleColor : femaleColor;
-      drawPerson(ctx, originX, originY, i + 1, 1, spouseColor, sibling.families[0].spouse);
-      // Draw connector between sibling and spouse
-      var siblingX = originX + (columnWidth / 2) + ((i + 1) * columnWidth);
-      var siblingY = originY + (rowHeight / 2);
-      ctx.save();
-      ctx.beginPath();
-      ctx.setLineDash([3, 3]);
-      ctx.moveTo(siblingX, siblingY);
-      ctx.lineTo(siblingX, siblingY + rowHeight);
-      ctx.stroke();
-      ctx.restore();
+  // Draw connector from parents to you
+  if (family.father && family.mother) {
+    var fatherPos = getPersonPosition(-1, -2);
+    var motherPos = getPersonPosition(1, -2);
+    var youPos = getPersonPosition(0, 0);
 
-      // Draw sibling's children if exist
-      if (sibling.families[0].children) {
-        sibling.families[0].children.forEach(function(child, childIndex) {
-          var childColor = (child.gender === "Male") ? maleColor : femaleColor;
-          drawPerson(ctx, originX, originY, i + 1, 2 + childIndex, childColor, child);
-          // Draw connector from spouse to child
-          var spouseY = siblingY + rowHeight;
-          ctx.beginPath();
-          ctx.moveTo(siblingX, spouseY + (rowHeight / 2));
-          ctx.lineTo(siblingX, spouseY + (rowHeight / 2) + rowHeight);
-          ctx.stroke();
-        });
-      }
-    }
-  });
+    // Horizontal line between parents
+    drawHorizontalConnector(ctx, fatherPos, motherPos);
+
+    // Vertical line from midpoint to you
+    var midParentX = (fatherPos.x + motherPos.x) / 2;
+    ctx.beginPath();
+    ctx.moveTo(midParentX, fatherPos.y);
+    ctx.lineTo(midParentX, youPos.y);
+    ctx.stroke();
+  }
 
   // FATHER'S siblings (uncles and aunts on father's side)
   if (family.father && family.father.siblings) {
     family.father.siblings.forEach(function (uncle, i) {
-      var uncleColumn = -2 - i; // Position to the left of father
+      var uncleColumn = -2 - i;
       var color = (uncle.gender === "Male") ? maleColor : femaleColor;
-      drawPerson(ctx, originX, originY, uncleColumn, -2, color, uncle);
+      drawPerson(ctx, uncleColumn, -2, color, uncle);
 
-      // Draw connector from grandparents level to uncle/aunt
-      var fatherX = originX + (-1 * columnWidth) + (columnWidth / 2);
-      var fatherY = originY + (-2 * rowHeight) + (rowHeight / 2);
-      var uncleX = originX + (uncleColumn * columnWidth) + (columnWidth / 2);
-      ctx.beginPath();
-      ctx.moveTo(fatherX, fatherY);
-      ctx.lineTo(uncleX, fatherY);
-      ctx.stroke();
+      // Draw horizontal connector at parent level
+      var fatherPos = getPersonPosition(-1, -2);
+      var unclePos = getPersonPosition(uncleColumn, -2);
+      drawHorizontalConnector(ctx, fatherPos, unclePos);
 
       // Draw uncle's/aunt's spouse if exists
       if (uncle.families && uncle.families[0] && uncle.families[0].spouse) {
         var spouseColor = (uncle.families[0].spouse.gender === "Male") ? maleColor : femaleColor;
-        drawPerson(ctx, originX, originY, uncleColumn, -1, spouseColor, uncle.families[0].spouse);
-
-        // Draw connector between uncle and spouse
-        var uncleY = originY + (-2 * rowHeight) + (rowHeight / 2);
-        ctx.save();
-        ctx.beginPath();
-        ctx.setLineDash([3, 3]);
-        ctx.moveTo(uncleX, uncleY);
-        ctx.lineTo(uncleX, uncleY + rowHeight);
-        ctx.stroke();
-        ctx.restore();
+        drawPerson(ctx, uncleColumn, -1, spouseColor, uncle.families[0].spouse);
+        drawSpouseConnector(ctx, getPersonPosition(uncleColumn, -2), getPersonPosition(uncleColumn, -1));
 
         // Draw uncle's/aunt's children (堂 cousins) if exist
         if (uncle.families[0].children) {
+          var spousePos = getPersonPosition(uncleColumn, -1);
           uncle.families[0].children.forEach(function(cousin, cousinIndex) {
             var cousinColor = (cousin.gender === "Male") ? maleColor : femaleColor;
-            drawPerson(ctx, originX, originY, uncleColumn, cousinIndex, cousinColor, cousin);
+            drawPerson(ctx, uncleColumn, cousinIndex, cousinColor, cousin);
 
-            // Draw connector from spouse to cousin
-            var spouseY = uncleY + rowHeight;
-            ctx.beginPath();
-            ctx.moveTo(uncleX, spouseY + (rowHeight / 2));
-            ctx.lineTo(uncleX, spouseY + (rowHeight / 2) + rowHeight);
-            ctx.stroke();
+            // Connector from spouse to child
+            var cousinPos = getPersonPosition(uncleColumn, cousinIndex);
+            drawVerticalConnector(ctx, spousePos, cousinPos);
           });
         }
       }
@@ -264,125 +249,111 @@ function drawTree() {
   // MOTHER'S siblings (uncles and aunts on mother's side)
   if (family.mother && family.mother.siblings) {
     family.mother.siblings.forEach(function (aunt, i) {
-      var auntColumn = 2 + i; // Position to the right of mother
+      var auntColumn = 2 + i;
       var color = (aunt.gender === "Male") ? maleColor : femaleColor;
-      drawPerson(ctx, originX, originY, auntColumn, -2, color, aunt);
+      drawPerson(ctx, auntColumn, -2, color, aunt);
 
-      // Draw connector from grandparents level to uncle/aunt
-      var motherX = originX + (1 * columnWidth) + (columnWidth / 2);
-      var motherY = originY + (-2 * rowHeight) + (rowHeight / 2);
-      var auntX = originX + (auntColumn * columnWidth) + (columnWidth / 2);
-      ctx.beginPath();
-      ctx.moveTo(motherX, motherY);
-      ctx.lineTo(auntX, motherY);
-      ctx.stroke();
+      // Draw horizontal connector at parent level
+      var motherPos = getPersonPosition(1, -2);
+      var auntPos = getPersonPosition(auntColumn, -2);
+      drawHorizontalConnector(ctx, motherPos, auntPos);
 
       // Draw aunt's/uncle's spouse if exists
       if (aunt.families && aunt.families[0] && aunt.families[0].spouse) {
         var spouseColor = (aunt.families[0].spouse.gender === "Male") ? maleColor : femaleColor;
-        drawPerson(ctx, originX, originY, auntColumn, -1, spouseColor, aunt.families[0].spouse);
-
-        // Draw connector between aunt and spouse
-        var auntY = originY + (-2 * rowHeight) + (rowHeight / 2);
-        ctx.save();
-        ctx.beginPath();
-        ctx.setLineDash([3, 3]);
-        ctx.moveTo(auntX, auntY);
-        ctx.lineTo(auntX, auntY + rowHeight);
-        ctx.stroke();
-        ctx.restore();
+        drawPerson(ctx, auntColumn, -1, spouseColor, aunt.families[0].spouse);
+        drawSpouseConnector(ctx, getPersonPosition(auntColumn, -2), getPersonPosition(auntColumn, -1));
 
         // Draw aunt's/uncle's children (表 cousins) if exist
         if (aunt.families[0].children) {
+          var spousePos = getPersonPosition(auntColumn, -1);
           aunt.families[0].children.forEach(function(cousin, cousinIndex) {
             var cousinColor = (cousin.gender === "Male") ? maleColor : femaleColor;
-            drawPerson(ctx, originX, originY, auntColumn, cousinIndex, cousinColor, cousin);
+            drawPerson(ctx, auntColumn, cousinIndex, cousinColor, cousin);
 
-            // Draw connector from spouse to cousin
-            var spouseY = auntY + rowHeight;
-            ctx.beginPath();
-            ctx.moveTo(auntX, spouseY + (rowHeight / 2));
-            ctx.lineTo(auntX, spouseY + (rowHeight / 2) + rowHeight);
-            ctx.stroke();
+            // Connector from spouse to child
+            var cousinPos = getPersonPosition(auntColumn, cousinIndex);
+            drawVerticalConnector(ctx, spousePos, cousinPos);
           });
         }
       }
     });
   }
 
+  // person (you)
+  drawPerson(ctx, 0, 0, "#ffd700", family.person);
+
   // your spouse
   if (family.families[0].spouse) {
-    drawPerson(ctx, originX, originY, -1, 0, femaleColor, family.families[0].spouse);
+    drawPerson(ctx, -1, 0, femaleColor, family.families[0].spouse);
+    drawSpouseConnector(ctx, getPersonPosition(0, 0), getPersonPosition(-1, 0));
 
     // Draw in-laws if exist
     if (family.families[0].spouse.father) {
-      drawPerson(ctx, originX, originY, -2, -2, maleColor, family.families[0].spouse.father);
+      drawPerson(ctx, -2, -2, maleColor, family.families[0].spouse.father);
     }
     if (family.families[0].spouse.mother) {
-      drawPerson(ctx, originX, originY, -3, -2, femaleColor, family.families[0].spouse.mother);
+      drawPerson(ctx, -3, -2, femaleColor, family.families[0].spouse.mother);
     }
   }
 
+  // YOUR siblings and their families
+  family.siblings.forEach(function (sibling, i) {
+    var siblingColumn = i + 1;
+    var color = (sibling.gender === "Male") ? maleColor : femaleColor;
+    drawPerson(ctx, siblingColumn, 0, color, sibling);
+
+    // Horizontal connector to you
+    var youPos = getPersonPosition(0, 0);
+    var siblingPos = getPersonPosition(siblingColumn, 0);
+    drawHorizontalConnector(ctx, youPos, siblingPos);
+
+    // Draw sibling's spouse if exists
+    if (sibling.families && sibling.families[0] && sibling.families[0].spouse) {
+      var spouseColor = (sibling.families[0].spouse.gender === "Male") ? maleColor : femaleColor;
+      drawPerson(ctx, siblingColumn, 1, spouseColor, sibling.families[0].spouse);
+      drawSpouseConnector(ctx, siblingPos, getPersonPosition(siblingColumn, 1));
+
+      // Draw sibling's children if exist
+      if (sibling.families[0].children) {
+        var spousePos = getPersonPosition(siblingColumn, 1);
+        sibling.families[0].children.forEach(function(child, childIndex) {
+          var childColor = (child.gender === "Male") ? maleColor : femaleColor;
+          var childRow = 2 + childIndex;
+          drawPerson(ctx, siblingColumn, childRow, childColor, child);
+
+          // Connector from spouse to child
+          var childPos = getPersonPosition(siblingColumn, childRow);
+          drawVerticalConnector(ctx, spousePos, childPos);
+        });
+      }
+    }
+  });
+
   // your children
-  drawChildren(ctx);
+  if (family.families[0].children) {
+    var youPos = getPersonPosition(0, 0);
+    family.families[0].children.forEach(function (child, i) {
+      var color = (child.gender === "Male") ? maleColor : femaleColor;
+      var childRow = 2 + i;
+      drawPerson(ctx, 0, childRow, color, child);
+
+      // Connector from you to child
+      var childPos = getPersonPosition(0, childRow);
+      drawVerticalConnector(ctx, youPos, childPos);
+    });
+  }
+
   ctx.restore();
 }
 
-function adjustOriginBasedOnTreeData(numAncestorGenerations) {
-  originX = columnWidth + canvasPadding;
-  originY = (rowHeight * numAncestorGenerations) * 2 + canvasPadding;
-  var childCount = family.families[0].children.length;
-  var childrenPushingLeft = Math.floor(childCount / 2) - 1;
-  var columnsToShiftNonNegative = Math.max(childrenPushingLeft, 0);
-
-  // Account for father's siblings on the left
-  var fatherSiblings = family.father && family.father.siblings ? family.father.siblings.length : 0;
-
-  originX += (columnsToShiftNonNegative * columnWidth);
-  originX += (fatherSiblings * columnWidth); // Shift right to make room for father's siblings
-}
-
-function setCanvasDimensions(canvas, numAncestorGenerations) {
-  var numSiblings = family.siblings.length;
-  var numChildrenPerSide = Math.floor(family.families[0].children.length / 2);
-
-  // Count father's and mother's siblings
-  var fatherSiblings = family.father && family.father.siblings ? family.father.siblings.length : 0;
-  var motherSiblings = family.mother && family.mother.siblings ? family.mother.siblings.length : 0;
-
-  var leftSide = Math.max(numChildrenPerSide, 3, fatherSiblings + 2); // Account for in-laws and father's siblings
-  var rightSide = Math.max(numChildrenPerSide, numSiblings + 2, motherSiblings + 2); // Account for mother's siblings
-  var totalColumns = leftSide + 1 + rightSide;
-  canvas.width = totalColumns * columnWidth + canvasPadding * 2;
-
-  // Calculate height based on maximum depth (now includes parent's siblings and their children)
-  var maxDepth = numAncestorGenerations + 5; // grandparents + parents/uncles/aunts + you/siblings/cousins + children + nieces/nephews
-  canvas.height = (rowHeight * maxDepth) * 2 + canvasPadding * 2;
-
-  canvas.width *= zoomLevel;
-  canvas.height *= zoomLevel;
-}
-
-function drawChildren(ctx) {
-  var childColumn = 0;
-  family.families[0].children.forEach(function (child, i) {
-    var color = (child.gender === "Male") ? maleColor : femaleColor;
-    drawPerson(ctx, originX, originY, childColumn, 2, color, child);
-    childColumn *= -1;
-    if (childColumn <= 0) {
-      childColumn -= 1;
-    }
-  });
-}
-
-function drawPerson(ctx, x, y, colOffset, rowOffset, fill, person) {
+function drawPerson(ctx, colOffset, rowOffset, fill, person) {
+  var pos = getPersonPosition(colOffset, rowOffset);
   var personName = person.name;
-  var xOffset = colOffset * columnWidth + (columnWidth / 2);
-  var yOffset = rowOffset * rowHeight + (rowHeight / 2);
 
   // Draw circle
   ctx.beginPath();
-  ctx.arc(x + xOffset, y + yOffset, circleRadius, 0, Math.PI * 2, true);
+  ctx.arc(pos.x, pos.y, circleRadius, 0, Math.PI * 2, true);
   ctx.stroke();
   ctx.fillStyle = fill;
   ctx.fill();
@@ -390,112 +361,68 @@ function drawPerson(ctx, x, y, colOffset, rowOffset, fill, person) {
   // Draw name below circle
   ctx.fillStyle = "white";
   ctx.font = "bold 11px Arial";
-  ctx.fillText(personName, x + xOffset - ctx.measureText(personName).width / 2 + 1, y + yOffset + circleRadius + 12 + 1);
+  ctx.fillText(personName, pos.x - ctx.measureText(personName).width / 2 + 1, pos.y + circleRadius + 12 + 1);
   ctx.fillStyle = "black";
-  ctx.fillText(personName, x + xOffset - ctx.measureText(personName).width / 2, y + yOffset + circleRadius + 12);
+  ctx.fillText(personName, pos.x - ctx.measureText(personName).width / 2, pos.y + circleRadius + 12);
 
   person.coordinates = {
-    "X1": xOffset - circleRadius,
-    "Y1": yOffset - circleRadius,
-    "X2": xOffset + circleRadius,
-    "Y2": yOffset + circleRadius,
+    x: pos.x,
+    y: pos.y,
+    radius: circleRadius
   };
 }
 
-function drawChildrenConnectors(ctx) {
-  var childColumn = 0;
-  family.families[0].children.forEach(function (child, i) {
-    drawChildConnector(ctx, originX + (columnWidth / 2), originY + rowHeight, childColumn);
-    childColumn *= -1;
-    if (childColumn <= 0) {
-      childColumn -= 1;
-    }
-  });
-}
-
-function drawChildConnector(ctx, startX, startY, spacesOver) {
+function drawHorizontalConnector(ctx, startPos, endPos) {
   ctx.beginPath();
-  ctx.moveTo(startX, startY);
-  var totalColumnWidth = spacesOver * columnWidth;
-  ctx.bezierCurveTo(startX, startY + rowHeight, startX + totalColumnWidth, startY, startX + totalColumnWidth, startY + rowHeight);
+  ctx.moveTo(startPos.x, startPos.y);
+  ctx.lineTo(endPos.x, endPos.y);
   ctx.stroke();
 }
 
-function drawSiblingConnector(ctx, startX, startY, spacesOver) {
+function drawVerticalConnector(ctx, startPos, endPos) {
   ctx.beginPath();
-  ctx.moveTo(startX, startY);
-  var totalColumnWidth = spacesOver * columnWidth;
-  ctx.lineTo(startX + totalColumnWidth, startY);
+  ctx.moveTo(startPos.x, startPos.y);
+  ctx.lineTo(endPos.x, endPos.y);
   ctx.stroke();
 }
 
-function drawSpouseConnector(ctx, startX, startY) {
+function drawSpouseConnector(ctx, pos1, pos2) {
   ctx.save();
   ctx.beginPath();
   ctx.setLineDash([5, 5]);
-  ctx.moveTo(startX, startY);
-  var totalColumnWidth = -1 * columnWidth;
-  ctx.lineTo(startX + totalColumnWidth, startY);
+  ctx.moveTo(pos1.x, pos1.y);
+  ctx.lineTo(pos2.x, pos2.y);
   ctx.stroke();
   ctx.restore();
 }
 
-function drawAncestors(ctx, objectWithParents, columnOffset, generationNumber) {
-  if (objectWithParents.father) {
-    drawAncestorConnector(ctx, columnOffset, generationNumber, columnOffset - 1, generationNumber - 1);
-    dawLeftAncestorTree(ctx, objectWithParents.father, columnOffset - 1, generationNumber - 1);
-    drawAncestorConnector(ctx, columnOffset, generationNumber, columnOffset + 1, generationNumber - 1);
-    dawRightAncestorTree(ctx, objectWithParents.mother, columnOffset + 1, generationNumber - 1);
-  }
+function adjustOriginBasedOnTreeData(numAncestorGenerations) {
+  originX = columnWidth + canvasPadding;
+  originY = (rowHeight * 4) + canvasPadding; // Space for grandparents
+
+  // Account for father's siblings on the left
+  var fatherSiblings = family.father && family.father.siblings ? family.father.siblings.length : 0;
+  originX += (fatherSiblings * columnWidth);
 }
 
-function dawLeftAncestorTree(ctx, objectWithParents, columnOffset, generationNumber) {
-  if (objectWithParents) {
-    var generationFromTop = numAncestorGenerations + generationNumber;
-    if (objectWithParents.father) {
-      var endPoint = { column: columnOffset - generationFromTop, row: generationNumber - 2 };
-      dawLeftAncestorTree(ctx, objectWithParents.father, endPoint.column, generationNumber - 1);
-      drawAncestorConnector(ctx, columnOffset, generationNumber, endPoint.column, endPoint.row);
-      drawPerson(ctx, originX, originY, endPoint.column, 2 * (endPoint.row + 1), maleColor, objectWithParents.father);
-    }
-    if (objectWithParents.mother) {
-      var endPoint = { column: columnOffset, row: generationNumber - 1 };
-      drawAncestorConnector(ctx, columnOffset, generationNumber, endPoint.column, endPoint.row);
-      drawPerson(ctx, originX, originY, endPoint.column, 2 * endPoint.row, femaleColor, objectWithParents.mother);
-      dawLeftAncestorTree(ctx, objectWithParents.mother, endPoint.column, generationNumber - 1);
-    }
-  }
-}
+function setCanvasDimensions(canvas, numAncestorGenerations) {
+  var numSiblings = family.siblings.length;
 
-function dawRightAncestorTree(ctx, objectWithParents, columnOffset, generationNumber) {
-  if (objectWithParents) {
-    var generationFromTop = numAncestorGenerations + generationNumber;
-    if (objectWithParents.father) {
-      var endPoint = { column: columnOffset, row: generationNumber - 1 };
-      drawAncestorConnector(ctx, columnOffset, generationNumber, endPoint.column, endPoint.row);
-      drawPerson(ctx, originX, originY, endPoint.column, 2 * endPoint.row, maleColor, objectWithParents.father);
-      dawRightAncestorTree(ctx, objectWithParents.father, endPoint.column, generationNumber - 1);
-    }
-    if (objectWithParents.mother) {
-      var endPoint = { column: columnOffset + generationFromTop, row: generationNumber - 1 };
-      drawAncestorConnector(ctx, columnOffset, generationNumber, endPoint.column, endPoint.row);
-      drawPerson(ctx, originX, originY, endPoint.column, 2 * endPoint.row, femaleColor, objectWithParents.mother);
-      dawRightAncestorTree(ctx, objectWithParents.mother, endPoint.column, generationNumber - 1);
-    }
-  }
-}
+  // Count father's and mother's siblings
+  var fatherSiblings = family.father && family.father.siblings ? family.father.siblings.length : 0;
+  var motherSiblings = family.mother && family.mother.siblings ? family.mother.siblings.length : 0;
 
-function drawAncestorConnector(ctx, startColumn, startRow, endColumn, endRow) {
-  var startX = originX + (columnWidth / 2) + (startColumn * columnWidth);
-  var startY = originY + (startRow * rowHeight * 2) + (rowHeight / 2);
-  var endX = originX + (columnWidth / 2) + (endColumn * columnWidth);
-  var endY = originY + (endRow * rowHeight * 2) + (rowHeight / 2);
-  ctx.beginPath();
-  ctx.moveTo(startX, startY);
-  var spacesOver = endColumn - startColumn;
-  var totalColumnWidth = spacesOver * columnWidth;
-  ctx.bezierCurveTo(startX, startY - rowHeight, startX + totalColumnWidth, startY, endX, endY);
-  ctx.stroke();
+  var leftSide = Math.max(3, fatherSiblings + 2);
+  var rightSide = Math.max(numSiblings + 2, motherSiblings + 2);
+  var totalColumns = leftSide + 1 + rightSide;
+  canvas.width = totalColumns * columnWidth + canvasPadding * 2;
+
+  // Height: grandparents + parents/uncles + you/cousins + spouse + children
+  var maxDepth = 10;
+  canvas.height = (rowHeight * maxDepth) + canvasPadding * 2;
+
+  canvas.width *= zoomLevel;
+  canvas.height *= zoomLevel;
 }
 
 function getTreeDepth(objectWithParents, depth) {
