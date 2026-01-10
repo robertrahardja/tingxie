@@ -254,75 +254,73 @@
             <div class="tree-container">
                 <div class="mermaid">
 flowchart TB
-    %% Paternal Grandparents
-    爷爷["👴 爷爷<br/>Grandfather<br/>(Paternal)"]:::male
-    奶奶["👵 奶奶<br/>Grandmother<br/>(Paternal)"]:::female
+    subgraph FATHER_SIDE["👨 父系 Father's Side"]
+        direction TB
+        subgraph F_GP["祖父母 Grandparents"]
+            爷爷["👴 爷爷<br/>Grandfather"]:::male
+            奶奶["👵 奶奶<br/>Grandmother"]:::female
+        end
 
-    %% Maternal Grandparents
-    外公["👴 外公<br/>Grandfather<br/>(Maternal)"]:::male
-    外婆["👵 外婆<br/>Grandmother<br/>(Maternal)"]:::female
+        subgraph F_PARENTS["父辈 Parents Generation"]
+            伯伯["👨 伯伯<br/>Uncle (older)"]:::male
+            爸爸["👨 爸爸<br/>Father"]:::male
+            叔叔["👨 叔叔<br/>Uncle (younger)"]:::male
+            姑妈["👩 姑妈<br/>Aunt"]:::female
+        end
 
-    %% Father's Side
-    伯伯["👨 伯伯<br/>Uncle<br/>(Dad's older brother)"]:::male
-    爸爸["👨 爸爸<br/>Father"]:::male
-    叔叔["👨 叔叔<br/>Uncle<br/>(Dad's younger brother)"]:::male
-    姑妈["👩 姑妈<br/>Aunt<br/>(Dad's sister)"]:::female
+        爷爷 --> 伯伯
+        奶奶 --> 伯伯
+        爷爷 --> 爸爸
+        奶奶 --> 爸爸
+        爷爷 --> 叔叔
+        奶奶 --> 叔叔
+        爷爷 --> 姑妈
+        奶奶 --> 姑妈
+    end
 
-    %% Mother's Side
-    妈妈["👩 妈妈<br/>Mother"]:::female
-    舅舅["👨 舅舅<br/>Uncle<br/>(Mom's brother)"]:::male
-    姨妈["👩 姨妈<br/>Aunt<br/>(Mom's older sister)"]:::female
-    阿姨["👩 阿姨<br/>Aunt<br/>(Mom's younger sister)"]:::female
+    subgraph MOTHER_SIDE["👩 母系 Mother's Side"]
+        direction TB
+        subgraph M_GP["外祖父母 Grandparents"]
+            外公["👴 外公<br/>Grandfather"]:::male
+            外婆["👵 外婆<br/>Grandmother"]:::female
+        end
 
-    %% Your Generation
-    哥哥["👦 哥哥<br/>Older Brother"]:::male
-    姐姐["👧 姐姐<br/>Older Sister"]:::female
-    你["🟡 你/我<br/>YOU"]:::highlight
-    妻子["💑 妻子<br/>Wife"]:::female
-    弟弟["👦 弟弟<br/>Younger Brother"]:::male
-    妹妹["👧 妹妹<br/>Younger Sister"]:::female
+        subgraph M_PARENTS["母辈 Parents Generation"]
+            妈妈["👩 妈妈<br/>Mother"]:::female
+            舅舅["👨 舅舅<br/>Uncle"]:::male
+            姨妈["👩 姨妈<br/>Aunt (older)"]:::female
+            阿姨["👩 阿姨<br/>Aunt (younger)"]:::female
+        end
 
-    %% Children
-    儿子["👦 儿子<br/>Son"]:::male
-    女儿["👧 女儿<br/>Daughter"]:::female
+        外公 --> 妈妈
+        外婆 --> 妈妈
+        外公 --> 舅舅
+        外婆 --> 舅舅
+        外公 --> 姨妈
+        外婆 --> 姨妈
+        外公 --> 阿姨
+        外婆 --> 阿姨
+    end
 
-    %% Invisible connectors to force horizontal alignment
-    %% Grandparents level
-    爷爷 ~~~ 奶奶 ~~~ 外公 ~~~ 外婆
+    subgraph YOUR_GEN["🟡 你的一代 Your Generation"]
+        direction LR
+        哥哥["👦 哥哥<br/>Older Brother"]:::male
+        姐姐["👧 姐姐<br/>Older Sister"]:::female
+        你["🟡 你/我<br/>YOU"]:::highlight
+        妻子["💑 妻子<br/>Wife"]:::female
+        弟弟["👦 弟弟<br/>Younger Brother"]:::male
+        妹妹["👧 妹妹<br/>Younger Sister"]:::female
+    end
 
-    %% Parents level - keep sides separate
-    伯伯 ~~~ 爸爸 ~~~ 叔叔 ~~~ 姑妈
-    妈妈 ~~~ 舅舅 ~~~ 姨妈 ~~~ 阿姨
+    subgraph CHILDREN["👶 子女 Children Generation"]
+        direction LR
+        儿子["👦 儿子<br/>Son"]:::male
+        女儿["👧 女儿<br/>Daughter"]:::female
+    end
 
-    %% Your generation
-    哥哥 ~~~ 姐姐 ~~~ 你 ~~~ 妻子 ~~~ 弟弟 ~~~ 妹妹
+    %% Cross-subgraph connections
+    爸爸 -.婚姻 marriage.- 妈妈
 
-    %% Children level
-    儿子 ~~~ 女儿
-
-    %% Real connections - Grandparents to Parents
-    爷爷 --> 伯伯
-    奶奶 --> 伯伯
-    爷爷 --> 爸爸
-    奶奶 --> 爸爸
-    爷爷 --> 叔叔
-    奶奶 --> 叔叔
-    爷爷 --> 姑妈
-    奶奶 --> 姑妈
-
-    外公 --> 妈妈
-    外婆 --> 妈妈
-    外公 --> 舅舅
-    外婆 --> 舅舅
-    外公 --> 姨妈
-    外婆 --> 姨妈
-    外公 --> 阿姨
-    外婆 --> 阿姨
-
-    %% Marriage connection
-    爸爸 -.婚姻.- 妈妈
-
-    %% Parents to Your Generation
     爸爸 --> 你
     妈妈 --> 你
     爸爸 --> 哥哥
@@ -334,10 +332,8 @@ flowchart TB
     爸爸 --> 妹妹
     妈妈 --> 妹妹
 
-    %% Marriage connection
-    你 -.婚姻.- 妻子
+    你 -.婚姻 marriage.- 妻子
 
-    %% Your Generation to Children
     你 --> 儿子
     妻子 --> 儿子
     你 --> 女儿
@@ -351,7 +347,7 @@ flowchart TB
             </div>
             <div class="scroll-hint" style="text-align: center; color: #666; font-size: 0.85rem; margin-top: 10px;">
                 👆 Click/Touch and drag to move | Zoom to enlarge<br/>
-                Top to Bottom: Grandparents → Parents → You → Children<br/>
+                👨 Father's Side (left) | 👩 Mother's Side (right)<br/>
                 Blue=男 Male | Pink=女 Female | Gold=你 You
             </div>
         </div>
