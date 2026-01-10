@@ -106,13 +106,120 @@
             background: #2d6aa3;
         }
 
-        .tree-image {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            display: block;
+        .tree-section {
+            background: white;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tree-section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .tree-container {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            padding: 20px 10px;
+        }
+
+        .family-tree {
+            min-width: 800px;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+
+        .tree-node {
+            background: white;
+            border: 2px solid #4a90d9;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            min-width: 80px;
+        }
+
+        .tree-node:hover {
+            background: #f0f7ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .tree-node:active {
+            transform: translateY(0);
+        }
+
+        .tree-node .chinese {
+            font-weight: 600;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        .tree-node .pinyin {
+            font-size: 10px;
+            color: #4a90d9;
+            font-style: italic;
+        }
+
+        .tree-node.you {
+            background: #ffd700;
+            border-color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .tree-node.you .chinese {
+            color: #c92a2a;
+        }
+
+        .generation-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .generation-group {
+            display: flex;
+            gap: 15px;
+            margin: 0 10px;
+        }
+
+        .tree-connector {
+            width: 2px;
+            height: 15px;
+            background: #999;
+            margin: 0 auto;
+        }
+
+        .tree-h-line {
+            height: 2px;
+            background: #999;
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        .scroll-hint {
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            .scroll-hint {
+                color: #ff6b6b;
+                font-weight: 600;
+            }
         }
 
         .note {
@@ -171,6 +278,15 @@
 
         <div class="note">
             <strong>💡 提示 Tip:</strong> Chinese family terms are very specific about age order and which side of the family. Pay attention to these details!
+        </div>
+
+        <!-- Family Tree Visualization -->
+        <div class="tree-section">
+            <h2>🌳 家庭关系图 Family Tree</h2>
+            <div class="tree-container">
+                <div class="family-tree" id="family-tree"></div>
+            </div>
+            <div class="scroll-hint">👉 Scroll horizontally to see all family members 左右滑动查看所有成员</div>
         </div>
 
         <!-- Immediate Family -->
@@ -232,6 +348,160 @@
                 }
             });
         }
+
+        // Audio player
+        const audioPlayer = new Audio();
+
+        function playAudio(chinese) {
+            const firstWord = chinese.split('/')[0].trim();
+            const audioPath = `audio/${firstWord}.mp3`;
+            audioPlayer.src = audioPath;
+            audioPlayer.play().catch(err => {
+                console.log('Audio not available:', audioPath);
+            });
+        }
+
+        // Create tree node
+        function createTreeNode(chinese, pinyin, isYou = false) {
+            const node = document.createElement('div');
+            node.className = `tree-node${isYou ? ' you' : ''}`;
+            node.innerHTML = `
+                <div class="chinese">${chinese}</div>
+                <div class="pinyin">${pinyin}</div>
+            `;
+            if (!isYou) {
+                node.addEventListener('click', () => playAudio(chinese));
+            }
+            return node;
+        }
+
+        // Build family tree
+        function buildFamilyTree() {
+            const tree = document.getElementById('family-tree');
+
+            // Grandparents generation
+            const gen1 = document.createElement('div');
+            gen1.className = 'generation-row';
+            gen1.innerHTML = `
+                <div class="generation-group">
+                    ${createTreeNode('爷爷', 'yéyé').outerHTML}
+                    ${createTreeNode('奶奶', 'nǎinai').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('外公', 'wàigōng').outerHTML}
+                    ${createTreeNode('外婆', 'wàipó').outerHTML}
+                </div>
+            `;
+            tree.appendChild(gen1);
+
+            // Connectors to parents
+            const conn1 = document.createElement('div');
+            conn1.style.display = 'flex';
+            conn1.style.justifyContent = 'center';
+            conn1.style.gap = '200px';
+            conn1.innerHTML = `
+                <div class="tree-connector"></div>
+                <div class="tree-connector"></div>
+            `;
+            tree.appendChild(conn1);
+
+            // Parents generation
+            const gen2 = document.createElement('div');
+            gen2.className = 'generation-row';
+            gen2.innerHTML = `
+                <div class="generation-group">
+                    ${createTreeNode('伯伯', 'bóbo').outerHTML}
+                    ${createTreeNode('伯母', 'bómǔ').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('爸爸', 'bàba').outerHTML}
+                    ${createTreeNode('妈妈', 'māma').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('叔叔', 'shūshu').outerHTML}
+                    ${createTreeNode('婶婶', 'shěnshěn').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('舅舅', 'jiùjiu').outerHTML}
+                    ${createTreeNode('舅母', 'jiùmǔ').outerHTML}
+                </div>
+            `;
+            tree.appendChild(gen2);
+
+            // Connector to your generation
+            const conn2 = document.createElement('div');
+            conn2.className = 'tree-connector';
+            tree.appendChild(conn2);
+
+            // Your generation
+            const gen3 = document.createElement('div');
+            gen3.className = 'generation-row';
+            gen3.innerHTML = `
+                <div class="generation-group">
+                    ${createTreeNode('堂兄', 'táng xiōng').outerHTML}
+                    ${createTreeNode('堂姐', 'táng jiě').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('哥哥', 'gēgē').outerHTML}
+                    ${createTreeNode('嫂子', 'sǎozi').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('姐姐', 'jiějiě').outerHTML}
+                    ${createTreeNode('姐夫', 'jiěfū').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('你/我', 'nǐ/wǒ', true).outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('弟弟', 'dìdì').outerHTML}
+                    ${createTreeNode('弟妇', 'dìfù').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('妹妹', 'mèimei').outerHTML}
+                    ${createTreeNode('妹夫', 'mèifū').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('表哥', 'biǎo gē').outerHTML}
+                    ${createTreeNode('表妹', 'biǎo mèi').outerHTML}
+                </div>
+            `;
+            tree.appendChild(gen3);
+
+            // Connector to children
+            const conn3 = document.createElement('div');
+            conn3.className = 'tree-connector';
+            tree.appendChild(conn3);
+
+            // Children generation
+            const gen4 = document.createElement('div');
+            gen4.className = 'generation-row';
+            gen4.innerHTML = `
+                <div class="generation-group">
+                    ${createTreeNode('侄子', 'zhízi').outerHTML}
+                    ${createTreeNode('侄女', 'zhínǚ').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('儿子', 'érzi').outerHTML}
+                    ${createTreeNode('女儿', 'nǚ\'ér').outerHTML}
+                </div>
+                <div class="generation-group">
+                    ${createTreeNode('外甥', 'wàishēng').outerHTML}
+                    ${createTreeNode('外甥女', 'wàishengnǚ').outerHTML}
+                </div>
+            `;
+            tree.appendChild(gen4);
+
+            // Add click handlers to all tree nodes
+            tree.querySelectorAll('.tree-node:not(.you)').forEach(node => {
+                node.addEventListener('click', () => {
+                    const chinese = node.querySelector('.chinese').textContent;
+                    playAudio(chinese);
+                });
+            });
+        }
+
+        // Initialize family tree
+        buildFamilyTree();
 
         // Family data
         const familyData = {
@@ -295,20 +565,6 @@
                 { english: "Younger brother's wife", chinese: "弟妇", pinyin: "dìfù" }
             ]
         };
-
-        // Audio player
-        const audioPlayer = new Audio();
-
-        function playAudio(chinese) {
-            // Extract first word if there are multiple options (e.g., "妻子 / 老婆" -> "妻子")
-            const firstWord = chinese.split('/')[0].trim();
-            const audioPath = `audio/${firstWord}.mp3`;
-
-            audioPlayer.src = audioPath;
-            audioPlayer.play().catch(err => {
-                console.log('Audio not available:', audioPath);
-            });
-        }
 
         function createFamilyCard(data) {
             const card = document.createElement('div');
