@@ -121,6 +121,34 @@
             font-size: 1.3rem;
         }
 
+        .tree-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tree-btn {
+            background: #4a90d9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            font-weight: 600;
+        }
+
+        .tree-btn:hover {
+            background: #357abd;
+        }
+
+        .tree-btn:active {
+            background: #2d6aa3;
+        }
+
         .tree-container {
             overflow: auto;
             -webkit-overflow-scrolling: touch;
@@ -133,10 +161,12 @@
         .mermaid {
             width: 100%;
             min-height: 600px;
+            transform-origin: top left;
+            transition: transform 0.2s ease;
         }
 
         .mermaid svg {
-            max-width: 100%;
+            max-width: none;
             height: auto;
         }
 
@@ -212,6 +242,11 @@
         <!-- Family Tree Visualization -->
         <div class="tree-section">
             <h2>🌳 家庭关系图 Family Tree</h2>
+            <div class="tree-controls">
+                <button class="tree-btn" onclick="zoomIn()">🔍+ Zoom In 放大</button>
+                <button class="tree-btn" onclick="zoomOut()">🔍- Zoom Out 缩小</button>
+                <button class="tree-btn" onclick="resetZoom()">↺ Reset 重置</button>
+            </div>
             <div class="tree-container">
                 <div class="mermaid">
 flowchart TD
@@ -472,6 +507,33 @@ flowchart TD
         });
     </script>
 
+    <!-- Zoom controls for family tree -->
+    <script>
+        let currentZoom = 1;
+
+        function zoomIn() {
+            currentZoom = Math.min(currentZoom + 0.2, 3);
+            applyZoom();
+        }
+
+        function zoomOut() {
+            currentZoom = Math.max(currentZoom - 0.2, 0.5);
+            applyZoom();
+        }
+
+        function resetZoom() {
+            currentZoom = 1;
+            applyZoom();
+        }
+
+        function applyZoom() {
+            const mermaidDiv = document.querySelector('.mermaid');
+            if (mermaidDiv) {
+                mermaidDiv.style.transform = `scale(${currentZoom})`;
+            }
+        }
+    </script>
+
     <!-- Mermaid.js for family tree visualization -->
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
@@ -482,12 +544,12 @@ flowchart TD
                 useMaxWidth: false,
                 htmlLabels: true,
                 curve: 'basis',
-                nodeSpacing: 100,
-                rankSpacing: 100,
-                padding: 20
+                nodeSpacing: 120,
+                rankSpacing: 120,
+                padding: 30
             },
             themeVariables: {
-                fontSize: '18px',
+                fontSize: '20px',
                 fontFamily: 'Arial, sans-serif'
             }
         });
