@@ -253,57 +253,73 @@
             </div>
             <div class="tree-container">
                 <div class="mermaid">
-graph TB
-    subgraph G1[" "]
-        爷爷["👴 爷爷<br/>Grandfather"]:::male
-        奶奶["👵 奶奶<br/>Grandmother"]:::female
-        外公["👴 外公<br/>Grandfather"]:::male
-        外婆["👵 外婆<br/>Grandmother"]:::female
+graph LR
+    subgraph PATERNAL["👨 父系 Father's Side"]
+        direction TB
+        subgraph P_G1["祖父母 Paternal Grandparents"]
+            爷爷["👴 爷爷<br/>Grandfather"]:::male
+            奶奶["👵 奶奶<br/>Grandmother"]:::female
+        end
+
+        subgraph P_G2["父辈 Father's Generation"]
+            伯伯["👨 伯伯<br/>Uncle<br/>(older)"]:::male
+            爸爸["👨 爸爸<br/>Father"]:::male
+            叔叔["👨 叔叔<br/>Uncle<br/>(younger)"]:::male
+            姑妈["👩 姑妈<br/>Aunt"]:::female
+        end
+
+        爷爷 --> 伯伯
+        奶奶 --> 伯伯
+        爷爷 --> 爸爸
+        奶奶 --> 爸爸
+        爷爷 --> 叔叔
+        奶奶 --> 叔叔
+        爷爷 --> 姑妈
+        奶奶 --> 姑妈
     end
 
-    subgraph G2[" "]
-        伯伯["👨 伯伯<br/>Uncle"]:::male
-        爸爸["👨 爸爸<br/>Father"]:::male
-        叔叔["👨 叔叔<br/>Uncle"]:::male
-        姑妈["👩 姑妈<br/>Aunt"]:::female
-        妈妈["👩 妈妈<br/>Mother"]:::female
-        舅舅["👨 舅舅<br/>Uncle"]:::male
-        姨妈["👩 姨妈<br/>Aunt"]:::female
-        阿姨["👩 阿姨<br/>Aunt"]:::female
+    subgraph MATERNAL["👩 母系 Mother's Side"]
+        direction TB
+        subgraph M_G1["外祖父母 Maternal Grandparents"]
+            外公["👴 外公<br/>Grandfather"]:::male
+            外婆["👵 外婆<br/>Grandmother"]:::female
+        end
+
+        subgraph M_G2["母辈 Mother's Generation"]
+            妈妈["👩 妈妈<br/>Mother"]:::female
+            舅舅["👨 舅舅<br/>Uncle"]:::male
+            姨妈["👩 姨妈<br/>Aunt<br/>(older)"]:::female
+            阿姨["👩 阿姨<br/>Aunt<br/>(younger)"]:::female
+        end
+
+        外公 --> 妈妈
+        外婆 --> 妈妈
+        外公 --> 舅舅
+        外婆 --> 舅舅
+        外公 --> 姨妈
+        外婆 --> 姨妈
+        外公 --> 阿姨
+        外婆 --> 阿姨
     end
 
-    subgraph G3[" "]
-        哥哥["👦 哥哥<br/>Brother"]:::male
-        姐姐["👧 姐姐<br/>Sister"]:::female
+    subgraph YOUR_GEN["🟡 你的一代 Your Generation"]
+        direction LR
+        哥哥["👦 哥哥<br/>Older Brother"]:::male
+        姐姐["👧 姐姐<br/>Older Sister"]:::female
         你["🟡 你/我<br/>YOU"]:::highlight
         妻子["💑 妻子<br/>Wife"]:::female
-        弟弟["👦 弟弟<br/>Brother"]:::male
-        妹妹["👧 妹妹<br/>Sister"]:::female
+        弟弟["👦 弟弟<br/>Younger Brother"]:::male
+        妹妹["👧 妹妹<br/>Younger Sister"]:::female
     end
 
-    subgraph G4[" "]
+    subgraph CHILDREN["👶 子女 Children"]
+        direction LR
         儿子["👦 儿子<br/>Son"]:::male
         女儿["👧 女儿<br/>Daughter"]:::female
     end
 
-    %% Connections
-    爷爷 --> 爸爸
-    奶奶 --> 爸爸
-    爷爷 --> 伯伯
-    奶奶 --> 伯伯
-    爷爷 --> 叔叔
-    奶奶 --> 叔叔
-    爷爷 --> 姑妈
-    奶奶 --> 姑妈
-
-    外公 --> 妈妈
-    外婆 --> 妈妈
-    外公 --> 舅舅
-    外婆 --> 舅舅
-    外公 --> 姨妈
-    外婆 --> 姨妈
-    外公 --> 阿姨
-    外婆 --> 阿姨
+    %% Cross-subgraph connections
+    爸爸 -.marriage<br/>婚姻.- 妈妈
 
     爸爸 --> 你
     妈妈 --> 你
@@ -316,7 +332,7 @@ graph TB
     爸爸 --> 妹妹
     妈妈 --> 妹妹
 
-    你 -.婚姻.- 妻子
+    你 -.marriage<br/>婚姻.- 妻子
 
     你 --> 儿子
     妻子 --> 儿子
@@ -330,7 +346,9 @@ graph TB
                 </div>
             </div>
             <div class="scroll-hint" style="text-align: center; color: #666; font-size: 0.85rem; margin-top: 10px;">
-                👆 Click/Touch and drag to move | Zoom to enlarge | Blue=男 Male | Pink=女 Female | Gold=你 You
+                👆 Click/Touch and drag to move | Zoom to enlarge<br/>
+                👨 Left: Father's Side (父系) | 👩 Right: Mother's Side (母系)<br/>
+                Blue=男 Male | Pink=女 Female | Gold=你 You
             </div>
         </div>
 
