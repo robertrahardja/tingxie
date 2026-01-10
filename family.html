@@ -254,52 +254,55 @@
             <div class="tree-container">
                 <div class="mermaid">
 flowchart TB
-    subgraph FATHER_SIDE["👨 父系 Father's Side"]
-        direction TB
-        subgraph F_GP["祖父母 Grandparents"]
-            爷爷["👴 爷爷<br/>Grandfather"]:::male
-            奶奶["👵 奶奶<br/>Grandmother"]:::female
+    subgraph TOP_GEN[" "]
+        direction LR
+        subgraph FATHER_SIDE["👨 父系 Father's Side"]
+            direction TB
+            subgraph F_GP["祖父母 Grandparents"]
+                爷爷["👴 爷爷<br/>Grandfather"]:::male
+                奶奶["👵 奶奶<br/>Grandmother"]:::female
+            end
+
+            subgraph F_PARENTS["父辈 Parents Generation"]
+                伯伯["👨 伯伯<br/>Uncle (older)"]:::male
+                爸爸["👨 爸爸<br/>Father"]:::male
+                叔叔["👨 叔叔<br/>Uncle (younger)"]:::male
+                姑妈["👩 姑妈<br/>Aunt"]:::female
+            end
+
+            爷爷 --> 伯伯
+            奶奶 --> 伯伯
+            爷爷 --> 爸爸
+            奶奶 --> 爸爸
+            爷爷 --> 叔叔
+            奶奶 --> 叔叔
+            爷爷 --> 姑妈
+            奶奶 --> 姑妈
         end
 
-        subgraph F_PARENTS["父辈 Parents Generation"]
-            伯伯["👨 伯伯<br/>Uncle (older)"]:::male
-            爸爸["👨 爸爸<br/>Father"]:::male
-            叔叔["👨 叔叔<br/>Uncle (younger)"]:::male
-            姑妈["👩 姑妈<br/>Aunt"]:::female
+        subgraph MOTHER_SIDE["👩 母系 Mother's Side"]
+            direction TB
+            subgraph M_GP["外祖父母 Grandparents"]
+                外公["👴 外公<br/>Grandfather"]:::male
+                外婆["👵 外婆<br/>Grandmother"]:::female
+            end
+
+            subgraph M_PARENTS["母辈 Parents Generation"]
+                妈妈["👩 妈妈<br/>Mother"]:::female
+                舅舅["👨 舅舅<br/>Uncle"]:::male
+                姨妈["👩 姨妈<br/>Aunt (older)"]:::female
+                阿姨["👩 阿姨<br/>Aunt (younger)"]:::female
+            end
+
+            外公 --> 妈妈
+            外婆 --> 妈妈
+            外公 --> 舅舅
+            外婆 --> 舅舅
+            外公 --> 姨妈
+            外婆 --> 姨妈
+            外公 --> 阿姨
+            外婆 --> 阿姨
         end
-
-        爷爷 --> 伯伯
-        奶奶 --> 伯伯
-        爷爷 --> 爸爸
-        奶奶 --> 爸爸
-        爷爷 --> 叔叔
-        奶奶 --> 叔叔
-        爷爷 --> 姑妈
-        奶奶 --> 姑妈
-    end
-
-    subgraph MOTHER_SIDE["👩 母系 Mother's Side"]
-        direction TB
-        subgraph M_GP["外祖父母 Grandparents"]
-            外公["👴 外公<br/>Grandfather"]:::male
-            外婆["👵 外婆<br/>Grandmother"]:::female
-        end
-
-        subgraph M_PARENTS["母辈 Parents Generation"]
-            妈妈["👩 妈妈<br/>Mother"]:::female
-            舅舅["👨 舅舅<br/>Uncle"]:::male
-            姨妈["👩 姨妈<br/>Aunt (older)"]:::female
-            阿姨["👩 阿姨<br/>Aunt (younger)"]:::female
-        end
-
-        外公 --> 妈妈
-        外婆 --> 妈妈
-        外公 --> 舅舅
-        外婆 --> 舅舅
-        外公 --> 姨妈
-        外婆 --> 姨妈
-        外公 --> 阿姨
-        外婆 --> 阿姨
     end
 
     subgraph YOUR_GEN["🟡 你的一代 Your Generation"]
