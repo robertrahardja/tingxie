@@ -23,25 +23,6 @@ var family = {
   person: {name: "你/我", gender: "Male", notes: "You"},
   siblings: [
     {
-      name: "伯伯", gender: "Male", notes: "Dad's older brother",
-      families: [{
-        spouse: {name: "伯母", gender: "Female", notes: "Dad's older brother's wife"},
-        children: [
-          {name: "堂兄", gender: "Male", notes: "Dad's sibling's son (older)"},
-          {name: "堂姐", gender: "Female", notes: "Dad's sibling's daughter (older)"}
-        ]
-      }]
-    },
-    {name: "姑妈", gender: "Female", notes: "Dad's older sister",
-      families: [{
-        spouse: {name: "姑夫", gender: "Male", notes: "Dad's sister's husband"},
-        children: [
-          {name: "堂弟", gender: "Male", notes: "Dad's sibling's son (younger)"},
-          {name: "堂妹", gender: "Female", notes: "Dad's sibling's daughter (younger)"}
-        ]
-      }]
-    },
-    {
       name: "哥哥", gender: "Male", notes: "older brother",
       families: [{
         spouse: {name: "嫂子", gender: "Female", notes: "older brother's wife"},
@@ -70,31 +51,6 @@ var family = {
       families: [{
         spouse: {name: "妹夫", gender: "Male", notes: "younger sister's husband"}
       }]
-    },
-    {
-      name: "叔叔", gender: "Male", notes: "Dad's younger brother",
-      families: [{
-        spouse: {name: "婶婶", gender: "Female", notes: "Dad's younger brother's wife"}
-      }]
-    },
-    {name: "姑姑", gender: "Female", notes: "Dad's younger sister"},
-    {
-      name: "舅舅", gender: "Male", notes: "Mom's brother",
-      families: [{
-        spouse: {name: "舅母", gender: "Female", notes: "Mom's brother's wife"},
-        children: [
-          {name: "表哥", gender: "Male", notes: "Mom's sibling's son (older)"},
-          {name: "表姐", gender: "Female", notes: "Mom's sibling's daughter (older)"},
-          {name: "表弟", gender: "Male", notes: "Mom's sibling's son (younger)"},
-          {name: "表妹", gender: "Female", notes: "Mom's sibling's daughter (younger)"}
-        ]
-      }]
-    },
-    {
-      name: "姨妈", gender: "Female", notes: "Mom's older sister"
-    },
-    {
-      name: "阿姨", gender: "Female", notes: "Mom's younger sister"
     }
   ],
   families: [{
@@ -110,12 +66,72 @@ var family = {
   mother: {
     name: "妈妈", gender: "Female",
     father: {name: "外公", gender: "Male"},
-    mother: {name: "外婆", gender: "Female"}
+    mother: {name: "外婆", gender: "Female"},
+    siblings: [
+      {
+        name: "舅舅", gender: "Male", notes: "Mom's brother",
+        families: [{
+          spouse: {name: "舅母", gender: "Female", notes: "Mom's brother's wife"},
+          children: [
+            {name: "表哥", gender: "Male", notes: "Mom's sibling's son (older)"},
+            {name: "表姐", gender: "Female", notes: "Mom's sibling's daughter (older)"},
+            {name: "表弟", gender: "Male", notes: "Mom's sibling's son (younger)"},
+            {name: "表妹", gender: "Female", notes: "Mom's sibling's daughter (younger)"}
+          ]
+        }]
+      },
+      {
+        name: "姨妈", gender: "Female", notes: "Mom's older sister",
+        families: [{
+          spouse: {name: "姨夫", gender: "Male", notes: "Mom's sister's husband"}
+        }]
+      },
+      {
+        name: "阿姨", gender: "Female", notes: "Mom's younger sister",
+        families: [{
+          spouse: {name: "姨夫", gender: "Male", notes: "Mom's sister's husband"}
+        }]
+      }
+    ]
   },
   father: {
     name: "爸爸", gender: "Male",
     father: {name: "爷爷", gender: "Male"},
-    mother: {name: "奶奶", gender: "Female"}
+    mother: {name: "奶奶", gender: "Female"},
+    siblings: [
+      {
+        name: "伯伯", gender: "Male", notes: "Dad's older brother",
+        families: [{
+          spouse: {name: "伯母", gender: "Female", notes: "Dad's older brother's wife"},
+          children: [
+            {name: "堂兄", gender: "Male", notes: "Dad's sibling's son (older)"},
+            {name: "堂姐", gender: "Female", notes: "Dad's sibling's daughter (older)"}
+          ]
+        }]
+      },
+      {
+        name: "叔叔", gender: "Male", notes: "Dad's younger brother",
+        families: [{
+          spouse: {name: "婶婶", gender: "Female", notes: "Dad's younger brother's wife"},
+          children: [
+            {name: "堂弟", gender: "Male", notes: "Dad's sibling's son (younger)"},
+            {name: "堂妹", gender: "Female", notes: "Dad's sibling's daughter (younger)"}
+          ]
+        }]
+      },
+      {
+        name: "姑妈", gender: "Female", notes: "Dad's older sister",
+        families: [{
+          spouse: {name: "姑夫", gender: "Male", notes: "Dad's sister's husband"}
+        }]
+      },
+      {
+        name: "姑姑", gender: "Female", notes: "Dad's younger sister",
+        families: [{
+          spouse: {name: "姑夫", gender: "Male", notes: "Dad's sister's husband"}
+        }]
+      }
+    ]
   }
 };
 
@@ -140,6 +156,7 @@ function drawTree() {
   drawChildrenConnectors(ctx);
   drawAncestors(ctx, family, 0, 0);
 
+  // Draw your siblings
   family.siblings.forEach(function (sibling, i) {
     drawSiblingConnector(ctx, originX + (columnWidth / 2), originY + (rowHeight / 2), i + 1);
   });
@@ -159,7 +176,7 @@ function drawTree() {
     drawPerson(ctx, originX, originY, 1, -2, femaleColor, family.mother);
   }
 
-  // siblings and their families
+  // YOUR siblings and their families
   family.siblings.forEach(function (sibling, i) {
     var color = (sibling.gender === "Male") ? maleColor : femaleColor;
     drawPerson(ctx, originX, originY, i + 1, 0, color, sibling);
@@ -195,6 +212,104 @@ function drawTree() {
     }
   });
 
+  // FATHER'S siblings (uncles and aunts on father's side)
+  if (family.father && family.father.siblings) {
+    family.father.siblings.forEach(function (uncle, i) {
+      var uncleColumn = -2 - i; // Position to the left of father
+      var color = (uncle.gender === "Male") ? maleColor : femaleColor;
+      drawPerson(ctx, originX, originY, uncleColumn, -2, color, uncle);
+
+      // Draw connector from grandparents level to uncle/aunt
+      var fatherX = originX + (-1 * columnWidth) + (columnWidth / 2);
+      var fatherY = originY + (-2 * rowHeight) + (rowHeight / 2);
+      var uncleX = originX + (uncleColumn * columnWidth) + (columnWidth / 2);
+      ctx.beginPath();
+      ctx.moveTo(fatherX, fatherY);
+      ctx.lineTo(uncleX, fatherY);
+      ctx.stroke();
+
+      // Draw uncle's/aunt's spouse if exists
+      if (uncle.families && uncle.families[0] && uncle.families[0].spouse) {
+        var spouseColor = (uncle.families[0].spouse.gender === "Male") ? maleColor : femaleColor;
+        drawPerson(ctx, originX, originY, uncleColumn, -1, spouseColor, uncle.families[0].spouse);
+
+        // Draw connector between uncle and spouse
+        var uncleY = originY + (-2 * rowHeight) + (rowHeight / 2);
+        ctx.save();
+        ctx.beginPath();
+        ctx.setLineDash([3, 3]);
+        ctx.moveTo(uncleX, uncleY);
+        ctx.lineTo(uncleX, uncleY + rowHeight);
+        ctx.stroke();
+        ctx.restore();
+
+        // Draw uncle's/aunt's children (堂 cousins) if exist
+        if (uncle.families[0].children) {
+          uncle.families[0].children.forEach(function(cousin, cousinIndex) {
+            var cousinColor = (cousin.gender === "Male") ? maleColor : femaleColor;
+            drawPerson(ctx, originX, originY, uncleColumn, cousinIndex, cousinColor, cousin);
+
+            // Draw connector from spouse to cousin
+            var spouseY = uncleY + rowHeight;
+            ctx.beginPath();
+            ctx.moveTo(uncleX, spouseY + (rowHeight / 2));
+            ctx.lineTo(uncleX, spouseY + (rowHeight / 2) + rowHeight);
+            ctx.stroke();
+          });
+        }
+      }
+    });
+  }
+
+  // MOTHER'S siblings (uncles and aunts on mother's side)
+  if (family.mother && family.mother.siblings) {
+    family.mother.siblings.forEach(function (aunt, i) {
+      var auntColumn = 2 + i; // Position to the right of mother
+      var color = (aunt.gender === "Male") ? maleColor : femaleColor;
+      drawPerson(ctx, originX, originY, auntColumn, -2, color, aunt);
+
+      // Draw connector from grandparents level to uncle/aunt
+      var motherX = originX + (1 * columnWidth) + (columnWidth / 2);
+      var motherY = originY + (-2 * rowHeight) + (rowHeight / 2);
+      var auntX = originX + (auntColumn * columnWidth) + (columnWidth / 2);
+      ctx.beginPath();
+      ctx.moveTo(motherX, motherY);
+      ctx.lineTo(auntX, motherY);
+      ctx.stroke();
+
+      // Draw aunt's/uncle's spouse if exists
+      if (aunt.families && aunt.families[0] && aunt.families[0].spouse) {
+        var spouseColor = (aunt.families[0].spouse.gender === "Male") ? maleColor : femaleColor;
+        drawPerson(ctx, originX, originY, auntColumn, -1, spouseColor, aunt.families[0].spouse);
+
+        // Draw connector between aunt and spouse
+        var auntY = originY + (-2 * rowHeight) + (rowHeight / 2);
+        ctx.save();
+        ctx.beginPath();
+        ctx.setLineDash([3, 3]);
+        ctx.moveTo(auntX, auntY);
+        ctx.lineTo(auntX, auntY + rowHeight);
+        ctx.stroke();
+        ctx.restore();
+
+        // Draw aunt's/uncle's children (表 cousins) if exist
+        if (aunt.families[0].children) {
+          aunt.families[0].children.forEach(function(cousin, cousinIndex) {
+            var cousinColor = (cousin.gender === "Male") ? maleColor : femaleColor;
+            drawPerson(ctx, originX, originY, auntColumn, cousinIndex, cousinColor, cousin);
+
+            // Draw connector from spouse to cousin
+            var spouseY = auntY + rowHeight;
+            ctx.beginPath();
+            ctx.moveTo(auntX, spouseY + (rowHeight / 2));
+            ctx.lineTo(auntX, spouseY + (rowHeight / 2) + rowHeight);
+            ctx.stroke();
+          });
+        }
+      }
+    });
+  }
+
   // your spouse
   if (family.families[0].spouse) {
     drawPerson(ctx, originX, originY, -1, 0, femaleColor, family.families[0].spouse);
@@ -219,19 +334,29 @@ function adjustOriginBasedOnTreeData(numAncestorGenerations) {
   var childCount = family.families[0].children.length;
   var childrenPushingLeft = Math.floor(childCount / 2) - 1;
   var columnsToShiftNonNegative = Math.max(childrenPushingLeft, 0);
+
+  // Account for father's siblings on the left
+  var fatherSiblings = family.father && family.father.siblings ? family.father.siblings.length : 0;
+
   originX += (columnsToShiftNonNegative * columnWidth);
+  originX += (fatherSiblings * columnWidth); // Shift right to make room for father's siblings
 }
 
 function setCanvasDimensions(canvas, numAncestorGenerations) {
   var numSiblings = family.siblings.length;
   var numChildrenPerSide = Math.floor(family.families[0].children.length / 2);
-  var leftSide = Math.max(numChildrenPerSide, 3); // Account for in-laws
-  var rightSide = Math.max(numChildrenPerSide, numSiblings + 2);
+
+  // Count father's and mother's siblings
+  var fatherSiblings = family.father && family.father.siblings ? family.father.siblings.length : 0;
+  var motherSiblings = family.mother && family.mother.siblings ? family.mother.siblings.length : 0;
+
+  var leftSide = Math.max(numChildrenPerSide, 3, fatherSiblings + 2); // Account for in-laws and father's siblings
+  var rightSide = Math.max(numChildrenPerSide, numSiblings + 2, motherSiblings + 2); // Account for mother's siblings
   var totalColumns = leftSide + 1 + rightSide;
   canvas.width = totalColumns * columnWidth + canvasPadding * 2;
 
-  // Calculate height based on maximum depth (siblings with children)
-  var maxDepth = numAncestorGenerations + 4; // grandparents + parents + you/siblings + children + nieces/nephews
+  // Calculate height based on maximum depth (now includes parent's siblings and their children)
+  var maxDepth = numAncestorGenerations + 5; // grandparents + parents/uncles/aunts + you/siblings/cousins + children + nieces/nephews
   canvas.height = (rowHeight * maxDepth) * 2 + canvasPadding * 2;
 
   canvas.width *= zoomLevel;
