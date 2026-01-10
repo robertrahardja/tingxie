@@ -405,7 +405,7 @@ function drawPerson(ctx, x, y, colOffset, rowOffset, fill, person) {
 function drawChildrenConnectors(ctx) {
   var childColumn = 0;
   family.families[0].children.forEach(function (child, i) {
-    drawChildConnector(ctx, originX + (boxWidth / 2), originY + boxHeight, childColumn);
+    drawChildConnector(ctx, originX + (columnWidth / 2), originY + rowHeight, childColumn);
     childColumn *= -1;
     if (childColumn <= 0) {
       childColumn -= 1;
@@ -486,10 +486,10 @@ function dawRightAncestorTree(ctx, objectWithParents, columnOffset, generationNu
 }
 
 function drawAncestorConnector(ctx, startColumn, startRow, endColumn, endRow) {
-  var startX = originX + (boxWidth / 2) + (startColumn * columnWidth);
-  var startY = originY + (startRow * (rowHeight + boxHeight));
-  var endX = originX + (boxWidth / 2) + (endColumn * columnWidth);
-  var endY = startY - rowHeight;
+  var startX = originX + (columnWidth / 2) + (startColumn * columnWidth);
+  var startY = originY + (startRow * rowHeight * 2) + (rowHeight / 2);
+  var endX = originX + (columnWidth / 2) + (endColumn * columnWidth);
+  var endY = originY + (endRow * rowHeight * 2) + (rowHeight / 2);
   ctx.beginPath();
   ctx.moveTo(startX, startY);
   var spacesOver = endColumn - startColumn;
