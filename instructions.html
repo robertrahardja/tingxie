@@ -56,13 +56,13 @@
             background: white;
             border-bottom: 1px solid #eee;
             position: sticky;
-            top: 50px;
+            top: 60px;
             z-index: 99;
         }
 
         .nav-tab {
             flex: 1;
-            padding: 14px;
+            padding: 16px;
             text-align: center;
             font-size: 1rem;
             font-weight: 600;
@@ -72,6 +72,7 @@
             cursor: pointer;
             transition: all 0.2s;
             border-bottom: 3px solid transparent;
+            min-height: 52px;
         }
 
         .nav-tab.active {
@@ -83,6 +84,7 @@
             padding: 16px;
             max-width: 600px;
             margin: 0 auto;
+            width: 100%;
         }
 
         /* Glossary View */
@@ -123,13 +125,13 @@
         }
 
         .audio-btn {
-            width: 36px;
-            height: 36px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             border: none;
             background: var(--primary);
             color: white;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -145,6 +147,7 @@
 
         .audio-btn:active {
             transform: scale(0.95);
+            background: var(--primary-dark);
         }
 
         .audio-btn.playing {
@@ -267,17 +270,6 @@
             gap: 12px;
         }
 
-        .quiz-option {
-            padding: 16px;
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 12px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-align: left;
-        }
-
         .quiz-option:hover {
             border-color: var(--primary);
             background: #f0f7fa;
@@ -319,19 +311,6 @@
             color: #721c24;
         }
 
-        .quiz-next-btn {
-            margin-top: 16px;
-            padding: 14px 28px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            display: none;
-        }
-
         .quiz-next-btn.visible {
             display: inline-block;
         }
@@ -354,8 +333,69 @@
             margin-bottom: 24px;
         }
 
+        /* Category filter */
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding: 4px 0;
+        }
+
+        .category-btn {
+            padding: 10px 16px;
+            border: 2px solid var(--primary);
+            background: white;
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-btn:active {
+            transform: scale(0.95);
+        }
+
+        .category-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Quiz option touch targets */
+        .quiz-option {
+            padding: 16px;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+            min-height: 52px;
+        }
+
+        .quiz-next-btn {
+            margin-top: 16px;
+            padding: 16px 28px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: none;
+            min-height: 52px;
+        }
+
         .restart-btn {
-            padding: 14px 32px;
+            padding: 16px 32px;
             background: var(--primary);
             color: white;
             border: none;
@@ -363,31 +403,59 @@
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
+            min-height: 52px;
         }
 
-        /* Category filter */
-        .category-filter {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 16px;
+        .restart-btn:active,
+        .quiz-next-btn:active {
+            transform: scale(0.98);
+            background: var(--primary-dark);
         }
 
-        .category-btn {
-            padding: 8px 14px;
-            border: 2px solid var(--primary);
-            background: white;
-            color: var(--primary);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
+        /* Mobile-specific adjustments */
+        @media (max-width: 480px) {
+            .header {
+                padding: 20px 16px;
+            }
 
-        .category-btn.active {
-            background: var(--primary);
-            color: white;
+            .header h1 {
+                font-size: 1.3rem;
+            }
+
+            .header p {
+                font-size: 0.85rem;
+            }
+
+            .content {
+                padding: 12px;
+            }
+
+            .term-card {
+                padding: 14px;
+                margin-bottom: 10px;
+            }
+
+            .term-chinese {
+                font-size: 1.25rem;
+            }
+
+            .term-english {
+                font-size: 1rem;
+            }
+
+            .quiz-term {
+                font-size: 1.75rem;
+            }
+
+            .category-filter {
+                gap: 6px;
+            }
+
+            .category-btn {
+                padding: 10px 12px;
+                font-size: 0.8rem;
+                min-height: 44px;
+            }
         }
     </style>
 </head>
