@@ -1,7 +1,8 @@
-var rowHeight = 60;
-var columnWidth = 100;
+var rowHeight = 50;
+var columnWidth = 80;
 var boxHeight = 60;
 var boxWidth = 60;
+var circleRadius = 15; // 1/4 of original (was 30)
 var canvasPadding = 30;
 var zoomLevel = 1;
 var translationOffsetX = 0;
@@ -140,11 +141,11 @@ function drawTree() {
   drawAncestors(ctx, family, 0, 0);
 
   family.siblings.forEach(function (sibling, i) {
-    drawSiblingConnector(ctx, originX + (boxWidth / 2), originY + (boxHeight / 2), i + 1);
+    drawSiblingConnector(ctx, originX + (columnWidth / 2), originY + (rowHeight / 2), i + 1);
   });
 
   if (family.families[0].spouse) {
-    drawSpouseConnector(ctx, originX + (boxWidth / 2), originY + (boxHeight / 2));
+    drawSpouseConnector(ctx, originX + (columnWidth / 2), originY + (rowHeight / 2));
   }
 
   // person (you)
@@ -168,8 +169,8 @@ function drawTree() {
       var spouseColor = (sibling.families[0].spouse.gender === "Male") ? maleColor : femaleColor;
       drawPerson(ctx, originX, originY, i + 1, 1, spouseColor, sibling.families[0].spouse);
       // Draw connector between sibling and spouse
-      var siblingX = originX + (boxWidth / 2) + ((i + 1) * columnWidth);
-      var siblingY = originY + (boxHeight / 2);
+      var siblingX = originX + (columnWidth / 2) + ((i + 1) * columnWidth);
+      var siblingY = originY + (rowHeight / 2);
       ctx.save();
       ctx.beginPath();
       ctx.setLineDash([3, 3]);
@@ -186,8 +187,8 @@ function drawTree() {
           // Draw connector from spouse to child
           var spouseY = siblingY + rowHeight;
           ctx.beginPath();
-          ctx.moveTo(siblingX, spouseY + (boxHeight / 2));
-          ctx.lineTo(siblingX, spouseY + (boxHeight / 2) + rowHeight);
+          ctx.moveTo(siblingX, spouseY + (rowHeight / 2));
+          ctx.lineTo(siblingX, spouseY + (rowHeight / 2) + rowHeight);
           ctx.stroke();
         });
       }
@@ -251,26 +252,28 @@ function drawChildren(ctx) {
 
 function drawPerson(ctx, x, y, colOffset, rowOffset, fill, person) {
   var personName = person.name;
-  var xOffset = colOffset * columnWidth + (columnWidth / 4) + 5;
+  var xOffset = colOffset * columnWidth + (columnWidth / 2);
   var yOffset = rowOffset * rowHeight + (rowHeight / 2);
 
+  // Draw circle
   ctx.beginPath();
-  ctx.arc(x + xOffset, y + yOffset, rowHeight / 2, 0, Math.PI * 2, true);
+  ctx.arc(x + xOffset, y + yOffset, circleRadius, 0, Math.PI * 2, true);
   ctx.stroke();
   ctx.fillStyle = fill;
   ctx.fill();
 
+  // Draw name below circle
   ctx.fillStyle = "white";
-  ctx.font = "bold 14px Arial";
-  ctx.fillText(personName, x + xOffset - ctx.measureText(personName).width / 2 + 1, y + yOffset + (rowHeight / 2 + 14) + 1);
+  ctx.font = "bold 11px Arial";
+  ctx.fillText(personName, x + xOffset - ctx.measureText(personName).width / 2 + 1, y + yOffset + circleRadius + 12 + 1);
   ctx.fillStyle = "black";
-  ctx.fillText(personName, x + xOffset - ctx.measureText(personName).width / 2, y + yOffset + (rowHeight / 2 + 14));
+  ctx.fillText(personName, x + xOffset - ctx.measureText(personName).width / 2, y + yOffset + circleRadius + 12);
 
   person.coordinates = {
-    "X1": xOffset - rowHeight,
-    "Y1": yOffset - rowHeight,
-    "X2": xOffset + rowHeight,
-    "Y2": yOffset + rowHeight,
+    "X1": xOffset - circleRadius,
+    "Y1": yOffset - circleRadius,
+    "X2": xOffset + circleRadius,
+    "Y2": yOffset + circleRadius,
   };
 }
 
