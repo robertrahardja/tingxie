@@ -3421,11 +3421,11 @@
           "important": true
         },
         {
-          "simplified": "肥瘦",
-          "traditional": "肥瘦",
-          "pinyin": "féi shòu",
+          "simplified": "胖瘦",
+          "traditional": "胖瘦",
+          "pinyin": "pàng shòu",
           "english": "fat or thin",
-          "audio": "audio/肥瘦.mp3",
+          "audio": "audio/胖瘦.mp3",
           "important": true
         },
         {
@@ -3509,11 +3509,11 @@
           "important": true
         },
         {
-          "simplified": "姐姐",
-          "traditional": "姐姐",
-          "pinyin": "jiě jie",
-          "english": "older sister",
-          "audio": "audio/姐姐.mp3",
+          "simplified": "姑姑",
+          "traditional": "姑姑",
+          "pinyin": "gū gu",
+          "english": "aunt (father's sister)",
+          "audio": "audio/姑姑.mp3",
           "important": true
         },
         {
