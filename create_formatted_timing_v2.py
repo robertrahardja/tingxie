@@ -61,19 +61,19 @@ for para in original_paragraphs:
 
     for char in para:
         if char in '，。、""！？（）':
-            # Punctuation - use timing from previous char
+            # Punctuation - use same timing as previous char (zero duration)
             if para_chars:
                 prev = para_chars[-1]
                 para_chars.append({
                     'char': char,
                     'start': prev['end'],
-                    'end': prev['end'] + 0.05
+                    'end': prev['end']  # Zero duration for punctuation
                 })
             else:
                 para_chars.append({
                     'char': char,
                     'start': 0,
-                    'end': 0.05
+                    'end': 0
                 })
         else:
             # Regular character - find matching word
