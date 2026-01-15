@@ -202,7 +202,7 @@ class LatestApp extends BaseApp {
         if (this.filteredWords.length === 0) return;
 
         const word = this.filteredWords[this.currentIndex];
-        const characters = word.traditional || word.simplified;
+        const characters = word.simplified || word.traditional;
 
         // Show the handwriting component
         const handwritingEmbed = document.getElementById('handwriting-embed');
@@ -308,7 +308,7 @@ class LatestApp extends BaseApp {
     resetHandwriting() {
         if (this.hanziWriter && this.filteredWords.length > 0) {
             const word = this.filteredWords[this.currentIndex];
-            const characters = word.traditional || word.simplified;
+            const characters = word.simplified || word.traditional;
             this.loadHandwritingCharacter(characters);
         }
     }
