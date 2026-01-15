@@ -271,28 +271,39 @@
             const currentTime = audio.currentTime;
             const chars = document.querySelectorAll('.word');
 
-            // Find current character
-            let foundCurrentChar = false;
+            // Find the current character by checking all characters
+            let activeChar = null;
+            let activeIndex = -1;
+
             chars.forEach((char, index) => {
                 const start = parseFloat(char.dataset.start);
                 const end = parseFloat(char.dataset.end);
 
+                // Remove all classes first
                 char.classList.remove('active', 'past');
 
-                if (currentTime >= start && currentTime <= end) {
-                    char.classList.add('active');
-                    foundCurrentChar = true;
-                    currentCharIndex = index;
-
-                    // Scroll into view smoothly
-                    if (char.getBoundingClientRect().bottom > window.innerHeight - 100 ||
-                        char.getBoundingClientRect().top < 100) {
-                        char.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Check if this is the current character
+                if (currentTime >= start && currentTime < end) {
+                    if (!activeChar || start > parseFloat(activeChar.dataset.start)) {
+                        activeChar = char;
+                        activeIndex = index;
                     }
-                } else if (currentTime > end) {
+                } else if (currentTime >= end) {
                     char.classList.add('past');
                 }
             });
+
+            // Apply active class to only one character
+            if (activeChar) {
+                activeChar.classList.add('active');
+                currentCharIndex = activeIndex;
+
+                // Scroll into view smoothly
+                const rect = activeChar.getBoundingClientRect();
+                if (rect.bottom > window.innerHeight - 100 || rect.top < 100) {
+                    activeChar.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         }
 
         // Audio event listeners

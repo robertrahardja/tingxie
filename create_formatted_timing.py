@@ -42,15 +42,15 @@ for para_idx, paragraph in enumerate(original_paragraphs):
         # Skip punctuation - use timing from adjacent word
         if char in '，。、""！？（）':
             if para_chars:
-                # Use end time of previous character
+                # Use end time of previous character, with small duration
                 prev_timing = para_chars[-1]
                 para_chars.append({
                     'char': char,
                     'start': prev_timing['end'],
-                    'end': prev_timing['end']
+                    'end': prev_timing['end'] + 0.05
                 })
             else:
-                para_chars.append({'char': char, 'start': 0, 'end': 0})
+                para_chars.append({'char': char, 'start': 0, 'end': 0.05})
             char_idx += 1
             continue
 
