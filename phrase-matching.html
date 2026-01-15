@@ -467,7 +467,7 @@
         }
 
         // Play phrase using AudioPlayer with MP3 files
-        async function playPhrase(index) {
+        window.playPhrase = async function(index) {
             const phrase = phrases[index];
 
             // Highlight the card
@@ -503,7 +503,7 @@
         }
 
         // Toggle recording
-        async function toggleRecording(index) {
+        window.toggleRecording = async function(index) {
             if (currentRecordingId === index) {
                 // Stop recording
                 stopRecording();
@@ -575,7 +575,7 @@
         }
 
         // Play recording
-        function playRecording(index) {
+        window.playRecording = function(index) {
             if (recordings[index]) {
                 if (currentAudio) {
                     currentAudio.pause();
@@ -611,7 +611,7 @@
         }
 
         // Play all phrases
-        async function playAll() {
+        window.playAll = async function() {
             if (isPlayingAll) return;
 
             isPlayingAll = true;
@@ -660,7 +660,7 @@
         }
 
         // Clear all recordings
-        function clearAllRecordings() {
+        window.clearAllRecordings = function() {
             if (confirm('确定要清除所有录音吗？')) {
                 // Revoke all object URLs
                 Object.values(recordings).forEach(url => {
