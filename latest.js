@@ -376,10 +376,9 @@ class LatestApp extends BaseApp {
             audioBtn.replaceWith(newAudioBtn);
         }
 
-        // Update handwriting component if it's visible
+        // Close handwriting component when navigating to next word
         if (this.handwritingVisible) {
-            const characters = word.simplified || word.traditional;
-            this.loadHandwritingCharacter(characters);
+            this.hideHandwritingPractice();
         }
 
         this.updateProgress();
