@@ -293,108 +293,137 @@
         <span>录音中...</span>
     </div>
 
-    <script>
+    <script type="module">
+        import { getAudioPlayer } from './js/AudioPlayer.js';
+
+        const audioPlayer = getAudioPlayer();
+
         // Vocabulary data from the image (读一读——词语搭配 (拼音))
         const phrases = [
             {
                 text: "很多颜色",
-                pinyin: "hěn duō yán sè"
+                pinyin: "hěn duō yán sè",
+                audio: "audio/很多颜色.mp3"
             },
             {
                 text: "颜色鲜艳",
-                pinyin: "yán sè xiān yàn"
+                pinyin: "yán sè xiān yàn",
+                audio: "audio/颜色鲜艳.mp3"
             },
             {
                 text: "五颜六色",
-                pinyin: "wǔ yán liù sè"
+                pinyin: "wǔ yán liù sè",
+                audio: "audio/五颜六色.mp3"
             },
             {
                 text: "学习成绩",
-                pinyin: "xué xí chéng jì"
+                pinyin: "xué xí chéng jì",
+                audio: "audio/学习成绩.mp3"
             },
             {
                 text: "合作伙伴",
-                pinyin: "hé zuò huǒ bàn"
+                pinyin: "hé zuò huǒ bàn",
+                audio: "audio/合作伙伴.mp3"
             },
             {
                 text: "工作伙伴",
-                pinyin: "gōng zuò huǒ bàn"
+                pinyin: "gōng zuò huǒ bàn",
+                audio: "audio/工作伙伴.mp3"
             },
             {
                 text: "很多按钮",
-                pinyin: "hěn duō àn niǔ"
+                pinyin: "hěn duō àn niǔ",
+                audio: "audio/很多按钮.mp3"
             },
             {
                 text: "电梯按钮",
-                pinyin: "diàn tī àn niǔ"
+                pinyin: "diàn tī àn niǔ",
+                audio: "audio/电梯按钮.mp3"
             },
             {
                 text: "改掉恶习",
-                pinyin: "gǎi diào è xí"
+                pinyin: "gǎi diào è xí",
+                audio: "audio/改掉恶习.mp3"
             },
             {
                 text: "改掉坏毛病",
-                pinyin: "gǎi diào huài máo bìng"
+                pinyin: "gǎi diào huài máo bìng",
+                audio: "audio/改掉坏毛病.mp3"
             },
             {
                 text: "改掉恶习惯",
-                pinyin: "gǎi diào è xí guàn"
+                pinyin: "gǎi diào è xí guàn",
+                audio: "audio/改掉恶习惯.mp3"
             },
             {
                 text: "马上睡觉",
-                pinyin: "mǎ shàng shuì jiào"
+                pinyin: "mǎ shàng shuì jiào",
+                audio: "audio/马上睡觉.mp3"
             },
             {
                 text: "上床睡觉",
-                pinyin: "shàng chuáng shuì jiào"
+                pinyin: "shàng chuáng shuì jiào",
+                audio: "audio/上床睡觉.mp3"
             },
             {
                 text: "智力超人",
-                pinyin: "zhì lì chāo rén"
+                pinyin: "zhì lì chāo rén",
+                audio: "audio/智力超人.mp3"
             },
             {
                 text: "养成习惯",
-                pinyin: "yǎng chéng xí guàn"
+                pinyin: "yǎng chéng xí guàn",
+                audio: "audio/养成习惯.mp3"
             },
             {
                 text: "良好习惯",
-                pinyin: "liáng hǎo xí guàn"
+                pinyin: "liáng hǎo xí guàn",
+                audio: "audio/良好习惯.mp3"
             },
             {
                 text: "生活习惯",
-                pinyin: "shēng huó xí guàn"
+                pinyin: "shēng huó xí guàn",
+                audio: "audio/生活习惯.mp3"
             },
             {
                 text: "上学迟到",
-                pinyin: "shàng xué chí dào"
+                pinyin: "shàng xué chí dào",
+                audio: "audio/上学迟到.mp3"
             },
             {
                 text: "总是迟到",
-                pinyin: "zǒng shì chí dào"
+                pinyin: "zǒng shì chí dào",
+                audio: "audio/总是迟到.mp3"
             },
             {
                 text: "准时到达",
-                pinyin: "zhǔn shí dào dá"
+                pinyin: "zhǔn shí dào dá",
+                audio: "audio/准时到达.mp3"
             },
             {
                 text: "准时出发",
-                pinyin: "zhǔn shí chū fā"
+                pinyin: "zhǔn shí chū fā",
+                audio: "audio/准时出发.mp3"
             },
             {
                 text: "一根吸管",
-                pinyin: "yì gēn xī guǎn"
+                pinyin: "yì gēn xī guǎn",
+                audio: "audio/一根吸管.mp3"
             },
             {
                 text: "使用吸管",
-                pinyin: "shǐ yòng xī guǎn"
+                pinyin: "shǐ yòng xī guǎn",
+                audio: "audio/使用吸管.mp3"
             },
             {
                 text: "形状好看",
-                pinyin: "xíng zhuàng hǎo kàn"
+                pinyin: "xíng zhuàng hǎo kàn",
+                audio: "audio/形状好看.mp3"
             },
             {
                 text: "各种形状",
-                pinyin: "gè zhǒng xíng zhuàng"
+                pinyin: "gè zhǒng xíng zhuàng",
+                audio: "audio/各种形状.mp3"
             }
         ];
 
@@ -437,31 +466,40 @@
             });
         }
 
-        // Play phrase using Web Speech API
-        function playPhrase(index) {
-            if (currentAudio) {
-                speechSynthesis.cancel();
-            }
-
+        // Play phrase using AudioPlayer with MP3 files
+        async function playPhrase(index) {
             const phrase = phrases[index];
 
             // Highlight the card
             document.querySelectorAll('.phrase-card').forEach(card => {
                 card.classList.remove('active');
             });
-            document.querySelector(`[data-index="${index}"]`).classList.add('active');
+            const activeCard = document.querySelector(`[data-index="${index}"]`);
+            if (activeCard) {
+                activeCard.classList.add('active');
+            }
 
-            // Use Web Speech API for Chinese text-to-speech
-            const utterance = new SpeechSynthesisUtterance(phrase.text);
-            utterance.lang = 'zh-CN';
-            utterance.rate = 0.75; // Slightly slower for learning
-            utterance.pitch = 1.0;
+            // Play the audio file
+            if (phrase.audio) {
+                const success = await audioPlayer.play(phrase.audio);
 
-            utterance.onend = () => {
-                document.querySelector(`[data-index="${index}"]`).classList.remove('active');
-            };
-
-            speechSynthesis.speak(utterance);
+                if (success) {
+                    // Remove highlight when audio ends
+                    const audio = audioPlayer.currentAudio;
+                    if (audio) {
+                        audio.addEventListener('ended', () => {
+                            if (activeCard) {
+                                activeCard.classList.remove('active');
+                            }
+                        }, { once: true });
+                    }
+                } else {
+                    // Remove highlight if audio failed
+                    if (activeCard) {
+                        activeCard.classList.remove('active');
+                    }
+                }
+            }
         }
 
         // Toggle recording
@@ -584,17 +622,31 @@
             for (let i = 0; i < phrases.length; i++) {
                 if (!isPlayingAll) break;
 
-                await new Promise((resolve) => {
-                    playPhrase(i);
+                const phrase = phrases[i];
 
-                    // Wait for speech to finish
-                    const checkSpeech = setInterval(() => {
-                        if (!speechSynthesis.speaking) {
-                            clearInterval(checkSpeech);
-                            setTimeout(resolve, 500); // Small pause between phrases
-                        }
-                    }, 100);
+                // Highlight current card
+                document.querySelectorAll('.phrase-card').forEach(card => {
+                    card.classList.remove('active');
                 });
+                const activeCard = document.querySelector(`[data-index="${i}"]`);
+                if (activeCard) {
+                    activeCard.classList.add('active');
+                }
+
+                // Play audio and wait for it to finish
+                if (phrase.audio) {
+                    await new Promise((resolve) => {
+                        audioPlayer.play(phrase.audio).then((success) => {
+                            if (success && audioPlayer.currentAudio) {
+                                audioPlayer.currentAudio.addEventListener('ended', () => {
+                                    setTimeout(resolve, 500); // Small pause between phrases
+                                }, { once: true });
+                            } else {
+                                setTimeout(resolve, 500);
+                            }
+                        });
+                    });
+                }
             }
 
             isPlayingAll = false;
@@ -648,7 +700,7 @@
             if (currentAudio) {
                 currentAudio.pause();
             }
-            speechSynthesis.cancel();
+            audioPlayer.stop();
             if (mediaRecorder && mediaRecorder.state !== 'inactive') {
                 mediaRecorder.stop();
             }
