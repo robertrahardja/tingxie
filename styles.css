@@ -206,11 +206,14 @@ main {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     padding: 25px 15px;
     margin-bottom: 15px;
-    flex-grow: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-height: calc(100vh - 450px);
+    min-height: 400px;
 }
 
 .card-progress {
