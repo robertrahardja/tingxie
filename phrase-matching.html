@@ -137,6 +137,29 @@
             color: #666;
             text-align: center;
             line-height: 1.6;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+
+        .phrase-pinyin.hidden {
+            color: transparent;
+            background: #f0f0f0;
+            text-shadow: none;
+        }
+
+        .phrase-pinyin.hidden:hover {
+            background: #e0e0e0;
+        }
+
+        .phrase-card.active .phrase-pinyin.hidden {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .phrase-card.active .phrase-pinyin.hidden:hover {
+            background: rgba(255,255,255,0.4);
         }
 
         .phrase-actions {
@@ -280,6 +303,7 @@
     <div class="content-container">
         <div class="controls-bar">
             <button class="control-btn" onclick="playAll()">🔊 播放全部</button>
+            <button class="control-btn" onclick="toggleAllPinyin()" id="pinyin-toggle-btn">👁️ 显示拼音</button>
             <button class="control-btn" onclick="clearAllRecordings()">🗑️ 清除所有录音</button>
         </div>
 
@@ -447,7 +471,7 @@
                 card.innerHTML = `
                     <div class="phrase-number">${index + 1}</div>
                     <div class="phrase-text">${phrase.text}</div>
-                    <div class="phrase-pinyin">${phrase.pinyin}</div>
+                    <div class="phrase-pinyin hidden" id="pinyin-${index}">${phrase.pinyin}</div>
                     <div class="phrase-actions">
                         <button class="action-btn" onclick="playPhrase(${index})">
                             🔊 播放
@@ -461,6 +485,14 @@
                     </div>
                     <div class="playback-status" id="status-${index}"></div>
                 `;
+
+                // Add click handler to toggle pinyin visibility
+                const pinyinElement = card.querySelector(`#pinyin-${index}`);
+                if (pinyinElement) {
+                    pinyinElement.addEventListener('click', () => {
+                        pinyinElement.classList.toggle('hidden');
+                    });
+                }
 
                 grid.appendChild(card);
             });
@@ -657,6 +689,25 @@
             document.querySelectorAll('.phrase-card').forEach(card => {
                 card.classList.remove('active');
             });
+        }
+
+        // Toggle all pinyin visibility
+        window.toggleAllPinyin = function() {
+            const allPinyin = document.querySelectorAll('.phrase-pinyin');
+            const toggleBtn = document.getElementById('pinyin-toggle-btn');
+
+            // Check if any are hidden
+            const anyHidden = Array.from(allPinyin).some(el => el.classList.contains('hidden'));
+
+            if (anyHidden) {
+                // Show all
+                allPinyin.forEach(el => el.classList.remove('hidden'));
+                toggleBtn.textContent = '👁️‍🗨️ 隐藏拼音';
+            } else {
+                // Hide all
+                allPinyin.forEach(el => el.classList.add('hidden'));
+                toggleBtn.textContent = '👁️ 显示拼音';
+            }
         }
 
         // Clear all recordings
