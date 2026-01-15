@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>介绍我的物品 - P3HCL 阅读练习</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f5f5f5;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .lesson-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .lesson-header h1 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+
+        .lesson-header .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .audio-controls {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .audio-player {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .play-btn {
+            padding: 15px 40px;
+            border-radius: 8px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .play-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .reading-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .reading-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        .reading-paragraph {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            line-height: 2;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-indent: 2em;
+            color: #333;
+        }
+
+        .reading-paragraph:last-child {
+            margin-bottom: 0;
+        }
+
+        .pinyin-annotations {
+            display: inline;
+            position: relative;
+        }
+
+        .pinyin-text {
+            font-size: 12px;
+            color: #999;
+            display: block;
+            text-align: center;
+            margin-bottom: 2px;
+        }
+
+        .controls-bar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .control-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #4CAF50;
+            color: white;
+        }
+
+        .control-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 24px;
+            }
+
+            .reading-title {
+                font-size: 28px;
+            }
+
+            .reading-paragraph {
+                font-size: 18px;
+                padding: 20px;
+            }
+
+            .controls-bar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="koushi25.html" class="nav-item">口试</a>
+                <a href="vocabulary.html" class="nav-item">词汇浏览</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="lesson-header">
+        <h1>📝 介绍我的物品</h1>
+        <div class="subtitle">P3HCL Reading Practice - Introducing My Belongings</div>
+    </div>
+
+    <div class="content-container">
+        <div class="controls-bar">
+            <button class="control-btn" onclick="playAudio()">🔊 播放朗读</button>
+            <button class="control-btn" onclick="pauseAudio()">⏸ 暂停</button>
+            <button class="control-btn" onclick="resetAudio()">🔄 重新开始</button>
+        </div>
+
+        <div class="audio-controls">
+            <audio id="reading-audio" class="audio-player" controls>
+                <source src="audio/koushi/P3HCL_3.mp4" type="audio/mp4">
+                您的浏览器不支持音频播放。
+            </audio>
+        </div>
+
+        <div class="reading-container">
+            <div class="reading-title">《介绍我的物品》</div>
+
+            <div class="reading-paragraph">
+                我的水壶是蓝色的，它是圆柱形的，上面画着漂亮的冰雪女王。水壶的旁边有一条细长的带子。一按按钮，盖子就会弹开。一打开盖子，吸管就会弹起来。水壶是我的好伙伴，我天天都带着它上学。
+            </div>
+
+            <div class="reading-paragraph">
+                我的文具盒是长方形的，上面画着一辆车。文具盒的里面装着各种各样的文具，有铅笔、尺子、橡皮、还有卷笔刀等。文具盒是我学习的好伙伴，我天天都带着它上学。
+            </div>
+
+            <div class="reading-paragraph">
+                我的闹钟是黄色的，它是圆形的，上面还"长"着两个可爱的"耳朵"。闹钟的里面画着一只米老鼠，只要闹钟一响起，我就会按掉起床去上课。它每天早上都会准时叫我起床，是我生活中离不开的好朋友。
+            </div>
+
+            <div class="reading-paragraph">
+                我的书包是黑色的，它是一个新型的书包，上面画着一个蝙蝠侠。这个书包有很多隔层，其中一个大点的可以装书，中间的装本子，小点的装文具之类的，两边的网包可以放水壶或者其它杂西。这个书包的背带很宽，再加上海绵垫，背起来很舒服，还可以把书包绑在腰上，这样跑起来的时候，书包就不会左右晃动。它每天早上陪我上学，下午伴我回家，真是我学习上的好帮手。
+            </div>
+
+            <div class="reading-paragraph">
+                我的手表是粉红色的，它是爱心形的手表！它还有一个表盖，上面画着一只蝴蝶的图案。表盖旁边有一个按钮，一按按钮，表盖就会打开，我就能看到时间。自从有了这只手表，我每天早睡早起，准时上学。这只手表天天陪伴我，真是我的好伙伴。
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('reading-audio');
+
+        function playAudio() {
+            audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+
+        function resetAudio() {
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        // Mobile navigation
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
