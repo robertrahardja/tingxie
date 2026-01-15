@@ -68,6 +68,7 @@ export const ELEMENT_IDS = {
     KNOW_BTN: 'know-btn',
     DONT_KNOW_BTN: 'dont-know-btn',
     REVIEW_TOGGLE: 'review-toggle',
+    HANDWRITING_BTN: 'handwriting-btn',
     CURRENT_SET: 'current-set',
     TOTAL_SETS: 'total-sets',
     SIMPLIFIED: 'simplified',

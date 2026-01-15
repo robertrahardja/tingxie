@@ -156,8 +156,28 @@ class LatestApp extends BaseApp {
             });
         }
 
+        // Handwriting practice button
+        const handwritingBtn = document.getElementById(ELEMENT_IDS.HANDWRITING_BTN);
+        if (handwritingBtn) {
+            handwritingBtn.addEventListener('click', () => {
+                this.openHandwritingPractice();
+            });
+        }
+
         // Initialize filtered words
         this.filteredWords = this.getFilteredWords();
+    }
+
+    openHandwritingPractice() {
+        if (this.filteredWords.length === 0) return;
+
+        const word = this.filteredWords[this.currentIndex];
+        // Get the traditional Chinese characters for the current word
+        const characters = word.traditional || word.simplified;
+
+        // Open handwriting practice page with the word
+        const url = `https://tingxie.rr-startech-innovation.workers.dev/handwriting?word=${encodeURIComponent(characters)}`;
+        window.open(url, '_blank');
     }
 
     getFilteredWords() {

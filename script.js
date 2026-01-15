@@ -159,6 +159,7 @@ class TingxieApp extends BaseApp {
         this.setupWordItemListeners();
         this.setupSelfAssessListeners();
         this.setupReviewModeListener();
+        this.setupHandwritingListener();
         this.setupTouchOptimization();
     }
 
@@ -196,6 +197,25 @@ class TingxieApp extends BaseApp {
         }
     }
 
+    setupHandwritingListener() {
+        const handwritingBtn = document.getElementById(ELEMENT_IDS.HANDWRITING_BTN);
+
+        if (handwritingBtn) {
+            handwritingBtn.addEventListener('click', () => this.openHandwritingPractice());
+        }
+    }
+
+    openHandwritingPractice() {
+        if (!this.currentWord) return;
+
+        // Get the traditional Chinese characters for the current word
+        const word = this.currentWord.traditional || this.currentWord.simplified;
+
+        // Open handwriting practice page with the word
+        const url = `https://tingxie.rr-startech-innovation.workers.dev/handwriting?word=${encodeURIComponent(word)}`;
+        window.open(url, '_blank');
+    }
+
     setupWordItemListeners() {
         const wordTypes = ['simplified', 'traditional', 'pinyin', 'english', 'audio'];
 
@@ -213,7 +233,8 @@ class TingxieApp extends BaseApp {
             ELEMENT_IDS.PINYIN, ELEMENT_IDS.ENGLISH, ELEMENT_IDS.AUDIO,
             ELEMENT_IDS.PREV_BTN, ELEMENT_IDS.NEXT_BTN,
             ELEMENT_IDS.FILTER_TOGGLE, ELEMENT_IDS.REVIEW_TOGGLE,
-            ELEMENT_IDS.KNOW_BTN, ELEMENT_IDS.DONT_KNOW_BTN
+            ELEMENT_IDS.KNOW_BTN, ELEMENT_IDS.DONT_KNOW_BTN,
+            ELEMENT_IDS.HANDWRITING_BTN
         ];
 
         touchElements.forEach(id => {

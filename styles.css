@@ -345,8 +345,33 @@ main {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+.handwriting-controls {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.handwriting-btn {
+    width: 100%;
+    background: linear-gradient(45deg, #9C27B0 0%, #673AB7 100%);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 50px;
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+}
+
+.handwriting-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(156, 39, 176, 0.4);
+}
+
 .self-assess-controls {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 15px;
 }
 
@@ -523,8 +548,20 @@ main {
         border: 3px dashed #ccc;
     }
     
+    .handwriting-controls {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .handwriting-btn {
+        padding: 16px 30px;
+        font-size: 18px;
+        border-radius: 18px;
+        min-height: 56px;
+    }
+
     .self-assess-controls {
-        margin-top: 25px;
+        margin-top: 15px;
     }
 
     .assess-buttons {
