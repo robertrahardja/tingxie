@@ -227,15 +227,15 @@
 
     <script>
         const audio = document.getElementById('reading-audio');
-        let wordTimings = [];
-        let currentWordIndex = -1;
+        let paragraphData = [];
+        let currentCharIndex = -1;
 
-        // Load timing data
+        // Load formatted timing data with punctuation and paragraphs
         async function loadTimingData() {
             try {
-                const response = await fetch('audio/koushi/P3HCL_3_timing.json');
+                const response = await fetch('audio/koushi/P3HCL_3_formatted_timing.json');
                 const data = await response.json();
-                wordTimings = data.words;
+                paragraphData = data.paragraphs;
                 renderContent();
             } catch (error) {
                 console.error('Error loading timing data:', error);
@@ -246,44 +246,50 @@
             }
         }
 
-        // Render content with word spans
+        // Render content with character-level spans
         function renderContent() {
             const content = document.getElementById('reading-content');
-            let html = '<div class="reading-paragraph">';
+            let html = '';
 
-            wordTimings.forEach((wordData, index) => {
-                html += `<span class="word" data-index="${index}" data-start="${wordData.start}" data-end="${wordData.end}">${wordData.word}</span>`;
+            paragraphData.forEach((para, paraIndex) => {
+                html += '<div class="reading-paragraph">';
+
+                para.chars.forEach((charData, charIndex) => {
+                    const globalIndex = paraIndex * 1000 + charIndex; // Create unique index
+                    html += `<span class="word" data-para="${paraIndex}" data-char="${charIndex}" data-start="${charData.start}" data-end="${charData.end}">${charData.char}</span>`;
+                });
+
+                html += '</div>';
             });
 
-            html += '</div>';
             content.innerHTML = html;
         }
 
         // Update highlighting based on current time
         function updateHighlight() {
             const currentTime = audio.currentTime;
-            const words = document.querySelectorAll('.word');
+            const chars = document.querySelectorAll('.word');
 
-            // Find current word
-            let foundCurrentWord = false;
-            words.forEach((word, index) => {
-                const start = parseFloat(word.dataset.start);
-                const end = parseFloat(word.dataset.end);
+            // Find current character
+            let foundCurrentChar = false;
+            chars.forEach((char, index) => {
+                const start = parseFloat(char.dataset.start);
+                const end = parseFloat(char.dataset.end);
 
-                word.classList.remove('active', 'past');
+                char.classList.remove('active', 'past');
 
                 if (currentTime >= start && currentTime <= end) {
-                    word.classList.add('active');
-                    foundCurrentWord = true;
-                    currentWordIndex = index;
+                    char.classList.add('active');
+                    foundCurrentChar = true;
+                    currentCharIndex = index;
 
                     // Scroll into view smoothly
-                    if (word.getBoundingClientRect().bottom > window.innerHeight - 100 ||
-                        word.getBoundingClientRect().top < 100) {
-                        word.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    if (char.getBoundingClientRect().bottom > window.innerHeight - 100 ||
+                        char.getBoundingClientRect().top < 100) {
+                        char.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }
                 } else if (currentTime > end) {
-                    word.classList.add('past');
+                    char.classList.add('past');
                 }
             });
         }
