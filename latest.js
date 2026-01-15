@@ -2,6 +2,7 @@ import { BaseApp } from './js/BaseApp.js';
 import { CONSTANTS, CSS_CLASSES, ELEMENT_IDS } from './js/constants.js';
 import { getAudioPlayer } from './js/AudioPlayer.js';
 import { CloudSync } from './js/CloudSync.js';
+import HanziWriter from 'https://cdn.jsdelivr.net/npm/hanzi-writer@3.7.3/+esm';
 
 class LatestApp extends BaseApp {
     constructor() {
@@ -11,6 +12,9 @@ class LatestApp extends BaseApp {
         this.currentIndex = 0;
         this.knownWords = new Set();
         this.unknownWords = new Set();
+        this.hanziWriter = null;
+        this.currentStroke = 0;
+        this.handwritingVisible = false;
     }
 
     async init() {
@@ -160,24 +164,153 @@ class LatestApp extends BaseApp {
         const handwritingBtn = document.getElementById(ELEMENT_IDS.HANDWRITING_BTN);
         if (handwritingBtn) {
             handwritingBtn.addEventListener('click', () => {
-                this.openHandwritingPractice();
+                this.toggleHandwritingPractice();
             });
+        }
+
+        // Close handwriting button
+        const closeHandwriting = document.getElementById('close-handwriting');
+        if (closeHandwriting) {
+            closeHandwriting.addEventListener('click', () => {
+                this.hideHandwritingPractice();
+            });
+        }
+
+        // Handwriting controls
+        const hintBtn = document.getElementById('handwriting-hint');
+        const resetBtn = document.getElementById('handwriting-reset');
+        if (hintBtn) {
+            hintBtn.addEventListener('click', () => this.showHandwritingHint());
+        }
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => this.resetHandwriting());
         }
 
         // Initialize filtered words
         this.filteredWords = this.getFilteredWords();
     }
 
-    openHandwritingPractice() {
+    toggleHandwritingPractice() {
+        if (this.handwritingVisible) {
+            this.hideHandwritingPractice();
+        } else {
+            this.showHandwritingPractice();
+        }
+    }
+
+    showHandwritingPractice() {
         if (this.filteredWords.length === 0) return;
 
         const word = this.filteredWords[this.currentIndex];
-        // Get the traditional Chinese characters for the current word
         const characters = word.traditional || word.simplified;
 
-        // Open handwriting practice page with the word
-        const url = `https://tingxie.rr-startech-innovation.workers.dev/handwriting?word=${encodeURIComponent(characters)}`;
-        window.open(url, '_blank');
+        // Show the handwriting component
+        const handwritingEmbed = document.getElementById('handwriting-embed');
+        if (handwritingEmbed) {
+            handwritingEmbed.style.display = 'block';
+            this.handwritingVisible = true;
+
+            // Load each character into HanziWriter
+            this.loadHandwritingCharacter(characters);
+        }
+    }
+
+    hideHandwritingPractice() {
+        const handwritingEmbed = document.getElementById('handwriting-embed');
+        if (handwritingEmbed) {
+            handwritingEmbed.style.display = 'none';
+            this.handwritingVisible = false;
+
+            // Clean up the writer
+            if (this.hanziWriter) {
+                this.hanziWriter = null;
+            }
+        }
+    }
+
+    loadHandwritingCharacter(characters) {
+        const charElement = document.getElementById('handwriting-char');
+        const targetElement = document.getElementById('handwriting-target');
+        const statusElement = document.getElementById('handwriting-status');
+
+        if (!charElement || !targetElement) return;
+
+        // Display the character
+        charElement.textContent = characters;
+
+        // Clear previous writer
+        targetElement.innerHTML = '';
+        if (statusElement) statusElement.textContent = '';
+
+        // Create HanziWriter instance for the first character
+        const firstChar = characters[0];
+        this.currentStroke = 0;
+
+        this.hanziWriter = HanziWriter.create(targetElement, firstChar, {
+            width: 280,
+            height: 280,
+            padding: 20,
+            showOutline: true,
+            showCharacter: false,
+            strokeAnimationSpeed: 1,
+            delayBetweenStrokes: 100,
+            strokeColor: '#333',
+            outlineColor: '#ddd',
+            drawingColor: '#4a90d9',
+            drawingWidth: 20,
+            showHintAfterMisses: 3,
+            highlightOnComplete: true,
+            highlightColor: '#27ae60',
+            charDataLoader: (char) => {
+                return fetch(`https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0/${char}.json`)
+                    .then(res => {
+                        if (!res.ok) throw new Error('Character not found');
+                        return res.json();
+                    });
+            },
+        });
+
+        // Start quiz mode
+        this.hanziWriter.quiz({
+            onMistake: (strokeData) => {
+                if (statusElement) {
+                    statusElement.textContent = `第 ${strokeData.strokeNum + 1} 笔: 再试一次！`;
+                    statusElement.className = 'handwriting-status error';
+                }
+            },
+            onCorrectStroke: (strokeData) => {
+                this.currentStroke = strokeData.strokeNum + 1;
+                if (statusElement) {
+                    statusElement.textContent = `第 ${strokeData.strokeNum + 1} 笔: 正确！`;
+                    statusElement.className = 'handwriting-status';
+                }
+            },
+            onComplete: (summaryData) => {
+                if (statusElement) {
+                    const mistakes = summaryData.totalMistakes;
+                    if (mistakes === 0) {
+                        statusElement.textContent = '完美！没有错误！';
+                    } else {
+                        statusElement.textContent = `完成！${mistakes} 个错误`;
+                    }
+                    statusElement.className = 'handwriting-status';
+                }
+            },
+        });
+    }
+
+    showHandwritingHint() {
+        if (this.hanziWriter) {
+            this.hanziWriter.highlightStroke(this.currentStroke);
+        }
+    }
+
+    resetHandwriting() {
+        if (this.hanziWriter && this.filteredWords.length > 0) {
+            const word = this.filteredWords[this.currentIndex];
+            const characters = word.traditional || word.simplified;
+            this.loadHandwritingCharacter(characters);
+        }
     }
 
     getFilteredWords() {

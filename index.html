@@ -6,6 +6,7 @@
     <title>最新词语 - 听写练习</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="handwriting-embed.css">
 </head>
 <body>
     <nav class="main-nav">
@@ -80,6 +81,29 @@
                 <button id="handwriting-btn" class="handwriting-btn">✍️ 笔画练习</button>
             </div>
 
+            <!-- Embedded Handwriting Practice -->
+            <div class="handwriting-embed" id="handwriting-embed" style="display: none;">
+                <div class="handwriting-embed-header">
+                    <h3>笔画练习</h3>
+                    <button id="close-handwriting" class="close-btn">✕</button>
+                </div>
+
+                <div class="character-display-embed">
+                    <span id="handwriting-char"></span>
+                </div>
+
+                <div id="handwriting-writer-container">
+                    <div id="handwriting-target"></div>
+                </div>
+
+                <div class="handwriting-controls-embed">
+                    <button id="handwriting-hint" class="handwriting-action-btn">显示提示</button>
+                    <button id="handwriting-reset" class="handwriting-action-btn reset">重置</button>
+                </div>
+
+                <div class="handwriting-status" id="handwriting-status"></div>
+            </div>
+
             <div class="self-assess-controls">
                 <div class="assess-buttons">
                     <button id="know-btn" class="assess-btn know-btn">会 ✓</button>
@@ -89,6 +113,6 @@
         </main>
     </div>
 
-    <script type="module" src="latest.js?v=3"></script>
+    <script type="module" src="latest.js?v=4"></script>
 </body>
 </html>
