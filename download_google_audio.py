@@ -15,7 +15,7 @@ WORDS = {
     "伙伴": "huǒ bàn - partner, companion",
     "背": "bēi - to carry on one's back",
     "手表": "shǒu biǎo - watch, wristwatch",
-    "闻叮响": "wén dīng xiǎng - to hear a ding sound",
+    "闹钟响": "nào zhōng xiǎng - alarm clock rings",
     "颜色": "yán sè - color",
     "习惯": "xí guàn - habit, to be accustomed to",
     "睡觉": "shuì jiào - to sleep",
