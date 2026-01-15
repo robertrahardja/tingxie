@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>读一读——词语搭配 (拼音)</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f5f5f5;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .lesson-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .lesson-header h1 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+
+        .lesson-header .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .controls-bar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .control-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #667eea;
+            color: white;
+        }
+
+        .control-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .control-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .phrases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .phrase-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .phrase-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .phrase-card.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.02);
+        }
+
+        .phrase-card.active .phrase-pinyin {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .phrase-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .phrase-card.active .phrase-number {
+            background: white;
+            color: #667eea;
+        }
+
+        .phrase-text {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0 15px 0;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .phrase-pinyin {
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .phrase-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+
+        .action-btn {
+            padding: 12px 18px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #f0f0f0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        .action-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .phrase-card.active .action-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .phrase-card.active .action-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .action-btn.recording {
+            background: #ff4444;
+            color: white;
+            animation: pulse 1s infinite;
+        }
+
+        .action-btn.has-recording {
+            background: #4CAF50;
+            color: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .recording-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ff4444;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(255,68,68,0.4);
+            z-index: 1000;
+            animation: pulse 1s infinite;
+        }
+
+        .recording-indicator.show {
+            display: flex;
+        }
+
+        .recording-dot {
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .phrases-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .phrase-text {
+                font-size: 28px;
+            }
+
+            .lesson-header h1 {
+                font-size: 24px;
+            }
+
+            .controls-bar {
+                flex-direction: column;
+            }
+
+            .control-btn {
+                width: 100%;
+            }
+        }
+
+        .playback-status {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 5px;
+            color: #666;
+            min-height: 16px;
+        }
+
+        .phrase-card.active .playback-status {
+            color: rgba(255,255,255,0.8);
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="vocabulary.html" class="nav-item">词汇表</a>
+                <a href="koushi25.html" class="nav-item">口试</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="lesson-header">
+        <h1>读一读——词语搭配 (拼音)</h1>
+        <div class="subtitle">Word-Phrase Matching Practice</div>
+    </div>
+
+    <div class="content-container">
+        <div class="controls-bar">
+            <button class="control-btn" onclick="playAll()">🔊 播放全部</button>
+            <button class="control-btn" onclick="clearAllRecordings()">🗑️ 清除所有录音</button>
+        </div>
+
+        <div class="phrases-grid" id="phrases-grid">
+            <!-- Phrase cards will be inserted here -->
+        </div>
+    </div>
+
+    <div class="recording-indicator" id="recording-indicator">
+        <div class="recording-dot"></div>
+        <span>录音中...</span>
+    </div>
+
+    <script>
+        // Vocabulary data from the image (读一读——词语搭配 (拼音))
+        const phrases = [
+            {
+                text: "很多颜色",
+                pinyin: "hěn duō yán sè"
+            },
+            {
+                text: "颜色鲜艳",
+                pinyin: "yán sè xiān yàn"
+            },
+            {
+                text: "五颜六色",
+                pinyin: "wǔ yán liù sè"
+            },
+            {
+                text: "学习成绩",
+                pinyin: "xué xí chéng jì"
+            },
+            {
+                text: "合作伙伴",
+                pinyin: "hé zuò huǒ bàn"
+            },
+            {
+                text: "工作伙伴",
+                pinyin: "gōng zuò huǒ bàn"
+            },
+            {
+                text: "很多按钮",
+                pinyin: "hěn duō àn niǔ"
+            },
+            {
+                text: "电梯按钮",
+                pinyin: "diàn tī àn niǔ"
+            },
+            {
+                text: "改掉恶习",
+                pinyin: "gǎi diào è xí"
+            },
+            {
+                text: "改掉坏毛病",
+                pinyin: "gǎi diào huài máo bìng"
+            },
+            {
+                text: "改掉恶习惯",
+                pinyin: "gǎi diào è xí guàn"
+            },
+            {
+                text: "马上睡觉",
+                pinyin: "mǎ shàng shuì jiào"
+            },
+            {
+                text: "上床睡觉",
+                pinyin: "shàng chuáng shuì jiào"
+            },
+            {
+                text: "智力超人",
+                pinyin: "zhì lì chāo rén"
+            },
+            {
+                text: "养成习惯",
+                pinyin: "yǎng chéng xí guàn"
+            },
+            {
+                text: "良好习惯",
+                pinyin: "liáng hǎo xí guàn"
+            },
+            {
+                text: "生活习惯",
+                pinyin: "shēng huó xí guàn"
+            },
+            {
+                text: "上学迟到",
+                pinyin: "shàng xué chí dào"
+            },
+            {
+                text: "总是迟到",
+                pinyin: "zǒng shì chí dào"
+            },
+            {
+                text: "准时到达",
+                pinyin: "zhǔn shí dào dá"
+            },
+            {
+                text: "准时出发",
+                pinyin: "zhǔn shí chū fā"
+            },
+            {
+                text: "一根吸管",
+                pinyin: "yì gēn xī guǎn"
+            },
+            {
+                text: "使用吸管",
+                pinyin: "shǐ yòng xī guǎn"
+            },
+            {
+                text: "形状好看",
+                pinyin: "xíng zhuàng hǎo kàn"
+            },
+            {
+                text: "各种形状",
+                pinyin: "gè zhǒng xíng zhuàng"
+            }
+        ];
+
+        let currentAudio = null;
+        let recordings = {};
+        let mediaRecorder = null;
+        let audioChunks = [];
+        let currentRecordingId = null;
+        let isPlayingAll = false;
+
+        // Create phrase cards
+        function createPhraseCards() {
+            const grid = document.getElementById('phrases-grid');
+            grid.innerHTML = '';
+
+            phrases.forEach((phrase, index) => {
+                const card = document.createElement('div');
+                card.className = 'phrase-card';
+                card.dataset.index = index;
+
+                card.innerHTML = `
+                    <div class="phrase-number">${index + 1}</div>
+                    <div class="phrase-text">${phrase.text}</div>
+                    <div class="phrase-pinyin">${phrase.pinyin}</div>
+                    <div class="phrase-actions">
+                        <button class="action-btn" onclick="playPhrase(${index})">
+                            🔊 播放
+                        </button>
+                        <button class="action-btn record-btn" onclick="toggleRecording(${index})" id="record-btn-${index}">
+                            🎤 录音
+                        </button>
+                        <button class="action-btn playback-btn" onclick="playRecording(${index})" id="playback-btn-${index}" style="display: none;">
+                            ▶️ 听录音
+                        </button>
+                    </div>
+                    <div class="playback-status" id="status-${index}"></div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        // Play phrase using Web Speech API
+        function playPhrase(index) {
+            if (currentAudio) {
+                speechSynthesis.cancel();
+            }
+
+            const phrase = phrases[index];
+
+            // Highlight the card
+            document.querySelectorAll('.phrase-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            document.querySelector(`[data-index="${index}"]`).classList.add('active');
+
+            // Use Web Speech API for Chinese text-to-speech
+            const utterance = new SpeechSynthesisUtterance(phrase.text);
+            utterance.lang = 'zh-CN';
+            utterance.rate = 0.75; // Slightly slower for learning
+            utterance.pitch = 1.0;
+
+            utterance.onend = () => {
+                document.querySelector(`[data-index="${index}"]`).classList.remove('active');
+            };
+
+            speechSynthesis.speak(utterance);
+        }
+
+        // Toggle recording
+        async function toggleRecording(index) {
+            if (currentRecordingId === index) {
+                // Stop recording
+                stopRecording();
+            } else {
+                // Start recording
+                startRecording(index);
+            }
+        }
+
+        // Start recording
+        async function startRecording(index) {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+                currentRecordingId = index;
+
+                mediaRecorder.ondataavailable = (event) => {
+                    audioChunks.push(event.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    recordings[index] = audioUrl;
+
+                    // Update UI
+                    const recordBtn = document.getElementById(`record-btn-${index}`);
+                    const playbackBtn = document.getElementById(`playback-btn-${index}`);
+
+                    recordBtn.classList.remove('recording');
+                    recordBtn.textContent = '🎤 重新录音';
+                    playbackBtn.style.display = 'inline-flex';
+                    playbackBtn.classList.add('has-recording');
+
+                    document.getElementById('recording-indicator').classList.remove('show');
+
+                    // Stop all tracks
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+
+                // Update UI
+                const recordBtn = document.getElementById(`record-btn-${index}`);
+                recordBtn.classList.add('recording');
+                recordBtn.textContent = '⏹️ 停止';
+                document.getElementById('recording-indicator').classList.add('show');
+
+                // Highlight card
+                document.querySelectorAll('.phrase-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+                document.querySelector(`[data-index="${index}"]`).classList.add('active');
+
+            } catch (error) {
+                alert('无法访问麦克风。请确保已授予麦克风权限。');
+                console.error('Recording error:', error);
+            }
+        }
+
+        // Stop recording
+        function stopRecording() {
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                mediaRecorder.stop();
+                currentRecordingId = null;
+            }
+        }
+
+        // Play recording
+        function playRecording(index) {
+            if (recordings[index]) {
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio = null;
+                }
+
+                const audio = new Audio(recordings[index]);
+                currentAudio = audio;
+
+                // Update status
+                const status = document.getElementById(`status-${index}`);
+                status.textContent = '正在播放...';
+
+                // Highlight card
+                document.querySelectorAll('.phrase-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+                document.querySelector(`[data-index="${index}"]`).classList.add('active');
+
+                audio.onended = () => {
+                    status.textContent = '';
+                    document.querySelector(`[data-index="${index}"]`).classList.remove('active');
+                    currentAudio = null;
+                };
+
+                audio.onerror = () => {
+                    status.textContent = '播放失败';
+                    setTimeout(() => status.textContent = '', 2000);
+                };
+
+                audio.play();
+            }
+        }
+
+        // Play all phrases
+        async function playAll() {
+            if (isPlayingAll) return;
+
+            isPlayingAll = true;
+            const playAllBtn = document.querySelector('.control-btn');
+            playAllBtn.disabled = true;
+            playAllBtn.textContent = '播放中...';
+
+            for (let i = 0; i < phrases.length; i++) {
+                if (!isPlayingAll) break;
+
+                await new Promise((resolve) => {
+                    playPhrase(i);
+
+                    // Wait for speech to finish
+                    const checkSpeech = setInterval(() => {
+                        if (!speechSynthesis.speaking) {
+                            clearInterval(checkSpeech);
+                            setTimeout(resolve, 500); // Small pause between phrases
+                        }
+                    }, 100);
+                });
+            }
+
+            isPlayingAll = false;
+            playAllBtn.disabled = false;
+            playAllBtn.textContent = '🔊 播放全部';
+
+            // Remove active state
+            document.querySelectorAll('.phrase-card').forEach(card => {
+                card.classList.remove('active');
+            });
+        }
+
+        // Clear all recordings
+        function clearAllRecordings() {
+            if (confirm('确定要清除所有录音吗？')) {
+                // Revoke all object URLs
+                Object.values(recordings).forEach(url => {
+                    URL.revokeObjectURL(url);
+                });
+
+                recordings = {};
+
+                // Reset UI
+                phrases.forEach((_, index) => {
+                    const recordBtn = document.getElementById(`record-btn-${index}`);
+                    const playbackBtn = document.getElementById(`playback-btn-${index}`);
+
+                    recordBtn.classList.remove('recording', 'has-recording');
+                    recordBtn.textContent = '🎤 录音';
+                    playbackBtn.style.display = 'none';
+                    playbackBtn.classList.remove('has-recording');
+
+                    const status = document.getElementById(`status-${index}`);
+                    status.textContent = '';
+                });
+            }
+        }
+
+        // Mobile navigation
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createPhraseCards();
+        });
+
+        // Stop audio on page unload
+        window.addEventListener('beforeunload', () => {
+            if (currentAudio) {
+                currentAudio.pause();
+            }
+            speechSynthesis.cancel();
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                mediaRecorder.stop();
+            }
+        });
+    </script>
+</body>
+</html>
