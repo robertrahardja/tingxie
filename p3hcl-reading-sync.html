@@ -138,6 +138,20 @@
             flex-wrap: wrap;
         }
 
+        .debug-info {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-family: monospace;
+            font-size: 14px;
+        }
+
+        .debug-info div {
+            margin: 5px 0;
+        }
+
         .control-btn {
             padding: 10px 20px;
             border-radius: 8px;
@@ -211,6 +225,12 @@
             <button class="control-btn reset" onclick="resetAudio()">🔄 重新开始</button>
         </div>
 
+        <div class="debug-info" id="debug-info">
+            <div>Audio Time: <span id="audio-time">0.00</span>s</div>
+            <div>Current Char: <span id="current-char">-</span></div>
+            <div>Char Timing: <span id="char-timing">-</span></div>
+        </div>
+
         <div class="audio-controls">
             <audio id="reading-audio" class="audio-player" controls>
                 <source src="audio/koushi/P3HCL_3.mp4" type="audio/mp4">
@@ -271,6 +291,9 @@
             const currentTime = audio.currentTime;
             const chars = document.querySelectorAll('.word');
 
+            // Update debug info
+            document.getElementById('audio-time').textContent = currentTime.toFixed(2);
+
             // Find the current character by checking all characters
             let activeChar = null;
             let activeIndex = -1;
@@ -298,11 +321,20 @@
                 activeChar.classList.add('active');
                 currentCharIndex = activeIndex;
 
+                // Update debug info
+                const start = parseFloat(activeChar.dataset.start);
+                const end = parseFloat(activeChar.dataset.end);
+                document.getElementById('current-char').textContent = activeChar.textContent;
+                document.getElementById('char-timing').textContent = `${start.toFixed(2)}s - ${end.toFixed(2)}s`;
+
                 // Scroll into view smoothly
                 const rect = activeChar.getBoundingClientRect();
                 if (rect.bottom > window.innerHeight - 100 || rect.top < 100) {
                     activeChar.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
+            } else {
+                document.getElementById('current-char').textContent = '-';
+                document.getElementById('char-timing').textContent = '-';
             }
         }
 
