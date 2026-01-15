@@ -10,18 +10,21 @@ from urllib.request import urlopen, Request
 from urllib.parse import quote
 
 WORDS = {
-    "姓名": "xìng míng - name",
-    "肥瘦": "féi shòu - fat or thin",
-    "意思": "yì si - meaning",
-    "头发卷卷": "tóu fa juǎn juǎn - curly hair",
-    "因为": "yīn wèi - because",
-    "语言": "yǔ yán - language",
-    "谈天": "tán tiān - to chat, to talk",
-    "相信": "xiāng xìn - to believe, to trust",
-    "矮小": "ǎi xiǎo - short and small",
-    "姐姐": "jiě jie - older sister",
-    "后退": "hòu tuì - to retreat, to step back",
-    "问题奇怪": "wèn tí qí guài - strange questions",
+    "盖子": "gài zi - lid, cover",
+    "按钮": "àn niǔ - button",
+    "伙伴": "huǒ bàn - partner, companion",
+    "背": "bēi - to carry on one's back",
+    "手表": "shǒu biǎo - watch, wristwatch",
+    "闻叮响": "wén dīng xiǎng - to hear a ding sound",
+    "颜色": "yán sè - color",
+    "习惯": "xí guàn - habit, to be accustomed to",
+    "睡觉": "shuì jiào - to sleep",
+    "改掉": "gǎi diào - to get rid of (a bad habit)",
+    "迟到": "chí dào - to be late",
+    "吸管": "xī guǎn - straw (drinking)",
+    "陪": "péi - to accompany",
+    "形状": "xíng zhuàng - shape",
+    "准时起床": "zhǔn shí qǐ chuáng - to get up on time",
 }
 
 def download_google_tts(word):
