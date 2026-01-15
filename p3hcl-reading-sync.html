@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>介绍我的物品 - P3HCL 阅读练习 (同步)</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f5f5f5;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .lesson-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .lesson-header h1 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+
+        .lesson-header .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .audio-controls {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .audio-player {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .play-btn {
+            padding: 15px 40px;
+            border-radius: 8px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .play-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .reading-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .reading-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        .reading-paragraph {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            line-height: 2.2;
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .reading-paragraph:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Word highlighting */
+        .word {
+            display: inline;
+            transition: all 0.2s ease;
+            padding: 2px 1px;
+            border-radius: 3px;
+        }
+
+        .word.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+            transform: scale(1.1);
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        }
+
+        .word.past {
+            opacity: 0.6;
+        }
+
+        .controls-bar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+        }
+
+        .control-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #4CAF50;
+            color: white;
+        }
+
+        .control-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .control-btn.pause {
+            background: #ff9800;
+        }
+
+        .control-btn.reset {
+            background: #f44336;
+        }
+
+        @media (max-width: 768px) {
+            .lesson-header h1 {
+                font-size: 24px;
+            }
+
+            .reading-title {
+                font-size: 28px;
+            }
+
+            .reading-paragraph {
+                font-size: 20px;
+                padding: 20px;
+                line-height: 2;
+            }
+
+            .controls-bar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="koushi25.html" class="nav-item">口试</a>
+                <a href="vocabulary.html" class="nav-item">词汇浏览</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="lesson-header">
+        <h1>📝 介绍我的物品 (同步高亮)</h1>
+        <div class="subtitle">P3HCL Reading Practice with Synchronized Highlighting</div>
+    </div>
+
+    <div class="content-container">
+        <div class="controls-bar">
+            <button class="control-btn" onclick="playAudio()">🔊 播放朗读</button>
+            <button class="control-btn pause" onclick="pauseAudio()">⏸ 暂停</button>
+            <button class="control-btn reset" onclick="resetAudio()">🔄 重新开始</button>
+        </div>
+
+        <div class="audio-controls">
+            <audio id="reading-audio" class="audio-player" controls>
+                <source src="audio/koushi/P3HCL_3.mp4" type="audio/mp4">
+                您的浏览器不支持音频播放。
+            </audio>
+        </div>
+
+        <div class="reading-container">
+            <div class="reading-title">《介绍我的物品》</div>
+            <div id="reading-content" class="reading-content">
+                <!-- Content will be loaded via JavaScript with word-level timing -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('reading-audio');
+        let wordTimings = [];
+        let currentWordIndex = -1;
+
+        // Load timing data
+        async function loadTimingData() {
+            try {
+                const response = await fetch('audio/koushi/P3HCL_3_timing.json');
+                const data = await response.json();
+                wordTimings = data.words;
+                renderContent();
+            } catch (error) {
+                console.error('Error loading timing data:', error);
+                // Fallback to non-synchronized version
+                document.getElementById('reading-content').innerHTML = `
+                    <div class="reading-paragraph">时间数据加载失败，显示原文本...</div>
+                `;
+            }
+        }
+
+        // Render content with word spans
+        function renderContent() {
+            const content = document.getElementById('reading-content');
+            let html = '<div class="reading-paragraph">';
+
+            wordTimings.forEach((wordData, index) => {
+                html += `<span class="word" data-index="${index}" data-start="${wordData.start}" data-end="${wordData.end}">${wordData.word}</span>`;
+            });
+
+            html += '</div>';
+            content.innerHTML = html;
+        }
+
+        // Update highlighting based on current time
+        function updateHighlight() {
+            const currentTime = audio.currentTime;
+            const words = document.querySelectorAll('.word');
+
+            // Find current word
+            let foundCurrentWord = false;
+            words.forEach((word, index) => {
+                const start = parseFloat(word.dataset.start);
+                const end = parseFloat(word.dataset.end);
+
+                word.classList.remove('active', 'past');
+
+                if (currentTime >= start && currentTime <= end) {
+                    word.classList.add('active');
+                    foundCurrentWord = true;
+                    currentWordIndex = index;
+
+                    // Scroll into view smoothly
+                    if (word.getBoundingClientRect().bottom > window.innerHeight - 100 ||
+                        word.getBoundingClientRect().top < 100) {
+                        word.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                } else if (currentTime > end) {
+                    word.classList.add('past');
+                }
+            });
+        }
+
+        // Audio event listeners
+        audio.addEventListener('timeupdate', updateHighlight);
+
+        function playAudio() {
+            audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+
+        function resetAudio() {
+            audio.currentTime = 0;
+            audio.play();
+        }
+
+        // Mobile navigation
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Initialize
+        loadTimingData();
+    </script>
+</body>
+</html>
