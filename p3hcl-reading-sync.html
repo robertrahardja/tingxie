@@ -292,19 +292,25 @@
         function buildWordGroups() {
             wordGroups = [];
             const chars = document.querySelectorAll('.word');
-            let wordStart = null;
+            let inWord = false;
 
             chars.forEach((char, index) => {
                 const charText = char.textContent;
+                const isPunc = isPunctuation(charText);
 
-                // Start of a new word group (first char or after punctuation)
-                if (wordStart === null || (index > 0 && isPunctuation(chars[index - 1].textContent))) {
-                    if (!isPunctuation(charText)) {
-                        wordStart = parseFloat(char.dataset.start);
-                        wordGroups.push(wordStart);
-                    }
+                // Start of a new word (after punctuation/space or at beginning)
+                if (!isPunc && !inWord) {
+                    const startTime = parseFloat(char.dataset.start);
+                    wordGroups.push(startTime);
+                    inWord = true;
+                }
+                // End of word (hit punctuation or space)
+                else if (isPunc) {
+                    inWord = false;
                 }
             });
+
+            console.log('Built word groups:', wordGroups);
         }
 
         // Helper function to check if a character is punctuation
