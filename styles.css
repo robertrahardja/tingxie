@@ -197,7 +197,6 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .word-card {
@@ -212,8 +211,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-height: calc(100vh - 450px);
-    min-height: 400px;
 }
 
 .card-progress {
