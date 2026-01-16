@@ -18,8 +18,8 @@ def download_google_tts(word, output_path):
         return output_path
 
     try:
-        # Google Translate TTS URL with slow speed (0.24 is slower, clearer)
-        url = f"https://translate.google.com/translate_tts?ie=UTF-8&q={quote(word)}&tl=zh-CN&client=tw-ob&ttsspeed=0.24"
+        # Google Translate TTS URL with normal speed (same as tingxie)
+        url = f"https://translate.google.com/translate_tts?ie=UTF-8&q={quote(word)}&tl=zh-CN&client=tw-ob&ttsspeed=0.5"
 
         print(f"  ⏳ {word}...", end=" ", flush=True)
 
@@ -45,7 +45,7 @@ def download_google_tts(word, output_path):
         return None
 
 def main():
-    print("Downloading audio files for Chinese radicals (Google TTS - slow speed)...\n")
+    print("Downloading audio files for Chinese radicals (Google TTS - normal speed)...\n")
 
     # Create audio/radicals directory
     audio_dir = Path("audio/radicals")
