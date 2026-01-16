@@ -416,35 +416,49 @@
         function nextWord() {
             const currentTime = audio.currentTime;
 
+            console.log('Next word - Current time:', currentTime, 'Word groups:', wordGroups.length);
+
             // Find the next word group after current time
             for (let i = 0; i < wordGroups.length; i++) {
-                if (wordGroups[i] > currentTime + 0.1) { // Small buffer to avoid same word
+                if (wordGroups[i] > currentTime + 0.2) { // Buffer to skip current word
+                    console.log('Jumping to next word at:', wordGroups[i]);
                     audio.currentTime = wordGroups[i];
+                    audio.play();
                     return;
                 }
             }
 
-            // If no next word found, go to end
-            if (wordGroups.length > 0) {
-                audio.currentTime = wordGroups[wordGroups.length - 1];
-            }
+            console.log('No next word found, staying at end');
         }
 
         // Navigate to previous word group
         function previousWord() {
             const currentTime = audio.currentTime;
 
-            // Find the previous word group before current time
-            for (let i = wordGroups.length - 1; i >= 0; i--) {
-                if (wordGroups[i] < currentTime - 0.1) { // Small buffer to avoid same word
-                    audio.currentTime = wordGroups[i];
-                    return;
+            console.log('Previous word - Current time:', currentTime, 'Word groups:', wordGroups.length);
+
+            // Find the current word group index
+            let currentWordIndex = -1;
+            for (let i = 0; i < wordGroups.length; i++) {
+                if (wordGroups[i] <= currentTime) {
+                    currentWordIndex = i;
+                } else {
+                    break;
                 }
             }
 
-            // If no previous word found, go to beginning
-            if (wordGroups.length > 0) {
+            console.log('Current word index:', currentWordIndex);
+
+            // Go to previous word group
+            if (currentWordIndex > 0) {
+                console.log('Jumping to previous word at:', wordGroups[currentWordIndex - 1]);
+                audio.currentTime = wordGroups[currentWordIndex - 1];
+                audio.play();
+            } else if (currentWordIndex === 0) {
+                // Already at first word, restart it
+                console.log('Already at first word, restarting it');
                 audio.currentTime = wordGroups[0];
+                audio.play();
             }
         }
 
