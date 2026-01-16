@@ -285,6 +285,37 @@
             content.innerHTML = html;
         }
 
+        // Helper function to check if a character is punctuation
+        function isPunctuation(char) {
+            const punctuation = '，。！？；：""''（）、';
+            return punctuation.includes(char);
+        }
+
+        // Helper function to get word boundaries around a character
+        function getWordBoundaries(chars, activeIndex) {
+            if (activeIndex === -1) return [];
+
+            const charElements = Array.from(chars);
+            let start = activeIndex;
+            let end = activeIndex;
+
+            // Expand backwards to find word start
+            while (start > 0) {
+                const prevChar = charElements[start - 1].textContent;
+                if (isPunctuation(prevChar) || prevChar === ' ') break;
+                start--;
+            }
+
+            // Expand forwards to find word end
+            while (end < charElements.length - 1) {
+                const nextChar = charElements[end + 1].textContent;
+                if (isPunctuation(nextChar) || nextChar === ' ') break;
+                end++;
+            }
+
+            return charElements.slice(start, end + 1);
+        }
+
         // Update highlighting based on current time
         function updateHighlight() {
             const currentTime = audio.currentTime;
@@ -315,15 +346,21 @@
                 }
             });
 
-            // Apply active class to only one character
+            // Apply active class to the entire word
             if (activeChar) {
-                activeChar.classList.add('active');
+                const wordChars = getWordBoundaries(chars, activeIndex);
+                wordChars.forEach(char => {
+                    char.classList.add('active');
+                    char.classList.remove('past'); // Remove 'past' if it was added
+                });
+
                 currentCharIndex = activeIndex;
 
                 // Update debug info
                 const start = parseFloat(activeChar.dataset.start);
                 const end = parseFloat(activeChar.dataset.end);
-                document.getElementById('current-char').textContent = activeChar.textContent;
+                const wordText = wordChars.map(c => c.textContent).join('');
+                document.getElementById('current-char').textContent = wordText;
                 document.getElementById('char-timing').textContent = `${start.toFixed(2)}s - ${end.toFixed(2)}s`;
 
                 // Scroll into view smoothly
