@@ -348,8 +348,8 @@ main {
 }
 
 .handwriting-controls {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .handwriting-btn {
@@ -554,8 +554,7 @@ main {
     }
 
     .handwriting-controls {
-        margin-top: 20px;
-        margin-bottom: 15px;
+        margin-top: 25px;
     }
 
     .handwriting-btn {
