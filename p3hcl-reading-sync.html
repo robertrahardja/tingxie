@@ -455,14 +455,20 @@
 
             console.log('Current word index:', currentWordIndex);
 
-            // Go to previous word group
-            if (currentWordIndex > 0) {
-                console.log('Jumping to previous word at:', wordGroups[currentWordIndex - 1]);
+            // If we're near the start of the current word (within 0.5 seconds), go to previous word
+            // Otherwise, restart the current word
+            if (currentWordIndex >= 0 && currentTime - wordGroups[currentWordIndex] < 0.5 && currentWordIndex > 0) {
+                console.log('Near start of word, jumping to previous word at:', wordGroups[currentWordIndex - 1]);
                 audio.currentTime = wordGroups[currentWordIndex - 1];
                 audio.play();
-            } else if (currentWordIndex === 0) {
-                // Already at first word, restart it
-                console.log('Already at first word, restarting it');
+            } else if (currentWordIndex >= 0) {
+                // We're in the middle of a word, restart it
+                console.log('In middle of word, restarting current word at:', wordGroups[currentWordIndex]);
+                audio.currentTime = wordGroups[currentWordIndex];
+                audio.play();
+            } else if (wordGroups.length > 0) {
+                // Before first word, go to first word
+                console.log('Before first word, going to start');
                 audio.currentTime = wordGroups[0];
                 audio.play();
             }
