@@ -429,7 +429,11 @@
                 if (wordGroups[i] > currentTime + 0.2) { // Buffer to skip current word
                     console.log('Jumping to next word at:', wordGroups[i]);
                     audio.currentTime = wordGroups[i];
+                    console.log('Audio currentTime after setting:', audio.currentTime);
                     audio.play();
+                    setTimeout(() => {
+                        console.log('Audio currentTime 100ms later:', audio.currentTime);
+                    }, 100);
                     return;
                 }
             }
