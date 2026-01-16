@@ -231,9 +231,16 @@ class RadicalsApp {
             .map(ex => `<span class="example-char">${ex}</span>`)
             .join('');
 
+        const traditionalHtml = radical.traditional
+            ? `<span class="radical-traditional">${radical.traditional}</span>`
+            : '';
+
         card.innerHTML = `
             <div class="radical-header">
-                <span class="radical-character">${radical.radical}</span>
+                <div class="radical-characters">
+                    <span class="radical-character">${radical.radical}</span>
+                    ${traditionalHtml}
+                </div>
                 <span class="radical-number">#${radical.number}</span>
             </div>
             <div class="radical-pinyin">${radical.pinyin}</div>

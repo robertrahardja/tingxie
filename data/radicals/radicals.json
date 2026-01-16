@@ -715,12 +715,13 @@
     },
     {
       "number": 147,
-      "radical": "見",
+      "radical": "见",
+      "traditional": "見",
       "pinyin": "jiàn",
       "meaning": "see",
       "strokes": 7,
       "examples": ["观", "规", "视", "觉"],
-      "audio": "audio/radicals/見.mp3"
+      "audio": "audio/radicals/见.mp3"
     },
     {
       "number": 149,
@@ -733,12 +734,13 @@
     },
     {
       "number": 154,
-      "radical": "貝",
+      "radical": "贝",
+      "traditional": "貝",
       "pinyin": "bèi",
       "meaning": "shell/money",
       "strokes": 7,
       "examples": ["买", "贵", "费", "资"],
-      "audio": "audio/radicals/貝.mp3"
+      "audio": "audio/radicals/贝.mp3"
     },
     {
       "number": 156,
@@ -760,12 +762,13 @@
     },
     {
       "number": 159,
-      "radical": "車",
+      "radical": "车",
+      "traditional": "車",
       "pinyin": "chē",
       "meaning": "vehicle/cart",
       "strokes": 7,
       "examples": ["轮", "转", "轻", "输"],
-      "audio": "audio/radicals/車.mp3"
+      "audio": "audio/radicals/车.mp3"
     },
     {
       "number": 162,
@@ -796,21 +799,23 @@
     },
     {
       "number": 168,
-      "radical": "長",
+      "radical": "长",
+      "traditional": "長",
       "pinyin": "cháng",
       "meaning": "long",
       "strokes": 8,
       "examples": ["张"],
-      "audio": "audio/radicals/長.mp3"
+      "audio": "audio/radicals/长.mp3"
     },
     {
       "number": 169,
-      "radical": "門",
+      "radical": "门",
+      "traditional": "門",
       "pinyin": "mén",
       "meaning": "gate/door",
       "strokes": 8,
       "examples": ["开", "关", "间", "闪"],
-      "audio": "audio/radicals/門.mp3"
+      "audio": "audio/radicals/门.mp3"
     },
     {
       "number": 170,
@@ -841,12 +846,13 @@
     },
     {
       "number": 181,
-      "radical": "頁",
+      "radical": "页",
+      "traditional": "頁",
       "pinyin": "yè",
       "meaning": "page/head",
       "strokes": 9,
       "examples": ["顶", "项", "须", "题"],
-      "audio": "audio/radicals/頁.mp3"
+      "audio": "audio/radicals/页.mp3"
     },
     {
       "number": 184,
@@ -859,30 +865,33 @@
     },
     {
       "number": 187,
-      "radical": "馬",
+      "radical": "马",
+      "traditional": "馬",
       "pinyin": "mǎ",
       "meaning": "horse",
       "strokes": 10,
       "examples": ["骑", "验", "驾"],
-      "audio": "audio/radicals/馬.mp3"
+      "audio": "audio/radicals/马.mp3"
     },
     {
       "number": 195,
-      "radical": "魚",
+      "radical": "鱼",
+      "traditional": "魚",
       "pinyin": "yú",
       "meaning": "fish",
       "strokes": 11,
       "examples": ["鲜", "鲤", "鱼"],
-      "audio": "audio/radicals/魚.mp3"
+      "audio": "audio/radicals/鱼.mp3"
     },
     {
       "number": 196,
-      "radical": "鳥",
+      "radical": "鸟",
+      "traditional": "鳥",
       "pinyin": "niǎo",
       "meaning": "bird",
       "strokes": 11,
       "examples": ["鸡", "鸭", "鹅"],
-      "audio": "audio/radicals/鳥.mp3"
+      "audio": "audio/radicals/鸟.mp3"
     }
   ]
 }
