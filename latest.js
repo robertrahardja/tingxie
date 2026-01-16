@@ -15,6 +15,8 @@ class LatestApp extends BaseApp {
         this.hanziWriter = null;
         this.currentStroke = 0;
         this.handwritingVisible = false;
+        this.currentCharacterIndex = 0;
+        this.currentCharacters = '';
     }
 
     async init() {
@@ -186,6 +188,16 @@ class LatestApp extends BaseApp {
             resetBtn.addEventListener('click', () => this.resetHandwriting());
         }
 
+        // Character navigation buttons
+        const prevCharBtn = document.getElementById('prev-char');
+        const nextCharBtn = document.getElementById('next-char');
+        if (prevCharBtn) {
+            prevCharBtn.addEventListener('click', () => this.previousCharacter());
+        }
+        if (nextCharBtn) {
+            nextCharBtn.addEventListener('click', () => this.nextCharacter());
+        }
+
         // Initialize filtered words
         this.filteredWords = this.getFilteredWords();
     }
@@ -228,25 +240,30 @@ class LatestApp extends BaseApp {
         }
     }
 
-    loadHandwritingCharacter(characters) {
+    loadHandwritingCharacter(characters, charIndex = 0) {
         const charElement = document.getElementById('handwriting-char');
         const targetElement = document.getElementById('handwriting-target');
         const statusElement = document.getElementById('handwriting-status');
 
         if (!charElement || !targetElement) return;
 
-        // Display the character
-        charElement.textContent = characters;
+        // Store current characters and index
+        this.currentCharacters = characters;
+        this.currentCharacterIndex = charIndex;
+
+        // Display which character we're practicing (e.g., "美丽 (1/2)")
+        const charCountText = characters.length > 1 ? ` (${charIndex + 1}/${characters.length})` : '';
+        charElement.textContent = characters + charCountText;
 
         // Clear previous writer
         targetElement.innerHTML = '';
         if (statusElement) statusElement.textContent = '';
 
-        // Create HanziWriter instance for the first character
-        const firstChar = characters[0];
+        // Create HanziWriter instance for the current character
+        const currentChar = characters[charIndex];
         this.currentStroke = 0;
 
-        this.hanziWriter = HanziWriter.create(targetElement, firstChar, {
+        this.hanziWriter = HanziWriter.create(targetElement, currentChar, {
             width: 280,
             height: 280,
             padding: 20,
@@ -297,6 +314,9 @@ class LatestApp extends BaseApp {
                 }
             },
         });
+
+        // Update character navigation buttons
+        this.updateCharacterNavButtons();
     }
 
     showHandwritingHint() {
@@ -306,10 +326,45 @@ class LatestApp extends BaseApp {
     }
 
     resetHandwriting() {
-        if (this.hanziWriter && this.filteredWords.length > 0) {
-            const word = this.filteredWords[this.currentIndex];
-            const characters = word.simplified || word.traditional;
-            this.loadHandwritingCharacter(characters);
+        if (this.hanziWriter && this.currentCharacters) {
+            this.loadHandwritingCharacter(this.currentCharacters, this.currentCharacterIndex);
+        }
+    }
+
+    previousCharacter() {
+        if (this.currentCharacterIndex > 0) {
+            this.loadHandwritingCharacter(this.currentCharacters, this.currentCharacterIndex - 1);
+            this.updateCharacterNavButtons();
+        }
+    }
+
+    nextCharacter() {
+        if (this.currentCharacterIndex < this.currentCharacters.length - 1) {
+            this.loadHandwritingCharacter(this.currentCharacters, this.currentCharacterIndex + 1);
+            this.updateCharacterNavButtons();
+        }
+    }
+
+    updateCharacterNavButtons() {
+        const charNavContainer = document.getElementById('handwriting-char-nav');
+        const prevCharBtn = document.getElementById('prev-char');
+        const nextCharBtn = document.getElementById('next-char');
+
+        if (!this.currentCharacters || this.currentCharacters.length <= 1) {
+            // Hide nav buttons for single character words
+            if (charNavContainer) charNavContainer.style.display = 'none';
+            return;
+        }
+
+        // Show nav buttons for multi-character words
+        if (charNavContainer) charNavContainer.style.display = 'grid';
+
+        // Update button states
+        if (prevCharBtn) {
+            prevCharBtn.disabled = this.currentCharacterIndex === 0;
+        }
+        if (nextCharBtn) {
+            nextCharBtn.disabled = this.currentCharacterIndex === this.currentCharacters.length - 1;
         }
     }
 

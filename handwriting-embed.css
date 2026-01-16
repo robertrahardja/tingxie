@@ -118,6 +118,35 @@
     transform: scale(0.98);
 }
 
+.handwriting-char-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.char-nav-btn {
+    padding: 12px 16px;
+    font-size: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 48px;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: bold;
+}
+
+.char-nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.char-nav-btn:not(:disabled):active {
+    transform: scale(0.98);
+}
+
 .handwriting-status {
     text-align: center;
     font-size: 1rem;
