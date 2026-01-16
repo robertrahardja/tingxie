@@ -218,8 +218,10 @@
 
     <div class="content-container">
         <div class="controls-bar">
+            <button class="control-btn" onclick="previousWord()">⏮ 上一个</button>
             <button class="control-btn" onclick="playAudio()">🔊 播放朗读</button>
             <button class="control-btn pause" onclick="pauseAudio()">⏸ 暂停</button>
+            <button class="control-btn" onclick="nextWord()">下一个 ⏭</button>
             <button class="control-btn reset" onclick="resetAudio()">🔄 重新开始</button>
         </div>
 
@@ -248,6 +250,7 @@
         const audio = document.getElementById('reading-audio');
         let paragraphData = [];
         let currentCharIndex = -1;
+        let wordGroups = []; // Array of word group start times
 
         // Load formatted timing data with punctuation and paragraphs
         async function loadTimingData() {
@@ -282,6 +285,26 @@
             });
 
             content.innerHTML = html;
+            buildWordGroups();
+        }
+
+        // Build word groups based on punctuation boundaries
+        function buildWordGroups() {
+            wordGroups = [];
+            const chars = document.querySelectorAll('.word');
+            let wordStart = null;
+
+            chars.forEach((char, index) => {
+                const charText = char.textContent;
+
+                // Start of a new word group (first char or after punctuation)
+                if (wordStart === null || (index > 0 && isPunctuation(chars[index - 1].textContent))) {
+                    if (!isPunctuation(charText)) {
+                        wordStart = parseFloat(char.dataset.start);
+                        wordGroups.push(wordStart);
+                    }
+                }
+            });
         }
 
         // Helper function to check if a character is punctuation
@@ -387,6 +410,42 @@
         function resetAudio() {
             audio.currentTime = 0;
             audio.play();
+        }
+
+        // Navigate to next word group
+        function nextWord() {
+            const currentTime = audio.currentTime;
+
+            // Find the next word group after current time
+            for (let i = 0; i < wordGroups.length; i++) {
+                if (wordGroups[i] > currentTime + 0.1) { // Small buffer to avoid same word
+                    audio.currentTime = wordGroups[i];
+                    return;
+                }
+            }
+
+            // If no next word found, go to end
+            if (wordGroups.length > 0) {
+                audio.currentTime = wordGroups[wordGroups.length - 1];
+            }
+        }
+
+        // Navigate to previous word group
+        function previousWord() {
+            const currentTime = audio.currentTime;
+
+            // Find the previous word group before current time
+            for (let i = wordGroups.length - 1; i >= 0; i--) {
+                if (wordGroups[i] < currentTime - 0.1) { // Small buffer to avoid same word
+                    audio.currentTime = wordGroups[i];
+                    return;
+                }
+            }
+
+            // If no previous word found, go to beginning
+            if (wordGroups.length > 0) {
+                audio.currentTime = wordGroups[0];
+            }
         }
 
         // Mobile navigation
