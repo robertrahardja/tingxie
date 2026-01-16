@@ -442,48 +442,48 @@ main {
         margin: 0 auto;
         padding: 0 25px;
     }
-    
+
     .menu-toggle {
         display: flex;
     }
-    
+
     .container {
         max-width: 750px;
         padding: 30px 25px;
         padding-top: 90px;
     }
-    
+
     header {
         margin-bottom: 25px;
     }
-    
+
     .header-row {
         margin-bottom: 0;
     }
-    
+
     header h1 {
         font-size: 2.5rem;
     }
-    
+
     .controls {
         gap: 20px;
     }
-    
+
     .filter-btn {
         padding: 14px 25px;
         font-size: 17px;
         min-height: 52px;
     }
-    
+
     .progress {
         font-size: 32px;
     }
-    
+
     .navigation {
         gap: 20px;
         margin-bottom: 25px;
     }
-    
+
     .nav-btn {
         padding: 18px 30px;
         font-size: 18px;
@@ -491,36 +491,39 @@ main {
         min-height: 60px;
         box-shadow: 0 5px 18px rgba(0,0,0,0.12);
     }
-    
+
     .word-card {
         padding: 35px 25px;
         margin-bottom: 25px;
         border-radius: 25px;
         box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        max-height: none;
     }
 
     .card-progress {
         font-size: 48px;
         margin-bottom: 30px;
     }
-    
+
     .word-section {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
         gap: 25px;
-        max-width: 550px;
+        max-width: 650px;
         margin: 0 auto;
     }
-    
+
     .word-item {
         margin-bottom: 0;
     }
-    
+
     .audio-item {
+        grid-column: 1 / -1;
         text-align: center;
         margin-bottom: 15px;
     }
-    
+
     .audio-btn {
         font-size: 40px;
         min-width: 100px;
@@ -529,28 +532,28 @@ main {
         box-shadow: 0 6px 20px rgba(0,0,0,0.12);
         padding: 20px;
     }
-    
+
     .audio-btn.covered {
         border: 3px dashed #ccc;
     }
-    
+
     .audio-btn:not(.covered) {
         box-shadow: 0 6px 25px rgba(255,107,107,0.35);
     }
-    
+
     .content {
-        font-size: 36px;
+        font-size: 28px;
         padding: 25px 20px;
         border-radius: 18px;
         min-height: 85px;
         font-weight: 600;
     }
-    
+
     .content.covered {
-        font-size: 20px;
+        font-size: 18px;
         border: 3px dashed #ccc;
     }
-    
+
     .handwriting-controls {
         margin-top: 20px;
         margin-bottom: 15px;
