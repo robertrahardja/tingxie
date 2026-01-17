@@ -14,20 +14,26 @@ class ReviewApp extends BaseApp {
     }
 
     async init() {
-        console.log('Initializing ReviewApp...');
+        console.log('Initializing ReviewApp (Unknown Words Only)...');
 
         // Load vocabulary data from API
         if (!await this.loadData()) {
             return;
         }
 
-        // Extract all words except row 4 (the latest/new words)
-        this.allWords = this.extractReviewWords();
-        console.log(`Loaded ${this.allWords.length} review words`);
-
-        // Load student progress
+        // Load student progress FIRST to get unknown words
         const studentId = this.cloudSync.getOrCreateStudentId();
         await this.loadProgress(studentId);
+
+        // Extract only unknown words from all vocabulary
+        this.allWords = this.extractReviewWords();
+        console.log(`Loaded ${this.allWords.length} unknown words for review`);
+
+        // Show message if no unknown words
+        if (this.allWords.length === 0) {
+            this.showNoWordsMessage();
+            return;
+        }
 
         // Set up UI
         this.setupUI();
@@ -38,19 +44,44 @@ class ReviewApp extends BaseApp {
     }
 
     extractReviewWords() {
-        // Return all words except the last row (row 4 with 12 new words)
-        if (this.data && this.data.vocabulary && this.data.vocabulary.length > 0) {
-            const allWords = [];
-            // Include all rows except the last one
-            for (let i = 0; i < this.data.vocabulary.length - 1; i++) {
-                const row = this.data.vocabulary[i];
-                if (row.words && Array.isArray(row.words)) {
-                    allWords.push(...row.words);
-                }
-            }
-            return allWords;
+        /**
+         * Returns only words marked as "不会" (unknown) from the cloud progress.
+         * This ensures review page shows ONLY words the student needs to practice.
+         */
+        if (!this.data || !this.data.vocabulary || this.unknownWords.size === 0) {
+            return [];
         }
-        return [];
+
+        const unknownWordsList = [];
+
+        // Iterate through all vocabulary to find unknown words
+        this.data.vocabulary.forEach(row => {
+            if (row.words && Array.isArray(row.words)) {
+                row.words.forEach(word => {
+                    const wordId = `${word.simplified}_${word.traditional}`;
+                    if (this.unknownWords.has(wordId)) {
+                        unknownWordsList.push(word);
+                    }
+                });
+            }
+        });
+
+        return unknownWordsList;
+    }
+
+    showNoWordsMessage() {
+        const wordCard = document.getElementById('word-card');
+        if (wordCard) {
+            wordCard.innerHTML = `
+                <div style="text-align: center; padding: 40px 20px;">
+                    <h2 style="color: #4CAF50; margin-bottom: 10px;">🎉 太棒了！</h2>
+                    <p style="color: #666; font-size: 16px;">没有需要复习的词语</p>
+                    <p style="color: #999; font-size: 14px; margin-top: 10px;">
+                        在主页面标记"不会"的词语会出现在这里
+                    </p>
+                </div>
+            `;
+        }
     }
 
     async loadProgress(studentId) {
