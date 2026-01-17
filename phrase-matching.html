@@ -701,21 +701,18 @@
             }
         }
 
+        let currentPlayIndex = 0; // Track where we left off
+
         // Toggle play/stop all phrases
         window.togglePlayAll = async function() {
             const playAllBtn = document.getElementById('play-all-btn');
             const restartBtn = document.getElementById('restart-btn');
 
             if (isPlayingAll) {
-                // Stop playing
+                // Stop playing (pause)
                 isPlayingAll = false;
-                playAllBtn.textContent = '▶️ 播放全部';
+                playAllBtn.textContent = '▶️ 继续播放';
                 restartBtn.style.display = 'inline-block';
-
-                // Remove active state
-                document.querySelectorAll('.phrase-card').forEach(card => {
-                    card.classList.remove('active');
-                });
 
                 // Stop current audio
                 if (audioPlayer.currentAudio) {
@@ -723,8 +720,8 @@
                     audioPlayer.currentAudio.currentTime = 0;
                 }
             } else {
-                // Start playing
-                playAll();
+                // Resume/start playing from current position
+                playAll(currentPlayIndex);
             }
         }
 
@@ -732,11 +729,12 @@
         window.restartPlayAll = function() {
             const restartBtn = document.getElementById('restart-btn');
             restartBtn.style.display = 'none';
-            playAll();
+            currentPlayIndex = 0; // Reset to beginning
+            playAll(0);
         }
 
-        // Play all phrases
-        async function playAll() {
+        // Play all phrases starting from given index
+        async function playAll(startIndex = 0) {
             isPlayingAll = true;
             const playAllBtn = document.getElementById('play-all-btn');
             const restartBtn = document.getElementById('restart-btn');
@@ -744,10 +742,14 @@
             playAllBtn.textContent = '⏸️ 停止';
             restartBtn.style.display = 'none';
 
-            for (let i = 0; i < phrases.length; i++) {
-                if (!isPlayingAll) break;
+            for (let i = startIndex; i < phrases.length; i++) {
+                if (!isPlayingAll) {
+                    currentPlayIndex = i; // Save current position
+                    break;
+                }
 
                 const phrase = phrases[i];
+                currentPlayIndex = i;
 
                 // Highlight current card
                 document.querySelectorAll('.phrase-card').forEach(card => {
@@ -774,9 +776,17 @@
                 }
             }
 
-            // Finished playing or stopped
+            // Check if we finished all phrases or just paused
+            if (currentPlayIndex >= phrases.length - 1) {
+                // Finished all phrases - reset for next time
+                currentPlayIndex = 0;
+                playAllBtn.textContent = '▶️ 播放全部';
+            } else {
+                // Paused in the middle
+                playAllBtn.textContent = '▶️ 继续播放';
+            }
+
             isPlayingAll = false;
-            playAllBtn.textContent = '▶️ 播放全部';
             restartBtn.style.display = 'inline-block';
 
             // Remove active state
