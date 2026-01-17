@@ -124,7 +124,7 @@ class LatestApp extends BaseApp {
         const latestToggleBtn = document.createElement('button');
         latestToggleBtn.id = 'latest-toggle';
         latestToggleBtn.className = 'filter-btn active';
-        latestToggleBtn.textContent = '最新15词';
+        latestToggleBtn.textContent = '全部词语';  // Show what clicking will do
         latestToggleBtn.style.marginRight = '8px';
 
         const filterBtn = document.getElementById('filter-toggle');
@@ -135,7 +135,7 @@ class LatestApp extends BaseApp {
         latestToggleBtn.addEventListener('click', () => {
             this.showLatestOnly = !this.showLatestOnly;
             latestToggleBtn.classList.toggle('active', this.showLatestOnly);
-            latestToggleBtn.textContent = this.showLatestOnly ? '最新15词' : '全部词语';
+            latestToggleBtn.textContent = this.showLatestOnly ? '全部词语' : '最新15词';  // Show opposite action
             this.currentIndex = 0;
             this.allWords = this.extractLatestWords();
             this.filteredWords = this.getFilteredWords();
