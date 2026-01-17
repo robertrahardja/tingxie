@@ -162,6 +162,26 @@
             background: rgba(255,255,255,0.4);
         }
 
+        .phrase-english {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            line-height: 1.6;
+            margin-top: 8px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-style: italic;
+            transition: all 0.3s;
+        }
+
+        .phrase-english.hidden {
+            display: none;
+        }
+
+        .phrase-card.active .phrase-english {
+            color: rgba(255,255,255,0.9);
+        }
+
         .phrase-actions {
             display: flex;
             gap: 10px;
@@ -400,52 +420,62 @@
             {
                 text: "智力超人",
                 pinyin: "zhì lì chāo rén",
-                audio: "audio/智力超人.mp3"
+                audio: "audio/智力超人.mp3",
+                english: "superior intelligence"
             },
             {
                 text: "养成习惯",
                 pinyin: "yǎng chéng xí guàn",
-                audio: "audio/养成习惯.mp3"
+                audio: "audio/养成习惯.mp3",
+                english: "form a habit"
             },
             {
                 text: "良好习惯",
                 pinyin: "liáng hǎo xí guàn",
-                audio: "audio/良好习惯.mp3"
+                audio: "audio/良好习惯.mp3",
+                english: "good habit"
             },
             {
                 text: "生活习惯",
                 pinyin: "shēng huó xí guàn",
-                audio: "audio/生活习惯.mp3"
+                audio: "audio/生活习惯.mp3",
+                english: "lifestyle habit"
             },
             {
                 text: "上学迟到",
                 pinyin: "shàng xué chí dào",
-                audio: "audio/上学迟到.mp3"
+                audio: "audio/上学迟到.mp3",
+                english: "late for school"
             },
             {
                 text: "总是迟到",
                 pinyin: "zǒng shì chí dào",
-                audio: "audio/总是迟到.mp3"
+                audio: "audio/总是迟到.mp3",
+                english: "always late"
             },
             {
                 text: "准时到达",
                 pinyin: "zhǔn shí dào dá",
-                audio: "audio/准时到达.mp3"
+                audio: "audio/准时到达.mp3",
+                english: "arrive on time"
             },
             {
                 text: "准时出发",
                 pinyin: "zhǔn shí chū fā",
-                audio: "audio/准时出发.mp3"
+                audio: "audio/准时出发.mp3",
+                english: "depart on time"
             },
             {
                 text: "一根吸管",
                 pinyin: "yì gēn xī guǎn",
-                audio: "audio/一根吸管.mp3"
+                audio: "audio/一根吸管.mp3",
+                english: "one straw"
             },
             {
                 text: "使用吸管",
                 pinyin: "shǐ yòng xī guǎn",
-                audio: "audio/使用吸管.mp3"
+                audio: "audio/使用吸管.mp3",
+                english: "use a straw"
             },
             {
                 text: "形状好看",
@@ -480,9 +510,13 @@
                     <div class="phrase-number">${index + 1}</div>
                     <div class="phrase-text">${phrase.text}</div>
                     <div class="phrase-pinyin hidden" id="pinyin-${index}">${phrase.pinyin}</div>
+                    <div class="phrase-english hidden" id="english-${index}">${phrase.english || ''}</div>
                     <div class="phrase-actions">
                         <button class="action-btn" onclick="playPhrase(${index})">
                             🔊 播放
+                        </button>
+                        <button class="action-btn" onclick="toggleEnglish(${index})">
+                            💬 意思
                         </button>
                         <button class="action-btn record-btn" onclick="toggleRecording(${index})" id="record-btn-${index}">
                             🎤 录音
@@ -504,6 +538,14 @@
 
                 grid.appendChild(card);
             });
+        }
+
+        // Toggle English meaning visibility
+        window.toggleEnglish = function(index) {
+            const englishElement = document.getElementById(`english-${index}`);
+            if (englishElement) {
+                englishElement.classList.toggle('hidden');
+            }
         }
 
         // Play phrase using AudioPlayer with MP3 files
