@@ -330,7 +330,8 @@
 
     <div class="content-container">
         <div class="controls-bar">
-            <button class="control-btn" onclick="playAll()">🔊 播放全部</button>
+            <button class="control-btn" onclick="togglePlayAll()" id="play-all-btn">▶️ 播放全部</button>
+            <button class="control-btn" onclick="restartPlayAll()" id="restart-btn" style="display: none;">🔄 重新播放</button>
             <button class="control-btn" onclick="toggleAllPinyin()" id="pinyin-toggle-btn">👁️ 显示拼音</button>
         </div>
 
@@ -700,14 +701,48 @@
             }
         }
 
-        // Play all phrases
-        window.playAll = async function() {
-            if (isPlayingAll) return;
+        // Toggle play/stop all phrases
+        window.togglePlayAll = async function() {
+            const playAllBtn = document.getElementById('play-all-btn');
+            const restartBtn = document.getElementById('restart-btn');
 
+            if (isPlayingAll) {
+                // Stop playing
+                isPlayingAll = false;
+                playAllBtn.textContent = '▶️ 播放全部';
+                restartBtn.style.display = 'inline-block';
+
+                // Remove active state
+                document.querySelectorAll('.phrase-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+
+                // Stop current audio
+                if (audioPlayer.currentAudio) {
+                    audioPlayer.currentAudio.pause();
+                    audioPlayer.currentAudio.currentTime = 0;
+                }
+            } else {
+                // Start playing
+                playAll();
+            }
+        }
+
+        // Restart play all from beginning
+        window.restartPlayAll = function() {
+            const restartBtn = document.getElementById('restart-btn');
+            restartBtn.style.display = 'none';
+            playAll();
+        }
+
+        // Play all phrases
+        async function playAll() {
             isPlayingAll = true;
-            const playAllBtn = document.querySelector('.control-btn');
-            playAllBtn.disabled = true;
-            playAllBtn.textContent = '播放中...';
+            const playAllBtn = document.getElementById('play-all-btn');
+            const restartBtn = document.getElementById('restart-btn');
+
+            playAllBtn.textContent = '⏸️ 停止';
+            restartBtn.style.display = 'none';
 
             for (let i = 0; i < phrases.length; i++) {
                 if (!isPlayingAll) break;
@@ -739,9 +774,10 @@
                 }
             }
 
+            // Finished playing or stopped
             isPlayingAll = false;
-            playAllBtn.disabled = false;
-            playAllBtn.textContent = '🔊 播放全部';
+            playAllBtn.textContent = '▶️ 播放全部';
+            restartBtn.style.display = 'inline-block';
 
             // Remove active state
             document.querySelectorAll('.phrase-card').forEach(card => {
