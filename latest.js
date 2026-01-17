@@ -17,6 +17,7 @@ class LatestApp extends BaseApp {
         this.handwritingVisible = false;
         this.currentCharacterIndex = 0;
         this.currentCharacters = '';
+        this.showLatestOnly = true; // Default to showing only latest 15 words
     }
 
     async init() {
@@ -50,37 +51,41 @@ class LatestApp extends BaseApp {
 
     extractLatestWords() {
         /**
-         * Loads the current set of "latest words" for students to practice.
-         *
-         * The latest words are stored in a specific row of the vocabulary data.
-         * This row number is configured in CONSTANTS.VOCABULARY.LATEST_ROW_NUMBER
-         *
-         * When new words need to be added:
-         * 1. Add a new row to data/tingxie/tingxie_vocabulary.json with incrementing row number
-         * 2. Update CONSTANTS.VOCABULARY.LATEST_ROW_NUMBER to point to that row
-         * 3. Deploy the changes
-         *
-         * This explicit approach prevents confusion about which words are "latest"
-         * and makes it clear where to update the configuration.
+         * Loads words based on showLatestOnly toggle.
+         * If showLatestOnly is true: load only the latest row (row 76)
+         * If showLatestOnly is false: load ALL words from all rows
          */
         if (!this.data || !this.data.vocabulary) {
             console.warn('No vocabulary data available');
             return [];
         }
 
-        const latestRowNumber = CONSTANTS.VOCABULARY.LATEST_ROW_NUMBER;
-        const latestRow = this.data.vocabulary.find(row => row.row === latestRowNumber);
+        if (this.showLatestOnly) {
+            // Show only latest row
+            const latestRowNumber = CONSTANTS.VOCABULARY.LATEST_ROW_NUMBER;
+            const latestRow = this.data.vocabulary.find(row => row.row === latestRowNumber);
 
-        if (!latestRow) {
-            console.error(
-                `Latest words row not found. Expected row ${latestRowNumber} ` +
-                `in tingxie_vocabulary.json. Available rows: ${this.data.vocabulary.map(r => r.row).join(', ')}`
-            );
-            return [];
+            if (!latestRow) {
+                console.error(
+                    `Latest words row not found. Expected row ${latestRowNumber} ` +
+                    `in tingxie_vocabulary.json. Available rows: ${this.data.vocabulary.map(r => r.row).join(', ')}`
+                );
+                return [];
+            }
+
+            console.log(`Loaded ${latestRow.words.length} words from row ${latestRowNumber}`);
+            return latestRow.words || [];
+        } else {
+            // Show all words from all rows
+            const allWords = [];
+            this.data.vocabulary.forEach(row => {
+                if (row.words) {
+                    allWords.push(...row.words);
+                }
+            });
+            console.log(`Loaded ${allWords.length} words from all rows`);
+            return allWords;
         }
-
-        console.log(`Loaded ${latestRow.words.length} words from row ${latestRowNumber}`);
-        return latestRow.words || [];
     }
 
     async loadProgress(studentId) {
@@ -115,8 +120,30 @@ class LatestApp extends BaseApp {
             });
         }
 
-        // Filter toggle
+        // Latest/All toggle button
+        const latestToggleBtn = document.createElement('button');
+        latestToggleBtn.id = 'latest-toggle';
+        latestToggleBtn.className = 'filter-btn active';
+        latestToggleBtn.textContent = '最新15词';
+        latestToggleBtn.style.marginRight = '8px';
+
         const filterBtn = document.getElementById('filter-toggle');
+        if (filterBtn && filterBtn.parentNode) {
+            filterBtn.parentNode.insertBefore(latestToggleBtn, filterBtn);
+        }
+
+        latestToggleBtn.addEventListener('click', () => {
+            this.showLatestOnly = !this.showLatestOnly;
+            latestToggleBtn.classList.toggle('active', this.showLatestOnly);
+            latestToggleBtn.textContent = this.showLatestOnly ? '最新15词' : '全部词语';
+            this.currentIndex = 0;
+            this.allWords = this.extractLatestWords();
+            this.filteredWords = this.getFilteredWords();
+            this.showWord();
+            this.updateProgress();
+        });
+
+        // Filter toggle
         if (filterBtn) {
             filterBtn.addEventListener('click', () => {
                 this.showImportantOnly = !this.showImportantOnly;
