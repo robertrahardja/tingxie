@@ -366,14 +366,7 @@
                 segments.forEach((segment, segIndex) => {
                     if (segment.isWord) {
                         const vocab = segment.vocab;
-                        html += `<span class="word-interactive"
-                                     data-simplified="${vocab.simplified}"
-                                     data-traditional="${vocab.traditional}"
-                                     data-pinyin="${vocab.pinyin}"
-                                     data-english="${vocab.english}"
-                                     onclick="showTooltip(this, event)">
-                                    ${segment.text}
-                                </span>`;
+                        html += `<span class="word-interactive" data-simplified="${vocab.simplified}" data-traditional="${vocab.traditional}" data-pinyin="${vocab.pinyin}" data-english="${vocab.english}" onclick="showTooltip(this, event)">${segment.text}</span>`;
                     } else {
                         html += segment.text;
                     }
