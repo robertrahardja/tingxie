@@ -33,7 +33,7 @@ export const CONSTANTS = {
     // 1. Add new row to tingxie_vocabulary.json with incrementing row number
     // 2. Update LATEST_ROW_NUMBER to point to the new row
     VOCABULARY: {
-        LATEST_ROW_NUMBER: 76,  // Current "latest words" set - update when adding new words
+        LATEST_ROW_NUMBER: 77,  // Current "latest words" set - update when adding new words
         REVIEW_MODE_NAME: 'UNKNOWN_WORDS'  // Filter mode for review
     },
 

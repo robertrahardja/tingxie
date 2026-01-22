@@ -3533,6 +3533,131 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 77,
+      "words": [
+        {
+          "simplified": "伙伴",
+          "traditional": "伙伴",
+          "pinyin": "huǒ bàn",
+          "english": "partner, companion",
+          "audio": "audio/伙伴.mp3",
+          "important": true
+        },
+        {
+          "simplified": "奇怪",
+          "traditional": "奇怪",
+          "pinyin": "qí guài",
+          "english": "strange, odd",
+          "audio": "audio/奇怪.mp3",
+          "important": true
+        },
+        {
+          "simplified": "实现愿望",
+          "traditional": "實現願望",
+          "pinyin": "shí xiàn yuàn wàng",
+          "english": "to realize a wish",
+          "audio": "audio/实现愿望.mp3",
+          "important": true
+        },
+        {
+          "simplified": "胖瘦",
+          "traditional": "胖瘦",
+          "pinyin": "pàng shòu",
+          "english": "fat and thin",
+          "audio": "audio/胖瘦.mp3",
+          "important": true
+        },
+        {
+          "simplified": "问题",
+          "traditional": "問題",
+          "pinyin": "wèn tí",
+          "english": "question, problem",
+          "audio": "audio/问题.mp3",
+          "important": true
+        },
+        {
+          "simplified": "闹钟响",
+          "traditional": "鬧鐘響",
+          "pinyin": "nào zhōng xiǎng",
+          "english": "alarm clock rings",
+          "audio": "audio/闹钟响.mp3",
+          "important": true
+        },
+        {
+          "simplified": "吃到",
+          "traditional": "吃到",
+          "pinyin": "chī dào",
+          "english": "to eat (successfully)",
+          "audio": "audio/吃到.mp3",
+          "important": true
+        },
+        {
+          "simplified": "陪伴",
+          "traditional": "陪伴",
+          "pinyin": "péi bàn",
+          "english": "to accompany, to keep company",
+          "audio": "audio/陪伴.mp3",
+          "important": true
+        },
+        {
+          "simplified": "争取",
+          "traditional": "爭取",
+          "pinyin": "zhēng qǔ",
+          "english": "to strive for, to fight for",
+          "audio": "audio/争取.mp3",
+          "important": true
+        },
+        {
+          "simplified": "相信",
+          "traditional": "相信",
+          "pinyin": "xiāng xìn",
+          "english": "to believe, to trust",
+          "audio": "audio/相信.mp3",
+          "important": true
+        },
+        {
+          "simplified": "改掉坏习惯",
+          "traditional": "改掉壞習慣",
+          "pinyin": "gǎi diào huài xí guàn",
+          "english": "to get rid of bad habits",
+          "audio": "audio/改掉坏习惯.mp3",
+          "important": true
+        },
+        {
+          "simplified": "睡觉",
+          "traditional": "睡覺",
+          "pinyin": "shuì jiào",
+          "english": "to sleep",
+          "audio": "audio/睡觉.mp3",
+          "important": true
+        },
+        {
+          "simplified": "努力练习",
+          "traditional": "努力練習",
+          "pinyin": "nǔ lì liàn xí",
+          "english": "to practice hard",
+          "audio": "audio/努力练习.mp3",
+          "important": true
+        },
+        {
+          "simplified": "保卫",
+          "traditional": "保衛",
+          "pinyin": "bǎo wèi",
+          "english": "to defend, to safeguard",
+          "audio": "audio/保卫.mp3",
+          "important": true
+        },
+        {
+          "simplified": "聪明懂事",
+          "traditional": "聰明懂事",
+          "pinyin": "cōng míng dǒng shì",
+          "english": "smart and sensible",
+          "audio": "audio/聪明懂事.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
