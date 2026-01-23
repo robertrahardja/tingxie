@@ -118,6 +118,118 @@
             color: #333;
         }
 
+        .word {
+            display: inline;
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 3px;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .word:hover {
+            background: #E3F2FD;
+            color: #1976D2;
+        }
+
+        .word:active {
+            transform: scale(0.95);
+        }
+
+        .word-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            z-index: 2000;
+            min-width: 300px;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .word-popup.show {
+            display: block;
+            animation: popupFadeIn 0.2s ease;
+        }
+
+        @keyframes popupFadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -40%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1999;
+        }
+
+        .popup-overlay.show {
+            display: block;
+        }
+
+        .popup-word {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .popup-pinyin {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .popup-meaning {
+            font-size: 18px;
+            color: #999;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .popup-audio-btn {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 15px;
+        }
+
+        .popup-audio-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .popup-close {
+            background: #e0e0e0;
+            color: #666;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
         .sentence .english-translation {
             display: block;
             font-size: 14px;
@@ -464,28 +576,43 @@
             <h3>内容</h3>
             <div class="story-text" id="story-content">
                 <div class="sentence" data-start="9.15" data-end="17.59">
-                    <span class="chinese">在图片中，我看到一个阳光普照的上午，爸爸驾车带着全家人去海边野餐。</span>
+                    <span class="chinese">
+                        <span class="word" data-word="在" data-pinyin="zài" data-meaning="at/in">在</span><span class="word" data-word="图片" data-pinyin="tú piàn" data-meaning="picture">图片</span><span class="word" data-word="中" data-pinyin="zhōng" data-meaning="middle/in">中</span>，<span class="word" data-word="我" data-pinyin="wǒ" data-meaning="I">我</span><span class="word" data-word="看到" data-pinyin="kàn dào" data-meaning="see">看到</span><span class="word" data-word="一个" data-pinyin="yī gè" data-meaning="one">一个</span><span class="word" data-word="阳光普照" data-pinyin="yáng guāng pǔ zhào" data-meaning="sunny">阳光普照</span><span class="word" data-word="的" data-pinyin="de" data-meaning="(particle)">的</span><span class="word" data-word="上午" data-pinyin="shàng wǔ" data-meaning="morning">上午</span>，<span class="word" data-word="爸爸" data-pinyin="bà ba" data-meaning="dad">爸爸</span><span class="word" data-word="驾车" data-pinyin="jià chē" data-meaning="drive">驾车</span><span class="word" data-word="带着" data-pinyin="dài zhe" data-meaning="bringing">带着</span><span class="word" data-word="全家人" data-pinyin="quán jiā rén" data-meaning="whole family">全家人</span><span class="word" data-word="去" data-pinyin="qù" data-meaning="go">去</span><span class="word" data-word="海边" data-pinyin="hǎi biān" data-meaning="seaside">海边</span><span class="word" data-word="野餐" data-pinyin="yě cān" data-meaning="picnic">野餐</span>。
+                    </span>
                     <span class="english-translation">In the picture, I see a sunny morning where Dad drives the whole family to the beach for a picnic.</span>
                 </div>
                 <div class="sentence" data-start="18.63" data-end="27.59">
-                    <span class="chinese">海边有很多人，有的在游泳，有的在晒太阳，有的在玩游戏，十分热闹。</span>
+                    <span class="chinese">
+                        <span class="word" data-word="海边" data-pinyin="hǎi biān" data-meaning="seaside">海边</span><span class="word" data-word="有" data-pinyin="yǒu" data-meaning="have/there is">有</span><span class="word" data-word="很多" data-pinyin="hěn duō" data-meaning="many">很多</span><span class="word" data-word="人" data-pinyin="rén" data-meaning="people">人</span>，<span class="word" data-word="有的" data-pinyin="yǒu de" data-meaning="some">有的</span><span class="word" data-word="在" data-pinyin="zài" data-meaning="at">在</span><span class="word" data-word="游泳" data-pinyin="yóu yǒng" data-meaning="swim">游泳</span>，<span class="word" data-word="有的" data-pinyin="yǒu de" data-meaning="some">有的</span><span class="word" data-word="在" data-pinyin="zài" data-meaning="at">在</span><span class="word" data-word="晒太阳" data-pinyin="shài tài yáng" data-meaning="sunbathe">晒太阳</span>，<span class="word" data-word="有的" data-pinyin="yǒu de" data-meaning="some">有的</span><span class="word" data-word="在" data-pinyin="zài" data-meaning="at">在</span><span class="word" data-word="玩游戏" data-pinyin="wán yóu xì" data-meaning="play games">玩游戏</span>，<span class="word" data-word="十分" data-pinyin="shí fēn" data-meaning="very">十分</span><span class="word" data-word="热闹" data-pinyin="rè nao" data-meaning="lively">热闹</span>。
+                    </span>
                     <span class="english-translation">There are many people at the beach - some swimming, some sunbathing, some playing games - it's very lively.</span>
                 </div>
                 <div class="sentence" data-start="28.25" data-end="38.85">
-                    <span class="chinese">爸爸妈妈先铺好席子，再摆上食物，最后他们便坐在席子上一边拍照一边谈天。</span>
+                    <span class="chinese">
+                        <span class="word" data-word="爸爸妈妈" data-pinyin="bà ba mā ma" data-meaning="parents">爸爸妈妈</span><span class="word" data-word="先" data-pinyin="xiān" data-meaning="first">先</span><span class="word" data-word="铺好" data-pinyin="pū hǎo" data-meaning="lay out">铺好</span><span class="word" data-word="席子" data-pinyin="xí zi" data-meaning="mat">席子</span>，<span class="word" data-word="再" data-pinyin="zài" data-meaning="then">再</span><span class="word" data-word="摆上" data-pinyin="bǎi shang" data-meaning="arrange">摆上</span><span class="word" data-word="食物" data-pinyin="shí wù" data-meaning="food">食物</span>，<span class="word" data-word="最后" data-pinyin="zuì hòu" data-meaning="finally">最后</span><span class="word" data-word="他们" data-pinyin="tā men" data-meaning="they">他们</span><span class="word" data-word="便" data-pinyin="biàn" data-meaning="then">便</span><span class="word" data-word="坐在" data-pinyin="zuò zài" data-meaning="sit on">坐在</span><span class="word" data-word="席子上" data-pinyin="xí zi shàng" data-meaning="on the mat">席子上</span><span class="word" data-word="一边" data-pinyin="yī biān" data-meaning="while">一边</span><span class="word" data-word="拍照" data-pinyin="pāi zhào" data-meaning="take photos">拍照</span><span class="word" data-word="一边" data-pinyin="yī biān" data-meaning="while">一边</span><span class="word" data-word="谈天" data-pinyin="tán tiān" data-meaning="chat">谈天</span>。
+                    </span>
                     <span class="english-translation">Mom and Dad first lay out the mat, then arrange the food, and finally they sit on the mat chatting while taking photos.</span>
                 </div>
                 <div class="sentence" data-start="39.37" data-end="47.69">
-                    <span class="chinese">哥哥和妹妹则跑到沙滩上玩扔飞盘的游戏，玩得很开心。</span>
+                    <span class="chinese">
+                        <span class="word" data-word="哥哥" data-pinyin="gē ge" data-meaning="older brother">哥哥</span><span class="word" data-word="和" data-pinyin="hé" data-meaning="and">和</span><span class="word" data-word="妹妹" data-pinyin="mèi mei" data-meaning="younger sister">妹妹</span><span class="word" data-word="则" data-pinyin="zé" data-meaning="then/while">则</span><span class="word" data-word="跑到" data-pinyin="pǎo dào" data-meaning="run to">跑到</span><span class="word" data-word="沙滩上" data-pinyin="shā tān shàng" data-meaning="on the beach">沙滩上</span><span class="word" data-word="玩" data-pinyin="wán" data-meaning="play">玩</span><span class="word" data-word="扔飞盘" data-pinyin="rēng fēi pán" data-meaning="frisbee">扔飞盘</span><span class="word" data-word="的" data-pinyin="de" data-meaning="(particle)">的</span><span class="word" data-word="游戏" data-pinyin="yóu xì" data-meaning="game">游戏</span>，<span class="word" data-word="玩得" data-pinyin="wán de" data-meaning="having fun">玩得</span><span class="word" data-word="很开心" data-pinyin="hěn kāi xīn" data-meaning="very happy">很开心</span>。
+                    </span>
                     <span class="english-translation">The older brother and younger sister run to the beach to play frisbee, having a lot of fun.</span>
                 </div>
                 <div class="sentence" data-start="48.58" data-end="57.99">
-                    <span class="chinese">到了下午，天气变得十分炎热，大家便一起收拾东西，依依不舍地回家了。</span>
+                    <span class="chinese">
+                        <span class="word" data-word="到了" data-pinyin="dào le" data-meaning="arrived/reached">到了</span><span class="word" data-word="下午" data-pinyin="xià wǔ" data-meaning="afternoon">下午</span>，<span class="word" data-word="天气" data-pinyin="tiān qì" data-meaning="weather">天气</span><span class="word" data-word="变得" data-pinyin="biàn de" data-meaning="become">变得</span><span class="word" data-word="十分" data-pinyin="shí fēn" data-meaning="very">十分</span><span class="word" data-word="炎热" data-pinyin="yán rè" data-meaning="hot">炎热</span>，<span class="word" data-word="大家" data-pinyin="dà jiā" data-meaning="everyone">大家</span><span class="word" data-word="便" data-pinyin="biàn" data-meaning="then">便</span><span class="word" data-word="一起" data-pinyin="yī qǐ" data-meaning="together">一起</span><span class="word" data-word="收拾东西" data-pinyin="shōu shi dōng xi" data-meaning="pack up">收拾东西</span>，<span class="word" data-word="依依不舍" data-pinyin="yī yī bù shě" data-meaning="reluctantly">依依不舍</span><span class="word" data-word="地" data-pinyin="de" data-meaning="(adverb marker)">地</span><span class="word" data-word="回家了" data-pinyin="huí jiā le" data-meaning="went home">回家了</span>。
+                    </span>
                     <span class="english-translation">In the afternoon, the weather became very hot, so everyone packed up and reluctantly went home.</span>
                 </div>
             </div>
             <div style="background: #E3F2FD; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #2196F3;">
-                <strong>💡 提示：</strong>点击 "播放故事音频" 按钮，每个句子会在朗读时高亮显示并显示英文翻译。
+                <strong>💡 提示：</strong>
+                <ul style="margin: 8px 0; padding-left: 20px;">
+                    <li>点击任何词语查看拼音、英文翻译和听发音</li>
+                    <li>点击 "播放故事音频" 按钮，句子会同步高亮显示英文翻译</li>
+                    <li>点击词语时，主音频会自动暂停</li>
+                </ul>
             </div>
         </div>
 
@@ -520,6 +647,16 @@
         <div class="vocab-grid" id="vocab-grid">
             <!-- Vocabulary cards will be inserted here -->
         </div>
+    </div>
+
+    <!-- Word Popup -->
+    <div class="popup-overlay" id="popup-overlay" onclick="closeWordPopup()"></div>
+    <div class="word-popup" id="word-popup">
+        <div class="popup-word" id="popup-word"></div>
+        <div class="popup-pinyin" id="popup-pinyin"></div>
+        <div class="popup-meaning" id="popup-meaning"></div>
+        <button class="popup-audio-btn" onclick="playPopupAudio()">🔊 听发音</button><br>
+        <button class="popup-close" onclick="closeWordPopup()">关闭</button>
     </div>
 
     <!-- Practice Modal -->
@@ -594,6 +731,8 @@
         let currentWord = null;
         let learnedWords = new Set();
         const STORAGE_KEY = 'koushi_family_cohesion_learned';
+        let currentPopupWord = null;
+        const storyAudio = document.getElementById('story-audio');
 
         // Load progress from localStorage
         function loadProgress() {
@@ -746,16 +885,63 @@
             document.getElementById('nav-menu').classList.toggle('active');
         });
 
+        // Word popup functions
+        function showWordPopup(word, pinyin, meaning) {
+            // Pause main audio if playing
+            if (!storyAudio.paused) {
+                storyAudio.pause();
+            }
+
+            currentPopupWord = word;
+            document.getElementById('popup-word').textContent = word;
+            document.getElementById('popup-pinyin').textContent = pinyin;
+            document.getElementById('popup-meaning').textContent = meaning;
+
+            document.getElementById('popup-overlay').classList.add('show');
+            document.getElementById('word-popup').classList.add('show');
+        }
+
+        function closeWordPopup() {
+            document.getElementById('popup-overlay').classList.remove('show');
+            document.getElementById('word-popup').classList.remove('show');
+            currentPopupWord = null;
+        }
+
+        function playPopupAudio() {
+            if (currentPopupWord) {
+                const utterance = new SpeechSynthesisUtterance(currentPopupWord);
+                utterance.lang = 'zh-CN';
+                utterance.rate = 0.7;
+                speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Add click handlers to all words
+        function initializeWordClicks() {
+            const words = document.querySelectorAll('.word');
+            words.forEach(word => {
+                word.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const wordText = this.dataset.word;
+                    const pinyin = this.dataset.pinyin;
+                    const meaning = this.dataset.meaning;
+                    showWordPopup(wordText, pinyin, meaning);
+                });
+            });
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             loadProgress();
             createVocabCards();
+            initializeWordClicks();
         });
 
-        // Close modal on escape key
+        // Close modals on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closePractice();
+                closeWordPopup();
             }
         });
     </script>
