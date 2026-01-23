@@ -1,0 +1,780 @@
+{
+  "title": "学校听写",
+  "lesson": "听写练习",
+  "vocabulary": [
+    {
+      "row": 1,
+      "title": "听写一 - 家人",
+      "words": [
+        {
+          "simplified": "奶奶",
+          "traditional": "奶奶",
+          "pinyin": "nǎi nai",
+          "english": "grandmother (paternal)",
+          "audio": "audio/奶奶.mp3",
+          "important": true
+        },
+        {
+          "simplified": "爷爷",
+          "traditional": "爺爺",
+          "pinyin": "yé ye",
+          "english": "grandfather (paternal)",
+          "audio": "audio/爷爷.mp3",
+          "important": true
+        },
+        {
+          "simplified": "爸爸",
+          "traditional": "爸爸",
+          "pinyin": "bà ba",
+          "english": "father",
+          "audio": "audio/爸爸.mp3",
+          "important": true
+        },
+        {
+          "simplified": "妈妈",
+          "traditional": "媽媽",
+          "pinyin": "mā ma",
+          "english": "mother",
+          "audio": "audio/妈妈.mp3",
+          "important": true
+        },
+        {
+          "simplified": "哥哥",
+          "traditional": "哥哥",
+          "pinyin": "gē ge",
+          "english": "older brother",
+          "audio": "audio/哥哥.mp3",
+          "important": true
+        },
+        {
+          "simplified": "姐姐",
+          "traditional": "姐姐",
+          "pinyin": "jiě jie",
+          "english": "older sister",
+          "audio": "audio/姐姐.mp3",
+          "important": true
+        },
+        {
+          "simplified": "弟弟",
+          "traditional": "弟弟",
+          "pinyin": "dì di",
+          "english": "younger brother",
+          "audio": "audio/弟弟.mp3",
+          "important": true
+        },
+        {
+          "simplified": "妹妹",
+          "traditional": "妹妹",
+          "pinyin": "mèi mei",
+          "english": "younger sister",
+          "audio": "audio/妹妹.mp3",
+          "important": true
+        },
+        {
+          "simplified": "叔叔",
+          "traditional": "叔叔",
+          "pinyin": "shū shu",
+          "english": "uncle (father's younger brother)",
+          "audio": "audio/叔叔.mp3",
+          "important": true
+        },
+        {
+          "simplified": "阿姨",
+          "traditional": "阿姨",
+          "pinyin": "ā yí",
+          "english": "aunt (mother's sister)",
+          "audio": "audio/阿姨.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "title": "听写二 - 亲戚",
+      "words": [
+        {
+          "simplified": "公公",
+          "traditional": "公公",
+          "pinyin": "gōng gong",
+          "english": "grandfather (maternal) / father-in-law",
+          "audio": "audio/公公.mp3",
+          "important": true
+        },
+        {
+          "simplified": "婆婆",
+          "traditional": "婆婆",
+          "pinyin": "pó po",
+          "english": "grandmother (maternal) / mother-in-law",
+          "audio": "audio/婆婆.mp3",
+          "important": true
+        },
+        {
+          "simplified": "外公",
+          "traditional": "外公",
+          "pinyin": "wài gōng",
+          "english": "grandfather (maternal)",
+          "audio": "audio/外公.mp3",
+          "important": true
+        },
+        {
+          "simplified": "外婆",
+          "traditional": "外婆",
+          "pinyin": "wài pó",
+          "english": "grandmother (maternal)",
+          "audio": "audio/外婆.mp3",
+          "important": true
+        },
+        {
+          "simplified": "伯伯",
+          "traditional": "伯伯",
+          "pinyin": "bó bo",
+          "english": "uncle (father's older brother)",
+          "audio": "audio/伯伯.mp3",
+          "important": true
+        },
+        {
+          "simplified": "舅舅",
+          "traditional": "舅舅",
+          "pinyin": "jiù jiu",
+          "english": "uncle (mother's brother)",
+          "audio": "audio/舅舅.mp3",
+          "important": true
+        },
+        {
+          "simplified": "姑姑",
+          "traditional": "姑姑",
+          "pinyin": "gū gu",
+          "english": "aunt (father's sister)",
+          "audio": "audio/姑姑.mp3",
+          "important": true
+        },
+        {
+          "simplified": "表哥",
+          "traditional": "表哥",
+          "pinyin": "biǎo gē",
+          "english": "older male cousin (maternal side)",
+          "audio": "audio/表哥.mp3",
+          "important": true
+        },
+        {
+          "simplified": "表姐",
+          "traditional": "表姐",
+          "pinyin": "biǎo jiě",
+          "english": "older female cousin (maternal side)",
+          "audio": "audio/表姐.mp3",
+          "important": true
+        },
+        {
+          "simplified": "堂弟",
+          "traditional": "堂弟",
+          "pinyin": "táng dì",
+          "english": "younger male cousin (paternal side)",
+          "audio": "audio/堂弟.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "title": "听写三 - 人物",
+      "words": [
+        {
+          "simplified": "老师",
+          "traditional": "老師",
+          "pinyin": "lǎo shī",
+          "english": "teacher",
+          "audio": "audio/老师.mp3",
+          "important": true
+        },
+        {
+          "simplified": "同学",
+          "traditional": "同學",
+          "pinyin": "tóng xué",
+          "english": "classmate",
+          "audio": "audio/同学.mp3",
+          "important": true
+        },
+        {
+          "simplified": "朋友",
+          "traditional": "朋友",
+          "pinyin": "péng you",
+          "english": "friend",
+          "audio": "audio/朋友.mp3",
+          "important": true
+        },
+        {
+          "simplified": "邻居",
+          "traditional": "鄰居",
+          "pinyin": "lín jū",
+          "english": "neighbor",
+          "audio": "audio/邻居.mp3",
+          "important": true
+        },
+        {
+          "simplified": "医生",
+          "traditional": "醫生",
+          "pinyin": "yī shēng",
+          "english": "doctor",
+          "audio": "audio/医生.mp3",
+          "important": true
+        },
+        {
+          "simplified": "护士",
+          "traditional": "護士",
+          "pinyin": "hù shi",
+          "english": "nurse",
+          "audio": "audio/护士.mp3",
+          "important": true
+        },
+        {
+          "simplified": "警察",
+          "traditional": "警察",
+          "pinyin": "jǐng chá",
+          "english": "police",
+          "audio": "audio/警察.mp3",
+          "important": true
+        },
+        {
+          "simplified": "司机",
+          "traditional": "司機",
+          "pinyin": "sī jī",
+          "english": "driver",
+          "audio": "audio/司机.mp3",
+          "important": true
+        },
+        {
+          "simplified": "工人",
+          "traditional": "工人",
+          "pinyin": "gōng rén",
+          "english": "worker",
+          "audio": "audio/工人.mp3",
+          "important": true
+        },
+        {
+          "simplified": "农民",
+          "traditional": "農民",
+          "pinyin": "nóng mín",
+          "english": "farmer",
+          "audio": "audio/农民.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "title": "听写四 - 学校",
+      "words": [
+        {
+          "simplified": "学校",
+          "traditional": "學校",
+          "pinyin": "xué xiào",
+          "english": "school",
+          "audio": "audio/学校.mp3",
+          "important": true
+        },
+        {
+          "simplified": "教室",
+          "traditional": "教室",
+          "pinyin": "jiào shì",
+          "english": "classroom",
+          "audio": "audio/教室.mp3",
+          "important": true
+        },
+        {
+          "simplified": "操场",
+          "traditional": "操場",
+          "pinyin": "cāo chǎng",
+          "english": "playground",
+          "audio": "audio/操场.mp3",
+          "important": true
+        },
+        {
+          "simplified": "食堂",
+          "traditional": "食堂",
+          "pinyin": "shí táng",
+          "english": "cafeteria",
+          "audio": "audio/食堂.mp3",
+          "important": true
+        },
+        {
+          "simplified": "图书馆",
+          "traditional": "圖書館",
+          "pinyin": "tú shū guǎn",
+          "english": "library",
+          "audio": "audio/图书馆.mp3",
+          "important": true
+        },
+        {
+          "simplified": "厕所",
+          "traditional": "廁所",
+          "pinyin": "cè suǒ",
+          "english": "toilet",
+          "audio": "audio/厕所.mp3",
+          "important": true
+        },
+        {
+          "simplified": "办公室",
+          "traditional": "辦公室",
+          "pinyin": "bàn gōng shì",
+          "english": "office",
+          "audio": "audio/办公室.mp3",
+          "important": true
+        },
+        {
+          "simplified": "礼堂",
+          "traditional": "禮堂",
+          "pinyin": "lǐ táng",
+          "english": "auditorium",
+          "audio": "audio/礼堂.mp3",
+          "important": true
+        },
+        {
+          "simplified": "花园",
+          "traditional": "花園",
+          "pinyin": "huā yuán",
+          "english": "garden",
+          "audio": "audio/花园.mp3",
+          "important": true
+        },
+        {
+          "simplified": "游泳池",
+          "traditional": "游泳池",
+          "pinyin": "yóu yǒng chí",
+          "english": "swimming pool",
+          "audio": "audio/游泳池.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "title": "听写五 - 文具",
+      "words": [
+        {
+          "simplified": "书包",
+          "traditional": "書包",
+          "pinyin": "shū bāo",
+          "english": "school bag",
+          "audio": "audio/书包.mp3",
+          "important": true
+        },
+        {
+          "simplified": "铅笔",
+          "traditional": "鉛筆",
+          "pinyin": "qiān bǐ",
+          "english": "pencil",
+          "audio": "audio/铅笔.mp3",
+          "important": true
+        },
+        {
+          "simplified": "橡皮",
+          "traditional": "橡皮",
+          "pinyin": "xiàng pí",
+          "english": "eraser",
+          "audio": "audio/橡皮.mp3",
+          "important": true
+        },
+        {
+          "simplified": "尺子",
+          "traditional": "尺子",
+          "pinyin": "chǐ zi",
+          "english": "ruler",
+          "audio": "audio/尺子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "本子",
+          "traditional": "本子",
+          "pinyin": "běn zi",
+          "english": "notebook",
+          "audio": "audio/本子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "课本",
+          "traditional": "課本",
+          "pinyin": "kè běn",
+          "english": "textbook",
+          "audio": "audio/课本.mp3",
+          "important": true
+        },
+        {
+          "simplified": "水壶",
+          "traditional": "水壺",
+          "pinyin": "shuǐ hú",
+          "english": "water bottle",
+          "audio": "audio/水壶.mp3",
+          "important": true
+        },
+        {
+          "simplified": "饭盒",
+          "traditional": "飯盒",
+          "pinyin": "fàn hé",
+          "english": "lunch box",
+          "audio": "audio/饭盒.mp3",
+          "important": true
+        },
+        {
+          "simplified": "雨伞",
+          "traditional": "雨傘",
+          "pinyin": "yǔ sǎn",
+          "english": "umbrella",
+          "audio": "audio/雨伞.mp3",
+          "important": true
+        },
+        {
+          "simplified": "手表",
+          "traditional": "手錶",
+          "pinyin": "shǒu biǎo",
+          "english": "watch",
+          "audio": "audio/手表.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "title": "听写六 - 时间",
+      "words": [
+        {
+          "simplified": "早上",
+          "traditional": "早上",
+          "pinyin": "zǎo shang",
+          "english": "morning",
+          "audio": "audio/早上.mp3",
+          "important": true
+        },
+        {
+          "simplified": "中午",
+          "traditional": "中午",
+          "pinyin": "zhōng wǔ",
+          "english": "noon",
+          "audio": "audio/中午.mp3",
+          "important": true
+        },
+        {
+          "simplified": "下午",
+          "traditional": "下午",
+          "pinyin": "xià wǔ",
+          "english": "afternoon",
+          "audio": "audio/下午.mp3",
+          "important": true
+        },
+        {
+          "simplified": "晚上",
+          "traditional": "晚上",
+          "pinyin": "wǎn shang",
+          "english": "evening",
+          "audio": "audio/晚上.mp3",
+          "important": true
+        },
+        {
+          "simplified": "今天",
+          "traditional": "今天",
+          "pinyin": "jīn tiān",
+          "english": "today",
+          "audio": "audio/今天.mp3",
+          "important": true
+        },
+        {
+          "simplified": "明天",
+          "traditional": "明天",
+          "pinyin": "míng tiān",
+          "english": "tomorrow",
+          "audio": "audio/明天.mp3",
+          "important": true
+        },
+        {
+          "simplified": "昨天",
+          "traditional": "昨天",
+          "pinyin": "zuó tiān",
+          "english": "yesterday",
+          "audio": "audio/昨天.mp3",
+          "important": true
+        },
+        {
+          "simplified": "星期",
+          "traditional": "星期",
+          "pinyin": "xīng qī",
+          "english": "week",
+          "audio": "audio/星期.mp3",
+          "important": true
+        },
+        {
+          "simplified": "月",
+          "traditional": "月",
+          "pinyin": "yuè",
+          "english": "month",
+          "audio": "audio/月.mp3",
+          "important": true
+        },
+        {
+          "simplified": "年",
+          "traditional": "年",
+          "pinyin": "nián",
+          "english": "year",
+          "audio": "audio/年.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "title": "听写七 - 天气",
+      "words": [
+        {
+          "simplified": "春天",
+          "traditional": "春天",
+          "pinyin": "chūn tiān",
+          "english": "spring",
+          "audio": "audio/春天.mp3",
+          "important": true
+        },
+        {
+          "simplified": "夏天",
+          "traditional": "夏天",
+          "pinyin": "xià tiān",
+          "english": "summer",
+          "audio": "audio/夏天.mp3",
+          "important": true
+        },
+        {
+          "simplified": "秋天",
+          "traditional": "秋天",
+          "pinyin": "qiū tiān",
+          "english": "autumn",
+          "audio": "audio/秋天.mp3",
+          "important": true
+        },
+        {
+          "simplified": "冬天",
+          "traditional": "冬天",
+          "pinyin": "dōng tiān",
+          "english": "winter",
+          "audio": "audio/冬天.mp3",
+          "important": true
+        },
+        {
+          "simplified": "太阳",
+          "traditional": "太陽",
+          "pinyin": "tài yáng",
+          "english": "sun",
+          "audio": "audio/太阳.mp3",
+          "important": true
+        },
+        {
+          "simplified": "月亮",
+          "traditional": "月亮",
+          "pinyin": "yuè liang",
+          "english": "moon",
+          "audio": "audio/月亮.mp3",
+          "important": true
+        },
+        {
+          "simplified": "星星",
+          "traditional": "星星",
+          "pinyin": "xīng xīng",
+          "english": "stars",
+          "audio": "audio/星星.mp3",
+          "important": true
+        },
+        {
+          "simplified": "云",
+          "traditional": "雲",
+          "pinyin": "yún",
+          "english": "cloud",
+          "audio": "audio/云.mp3",
+          "important": true
+        },
+        {
+          "simplified": "风",
+          "traditional": "風",
+          "pinyin": "fēng",
+          "english": "wind",
+          "audio": "audio/风.mp3",
+          "important": true
+        },
+        {
+          "simplified": "雨",
+          "traditional": "雨",
+          "pinyin": "yǔ",
+          "english": "rain",
+          "audio": "audio/雨.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "title": "听写八 - 颜色",
+      "words": [
+        {
+          "simplified": "红色",
+          "traditional": "紅色",
+          "pinyin": "hóng sè",
+          "english": "red",
+          "audio": "audio/红色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "黄色",
+          "traditional": "黃色",
+          "pinyin": "huáng sè",
+          "english": "yellow",
+          "audio": "audio/黄色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "蓝色",
+          "traditional": "藍色",
+          "pinyin": "lán sè",
+          "english": "blue",
+          "audio": "audio/蓝色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "绿色",
+          "traditional": "綠色",
+          "pinyin": "lǜ sè",
+          "english": "green",
+          "audio": "audio/绿色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "白色",
+          "traditional": "白色",
+          "pinyin": "bái sè",
+          "english": "white",
+          "audio": "audio/白色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "黑色",
+          "traditional": "黑色",
+          "pinyin": "hēi sè",
+          "english": "black",
+          "audio": "audio/黑色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "紫色",
+          "traditional": "紫色",
+          "pinyin": "zǐ sè",
+          "english": "purple",
+          "audio": "audio/紫色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "粉色",
+          "traditional": "粉色",
+          "pinyin": "fěn sè",
+          "english": "pink",
+          "audio": "audio/粉色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "橙色",
+          "traditional": "橙色",
+          "pinyin": "chéng sè",
+          "english": "orange",
+          "audio": "audio/橙色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "灰色",
+          "traditional": "灰色",
+          "pinyin": "huī sè",
+          "english": "grey",
+          "audio": "audio/灰色.mp3",
+          "important": true
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "title": "听写九 - 水果",
+      "words": [
+        {
+          "simplified": "苹果",
+          "traditional": "蘋果",
+          "pinyin": "píng guǒ",
+          "english": "apple",
+          "audio": "audio/苹果.mp3",
+          "important": true
+        },
+        {
+          "simplified": "香蕉",
+          "traditional": "香蕉",
+          "pinyin": "xiāng jiāo",
+          "english": "banana",
+          "audio": "audio/香蕉.mp3",
+          "important": true
+        },
+        {
+          "simplified": "葡萄",
+          "traditional": "葡萄",
+          "pinyin": "pú tao",
+          "english": "grape",
+          "audio": "audio/葡萄.mp3",
+          "important": true
+        },
+        {
+          "simplified": "西瓜",
+          "traditional": "西瓜",
+          "pinyin": "xī guā",
+          "english": "watermelon",
+          "audio": "audio/西瓜.mp3",
+          "important": true
+        },
+        {
+          "simplified": "草莓",
+          "traditional": "草莓",
+          "pinyin": "cǎo méi",
+          "english": "strawberry",
+          "audio": "audio/草莓.mp3",
+          "important": true
+        },
+        {
+          "simplified": "橘子",
+          "traditional": "橘子",
+          "pinyin": "jú zi",
+          "english": "orange (fruit)",
+          "audio": "audio/橘子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "桃子",
+          "traditional": "桃子",
+          "pinyin": "táo zi",
+          "english": "peach",
+          "audio": "audio/桃子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "梨",
+          "traditional": "梨",
+          "pinyin": "lí",
+          "english": "pear",
+          "audio": "audio/梨.mp3",
+          "important": true
+        },
+        {
+          "simplified": "芒果",
+          "traditional": "芒果",
+          "pinyin": "máng guǒ",
+          "english": "mango",
+          "audio": "audio/芒果.mp3",
+          "important": true
+        },
+        {
+          "simplified": "榴莲",
+          "traditional": "榴蓮",
+          "pinyin": "liú lián",
+          "english": "durian",
+          "audio": "audio/榴莲.mp3",
+          "important": true
+        }
+      ]
+    }
+  ]
+}
