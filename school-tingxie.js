@@ -8,6 +8,7 @@ class SchoolTingxieApp {
         this.currentItems = [];
         this.isRevealed = false;
         this.audio = new Audio();
+        this.currentPopupWord = null;
     }
 
     async init() {
@@ -73,6 +74,21 @@ class SchoolTingxieApp {
         const revealBtn = document.getElementById('reveal-btn');
         if (revealBtn) {
             revealBtn.addEventListener('click', () => this.toggleReveal());
+        }
+
+        // Word popup handlers
+        const popupOverlay = document.getElementById('popup-overlay');
+        const popupClose = document.getElementById('popup-close');
+        const popupAudioBtn = document.getElementById('popup-audio-btn');
+
+        if (popupOverlay) {
+            popupOverlay.addEventListener('click', () => this.closeWordPopup());
+        }
+        if (popupClose) {
+            popupClose.addEventListener('click', () => this.closeWordPopup());
+        }
+        if (popupAudioBtn) {
+            popupAudioBtn.addEventListener('click', () => this.playPopupAudio());
         }
     }
 
@@ -170,6 +186,9 @@ class SchoolTingxieApp {
                 // Regular sentence
                 contentEl.textContent = item.sentence;
             }
+
+            // Render word chips in answer section
+            this.renderWordChips(item);
         }
 
         // Update keyword section (hidden by default)
@@ -275,6 +294,78 @@ class SchoolTingxieApp {
         const nextBtn = document.getElementById('next-btn');
         if (prevBtn) prevBtn.disabled = this.currentItemIndex === 0;
         if (nextBtn) nextBtn.disabled = this.currentItemIndex === this.currentItems.length - 1;
+    }
+
+    renderWordChips(item) {
+        const answerSection = document.getElementById('answer-section');
+        if (!answerSection || !item.words || item.words.length === 0) return;
+
+        // Check if words section already exists
+        let wordsSection = answerSection.querySelector('.words-section');
+        if (!wordsSection) {
+            wordsSection = document.createElement('div');
+            wordsSection.className = 'words-section';
+            answerSection.appendChild(wordsSection);
+        }
+
+        wordsSection.innerHTML = `
+            <div class="words-label">点击词语查看详情</div>
+            <div class="words-list" id="words-list"></div>
+        `;
+
+        const wordsList = wordsSection.querySelector('#words-list');
+        item.words.forEach(word => {
+            const chip = document.createElement('span');
+            chip.className = 'word-chip';
+            chip.textContent = word.traditional;
+            chip.addEventListener('click', () => this.showWordPopup(word));
+            wordsList.appendChild(chip);
+        });
+    }
+
+    showWordPopup(word) {
+        this.currentPopupWord = word;
+
+        const popup = document.getElementById('word-popup');
+        const overlay = document.getElementById('popup-overlay');
+        const traditionalEl = document.getElementById('popup-traditional');
+        const simplifiedEl = document.getElementById('popup-simplified');
+        const pinyinEl = document.getElementById('popup-pinyin');
+        const meaningEl = document.getElementById('popup-meaning');
+
+        if (traditionalEl) traditionalEl.textContent = word.traditional;
+        if (simplifiedEl) {
+            // Only show simplified if different from traditional
+            if (word.simplified !== word.traditional) {
+                simplifiedEl.textContent = `(${word.simplified})`;
+                simplifiedEl.style.display = 'block';
+            } else {
+                simplifiedEl.style.display = 'none';
+            }
+        }
+        if (pinyinEl) pinyinEl.textContent = word.pinyin;
+        if (meaningEl) meaningEl.textContent = word.meaning;
+
+        if (popup) popup.classList.add('show');
+        if (overlay) overlay.classList.add('show');
+    }
+
+    closeWordPopup() {
+        const popup = document.getElementById('word-popup');
+        const overlay = document.getElementById('popup-overlay');
+
+        if (popup) popup.classList.remove('show');
+        if (overlay) overlay.classList.remove('show');
+        this.currentPopupWord = null;
+    }
+
+    playPopupAudio() {
+        if (this.currentPopupWord) {
+            const utterance = new SpeechSynthesisUtterance(this.currentPopupWord.simplified);
+            utterance.lang = 'zh-CN';
+            utterance.rate = 0.7;
+            speechSynthesis.speak(utterance);
+        }
     }
 }
 

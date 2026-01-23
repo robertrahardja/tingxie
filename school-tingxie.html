@@ -256,6 +256,165 @@
             color: #888;
             padding: 8px;
         }
+
+        /* Interactive word styles */
+        .word {
+            display: inline;
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .word:hover {
+            background: #E3F2FD;
+            color: #1976D2;
+        }
+
+        .word:active {
+            transform: scale(0.95);
+        }
+
+        /* Word popup styles */
+        .word-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            z-index: 2000;
+            min-width: 300px;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .word-popup.show {
+            display: block;
+            animation: popupFadeIn 0.2s ease;
+        }
+
+        @keyframes popupFadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -40%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1999;
+        }
+
+        .popup-overlay.show {
+            display: block;
+        }
+
+        .popup-traditional {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .popup-simplified {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .popup-pinyin {
+            font-size: 22px;
+            color: #4a90d9;
+            margin-bottom: 10px;
+        }
+
+        .popup-meaning {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .popup-audio-btn {
+            background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%);
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 12px;
+        }
+
+        .popup-audio-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 144, 217, 0.4);
+        }
+
+        .popup-close {
+            background: #e0e0e0;
+            color: #666;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .popup-close:hover {
+            background: #d0d0d0;
+        }
+
+        /* Word list section */
+        .words-section {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px dashed #ddd;
+        }
+
+        .words-label {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .words-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .word-chip {
+            background: #f0f7ff;
+            border: 1px solid #4a90d9;
+            color: #4a90d9;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .word-chip:hover {
+            background: #4a90d9;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -330,6 +489,17 @@
 
             <div class="progress-indicator" id="progress-indicator">1 / 5</div>
         </main>
+    </div>
+
+    <!-- Word Popup -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="word-popup" id="word-popup">
+        <div class="popup-traditional" id="popup-traditional"></div>
+        <div class="popup-simplified" id="popup-simplified"></div>
+        <div class="popup-pinyin" id="popup-pinyin"></div>
+        <div class="popup-meaning" id="popup-meaning"></div>
+        <button class="popup-audio-btn" id="popup-audio-btn">🔊 听发音</button><br>
+        <button class="popup-close" id="popup-close">关闭</button>
     </div>
 
     <script type="module" src="school-tingxie.js"></script>
