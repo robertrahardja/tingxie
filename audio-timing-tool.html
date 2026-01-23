@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Timing Tool</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .audio-player {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        audio {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .time-display {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2196F3;
+            text-align: center;
+            padding: 10px;
+            background: #E3F2FD;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .sentence-list {
+            margin-top: 20px;
+        }
+        .sentence-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border-left: 4px solid #ccc;
+        }
+        .sentence-item.active {
+            background: #FFF9E6;
+            border-left-color: #FF6B6B;
+        }
+        .sentence-chinese {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .sentence-timing {
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .timing-input {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .timing-input input {
+            width: 80px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .timing-input button {
+            padding: 5px 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .timing-input button:hover {
+            background: #45a049;
+        }
+        .result-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: #E8F5E9;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+        .result-box h3 {
+            margin-top: 0;
+            color: #2E7D32;
+        }
+        .result-code {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .instructions {
+            background: #E3F2FD;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196F3;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #1976D2;
+        }
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Audio Timing Tool - 家庭凝聚力</h1>
+
+        <div class="instructions">
+            <h3>📋 使用说明</h3>
+            <ol>
+                <li>播放音频，听到每个句子开始时，点击对应的 "标记开始" 按钮</li>
+                <li>听到每个句子结束时，点击对应的 "标记结束" 按钮</li>
+                <li>完成后，复制底部生成的代码替换到 HTML 文件中</li>
+            </ol>
+        </div>
+
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="audio/family-cohesion/story.mp4" type="audio/mp4">
+            </audio>
+            <div class="time-display" id="time-display">0.00s</div>
+        </div>
+
+        <div class="sentence-list" id="sentence-list">
+            <!-- Sentences will be inserted here -->
+        </div>
+
+        <div class="result-box">
+            <h3>✅ 生成的代码</h3>
+            <div class="result-code" id="result-code">
+                标记完所有句子后，这里会显示代码...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sentences = [
+            "在图片中，我看到一个阳光普照的上午，爸爸驾车带着全家人去海边野餐。",
+            "海边有很多人，有的在游泳，有的在晒太阳，有的在玩游戏，十分热闹。",
+            "爸爸妈妈先铺好席子，再摆上食物，最后他们便坐在席子上一边拍照一边谈天。",
+            "哥哥和妹妹则跑到沙滩上玩扔飞盘的游戏，玩得很开心。",
+            "到了下午，天气变得十分炎热，大家便一起收拾东西，依依不舍地回家了。"
+        ];
+
+        const englishTranslations = [
+            "In the picture, I see a sunny morning where Dad drives the whole family to the beach for a picnic.",
+            "There are many people at the beach - some swimming, some sunbathing, some playing games - it's very lively.",
+            "Mom and Dad first lay out the mat, then arrange the food, and finally they sit on the mat chatting while taking photos.",
+            "The older brother and younger sister run to the beach to play frisbee, having a lot of fun.",
+            "In the afternoon, the weather became very hot, so everyone packed up and reluctantly went home."
+        ];
+
+        const timings = sentences.map(() => ({ start: null, end: null }));
+        const audio = document.getElementById('audio');
+        const timeDisplay = document.getElementById('time-display');
+        const sentenceList = document.getElementById('sentence-list');
+        const resultCode = document.getElementById('result-code');
+
+        // Update time display
+        audio.addEventListener('timeupdate', () => {
+            timeDisplay.textContent = audio.currentTime.toFixed(2) + 's';
+        });
+
+        // Create sentence items
+        sentences.forEach((sentence, index) => {
+            const item = document.createElement('div');
+            item.className = 'sentence-item';
+            item.id = `sentence-${index}`;
+
+            item.innerHTML = `
+                <div class="sentence-chinese">${index + 1}. ${sentence}</div>
+                <div class="sentence-timing">
+                    <div class="timing-input">
+                        <button onclick="markStart(${index})">标记开始</button>
+                        <input type="number" step="0.1" id="start-${index}" placeholder="开始时间">
+                    </div>
+                    <div class="timing-input">
+                        <button onclick="markEnd(${index})">标记结束</button>
+                        <input type="number" step="0.1" id="end-${index}" placeholder="结束时间">
+                    </div>
+                    <span id="duration-${index}"></span>
+                </div>
+            `;
+
+            sentenceList.appendChild(item);
+        });
+
+        function markStart(index) {
+            const currentTime = audio.currentTime;
+            timings[index].start = currentTime;
+            document.getElementById(`start-${index}`).value = currentTime.toFixed(2);
+            updateResult();
+            updateDuration(index);
+        }
+
+        function markEnd(index) {
+            const currentTime = audio.currentTime;
+            timings[index].end = currentTime;
+            document.getElementById(`end-${index}`).value = currentTime.toFixed(2);
+            updateResult();
+            updateDuration(index);
+        }
+
+        function updateDuration(index) {
+            const start = timings[index].start;
+            const end = timings[index].end;
+            if (start !== null && end !== null) {
+                const duration = end - start;
+                document.getElementById(`duration-${index}`).textContent = `时长: ${duration.toFixed(2)}s`;
+            }
+        }
+
+        function updateResult() {
+            let code = '';
+            sentences.forEach((sentence, index) => {
+                const start = timings[index].start !== null ? timings[index].start.toFixed(2) : '0';
+                const end = timings[index].end !== null ? timings[index].end.toFixed(2) : '0';
+
+                code += `                <div class="sentence" data-start="${start}" data-end="${end}">
+                    <span class="chinese">${sentence}</span>
+                    <span class="english-translation">${englishTranslations[index]}</span>
+                </div>\n`;
+            });
+
+            resultCode.textContent = code;
+        }
+
+        // Highlight current sentence while playing
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            sentences.forEach((_, index) => {
+                const start = timings[index].start;
+                const end = timings[index].end;
+                const item = document.getElementById(`sentence-${index}`);
+
+                if (start !== null && end !== null && currentTime >= start && currentTime < end) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
