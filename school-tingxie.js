@@ -172,7 +172,8 @@ class SchoolTingxieApp {
             }
         }
 
-        // Update keyword section
+        // Update keyword section (hidden by default)
+        const answerSection = document.getElementById('answer-section');
         if (keywordSection && keywordText) {
             if (item.keyword) {
                 keywordSection.style.display = 'block';
@@ -196,12 +197,16 @@ class SchoolTingxieApp {
         // Update English translation
         if (englishEl) {
             englishEl.textContent = item.english || '';
-            englishEl.classList.add('covered');
+        }
+
+        // Hide answer section by default
+        if (answerSection) {
+            answerSection.style.display = 'none';
         }
 
         // Reset reveal button
         if (revealBtn) {
-            revealBtn.textContent = '点击显示答案';
+            revealBtn.textContent = '显示答案';
             revealBtn.classList.remove('revealed');
         }
 
@@ -213,19 +218,19 @@ class SchoolTingxieApp {
         this.isRevealed = !this.isRevealed;
 
         const contentEl = document.getElementById('sentence-content');
-        const englishEl = document.getElementById('english-translation');
+        const answerSection = document.getElementById('answer-section');
         const revealBtn = document.getElementById('reveal-btn');
 
         if (contentEl) {
             contentEl.classList.toggle('covered', !this.isRevealed);
         }
 
-        if (englishEl) {
-            englishEl.classList.toggle('covered', !this.isRevealed);
+        if (answerSection) {
+            answerSection.style.display = this.isRevealed ? 'block' : 'none';
         }
 
         if (revealBtn) {
-            revealBtn.textContent = this.isRevealed ? '隐藏答案' : '点击显示答案';
+            revealBtn.textContent = this.isRevealed ? '隐藏答案' : '显示答案';
             revealBtn.classList.toggle('revealed', this.isRevealed);
         }
     }
