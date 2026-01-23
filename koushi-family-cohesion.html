@@ -104,6 +104,43 @@
             margin-bottom: 20px;
         }
 
+        .sentence {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .sentence .chinese {
+            display: block;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .sentence .english-translation {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            margin-top: 8px;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sentence.highlighted {
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFE082 100%);
+            box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+            transform: scale(1.02);
+        }
+
+        .sentence.highlighted .english-translation {
+            opacity: 1;
+            max-height: 100px;
+        }
+
         .reflection-text {
             background: #E8F5E9;
             padding: 20px;
@@ -425,8 +462,30 @@
         <div class="section-title">📝 问题一：谈谈你在图片中看到的事情</div>
         <div class="question-box">
             <h3>内容</h3>
-            <div class="story-text">
-                在图片中，我看到一个阳光普照的上午，爸爸驾车带着全家人去海边野餐。海边有很多人，有的在游泳，有的在晒太阳，有的在玩游戏，十分热闹。爸爸妈妈先铺好席子，再摆上食物，最后他们便坐在席子上一边拍照一边谈天。哥哥和妹妹则跑到沙滩上玩扔飞盘的游戏，玩得很开心。到了下午，天气变得十分炎热，大家便一起收拾东西，依依不舍地回家了。
+            <div class="story-text" id="story-content">
+                <div class="sentence" data-start="0" data-end="8">
+                    <span class="chinese">在图片中，我看到一个阳光普照的上午，爸爸驾车带着全家人去海边野餐。</span>
+                    <span class="english-translation">In the picture, I see a sunny morning where Dad drives the whole family to the beach for a picnic.</span>
+                </div>
+                <div class="sentence" data-start="8" data-end="16">
+                    <span class="chinese">海边有很多人，有的在游泳，有的在晒太阳，有的在玩游戏，十分热闹。</span>
+                    <span class="english-translation">There are many people at the beach - some swimming, some sunbathing, some playing games - it's very lively.</span>
+                </div>
+                <div class="sentence" data-start="16" data-end="26">
+                    <span class="chinese">爸爸妈妈先铺好席子，再摆上食物，最后他们便坐在席子上一边拍照一边谈天。</span>
+                    <span class="english-translation">Mom and Dad first lay out the mat, then arrange the food, and finally they sit on the mat chatting while taking photos.</span>
+                </div>
+                <div class="sentence" data-start="26" data-end="32">
+                    <span class="chinese">哥哥和妹妹则跑到沙滩上玩扔飞盘的游戏，玩得很开心。</span>
+                    <span class="english-translation">The older brother and younger sister run to the beach to play frisbee, having a lot of fun.</span>
+                </div>
+                <div class="sentence" data-start="32" data-end="42">
+                    <span class="chinese">到了下午，天气变得十分炎热，大家便一起收拾东西，依依不舍地回家了。</span>
+                    <span class="english-translation">In the afternoon, the weather became very hot, so everyone packed up and reluctantly went home.</span>
+                </div>
+            </div>
+            <div style="background: #E3F2FD; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #2196F3;">
+                <strong>💡 提示：</strong>点击 "播放故事音频" 按钮，每个句子会在朗读时高亮显示并显示英文翻译。
             </div>
         </div>
 
@@ -637,9 +696,38 @@
             }
         }
 
-        // Play story audio
+        // Play story audio with synchronized highlighting
         function playStoryAudio() {
             const audio = document.getElementById('story-audio');
+            const sentences = document.querySelectorAll('.sentence');
+
+            // Clear any existing highlights
+            sentences.forEach(s => s.classList.remove('highlighted'));
+
+            // Add timeupdate listener for synchronized highlighting
+            audio.ontimeupdate = function() {
+                const currentTime = audio.currentTime;
+
+                sentences.forEach(sentence => {
+                    const start = parseFloat(sentence.dataset.start);
+                    const end = parseFloat(sentence.dataset.end);
+
+                    if (currentTime >= start && currentTime < end) {
+                        // Highlight current sentence
+                        sentence.classList.add('highlighted');
+                        // Smooth scroll to highlighted sentence
+                        sentence.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        sentence.classList.remove('highlighted');
+                    }
+                });
+            };
+
+            // Clean up when audio ends
+            audio.onended = function() {
+                sentences.forEach(s => s.classList.remove('highlighted'));
+            };
+
             audio.play();
         }
 
