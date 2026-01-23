@@ -410,11 +410,15 @@
         }
 
         .audio-player {
+            position: sticky;
+            top: 0;
+            z-index: 100;
             margin: 20px 0;
             background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 15px 20px;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-bottom: 3px solid #FF6B6B;
         }
 
         .audio-player audio {
