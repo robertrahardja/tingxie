@@ -1,24 +1,13 @@
-import { BaseApp } from './js/BaseApp.js';
-import { CSS_CLASSES, ELEMENT_IDS } from './js/constants.js';
-import { getAudioPlayer } from './js/AudioPlayer.js';
-import HanziWriter from 'https://cdn.jsdelivr.net/npm/hanzi-writer@3.7.3/+esm';
-
 const SCHOOL_DATA_PATH = 'data/tingxie/school_vocabulary.json';
 
-class SchoolTingxieApp extends BaseApp {
+class SchoolTingxieApp {
     constructor() {
-        super();
         this.currentSetIndex = 0;
-        this.currentWordIndex = 0;
+        this.currentItemIndex = 0;
         this.sets = [];
-        this.currentWords = [];
-        this.knownWords = new Set();
-        this.unknownWords = new Set();
-        this.hanziWriter = null;
-        this.currentStroke = 0;
-        this.handwritingVisible = false;
-        this.currentCharacterIndex = 0;
-        this.currentCharacters = '';
+        this.currentItems = [];
+        this.isRevealed = false;
+        this.audio = new Audio();
     }
 
     async init() {
@@ -41,9 +30,6 @@ class SchoolTingxieApp extends BaseApp {
             return;
         }
 
-        // Load progress from localStorage
-        this.loadProgress();
-
         // Set up UI
         this.setupUI();
         this.renderSetSelector();
@@ -52,43 +38,17 @@ class SchoolTingxieApp extends BaseApp {
         console.log('SchoolTingxieApp initialized successfully');
     }
 
-    loadProgress() {
-        try {
-            const saved = localStorage.getItem('school_tingxie_progress');
-            if (saved) {
-                const data = JSON.parse(saved);
-                this.knownWords = new Set(data.knownWords || []);
-                this.unknownWords = new Set(data.unknownWords || []);
-            }
-        } catch (error) {
-            console.log('Could not load progress:', error);
-        }
-    }
-
-    saveProgress() {
-        try {
-            const data = {
-                knownWords: Array.from(this.knownWords),
-                unknownWords: Array.from(this.unknownWords),
-                lastUpdated: new Date().toISOString()
-            };
-            localStorage.setItem('school_tingxie_progress', JSON.stringify(data));
-        } catch (error) {
-            console.error('Error saving progress:', error);
-        }
-    }
-
     setupUI() {
         // Menu toggle
-        const menuToggle = document.getElementById(ELEMENT_IDS.MENU_TOGGLE);
-        const navMenu = document.getElementById(ELEMENT_IDS.NAV_MENU);
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
         if (menuToggle && navMenu) {
             menuToggle.addEventListener('click', () => {
-                navMenu.classList.toggle(CSS_CLASSES.ACTIVE);
+                navMenu.classList.toggle('active');
             });
             document.addEventListener('click', (e) => {
                 if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                    navMenu.classList.remove(CSS_CLASSES.ACTIVE);
+                    navMenu.classList.remove('active');
                 }
             });
         }
@@ -97,52 +57,22 @@ class SchoolTingxieApp extends BaseApp {
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
         if (prevBtn) {
-            prevBtn.addEventListener('click', () => this.prevWord());
+            prevBtn.addEventListener('click', () => this.prevItem());
         }
         if (nextBtn) {
-            nextBtn.addEventListener('click', () => this.nextWord());
+            nextBtn.addEventListener('click', () => this.nextItem());
         }
 
-        // Self-assessment buttons
-        const knowBtn = document.getElementById('know-btn');
-        const dontKnowBtn = document.getElementById('dont-know-btn');
-        if (knowBtn) {
-            knowBtn.addEventListener('click', () => this.markAsKnown());
-        }
-        if (dontKnowBtn) {
-            dontKnowBtn.addEventListener('click', () => this.markAsUnknown());
+        // Audio button
+        const audioBtn = document.getElementById('audio-btn');
+        if (audioBtn) {
+            audioBtn.addEventListener('click', () => this.playAudio());
         }
 
-        // Handwriting practice button
-        const handwritingBtn = document.getElementById(ELEMENT_IDS.HANDWRITING_BTN);
-        if (handwritingBtn) {
-            handwritingBtn.addEventListener('click', () => this.toggleHandwritingPractice());
-        }
-
-        // Close handwriting button
-        const closeHandwriting = document.getElementById('close-handwriting');
-        if (closeHandwriting) {
-            closeHandwriting.addEventListener('click', () => this.hideHandwritingPractice());
-        }
-
-        // Handwriting controls
-        const hintBtn = document.getElementById('handwriting-hint');
-        const resetBtn = document.getElementById('handwriting-reset');
-        if (hintBtn) {
-            hintBtn.addEventListener('click', () => this.showHandwritingHint());
-        }
-        if (resetBtn) {
-            resetBtn.addEventListener('click', () => this.resetHandwriting());
-        }
-
-        // Character navigation buttons
-        const prevCharBtn = document.getElementById('prev-char');
-        const nextCharBtn = document.getElementById('next-char');
-        if (prevCharBtn) {
-            prevCharBtn.addEventListener('click', () => this.previousCharacter());
-        }
-        if (nextCharBtn) {
-            nextCharBtn.addEventListener('click', () => this.nextCharacter());
+        // Reveal button
+        const revealBtn = document.getElementById('reveal-btn');
+        if (revealBtn) {
+            revealBtn.addEventListener('click', () => this.toggleReveal());
         }
     }
 
@@ -156,21 +86,7 @@ class SchoolTingxieApp extends BaseApp {
             const btn = document.createElement('button');
             btn.className = 'set-btn';
             btn.dataset.index = index;
-
-            // Create button content with progress bar
-            const label = document.createElement('div');
-            label.textContent = `听写${this.numberToChinese(index + 1)}`;
-            btn.appendChild(label);
-
-            // Add progress bar
-            const progressBar = document.createElement('div');
-            progressBar.className = 'set-progress-bar';
-            const progressFill = document.createElement('div');
-            progressFill.className = 'set-progress-fill';
-            progressFill.style.width = this.getSetProgress(index) + '%';
-            progressBar.appendChild(progressFill);
-            btn.appendChild(progressBar);
-
+            btn.textContent = this.numberToChinese(index + 1);
             btn.addEventListener('click', () => this.selectSet(index));
             selector.appendChild(btn);
         });
@@ -181,24 +97,11 @@ class SchoolTingxieApp extends BaseApp {
         return chinese[num - 1] || num;
     }
 
-    getSetProgress(setIndex) {
-        const set = this.sets[setIndex];
-        if (!set || !set.words) return 0;
-
-        let knownCount = 0;
-        set.words.forEach(word => {
-            if (this.knownWords.has(word.simplified)) {
-                knownCount++;
-            }
-        });
-
-        return Math.round((knownCount / set.words.length) * 100);
-    }
-
     selectSet(index) {
         this.currentSetIndex = index;
-        this.currentWordIndex = 0;
-        this.currentWords = this.sets[index]?.words || [];
+        this.currentItemIndex = 0;
+        this.currentItems = this.sets[index]?.items || [];
+        this.isRevealed = false;
 
         // Update set selector buttons
         const buttons = document.querySelectorAll('.set-btn');
@@ -209,301 +112,164 @@ class SchoolTingxieApp extends BaseApp {
         // Update title
         const titleElement = document.getElementById('set-title');
         if (titleElement && this.sets[index]) {
-            titleElement.textContent = this.sets[index].title || `听写${this.numberToChinese(index + 1)}`;
+            titleElement.textContent = this.sets[index].title || `听写（${this.numberToChinese(index + 1)}）`;
         }
 
-        // Show first word
-        this.showWord();
-        this.updateProgress();
+        // Show first item
+        this.showItem();
     }
 
-    showWord() {
-        if (this.currentWords.length === 0) {
-            console.log('No words to display');
+    showItem() {
+        if (this.currentItems.length === 0) {
+            console.log('No items to display');
             return;
         }
 
-        const word = this.currentWords[this.currentWordIndex];
+        const item = this.currentItems[this.currentItemIndex];
+        this.isRevealed = false;
 
-        // Label map for placeholder text
-        const labelMap = {
-            simplified: '简体',
-            traditional: '繁体',
-            pinyin: '拼音',
-            english: 'English'
-        };
-
-        // Reset covered state and set up click handlers
-        ['simplified', 'traditional', 'pinyin', 'english'].forEach(key => {
-            const elem = document.getElementById(key);
-            if (elem) {
-                const oldContent = elem.querySelector('.content');
-                if (oldContent) {
-                    const newContent = oldContent.cloneNode(false);
-                    newContent.textContent = labelMap[key];
-                    newContent.classList.add(CSS_CLASSES.COVERED);
-
-                    const value = word[key];
-                    newContent.addEventListener('click', () => {
-                        if (newContent.classList.contains(CSS_CLASSES.COVERED)) {
-                            newContent.textContent = value;
-                            newContent.classList.remove(CSS_CLASSES.COVERED);
-                        } else {
-                            newContent.textContent = labelMap[key];
-                            newContent.classList.add(CSS_CLASSES.COVERED);
-                        }
-                    });
-
-                    oldContent.replaceWith(newContent);
-                }
+        // Update item number with badges
+        const itemNumberEl = document.getElementById('item-number');
+        if (itemNumberEl) {
+            let badges = '';
+            if (item.type === 'pinyin') {
+                badges = '<span class="item-type-badge pinyin-type">拼音</span>';
+            } else if (item.type === 'moxie') {
+                badges = '<span class="item-type-badge moxie-type">默写</span>';
             }
-        });
-
-        // Reset audio button with toggle
-        const audioBtn = document.querySelector(`#${ELEMENT_IDS.AUDIO} .audio-btn`);
-        if (audioBtn) {
-            const newAudioBtn = audioBtn.cloneNode(true);
-            newAudioBtn.classList.add(CSS_CLASSES.COVERED);
-            newAudioBtn.addEventListener('click', () => {
-                this.playAudio(word);
-                newAudioBtn.classList.toggle(CSS_CLASSES.COVERED);
-            });
-            audioBtn.replaceWith(newAudioBtn);
+            if (item.difficult) {
+                badges += '<span class="item-type-badge difficult">*难</span>';
+            }
+            itemNumberEl.innerHTML = `第 ${this.currentItemIndex + 1} 题 ${badges}`;
         }
 
-        // Close handwriting component when navigating to next word
-        if (this.handwritingVisible) {
-            this.hideHandwritingPractice();
+        // Update content based on type
+        const contentEl = document.getElementById('sentence-content');
+        const keywordSection = document.getElementById('keyword-section');
+        const keywordText = document.getElementById('keyword-text');
+        const englishEl = document.getElementById('english-translation');
+        const revealBtn = document.getElementById('reveal-btn');
+
+        if (contentEl) {
+            contentEl.classList.add('covered');
+
+            if (item.type === 'pinyin') {
+                // For pinyin items, show pinyin first, characters are the answer
+                contentEl.innerHTML = `
+                    <div class="pinyin-display">${item.pinyin}</div>
+                    <div class="characters-answer">${item.characters}</div>
+                `;
+            } else if (item.type === 'moxie') {
+                // For moxie items, show the label and sentence
+                contentEl.innerHTML = `
+                    <div class="moxie-label">${item.label}</div>
+                    <div>${item.sentence}</div>
+                    ${item.note ? `<div class="moxie-note">${item.note}</div>` : ''}
+                `;
+            } else {
+                // Regular sentence
+                contentEl.textContent = item.sentence;
+            }
         }
 
+        // Update keyword section
+        if (keywordSection && keywordText) {
+            if (item.keyword) {
+                keywordSection.style.display = 'block';
+                const keywordLabel = keywordSection.querySelector('.keyword-label');
+                if (keywordLabel) {
+                    keywordLabel.textContent = `重点词语: ${item.pinyin}`;
+                }
+                keywordText.textContent = item.keyword;
+            } else if (item.type === 'pinyin') {
+                keywordSection.style.display = 'block';
+                const keywordLabel = keywordSection.querySelector('.keyword-label');
+                if (keywordLabel) {
+                    keywordLabel.textContent = '答案';
+                }
+                keywordText.textContent = item.characters;
+            } else {
+                keywordSection.style.display = 'none';
+            }
+        }
+
+        // Update English translation
+        if (englishEl) {
+            englishEl.textContent = item.english || '';
+            englishEl.classList.add('covered');
+        }
+
+        // Reset reveal button
+        if (revealBtn) {
+            revealBtn.textContent = '点击显示答案';
+            revealBtn.classList.remove('revealed');
+        }
+
+        // Update progress
         this.updateProgress();
     }
 
-    async playAudio(word) {
+    toggleReveal() {
+        this.isRevealed = !this.isRevealed;
+
+        const contentEl = document.getElementById('sentence-content');
+        const englishEl = document.getElementById('english-translation');
+        const revealBtn = document.getElementById('reveal-btn');
+
+        if (contentEl) {
+            contentEl.classList.toggle('covered', !this.isRevealed);
+        }
+
+        if (englishEl) {
+            englishEl.classList.toggle('covered', !this.isRevealed);
+        }
+
+        if (revealBtn) {
+            revealBtn.textContent = this.isRevealed ? '隐藏答案' : '点击显示答案';
+            revealBtn.classList.toggle('revealed', this.isRevealed);
+        }
+    }
+
+    async playAudio() {
+        const item = this.currentItems[this.currentItemIndex];
+        if (!item || !item.audio) {
+            console.log('No audio available for this item');
+            return;
+        }
+
         try {
-            const audioPlayer = getAudioPlayer();
-            await audioPlayer.play(word.audio);
-            const audioBtn = document.querySelector(`#${ELEMENT_IDS.AUDIO} .audio-btn`);
-            if (audioBtn) {
-                audioBtn.classList.remove(CSS_CLASSES.COVERED);
-            }
+            this.audio.src = item.audio;
+            await this.audio.play();
         } catch (error) {
             console.error('Error playing audio:', error);
         }
     }
 
-    prevWord() {
-        if (this.currentWordIndex > 0) {
-            this.currentWordIndex--;
-            this.showWord();
+    prevItem() {
+        if (this.currentItemIndex > 0) {
+            this.currentItemIndex--;
+            this.showItem();
         }
     }
 
-    nextWord() {
-        if (this.currentWordIndex < this.currentWords.length - 1) {
-            this.currentWordIndex++;
-            this.showWord();
+    nextItem() {
+        if (this.currentItemIndex < this.currentItems.length - 1) {
+            this.currentItemIndex++;
+            this.showItem();
         }
-    }
-
-    markAsKnown() {
-        if (this.currentWords.length === 0) return;
-        const word = this.currentWords[this.currentWordIndex];
-        this.knownWords.add(word.simplified);
-        this.unknownWords.delete(word.simplified);
-        this.saveProgress();
-        this.updateSetSelectorProgress();
-        this.nextWord();
-    }
-
-    markAsUnknown() {
-        if (this.currentWords.length === 0) return;
-        const word = this.currentWords[this.currentWordIndex];
-        this.unknownWords.add(word.simplified);
-        this.knownWords.delete(word.simplified);
-        this.saveProgress();
-        this.updateSetSelectorProgress();
-        this.nextWord();
-    }
-
-    updateSetSelectorProgress() {
-        // Update all progress bars in set selector
-        const buttons = document.querySelectorAll('.set-btn');
-        buttons.forEach((btn, index) => {
-            const progressFill = btn.querySelector('.set-progress-fill');
-            if (progressFill) {
-                progressFill.style.width = this.getSetProgress(index) + '%';
-            }
-        });
     }
 
     updateProgress() {
-        const currentSpan = document.getElementById('current-set');
-        const totalSpan = document.getElementById('total-sets');
-        const currentCardSpan = document.getElementById('current-set-card');
-        const totalCardSpan = document.getElementById('total-sets-card');
-
-        if (currentSpan) currentSpan.textContent = this.currentWordIndex + 1;
-        if (totalSpan) totalSpan.textContent = this.currentWords.length;
-        if (currentCardSpan) currentCardSpan.textContent = this.currentWordIndex + 1;
-        if (totalCardSpan) totalCardSpan.textContent = this.currentWords.length;
+        const progressEl = document.getElementById('progress-indicator');
+        if (progressEl) {
+            progressEl.textContent = `${this.currentItemIndex + 1} / ${this.currentItems.length}`;
+        }
 
         // Update button states
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
-        if (prevBtn) prevBtn.disabled = this.currentWordIndex === 0;
-        if (nextBtn) nextBtn.disabled = this.currentWordIndex === this.currentWords.length - 1;
-    }
-
-    // Handwriting practice methods
-    toggleHandwritingPractice() {
-        if (this.handwritingVisible) {
-            this.hideHandwritingPractice();
-        } else {
-            this.showHandwritingPractice();
-        }
-    }
-
-    showHandwritingPractice() {
-        if (this.currentWords.length === 0) return;
-
-        const word = this.currentWords[this.currentWordIndex];
-        const characters = word.simplified || word.traditional;
-
-        const handwritingEmbed = document.getElementById('handwriting-embed');
-        if (handwritingEmbed) {
-            handwritingEmbed.style.display = 'block';
-            this.handwritingVisible = true;
-            this.loadHandwritingCharacter(characters);
-        }
-    }
-
-    hideHandwritingPractice() {
-        const handwritingEmbed = document.getElementById('handwriting-embed');
-        if (handwritingEmbed) {
-            handwritingEmbed.style.display = 'none';
-            this.handwritingVisible = false;
-            if (this.hanziWriter) {
-                this.hanziWriter = null;
-            }
-        }
-    }
-
-    loadHandwritingCharacter(characters, charIndex = 0) {
-        const charElement = document.getElementById('handwriting-char');
-        const targetElement = document.getElementById('handwriting-target');
-        const statusElement = document.getElementById('handwriting-status');
-
-        if (!charElement || !targetElement) return;
-
-        this.currentCharacters = characters;
-        this.currentCharacterIndex = charIndex;
-
-        const charCountText = characters.length > 1 ? ` (${charIndex + 1}/${characters.length})` : '';
-        charElement.textContent = characters + charCountText;
-
-        targetElement.innerHTML = '';
-        if (statusElement) statusElement.textContent = '';
-
-        const currentChar = characters[charIndex];
-        this.currentStroke = 0;
-
-        this.hanziWriter = HanziWriter.create(targetElement, currentChar, {
-            width: 280,
-            height: 280,
-            padding: 20,
-            showOutline: true,
-            showCharacter: false,
-            strokeAnimationSpeed: 1,
-            delayBetweenStrokes: 100,
-            strokeColor: '#333',
-            outlineColor: '#ddd',
-            drawingColor: '#4a90d9',
-            drawingWidth: 20,
-            showHintAfterMisses: 3,
-            highlightOnComplete: true,
-            highlightColor: '#27ae60',
-            charDataLoader: (char) => {
-                return fetch(`https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0/${char}.json`)
-                    .then(res => {
-                        if (!res.ok) throw new Error('Character not found');
-                        return res.json();
-                    });
-            },
-        });
-
-        this.hanziWriter.quiz({
-            onMistake: (strokeData) => {
-                if (statusElement) {
-                    statusElement.textContent = `第 ${strokeData.strokeNum + 1} 笔: 再试一次！`;
-                    statusElement.className = 'handwriting-status error';
-                }
-            },
-            onCorrectStroke: (strokeData) => {
-                this.currentStroke = strokeData.strokeNum + 1;
-                if (statusElement) {
-                    statusElement.textContent = `第 ${strokeData.strokeNum + 1} 笔: 正确！`;
-                    statusElement.className = 'handwriting-status';
-                }
-            },
-            onComplete: (summaryData) => {
-                if (statusElement) {
-                    const mistakes = summaryData.totalMistakes;
-                    if (mistakes === 0) {
-                        statusElement.textContent = '完美！没有错误！';
-                    } else {
-                        statusElement.textContent = `完成！${mistakes} 个错误`;
-                    }
-                    statusElement.className = 'handwriting-status';
-                }
-            },
-        });
-
-        this.updateCharacterNavButtons();
-    }
-
-    showHandwritingHint() {
-        if (this.hanziWriter) {
-            this.hanziWriter.highlightStroke(this.currentStroke);
-        }
-    }
-
-    resetHandwriting() {
-        if (this.hanziWriter && this.currentCharacters) {
-            this.loadHandwritingCharacter(this.currentCharacters, this.currentCharacterIndex);
-        }
-    }
-
-    previousCharacter() {
-        if (this.currentCharacterIndex > 0) {
-            this.loadHandwritingCharacter(this.currentCharacters, this.currentCharacterIndex - 1);
-        }
-    }
-
-    nextCharacter() {
-        if (this.currentCharacterIndex < this.currentCharacters.length - 1) {
-            this.loadHandwritingCharacter(this.currentCharacters, this.currentCharacterIndex + 1);
-        }
-    }
-
-    updateCharacterNavButtons() {
-        const charNavContainer = document.getElementById('handwriting-char-nav');
-        const prevCharBtn = document.getElementById('prev-char');
-        const nextCharBtn = document.getElementById('next-char');
-
-        if (!this.currentCharacters || this.currentCharacters.length <= 1) {
-            if (charNavContainer) charNavContainer.style.display = 'none';
-            return;
-        }
-
-        if (charNavContainer) charNavContainer.style.display = 'grid';
-
-        if (prevCharBtn) {
-            prevCharBtn.disabled = this.currentCharacterIndex === 0;
-        }
-        if (nextCharBtn) {
-            nextCharBtn.disabled = this.currentCharacterIndex === this.currentCharacters.length - 1;
-        }
+        if (prevBtn) prevBtn.disabled = this.currentItemIndex === 0;
+        if (nextBtn) nextBtn.disabled = this.currentItemIndex === this.currentItems.length - 1;
     }
 }
 

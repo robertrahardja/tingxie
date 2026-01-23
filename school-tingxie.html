@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学校听写 - 听写练习</title>
+    <title>学校听写 - 三年级听写表</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="handwriting-embed.css">
     <style>
         /* Set selector styles */
         .set-selector {
@@ -27,7 +26,7 @@
             font-size: 14px;
             font-weight: 500;
             transition: all 0.2s;
-            min-width: 80px;
+            min-width: 50px;
         }
 
         .set-btn:hover {
@@ -43,34 +42,218 @@
 
         .set-title {
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
             color: #333;
             margin-bottom: 16px;
-            padding: 10px;
-            background: #f8f9fa;
+        }
+
+        /* Sentence card styles */
+        .sentence-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .item-number {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .item-type-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+
+        .item-type-badge.pinyin-type {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .item-type-badge.sentence-type {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .item-type-badge.moxie-type {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .item-type-badge.difficult {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+
+        .sentence-content {
+            font-size: 24px;
+            line-height: 1.6;
+            margin: 16px 0;
+            color: #333;
+        }
+
+        .sentence-content.covered {
+            filter: blur(8px);
+            user-select: none;
+        }
+
+        .keyword-highlight {
+            background: linear-gradient(to bottom, transparent 60%, #ffeb3b 60%);
+            padding: 0 2px;
+        }
+
+        .pinyin-display {
+            font-size: 18px;
+            color: #4a90d9;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .keyword-section {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #eee;
+        }
+
+        .keyword-label {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 4px;
+        }
+
+        .keyword-text {
+            font-size: 18px;
+            color: #e91e63;
+            font-weight: 500;
+        }
+
+        .english-translation {
+            font-size: 14px;
+            color: #666;
+            margin-top: 12px;
+            font-style: italic;
+        }
+
+        .english-translation.covered {
+            filter: blur(4px);
+            user-select: none;
+        }
+
+        .moxie-label {
+            background: #fff3e0;
+            color: #f57c00;
+            padding: 8px 12px;
             border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: inline-block;
         }
 
-        /* Progress bar styles */
-        .set-progress-bar {
-            width: 100%;
-            height: 6px;
+        .moxie-note {
+            font-size: 12px;
+            color: #f57c00;
+            margin-top: 8px;
+            padding: 8px;
+            background: #fff8e1;
+            border-radius: 6px;
+        }
+
+        /* Audio button */
+        .audio-play-btn {
+            background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 16px auto;
+            box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .audio-play-btn:active {
+            transform: scale(0.95);
+        }
+
+        .audio-play-btn:hover {
+            box-shadow: 0 6px 16px rgba(74, 144, 217, 0.4);
+        }
+
+        /* Reveal button */
+        .reveal-btn {
+            background: #f5f5f5;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 12px auto;
+            display: block;
+            transition: all 0.2s;
+        }
+
+        .reveal-btn:hover {
             background: #e0e0e0;
-            border-radius: 3px;
-            margin-top: 6px;
-            overflow: hidden;
         }
 
-        .set-progress-fill {
-            height: 100%;
-            background: #27ae60;
-            border-radius: 3px;
-            transition: width 0.3s ease;
+        .reveal-btn.revealed {
+            background: #e8f5e9;
+            border-color: #4caf50;
+            color: #2e7d32;
         }
 
-        .set-btn .set-progress-bar {
-            margin-top: 4px;
+        /* Navigation */
+        .item-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            gap: 12px;
+        }
+
+        .item-nav-btn {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .item-nav-btn.prev {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .item-nav-btn.next {
+            background: linear-gradient(135deg, #4a90d9 0%, #357abd 100%);
+            color: white;
+        }
+
+        .item-nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .progress-indicator {
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+            padding: 8px;
         }
     </style>
 </head>
@@ -103,12 +286,7 @@
     <div class="container">
         <header>
             <div class="header-row">
-                <h1>学校听写</h1>
-                <div class="controls">
-                    <div class="progress">
-                        <span id="current-set">1</span> / <span id="total-sets">10</span>
-                    </div>
-                </div>
+                <h1>三年级听写</h1>
             </div>
         </header>
 
@@ -119,79 +297,35 @@
             </div>
 
             <!-- Current set title -->
-            <div class="set-title" id="set-title">听写一 - 家人</div>
+            <div class="set-title" id="set-title">听写（一）</div>
 
-            <div class="navigation">
-                <button id="prev-btn" class="nav-btn" disabled>上一个</button>
-                <button id="next-btn" class="nav-btn">下一个</button>
+            <!-- Sentence card -->
+            <div class="sentence-card" id="sentence-card">
+                <div class="item-number" id="item-number">第 1 题</div>
+
+                <button class="audio-play-btn" id="audio-btn">🔊</button>
+
+                <div class="sentence-content covered" id="sentence-content">
+                    <!-- Content will be populated by JS -->
+                </div>
+
+                <div class="keyword-section" id="keyword-section">
+                    <div class="keyword-label">重点词语 (pinyin)</div>
+                    <div class="keyword-text" id="keyword-text"></div>
+                </div>
+
+                <button class="reveal-btn" id="reveal-btn">点击显示答案</button>
+
+                <div class="english-translation covered" id="english-translation"></div>
             </div>
 
-            <div id="word-card" class="word-card">
-                <div class="card-progress">
-                    <span id="current-set-card">1</span> / <span id="total-sets-card">10</span>
-                </div>
-
-                <div class="word-section">
-                    <div class="word-item audio-item" id="audio" data-type="audio">
-                        <button class="audio-btn covered">🔊</button>
-                    </div>
-
-                    <div class="word-item" id="simplified" data-type="simplified">
-                        <div class="content covered">简体</div>
-                    </div>
-
-                    <div class="word-item" id="traditional" data-type="traditional">
-                        <div class="content covered">繁体</div>
-                    </div>
-
-                    <div class="word-item" id="pinyin" data-type="pinyin">
-                        <div class="content covered">拼音</div>
-                    </div>
-
-                    <div class="word-item" id="english" data-type="english">
-                        <div class="content covered">English</div>
-                    </div>
-                </div>
-
-                <div class="handwriting-controls">
-                    <button id="handwriting-btn" class="handwriting-btn">✍️ 笔画练习</button>
-                </div>
+            <!-- Navigation -->
+            <div class="item-navigation">
+                <button class="item-nav-btn prev" id="prev-btn">上一题</button>
+                <button class="item-nav-btn next" id="next-btn">下一题</button>
             </div>
 
-            <!-- Embedded Handwriting Practice -->
-            <div class="handwriting-embed" id="handwriting-embed" style="display: none;">
-                <div class="handwriting-embed-header">
-                    <h3>笔画练习</h3>
-                    <button id="close-handwriting" class="close-btn">✕</button>
-                </div>
-
-                <div class="character-display-embed">
-                    <span id="handwriting-char"></span>
-                </div>
-
-                <div id="handwriting-writer-container">
-                    <div id="handwriting-target"></div>
-                </div>
-
-                <div class="handwriting-controls-embed">
-                    <button id="handwriting-hint" class="handwriting-action-btn">显示提示</button>
-                    <button id="handwriting-reset" class="handwriting-action-btn reset">重置</button>
-                </div>
-
-                <div class="handwriting-char-nav" id="handwriting-char-nav" style="display: none;">
-                    <button id="prev-char" class="char-nav-btn">← 上一个字</button>
-                    <button id="next-char" class="char-nav-btn">下一个字 →</button>
-                </div>
-
-                <div class="handwriting-status" id="handwriting-status"></div>
-            </div>
-
-            <div class="self-assess-controls">
-                <div class="assess-buttons">
-                    <button id="know-btn" class="assess-btn know-btn">会 ✓</button>
-                    <button id="dont-know-btn" class="assess-btn dont-know-btn">不会 ✗</button>
-                </div>
-            </div>
+            <div class="progress-indicator" id="progress-indicator">1 / 5</div>
         </main>
     </div>
 

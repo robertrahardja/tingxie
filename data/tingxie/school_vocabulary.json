@@ -1,778 +1,403 @@
 {
   "title": "学校听写",
-  "lesson": "听写练习",
+  "lesson": "三年级听写表",
   "vocabulary": [
     {
       "row": 1,
-      "title": "听写一 - 家人",
-      "words": [
+      "title": "听写（一）",
+      "items": [
         {
-          "simplified": "奶奶",
-          "traditional": "奶奶",
-          "pinyin": "nǎi nai",
-          "english": "grandmother (paternal)",
-          "audio": "audio/奶奶.mp3",
-          "important": true
+          "type": "pinyin",
+          "pinyin": "bǎo wèi guó jiā",
+          "characters": "保卫国家",
+          "english": "protect the country",
+          "audio": "audio/保卫国家.mp3"
         },
         {
-          "simplified": "爷爷",
-          "traditional": "爺爺",
-          "pinyin": "yé ye",
-          "english": "grandfather (paternal)",
-          "audio": "audio/爷爷.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "她们常常在一起玩，成为了好朋友。",
+          "pinyin": "chéng wéi",
+          "keyword": "成为",
+          "english": "They often play together and became good friends.",
+          "audio": "audio/她们常常在一起玩成为了好朋友.mp3"
         },
         {
-          "simplified": "爸爸",
-          "traditional": "爸爸",
-          "pinyin": "bà ba",
-          "english": "father",
-          "audio": "audio/爸爸.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "爸爸讲的故事真好听。",
+          "pinyin": "jiǎng",
+          "keyword": "讲",
+          "english": "The stories Dad tells are really nice to listen to.",
+          "audio": "audio/爸爸讲的故事真好听.mp3"
         },
         {
-          "simplified": "妈妈",
-          "traditional": "媽媽",
-          "pinyin": "mā ma",
-          "english": "mother",
-          "audio": "audio/妈妈.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "为了实现当医生的愿望，我一定会努力学习。",
+          "pinyin": "shí xiàn, yuàn wàng, nǔ lì",
+          "keyword": "实现、愿望、努力",
+          "english": "To realize my wish of becoming a doctor, I will definitely study hard.",
+          "audio": "audio/为了实现当医生的愿望我一定会努力学习.mp3",
+          "difficult": true
         },
         {
-          "simplified": "哥哥",
-          "traditional": "哥哥",
-          "pinyin": "gē ge",
-          "english": "older brother",
-          "audio": "audio/哥哥.mp3",
-          "important": true
-        },
-        {
-          "simplified": "姐姐",
-          "traditional": "姐姐",
-          "pinyin": "jiě jie",
-          "english": "older sister",
-          "audio": "audio/姐姐.mp3",
-          "important": true
-        },
-        {
-          "simplified": "弟弟",
-          "traditional": "弟弟",
-          "pinyin": "dì di",
-          "english": "younger brother",
-          "audio": "audio/弟弟.mp3",
-          "important": true
-        },
-        {
-          "simplified": "妹妹",
-          "traditional": "妹妹",
-          "pinyin": "mèi mei",
-          "english": "younger sister",
-          "audio": "audio/妹妹.mp3",
-          "important": true
-        },
-        {
-          "simplified": "叔叔",
-          "traditional": "叔叔",
-          "pinyin": "shū shu",
-          "english": "uncle (father's younger brother)",
-          "audio": "audio/叔叔.mp3",
-          "important": true
-        },
-        {
-          "simplified": "阿姨",
-          "traditional": "阿姨",
-          "pinyin": "ā yí",
-          "english": "aunt (mother's sister)",
-          "audio": "audio/阿姨.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "老师发问时，我第一个举手回答。",
+          "pinyin": "jǔ shǒu",
+          "keyword": "举手",
+          "english": "When the teacher asks questions, I am the first to raise my hand to answer.",
+          "audio": "audio/老师发问时我第一个举手回答.mp3",
+          "difficult": true
         }
       ]
     },
     {
       "row": 2,
-      "title": "听写二 - 亲戚",
-      "words": [
+      "title": "听写（二）",
+      "items": [
         {
-          "simplified": "公公",
-          "traditional": "公公",
-          "pinyin": "gōng gong",
-          "english": "grandfather (maternal) / father-in-law",
-          "audio": "audio/公公.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "弟弟常常问爸爸一些奇怪的问题。",
+          "pinyin": "yì xiē, qí guài",
+          "keyword": "一些、奇怪",
+          "english": "Little brother often asks Dad some strange questions.",
+          "audio": "audio/弟弟常常问爸爸一些奇怪的问题.mp3"
         },
         {
-          "simplified": "婆婆",
-          "traditional": "婆婆",
-          "pinyin": "pó po",
-          "english": "grandmother (maternal) / mother-in-law",
-          "audio": "audio/婆婆.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "我相信哥哥一定会把这件事做好。",
+          "pinyin": "xiāng xìn",
+          "keyword": "相信",
+          "english": "I believe older brother will definitely do this well.",
+          "audio": "audio/我相信哥哥一定会把这件事做好.mp3"
         },
         {
-          "simplified": "外公",
-          "traditional": "外公",
-          "pinyin": "wài gōng",
-          "english": "grandfather (maternal)",
-          "audio": "audio/外公.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "我真的不明白这句话的意思。",
+          "pinyin": "zhēn, yì si",
+          "keyword": "真、意思",
+          "english": "I really don't understand the meaning of this sentence.",
+          "audio": "audio/我真的不明白这句话的意思.mp3",
+          "difficult": true
         },
         {
-          "simplified": "外婆",
-          "traditional": "外婆",
-          "pinyin": "wài pó",
-          "english": "grandmother (maternal)",
-          "audio": "audio/外婆.mp3",
-          "important": true
-        },
-        {
-          "simplified": "伯伯",
-          "traditional": "伯伯",
-          "pinyin": "bó bo",
-          "english": "uncle (father's older brother)",
-          "audio": "audio/伯伯.mp3",
-          "important": true
-        },
-        {
-          "simplified": "舅舅",
-          "traditional": "舅舅",
-          "pinyin": "jiù jiu",
-          "english": "uncle (mother's brother)",
-          "audio": "audio/舅舅.mp3",
-          "important": true
-        },
-        {
-          "simplified": "姑姑",
-          "traditional": "姑姑",
-          "pinyin": "gū gu",
-          "english": "aunt (father's sister)",
-          "audio": "audio/姑姑.mp3",
-          "important": true
-        },
-        {
-          "simplified": "表哥",
-          "traditional": "表哥",
-          "pinyin": "biǎo gē",
-          "english": "older male cousin (maternal side)",
-          "audio": "audio/表哥.mp3",
-          "important": true
-        },
-        {
-          "simplified": "表姐",
-          "traditional": "表姐",
-          "pinyin": "biǎo jiě",
-          "english": "older female cousin (maternal side)",
-          "audio": "audio/表姐.mp3",
-          "important": true
-        },
-        {
-          "simplified": "堂弟",
-          "traditional": "堂弟",
-          "pinyin": "táng dì",
-          "english": "younger male cousin (paternal side)",
-          "audio": "audio/堂弟.mp3",
-          "important": true
+          "type": "moxie",
+          "label": "默写：天气",
+          "sentence": "今天风和日丽，我兴高采烈地上学去。",
+          "pinyin": "cǎi liè",
+          "keyword": "采烈",
+          "english": "Today the weather is beautiful, I go to school in high spirits.",
+          "audio": "audio/今天风和日丽我兴高采烈地上学去.mp3",
+          "note": "老师不会念出句子，学生需要自己写出。"
         }
       ]
     },
     {
       "row": 3,
-      "title": "听写三 - 人物",
-      "words": [
+      "title": "听写（三）",
+      "items": [
         {
-          "simplified": "老师",
-          "traditional": "老師",
-          "pinyin": "lǎo shī",
-          "english": "teacher",
-          "audio": "audio/老师.mp3",
-          "important": true
+          "type": "pinyin",
+          "pinyin": "wǔ yán liù sè",
+          "characters": "五颜六色",
+          "english": "colorful / multi-colored",
+          "audio": "audio/五颜六色.mp3"
         },
         {
-          "simplified": "同学",
-          "traditional": "同學",
-          "pinyin": "tóng xué",
-          "english": "classmate",
-          "audio": "audio/同学.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "小文买了一只蓝色的手表。",
+          "pinyin": "lán sè, shǒu biǎo",
+          "keyword": "蓝色、手表",
+          "english": "Xiao Wen bought a blue watch.",
+          "audio": "audio/小文买了一只蓝色的手表.mp3"
         },
         {
-          "simplified": "朋友",
-          "traditional": "朋友",
-          "pinyin": "péng you",
-          "english": "friend",
-          "audio": "audio/朋友.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "小丽是个好伙伴，每天都和我一起回家。",
+          "pinyin": "huǒ bàn",
+          "keyword": "伙伴",
+          "english": "Xiao Li is a good companion, she goes home with me every day.",
+          "audio": "audio/小丽是个好伙伴每天都和我一起回家.mp3"
         },
         {
-          "simplified": "邻居",
-          "traditional": "鄰居",
-          "pinyin": "lín jū",
-          "english": "neighbor",
-          "audio": "audio/邻居.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "小明早睡早起，改掉了上学迟到的坏习惯。",
+          "pinyin": "zǎo shuì zǎo qǐ, gǎi diào, chí dào, huài xí guàn",
+          "keyword": "早睡早起、改掉、迟到、坏习惯",
+          "english": "Xiao Ming sleeps and wakes early, correcting his bad habit of being late to school.",
+          "audio": "audio/小明早睡早起改掉了上学迟到的坏习惯.mp3",
+          "difficult": true
         },
         {
-          "simplified": "医生",
-          "traditional": "醫生",
-          "pinyin": "yī shēng",
-          "english": "doctor",
-          "audio": "audio/医生.mp3",
-          "important": true
-        },
-        {
-          "simplified": "护士",
-          "traditional": "護士",
-          "pinyin": "hù shi",
-          "english": "nurse",
-          "audio": "audio/护士.mp3",
-          "important": true
-        },
-        {
-          "simplified": "警察",
-          "traditional": "警察",
-          "pinyin": "jǐng chá",
-          "english": "police",
-          "audio": "audio/警察.mp3",
-          "important": true
-        },
-        {
-          "simplified": "司机",
-          "traditional": "司機",
-          "pinyin": "sī jī",
-          "english": "driver",
-          "audio": "audio/司机.mp3",
-          "important": true
-        },
-        {
-          "simplified": "工人",
-          "traditional": "工人",
-          "pinyin": "gōng rén",
-          "english": "worker",
-          "audio": "audio/工人.mp3",
-          "important": true
-        },
-        {
-          "simplified": "农民",
-          "traditional": "農民",
-          "pinyin": "nóng mín",
-          "english": "farmer",
-          "audio": "audio/农民.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "每天早上闹钟一响，我就起床。",
+          "pinyin": "nào zhōng, xiǎng",
+          "keyword": "闹钟、响",
+          "english": "Every morning when the alarm clock rings, I get up.",
+          "audio": "audio/每天早上闹钟一响我就起床.mp3",
+          "difficult": true
         }
       ]
     },
     {
       "row": 4,
-      "title": "听写四 - 学校",
-      "words": [
+      "title": "听写（四）",
+      "items": [
         {
-          "simplified": "学校",
-          "traditional": "學校",
-          "pinyin": "xué xiào",
-          "english": "school",
-          "audio": "audio/学校.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "小猫找到妈妈，向它跑去。",
+          "pinyin": "zhǎo",
+          "keyword": "找",
+          "english": "The kitten found its mother and ran towards her.",
+          "audio": "audio/小猫找到妈妈向它跑去.mp3"
         },
         {
-          "simplified": "教室",
-          "traditional": "教室",
-          "pinyin": "jiào shì",
-          "english": "classroom",
-          "audio": "audio/教室.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "姐姐是个短头发的女孩。",
+          "pinyin": "duǎn tóu fa",
+          "keyword": "短头发",
+          "english": "Older sister is a girl with short hair.",
+          "audio": "audio/姐姐是个短头发的女孩.mp3"
         },
         {
-          "simplified": "操场",
-          "traditional": "操場",
-          "pinyin": "cāo chǎng",
-          "english": "playground",
-          "audio": "audio/操场.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "阿姨的衣服好美啊！",
+          "pinyin": "ā yí, yī fu",
+          "keyword": "阿姨、衣服",
+          "english": "Auntie's clothes are so beautiful!",
+          "audio": "audio/阿姨的衣服好美啊.mp3",
+          "difficult": true
         },
         {
-          "simplified": "食堂",
-          "traditional": "食堂",
-          "pinyin": "shí táng",
-          "english": "cafeteria",
-          "audio": "audio/食堂.mp3",
-          "important": true
-        },
-        {
-          "simplified": "图书馆",
-          "traditional": "圖書館",
-          "pinyin": "tú shū guǎn",
-          "english": "library",
-          "audio": "audio/图书馆.mp3",
-          "important": true
-        },
-        {
-          "simplified": "厕所",
-          "traditional": "廁所",
-          "pinyin": "cè suǒ",
-          "english": "toilet",
-          "audio": "audio/厕所.mp3",
-          "important": true
-        },
-        {
-          "simplified": "办公室",
-          "traditional": "辦公室",
-          "pinyin": "bàn gōng shì",
-          "english": "office",
-          "audio": "audio/办公室.mp3",
-          "important": true
-        },
-        {
-          "simplified": "礼堂",
-          "traditional": "禮堂",
-          "pinyin": "lǐ táng",
-          "english": "auditorium",
-          "audio": "audio/礼堂.mp3",
-          "important": true
-        },
-        {
-          "simplified": "花园",
-          "traditional": "花園",
-          "pinyin": "huā yuán",
-          "english": "garden",
-          "audio": "audio/花园.mp3",
-          "important": true
-        },
-        {
-          "simplified": "游泳池",
-          "traditional": "游泳池",
-          "pinyin": "yóu yǒng chí",
-          "english": "swimming pool",
-          "audio": "audio/游泳池.mp3",
-          "important": true
+          "type": "moxie",
+          "label": "默写：高兴",
+          "sentence": "听了老师的夸奖，我的心里乐开了花。",
+          "pinyin": "kuā jiǎng",
+          "keyword": "夸奖",
+          "english": "After hearing the teacher's praise, my heart blossomed with joy.",
+          "audio": "audio/听了老师的夸奖我的心里乐开了花.mp3",
+          "note": "老师不会念出句子，学生需要自己写出。"
         }
       ]
     },
     {
       "row": 5,
-      "title": "听写五 - 文具",
-      "words": [
+      "title": "听写（五）",
+      "items": [
         {
-          "simplified": "书包",
-          "traditional": "書包",
-          "pinyin": "shū bāo",
-          "english": "school bag",
-          "audio": "audio/书包.mp3",
-          "important": true
+          "type": "pinyin",
+          "pinyin": "mín zhòng jù lè bù",
+          "characters": "民众俱乐部",
+          "english": "community club",
+          "audio": "audio/民众俱乐部.mp3"
         },
         {
-          "simplified": "铅笔",
-          "traditional": "鉛筆",
-          "pinyin": "qiān bǐ",
-          "english": "pencil",
-          "audio": "audio/铅笔.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "我们可以看书或者画画。",
+          "pinyin": "huò zhě",
+          "keyword": "或者",
+          "english": "We can read books or draw.",
+          "audio": "audio/我们可以看书或者画画.mp3"
         },
         {
-          "simplified": "橡皮",
-          "traditional": "橡皮",
-          "pinyin": "xiàng pí",
-          "english": "eraser",
-          "audio": "audio/橡皮.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "吃完晚饭，妈妈叫我扫地。",
+          "pinyin": "wǎn fàn, sǎo dì",
+          "keyword": "晚饭、扫地",
+          "english": "After dinner, Mom asked me to sweep the floor.",
+          "audio": "audio/吃完晚饭妈妈叫我扫地.mp3"
         },
         {
-          "simplified": "尺子",
-          "traditional": "尺子",
-          "pinyin": "chǐ zi",
-          "english": "ruler",
-          "audio": "audio/尺子.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "大家都准备好了，我们出发吧！",
+          "pinyin": "zhǔn bèi",
+          "keyword": "准备",
+          "english": "Everyone is ready, let's go!",
+          "audio": "audio/大家都准备好了我们出发吧.mp3",
+          "difficult": true
         },
         {
-          "simplified": "本子",
-          "traditional": "本子",
-          "pinyin": "běn zi",
-          "english": "notebook",
-          "audio": "audio/本子.mp3",
-          "important": true
-        },
-        {
-          "simplified": "课本",
-          "traditional": "課本",
-          "pinyin": "kè běn",
-          "english": "textbook",
-          "audio": "audio/课本.mp3",
-          "important": true
-        },
-        {
-          "simplified": "水壶",
-          "traditional": "水壺",
-          "pinyin": "shuǐ hú",
-          "english": "water bottle",
-          "audio": "audio/水壶.mp3",
-          "important": true
-        },
-        {
-          "simplified": "饭盒",
-          "traditional": "飯盒",
-          "pinyin": "fàn hé",
-          "english": "lunch box",
-          "audio": "audio/饭盒.mp3",
-          "important": true
-        },
-        {
-          "simplified": "雨伞",
-          "traditional": "雨傘",
-          "pinyin": "yǔ sǎn",
-          "english": "umbrella",
-          "audio": "audio/雨伞.mp3",
-          "important": true
-        },
-        {
-          "simplified": "手表",
-          "traditional": "手錶",
-          "pinyin": "shǒu biǎo",
-          "english": "watch",
-          "audio": "audio/手表.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "巴士站就在我家附近。",
+          "pinyin": "fù jìn",
+          "keyword": "附近",
+          "english": "The bus stop is near my home.",
+          "audio": "audio/巴士站就在我家附近.mp3",
+          "difficult": true
         }
       ]
     },
     {
       "row": 6,
-      "title": "听写六 - 时间",
-      "words": [
+      "title": "听写（六）",
+      "items": [
         {
-          "simplified": "早上",
-          "traditional": "早上",
-          "pinyin": "zǎo shang",
-          "english": "morning",
-          "audio": "audio/早上.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "天黑了，我们应该回家了。",
+          "pinyin": "yīng gāi",
+          "keyword": "应该",
+          "english": "It's dark, we should go home.",
+          "audio": "audio/天黑了我们应该回家了.mp3"
         },
         {
-          "simplified": "中午",
-          "traditional": "中午",
-          "pinyin": "zhōng wǔ",
-          "english": "noon",
-          "audio": "audio/中午.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "小乐，谢谢你扶我起来。",
+          "pinyin": "xiè xie, fú",
+          "keyword": "谢谢、扶",
+          "english": "Xiao Le, thank you for helping me up.",
+          "audio": "audio/小乐谢谢你扶我起来.mp3"
         },
         {
-          "simplified": "下午",
-          "traditional": "下午",
-          "pinyin": "xià wǔ",
-          "english": "afternoon",
-          "audio": "audio/下午.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "他撞倒了我，我还没爬起来，他就跑了。",
+          "pinyin": "zhuàng dǎo, pá",
+          "keyword": "撞倒、爬",
+          "english": "He knocked me down, and before I could get up, he ran away.",
+          "audio": "audio/他撞倒了我我还没爬起来他就跑了.mp3",
+          "difficult": true
         },
         {
-          "simplified": "晚上",
-          "traditional": "晚上",
-          "pinyin": "wǎn shang",
-          "english": "evening",
-          "audio": "audio/晚上.mp3",
-          "important": true
-        },
-        {
-          "simplified": "今天",
-          "traditional": "今天",
-          "pinyin": "jīn tiān",
-          "english": "today",
-          "audio": "audio/今天.mp3",
-          "important": true
-        },
-        {
-          "simplified": "明天",
-          "traditional": "明天",
-          "pinyin": "míng tiān",
-          "english": "tomorrow",
-          "audio": "audio/明天.mp3",
-          "important": true
-        },
-        {
-          "simplified": "昨天",
-          "traditional": "昨天",
-          "pinyin": "zuó tiān",
-          "english": "yesterday",
-          "audio": "audio/昨天.mp3",
-          "important": true
-        },
-        {
-          "simplified": "星期",
-          "traditional": "星期",
-          "pinyin": "xīng qī",
-          "english": "week",
-          "audio": "audio/星期.mp3",
-          "important": true
-        },
-        {
-          "simplified": "月",
-          "traditional": "月",
-          "pinyin": "yuè",
-          "english": "month",
-          "audio": "audio/月.mp3",
-          "important": true
-        },
-        {
-          "simplified": "年",
-          "traditional": "年",
-          "pinyin": "nián",
-          "english": "year",
-          "audio": "audio/年.mp3",
-          "important": true
+          "type": "moxie",
+          "label": "默写：害怕",
+          "sentence": "听到这个坏消息，我吓得脸色发白，直冒冷汗。",
+          "pinyin": "xiāo xi, mào",
+          "keyword": "消息、冒",
+          "english": "Hearing this bad news, I was so scared my face turned pale and I broke out in cold sweat.",
+          "audio": "audio/听到这个坏消息我吓得脸色发白直冒冷汗.mp3",
+          "note": "老师不会念出句子，学生需要自己写出。"
         }
       ]
     },
     {
       "row": 7,
-      "title": "听写七 - 天气",
-      "words": [
+      "title": "听写（七）",
+      "items": [
         {
-          "simplified": "春天",
-          "traditional": "春天",
-          "pinyin": "chūn tiān",
-          "english": "spring",
-          "audio": "audio/春天.mp3",
-          "important": true
+          "type": "pinyin",
+          "pinyin": "dǎ pò huā péng",
+          "characters": "打破花盆",
+          "english": "break a flower pot",
+          "audio": "audio/打破花盆.mp3"
         },
         {
-          "simplified": "夏天",
-          "traditional": "夏天",
-          "pinyin": "xià tiān",
-          "english": "summer",
-          "audio": "audio/夏天.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "他轻轻地推开房门。",
+          "pinyin": "qīng qīng de",
+          "keyword": "轻轻地",
+          "english": "He gently pushed open the door.",
+          "audio": "audio/他轻轻地推开房门.mp3"
         },
         {
-          "simplified": "秋天",
-          "traditional": "秋天",
-          "pinyin": "qiū tiān",
-          "english": "autumn",
-          "audio": "audio/秋天.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "他生病了，所以没来上课。",
+          "pinyin": "shēng bìng",
+          "keyword": "生病",
+          "english": "He is sick, so he didn't come to class.",
+          "audio": "audio/他生病了所以没来上课.mp3"
         },
         {
-          "simplified": "冬天",
-          "traditional": "冬天",
-          "pinyin": "dōng tiān",
-          "english": "winter",
-          "audio": "audio/冬天.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "妈妈留了一张便条给我。",
+          "pinyin": "liú, biàn tiáo",
+          "keyword": "留、便条",
+          "english": "Mom left a note for me.",
+          "audio": "audio/妈妈留了一张便条给我.mp3",
+          "difficult": true
         },
         {
-          "simplified": "太阳",
-          "traditional": "太陽",
-          "pinyin": "tài yáng",
-          "english": "sun",
-          "audio": "audio/太阳.mp3",
-          "important": true
-        },
-        {
-          "simplified": "月亮",
-          "traditional": "月亮",
-          "pinyin": "yuè liang",
-          "english": "moon",
-          "audio": "audio/月亮.mp3",
-          "important": true
-        },
-        {
-          "simplified": "星星",
-          "traditional": "星星",
-          "pinyin": "xīng xīng",
-          "english": "stars",
-          "audio": "audio/星星.mp3",
-          "important": true
-        },
-        {
-          "simplified": "云",
-          "traditional": "雲",
-          "pinyin": "yún",
-          "english": "cloud",
-          "audio": "audio/云.mp3",
-          "important": true
-        },
-        {
-          "simplified": "风",
-          "traditional": "風",
-          "pinyin": "fēng",
-          "english": "wind",
-          "audio": "audio/风.mp3",
-          "important": true
-        },
-        {
-          "simplified": "雨",
-          "traditional": "雨",
-          "pinyin": "yǔ",
-          "english": "rain",
-          "audio": "audio/雨.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "你弄坏了他的眼镜，应该赔钱。",
+          "pinyin": "nòng huài, yǎn jìng, péi qián",
+          "keyword": "弄坏、眼镜、赔钱",
+          "english": "You broke his glasses, you should pay for them.",
+          "audio": "audio/你弄坏了他的眼镜应该赔钱.mp3",
+          "difficult": true
         }
       ]
     },
     {
       "row": 8,
-      "title": "听写八 - 颜色",
-      "words": [
+      "title": "听写（八）",
+      "items": [
         {
-          "simplified": "红色",
-          "traditional": "紅色",
-          "pinyin": "hóng sè",
-          "english": "red",
-          "audio": "audio/红色.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "我先冲凉，接着做功课。",
+          "pinyin": "jiē zhe",
+          "keyword": "接着",
+          "english": "I take a shower first, then do homework.",
+          "audio": "audio/我先冲凉接着做功课.mp3"
         },
         {
-          "simplified": "黄色",
-          "traditional": "黃色",
-          "pinyin": "huáng sè",
-          "english": "yellow",
-          "audio": "audio/黄色.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "老师开始上课了，我们要专心听课。",
+          "pinyin": "kāi shǐ, zhuān xīn",
+          "keyword": "开始、专心",
+          "english": "The teacher has started class, we need to listen attentively.",
+          "audio": "audio/老师开始上课了我们要专心听课.mp3"
         },
         {
-          "simplified": "蓝色",
-          "traditional": "藍色",
-          "pinyin": "lán sè",
-          "english": "blue",
-          "audio": "audio/蓝色.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "我把桌椅排整齐后，出了一身汗。",
+          "pinyin": "zhěng qí, hàn",
+          "keyword": "整齐、汗",
+          "english": "After arranging the desks and chairs neatly, I was covered in sweat.",
+          "audio": "audio/我把桌椅排整齐后出了一身汗.mp3",
+          "difficult": true
         },
         {
-          "simplified": "绿色",
-          "traditional": "綠色",
-          "pinyin": "lǜ sè",
-          "english": "green",
-          "audio": "audio/绿色.mp3",
-          "important": true
-        },
-        {
-          "simplified": "白色",
-          "traditional": "白色",
-          "pinyin": "bái sè",
-          "english": "white",
-          "audio": "audio/白色.mp3",
-          "important": true
-        },
-        {
-          "simplified": "黑色",
-          "traditional": "黑色",
-          "pinyin": "hēi sè",
-          "english": "black",
-          "audio": "audio/黑色.mp3",
-          "important": true
-        },
-        {
-          "simplified": "紫色",
-          "traditional": "紫色",
-          "pinyin": "zǐ sè",
-          "english": "purple",
-          "audio": "audio/紫色.mp3",
-          "important": true
-        },
-        {
-          "simplified": "粉色",
-          "traditional": "粉色",
-          "pinyin": "fěn sè",
-          "english": "pink",
-          "audio": "audio/粉色.mp3",
-          "important": true
-        },
-        {
-          "simplified": "橙色",
-          "traditional": "橙色",
-          "pinyin": "chéng sè",
-          "english": "orange",
-          "audio": "audio/橙色.mp3",
-          "important": true
-        },
-        {
-          "simplified": "灰色",
-          "traditional": "灰色",
-          "pinyin": "huī sè",
-          "english": "grey",
-          "audio": "audio/灰色.mp3",
-          "important": true
+          "type": "moxie",
+          "label": "默写：烦恼",
+          "sentence": "这件事情让我心乱如麻，不知如何是好。",
+          "pinyin": "luàn",
+          "keyword": "乱",
+          "english": "This matter makes me so confused, I don't know what to do.",
+          "audio": "audio/这件事情让我心乱如麻不知如何是好.mp3",
+          "note": "老师不会念出句子，学生需要自己写出。"
         }
       ]
     },
     {
       "row": 9,
-      "title": "听写九 - 水果",
-      "words": [
+      "title": "听写（九）",
+      "items": [
         {
-          "simplified": "苹果",
-          "traditional": "蘋果",
-          "pinyin": "píng guǒ",
-          "english": "apple",
-          "audio": "audio/苹果.mp3",
-          "important": true
+          "type": "pinyin",
+          "pinyin": "xiǎng dào bàn fǎ",
+          "characters": "想到办法",
+          "english": "think of a solution",
+          "audio": "audio/想到办法.mp3"
         },
         {
-          "simplified": "香蕉",
-          "traditional": "香蕉",
-          "pinyin": "xiāng jiāo",
-          "english": "banana",
-          "audio": "audio/香蕉.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "他跳进河里救人。",
+          "pinyin": "hé, jiù rén",
+          "keyword": "河、救人",
+          "english": "He jumped into the river to save someone.",
+          "audio": "audio/他跳进河里救人.mp3"
         },
         {
-          "simplified": "葡萄",
-          "traditional": "葡萄",
-          "pinyin": "pú tao",
-          "english": "grape",
-          "audio": "audio/葡萄.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "我们知道这头大象的重量。",
+          "pinyin": "zhī dào, zhòng liàng",
+          "keyword": "知道、重量",
+          "english": "We know the weight of this elephant.",
+          "audio": "audio/我们知道这头大象的重量.mp3"
         },
         {
-          "simplified": "西瓜",
-          "traditional": "西瓜",
-          "pinyin": "xī guā",
-          "english": "watermelon",
-          "audio": "audio/西瓜.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "太阳慢慢地从海上升起。",
+          "pinyin": "shēng qǐ",
+          "keyword": "升起",
+          "english": "The sun slowly rises from the sea.",
+          "audio": "audio/太阳慢慢地从海上升起.mp3",
+          "difficult": true
         },
         {
-          "simplified": "草莓",
-          "traditional": "草莓",
-          "pinyin": "cǎo méi",
-          "english": "strawberry",
-          "audio": "audio/草莓.mp3",
-          "important": true
-        },
-        {
-          "simplified": "橘子",
-          "traditional": "橘子",
-          "pinyin": "jú zi",
-          "english": "orange (fruit)",
-          "audio": "audio/橘子.mp3",
-          "important": true
-        },
-        {
-          "simplified": "桃子",
-          "traditional": "桃子",
-          "pinyin": "táo zi",
-          "english": "peach",
-          "audio": "audio/桃子.mp3",
-          "important": true
-        },
-        {
-          "simplified": "梨",
-          "traditional": "梨",
-          "pinyin": "lí",
-          "english": "pear",
-          "audio": "audio/梨.mp3",
-          "important": true
-        },
-        {
-          "simplified": "芒果",
-          "traditional": "芒果",
-          "pinyin": "máng guǒ",
-          "english": "mango",
-          "audio": "audio/芒果.mp3",
-          "important": true
-        },
-        {
-          "simplified": "榴莲",
-          "traditional": "榴蓮",
-          "pinyin": "liú lián",
-          "english": "durian",
-          "audio": "audio/榴莲.mp3",
-          "important": true
+          "type": "sentence",
+          "sentence": "这个问题太难了，我们去问老师吧！",
+          "pinyin": "wèn tí",
+          "keyword": "问题",
+          "english": "This question is too difficult, let's ask the teacher!",
+          "audio": "audio/这个问题太难了我们去问老师吧.mp3",
+          "difficult": true
         }
       ]
     }
