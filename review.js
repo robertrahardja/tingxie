@@ -29,14 +29,14 @@ class ReviewApp extends BaseApp {
         this.allWords = this.extractReviewWords();
         console.log(`Loaded ${this.allWords.length} unknown words for review`);
 
+        // Set up UI (always, so menu works)
+        this.setupUI();
+
         // Show message if no unknown words
         if (this.allWords.length === 0) {
             this.showNoWordsMessage();
             return;
         }
-
-        // Set up UI
-        this.setupUI();
         this.updateProgress();
         this.showWord();
 
