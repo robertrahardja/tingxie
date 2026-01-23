@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>口试练习：家庭凝聚力 - P3HCL综合练习4</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f5f5f5;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .lesson-header {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .lesson-header h1 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+
+        .lesson-header .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FF6B6B;
+        }
+
+        .picture-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .pictures-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .picture-box {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .picture-box img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .picture-number {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FF6B6B;
+        }
+
+        .question-box {
+            background: #FFF9E6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #FF6B6B;
+        }
+
+        .question-box h3 {
+            margin: 0 0 15px 0;
+            color: #333;
+            font-size: 20px;
+        }
+
+        .story-text {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 2;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .reflection-text {
+            background: #E8F5E9;
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 2;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .reflection-label {
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .vocab-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .vocab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .vocab-card.learned {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+        }
+
+        .vocab-card.learned .vocab-pinyin {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .vocab-card.learned::after {
+            content: '✓';
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: white;
+            color: #4CAF50;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .vocab-chinese {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .vocab-pinyin {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .controls-bar {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .control-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #FF6B6B;
+            color: white;
+            font-weight: 500;
+        }
+
+        .control-btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+        }
+
+        .control-btn.secondary {
+            background: #666;
+        }
+
+        .control-btn.secondary:hover {
+            background: #555;
+        }
+
+        .progress-info {
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .audio-player {
+            margin: 20px 0;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .audio-player audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .practice-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .practice-modal.show {
+            display: flex;
+        }
+
+        .practice-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .practice-word {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .practice-pinyin {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .practice-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .practice-btn {
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .practice-btn.primary {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+            color: white;
+        }
+
+        .practice-btn.secondary {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .practice-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            background: #e0e0e0;
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: 768px) {
+            .vocab-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 10px;
+            }
+
+            .vocab-chinese {
+                font-size: 24px;
+            }
+
+            .practice-word {
+                font-size: 48px;
+            }
+
+            .lesson-header h1 {
+                font-size: 24px;
+            }
+
+            .controls-bar {
+                flex-direction: column;
+            }
+
+            .story-text, .reflection-text {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-item">← 返回首页</a>
+                <a href="index.html" class="nav-item">听写练习</a>
+                <a href="vocabulary.html" class="nav-item">词汇表</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="lesson-header">
+        <h1>口试练习：《家庭凝聚力》</h1>
+        <div class="subtitle">P3HCL 综合练习4 阅读计划 - Family Cohesion</div>
+    </div>
+
+    <div class="content-container">
+        <div class="controls-bar">
+            <button class="control-btn" onclick="playStoryAudio()">🔊 播放故事音频</button>
+            <div class="progress-info">
+                <span>已学习词语: </span>
+                <span id="learned-count">0</span> / <span id="total-count">18</span>
+            </div>
+            <button class="control-btn secondary" onclick="resetProgress()">🔄 重置进度</button>
+        </div>
+
+        <!-- Audio Player -->
+        <div class="audio-player">
+            <div style="font-weight: 500; margin-bottom: 10px;">📖 朗读音频</div>
+            <audio id="story-audio" controls preload="none">
+                <source src="audio/family-cohesion/story.mp4" type="audio/mp4">
+                您的浏览器不支持音频播放。
+            </audio>
+        </div>
+
+        <!-- Pictures Section -->
+        <div class="section-title">📸 图片</div>
+        <div class="picture-container">
+            <div class="pictures-row">
+                <div class="picture-box">
+                    <img src="images/family-cohesion/picture1.png" alt="图片1 - 一家人在车里" onerror="this.style.display='none'; this.nextElementSibling.style.marginTop='80px'">
+                    <div class="picture-number">① 一家人在车里</div>
+                </div>
+                <div class="picture-box">
+                    <img src="images/family-cohesion/picture2.png" alt="图片2 - 海边野餐" onerror="this.style.display='none'; this.nextElementSibling.style.marginTop='80px'">
+                    <div class="picture-number">② 海边野餐</div>
+                </div>
+                <div class="picture-box">
+                    <img src="images/family-cohesion/picture3.png" alt="图片3 - 回家的车" onerror="this.style.display='none'; this.nextElementSibling.style.marginTop='80px'">
+                    <div class="picture-number">③ 回家的车</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 1: Story Content -->
+        <div class="section-title">📝 问题一：谈谈你在图片中看到的事情</div>
+        <div class="question-box">
+            <h3>内容</h3>
+            <div class="story-text">
+                在图片中，我看到一个阳光普照的上午，爸爸驾车带着全家人去海边野餐。海边有很多人，有的在游泳，有的在晒太阳，有的在玩游戏，十分热闹。爸爸妈妈先铺好席子，再摆上食物，最后他们便坐在席子上一边拍照一边谈天。哥哥和妹妹则跑到沙滩上玩扔飞盘的游戏，玩得很开心。到了下午，天气变得十分炎热，大家便一起收拾东西，依依不舍地回家了。
+            </div>
+        </div>
+
+        <div class="question-box">
+            <h3>总结（感受、看法、原因、如果）</h3>
+            <div class="reflection-text">
+                <div class="reflection-label">F=感受</div>
+                看了这一幕，我很感动。
+
+                <div class="reflection-label" style="margin-top: 15px;">O=看法</div>
+                我认为这一家人的感情很好。
+
+                <div class="reflection-label" style="margin-top: 15px;">R=原因</div>
+                因为父母每天工作非常忙，很少有时间和我们聚在一起。一家人应该多聚在一起进行活动，这样就能有更多的时间去了解和关心对方，家人之间的感情就会越来越好。
+
+                <div class="reflection-label" style="margin-top: 15px;">IF=如果</div>
+                如果我是图片中的小孩，我也会多和家人聚在一起，珍惜和家人相处的时光。
+            </div>
+        </div>
+
+        <!-- Question 2: Personal Experience -->
+        <div class="section-title">💬 问题二：经历类问题</div>
+        <div class="question-box">
+            <h3>除了图片中所看到的，谈一谈你曾经和家人聚在一起的事。</h3>
+            <div class="story-text">
+                记得（时间）去年学校假期时，爸爸提议一起去（地点）海边（起因）度假，（人物）我们全家人听了，立刻拍手欢呼。一切准备就绪后，便兴致勃勃地出发了。（经过）到了海边，我赶紧换上泳衣，呼着欢快的歌儿向水里走去。到了小吊桥，我就害怕了，腿在不停地发抖，心跳也加速了，好不容易在爸爸的搀扶下过了吊桥。我一到岸上就肥大起来，一溜烟跑进水里。我们几个小孩在水里游来游去，玩得真痛快。（结果）到了该回家的时候，我们便依依不舍地离开了。
+            </div>
+        </div>
+
+        <!-- Vocabulary Section -->
+        <div class="section-title">📚 本课词语（共18个）</div>
+        <div class="vocab-grid" id="vocab-grid">
+            <!-- Vocabulary cards will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Practice Modal -->
+    <div class="practice-modal" id="practice-modal">
+        <div class="practice-content">
+            <button class="close-modal" onclick="closePractice()">✕</button>
+            <div class="practice-word" id="practice-word"></div>
+            <div class="practice-pinyin" id="practice-pinyin"></div>
+            <div class="practice-actions">
+                <button class="practice-btn primary" onclick="playWordAudio()">🔊 发音</button>
+                <button class="practice-btn primary" id="learn-toggle-btn" onclick="toggleLearned()">✓ 标记已学会</button>
+                <button class="practice-btn secondary" onclick="closePractice()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Vocabulary data extracted from the images
+        const vocabulary = [
+            { chinese: "记得", pinyin: "jì de", english: "remember" },
+            { chinese: "地点", pinyin: "dì diǎn", english: "location" },
+            { chinese: "海边", pinyin: "hǎi biān", english: "seaside" },
+            { chinese: "起因", pinyin: "qǐ yīn", english: "reason/cause" },
+            { chinese: "度假", pinyin: "dù jià", english: "vacation" },
+            { chinese: "人物", pinyin: "rén wù", english: "people/characters" },
+            { chinese: "立刻", pinyin: "lì kè", english: "immediately" },
+            { chinese: "拍手", pinyin: "pāi shǒu", english: "clap hands" },
+            { chinese: "欢呼", pinyin: "huān hū", english: "cheer" },
+            { chinese: "准备", pinyin: "zhǔn bèi", english: "prepare" },
+            { chinese: "就绪", pinyin: "jiù xù", english: "ready" },
+            { chinese: "兴致勃勃", pinyin: "xìng zhì bó bó", english: "enthusiastic" },
+            { chinese: "经过", pinyin: "jīng guò", english: "experience/process" },
+            { chinese: "赶紧", pinyin: "gǎn jǐn", english: "hurry" },
+            { chinese: "换上", pinyin: "huàn shang", english: "change into" },
+            { chinese: "呼着", pinyin: "hū zhe", english: "singing/humming" },
+            { chinese: "欢快", pinyin: "huān kuài", english: "cheerful" },
+            { chinese: "歌儿", pinyin: "gē r", english: "song" }
+        ];
+
+        // Additional vocabulary from the first image
+        const additionalVocab = [
+            { chinese: "向", pinyin: "xiàng", english: "toward" },
+            { chinese: "走去", pinyin: "zǒu qù", english: "walk toward" },
+            { chinese: "吊桥", pinyin: "diào qiáo", english: "suspension bridge" },
+            { chinese: "害怕", pinyin: "hài pà", english: "afraid" },
+            { chinese: "腿", pinyin: "tuǐ", english: "leg" },
+            { chinese: "停", pinyin: "tíng", english: "stop" },
+            { chinese: "发抖", pinyin: "fā dǒu", english: "tremble" },
+            { chinese: "心跳", pinyin: "xīn tiào", english: "heartbeat" },
+            { chinese: "加速", pinyin: "jiā sù", english: "accelerate" },
+            { chinese: "好不容易", pinyin: "hǎo bù róng yì", english: "with difficulty" },
+            { chinese: "搀扶", pinyin: "chān fú", english: "support/help" },
+            { chinese: "吊桥", pinyin: "diào qiáo", english: "suspension bridge" },
+            { chinese: "岸", pinyin: "àn", english: "shore" },
+            { chinese: "肥", pinyin: "féi", english: "fat" },
+            { chinese: "一溜烟", pinyin: "yī liù yān", english: "quickly" },
+            { chinese: "跑进", pinyin: "pǎo jìn", english: "run into" },
+            { chinese: "水里", pinyin: "shuǐ lǐ", english: "in water" },
+            { chinese: "游来游去", pinyin: "yóu lái yóu qù", english: "swim around" },
+            { chinese: "玩得", pinyin: "wán de", english: "played" },
+            { chinese: "真", pinyin: "zhēn", english: "really" },
+            { chinese: "痛快", pinyin: "tòng kuài", english: "joyful" },
+            { chinese: "结果", pinyin: "jié guǒ", english: "result" },
+            { chinese: "该", pinyin: "gāi", english: "should" },
+            { chinese: "回家", pinyin: "huí jiā", english: "go home" },
+            { chinese: "时候", pinyin: "shí hou", english: "time" },
+            { chinese: "便", pinyin: "biàn", english: "then" },
+            { chinese: "依依不舍", pinyin: "yī yī bù shě", english: "reluctant to part" },
+            { chinese: "离开", pinyin: "lí kāi", english: "leave" }
+        ];
+
+        let currentWord = null;
+        let learnedWords = new Set();
+        const STORAGE_KEY = 'koushi_family_cohesion_learned';
+
+        // Load progress from localStorage
+        function loadProgress() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                learnedWords = new Set(JSON.parse(saved));
+            }
+            updateProgressDisplay();
+        }
+
+        // Save progress to localStorage
+        function saveProgress() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(learnedWords)));
+        }
+
+        // Update progress display
+        function updateProgressDisplay() {
+            document.getElementById('learned-count').textContent = learnedWords.size;
+            document.getElementById('total-count').textContent = vocabulary.length;
+        }
+
+        // Create vocabulary cards
+        function createVocabCards() {
+            const grid = document.getElementById('vocab-grid');
+            grid.innerHTML = '';
+
+            vocabulary.forEach((word, index) => {
+                const card = document.createElement('div');
+                card.className = 'vocab-card';
+                if (learnedWords.has(word.chinese)) {
+                    card.classList.add('learned');
+                }
+
+                card.innerHTML = `
+                    <div class="vocab-chinese">${word.chinese}</div>
+                    <div class="vocab-pinyin">${word.pinyin}</div>
+                `;
+
+                card.onclick = () => openPractice(word);
+                grid.appendChild(card);
+            });
+        }
+
+        // Open practice modal
+        function openPractice(word) {
+            currentWord = word;
+            document.getElementById('practice-word').textContent = word.chinese;
+            document.getElementById('practice-pinyin').textContent = word.pinyin;
+
+            // Update button text based on learned status
+            const toggleBtn = document.getElementById('learn-toggle-btn');
+            if (learnedWords.has(word.chinese)) {
+                toggleBtn.textContent = '✗ 标记未学会';
+                toggleBtn.style.background = '#ff6b6b';
+            } else {
+                toggleBtn.textContent = '✓ 标记已学会';
+                toggleBtn.style.background = '';
+            }
+
+            document.getElementById('practice-modal').classList.add('show');
+        }
+
+        // Close practice modal
+        function closePractice() {
+            document.getElementById('practice-modal').classList.remove('show');
+            currentWord = null;
+        }
+
+        // Toggle word learned status
+        function toggleLearned() {
+            if (currentWord) {
+                if (learnedWords.has(currentWord.chinese)) {
+                    learnedWords.delete(currentWord.chinese);
+                } else {
+                    learnedWords.add(currentWord.chinese);
+                }
+                saveProgress();
+                createVocabCards();
+                updateProgressDisplay();
+
+                // Update button text
+                const toggleBtn = document.getElementById('learn-toggle-btn');
+                if (learnedWords.has(currentWord.chinese)) {
+                    toggleBtn.textContent = '✗ 标记未学会';
+                    toggleBtn.style.background = '#ff6b6b';
+                } else {
+                    toggleBtn.textContent = '✓ 标记已学会';
+                    toggleBtn.style.background = '';
+                }
+            }
+        }
+
+        // Play word audio using browser TTS
+        function playWordAudio() {
+            if (currentWord) {
+                const utterance = new SpeechSynthesisUtterance(currentWord.chinese);
+                utterance.lang = 'zh-CN';
+                utterance.rate = 0.8;
+                speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Play story audio
+        function playStoryAudio() {
+            const audio = document.getElementById('story-audio');
+            audio.play();
+        }
+
+        // Reset progress
+        function resetProgress() {
+            if (confirm('确定要重置学习进度吗？')) {
+                learnedWords.clear();
+                saveProgress();
+                createVocabCards();
+                updateProgressDisplay();
+            }
+        }
+
+        // Mobile navigation
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProgress();
+            createVocabCards();
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePractice();
+            }
+        });
+    </script>
+</body>
+</html>
