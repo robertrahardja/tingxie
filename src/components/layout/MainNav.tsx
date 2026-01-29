@@ -1,10 +1,62 @@
+import { useState } from 'react'
 import { Link, useLocation } from '@tanstack/react-router'
 import { useStore } from '@tanstack/react-store'
 import { useScrollHide } from '@/hooks/useScrollHide'
-import { NAV_ITEMS } from '@/lib/constants'
+import { NAV_ITEMS, NavItem } from '@/lib/constants'
 import { uiStore, toggleMenu, closeMenu } from '@/stores/uiStore'
 import { cn } from '@/lib/utils'
 import { useEffect, useCallback } from 'react'
+
+function NavItemComponent({ item, onNavigate }: { item: NavItem; onNavigate: () => void }) {
+  const location = useLocation()
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  // If it's a folder with children
+  if (item.children) {
+    return (
+      <div className="nav-folder">
+        <button
+          className={cn('nav-item nav-folder-toggle', isExpanded && 'expanded')}
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          {item.label}
+          <span className="folder-arrow">{isExpanded ? '▼' : '▶'}</span>
+        </button>
+        {isExpanded && (
+          <div className="nav-folder-content">
+            {item.children.map((child) => (
+              <Link
+                key={child.href}
+                to={child.href!}
+                className={cn(
+                  'nav-item nav-child-item',
+                  location.pathname === child.href && 'active'
+                )}
+                onClick={onNavigate}
+              >
+                {child.label}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  // Regular nav item
+  return (
+    <Link
+      to={item.href!}
+      className={cn(
+        'nav-item',
+        location.pathname === item.href && 'active'
+      )}
+      onClick={onNavigate}
+    >
+      {item.label}
+    </Link>
+  )
+}
 
 export function MainNav() {
   const location = useLocation()
@@ -59,18 +111,12 @@ export function MainNav() {
           id="nav-menu"
           className={cn('nav-menu', menuOpen && 'active')}
         >
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.href}
-              to={item.href}
-              className={cn(
-                'nav-item',
-                location.pathname === item.href && 'active'
-              )}
-              onClick={closeMenu}
-            >
-              {item.label}
-            </Link>
+          {NAV_ITEMS.map((item, index) => (
+            <NavItemComponent
+              key={item.href || `folder-${index}`}
+              item={item}
+              onNavigate={closeMenu}
+            />
           ))}
         </div>
       </div>

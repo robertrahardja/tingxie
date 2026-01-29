@@ -87,25 +87,34 @@ export const ERRORS = {
 
 // Navigation items
 export interface NavItem {
-  href: string
+  href?: string
   label: string
+  children?: NavItem[]
 }
 
 export const NAV_ITEMS: NavItem[] = [
+  // Main tingxie pages
   { href: '/', label: '最新词语' },
   { href: '/school-tingxie', label: '学校听写' },
   { href: '/review', label: '复习词语' },
   { href: '/vocabulary', label: '词汇浏览' },
-  { href: '/phrase-matching', label: '词语搭配' },
-  { href: '/handwriting', label: '笔画练习' },
-  { href: '/radicals', label: '部首学习' },
-  { href: '/family', label: '家庭称呼' },
-  { href: '/instructions', label: '指示词汇' },
-  { href: '/p3hcl-reading-sync', label: '阅读练习' },
-  { href: '/p3hcl-wupin-interactive', label: '互动阅读' },
-  { href: '/koushi-family-cohesion', label: '口试练习' },
   { href: '/dashboard', label: '家长看板' },
   { href: '/settings', label: '设置' },
+  // P3HCL Reading page
+  { href: '/p3hcl-reading-sync', label: '阅读练习' },
+  // Archive folder with other pages
+  {
+    label: '📁 更多练习',
+    children: [
+      { href: '/phrase-matching', label: '词语搭配' },
+      { href: '/handwriting', label: '笔画练习' },
+      { href: '/radicals', label: '部首学习' },
+      { href: '/family', label: '家庭称呼' },
+      { href: '/instructions', label: '指示词汇' },
+      { href: '/p3hcl-wupin-interactive', label: '互动阅读' },
+      { href: '/koushi-family-cohesion', label: '口试练习' },
+    ],
+  },
 ]
 
 // Local storage keys
