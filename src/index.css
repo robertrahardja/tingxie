@@ -3124,3 +3124,228 @@ body {
     min-height: 44px;
   }
 }
+
+/* ===========================================
+   EMBEDDED HANDWRITING PRACTICE STYLES
+   =========================================== */
+
+.handwriting-controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.handwriting-btn {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 50px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.handwriting-btn:active {
+  transform: scale(0.98);
+}
+
+.handwriting-btn.active {
+  background: linear-gradient(45deg, #e74c3c 0%, #c0392b 100%);
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.handwriting-embed {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  padding: 20px 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.handwriting-embed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.handwriting-embed-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.handwriting-embed .close-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.handwriting-embed .close-btn:active {
+  transform: scale(0.95);
+  background: #c0392b;
+}
+
+.character-display-embed {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.character-display-embed span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#handwriting-writer-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#handwriting-target {
+  width: 280px;
+  height: 280px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  position: relative;
+}
+
+#handwriting-target::before,
+#handwriting-target::after {
+  content: '';
+  position: absolute;
+  background: #e0e0e0;
+}
+
+#handwriting-target::before {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+
+#handwriting-target::after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.handwriting-controls-embed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.handwriting-action-btn {
+  padding: 14px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 50px;
+  background: linear-gradient(45deg, #4a90d9 0%, #357abd 100%);
+  color: white;
+  font-weight: bold;
+}
+
+.handwriting-action-btn.reset {
+  background: linear-gradient(45deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.handwriting-action-btn:active {
+  transform: scale(0.98);
+}
+
+.handwriting-char-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.char-nav-btn {
+  padding: 12px 16px;
+  font-size: 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: bold;
+}
+
+.char-nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.char-nav-btn:not(:disabled):active {
+  transform: scale(0.98);
+}
+
+.handwriting-status {
+  text-align: center;
+  font-size: 1rem;
+  color: #27ae60;
+  min-height: 24px;
+  font-weight: 500;
+}
+
+.handwriting-status.error {
+  color: #e74c3c;
+}
+
+@media (min-width: 768px) {
+  .handwriting-embed {
+    padding: 25px 20px;
+  }
+
+  .handwriting-embed-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .handwriting-embed .close-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .character-display-embed span {
+    font-size: 3rem;
+  }
+
+  #handwriting-target {
+    width: 320px;
+    height: 320px;
+  }
+
+  .handwriting-action-btn {
+    padding: 16px 25px;
+    font-size: 18px;
+    min-height: 56px;
+  }
+}
