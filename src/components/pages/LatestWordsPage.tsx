@@ -182,6 +182,7 @@ export function LatestWordsPage() {
 
         {/* Word card */}
         <WordCard
+          key={currentWord.simplified}
           word={currentWord}
           currentIndex={currentWordIndex}
           totalWords={totalWords}
