@@ -137,6 +137,7 @@ interface Sentence {
   start: number
   end: number
   isSequenceWord?: boolean
+  isTitle?: boolean
 }
 
 interface Section {
@@ -148,16 +149,13 @@ interface Section {
 
 // Audio timing for each sentence (in seconds)
 // Includes section title reading at the start of each section
-// Teacher reads: title -> sequence words explanation -> content sentences
-// Estimated ~2.5-3 seconds per sentence based on educational reading pace
 const sections: Section[] = [
   {
     id: 1,
     title: '一、第一天、第二天、又过了一天、再过了一天、后来',
     sequenceWords: '第一天、第二天、又过了一天、再过了一天、后来',
     sentences: [
-      // Title is read first (一、第一天、第二天、又过了一天、再过了一天、后来)
-      { text: '一、第一天、第二天、又过了一天、再过了一天、后来', start: 0.0, end: 6.0, isSequenceWord: true },
+      { text: '一、第一天、第二天、又过了一天、再过了一天、后来', start: 0.0, end: 6.0, isTitle: true },
       { text: '第一天，', start: 6.0, end: 7.5, isSequenceWord: true },
       { text: '我把绿豆放在湿的棉花上。', start: 7.5, end: 11.0 },
       { text: '第二天，', start: 11.0, end: 12.5, isSequenceWord: true },
@@ -175,8 +173,7 @@ const sections: Section[] = [
     title: '二、过了几天、又过了几天、再过了几天、后来',
     sequenceWords: '过了几天、又过了几天、再过了几天、后来',
     sentences: [
-      // Title is read first
-      { text: '二、过了几天、又过了几天、再过了几天、后来', start: 40.0, end: 46.0, isSequenceWord: true },
+      { text: '二、过了几天、又过了几天、再过了几天、后来', start: 40.0, end: 46.0, isTitle: true },
       { text: '池塘里有几只小蝌蚪。', start: 46.0, end: 49.0 },
       { text: '过了几天，', start: 49.0, end: 51.0, isSequenceWord: true },
       { text: '小蝌蚪长出两条后腿。', start: 51.0, end: 54.5 },
@@ -193,8 +190,7 @@ const sections: Section[] = [
     title: '三、先、接着、然后、再、最后',
     sequenceWords: '先、接着、然后、再、最后',
     sentences: [
-      // Title is read first
-      { text: '三、先、接着、然后、再、最后', start: 71.0, end: 76.0, isSequenceWord: true },
+      { text: '三、先、接着、然后、再、最后', start: 71.0, end: 76.0, isTitle: true },
       { text: '当我放学回到家，', start: 76.0, end: 79.0 },
       { text: '我先放下书包去冲凉，', start: 79.0, end: 82.5, isSequenceWord: true },
       { text: '接着拿出碗筷开始吃饭，', start: 82.5, end: 86.5, isSequenceWord: true },
@@ -208,8 +204,7 @@ const sections: Section[] = [
     title: '四、过了一个月、又过了几个月、后来',
     sequenceWords: '过了一个月、又过了几个月、后来',
     sentences: [
-      // Title is read first
-      { text: '四、过了一个月、又过了几个月、后来', start: 98.5, end: 104.0, isSequenceWord: true },
+      { text: '四、过了一个月、又过了几个月、后来', start: 98.5, end: 104.0, isTitle: true },
       { text: '我把树苗种在泥土里。', start: 104.0, end: 107.5 },
       { text: '过了一个月，', start: 107.5, end: 110.0, isSequenceWord: true },
       { text: '树苗很快就长高了。', start: 110.0, end: 113.5 },
@@ -220,6 +215,20 @@ const sections: Section[] = [
     ],
   },
 ]
+
+// Create a flat list of all sentences with section info for highlighting
+interface FlatSentence extends Sentence {
+  sectionId: number
+  sentenceIndex: number
+}
+
+const allSentences: FlatSentence[] = sections.flatMap((section) =>
+  section.sentences.map((sentence, index) => ({
+    ...sentence,
+    sectionId: section.id,
+    sentenceIndex: index,
+  }))
+)
 
 // Word popup component
 interface WordPopupProps {
@@ -250,15 +259,13 @@ function WordPopup({ word, onClose, onPlayAudio }: WordPopupProps) {
 }
 
 function P3HCLReadingSyncPage() {
-  const [currentSection, setCurrentSection] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [currentSentenceIndex, setCurrentSentenceIndex] = useState<number | null>(null)
+  const [currentSentence, setCurrentSentence] = useState<FlatSentence | null>(null)
   const [selectedWord, setSelectedWord] = useState<WordData | null>(null)
   const audioRef = useRef<HTMLAudioElement>(null)
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([])
 
-  const section = sections[currentSection]
-
-  // Handle audio time update to highlight current sentence
+  // Handle audio time update to highlight current sentence across ALL sections
   useEffect(() => {
     const audio = audioRef.current
     if (!audio) return
@@ -266,20 +273,28 @@ function P3HCLReadingSyncPage() {
     const handleTimeUpdate = () => {
       const currentTime = audio.currentTime
 
-      // Find which sentence is currently being read
-      let foundIndex: number | null = null
-      for (let i = 0; i < section.sentences.length; i++) {
-        const sentence = section.sentences[i]
-        if (currentTime >= sentence.start && currentTime < sentence.end) {
-          foundIndex = i
-          break
+      // Find which sentence is currently being read (across all sections)
+      const found = allSentences.find(
+        (s) => currentTime >= s.start && currentTime < s.end
+      )
+      setCurrentSentence(found || null)
+
+      // Auto-scroll to current section if needed
+      if (found) {
+        const sectionIndex = found.sectionId - 1
+        const sectionEl = sectionRefs.current[sectionIndex]
+        if (sectionEl) {
+          const rect = sectionEl.getBoundingClientRect()
+          // Only scroll if section is not visible
+          if (rect.top < 100 || rect.bottom > window.innerHeight - 100) {
+            sectionEl.scrollIntoView({ behavior: 'smooth', block: 'center' })
+          }
         }
       }
-      setCurrentSentenceIndex(foundIndex)
     }
 
     const handleEnded = () => {
-      setCurrentSentenceIndex(null)
+      setCurrentSentence(null)
       setIsPlaying(false)
     }
 
@@ -302,21 +317,15 @@ function P3HCLReadingSyncPage() {
       audio.removeEventListener('pause', handlePause)
       audio.removeEventListener('play', handlePlay)
     }
-  }, [section])
-
-  // Reset sentence highlight when changing sections
-  useEffect(() => {
-    setCurrentSentenceIndex(null)
-  }, [currentSection])
+  }, [])
 
   const handlePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause()
       } else {
-        // Jump to section start time
-        const sectionStartTime = section.sentences[0]?.start || 0
-        audioRef.current.currentTime = sectionStartTime
+        // Start from beginning
+        audioRef.current.currentTime = 0
         audioRef.current.play()
       }
     }
@@ -324,8 +333,6 @@ function P3HCLReadingSyncPage() {
 
   // Handle word click - look up in dictionary
   const handleWordClick = useCallback((text: string) => {
-    // Try to find the word in dictionary
-    // First try exact match
     if (wordDictionary[text]) {
       setSelectedWord(wordDictionary[text])
       return
@@ -364,17 +371,29 @@ function P3HCLReadingSyncPage() {
     setSelectedWord(null)
   }, [])
 
+  // Check if a sentence is currently highlighted
+  const isSentenceHighlighted = (sectionId: number, sentenceIndex: number) => {
+    return (
+      currentSentence?.sectionId === sectionId &&
+      currentSentence?.sentenceIndex === sentenceIndex
+    )
+  }
+
   // Render clickable text
-  const renderClickableText = (text: string, isHighlighted: boolean, isSequenceWord?: boolean) => {
-    // Split text into individual characters/words for clicking
+  const renderClickableText = (
+    text: string,
+    isHighlighted: boolean,
+    isSequenceWord?: boolean,
+    isTitle?: boolean
+  ) => {
     const chars = text.split('')
 
     return (
       <span
         className={cn(
-          'reading-sentence',
+          isTitle ? 'reading-title-text' : 'reading-sentence',
           isHighlighted && 'highlighted',
-          isSequenceWord && 'sequence-word'
+          isSequenceWord && !isTitle && 'sequence-word'
         )}
       >
         {chars.map((char, idx) => (
@@ -390,20 +409,6 @@ function P3HCLReadingSyncPage() {
     )
   }
 
-  // Render title with clickable words
-  const renderClickableTitle = (title: string) => {
-    const chars = title.split('')
-    return chars.map((char, idx) => (
-      <span
-        key={idx}
-        className="clickable-char"
-        onClick={() => handleWordClick(char)}
-      >
-        {char}
-      </span>
-    ))
-  }
-
   return (
     <div className="reading-sync-page">
       <div className="lesson-header lesson-header-blue">
@@ -412,8 +417,8 @@ function P3HCLReadingSyncPage() {
       </div>
 
       <div className="content-container">
-        {/* Audio Player */}
-        <div className="audio-player-card">
+        {/* Audio Player - Fixed at top */}
+        <div className="audio-player-card audio-player-sticky">
           <audio
             ref={audioRef}
             src="/audio/p3hcl_reading_5.mp4"
@@ -426,84 +431,59 @@ function P3HCLReadingSyncPage() {
             {isPlaying ? '⏸️' : '▶️'}
           </button>
           <p className="audio-hint">
-            {isPlaying ? '正在播放...' : `点击播放第${section.id}段`}
+            {isPlaying ? '正在播放... 句子会自动高亮' : '点击播放全文朗读'}
           </p>
         </div>
 
-        {/* Section Selector */}
-        <div className="section-selector">
-          {sections.map((s, index) => (
-            <button
-              key={s.id}
-              className={cn('section-btn', currentSection === index && 'active')}
-              onClick={() => setCurrentSection(index)}
-            >
-              {s.id}
-            </button>
-          ))}
-        </div>
+        {/* All Sections */}
+        {sections.map((section, sectionIndex) => (
+          <div
+            key={section.id}
+            ref={(el) => { sectionRefs.current[sectionIndex] = el }}
+            className="reading-card"
+          >
+            {/* Section title */}
+            <h2 className="section-title-reading">
+              {renderClickableText(
+                section.sentences[0].text,
+                isSentenceHighlighted(section.id, 0),
+                false,
+                true
+              )}
+            </h2>
 
-        {/* Current Section */}
-        <div className="reading-card">
-          {/* Section title - first sentence is the title reading */}
-          <h2 className={cn(
-            'section-title-reading',
-            currentSentenceIndex === 0 && 'title-highlighted'
-          )}>
-            {renderClickableTitle(section.title)}
-          </h2>
-
-          <div className="sequence-words-box">
-            <span className="sequence-label">顺序词：</span>
-            <span className="clickable-text" onClick={() => handleWordClick(section.sequenceWords)}>
-              {section.sequenceWords}
-            </span>
-          </div>
-
-          <div className="reading-content">
-            {/* Skip first sentence (title) since it's shown above */}
-            {section.sentences.slice(1).map((sentence, index) => (
-              <span key={index}>
-                {renderClickableText(
-                  sentence.text,
-                  currentSentenceIndex === index + 1, // +1 because we skipped index 0
-                  sentence.isSequenceWord
-                )}
+            <div className="sequence-words-box">
+              <span className="sequence-label">顺序词：</span>
+              <span className="clickable-text" onClick={() => handleWordClick(section.sequenceWords)}>
+                {section.sequenceWords}
               </span>
-            ))}
-          </div>
+            </div>
 
-          <div className="reading-instruction">
-            <p>💡 点击任何字词查看繁体、拼音和英文意思</p>
+            <div className="reading-content">
+              {/* Skip first sentence (title) since it's shown above */}
+              {section.sentences.slice(1).map((sentence, index) => (
+                <span key={index}>
+                  {renderClickableText(
+                    sentence.text,
+                    isSentenceHighlighted(section.id, index + 1),
+                    sentence.isSequenceWord
+                  )}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        ))}
 
-        {/* Navigation */}
-        <div className="reading-nav">
-          <button
-            className="reading-nav-btn"
-            onClick={() => setCurrentSection(Math.max(0, currentSection - 1))}
-            disabled={currentSection === 0}
-          >
-            上一段
-          </button>
-          <span className="reading-progress">
-            {currentSection + 1} / {sections.length}
-          </span>
-          <button
-            className="reading-nav-btn"
-            onClick={() => setCurrentSection(Math.min(sections.length - 1, currentSection + 1))}
-            disabled={currentSection === sections.length - 1}
-          >
-            下一段
-          </button>
+        {/* Instruction */}
+        <div className="reading-instruction">
+          <p>💡 点击任何字词查看繁体、拼音和英文意思</p>
         </div>
 
         {/* Tips */}
         <div className="reading-tips">
           <h3>学习提示</h3>
           <ul>
-            <li>点击 ▶️ 播放当前段落的朗读</li>
+            <li>点击 ▶️ 从头播放全部四段朗读</li>
             <li>朗读时，当前句子会<span className="highlighted-demo">高亮显示</span></li>
             <li>点击任何字词查看详细信息</li>
             <li>注意<span className="sequence-word-inline">顺序词</span>的使用</li>
