@@ -3589,3 +3589,68 @@ body {
     font-size: 22px;
   }
 }
+
+/* Reading sentence highlighting - for audio sync */
+.reading-sentence {
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.reading-sentence.highlighted {
+  background: linear-gradient(135deg, #fff9c4 0%, #ffeb3b 100%);
+  text-decoration: underline;
+  text-decoration-color: #ff9800;
+  text-decoration-thickness: 3px;
+  padding: 2px 4px;
+  margin: 0 -4px;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+}
+
+/* Clickable characters for word lookup */
+.clickable-char {
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border-radius: 2px;
+}
+
+.clickable-char:hover {
+  background: #E3F2FD;
+  color: #1976D2;
+}
+
+.clickable-char:active {
+  transform: scale(0.95);
+  background: #BBDEFB;
+}
+
+.clickable-text {
+  cursor: pointer;
+}
+
+.clickable-text:hover {
+  text-decoration: underline;
+}
+
+/* Reading instruction box */
+.reading-instruction {
+  background: #FFF8E1;
+  border: 1px dashed #FFB74D;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #F57C00;
+}
+
+.reading-instruction p {
+  margin: 0;
+}
+
+/* Highlighted demo in tips */
+.highlighted-demo {
+  background: linear-gradient(135deg, #fff9c4 0%, #ffeb3b 100%);
+  text-decoration: underline;
+  text-decoration-color: #ff9800;
+  padding: 0 4px;
+  border-radius: 4px;
+}
