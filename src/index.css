@@ -3349,3 +3349,243 @@ body {
     min-height: 56px;
   }
 }
+
+/* ===========================================
+   READING PRACTICE PAGE STYLES
+   =========================================== */
+
+.reading-sync-page {
+  min-height: 100vh;
+}
+
+.audio-player-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.audio-play-btn-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+  transition: all 0.3s ease;
+}
+
+.audio-play-btn-large:active {
+  transform: scale(0.95);
+}
+
+.audio-play-btn-large.playing {
+  animation: pulse-audio 1s ease-in-out infinite;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 100%);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.audio-hint {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.section-selector {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  background: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.section-btn:hover {
+  border-color: #4facfe;
+  background: #f0f7ff;
+}
+
+.section-btn.active {
+  border-color: #4facfe;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.reading-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.section-title-reading {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #4facfe;
+}
+
+.sequence-words-box {
+  background: #E3F2FD;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #1976D2;
+}
+
+.sequence-label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.reading-content {
+  font-size: 20px;
+  line-height: 2;
+  color: #333;
+  text-align: justify;
+}
+
+.sequence-word {
+  background: linear-gradient(to bottom, transparent 60%, #ffeb3b 60%);
+  padding: 0 4px;
+  font-weight: bold;
+  color: #333;
+}
+
+.sequence-word-inline {
+  background: linear-gradient(to bottom, transparent 60%, #ffeb3b 60%);
+  padding: 0 2px;
+  font-weight: 600;
+}
+
+.pinyin-hints {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed #ddd;
+  font-size: 13px;
+  color: #666;
+}
+
+.pinyin-label {
+  font-weight: bold;
+  color: #4facfe;
+  margin-right: 8px;
+}
+
+.pinyin-item {
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 4px;
+}
+
+.reading-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.reading-nav-btn {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-height: 50px;
+}
+
+.reading-nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reading-nav-btn:not(:disabled):active {
+  transform: scale(0.98);
+}
+
+.reading-progress {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.reading-tips {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.reading-tips h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.reading-tips ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.reading-tips li {
+  margin-bottom: 8px;
+  color: #555;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .audio-play-btn-large {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+  }
+
+  .section-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .reading-card {
+    padding: 32px;
+  }
+
+  .section-title-reading {
+    font-size: 18px;
+  }
+
+  .reading-content {
+    font-size: 22px;
+  }
+}
