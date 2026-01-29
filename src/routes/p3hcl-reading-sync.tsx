@@ -147,24 +147,27 @@ interface Section {
 }
 
 // Audio timing for each sentence (in seconds)
-// Estimated based on typical Chinese reading pace of ~3-4 chars/second
-// Total audio is ~55 seconds for all 4 sections
+// Includes section title reading at the start of each section
+// Teacher reads: title -> sequence words explanation -> content sentences
+// Estimated ~2.5-3 seconds per sentence based on educational reading pace
 const sections: Section[] = [
   {
     id: 1,
     title: '一、第一天、第二天、又过了一天、再过了一天、后来',
     sequenceWords: '第一天、第二天、又过了一天、再过了一天、后来',
     sentences: [
-      { text: '第一天，', start: 0.0, end: 1.5, isSequenceWord: true },
-      { text: '我把绿豆放在湿的棉花上。', start: 1.5, end: 4.5 },
-      { text: '第二天，', start: 4.5, end: 6.0, isSequenceWord: true },
-      { text: '绿豆变大了，它的外壳裂开了，开始发芽了，还长出了细细的根。', start: 6.0, end: 13.0 },
-      { text: '又过了一天，', start: 13.0, end: 15.0, isSequenceWord: true },
-      { text: '绿豆的外壳脱落了，细芽长得更长了。', start: 15.0, end: 19.0 },
-      { text: '再过了一天，', start: 19.0, end: 21.0, isSequenceWord: true },
-      { text: '绿豆的茎越来越长，叶子也越来越大。', start: 21.0, end: 25.5 },
-      { text: '后来，', start: 25.5, end: 27.0, isSequenceWord: true },
-      { text: '幼苗一天天长大，变成了豆芽菜。', start: 27.0, end: 31.0 },
+      // Title is read first (一、第一天、第二天、又过了一天、再过了一天、后来)
+      { text: '一、第一天、第二天、又过了一天、再过了一天、后来', start: 0.0, end: 6.0, isSequenceWord: true },
+      { text: '第一天，', start: 6.0, end: 7.5, isSequenceWord: true },
+      { text: '我把绿豆放在湿的棉花上。', start: 7.5, end: 11.0 },
+      { text: '第二天，', start: 11.0, end: 12.5, isSequenceWord: true },
+      { text: '绿豆变大了，它的外壳裂开了，开始发芽了，还长出了细细的根。', start: 12.5, end: 20.0 },
+      { text: '又过了一天，', start: 20.0, end: 22.0, isSequenceWord: true },
+      { text: '绿豆的外壳脱落了，细芽长得更长了。', start: 22.0, end: 27.0 },
+      { text: '再过了一天，', start: 27.0, end: 29.0, isSequenceWord: true },
+      { text: '绿豆的茎越来越长，叶子也越来越大。', start: 29.0, end: 34.0 },
+      { text: '后来，', start: 34.0, end: 35.5, isSequenceWord: true },
+      { text: '幼苗一天天长大，变成了豆芽菜。', start: 35.5, end: 40.0 },
     ],
   },
   {
@@ -172,15 +175,17 @@ const sections: Section[] = [
     title: '二、过了几天、又过了几天、再过了几天、后来',
     sequenceWords: '过了几天、又过了几天、再过了几天、后来',
     sentences: [
-      { text: '池塘里有几只小蝌蚪。', start: 31.0, end: 34.0 },
-      { text: '过了几天，', start: 34.0, end: 35.5, isSequenceWord: true },
-      { text: '小蝌蚪长出两条后腿。', start: 35.5, end: 38.5 },
-      { text: '又过了几天，', start: 38.5, end: 40.5, isSequenceWord: true },
-      { text: '小蝌蚪长出了两条前腿。', start: 40.5, end: 43.5 },
-      { text: '再过了几天，', start: 43.5, end: 45.5, isSequenceWord: true },
-      { text: '小蝌蚪的尾巴变短了。', start: 45.5, end: 48.5 },
-      { text: '后来，', start: 48.5, end: 50.0, isSequenceWord: true },
-      { text: '小青蛙的尾巴不见了。', start: 50.0, end: 53.0 },
+      // Title is read first
+      { text: '二、过了几天、又过了几天、再过了几天、后来', start: 40.0, end: 46.0, isSequenceWord: true },
+      { text: '池塘里有几只小蝌蚪。', start: 46.0, end: 49.0 },
+      { text: '过了几天，', start: 49.0, end: 51.0, isSequenceWord: true },
+      { text: '小蝌蚪长出两条后腿。', start: 51.0, end: 54.5 },
+      { text: '又过了几天，', start: 54.5, end: 56.5, isSequenceWord: true },
+      { text: '小蝌蚪长出了两条前腿。', start: 56.5, end: 60.0 },
+      { text: '再过了几天，', start: 60.0, end: 62.5, isSequenceWord: true },
+      { text: '小蝌蚪的尾巴变短了。', start: 62.5, end: 66.0 },
+      { text: '后来，', start: 66.0, end: 67.5, isSequenceWord: true },
+      { text: '小青蛙的尾巴不见了。', start: 67.5, end: 71.0 },
     ],
   },
   {
@@ -188,12 +193,14 @@ const sections: Section[] = [
     title: '三、先、接着、然后、再、最后',
     sequenceWords: '先、接着、然后、再、最后',
     sentences: [
-      { text: '当我放学回到家，', start: 53.0, end: 56.0 },
-      { text: '我先放下书包去冲凉，', start: 56.0, end: 59.0, isSequenceWord: true },
-      { text: '接着拿出碗筷开始吃饭，', start: 59.0, end: 62.5, isSequenceWord: true },
-      { text: '然后拿出作业开始复习，', start: 62.5, end: 66.0, isSequenceWord: true },
-      { text: '再看一会儿电视，', start: 66.0, end: 69.0, isSequenceWord: true },
-      { text: '最后洗漱完毕就上床睡觉了。', start: 69.0, end: 74.0, isSequenceWord: true },
+      // Title is read first
+      { text: '三、先、接着、然后、再、最后', start: 71.0, end: 76.0, isSequenceWord: true },
+      { text: '当我放学回到家，', start: 76.0, end: 79.0 },
+      { text: '我先放下书包去冲凉，', start: 79.0, end: 82.5, isSequenceWord: true },
+      { text: '接着拿出碗筷开始吃饭，', start: 82.5, end: 86.5, isSequenceWord: true },
+      { text: '然后拿出作业开始复习，', start: 86.5, end: 90.5, isSequenceWord: true },
+      { text: '再看一会儿电视，', start: 90.5, end: 93.5, isSequenceWord: true },
+      { text: '最后洗漱完毕就上床睡觉了。', start: 93.5, end: 98.5, isSequenceWord: true },
     ],
   },
   {
@@ -201,13 +208,15 @@ const sections: Section[] = [
     title: '四、过了一个月、又过了几个月、后来',
     sequenceWords: '过了一个月、又过了几个月、后来',
     sentences: [
-      { text: '我把树苗种在泥土里。', start: 74.0, end: 77.5 },
-      { text: '过了一个月，', start: 77.5, end: 79.5, isSequenceWord: true },
-      { text: '树苗很快就长高了。', start: 79.5, end: 82.5 },
-      { text: '又过了几个月，', start: 82.5, end: 85.0, isSequenceWord: true },
-      { text: '小树长得更高大了，树上长出很多树枝，还长满了绿色的叶子。', start: 85.0, end: 93.0 },
-      { text: '后来，', start: 93.0, end: 94.5, isSequenceWord: true },
-      { text: '窗外的小树变成了一棵笔直的大树。', start: 94.5, end: 100.0 },
+      // Title is read first
+      { text: '四、过了一个月、又过了几个月、后来', start: 98.5, end: 104.0, isSequenceWord: true },
+      { text: '我把树苗种在泥土里。', start: 104.0, end: 107.5 },
+      { text: '过了一个月，', start: 107.5, end: 110.0, isSequenceWord: true },
+      { text: '树苗很快就长高了。', start: 110.0, end: 113.5 },
+      { text: '又过了几个月，', start: 113.5, end: 116.5, isSequenceWord: true },
+      { text: '小树长得更高大了，树上长出很多树枝，还长满了绿色的叶子。', start: 116.5, end: 125.0 },
+      { text: '后来，', start: 125.0, end: 127.0, isSequenceWord: true },
+      { text: '窗外的小树变成了一棵笔直的大树。', start: 127.0, end: 133.0 },
     ],
   },
 ]
@@ -436,7 +445,11 @@ function P3HCLReadingSyncPage() {
 
         {/* Current Section */}
         <div className="reading-card">
-          <h2 className="section-title-reading">
+          {/* Section title - first sentence is the title reading */}
+          <h2 className={cn(
+            'section-title-reading',
+            currentSentenceIndex === 0 && 'title-highlighted'
+          )}>
             {renderClickableTitle(section.title)}
           </h2>
 
@@ -448,11 +461,12 @@ function P3HCLReadingSyncPage() {
           </div>
 
           <div className="reading-content">
-            {section.sentences.map((sentence, index) => (
+            {/* Skip first sentence (title) since it's shown above */}
+            {section.sentences.slice(1).map((sentence, index) => (
               <span key={index}>
                 {renderClickableText(
                   sentence.text,
-                  currentSentenceIndex === index,
+                  currentSentenceIndex === index + 1, // +1 because we skipped index 0
                   sentence.isSequenceWord
                 )}
               </span>
