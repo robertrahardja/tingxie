@@ -3658,6 +3658,155 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 78,
+      "words": [
+        {
+          "simplified": "绿豆",
+          "traditional": "綠豆",
+          "pinyin": "lǜ dòu",
+          "english": "mung bean",
+          "audio": "audio/绿豆.mp3",
+          "important": true
+        },
+        {
+          "simplified": "越来越短",
+          "traditional": "越來越短",
+          "pinyin": "yuè lái yuè duǎn",
+          "english": "shorter and shorter",
+          "audio": "audio/越来越短.mp3",
+          "important": true
+        },
+        {
+          "simplified": "跟着",
+          "traditional": "跟著",
+          "pinyin": "gēn zhe",
+          "english": "to follow",
+          "audio": "audio/跟着.mp3",
+          "important": true
+        },
+        {
+          "simplified": "变化",
+          "traditional": "變化",
+          "pinyin": "biàn huà",
+          "english": "change, transformation",
+          "audio": "audio/变化.mp3",
+          "important": true
+        },
+        {
+          "simplified": "尾巴",
+          "traditional": "尾巴",
+          "pinyin": "wěi ba",
+          "english": "tail",
+          "audio": "audio/尾巴.mp3",
+          "important": true
+        },
+        {
+          "simplified": "哪里",
+          "traditional": "哪裡",
+          "pinyin": "nǎ lǐ",
+          "english": "where",
+          "audio": "audio/哪里.mp3",
+          "important": true
+        },
+        {
+          "simplified": "肚皮",
+          "traditional": "肚皮",
+          "pinyin": "dù pí",
+          "english": "belly, tummy",
+          "audio": "audio/肚皮.mp3",
+          "important": true
+        },
+        {
+          "simplified": "细细",
+          "traditional": "細細",
+          "pinyin": "xì xì",
+          "english": "thin, slender",
+          "audio": "audio/细细.mp3",
+          "important": true
+        },
+        {
+          "simplified": "衣服",
+          "traditional": "衣服",
+          "pinyin": "yī fu",
+          "english": "clothes",
+          "audio": "audio/衣服.mp3",
+          "important": true
+        },
+        {
+          "simplified": "哦",
+          "traditional": "哦",
+          "pinyin": "ó",
+          "english": "oh (exclamation)",
+          "audio": "audio/哦.mp3",
+          "important": true
+        },
+        {
+          "simplified": "嘴巴",
+          "traditional": "嘴巴",
+          "pinyin": "zuǐ ba",
+          "english": "mouth",
+          "audio": "audio/嘴巴.mp3",
+          "important": true
+        },
+        {
+          "simplified": "腿",
+          "traditional": "腿",
+          "pinyin": "tuǐ",
+          "english": "leg",
+          "audio": "audio/腿.mp3",
+          "important": true
+        },
+        {
+          "simplified": "阿姨",
+          "traditional": "阿姨",
+          "pinyin": "ā yí",
+          "english": "aunt, auntie",
+          "audio": "audio/阿姨.mp3",
+          "important": true
+        },
+        {
+          "simplified": "深浅",
+          "traditional": "深淺",
+          "pinyin": "shēn qiǎn",
+          "english": "depth (deep and shallow)",
+          "audio": "audio/深浅.mp3",
+          "important": true
+        },
+        {
+          "simplified": "宽",
+          "traditional": "寬",
+          "pinyin": "kuān",
+          "english": "wide",
+          "audio": "audio/宽.mp3",
+          "important": true
+        },
+        {
+          "simplified": "窄",
+          "traditional": "窄",
+          "pinyin": "zhǎi",
+          "english": "narrow",
+          "audio": "audio/窄.mp3",
+          "important": true
+        },
+        {
+          "simplified": "摆动",
+          "traditional": "擺動",
+          "pinyin": "bǎi dòng",
+          "english": "to sway, to swing",
+          "audio": "audio/摆动.mp3",
+          "important": true
+        },
+        {
+          "simplified": "露出",
+          "traditional": "露出",
+          "pinyin": "lù chū",
+          "english": "to reveal, to show",
+          "audio": "audio/露出.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
