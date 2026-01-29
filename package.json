@@ -1,22 +1,49 @@
 {
   "name": "tingxie-spelling",
-  "version": "1.0.0",
-  "description": "Mobile-first Chinese spelling practice website",
-  "main": "index.html",
+  "version": "2.0.0",
+  "description": "Mobile-first Chinese spelling practice website built with React + TanStack",
+  "type": "module",
   "scripts": {
-    "dev": "http-server . -p 3001 -o",
-    "start": "http-server . -p 3001",
-    "build": "echo 'No build step needed - static files ready for deployment'"
+    "dev": "vite --port 3001 --open",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 3001",
+    "typecheck": "tsc --noEmit",
+    "deploy": "npm run build && npx wrangler deploy"
   },
   "keywords": [
     "chinese",
     "spelling",
     "education",
-    "mobile"
+    "mobile",
+    "react",
+    "tanstack"
   ],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "@tanstack/react-query": "^5.62.0",
+    "@tanstack/react-router": "^1.92.0",
+    "@tanstack/react-store": "^0.7.0",
+    "@tanstack/react-table": "^8.20.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "hanzi-writer": "^3.7.3",
+    "lucide-react": "^0.469.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.6.0"
+  },
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "@tanstack/router-plugin": "^1.92.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.6.3",
+    "vite": "^6.0.6"
   }
 }

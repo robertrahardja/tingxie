@@ -4,98 +4,178 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Tingxie** is a mobile-first Chinese vocabulary learning application for Primary 2 Higher Chinese Level (P2HCL) students in Singapore. The application consists of two main learning modes:
+**Tingxie** is a mobile-first Chinese vocabulary learning application for Primary 2 Higher Chinese Level (P2HCL) students in Singapore. The application is a React SPA built with Vite, TanStack Router, TanStack Query, and Tailwind CSS.
 
+The app provides:
 1. **听写练习 (Tingxie)** - Spelling practice with audio-based word revelation
-2. **口试 (Koushi)** - Oral exam preparation with scenario-based vocabulary and story text practice
+2. **词汇浏览 (Vocabulary)** - Full vocabulary browser
+3. **复习模式 (Review)** - Review unknown words
+4. **笔画练习 (Handwriting)** - Stroke order practice with HanziWriter
 
-The app is built as a static website using vanilla JavaScript with ES6 modules, designed for offline use and mobile deployment.
+## Technology Stack
+
+| Technology | Purpose |
+|------------|---------|
+| React 18 + TypeScript | UI framework |
+| Vite | Build tool |
+| TanStack Router | File-based routing |
+| TanStack Query | Data fetching & caching |
+| TanStack Store | Client state management |
+| Tailwind CSS v4 | Styling |
+| Cloudflare Workers | API & hosting |
+| Cloudflare KV | Progress storage |
 
 ## Development Commands
 
-### Running Locally
 ```bash
-npm run dev          # Start dev server on port 3001 and open browser
-npm start            # Start server without opening browser
+npm run dev          # Start dev server on port 3001
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run typecheck    # Run TypeScript type checking
+npm run deploy       # Build and deploy to Cloudflare
 ```
 
-### Audio Generation
-```bash
-python3 generate_audio.py           # Download MP3 files for vocabulary words
-python3 generate_audio_alt.py       # Alternative audio generation method
+## Project Structure
+
+```
+tingxie/
+├── src/
+│   ├── main.tsx                    # App entry point
+│   ├── index.css                   # Tailwind + custom CSS
+│   ├── routeTree.gen.ts            # Auto-generated route tree
+│   ├── components/
+│   │   ├── ui/                     # Shadcn-style UI components
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── badge.tsx
+│   │   │   ├── switch.tsx
+│   │   │   ├── dialog.tsx
+│   │   │   ├── toggle.tsx
+│   │   │   └── separator.tsx
+│   │   ├── layout/
+│   │   │   ├── MainNav.tsx         # Hamburger menu navigation
+│   │   │   └── PageContainer.tsx   # Layout wrapper
+│   │   ├── word/
+│   │   │   ├── WordCard.tsx        # Main practice card
+│   │   │   ├── WordRevealItem.tsx  # Clickable reveal items
+│   │   │   └── SelfAssessButtons.tsx
+│   │   ├── audio/
+│   │   │   └── AudioButton.tsx
+│   │   └── pages/
+│   │       └── LatestWordsPage.tsx
+│   ├── hooks/
+│   │   ├── useAudioPlayer.ts       # Audio playback hook
+│   │   ├── useScrollHide.ts        # Navbar hide on scroll
+│   │   └── useMobileViewport.ts    # Viewport height fix
+│   ├── routes/                     # TanStack Router file-based routes
+│   │   ├── __root.tsx              # Root layout
+│   │   ├── index.tsx               # / (Latest words)
+│   │   ├── review.tsx              # /review
+│   │   ├── vocabulary.tsx          # /vocabulary
+│   │   └── ... (14 routes total)
+│   ├── stores/
+│   │   ├── uiStore.ts              # UI state (menu, filters, word index)
+│   │   └── settingsStore.ts        # User preferences (persisted)
+│   ├── queries/
+│   │   ├── vocabularyQueries.ts    # Vocabulary data fetching
+│   │   └── progressQueries.ts      # Cloud progress sync
+│   ├── types/
+│   │   ├── vocabulary.ts           # Word, VocabularyData types
+│   │   └── progress.ts             # Progress types
+│   └── lib/
+│       ├── constants.ts            # App configuration
+│       └── utils.ts                # cn() utility
+├── public/                         # Static assets (copied to dist)
+│   ├── audio/                      # MP3 pronunciation files
+│   └── data/                       # Vocabulary JSON data
+├── index.html                      # Vite entry HTML
+├── vite.config.ts                  # Vite configuration
+├── tsconfig.json                   # TypeScript configuration
+├── wrangler.toml                   # Cloudflare Worker config
+└── src/index.js                    # Cloudflare Worker entry
 ```
 
-### Creating Lesson Files
-```bash
-./create_lessons.sh                 # Create lesson HTML files (koushi25-lesson{3-10}.html)
-python3 update_lessons.py           # Update all lesson files with new content
+## Key Architecture Patterns
+
+### TanStack Router (File-based Routing)
+
+Routes are defined in `src/routes/`. The router plugin auto-generates `routeTree.gen.ts`.
+
+```typescript
+// src/routes/review.tsx
+import { createFileRoute } from '@tanstack/react-router'
+
+export const Route = createFileRoute('/review')({
+  component: ReviewPage,
+})
 ```
 
-## Architecture
+### TanStack Query (Data Fetching)
 
-### Core Application Structure
+```typescript
+// Fetch vocabulary with caching
+const { data, isLoading } = useQuery(vocabularyQueryOptions)
 
-The codebase uses **class-based inheritance** with a shared base class:
+// Save progress with mutations
+const saveProgress = useSaveProgressMutation()
+saveProgress.mutate({ knownWords, unknownWords })
+```
 
-- **BaseApp.js** - Shared functionality for all apps
-  - Data loading from JSON
-  - Menu navigation (hamburger menu)
-  - Filter toggle (all words vs important words)
-  - Scroll management for mobile
-  - Mobile-optimized touch interactions
+### TanStack Store (Client State)
 
-- **TingxieApp** (script.js) - Extends BaseApp for spelling practice
-  - Word-by-word reveal system with covered/uncovered states
-  - Audio playback with preloading
-  - Progress tracking across word sets
-  - Self-assessment system (会/不会 buttons) for tracking known/unknown words
-  - Review mode for practicing unknown words
-  - Cloud synchronization via Cloudflare KV for cross-device progress
+```typescript
+import { useStore } from '@tanstack/react-store'
+import { uiStore, toggleImportantFilter } from '@/stores/uiStore'
 
-- **VocabularyApp** (vocabulary.js) - Extends BaseApp for vocabulary browsing
-  - Grid display of all vocabulary
-  - Intersection Observer for lazy audio preloading
-  - Filter by importance
+// Read state
+const showImportantOnly = useStore(uiStore, (s) => s.showImportantOnly)
 
-### Audio System
+// Update state
+toggleImportantFilter()
+```
 
-**AudioPlayer.js** implements a singleton pattern:
-- Single audio element reused for all playback
-- Intelligent preloading queue (preloads next 5 words)
-- Error handling with fallback paths
-- Prevents multiple simultaneous audio instances
+### Custom Hooks
 
-### Constants Management
+```typescript
+// Audio playback
+const { play, stop, preload } = useAudioPlayer()
+await play('/audio/美丽.mp3')
 
-**constants.js** centralizes all configuration:
-- Element IDs (prevents typos)
-- CSS class names
-- UI labels (Chinese text)
-- Paths and configuration values
-- Error messages
+// Navbar hide on scroll
+const isHidden = useScrollHide()
 
-### Cloud Sync System
+// Mobile viewport height fix
+useMobileViewport()
+```
 
-**CloudSync.js** handles cross-device progress synchronization:
-- Generates unique student IDs (timestamp + random string)
-- Student ID stored in localStorage for device persistence
-- **Saves ONLY to Cloudflare KV** - No localStorage for progress
-- Automatic deduplication - Sets prevent duplicate word entries
-- Retry logic: 3 attempts with exponential backoff (1s, 2s, 3s)
-- Loads progress from cloud on app startup
-- Saves progress after each assessment (会/不会)
-- API endpoint: `/api/progress` (Cloudflare Pages Function)
-- Visual error notification if save fails
+## Routes
 
-### Data Format
+| Route | Page |
+|-------|------|
+| `/` | Latest Words (main practice) |
+| `/review` | Review unknown words |
+| `/vocabulary` | Full vocabulary browser |
+| `/dashboard` | Parent dashboard |
+| `/school-tingxie` | School dictation practice |
+| `/handwriting` | Stroke order practice |
+| `/settings` | User settings |
+| `/radicals` | Radical learning |
+| `/family` | Family vocabulary |
+| `/instructions` | Instructions vocabulary |
+| `/phrase-matching` | Phrase matching game |
+| `/koushi-family-cohesion` | Oral exam practice |
+| `/p3hcl-reading-sync` | Reading practice |
+| `/p3hcl-wupin-interactive` | Interactive reading |
 
-Vocabulary data is stored in JSON format at `data/tingxie/tingxie_vocabulary.json`:
+## Data Format
+
+Vocabulary data is stored in `public/data/tingxie/tingxie_vocabulary.json`:
 
 ```json
 {
   "vocabulary": [
     {
-      "row": 1,
+      "row": 77,
       "words": [
         {
           "simplified": "美丽",
@@ -111,187 +191,53 @@ Vocabulary data is stored in JSON format at `data/tingxie/tingxie_vocabulary.jso
 }
 ```
 
-**Key fields:**
-- `simplified` - Simplified Chinese characters
-- `traditional` - Traditional Chinese characters (used in Singapore)
-- `pinyin` - Romanized pronunciation
-- `audio` - Path to MP3 file
-- `important` - Boolean flag for filtering
+## Adding New Vocabulary
 
-### Koushi (Oral Exam) System
+1. Add new row to `public/data/tingxie/tingxie_vocabulary.json`
+2. Update `CONSTANTS.VOCABULARY.LATEST_ROW_NUMBER` in `src/lib/constants.ts`
+3. Generate audio: `python3 download_google_audio.py`
+4. Build and deploy: `npm run deploy`
 
-The Koushi section includes:
-- **koushi25.html** - Main index page showing all 10 lessons with progress tracking
-- **koushi25-lesson{1-10}.html** - Individual lesson pages with:
-  - Story text for oral practice
-  - Scenario-based vocabulary with images
-  - Learned word tracking via localStorage
-  - Progress persistence
+## Cloud Sync
 
-Each lesson page stores state in localStorage:
-- `koushi25_lesson{N}_learned` - Array of learned word indices
-- `koushi25_lesson{N}_progress` - Percentage completion
-
-## Mobile-First Design
-
-### Touch Optimization
-- Touch feedback on all interactive elements (opacity change)
-- Passive event listeners for scroll performance
-- Viewport height fix for mobile browsers (CSS custom property `--vh`)
-
-### Navigation Behavior
-- Hamburger menu auto-closes on navigation or outside click
-- Navbar hides on scroll down (mobile only, threshold: 60px)
-- Navbar always visible on desktop (≥768px)
-
-### Performance
-- Audio preloading limited to next 5 words to minimize memory
-- Intersection Observer for lazy loading in vocabulary grid
-- Document fragments for efficient DOM manipulation
-
-## Key Patterns
-
-### Module Exports
-All JavaScript uses ES6 modules:
-```javascript
-export class BaseApp { }        // Named export
-export { getAudioPlayer }       // Singleton function
-```
-
-### Event Listeners
-Always check element existence before adding listeners:
-```javascript
-if (element) {
-  element.addEventListener('click', () => this.method());
-}
-```
-
-### State Management
-- App state stored in class properties
-- No external state management library
-- **Tingxie Progress Storage**:
-  - **ONLY Cloudflare KV** - Single source of truth
-  - No localStorage for progress data
-  - Key format: `student:{studentId}:tingxie:progress`
-  - Contains unique knownWords, unknownWords arrays (duplicates removed), and lastUpdated timestamp
-  - Student ID stored in localStorage: `tingxie_student_id` (device-specific identifier)
-  - Automatic retry logic (3 attempts with exponential backoff)
-  - Visual error notification if save fails
-- **Koushi lesson progress**: localStorage only (not synced)
-
-### CSS Classes
-Use constants instead of hardcoding:
-```javascript
-element.classList.add(CSS_CLASSES.COVERED);  // Good
-element.classList.add('covered');            // Avoid
-```
-
-## Common Tasks
-
-### Adding New Vocabulary Words
-
-**IMPORTANT:** See `ADDING_WORDS.md` for complete step-by-step guide.
-
-Quick overview:
-1. Add new row to `data/tingxie/tingxie_vocabulary.json` with next available row number
-2. For "latest words": Update `CONSTANTS.VOCABULARY.LATEST_ROW_NUMBER` in `js/constants.js` to point to new row
-3. Generate audio: `python3 download_google_audio.py` (downloads all new word audio files)
-4. Deploy: `git add . && git commit -m "..." && git push && npx wrangler deploy`
-
-**Key Points:**
-- Each word set is a separate "row" in the vocabulary JSON
-- The "latest words" app displays whichever row is configured in `js/constants.js`
-- This explicit configuration prevents confusion about which words show where
-- Audio files must match the filenames referenced in the JSON
-
-### Self-Assessment System
-Students can mark words as known (会 ✓) or unknown (不会 ✗):
-- **Known words**: Marked when student is confident
-- **Unknown words**: Automatically available in review mode
-- **Progress saved ONLY to Cloudflare KV** - No localStorage
-- Automatic deduplication - same word marked multiple times won't create duplicates
-- Progress syncs across devices via Cloudflare KV (single source of truth)
-- Retry logic: 3 attempts with exponential backoff (1s, 2s, 3s delays)
-- Visual error notification appears if save fails after all retries
-- Review mode button appears when there are unknown words
-- Filter button (重要词语) is hidden in review mode
-
-### Creating New Lesson Pages
-1. Use `update_lessons.py` as reference for lesson data structure
-2. Each lesson needs: title, subtitle, emoji, text, vocab array
-3. Vocabulary items need: chinese, pinyin, english, example, image URL
-4. Update koushi25.html to add lesson card to grid
-
-### Modifying UI Labels
-All Chinese text labels are in `js/constants.js` under `UI_LABELS`:
-```javascript
-CONSTANTS.UI_LABELS.SIMPLIFIED  // "简单"
-```
-
-### Changing Audio Behavior
-Modify AudioPlayer.js:
-- `preload()` - Controls preloading logic
-- `play()` - Handles playback
-- Adjust `CONSTANTS.AUDIO_PRELOAD_COUNT` for preload quantity
-
-## File Organization
-
-```
-tingxie/
-├── index.html              # Main tingxie practice page
-├── koushi.html             # Koushi mode selector (not implemented)
-├── koushi25.html           # Week 37 lesson index
-├── koushi25-lesson{1-10}.html  # Individual lesson pages
-├── vocabulary.html         # Vocabulary browser
-├── script.js               # TingxieApp implementation
-├── vocabulary.js           # VocabularyApp implementation
-├── styles.css              # Global styles
-├── js/
-│   ├── BaseApp.js          # Base class
-│   ├── AudioPlayer.js      # Audio singleton
-│   ├── CloudSync.js        # Cloud sync functionality
-│   └── constants.js        # Configuration
-├── functions/
-│   └── api/
-│       └── progress.js     # Cloudflare Pages Function for KV operations
-├── data/
-│   ├── tingxie/
-│   │   └── tingxie_vocabulary.json
-│   └── koushi/
-│       ├── Koushi25.pdf
-│       └── vocabulary_table.json
-├── audio/                  # MP3 pronunciation files
-├── wrangler.toml           # Cloudflare configuration
-├── .dev.vars               # Local environment variables (gitignored)
-├── generate_audio.py       # Audio downloader (ttsMP3.com)
-├── generate_audio_alt.py   # Alternative audio source
-└── update_lessons.py       # Lesson updater script
-```
-
-## Important Notes
-
-- All audio files must exist in `audio/` directory with exact filename match to JSON
-- Traditional Chinese is the primary display (Singapore education standard)
-- Filter system affects both display and navigation (word count changes)
-- Self-assessment buttons (会/不会) are always visible and not tied to item revelation
-- **Tingxie progress**: Cloudflare KV ONLY (single source of truth, no localStorage)
-- **Koushi lesson progress**: localStorage only (per-device, not synced)
-- Student ID persists in localStorage to identify the student across sessions
-- Automatic deduplication ensures same word marked multiple times = no duplicates
-- Retry logic (3 attempts) with visual error feedback if save fails
-- Progress counter displayed prominently inside word card for easy tracking
-- Review mode filters to show only unknown words and hides the importance filter button
-- Dashboard loads progress from cloud only (no localStorage fallback)
+Progress is synced via Cloudflare KV:
+- **API**: `/api/progress` (GET/POST)
+- **Key format**: `student:{studentId}:tingxie:progress`
+- **Student ID**: Stored in localStorage (`tingxie_student_id`)
+- **Retry logic**: 3 attempts with exponential backoff
 
 ## Deployment
 
-The app is deployed on **Cloudflare Pages** with Git integration:
-- **Account**: robertrahardja@gmail.com
-- **Account ID**: 8bd804c6c83f8c21095206344daf4a16
-- **KV Namespace**: STUDENT_PROGRESS (ID: 7b92b749c283431582ccc77724f1cbdb)
-- **Deployment**: Automatic on git push to main branch
-- **API Endpoint**: `/api/progress` via Pages Functions
+The app is deployed on **Cloudflare Workers** with static assets:
 
-### Environment Variables
-- `.dev.vars` (local only, gitignored): Contains CLOUDFLARE_API_TOKEN
-- Cloudflare Pages binding: `STUDENT_PROGRESS` KV namespace bound in Pages settings
+```bash
+npm run deploy  # Builds and deploys to Cloudflare
+```
+
+Configuration in `wrangler.toml`:
+- Static assets served from `dist/` directory
+- SPA fallback enabled for client-side routing
+- KV namespace binding for progress storage
+
+## Styling
+
+Uses Tailwind CSS v4 with custom theme:
+
+```css
+/* src/index.css */
+:root {
+  --color-primary: #667eea;
+  --color-primary-dark: #764ba2;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+```
+
+Button variants defined in `src/components/ui/button.tsx`:
+- `default`, `primary`, `audio`, `know`, `dontKnow`, `handwriting`, `filter`, `filterActive`
+
+## Mobile-First Design
+
+- Hamburger menu with full-screen overlay
+- Navbar hides on scroll down (mobile only)
+- Touch targets minimum 44x44px
+- Viewport height fix for iOS Safari

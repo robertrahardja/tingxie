@@ -1,6 +1,6 @@
 /**
  * Main Worker entry point
- * Handles routing and asset serving
+ * Handles routing and asset serving for the React SPA
  */
 
 export default {
@@ -17,12 +17,8 @@ export default {
       }
     }
 
-    // Handle root path - redirect to latest.html
-    if (url.pathname === '' || url.pathname === '/') {
-      return Response.redirect(new URL('/latest.html', url.origin), 302);
-    }
-
     // Serve static assets from Worker assets binding
+    // For SPA, the assets binding handles the fallback to index.html
     return await env.ASSETS.fetch(request);
   },
 };
@@ -166,4 +162,3 @@ async function handleSaveProgress(request, env, corsHeaders) {
     });
   }
 }
-

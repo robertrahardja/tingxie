@@ -1,0 +1,727 @@
+{
+  "title": "学校听写",
+  "lesson": "三年级听写表",
+  "vocabulary": [
+    {
+      "row": 1,
+      "title": "听写（一）",
+      "items": [
+        {
+          "type": "pinyin",
+          "pinyin": "bǎo wèi guó jiā",
+          "characters": "保卫国家",
+          "english": "protect the country",
+          "audio": "audio/保卫国家.mp3",
+          "words": [
+            {"simplified": "保卫", "traditional": "保衛", "pinyin": "bǎo wèi", "meaning": "to protect, to defend"},
+            {"simplified": "国家", "traditional": "國家", "pinyin": "guó jiā", "meaning": "country, nation"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "她们常常在一起玩，成为了好朋友。",
+          "pinyin": "chéng wéi",
+          "keyword": "成为",
+          "english": "They often play together and became good friends.",
+          "audio": "audio/她们常常在一起玩成为了好朋友.mp3",
+          "words": [
+            {"simplified": "她们", "traditional": "她們", "pinyin": "tā men", "meaning": "they (female)"},
+            {"simplified": "常常", "traditional": "常常", "pinyin": "cháng cháng", "meaning": "often"},
+            {"simplified": "在一起", "traditional": "在一起", "pinyin": "zài yī qǐ", "meaning": "together"},
+            {"simplified": "玩", "traditional": "玩", "pinyin": "wán", "meaning": "to play"},
+            {"simplified": "成为", "traditional": "成為", "pinyin": "chéng wéi", "meaning": "to become"},
+            {"simplified": "好朋友", "traditional": "好朋友", "pinyin": "hǎo péng you", "meaning": "good friend"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "爸爸讲的故事真好听。",
+          "pinyin": "jiǎng",
+          "keyword": "讲",
+          "english": "The stories Dad tells are really nice to listen to.",
+          "audio": "audio/爸爸讲的故事真好听.mp3",
+          "words": [
+            {"simplified": "爸爸", "traditional": "爸爸", "pinyin": "bà ba", "meaning": "father, dad"},
+            {"simplified": "讲", "traditional": "講", "pinyin": "jiǎng", "meaning": "to tell, to speak"},
+            {"simplified": "故事", "traditional": "故事", "pinyin": "gù shi", "meaning": "story"},
+            {"simplified": "真", "traditional": "真", "pinyin": "zhēn", "meaning": "really, truly"},
+            {"simplified": "好听", "traditional": "好聽", "pinyin": "hǎo tīng", "meaning": "pleasant to listen to"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "为了实现当医生的愿望，我一定会努力学习。",
+          "pinyin": "shí xiàn, yuàn wàng, nǔ lì",
+          "keyword": "实现、愿望、努力",
+          "english": "To realize my wish of becoming a doctor, I will definitely study hard.",
+          "audio": "audio/为了实现当医生的愿望我一定会努力学习.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "为了", "traditional": "為了", "pinyin": "wèi le", "meaning": "in order to"},
+            {"simplified": "实现", "traditional": "實現", "pinyin": "shí xiàn", "meaning": "to realize, to achieve"},
+            {"simplified": "当", "traditional": "當", "pinyin": "dāng", "meaning": "to be, to become"},
+            {"simplified": "医生", "traditional": "醫生", "pinyin": "yī shēng", "meaning": "doctor"},
+            {"simplified": "愿望", "traditional": "願望", "pinyin": "yuàn wàng", "meaning": "wish, desire"},
+            {"simplified": "一定", "traditional": "一定", "pinyin": "yī dìng", "meaning": "definitely"},
+            {"simplified": "努力", "traditional": "努力", "pinyin": "nǔ lì", "meaning": "to work hard"},
+            {"simplified": "学习", "traditional": "學習", "pinyin": "xué xí", "meaning": "to study, to learn"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "老师发问时，我第一个举手回答。",
+          "pinyin": "jǔ shǒu",
+          "keyword": "举手",
+          "english": "When the teacher asks questions, I am the first to raise my hand to answer.",
+          "audio": "audio/老师发问时我第一个举手回答.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "老师", "traditional": "老師", "pinyin": "lǎo shī", "meaning": "teacher"},
+            {"simplified": "发问", "traditional": "發問", "pinyin": "fā wèn", "meaning": "to ask a question"},
+            {"simplified": "时", "traditional": "時", "pinyin": "shí", "meaning": "when, time"},
+            {"simplified": "第一个", "traditional": "第一個", "pinyin": "dì yī gè", "meaning": "the first one"},
+            {"simplified": "举手", "traditional": "舉手", "pinyin": "jǔ shǒu", "meaning": "to raise one's hand"},
+            {"simplified": "回答", "traditional": "回答", "pinyin": "huí dá", "meaning": "to answer"}
+          ]
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "title": "听写（二）",
+      "items": [
+        {
+          "type": "sentence",
+          "sentence": "弟弟常常问爸爸一些奇怪的问题。",
+          "pinyin": "yì xiē, qí guài",
+          "keyword": "一些、奇怪",
+          "english": "Little brother often asks Dad some strange questions.",
+          "audio": "audio/弟弟常常问爸爸一些奇怪的问题.mp3",
+          "words": [
+            {"simplified": "弟弟", "traditional": "弟弟", "pinyin": "dì di", "meaning": "younger brother"},
+            {"simplified": "常常", "traditional": "常常", "pinyin": "cháng cháng", "meaning": "often"},
+            {"simplified": "问", "traditional": "問", "pinyin": "wèn", "meaning": "to ask"},
+            {"simplified": "爸爸", "traditional": "爸爸", "pinyin": "bà ba", "meaning": "father, dad"},
+            {"simplified": "一些", "traditional": "一些", "pinyin": "yī xiē", "meaning": "some"},
+            {"simplified": "奇怪", "traditional": "奇怪", "pinyin": "qí guài", "meaning": "strange, odd"},
+            {"simplified": "问题", "traditional": "問題", "pinyin": "wèn tí", "meaning": "question, problem"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "我相信哥哥一定会把这件事做好。",
+          "pinyin": "xiāng xìn",
+          "keyword": "相信",
+          "english": "I believe older brother will definitely do this well.",
+          "audio": "audio/我相信哥哥一定会把这件事做好.mp3",
+          "words": [
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "相信", "traditional": "相信", "pinyin": "xiāng xìn", "meaning": "to believe"},
+            {"simplified": "哥哥", "traditional": "哥哥", "pinyin": "gē ge", "meaning": "older brother"},
+            {"simplified": "一定", "traditional": "一定", "pinyin": "yī dìng", "meaning": "definitely"},
+            {"simplified": "会", "traditional": "會", "pinyin": "huì", "meaning": "will, can"},
+            {"simplified": "把", "traditional": "把", "pinyin": "bǎ", "meaning": "(particle)"},
+            {"simplified": "这件事", "traditional": "這件事", "pinyin": "zhè jiàn shì", "meaning": "this matter"},
+            {"simplified": "做好", "traditional": "做好", "pinyin": "zuò hǎo", "meaning": "to do well"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "我真的不明白这句话的意思。",
+          "pinyin": "zhēn, yì si",
+          "keyword": "真、意思",
+          "english": "I really don't understand the meaning of this sentence.",
+          "audio": "audio/我真的不明白这句话的意思.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "真的", "traditional": "真的", "pinyin": "zhēn de", "meaning": "really"},
+            {"simplified": "不", "traditional": "不", "pinyin": "bù", "meaning": "not"},
+            {"simplified": "明白", "traditional": "明白", "pinyin": "míng bai", "meaning": "to understand"},
+            {"simplified": "这句话", "traditional": "這句話", "pinyin": "zhè jù huà", "meaning": "this sentence"},
+            {"simplified": "意思", "traditional": "意思", "pinyin": "yì si", "meaning": "meaning"}
+          ]
+        },
+        {
+          "type": "moxie",
+          "label": "默写：天气",
+          "sentence": "今天风和日丽，我兴高采烈地上学去。",
+          "pinyin": "cǎi liè",
+          "keyword": "采烈",
+          "english": "Today the weather is beautiful, I go to school in high spirits.",
+          "audio": "audio/今天风和日丽我兴高采烈地上学去.mp3",
+          "note": "老师不会念出句子，学生需要自己写出。",
+          "words": [
+            {"simplified": "今天", "traditional": "今天", "pinyin": "jīn tiān", "meaning": "today"},
+            {"simplified": "风和日丽", "traditional": "風和日麗", "pinyin": "fēng hé rì lì", "meaning": "warm and sunny"},
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "兴高采烈", "traditional": "興高采烈", "pinyin": "xìng gāo cǎi liè", "meaning": "in high spirits"},
+            {"simplified": "地", "traditional": "地", "pinyin": "de", "meaning": "(adverb marker)"},
+            {"simplified": "上学", "traditional": "上學", "pinyin": "shàng xué", "meaning": "to go to school"},
+            {"simplified": "去", "traditional": "去", "pinyin": "qù", "meaning": "to go"}
+          ]
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "title": "听写（三）",
+      "items": [
+        {
+          "type": "pinyin",
+          "pinyin": "wǔ yán liù sè",
+          "characters": "五颜六色",
+          "english": "colorful / multi-colored",
+          "audio": "audio/五颜六色.mp3",
+          "words": [
+            {"simplified": "五颜六色", "traditional": "五顏六色", "pinyin": "wǔ yán liù sè", "meaning": "colorful, multi-colored"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "小文买了一只蓝色的手表。",
+          "pinyin": "lán sè, shǒu biǎo",
+          "keyword": "蓝色、手表",
+          "english": "Xiao Wen bought a blue watch.",
+          "audio": "audio/小文买了一只蓝色的手表.mp3",
+          "words": [
+            {"simplified": "小文", "traditional": "小文", "pinyin": "xiǎo wén", "meaning": "(name) Xiao Wen"},
+            {"simplified": "买", "traditional": "買", "pinyin": "mǎi", "meaning": "to buy"},
+            {"simplified": "一只", "traditional": "一隻", "pinyin": "yī zhī", "meaning": "one (for watches)"},
+            {"simplified": "蓝色", "traditional": "藍色", "pinyin": "lán sè", "meaning": "blue"},
+            {"simplified": "手表", "traditional": "手錶", "pinyin": "shǒu biǎo", "meaning": "wristwatch"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "小丽是个好伙伴，每天都和我一起回家。",
+          "pinyin": "huǒ bàn",
+          "keyword": "伙伴",
+          "english": "Xiao Li is a good companion, she goes home with me every day.",
+          "audio": "audio/小丽是个好伙伴每天都和我一起回家.mp3",
+          "words": [
+            {"simplified": "小丽", "traditional": "小麗", "pinyin": "xiǎo lì", "meaning": "(name) Xiao Li"},
+            {"simplified": "是", "traditional": "是", "pinyin": "shì", "meaning": "is"},
+            {"simplified": "好", "traditional": "好", "pinyin": "hǎo", "meaning": "good"},
+            {"simplified": "伙伴", "traditional": "伙伴", "pinyin": "huǒ bàn", "meaning": "companion, partner"},
+            {"simplified": "每天", "traditional": "每天", "pinyin": "měi tiān", "meaning": "every day"},
+            {"simplified": "都", "traditional": "都", "pinyin": "dōu", "meaning": "all, always"},
+            {"simplified": "和", "traditional": "和", "pinyin": "hé", "meaning": "and, with"},
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "一起", "traditional": "一起", "pinyin": "yī qǐ", "meaning": "together"},
+            {"simplified": "回家", "traditional": "回家", "pinyin": "huí jiā", "meaning": "to go home"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "小明早睡早起，改掉了上学迟到的坏习惯。",
+          "pinyin": "zǎo shuì zǎo qǐ, gǎi diào, chí dào, huài xí guàn",
+          "keyword": "早睡早起、改掉、迟到、坏习惯",
+          "english": "Xiao Ming sleeps and wakes early, correcting his bad habit of being late to school.",
+          "audio": "audio/小明早睡早起改掉了上学迟到的坏习惯.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "小明", "traditional": "小明", "pinyin": "xiǎo míng", "meaning": "(name) Xiao Ming"},
+            {"simplified": "早睡早起", "traditional": "早睡早起", "pinyin": "zǎo shuì zǎo qǐ", "meaning": "early to bed, early to rise"},
+            {"simplified": "改掉", "traditional": "改掉", "pinyin": "gǎi diào", "meaning": "to get rid of, to correct"},
+            {"simplified": "上学", "traditional": "上學", "pinyin": "shàng xué", "meaning": "to go to school"},
+            {"simplified": "迟到", "traditional": "遲到", "pinyin": "chí dào", "meaning": "to be late"},
+            {"simplified": "坏习惯", "traditional": "壞習慣", "pinyin": "huài xí guàn", "meaning": "bad habit"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "每天早上闹钟一响，我就起床。",
+          "pinyin": "nào zhōng, xiǎng",
+          "keyword": "闹钟、响",
+          "english": "Every morning when the alarm clock rings, I get up.",
+          "audio": "audio/每天早上闹钟一响我就起床.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "每天", "traditional": "每天", "pinyin": "měi tiān", "meaning": "every day"},
+            {"simplified": "早上", "traditional": "早上", "pinyin": "zǎo shang", "meaning": "morning"},
+            {"simplified": "闹钟", "traditional": "鬧鐘", "pinyin": "nào zhōng", "meaning": "alarm clock"},
+            {"simplified": "一", "traditional": "一", "pinyin": "yī", "meaning": "once, as soon as"},
+            {"simplified": "响", "traditional": "響", "pinyin": "xiǎng", "meaning": "to ring, to sound"},
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "就", "traditional": "就", "pinyin": "jiù", "meaning": "then, immediately"},
+            {"simplified": "起床", "traditional": "起床", "pinyin": "qǐ chuáng", "meaning": "to get up"}
+          ]
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "title": "听写（四）",
+      "items": [
+        {
+          "type": "sentence",
+          "sentence": "小猫找到妈妈，向它跑去。",
+          "pinyin": "zhǎo",
+          "keyword": "找",
+          "english": "The kitten found its mother and ran towards her.",
+          "audio": "audio/小猫找到妈妈向它跑去.mp3",
+          "words": [
+            {"simplified": "小猫", "traditional": "小貓", "pinyin": "xiǎo māo", "meaning": "kitten"},
+            {"simplified": "找到", "traditional": "找到", "pinyin": "zhǎo dào", "meaning": "to find"},
+            {"simplified": "妈妈", "traditional": "媽媽", "pinyin": "mā ma", "meaning": "mother, mom"},
+            {"simplified": "向", "traditional": "向", "pinyin": "xiàng", "meaning": "towards"},
+            {"simplified": "它", "traditional": "牠", "pinyin": "tā", "meaning": "it (animal)"},
+            {"simplified": "跑去", "traditional": "跑去", "pinyin": "pǎo qù", "meaning": "to run to"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "姐姐是个短头发的女孩。",
+          "pinyin": "duǎn tóu fa",
+          "keyword": "短头发",
+          "english": "Older sister is a girl with short hair.",
+          "audio": "audio/姐姐是个短头发的女孩.mp3",
+          "words": [
+            {"simplified": "姐姐", "traditional": "姐姐", "pinyin": "jiě jie", "meaning": "older sister"},
+            {"simplified": "是", "traditional": "是", "pinyin": "shì", "meaning": "is"},
+            {"simplified": "短头发", "traditional": "短頭髮", "pinyin": "duǎn tóu fa", "meaning": "short hair"},
+            {"simplified": "女孩", "traditional": "女孩", "pinyin": "nǚ hái", "meaning": "girl"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "阿姨的衣服好美啊！",
+          "pinyin": "ā yí, yī fu",
+          "keyword": "阿姨、衣服",
+          "english": "Auntie's clothes are so beautiful!",
+          "audio": "audio/阿姨的衣服好美啊.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "阿姨", "traditional": "阿姨", "pinyin": "ā yí", "meaning": "aunt, auntie"},
+            {"simplified": "的", "traditional": "的", "pinyin": "de", "meaning": "(possessive particle)"},
+            {"simplified": "衣服", "traditional": "衣服", "pinyin": "yī fu", "meaning": "clothes"},
+            {"simplified": "好", "traditional": "好", "pinyin": "hǎo", "meaning": "so, very"},
+            {"simplified": "美", "traditional": "美", "pinyin": "měi", "meaning": "beautiful"},
+            {"simplified": "啊", "traditional": "啊", "pinyin": "a", "meaning": "(exclamation)"}
+          ]
+        },
+        {
+          "type": "moxie",
+          "label": "默写：高兴",
+          "sentence": "听了老师的夸奖，我的心里乐开了花。",
+          "pinyin": "kuā jiǎng",
+          "keyword": "夸奖",
+          "english": "After hearing the teacher's praise, my heart blossomed with joy.",
+          "audio": "audio/听了老师的夸奖我的心里乐开了花.mp3",
+          "note": "老师不会念出句子，学生需要自己写出。",
+          "words": [
+            {"simplified": "听", "traditional": "聽", "pinyin": "tīng", "meaning": "to hear, to listen"},
+            {"simplified": "老师", "traditional": "老師", "pinyin": "lǎo shī", "meaning": "teacher"},
+            {"simplified": "夸奖", "traditional": "誇獎", "pinyin": "kuā jiǎng", "meaning": "to praise"},
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "心里", "traditional": "心裡", "pinyin": "xīn lǐ", "meaning": "in one's heart"},
+            {"simplified": "乐开了花", "traditional": "樂開了花", "pinyin": "lè kāi le huā", "meaning": "to blossom with joy"}
+          ]
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "title": "听写（五）",
+      "items": [
+        {
+          "type": "pinyin",
+          "pinyin": "mín zhòng jù lè bù",
+          "characters": "民众俱乐部",
+          "english": "community club",
+          "audio": "audio/民众俱乐部.mp3",
+          "words": [
+            {"simplified": "民众", "traditional": "民眾", "pinyin": "mín zhòng", "meaning": "the public, people"},
+            {"simplified": "俱乐部", "traditional": "俱樂部", "pinyin": "jù lè bù", "meaning": "club"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "我们可以看书或者画画。",
+          "pinyin": "huò zhě",
+          "keyword": "或者",
+          "english": "We can read books or draw.",
+          "audio": "audio/我们可以看书或者画画.mp3",
+          "words": [
+            {"simplified": "我们", "traditional": "我們", "pinyin": "wǒ men", "meaning": "we, us"},
+            {"simplified": "可以", "traditional": "可以", "pinyin": "kě yǐ", "meaning": "can, may"},
+            {"simplified": "看书", "traditional": "看書", "pinyin": "kàn shū", "meaning": "to read books"},
+            {"simplified": "或者", "traditional": "或者", "pinyin": "huò zhě", "meaning": "or"},
+            {"simplified": "画画", "traditional": "畫畫", "pinyin": "huà huà", "meaning": "to draw, to paint"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "吃完晚饭，妈妈叫我扫地。",
+          "pinyin": "wǎn fàn, sǎo dì",
+          "keyword": "晚饭、扫地",
+          "english": "After dinner, Mom asked me to sweep the floor.",
+          "audio": "audio/吃完晚饭妈妈叫我扫地.mp3",
+          "words": [
+            {"simplified": "吃完", "traditional": "吃完", "pinyin": "chī wán", "meaning": "to finish eating"},
+            {"simplified": "晚饭", "traditional": "晚飯", "pinyin": "wǎn fàn", "meaning": "dinner"},
+            {"simplified": "妈妈", "traditional": "媽媽", "pinyin": "mā ma", "meaning": "mother, mom"},
+            {"simplified": "叫", "traditional": "叫", "pinyin": "jiào", "meaning": "to ask, to tell"},
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "扫地", "traditional": "掃地", "pinyin": "sǎo dì", "meaning": "to sweep the floor"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "大家都准备好了，我们出发吧！",
+          "pinyin": "zhǔn bèi",
+          "keyword": "准备",
+          "english": "Everyone is ready, let's go!",
+          "audio": "audio/大家都准备好了我们出发吧.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "大家", "traditional": "大家", "pinyin": "dà jiā", "meaning": "everyone"},
+            {"simplified": "都", "traditional": "都", "pinyin": "dōu", "meaning": "all"},
+            {"simplified": "准备", "traditional": "準備", "pinyin": "zhǔn bèi", "meaning": "to prepare, ready"},
+            {"simplified": "好", "traditional": "好", "pinyin": "hǎo", "meaning": "done, finished"},
+            {"simplified": "我们", "traditional": "我們", "pinyin": "wǒ men", "meaning": "we, us"},
+            {"simplified": "出发", "traditional": "出發", "pinyin": "chū fā", "meaning": "to set off, to depart"},
+            {"simplified": "吧", "traditional": "吧", "pinyin": "ba", "meaning": "(suggestion particle)"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "巴士站就在我家附近。",
+          "pinyin": "fù jìn",
+          "keyword": "附近",
+          "english": "The bus stop is near my home.",
+          "audio": "audio/巴士站就在我家附近.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "巴士站", "traditional": "巴士站", "pinyin": "bā shì zhàn", "meaning": "bus stop"},
+            {"simplified": "就", "traditional": "就", "pinyin": "jiù", "meaning": "just, exactly"},
+            {"simplified": "在", "traditional": "在", "pinyin": "zài", "meaning": "at, in"},
+            {"simplified": "我家", "traditional": "我家", "pinyin": "wǒ jiā", "meaning": "my home"},
+            {"simplified": "附近", "traditional": "附近", "pinyin": "fù jìn", "meaning": "nearby, near"}
+          ]
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "title": "听写（六）",
+      "items": [
+        {
+          "type": "sentence",
+          "sentence": "天黑了，我们应该回家了。",
+          "pinyin": "yīng gāi",
+          "keyword": "应该",
+          "english": "It's dark, we should go home.",
+          "audio": "audio/天黑了我们应该回家了.mp3",
+          "words": [
+            {"simplified": "天黑", "traditional": "天黑", "pinyin": "tiān hēi", "meaning": "it's dark"},
+            {"simplified": "了", "traditional": "了", "pinyin": "le", "meaning": "(completion particle)"},
+            {"simplified": "我们", "traditional": "我們", "pinyin": "wǒ men", "meaning": "we, us"},
+            {"simplified": "应该", "traditional": "應該", "pinyin": "yīng gāi", "meaning": "should"},
+            {"simplified": "回家", "traditional": "回家", "pinyin": "huí jiā", "meaning": "to go home"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "小乐，谢谢你扶我起来。",
+          "pinyin": "xiè xie, fú",
+          "keyword": "谢谢、扶",
+          "english": "Xiao Le, thank you for helping me up.",
+          "audio": "audio/小乐谢谢你扶我起来.mp3",
+          "words": [
+            {"simplified": "小乐", "traditional": "小樂", "pinyin": "xiǎo lè", "meaning": "(name) Xiao Le"},
+            {"simplified": "谢谢", "traditional": "謝謝", "pinyin": "xiè xie", "meaning": "thank you"},
+            {"simplified": "你", "traditional": "你", "pinyin": "nǐ", "meaning": "you"},
+            {"simplified": "扶", "traditional": "扶", "pinyin": "fú", "meaning": "to support, to help up"},
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "起来", "traditional": "起來", "pinyin": "qǐ lái", "meaning": "up, to get up"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "他撞倒了我，我还没爬起来，他就跑了。",
+          "pinyin": "zhuàng dǎo, pá",
+          "keyword": "撞倒、爬",
+          "english": "He knocked me down, and before I could get up, he ran away.",
+          "audio": "audio/他撞倒了我我还没爬起来他就跑了.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "他", "traditional": "他", "pinyin": "tā", "meaning": "he"},
+            {"simplified": "撞倒", "traditional": "撞倒", "pinyin": "zhuàng dǎo", "meaning": "to knock down"},
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "还没", "traditional": "還沒", "pinyin": "hái méi", "meaning": "not yet"},
+            {"simplified": "爬起来", "traditional": "爬起來", "pinyin": "pá qǐ lái", "meaning": "to get up, to climb up"},
+            {"simplified": "就", "traditional": "就", "pinyin": "jiù", "meaning": "then, already"},
+            {"simplified": "跑了", "traditional": "跑了", "pinyin": "pǎo le", "meaning": "ran away"}
+          ]
+        },
+        {
+          "type": "moxie",
+          "label": "默写：害怕",
+          "sentence": "听到这个坏消息，我吓得脸色发白，直冒冷汗。",
+          "pinyin": "xiāo xi, mào",
+          "keyword": "消息、冒",
+          "english": "Hearing this bad news, I was so scared my face turned pale and I broke out in cold sweat.",
+          "audio": "audio/听到这个坏消息我吓得脸色发白直冒冷汗.mp3",
+          "note": "老师不会念出句子，学生需要自己写出。",
+          "words": [
+            {"simplified": "听到", "traditional": "聽到", "pinyin": "tīng dào", "meaning": "to hear"},
+            {"simplified": "这个", "traditional": "這個", "pinyin": "zhè ge", "meaning": "this"},
+            {"simplified": "坏", "traditional": "壞", "pinyin": "huài", "meaning": "bad"},
+            {"simplified": "消息", "traditional": "消息", "pinyin": "xiāo xi", "meaning": "news"},
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "吓得", "traditional": "嚇得", "pinyin": "xià de", "meaning": "so scared that"},
+            {"simplified": "脸色发白", "traditional": "臉色發白", "pinyin": "liǎn sè fā bái", "meaning": "face turned pale"},
+            {"simplified": "直", "traditional": "直", "pinyin": "zhí", "meaning": "continuously"},
+            {"simplified": "冒", "traditional": "冒", "pinyin": "mào", "meaning": "to emit, to break out"},
+            {"simplified": "冷汗", "traditional": "冷汗", "pinyin": "lěng hàn", "meaning": "cold sweat"}
+          ]
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "title": "听写（七）",
+      "items": [
+        {
+          "type": "pinyin",
+          "pinyin": "dǎ pò huā péng",
+          "characters": "打破花盆",
+          "english": "break a flower pot",
+          "audio": "audio/打破花盆.mp3",
+          "words": [
+            {"simplified": "打破", "traditional": "打破", "pinyin": "dǎ pò", "meaning": "to break"},
+            {"simplified": "花盆", "traditional": "花盆", "pinyin": "huā pén", "meaning": "flower pot"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "他轻轻地推开房门。",
+          "pinyin": "qīng qīng de",
+          "keyword": "轻轻地",
+          "english": "He gently pushed open the door.",
+          "audio": "audio/他轻轻地推开房门.mp3",
+          "words": [
+            {"simplified": "他", "traditional": "他", "pinyin": "tā", "meaning": "he"},
+            {"simplified": "轻轻地", "traditional": "輕輕地", "pinyin": "qīng qīng de", "meaning": "gently, softly"},
+            {"simplified": "推开", "traditional": "推開", "pinyin": "tuī kāi", "meaning": "to push open"},
+            {"simplified": "房门", "traditional": "房門", "pinyin": "fáng mén", "meaning": "room door"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "他生病了，所以没来上课。",
+          "pinyin": "shēng bìng",
+          "keyword": "生病",
+          "english": "He is sick, so he didn't come to class.",
+          "audio": "audio/他生病了所以没来上课.mp3",
+          "words": [
+            {"simplified": "他", "traditional": "他", "pinyin": "tā", "meaning": "he"},
+            {"simplified": "生病", "traditional": "生病", "pinyin": "shēng bìng", "meaning": "to be sick"},
+            {"simplified": "了", "traditional": "了", "pinyin": "le", "meaning": "(completion particle)"},
+            {"simplified": "所以", "traditional": "所以", "pinyin": "suǒ yǐ", "meaning": "so, therefore"},
+            {"simplified": "没", "traditional": "沒", "pinyin": "méi", "meaning": "did not"},
+            {"simplified": "来", "traditional": "來", "pinyin": "lái", "meaning": "to come"},
+            {"simplified": "上课", "traditional": "上課", "pinyin": "shàng kè", "meaning": "to attend class"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "妈妈留了一张便条给我。",
+          "pinyin": "liú, biàn tiáo",
+          "keyword": "留、便条",
+          "english": "Mom left a note for me.",
+          "audio": "audio/妈妈留了一张便条给我.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "妈妈", "traditional": "媽媽", "pinyin": "mā ma", "meaning": "mother, mom"},
+            {"simplified": "留", "traditional": "留", "pinyin": "liú", "meaning": "to leave"},
+            {"simplified": "一张", "traditional": "一張", "pinyin": "yī zhāng", "meaning": "one (for flat objects)"},
+            {"simplified": "便条", "traditional": "便條", "pinyin": "biàn tiáo", "meaning": "note"},
+            {"simplified": "给", "traditional": "給", "pinyin": "gěi", "meaning": "to, for"},
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "你弄坏了他的眼镜，应该赔钱。",
+          "pinyin": "nòng huài, yǎn jìng, péi qián",
+          "keyword": "弄坏、眼镜、赔钱",
+          "english": "You broke his glasses, you should pay for them.",
+          "audio": "audio/你弄坏了他的眼镜应该赔钱.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "你", "traditional": "你", "pinyin": "nǐ", "meaning": "you"},
+            {"simplified": "弄坏", "traditional": "弄壞", "pinyin": "nòng huài", "meaning": "to break, to damage"},
+            {"simplified": "他的", "traditional": "他的", "pinyin": "tā de", "meaning": "his"},
+            {"simplified": "眼镜", "traditional": "眼鏡", "pinyin": "yǎn jìng", "meaning": "glasses"},
+            {"simplified": "应该", "traditional": "應該", "pinyin": "yīng gāi", "meaning": "should"},
+            {"simplified": "赔钱", "traditional": "賠錢", "pinyin": "péi qián", "meaning": "to pay compensation"}
+          ]
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "title": "听写（八）",
+      "items": [
+        {
+          "type": "sentence",
+          "sentence": "我先冲凉，接着做功课。",
+          "pinyin": "jiē zhe",
+          "keyword": "接着",
+          "english": "I take a shower first, then do homework.",
+          "audio": "audio/我先冲凉接着做功课.mp3",
+          "words": [
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "先", "traditional": "先", "pinyin": "xiān", "meaning": "first"},
+            {"simplified": "冲凉", "traditional": "沖涼", "pinyin": "chōng liáng", "meaning": "to take a shower"},
+            {"simplified": "接着", "traditional": "接著", "pinyin": "jiē zhe", "meaning": "then, next"},
+            {"simplified": "做功课", "traditional": "做功課", "pinyin": "zuò gōng kè", "meaning": "to do homework"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "老师开始上课了，我们要专心听课。",
+          "pinyin": "kāi shǐ, zhuān xīn",
+          "keyword": "开始、专心",
+          "english": "The teacher has started class, we need to listen attentively.",
+          "audio": "audio/老师开始上课了我们要专心听课.mp3",
+          "words": [
+            {"simplified": "老师", "traditional": "老師", "pinyin": "lǎo shī", "meaning": "teacher"},
+            {"simplified": "开始", "traditional": "開始", "pinyin": "kāi shǐ", "meaning": "to start, to begin"},
+            {"simplified": "上课", "traditional": "上課", "pinyin": "shàng kè", "meaning": "to have class"},
+            {"simplified": "了", "traditional": "了", "pinyin": "le", "meaning": "(completion particle)"},
+            {"simplified": "我们", "traditional": "我們", "pinyin": "wǒ men", "meaning": "we, us"},
+            {"simplified": "要", "traditional": "要", "pinyin": "yào", "meaning": "need to, must"},
+            {"simplified": "专心", "traditional": "專心", "pinyin": "zhuān xīn", "meaning": "attentively, focused"},
+            {"simplified": "听课", "traditional": "聽課", "pinyin": "tīng kè", "meaning": "to attend class"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "我把桌椅排整齐后，出了一身汗。",
+          "pinyin": "zhěng qí, hàn",
+          "keyword": "整齐、汗",
+          "english": "After arranging the desks and chairs neatly, I was covered in sweat.",
+          "audio": "audio/我把桌椅排整齐后出了一身汗.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "把", "traditional": "把", "pinyin": "bǎ", "meaning": "(particle)"},
+            {"simplified": "桌椅", "traditional": "桌椅", "pinyin": "zhuō yǐ", "meaning": "desks and chairs"},
+            {"simplified": "排", "traditional": "排", "pinyin": "pái", "meaning": "to arrange"},
+            {"simplified": "整齐", "traditional": "整齊", "pinyin": "zhěng qí", "meaning": "neat, tidy"},
+            {"simplified": "后", "traditional": "後", "pinyin": "hòu", "meaning": "after"},
+            {"simplified": "出", "traditional": "出", "pinyin": "chū", "meaning": "to produce"},
+            {"simplified": "一身", "traditional": "一身", "pinyin": "yī shēn", "meaning": "whole body"},
+            {"simplified": "汗", "traditional": "汗", "pinyin": "hàn", "meaning": "sweat"}
+          ]
+        },
+        {
+          "type": "moxie",
+          "label": "默写：烦恼",
+          "sentence": "这件事情让我心乱如麻，不知如何是好。",
+          "pinyin": "luàn",
+          "keyword": "乱",
+          "english": "This matter makes me so confused, I don't know what to do.",
+          "audio": "audio/这件事情让我心乱如麻不知如何是好.mp3",
+          "note": "老师不会念出句子，学生需要自己写出。",
+          "words": [
+            {"simplified": "这件事情", "traditional": "這件事情", "pinyin": "zhè jiàn shì qíng", "meaning": "this matter"},
+            {"simplified": "让", "traditional": "讓", "pinyin": "ràng", "meaning": "to make, to let"},
+            {"simplified": "我", "traditional": "我", "pinyin": "wǒ", "meaning": "I, me"},
+            {"simplified": "心乱如麻", "traditional": "心亂如麻", "pinyin": "xīn luàn rú má", "meaning": "extremely confused"},
+            {"simplified": "不知", "traditional": "不知", "pinyin": "bù zhī", "meaning": "don't know"},
+            {"simplified": "如何是好", "traditional": "如何是好", "pinyin": "rú hé shì hǎo", "meaning": "what to do"}
+          ]
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "title": "听写（九）",
+      "items": [
+        {
+          "type": "pinyin",
+          "pinyin": "xiǎng dào bàn fǎ",
+          "characters": "想到办法",
+          "english": "think of a solution",
+          "audio": "audio/想到办法.mp3",
+          "words": [
+            {"simplified": "想到", "traditional": "想到", "pinyin": "xiǎng dào", "meaning": "to think of"},
+            {"simplified": "办法", "traditional": "辦法", "pinyin": "bàn fǎ", "meaning": "method, solution"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "他跳进河里救人。",
+          "pinyin": "hé, jiù rén",
+          "keyword": "河、救人",
+          "english": "He jumped into the river to save someone.",
+          "audio": "audio/他跳进河里救人.mp3",
+          "words": [
+            {"simplified": "他", "traditional": "他", "pinyin": "tā", "meaning": "he"},
+            {"simplified": "跳进", "traditional": "跳進", "pinyin": "tiào jìn", "meaning": "to jump into"},
+            {"simplified": "河里", "traditional": "河裡", "pinyin": "hé lǐ", "meaning": "in the river"},
+            {"simplified": "救人", "traditional": "救人", "pinyin": "jiù rén", "meaning": "to save someone"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "我们知道这头大象的重量。",
+          "pinyin": "zhī dào, zhòng liàng",
+          "keyword": "知道、重量",
+          "english": "We know the weight of this elephant.",
+          "audio": "audio/我们知道这头大象的重量.mp3",
+          "words": [
+            {"simplified": "我们", "traditional": "我們", "pinyin": "wǒ men", "meaning": "we, us"},
+            {"simplified": "知道", "traditional": "知道", "pinyin": "zhī dào", "meaning": "to know"},
+            {"simplified": "这头", "traditional": "這頭", "pinyin": "zhè tóu", "meaning": "this (for large animals)"},
+            {"simplified": "大象", "traditional": "大象", "pinyin": "dà xiàng", "meaning": "elephant"},
+            {"simplified": "的", "traditional": "的", "pinyin": "de", "meaning": "(possessive particle)"},
+            {"simplified": "重量", "traditional": "重量", "pinyin": "zhòng liàng", "meaning": "weight"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "太阳慢慢地从海上升起。",
+          "pinyin": "shēng qǐ",
+          "keyword": "升起",
+          "english": "The sun slowly rises from the sea.",
+          "audio": "audio/太阳慢慢地从海上升起.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "太阳", "traditional": "太陽", "pinyin": "tài yáng", "meaning": "sun"},
+            {"simplified": "慢慢地", "traditional": "慢慢地", "pinyin": "màn màn de", "meaning": "slowly"},
+            {"simplified": "从", "traditional": "從", "pinyin": "cóng", "meaning": "from"},
+            {"simplified": "海上", "traditional": "海上", "pinyin": "hǎi shàng", "meaning": "above the sea"},
+            {"simplified": "升起", "traditional": "升起", "pinyin": "shēng qǐ", "meaning": "to rise"}
+          ]
+        },
+        {
+          "type": "sentence",
+          "sentence": "这个问题太难了，我们去问老师吧！",
+          "pinyin": "wèn tí",
+          "keyword": "问题",
+          "english": "This question is too difficult, let's ask the teacher!",
+          "audio": "audio/这个问题太难了我们去问老师吧.mp3",
+          "difficult": true,
+          "words": [
+            {"simplified": "这个", "traditional": "這個", "pinyin": "zhè ge", "meaning": "this"},
+            {"simplified": "问题", "traditional": "問題", "pinyin": "wèn tí", "meaning": "question, problem"},
+            {"simplified": "太", "traditional": "太", "pinyin": "tài", "meaning": "too"},
+            {"simplified": "难", "traditional": "難", "pinyin": "nán", "meaning": "difficult"},
+            {"simplified": "了", "traditional": "了", "pinyin": "le", "meaning": "(particle)"},
+            {"simplified": "我们", "traditional": "我們", "pinyin": "wǒ men", "meaning": "we, us"},
+            {"simplified": "去", "traditional": "去", "pinyin": "qù", "meaning": "to go"},
+            {"simplified": "问", "traditional": "問", "pinyin": "wèn", "meaning": "to ask"},
+            {"simplified": "老师", "traditional": "老師", "pinyin": "lǎo shī", "meaning": "teacher"},
+            {"simplified": "吧", "traditional": "吧", "pinyin": "ba", "meaning": "(suggestion particle)"}
+          ]
+        }
+      ]
+    }
+  ]
+}

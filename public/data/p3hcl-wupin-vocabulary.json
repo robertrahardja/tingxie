@@ -1,0 +1,677 @@
+{
+  "title": "介绍我的物品",
+  "vocabulary": [
+    {
+      "simplified": "介绍",
+      "traditional": "介紹",
+      "pinyin": "jiè shào",
+      "english": "introduce, introduction"
+    },
+    {
+      "simplified": "物品",
+      "traditional": "物品",
+      "pinyin": "wù pǐn",
+      "english": "items, things, objects"
+    },
+    {
+      "simplified": "水壶",
+      "traditional": "水壺",
+      "pinyin": "shuǐ hú",
+      "english": "water bottle, kettle"
+    },
+    {
+      "simplified": "蓝色",
+      "traditional": "藍色",
+      "pinyin": "lán sè",
+      "english": "blue (color)"
+    },
+    {
+      "simplified": "圆柱形",
+      "traditional": "圓柱形",
+      "pinyin": "yuán zhù xíng",
+      "english": "cylindrical shape"
+    },
+    {
+      "simplified": "上面",
+      "traditional": "上面",
+      "pinyin": "shàng miàn",
+      "english": "on top, above"
+    },
+    {
+      "simplified": "画",
+      "traditional": "畫",
+      "pinyin": "huà",
+      "english": "draw, paint, picture"
+    },
+    {
+      "simplified": "漂亮",
+      "traditional": "漂亮",
+      "pinyin": "piào liang",
+      "english": "beautiful, pretty"
+    },
+    {
+      "simplified": "冰雪",
+      "traditional": "冰雪",
+      "pinyin": "bīng xuě",
+      "english": "ice and snow"
+    },
+    {
+      "simplified": "女王",
+      "traditional": "女王",
+      "pinyin": "nǚ wáng",
+      "english": "queen"
+    },
+    {
+      "simplified": "旁边",
+      "traditional": "旁邊",
+      "pinyin": "páng biān",
+      "english": "beside, next to"
+    },
+    {
+      "simplified": "一条",
+      "traditional": "一條",
+      "pinyin": "yī tiáo",
+      "english": "one (measure word for long thin objects)"
+    },
+    {
+      "simplified": "细长",
+      "traditional": "細長",
+      "pinyin": "xì cháng",
+      "english": "long and thin, slender"
+    },
+    {
+      "simplified": "带子",
+      "traditional": "帶子",
+      "pinyin": "dài zi",
+      "english": "strap, belt"
+    },
+    {
+      "simplified": "一按",
+      "traditional": "一按",
+      "pinyin": "yī àn",
+      "english": "press once, one press"
+    },
+    {
+      "simplified": "按钮",
+      "traditional": "按鈕",
+      "pinyin": "àn niǔ",
+      "english": "button"
+    },
+    {
+      "simplified": "盖子",
+      "traditional": "蓋子",
+      "pinyin": "gài zi",
+      "english": "lid, cover"
+    },
+    {
+      "simplified": "弹开",
+      "traditional": "彈開",
+      "pinyin": "tán kāi",
+      "english": "pop open, spring open"
+    },
+    {
+      "simplified": "一打开",
+      "traditional": "一打開",
+      "pinyin": "yī dǎ kāi",
+      "english": "once opened"
+    },
+    {
+      "simplified": "吸管",
+      "traditional": "吸管",
+      "pinyin": "xī guǎn",
+      "english": "straw"
+    },
+    {
+      "simplified": "弹起来",
+      "traditional": "彈起來",
+      "pinyin": "tán qǐ lái",
+      "english": "pop up, spring up"
+    },
+    {
+      "simplified": "好伙伴",
+      "traditional": "好夥伴",
+      "pinyin": "hǎo huǒ bàn",
+      "english": "good partner, good companion"
+    },
+    {
+      "simplified": "天天",
+      "traditional": "天天",
+      "pinyin": "tiān tiān",
+      "english": "every day"
+    },
+    {
+      "simplified": "带着",
+      "traditional": "帶著",
+      "pinyin": "dài zhe",
+      "english": "bring along, carry with"
+    },
+    {
+      "simplified": "上学",
+      "traditional": "上學",
+      "pinyin": "shàng xué",
+      "english": "go to school"
+    },
+    {
+      "simplified": "文具盒",
+      "traditional": "文具盒",
+      "pinyin": "wén jù hé",
+      "english": "pencil case"
+    },
+    {
+      "simplified": "文具",
+      "traditional": "文具",
+      "pinyin": "wén jù",
+      "english": "stationery"
+    },
+    {
+      "simplified": "长方形",
+      "traditional": "長方形",
+      "pinyin": "cháng fāng xíng",
+      "english": "rectangular shape, rectangle"
+    },
+    {
+      "simplified": "一辆车",
+      "traditional": "一輛車",
+      "pinyin": "yī liàng chē",
+      "english": "one car (measure word for vehicles)"
+    },
+    {
+      "simplified": "里面",
+      "traditional": "裡面",
+      "pinyin": "lǐ miàn",
+      "english": "inside"
+    },
+    {
+      "simplified": "装着",
+      "traditional": "裝著",
+      "pinyin": "zhuāng zhe",
+      "english": "contains, holds"
+    },
+    {
+      "simplified": "各种各样",
+      "traditional": "各種各樣",
+      "pinyin": "gè zhǒng gè yàng",
+      "english": "all kinds of, various"
+    },
+    {
+      "simplified": "铅笔",
+      "traditional": "鉛筆",
+      "pinyin": "qiān bǐ",
+      "english": "pencil"
+    },
+    {
+      "simplified": "尺子",
+      "traditional": "尺子",
+      "pinyin": "chǐ zi",
+      "english": "ruler"
+    },
+    {
+      "simplified": "橡皮",
+      "traditional": "橡皮",
+      "pinyin": "xiàng pí",
+      "english": "eraser"
+    },
+    {
+      "simplified": "还有",
+      "traditional": "還有",
+      "pinyin": "hái yǒu",
+      "english": "also have, there is also"
+    },
+    {
+      "simplified": "卷笔刀",
+      "traditional": "卷筆刀",
+      "pinyin": "juǎn bǐ dāo",
+      "english": "pencil sharpener"
+    },
+    {
+      "simplified": "等",
+      "traditional": "等",
+      "pinyin": "děng",
+      "english": "etc., and so on"
+    },
+    {
+      "simplified": "学习",
+      "traditional": "學習",
+      "pinyin": "xué xí",
+      "english": "study, learn"
+    },
+    {
+      "simplified": "闹钟",
+      "traditional": "鬧鐘",
+      "pinyin": "nào zhōng",
+      "english": "alarm clock"
+    },
+    {
+      "simplified": "黄色",
+      "traditional": "黃色",
+      "pinyin": "huáng sè",
+      "english": "yellow (color)"
+    },
+    {
+      "simplified": "圆形",
+      "traditional": "圓形",
+      "pinyin": "yuán xíng",
+      "english": "circular shape, circle"
+    },
+    {
+      "simplified": "长",
+      "traditional": "長",
+      "pinyin": "zhǎng",
+      "english": "grow"
+    },
+    {
+      "simplified": "两个",
+      "traditional": "兩個",
+      "pinyin": "liǎng gè",
+      "english": "two (of something)"
+    },
+    {
+      "simplified": "可爱",
+      "traditional": "可愛",
+      "pinyin": "kě ài",
+      "english": "cute, lovely"
+    },
+    {
+      "simplified": "耳朵",
+      "traditional": "耳朵",
+      "pinyin": "ěr duo",
+      "english": "ears"
+    },
+    {
+      "simplified": "只要",
+      "traditional": "只要",
+      "pinyin": "zhǐ yào",
+      "english": "as long as, only need"
+    },
+    {
+      "simplified": "一响起",
+      "traditional": "一響起",
+      "pinyin": "yī xiǎng qǐ",
+      "english": "once it rings, as soon as it sounds"
+    },
+    {
+      "simplified": "按掉",
+      "traditional": "按掉",
+      "pinyin": "àn diào",
+      "english": "press to turn off"
+    },
+    {
+      "simplified": "起床",
+      "traditional": "起床",
+      "pinyin": "qǐ chuáng",
+      "english": "get up, get out of bed"
+    },
+    {
+      "simplified": "上课",
+      "traditional": "上課",
+      "pinyin": "shàng kè",
+      "english": "attend class, go to class"
+    },
+    {
+      "simplified": "每天",
+      "traditional": "每天",
+      "pinyin": "měi tiān",
+      "english": "every day"
+    },
+    {
+      "simplified": "早上",
+      "traditional": "早上",
+      "pinyin": "zǎo shang",
+      "english": "morning"
+    },
+    {
+      "simplified": "准时",
+      "traditional": "準時",
+      "pinyin": "zhǔn shí",
+      "english": "on time, punctual"
+    },
+    {
+      "simplified": "生活",
+      "traditional": "生活",
+      "pinyin": "shēng huó",
+      "english": "life"
+    },
+    {
+      "simplified": "中",
+      "traditional": "中",
+      "pinyin": "zhōng",
+      "english": "in, among"
+    },
+    {
+      "simplified": "离不开",
+      "traditional": "離不開",
+      "pinyin": "lí bù kāi",
+      "english": "cannot be without, inseparable from"
+    },
+    {
+      "simplified": "好朋友",
+      "traditional": "好朋友",
+      "pinyin": "hǎo péng you",
+      "english": "good friend"
+    },
+    {
+      "simplified": "书包",
+      "traditional": "書包",
+      "pinyin": "shū bāo",
+      "english": "school bag, backpack"
+    },
+    {
+      "simplified": "黑色",
+      "traditional": "黑色",
+      "pinyin": "hēi sè",
+      "english": "black (color)"
+    },
+    {
+      "simplified": "一个",
+      "traditional": "一個",
+      "pinyin": "yī gè",
+      "english": "one (general measure word)"
+    },
+    {
+      "simplified": "新型",
+      "traditional": "新型",
+      "pinyin": "xīn xíng",
+      "english": "new type, new model"
+    },
+    {
+      "simplified": "蝙蝠侠",
+      "traditional": "蝙蝠俠",
+      "pinyin": "biān fú xiá",
+      "english": "Batman"
+    },
+    {
+      "simplified": "很多",
+      "traditional": "很多",
+      "pinyin": "hěn duō",
+      "english": "many, a lot of"
+    },
+    {
+      "simplified": "隔层",
+      "traditional": "隔層",
+      "pinyin": "gé céng",
+      "english": "compartment, partition"
+    },
+    {
+      "simplified": "其中",
+      "traditional": "其中",
+      "pinyin": "qí zhōng",
+      "english": "among them, of which"
+    },
+    {
+      "simplified": "大点",
+      "traditional": "大點",
+      "pinyin": "dà diǎn",
+      "english": "a bit bigger"
+    },
+    {
+      "simplified": "可以",
+      "traditional": "可以",
+      "pinyin": "kě yǐ",
+      "english": "can, may"
+    },
+    {
+      "simplified": "装书",
+      "traditional": "裝書",
+      "pinyin": "zhuāng shū",
+      "english": "put books in, carry books"
+    },
+    {
+      "simplified": "中间",
+      "traditional": "中間",
+      "pinyin": "zhōng jiān",
+      "english": "middle"
+    },
+    {
+      "simplified": "本子",
+      "traditional": "本子",
+      "pinyin": "běn zi",
+      "english": "notebook"
+    },
+    {
+      "simplified": "小点",
+      "traditional": "小點",
+      "pinyin": "xiǎo diǎn",
+      "english": "a bit smaller"
+    },
+    {
+      "simplified": "之类",
+      "traditional": "之類",
+      "pinyin": "zhī lèi",
+      "english": "and so on, of this kind"
+    },
+    {
+      "simplified": "两边",
+      "traditional": "兩邊",
+      "pinyin": "liǎng biān",
+      "english": "both sides"
+    },
+    {
+      "simplified": "网包",
+      "traditional": "網包",
+      "pinyin": "wǎng bāo",
+      "english": "mesh pocket"
+    },
+    {
+      "simplified": "放",
+      "traditional": "放",
+      "pinyin": "fàng",
+      "english": "put, place"
+    },
+    {
+      "simplified": "或者",
+      "traditional": "或者",
+      "pinyin": "huò zhě",
+      "english": "or"
+    },
+    {
+      "simplified": "其它",
+      "traditional": "其它",
+      "pinyin": "qí tā",
+      "english": "other"
+    },
+    {
+      "simplified": "杂西",
+      "traditional": "雜西",
+      "pinyin": "zá xī",
+      "english": "miscellaneous things (likely typo for 杂物 zá wù)"
+    },
+    {
+      "simplified": "背带",
+      "traditional": "背帶",
+      "pinyin": "bēi dài",
+      "english": "shoulder strap"
+    },
+    {
+      "simplified": "很宽",
+      "traditional": "很寬",
+      "pinyin": "hěn kuān",
+      "english": "very wide"
+    },
+    {
+      "simplified": "再加上",
+      "traditional": "再加上",
+      "pinyin": "zài jiā shàng",
+      "english": "plus, in addition to"
+    },
+    {
+      "simplified": "海绵垫",
+      "traditional": "海綿墊",
+      "pinyin": "hǎi mián diàn",
+      "english": "sponge pad"
+    },
+    {
+      "simplified": "背起来",
+      "traditional": "背起來",
+      "pinyin": "bēi qǐ lái",
+      "english": "carry on back, wear on back"
+    },
+    {
+      "simplified": "很舒服",
+      "traditional": "很舒服",
+      "pinyin": "hěn shū fu",
+      "english": "very comfortable"
+    },
+    {
+      "simplified": "绑",
+      "traditional": "綁",
+      "pinyin": "bǎng",
+      "english": "tie, bind"
+    },
+    {
+      "simplified": "腰",
+      "traditional": "腰",
+      "pinyin": "yāo",
+      "english": "waist"
+    },
+    {
+      "simplified": "这样",
+      "traditional": "這樣",
+      "pinyin": "zhè yàng",
+      "english": "this way, like this"
+    },
+    {
+      "simplified": "跑起来",
+      "traditional": "跑起來",
+      "pinyin": "pǎo qǐ lái",
+      "english": "when running, start running"
+    },
+    {
+      "simplified": "时候",
+      "traditional": "時候",
+      "pinyin": "shí hou",
+      "english": "time, moment"
+    },
+    {
+      "simplified": "左右",
+      "traditional": "左右",
+      "pinyin": "zuǒ yòu",
+      "english": "left and right"
+    },
+    {
+      "simplified": "晃动",
+      "traditional": "晃動",
+      "pinyin": "huàng dòng",
+      "english": "sway, shake"
+    },
+    {
+      "simplified": "下午",
+      "traditional": "下午",
+      "pinyin": "xià wǔ",
+      "english": "afternoon"
+    },
+    {
+      "simplified": "回家",
+      "traditional": "回家",
+      "pinyin": "huí jiā",
+      "english": "go home, return home"
+    },
+    {
+      "simplified": "真是",
+      "traditional": "真是",
+      "pinyin": "zhēn shì",
+      "english": "really is, truly is"
+    },
+    {
+      "simplified": "好帮手",
+      "traditional": "好幫手",
+      "pinyin": "hǎo bāng shǒu",
+      "english": "good helper, good assistant"
+    },
+    {
+      "simplified": "手表",
+      "traditional": "手錶",
+      "pinyin": "shǒu biǎo",
+      "english": "watch, wristwatch"
+    },
+    {
+      "simplified": "粉红色",
+      "traditional": "粉紅色",
+      "pinyin": "fěn hóng sè",
+      "english": "pink (color)"
+    },
+    {
+      "simplified": "爱心形",
+      "traditional": "愛心形",
+      "pinyin": "ài xīn xíng",
+      "english": "heart shape"
+    },
+    {
+      "simplified": "表盖",
+      "traditional": "錶蓋",
+      "pinyin": "biǎo gài",
+      "english": "watch cover"
+    },
+    {
+      "simplified": "一只",
+      "traditional": "一隻",
+      "pinyin": "yī zhī",
+      "english": "one (measure word for animals and some objects)"
+    },
+    {
+      "simplified": "蝴蝶",
+      "traditional": "蝴蝶",
+      "pinyin": "hú dié",
+      "english": "butterfly"
+    },
+    {
+      "simplified": "图案",
+      "traditional": "圖案",
+      "pinyin": "tú àn",
+      "english": "pattern, design"
+    },
+    {
+      "simplified": "打开",
+      "traditional": "打開",
+      "pinyin": "dǎ kāi",
+      "english": "open"
+    },
+    {
+      "simplified": "能",
+      "traditional": "能",
+      "pinyin": "néng",
+      "english": "can, be able to"
+    },
+    {
+      "simplified": "看到",
+      "traditional": "看到",
+      "pinyin": "kàn dào",
+      "english": "see"
+    },
+    {
+      "simplified": "时间",
+      "traditional": "時間",
+      "pinyin": "shí jiān",
+      "english": "time"
+    },
+    {
+      "simplified": "自从",
+      "traditional": "自從",
+      "pinyin": "zì cóng",
+      "english": "since, ever since"
+    },
+    {
+      "simplified": "有了",
+      "traditional": "有了",
+      "pinyin": "yǒu le",
+      "english": "have, got"
+    },
+    {
+      "simplified": "这只",
+      "traditional": "這隻",
+      "pinyin": "zhè zhī",
+      "english": "this (measure word for animals/objects)"
+    },
+    {
+      "simplified": "早睡早起",
+      "traditional": "早睡早起",
+      "pinyin": "zǎo shuì zǎo qǐ",
+      "english": "go to bed early and wake up early"
+    },
+    {
+      "simplified": "陪伴",
+      "traditional": "陪伴",
+      "pinyin": "péi bàn",
+      "english": "accompany, keep company"
+    }
+  ]
+}

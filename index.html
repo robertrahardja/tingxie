@@ -1,129 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>最新词语 - 听写练习</title>
-    <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="handwriting-embed.css">
-</head>
-<body>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <button class="menu-toggle" id="menu-toggle">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-                        <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-item active">最新词语</a>
-                <a href="school-tingxie.html" class="nav-item">学校听写</a>
-                <a href="review.html" class="nav-item">复习词语</a>
-                <a href="vocabulary.html" class="nav-item">词汇浏览</a>
-                <a href="phrase-matching.html" class="nav-item">词语搭配</a>
-                <a href="handwriting.html" class="nav-item">笔画练习</a>
-                <a href="radicals.html" class="nav-item">部首学习</a>
-                <a href="family.html" class="nav-item">家庭称呼</a>
-                <a href="instructions.html" class="nav-item">指示词汇</a>
-                <a href="p3hcl-reading-sync.html" class="nav-item">阅读练习</a>
-                <a href="p3hcl-wupin-interactive.html" class="nav-item">互动阅读</a>
-                <a href="koushi-family-cohesion.html" class="nav-item">口试练习</a>
-                <a href="dashboard.html" class="nav-item">家长看板</a>
-                <a href="settings.html" class="nav-item">设置</a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <header>
-            <div class="header-row">
-                <h1>最新词语</h1>
-                <div class="controls">
-                    <button id="filter-toggle" class="filter-btn">重要词语</button>
-                    <button id="review-toggle" class="review-btn" style="display: none;">复习模式</button>
-                    <div class="progress">
-                        <span id="current-set">1</span> / <span id="total-sets">0</span>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <main>
-            <div class="navigation">
-                <button id="prev-btn" class="nav-btn" disabled>上一个</button>
-                <button id="next-btn" class="nav-btn">下一个</button>
-            </div>
-
-            <div id="word-card" class="word-card">
-                <div class="card-progress">
-                    <span id="current-set-card">1</span> / <span id="total-sets-card">0</span>
-                </div>
-
-                <div class="word-section">
-                    <div class="word-item audio-item" id="audio" data-type="audio">
-                        <button class="audio-btn covered">🔊</button>
-                    </div>
-
-                    <div class="word-item" id="simplified" data-type="simplified">
-                        <div class="content covered">简体</div>
-                    </div>
-
-                    <div class="word-item" id="traditional" data-type="traditional">
-                        <div class="content covered">繁体</div>
-                    </div>
-
-                    <div class="word-item" id="pinyin" data-type="pinyin">
-                        <div class="content covered">拼音</div>
-                    </div>
-
-                    <div class="word-item" id="english" data-type="english">
-                        <div class="content covered">English</div>
-                    </div>
-                </div>
-
-                <div class="handwriting-controls">
-                    <button id="handwriting-btn" class="handwriting-btn">✍️ 笔画练习</button>
-                </div>
-            </div>
-
-            <!-- Embedded Handwriting Practice -->
-            <div class="handwriting-embed" id="handwriting-embed" style="display: none;">
-                <div class="handwriting-embed-header">
-                    <h3>笔画练习</h3>
-                    <button id="close-handwriting" class="close-btn">✕</button>
-                </div>
-
-                <div class="character-display-embed">
-                    <span id="handwriting-char"></span>
-                </div>
-
-                <div id="handwriting-writer-container">
-                    <div id="handwriting-target"></div>
-                </div>
-
-                <div class="handwriting-controls-embed">
-                    <button id="handwriting-hint" class="handwriting-action-btn">显示提示</button>
-                    <button id="handwriting-reset" class="handwriting-action-btn reset">重置</button>
-                </div>
-
-                <div class="handwriting-char-nav" id="handwriting-char-nav" style="display: none;">
-                    <button id="prev-char" class="char-nav-btn">← 上一个字</button>
-                    <button id="next-char" class="char-nav-btn">下一个字 →</button>
-                </div>
-
-                <div class="handwriting-status" id="handwriting-status"></div>
-            </div>
-
-            <div class="self-assess-controls">
-                <div class="assess-buttons">
-                    <button id="know-btn" class="assess-btn know-btn">会 ✓</button>
-                    <button id="dont-know-btn" class="assess-btn dont-know-btn">不会 ✗</button>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <script type="module" src="latest.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>听写练习 - Tingxie</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
