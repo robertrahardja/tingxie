@@ -100,12 +100,11 @@ export const NAV_ITEMS: NavItem[] = [
   { href: '/vocabulary', label: '词汇浏览' },
   { href: '/dashboard', label: '家长看板' },
   { href: '/settings', label: '设置' },
-  // P3HCL Reading page
-  { href: '/p3hcl-reading-sync', label: '阅读练习' },
   // Archive folder with other pages
   {
     label: '📁 更多练习',
     children: [
+      { href: '/p3hcl-reading-sync', label: '阅读练习' },
       { href: '/phrase-matching', label: '词语搭配' },
       { href: '/handwriting', label: '笔画练习' },
       { href: '/radicals', label: '部首学习' },
