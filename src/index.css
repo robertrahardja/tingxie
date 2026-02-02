@@ -3178,6 +3178,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  gap: 12px;
   margin-top: 15px;
 }
 
@@ -3202,6 +3203,23 @@ body {
 .handwriting-btn.active {
   background: linear-gradient(45deg, #e74c3c 0%, #c0392b 100%);
   box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* Video container */
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 15px auto 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  background: #000;
+}
+
+.word-video {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
 }
 
 .handwriting-embed {
