@@ -95,6 +95,7 @@ export interface NavItem {
 export const NAV_ITEMS: NavItem[] = [
   // Main tingxie pages
   { href: '/', label: '最新词语' },
+  { href: '/p3hcl-reading-sync', label: '阅读练习' },
   { href: '/school-tingxie', label: '学校听写' },
   { href: '/review', label: '复习词语' },
   { href: '/vocabulary', label: '词汇浏览' },
@@ -104,7 +105,6 @@ export const NAV_ITEMS: NavItem[] = [
   {
     label: '📁 更多练习',
     children: [
-      { href: '/p3hcl-reading-sync', label: '阅读练习' },
       { href: '/phrase-matching', label: '词语搭配' },
       { href: '/handwriting', label: '笔画练习' },
       { href: '/radicals', label: '部首学习' },

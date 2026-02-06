@@ -3723,6 +3723,18 @@ body {
   background: #BBDEFB;
 }
 
+/* Compound word groups - subtle underline hint */
+.clickable-word {
+  border-bottom: 1.5px dashed rgba(25, 118, 210, 0.3);
+  padding-bottom: 1px;
+}
+
+.clickable-word:hover {
+  background: #E3F2FD;
+  color: #1976D2;
+  border-bottom-color: #1976D2;
+}
+
 .clickable-text {
   cursor: pointer;
 }
