@@ -3807,6 +3807,155 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 79,
+      "words": [
+        {
+          "simplified": "电脑展",
+          "traditional": "電腦展",
+          "pinyin": "diàn nǎo zhǎn",
+          "english": "computer exhibition",
+          "audio": "audio/电脑展.mp3",
+          "important": true
+        },
+        {
+          "simplified": "旅游展",
+          "traditional": "旅遊展",
+          "pinyin": "lǚ yóu zhǎn",
+          "english": "travel exhibition",
+          "audio": "audio/旅游展.mp3",
+          "important": true
+        },
+        {
+          "simplified": "美食展",
+          "traditional": "美食展",
+          "pinyin": "měi shí zhǎn",
+          "english": "food exhibition",
+          "audio": "audio/美食展.mp3",
+          "important": true
+        },
+        {
+          "simplified": "多彩",
+          "traditional": "多彩",
+          "pinyin": "duō cǎi",
+          "english": "colorful",
+          "audio": "audio/多彩.mp3",
+          "important": true
+        },
+        {
+          "simplified": "特别",
+          "traditional": "特別",
+          "pinyin": "tè bié",
+          "english": "special",
+          "audio": "audio/特别.mp3",
+          "important": true
+        },
+        {
+          "simplified": "傍晚",
+          "traditional": "傍晚",
+          "pinyin": "bàng wǎn",
+          "english": "evening, dusk",
+          "audio": "audio/傍晚.mp3",
+          "important": true
+        },
+        {
+          "simplified": "脚踏车",
+          "traditional": "腳踏車",
+          "pinyin": "jiǎo tà chē",
+          "english": "bicycle",
+          "audio": "audio/脚踏车.mp3",
+          "important": true
+        },
+        {
+          "simplified": "或者",
+          "traditional": "或者",
+          "pinyin": "huò zhě",
+          "english": "or",
+          "audio": "audio/或者.mp3",
+          "important": true
+        },
+        {
+          "simplified": "号",
+          "traditional": "號",
+          "pinyin": "hào",
+          "english": "number",
+          "audio": "audio/号.mp3",
+          "important": true
+        },
+        {
+          "simplified": "附近",
+          "traditional": "附近",
+          "pinyin": "fù jìn",
+          "english": "nearby",
+          "audio": "audio/附近.mp3",
+          "important": true
+        },
+        {
+          "simplified": "事情",
+          "traditional": "事情",
+          "pinyin": "shì qíng",
+          "english": "matter, thing",
+          "audio": "audio/事情.mp3",
+          "important": true
+        },
+        {
+          "simplified": "准备",
+          "traditional": "準備",
+          "pinyin": "zhǔn bèi",
+          "english": "to prepare",
+          "audio": "audio/准备.mp3",
+          "important": true
+        },
+        {
+          "simplified": "付钱",
+          "traditional": "付錢",
+          "pinyin": "fù qián",
+          "english": "to pay money",
+          "audio": "audio/付钱.mp3",
+          "important": true
+        },
+        {
+          "simplified": "扫地",
+          "traditional": "掃地",
+          "pinyin": "sǎo dì",
+          "english": "to sweep the floor",
+          "audio": "audio/扫地.mp3",
+          "important": true
+        },
+        {
+          "simplified": "收到",
+          "traditional": "收到",
+          "pinyin": "shōu dào",
+          "english": "to receive",
+          "audio": "audio/收到.mp3",
+          "important": true
+        },
+        {
+          "simplified": "都知道",
+          "traditional": "都知道",
+          "pinyin": "dōu zhī dào",
+          "english": "all know",
+          "audio": "audio/都知道.mp3",
+          "important": true
+        },
+        {
+          "simplified": "报纸",
+          "traditional": "報紙",
+          "pinyin": "bào zhǐ",
+          "english": "newspaper",
+          "audio": "audio/报纸.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一束鲜花",
+          "traditional": "一束鮮花",
+          "pinyin": "yī shù xiān huā",
+          "english": "a bouquet of fresh flowers",
+          "audio": "audio/一束鲜花.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }

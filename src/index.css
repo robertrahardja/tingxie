@@ -341,6 +341,37 @@ body {
   }
 }
 
+/* Word Memory Image */
+.word-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.word-memory-image {
+  max-width: 200px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+  background: white;
+}
+
+@media (min-width: 768px) {
+  .word-image-container {
+    margin-bottom: 25px;
+  }
+
+  .word-memory-image {
+    max-width: 280px;
+    max-height: 200px;
+    border-radius: 20px;
+  }
+}
+
 /* Word section grid */
 .word-section {
   width: 100%;
