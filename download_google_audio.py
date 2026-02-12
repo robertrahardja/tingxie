@@ -10,21 +10,22 @@ from urllib.request import urlopen, Request
 from urllib.parse import quote
 
 WORDS = {
-    "盖子": "gài zi - lid, cover",
-    "按钮": "àn niǔ - button",
-    "伙伴": "huǒ bàn - partner, companion",
-    "背": "bēi - to carry on one's back",
-    "手表": "shǒu biǎo - watch, wristwatch",
-    "闹钟响": "nào zhōng xiǎng - alarm clock rings",
-    "颜色": "yán sè - color",
-    "习惯": "xí guàn - habit, to be accustomed to",
-    "睡觉": "shuì jiào - to sleep",
-    "改掉": "gǎi diào - to get rid of (a bad habit)",
-    "迟到": "chí dào - to be late",
-    "吸管": "xī guǎn - straw (drinking)",
-    "陪": "péi - to accompany",
-    "形状": "xíng zhuàng - shape",
-    "准时起床": "zhǔn shí qǐ chuáng - to get up on time",
+    "对错": "duì cuò - right and wrong",
+    "突然": "tū rán - suddenly",
+    "原谅": "yuán liàng - to forgive",
+    "弄破": "nòng pò - to break, to damage",
+    "应该": "yīng gāi - should, ought to",
+    "来不及": "lái bu jí - too late, not enough time",
+    "像": "xiàng - to resemble, like",
+    "跌倒": "diē dǎo - to fall down",
+    "立刻扶起": "lì kè fú qǐ - immediately help up",
+    "推开": "tuī kāi - to push away",
+    "理睬": "lǐ cǎi - to pay attention to, to acknowledge",
+    "扔": "rēng - to throw",
+    "谢谢": "xiè xiè - thank you",
+    "受伤": "shòu shāng - to be injured",
+    "爬起来": "pá qǐ lái - to get up, to climb up",
+    "不好意思": "bù hǎo yì si - embarrassed, sorry",
 }
 
 def download_google_tts(word):

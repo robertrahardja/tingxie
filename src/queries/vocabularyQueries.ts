@@ -1,6 +1,7 @@
 import { queryOptions } from '@tanstack/react-query'
 import type { VocabularyData, Word } from '@/types/vocabulary'
 import { CONSTANTS, STORAGE_KEYS } from '@/lib/constants'
+import { queryClient } from '@/lib/queryClient'
 
 async function fetchVocabulary(): Promise<VocabularyData> {
   // Try to load from localStorage cache first
@@ -71,6 +72,8 @@ async function refreshCacheInBackground(): Promise<void> {
       localStorage.setItem(STORAGE_KEYS.VOCABULARY_CACHE, JSON.stringify(newData))
       localStorage.setItem(STORAGE_KEYS.VOCABULARY_CACHE_TIMESTAMP, Date.now().toString())
       console.log('Cache refreshed in background')
+      // Invalidate TanStack Query so components re-render with new data
+      queryClient.setQueryData(['vocabulary'], newData)
     }
   } catch {
     // Silent fail - we're already using cache
