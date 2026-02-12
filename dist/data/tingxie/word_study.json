@@ -1,0 +1,334 @@
+{
+  "title": "字词学习",
+  "lesson": "P3HCL 字词学习",
+  "sections": [
+    {
+      "title": "一、识写字词",
+      "description": "Read and write vocabulary",
+      "words": [
+        {
+          "id": 1,
+          "simplified": "电脑展",
+          "traditional": "電腦展",
+          "pinyin": "diàn nǎo zhǎn",
+          "english": "computer exhibition",
+          "explanation": "举办电脑的展览。电脑：由许多电子零件组成的数据处理机器，能很快地进行运算和处理数据。",
+          "collocations": ["画展", "书展"],
+          "exampleSentence": "这周末，爸爸带我去新达城参观电脑展。",
+          "exampleHighlight": "电脑展",
+          "audio": "audio/电脑展.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 2,
+          "simplified": "旅游展",
+          "traditional": "旅遊展",
+          "pinyin": "lǚ yóu zhǎn",
+          "english": "travel exhibition",
+          "explanation": "举办旅游的展览。旅游：去外地游览观光。",
+          "collocations": [],
+          "exampleSentence": "2025新加坡旅游展览会，在滨海湾金沙会展中心举办。",
+          "exampleHighlight": "旅游展览会",
+          "audio": "audio/旅游展.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 3,
+          "simplified": "美食展",
+          "traditional": "美食展",
+          "pinyin": "měi shí zhǎn",
+          "english": "food exhibition",
+          "explanation": "举办美食的展览。美食：精致美味的食物。",
+          "collocations": [],
+          "exampleSentence": "去年的美食展，在新加坡博览中心第4展厅举办。",
+          "exampleHighlight": "美食展",
+          "audio": "audio/美食展.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 4,
+          "simplified": "多彩",
+          "traditional": "多彩",
+          "pinyin": "duō cǎi",
+          "english": "colourful; rich and varied",
+          "explanation": "指生活、经历、活动等内容丰富，充满乐趣和变化，不无聊。",
+          "collocations": ["丰富多彩", "生活多彩", "快乐多彩"],
+          "exampleSentence": "哥哥经常参加各种各样的活动，生活丰富多彩。",
+          "exampleHighlight": "多彩",
+          "audio": "audio/多彩.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 5,
+          "simplified": "特别",
+          "traditional": "特別",
+          "pinyin": "tè bié",
+          "english": "special; especially",
+          "explanation": "不一般；不普通；与众不同。",
+          "collocations": ["特别聪明", "特别兴奋", "十分特别"],
+          "exampleSentence": "今天是爸爸的生日，我准备了一份特别的礼物送给他。",
+          "exampleHighlight": "特别",
+          "audio": "audio/特别.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 6,
+          "simplified": "傍晚",
+          "traditional": "傍晚",
+          "pinyin": "bàng wǎn",
+          "english": "evening; dusk",
+          "explanation": "接近晚上的时候，也称"黄昏"。",
+          "collocations": ["傍晚时分"],
+          "exampleSentence": "每周六傍晚，爸爸都会带我去榜鹅公园骑脚车。",
+          "exampleHighlight": "傍晚",
+          "audio": "audio/傍晚.mp3",
+          "relatedChars": [
+            { "char": "旁", "pinyin": "páng", "word": "旁边", "wordPinyin": "páng biān" },
+            { "char": "膀", "pinyin": "bǎng", "word": "翅膀", "wordPinyin": "chì bǎng" }
+          ]
+        },
+        {
+          "id": 7,
+          "simplified": "脚踏车",
+          "traditional": "腳踏車",
+          "pinyin": "jiǎo tà chē",
+          "english": "bicycle",
+          "explanation": "自行车。",
+          "collocations": ["一辆脚踏车", "骑脚踏车"],
+          "exampleSentence": "过生日那天，爸爸送给我一辆蓝色脚踏车。",
+          "exampleHighlight": "脚踏车",
+          "audio": "audio/脚踏车.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 8,
+          "simplified": "或者",
+          "traditional": "或者",
+          "pinyin": "huò zhě",
+          "english": "or; either...or...",
+          "explanation": "表示从两种以上的事物中选择一种。",
+          "collocations": ["或者打球", "或者骑车"],
+          "exampleSentence": "周末，我们可以去参观电脑展或者美食展。",
+          "exampleHighlight": "或者",
+          "audio": "audio/或者.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 9,
+          "simplified": "号",
+          "traditional": "號",
+          "pinyin": "hào",
+          "english": "number; date",
+          "explanation": "日子；排定的次序或等级。",
+          "collocations": ["电话号码"],
+          "exampleSentence": "你的电话号码是多少？",
+          "exampleHighlight": "号",
+          "audio": "audio/号.mp3",
+          "relatedChars": [
+            { "char": "另", "pinyin": "lìng", "word": "另外", "wordPinyin": "lìng wài" }
+          ]
+        },
+        {
+          "id": 10,
+          "simplified": "附近",
+          "traditional": "附近",
+          "pinyin": "fù jìn",
+          "english": "nearby; in the vicinity",
+          "explanation": "不远的地方。",
+          "collocations": ["就在附近", "学校附近", "住家附近"],
+          "exampleSentence": "我住在学校的附近，每天走路上学。",
+          "exampleHighlight": "附近",
+          "audio": "audio/附近.mp3",
+          "wordDistinction": {
+            "word1": "附近",
+            "sentence1": "我住在学校的附近，每天走路上学。",
+            "word2": "靠近",
+            "sentence2": "你别靠近那条狗，它会咬人。"
+          },
+          "relatedChars": []
+        },
+        {
+          "id": 11,
+          "simplified": "事情",
+          "traditional": "事情",
+          "pinyin": "shì qing",
+          "english": "matter; thing; affair",
+          "explanation": "自然界和社会中的现象和活动。",
+          "collocations": ["一件事情", "处理事情"],
+          "exampleSentence": "我们在跟她讨论一件很重要的事情。",
+          "exampleHighlight": "事情",
+          "audio": "audio/事情.mp3",
+          "relatedChars": [
+            { "char": "清", "pinyin": "qīng", "word": "清楚", "wordPinyin": "qīng chǔ" },
+            { "char": "晴", "pinyin": "jīng", "word": "眼睛", "wordPinyin": "yǎn jīng" }
+          ]
+        },
+        {
+          "id": 12,
+          "simplified": "准备",
+          "traditional": "準備",
+          "pinyin": "zhǔn bèi",
+          "english": "to prepare; to get ready",
+          "explanation": "预先安排或制定计划。",
+          "collocations": ["准备比赛", "准备回家", "准备一切"],
+          "exampleSentence": "当我回到家时，妈妈已经准备好了晚饭。",
+          "exampleHighlight": "准备",
+          "audio": "audio/准备.mp3",
+          "relatedChars": [
+            { "char": "难", "pinyin": "nán", "word": "困难", "wordPinyin": "kùn nan" },
+            { "char": "谁", "pinyin": "shéi", "word": "是谁", "wordPinyin": "shì shéi" }
+          ]
+        },
+        {
+          "id": 13,
+          "simplified": "付钱",
+          "traditional": "付錢",
+          "pinyin": "fù qián",
+          "english": "to pay (money)",
+          "explanation": "买东西的时候给别人钱。",
+          "collocations": ["准备付钱"],
+          "exampleSentence": "买完东西后，我们就付钱离开了超市。",
+          "exampleHighlight": "付钱",
+          "audio": "audio/付钱.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 14,
+          "simplified": "扫地",
+          "traditional": "掃地",
+          "pinyin": "sǎo dì",
+          "english": "to sweep the floor",
+          "explanation": "用扫把清扫地上的脏东西。",
+          "collocations": [],
+          "exampleSentence": "姐姐正在扫地，她扫得很认真。",
+          "exampleHighlight": "扫地",
+          "audio": "audio/扫地.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 15,
+          "simplified": "收到",
+          "traditional": "收到",
+          "pinyin": "shōu dào",
+          "english": "to receive",
+          "explanation": "接收；获得。",
+          "collocations": ["收到礼物", "收到卡片"],
+          "exampleSentence": "生日那天，我收到了很多礼物。",
+          "exampleHighlight": "收到",
+          "audio": "audio/收到.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 16,
+          "simplified": "都",
+          "traditional": "都",
+          "pinyin": "dōu",
+          "english": "all; both; entirely",
+          "explanation": "表示全部。",
+          "collocations": [],
+          "exampleSentence": "儿童节那天，大家都能收到一份特别的礼物。",
+          "exampleHighlight": "都",
+          "audio": "audio/都.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 17,
+          "simplified": "知道",
+          "traditional": "知道",
+          "pinyin": "zhī dào",
+          "english": "to know",
+          "explanation": "懂得。",
+          "collocations": ["全都知道", "知道很多", "知道真相"],
+          "exampleSentence": "听了小明的话，大家才知道事情的真相。",
+          "exampleHighlight": "知道",
+          "audio": "audio/知道.mp3",
+          "relatedChars": []
+        }
+      ]
+    },
+    {
+      "title": "二、识读字词",
+      "description": "Read-only vocabulary",
+      "words": [
+        {
+          "id": 18,
+          "simplified": "展",
+          "traditional": "展",
+          "pinyin": "zhǎn",
+          "english": "to exhibit; to display",
+          "explanation": "陈列物品给人观赏。",
+          "collocations": ["参观书展", "展馆", "园艺展"],
+          "exampleSentence": "老师带学生们去看美术展览。",
+          "exampleHighlight": "展",
+          "audio": "audio/展.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 19,
+          "simplified": "报纸",
+          "traditional": "報紙",
+          "pinyin": "bào zhǐ",
+          "english": "newspaper",
+          "explanation": "以新闻为主要内容的定期出版物。",
+          "collocations": [],
+          "exampleSentence": "爷爷每天早上都要看报纸。",
+          "exampleHighlight": "报纸",
+          "audio": "audio/报纸.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 20,
+          "simplified": "杂志",
+          "traditional": "雜誌",
+          "pinyin": "zá zhì",
+          "english": "magazine",
+          "explanation": "定期出版的刊物。",
+          "collocations": ["阅读杂志", "爱看杂志"],
+          "exampleSentence": "妈妈平时喜欢看时尚杂志。",
+          "exampleHighlight": "杂志",
+          "audio": "audio/杂志.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 21,
+          "simplified": "束",
+          "traditional": "束",
+          "pinyin": "shù",
+          "english": "bundle; bunch (measure word)",
+          "explanation": "量词，用于捆在一起的东西。",
+          "collocations": ["一束花", "花束"],
+          "exampleSentence": "今天是妈妈的生日，我送她一束美丽的红玫瑰。",
+          "exampleHighlight": "束",
+          "audio": "audio/束.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 22,
+          "simplified": "鲜花",
+          "traditional": "鮮花",
+          "pinyin": "xiān huā",
+          "english": "fresh flowers",
+          "explanation": "新鲜的花朵。",
+          "collocations": ["一束鲜花"],
+          "exampleSentence": "公园里开满了五颜六色的鲜花。",
+          "exampleHighlight": "鲜花",
+          "audio": "audio/鲜花.mp3",
+          "relatedChars": []
+        },
+        {
+          "id": 23,
+          "simplified": "提",
+          "traditional": "提",
+          "pinyin": "tí",
+          "english": "to carry (in hand)",
+          "explanation": "垂手拿着（东西）。",
+          "collocations": [],
+          "exampleSentence": "老婆婆手里提着两袋沉甸甸的塑料袋。",
+          "exampleHighlight": "提",
+          "audio": "audio/提.mp3",
+          "relatedChars": []
+        }
+      ]
+    }
+  ]
+}

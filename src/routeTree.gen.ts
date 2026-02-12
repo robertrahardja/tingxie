@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WordStudyRouteImport } from './routes/word-study'
 import { Route as VocabularyRouteImport } from './routes/vocabulary'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SchoolTingxieRouteImport } from './routes/school-tingxie'
@@ -24,6 +25,11 @@ import { Route as FamilyRouteImport } from './routes/family'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WordStudyRoute = WordStudyRouteImport.update({
+  id: '/word-study',
+  path: '/word-study',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VocabularyRoute = VocabularyRouteImport.update({
   id: '/vocabulary',
   path: '/vocabulary',
@@ -110,6 +116,7 @@ export interface FileRoutesByFullPath {
   '/school-tingxie': typeof SchoolTingxieRoute
   '/settings': typeof SettingsRoute
   '/vocabulary': typeof VocabularyRoute
+  '/word-study': typeof WordStudyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -126,6 +133,7 @@ export interface FileRoutesByTo {
   '/school-tingxie': typeof SchoolTingxieRoute
   '/settings': typeof SettingsRoute
   '/vocabulary': typeof VocabularyRoute
+  '/word-study': typeof WordStudyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -143,6 +151,7 @@ export interface FileRoutesById {
   '/school-tingxie': typeof SchoolTingxieRoute
   '/settings': typeof SettingsRoute
   '/vocabulary': typeof VocabularyRoute
+  '/word-study': typeof WordStudyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -161,6 +170,7 @@ export interface FileRouteTypes {
     | '/school-tingxie'
     | '/settings'
     | '/vocabulary'
+    | '/word-study'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -177,6 +187,7 @@ export interface FileRouteTypes {
     | '/school-tingxie'
     | '/settings'
     | '/vocabulary'
+    | '/word-study'
   id:
     | '__root__'
     | '/'
@@ -193,6 +204,7 @@ export interface FileRouteTypes {
     | '/school-tingxie'
     | '/settings'
     | '/vocabulary'
+    | '/word-study'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -210,10 +222,18 @@ export interface RootRouteChildren {
   SchoolTingxieRoute: typeof SchoolTingxieRoute
   SettingsRoute: typeof SettingsRoute
   VocabularyRoute: typeof VocabularyRoute
+  WordStudyRoute: typeof WordStudyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/word-study': {
+      id: '/word-study'
+      path: '/word-study'
+      fullPath: '/word-study'
+      preLoaderRoute: typeof WordStudyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/vocabulary': {
       id: '/vocabulary'
       path: '/vocabulary'
@@ -330,6 +350,7 @@ const rootRouteChildren: RootRouteChildren = {
   SchoolTingxieRoute: SchoolTingxieRoute,
   SettingsRoute: SettingsRoute,
   VocabularyRoute: VocabularyRoute,
+  WordStudyRoute: WordStudyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
