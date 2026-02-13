@@ -3956,6 +3956,139 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 80,
+      "words": [
+        {
+          "simplified": "对错",
+          "traditional": "對錯",
+          "pinyin": "duì cuò",
+          "english": "right and wrong",
+          "audio": "audio/对错.mp3",
+          "important": true
+        },
+        {
+          "simplified": "突然",
+          "traditional": "突然",
+          "pinyin": "tū rán",
+          "english": "suddenly",
+          "audio": "audio/突然.mp3",
+          "important": true
+        },
+        {
+          "simplified": "原谅",
+          "traditional": "原諒",
+          "pinyin": "yuán liàng",
+          "english": "to forgive",
+          "audio": "audio/原谅.mp3",
+          "important": true
+        },
+        {
+          "simplified": "弄破",
+          "traditional": "弄破",
+          "pinyin": "nòng pò",
+          "english": "to break, to damage",
+          "audio": "audio/弄破.mp3",
+          "important": true
+        },
+        {
+          "simplified": "应该",
+          "traditional": "應該",
+          "pinyin": "yīng gāi",
+          "english": "should, ought to",
+          "audio": "audio/应该.mp3",
+          "important": true
+        },
+        {
+          "simplified": "来不及",
+          "traditional": "來不及",
+          "pinyin": "lái bu jí",
+          "english": "too late, not enough time",
+          "audio": "audio/来不及.mp3",
+          "important": true
+        },
+        {
+          "simplified": "像",
+          "traditional": "像",
+          "pinyin": "xiàng",
+          "english": "to resemble, like",
+          "audio": "audio/像.mp3",
+          "important": true
+        },
+        {
+          "simplified": "跌倒",
+          "traditional": "跌倒",
+          "pinyin": "diē dǎo",
+          "english": "to fall down",
+          "audio": "audio/跌倒.mp3",
+          "important": true
+        },
+        {
+          "simplified": "立刻扶起",
+          "traditional": "立刻扶起",
+          "pinyin": "lì kè fú qǐ",
+          "english": "immediately help up",
+          "audio": "audio/立刻扶起.mp3",
+          "important": true
+        },
+        {
+          "simplified": "推开",
+          "traditional": "推開",
+          "pinyin": "tuī kāi",
+          "english": "to push away",
+          "audio": "audio/推开.mp3",
+          "important": true
+        },
+        {
+          "simplified": "理睬",
+          "traditional": "理睬",
+          "pinyin": "lǐ cǎi",
+          "english": "to pay attention to, to acknowledge",
+          "audio": "audio/理睬.mp3",
+          "important": true
+        },
+        {
+          "simplified": "扔",
+          "traditional": "扔",
+          "pinyin": "rēng",
+          "english": "to throw",
+          "audio": "audio/扔.mp3",
+          "important": true
+        },
+        {
+          "simplified": "谢谢",
+          "traditional": "謝謝",
+          "pinyin": "xiè xiè",
+          "english": "thank you",
+          "audio": "audio/谢谢.mp3",
+          "important": true
+        },
+        {
+          "simplified": "受伤",
+          "traditional": "受傷",
+          "pinyin": "shòu shāng",
+          "english": "to be injured",
+          "audio": "audio/受伤.mp3",
+          "important": true
+        },
+        {
+          "simplified": "爬起来",
+          "traditional": "爬起來",
+          "pinyin": "pá qǐ lái",
+          "english": "to get up, to climb up",
+          "audio": "audio/爬起来.mp3",
+          "important": true
+        },
+        {
+          "simplified": "不好意思",
+          "traditional": "不好意思",
+          "pinyin": "bù hǎo yì si",
+          "english": "embarrassed, sorry",
+          "audio": "audio/不好意思.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
