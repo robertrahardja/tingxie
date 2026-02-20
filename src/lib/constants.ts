@@ -111,7 +111,8 @@ export const NAV_ITEMS: NavItem[] = [
       { href: '/family', label: '家庭称呼' },
       { href: '/instructions', label: '指示词汇' },
       { href: '/p3hcl-wupin-interactive', label: '互动阅读' },
-      { href: '/koushi-family-cohesion', label: '口试练习' },
+      { href: '/koushi-family-cohesion', label: '口试：家庭凝聚力' },
+      { href: '/koushi-traffic-safety', label: '口试：交通安全' },
     ],
   },
 ]
