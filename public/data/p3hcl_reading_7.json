@@ -1,0 +1,129 @@
+{
+  "title": "P3 Higher Chinese Reading Practice",
+  "titleChinese": "三年级阅读练习",
+  "audioFile": "7_P3HCL.mp4",
+  "texts": [
+    {
+      "title": "短文一：拾金不昧",
+      "paragraphs": [
+        "国光在公园里玩时，看见草地上有一个钱包。他走上前拾起来一看，发现里面有十块钱。他心想：真是太幸运了！我可以用这些钱去买玩具了！这时，一个女生一边哭一边走了过来。国光看见了，问她发生了什么事。她告诉国光，她的钱包不见了，不能买文具和课本了。国光听了，很不好意思，立刻把捡到的钱包还给了她。"
+      ]
+    },
+    {
+      "title": "短文二：吹牛",
+      "paragraphs": [
+        "小华和小安都很爱吹牛。一天，小华对小安说：「我的本事可大了！我一学鸟叫，所有的小鸟就会跟着叫起来。」小安听了，不服气地说：「这算什么？我学公鸡叫，连太阳听了都要马上起床工作呢！」林老师刚好路过，听见了，便对他们说：「真正有本事的人是不会说自己了不起的。」"
+      ]
+    },
+    {
+      "title": "短文三：细心的孩子",
+      "paragraphs": [
+        "姐姐对小丽说：「我考你一个问题，看你是不是细心的孩子。」「好！那你快问啊！」小丽着急地说。「有一座桥，每次只能让一只羊走过去。一天，有两只羊要过桥，一只是从东边过来，一只要往西边去。你说，它们能同时过桥吗？」姐姐问道。「当然不能！」小丽立刻回答道。姐姐摇摇头说：「你还是那么粗心啊！」"
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "拾金不昧",
+      "pinyin": "shí jīn bù mèi",
+      "english": "honest in not pocketing found money",
+      "explanation": "捡到钱财不据为己有，形容人的高尚品德"
+    },
+    {
+      "word": "钱包",
+      "pinyin": "qián bāo",
+      "english": "wallet, purse",
+      "explanation": "装钱的小袋子"
+    },
+    {
+      "word": "拾起来",
+      "pinyin": "shí qǐ lái",
+      "english": "pick up",
+      "explanation": "从地上捡起某物"
+    },
+    {
+      "word": "幸运",
+      "pinyin": "xìng yùn",
+      "english": "lucky, fortunate",
+      "explanation": "好运气，遇到好事"
+    },
+    {
+      "word": "文具",
+      "pinyin": "wén jù",
+      "english": "stationery",
+      "explanation": "学习用的笔、本子等物品"
+    },
+    {
+      "word": "不好意思",
+      "pinyin": "bù hǎo yì si",
+      "english": "embarrassed, feel ashamed",
+      "explanation": "感到抱歉或羞愧"
+    },
+    {
+      "word": "立刻",
+      "pinyin": "lì kè",
+      "english": "immediately, at once",
+      "explanation": "马上，一点也不耽搁"
+    },
+    {
+      "word": "吹牛",
+      "pinyin": "chuī niú",
+      "english": "brag, boast",
+      "explanation": "说大话，夸张地说自己的本领"
+    },
+    {
+      "word": "本事",
+      "pinyin": "běn shì",
+      "english": "ability, skill",
+      "explanation": "本领，能力"
+    },
+    {
+      "word": "不服气",
+      "pinyin": "bù fú qì",
+      "english": "unwilling to accept, unconvinced",
+      "explanation": "心里不同意，不甘心"
+    },
+    {
+      "word": "刚好",
+      "pinyin": "gāng hǎo",
+      "english": "just right, happen to",
+      "explanation": "正好，恰好"
+    },
+    {
+      "word": "路过",
+      "pinyin": "lù guò",
+      "english": "pass by",
+      "explanation": "从某处经过"
+    },
+    {
+      "word": "了不起",
+      "pinyin": "liǎo bù qǐ",
+      "english": "amazing, remarkable",
+      "explanation": "很厉害，很出色"
+    },
+    {
+      "word": "细心",
+      "pinyin": "xì xīn",
+      "english": "careful, attentive",
+      "explanation": "仔细，注意细节"
+    },
+    {
+      "word": "着急",
+      "pinyin": "zháo jí",
+      "english": "anxious, worried",
+      "explanation": "心里很急，不耐烦"
+    },
+    {
+      "word": "同时",
+      "pinyin": "tóng shí",
+      "english": "at the same time, simultaneously",
+      "explanation": "在同一个时间"
+    },
+    {
+      "word": "粗心",
+      "pinyin": "cū xīn",
+      "english": "careless",
+      "explanation": "不仔细，不注意细节"
+    }
+  ]
+}

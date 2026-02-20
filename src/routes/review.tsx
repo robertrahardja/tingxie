@@ -61,8 +61,16 @@ function ReviewPage() {
     return allWords.filter((word) => unknownWords.has(word.simplified))
   }, [vocabularyData, unknownWords])
 
-  const currentWord = reviewWords[currentWordIndex]
   const totalWords = reviewWords.length
+
+  // Reset index if out of bounds
+  useEffect(() => {
+    if (totalWords > 0 && currentWordIndex >= totalWords) {
+      setCurrentWordIndex(0)
+    }
+  }, [totalWords, currentWordIndex])
+
+  const currentWord = reviewWords[currentWordIndex]
 
   // Handle assessment
   const handleKnow = () => {
@@ -134,8 +142,8 @@ function ReviewPage() {
     )
   }
 
-  // No words to review state
-  if (totalWords === 0) {
+  // No words to review state or no current word
+  if (totalWords === 0 || !currentWord) {
     return (
       <div>
         {/* Header */}

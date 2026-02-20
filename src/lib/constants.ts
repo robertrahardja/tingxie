@@ -95,18 +95,17 @@ export interface NavItem {
 export const NAV_ITEMS: NavItem[] = [
   // Main tingxie pages
   { href: '/', label: '最新词语' },
-  { href: '/word-study', label: '字词学习' },
+  { href: '/phrase-matching', label: '词语搭配' },
   { href: '/p3hcl-reading-sync', label: '阅读练习' },
   { href: '/school-tingxie', label: '学校听写' },
   { href: '/review', label: '复习词语' },
-  { href: '/vocabulary', label: '词汇浏览' },
   { href: '/dashboard', label: '家长看板' },
   { href: '/settings', label: '设置' },
   // Archive folder with other pages
   {
     label: '📁 更多练习',
     children: [
-      { href: '/phrase-matching', label: '词语搭配' },
+      { href: '/vocabulary', label: '词汇浏览' },
       { href: '/handwriting', label: '笔画练习' },
       { href: '/radicals', label: '部首学习' },
       { href: '/family', label: '家庭称呼' },

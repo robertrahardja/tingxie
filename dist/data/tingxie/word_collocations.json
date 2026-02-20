@@ -1,0 +1,199 @@
+{
+  "title": "词语搭配",
+  "titleEnglish": "Word Collocations",
+  "description": "Reading vocabulary - word collocations and phrases",
+  "vocabulary": [
+    {
+      "id": 1,
+      "simplified": "故意撞倒",
+      "traditional": "故意撞倒",
+      "english": "deliberately bump into / intentionally knock down",
+      "audio": "audio/故意撞倒.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 2,
+      "simplified": "原谅别人",
+      "traditional": "原諒別人",
+      "english": "forgive others",
+      "audio": "audio/原谅别人.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 3,
+      "simplified": "请求原谅",
+      "traditional": "請求原諒",
+      "english": "ask for forgiveness",
+      "audio": "audio/请求原谅.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 4,
+      "simplified": "弄破书本",
+      "traditional": "弄破書本",
+      "english": "tear / damage a book",
+      "audio": "audio/弄破书本.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 5,
+      "simplified": "弄破东西",
+      "traditional": "弄破東西",
+      "english": "break / damage something",
+      "audio": "audio/弄破东西.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 6,
+      "simplified": "来不及",
+      "traditional": "來不及",
+      "english": "too late / not enough time",
+      "audio": "audio/来不及.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 7,
+      "simplified": "突然出现",
+      "traditional": "突然出現",
+      "english": "suddenly appear",
+      "audio": "audio/突然出现.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 8,
+      "simplified": "突然跌倒",
+      "traditional": "突然跌倒",
+      "english": "suddenly fall down",
+      "audio": "audio/突然跌倒.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 9,
+      "simplified": "突然发生",
+      "traditional": "突然發生",
+      "english": "suddenly happen / occur unexpectedly",
+      "audio": "audio/突然发生.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 10,
+      "simplified": "爬起来",
+      "traditional": "爬起來",
+      "english": "get up / climb up",
+      "audio": "audio/爬起来.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 11,
+      "simplified": "身体受伤",
+      "traditional": "身體受傷",
+      "english": "be injured / get hurt",
+      "audio": "audio/身体受伤.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 12,
+      "simplified": "跌倒受伤",
+      "traditional": "跌倒受傷",
+      "english": "fall and get injured",
+      "audio": "audio/跌倒受伤.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 13,
+      "simplified": "应该努力",
+      "traditional": "應該努力",
+      "english": "should work hard / ought to strive",
+      "audio": "audio/应该努力.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 14,
+      "simplified": "应该用功",
+      "traditional": "應該用功",
+      "english": "should study hard / ought to be diligent",
+      "audio": "audio/应该用功.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 15,
+      "simplified": "应该学习",
+      "traditional": "應該學習",
+      "english": "should learn / ought to study",
+      "audio": "audio/应该学习.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 16,
+      "simplified": "太不应该",
+      "traditional": "太不應該",
+      "english": "absolutely should not / very inappropriate",
+      "audio": "audio/太不应该.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 17,
+      "simplified": "不好意思",
+      "traditional": "不好意思",
+      "english": "embarrassed / sorry / feel awkward",
+      "audio": "audio/不好意思.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 18,
+      "simplified": "又硬又掌",
+      "traditional": "又硬又掌",
+      "english": "hard and tight / firm grip",
+      "audio": "audio/又硬又掌.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 19,
+      "simplified": "讲故事比赛",
+      "traditional": "講故事比賽",
+      "english": "story-telling competition",
+      "audio": "audio/讲故事比赛.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 20,
+      "simplified": "参加比赛",
+      "traditional": "參加比賽",
+      "english": "participate in competition / join a contest",
+      "audio": "audio/参加比赛.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 21,
+      "simplified": "篮球比赛",
+      "traditional": "籃球比賽",
+      "english": "basketball game / match",
+      "audio": "audio/篮球比赛.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 22,
+      "simplified": "没关系",
+      "traditional": "沒關係",
+      "english": "it doesn't matter / no problem",
+      "audio": "audio/没关系.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 23,
+      "simplified": "不要紧",
+      "traditional": "不要緊",
+      "english": "it doesn't matter / no worries",
+      "audio": "audio/不要紧.mp3",
+      "type": "collocation"
+    },
+    {
+      "id": 24,
+      "simplified": "乱扔垃圾",
+      "traditional": "亂扔垃圾",
+      "english": "litter / throw trash carelessly",
+      "audio": "audio/乱扔垃圾.mp3",
+      "type": "collocation"
+    }
+  ]
+}

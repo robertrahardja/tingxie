@@ -1,0 +1,796 @@
+{
+  "wordDefinitions": {
+    "国光": {
+      "pinyin": "Guó Guāng",
+      "english": "Guo Guang (name)",
+      "explanation": "人名",
+      "audio": "audio/国光.mp3"
+    },
+    "公园": {
+      "pinyin": "gōng yuán",
+      "english": "park",
+      "explanation": "供公众游玩休息的场所",
+      "audio": "audio/公园.mp3"
+    },
+    "玩": {
+      "pinyin": "wán",
+      "english": "play",
+      "explanation": "游戏，娱乐",
+      "audio": "audio/玩.mp3"
+    },
+    "草地": {
+      "pinyin": "cǎo dì",
+      "english": "lawn, grassland",
+      "explanation": "长满草的地方",
+      "audio": "audio/草地.mp3"
+    },
+    "钱包": {
+      "pinyin": "qián bāo",
+      "english": "wallet, purse",
+      "explanation": "装钱的小袋子",
+      "audio": "audio/钱包.mp3"
+    },
+    "走上前": {
+      "pinyin": "zǒu shàng qián",
+      "english": "walk forward",
+      "explanation": "向前走去",
+      "audio": "audio/走上前.mp3"
+    },
+    "拾起来": {
+      "pinyin": "shí qǐ lái",
+      "english": "pick up",
+      "explanation": "从地上捡起某物",
+      "audio": "audio/拾起来.mp3"
+    },
+    "发现": {
+      "pinyin": "fā xiàn",
+      "english": "discover, find",
+      "explanation": "看到或找到",
+      "audio": "audio/发现.mp3"
+    },
+    "里面": {
+      "pinyin": "lǐ miàn",
+      "english": "inside",
+      "explanation": "在某物的内部",
+      "audio": "audio/里面.mp3"
+    },
+    "十块钱": {
+      "pinyin": "shí kuài qián",
+      "english": "ten dollars",
+      "explanation": "十元",
+      "audio": "audio/十块钱.mp3"
+    },
+    "心想": {
+      "pinyin": "xīn xiǎng",
+      "english": "think to oneself",
+      "explanation": "在心里想",
+      "audio": "audio/心想.mp3"
+    },
+    "真是": {
+      "pinyin": "zhēn shì",
+      "english": "really is",
+      "explanation": "确实是",
+      "audio": "audio/真是.mp3"
+    },
+    "太": {
+      "pinyin": "tài",
+      "english": "too, very",
+      "explanation": "非常",
+      "audio": "audio/太.mp3"
+    },
+    "幸运": {
+      "pinyin": "xìng yùn",
+      "english": "lucky, fortunate",
+      "explanation": "好运气，遇到好事",
+      "audio": "audio/幸运.mp3"
+    },
+    "可以": {
+      "pinyin": "kě yǐ",
+      "english": "can, may",
+      "explanation": "能够",
+      "audio": "audio/可以.mp3"
+    },
+    "用": {
+      "pinyin": "yòng",
+      "english": "use",
+      "explanation": "使用",
+      "audio": "audio/用.mp3"
+    },
+    "这些": {
+      "pinyin": "zhè xiē",
+      "english": "these",
+      "explanation": "这一些",
+      "audio": "audio/这些.mp3"
+    },
+    "钱": {
+      "pinyin": "qián",
+      "english": "money",
+      "explanation": "货币",
+      "audio": "audio/钱.mp3"
+    },
+    "去": {
+      "pinyin": "qù",
+      "english": "go",
+      "explanation": "到某处",
+      "audio": "audio/去.mp3"
+    },
+    "买": {
+      "pinyin": "mǎi",
+      "english": "buy",
+      "explanation": "购买",
+      "audio": "audio/买.mp3"
+    },
+    "玩具": {
+      "pinyin": "wán jù",
+      "english": "toy",
+      "explanation": "供儿童玩的东西",
+      "audio": "audio/玩具.mp3"
+    },
+    "这时": {
+      "pinyin": "zhè shí",
+      "english": "at this time",
+      "explanation": "在这个时候",
+      "audio": "audio/这时.mp3"
+    },
+    "女生": {
+      "pinyin": "nǚ shēng",
+      "english": "girl, female student",
+      "explanation": "女孩子",
+      "audio": "audio/女生.mp3"
+    },
+    "一边": {
+      "pinyin": "yī biān",
+      "english": "while (doing)",
+      "explanation": "同时",
+      "audio": "audio/一边.mp3"
+    },
+    "哭": {
+      "pinyin": "kū",
+      "english": "cry",
+      "explanation": "流眼泪",
+      "audio": "audio/哭.mp3"
+    },
+    "走了过来": {
+      "pinyin": "zǒu le guò lái",
+      "english": "walked over",
+      "explanation": "走到这里来",
+      "audio": "audio/走了过来.mp3"
+    },
+    "看见": {
+      "pinyin": "kàn jiàn",
+      "english": "see",
+      "explanation": "用眼睛看到",
+      "audio": "audio/看见.mp3"
+    },
+    "问": {
+      "pinyin": "wèn",
+      "english": "ask",
+      "explanation": "询问",
+      "audio": "audio/问.mp3"
+    },
+    "她": {
+      "pinyin": "tā",
+      "english": "she, her",
+      "explanation": "女性第三人称",
+      "audio": "audio/她.mp3"
+    },
+    "发生": {
+      "pinyin": "fā shēng",
+      "english": "happen, occur",
+      "explanation": "出现",
+      "audio": "audio/发生.mp3"
+    },
+    "什么事": {
+      "pinyin": "shén me shì",
+      "english": "what matter",
+      "explanation": "什么情况",
+      "audio": "audio/什么事.mp3"
+    },
+    "告诉": {
+      "pinyin": "gào su",
+      "english": "tell",
+      "explanation": "让别人知道",
+      "audio": "audio/告诉.mp3"
+    },
+    "不见了": {
+      "pinyin": "bù jiàn le",
+      "english": "disappeared, lost",
+      "explanation": "找不到了",
+      "audio": "audio/不见了.mp3"
+    },
+    "不能": {
+      "pinyin": "bù néng",
+      "english": "cannot",
+      "explanation": "没有能力",
+      "audio": "audio/不能.mp3"
+    },
+    "文具": {
+      "pinyin": "wén jù",
+      "english": "stationery",
+      "explanation": "学习用的笔、本子等",
+      "audio": "audio/文具.mp3"
+    },
+    "课本": {
+      "pinyin": "kè běn",
+      "english": "textbook",
+      "explanation": "上课用的书",
+      "audio": "audio/课本.mp3"
+    },
+    "听了": {
+      "pinyin": "tīng le",
+      "english": "heard, after hearing",
+      "explanation": "听到之后",
+      "audio": "audio/听了.mp3"
+    },
+    "很": {
+      "pinyin": "hěn",
+      "english": "very",
+      "explanation": "非常",
+      "audio": "audio/很.mp3"
+    },
+    "不好意思": {
+      "pinyin": "bù hǎo yì si",
+      "english": "embarrassed, sorry",
+      "explanation": "感到抱歉或羞愧",
+      "audio": "audio/不好意思.mp3"
+    },
+    "立刻": {
+      "pinyin": "lì kè",
+      "english": "immediately",
+      "explanation": "马上",
+      "audio": "audio/立刻.mp3"
+    },
+    "把": {
+      "pinyin": "bǎ",
+      "english": "particle (disposal)",
+      "explanation": "处置介词",
+      "audio": "audio/把.mp3"
+    },
+    "捡到": {
+      "pinyin": "jiǎn dào",
+      "english": "picked up, found",
+      "explanation": "拾到",
+      "audio": "audio/捡到.mp3"
+    },
+    "还给": {
+      "pinyin": "huán gěi",
+      "english": "return to, give back",
+      "explanation": "归还",
+      "audio": "audio/还给.mp3"
+    },
+    "小华": {
+      "pinyin": "Xiǎo Huá",
+      "english": "Xiao Hua (name)",
+      "explanation": "人名",
+      "audio": "audio/小华.mp3"
+    },
+    "小安": {
+      "pinyin": "Xiǎo Ān",
+      "english": "Xiao An (name)",
+      "explanation": "人名",
+      "audio": "audio/小安.mp3"
+    },
+    "都": {
+      "pinyin": "dōu",
+      "english": "all, both",
+      "explanation": "全部",
+      "audio": "audio/都.mp3"
+    },
+    "爱": {
+      "pinyin": "ài",
+      "english": "love, like",
+      "explanation": "喜欢",
+      "audio": "audio/爱.mp3"
+    },
+    "吹牛": {
+      "pinyin": "chuī niú",
+      "english": "brag, boast",
+      "explanation": "说大话",
+      "audio": "audio/吹牛.mp3"
+    },
+    "一天": {
+      "pinyin": "yī tiān",
+      "english": "one day",
+      "explanation": "某一日",
+      "audio": "audio/一天.mp3"
+    },
+    "对": {
+      "pinyin": "duì",
+      "english": "to, toward",
+      "explanation": "向",
+      "audio": "audio/对.mp3"
+    },
+    "说": {
+      "pinyin": "shuō",
+      "english": "say, speak",
+      "explanation": "讲话",
+      "audio": "audio/说.mp3"
+    },
+    "我的": {
+      "pinyin": "wǒ de",
+      "english": "my",
+      "explanation": "属于我的",
+      "audio": "audio/我的.mp3"
+    },
+    "本事": {
+      "pinyin": "běn shì",
+      "english": "ability, skill",
+      "explanation": "本领",
+      "audio": "audio/本事.mp3"
+    },
+    "可": {
+      "pinyin": "kě",
+      "english": "really, indeed",
+      "explanation": "真的",
+      "audio": "audio/可.mp3"
+    },
+    "大了": {
+      "pinyin": "dà le",
+      "english": "great, big",
+      "explanation": "很厉害",
+      "audio": "audio/大了.mp3"
+    },
+    "我": {
+      "pinyin": "wǒ",
+      "english": "I, me",
+      "explanation": "第一人称",
+      "audio": "audio/我.mp3"
+    },
+    "一": {
+      "pinyin": "yī",
+      "english": "once, as soon as",
+      "explanation": "一旦",
+      "audio": "audio/一.mp3"
+    },
+    "学": {
+      "pinyin": "xué",
+      "english": "imitate, learn",
+      "explanation": "模仿",
+      "audio": "audio/学.mp3"
+    },
+    "鸟叫": {
+      "pinyin": "niǎo jiào",
+      "english": "bird call",
+      "explanation": "鸟的叫声",
+      "audio": "audio/鸟叫.mp3"
+    },
+    "所有": {
+      "pinyin": "suǒ yǒu",
+      "english": "all",
+      "explanation": "全部",
+      "audio": "audio/所有.mp3"
+    },
+    "小鸟": {
+      "pinyin": "xiǎo niǎo",
+      "english": "little bird",
+      "explanation": "鸟儿",
+      "audio": "audio/小鸟.mp3"
+    },
+    "就": {
+      "pinyin": "jiù",
+      "english": "then, will",
+      "explanation": "就会",
+      "audio": "audio/就.mp3"
+    },
+    "跟着": {
+      "pinyin": "gēn zhe",
+      "english": "follow along",
+      "explanation": "跟随",
+      "audio": "audio/跟着.mp3"
+    },
+    "叫起来": {
+      "pinyin": "jiào qǐ lái",
+      "english": "start calling",
+      "explanation": "开始叫",
+      "audio": "audio/叫起来.mp3"
+    },
+    "不服气": {
+      "pinyin": "bù fú qì",
+      "english": "unconvinced",
+      "explanation": "不甘心",
+      "audio": "audio/不服气.mp3"
+    },
+    "地": {
+      "pinyin": "de",
+      "english": "particle (manner)",
+      "explanation": "表示方式",
+      "audio": "audio/地.mp3"
+    },
+    "这": {
+      "pinyin": "zhè",
+      "english": "this",
+      "explanation": "这个",
+      "audio": "audio/这.mp3"
+    },
+    "算": {
+      "pinyin": "suàn",
+      "english": "count as",
+      "explanation": "当作",
+      "audio": "audio/算.mp3"
+    },
+    "什么": {
+      "pinyin": "shén me",
+      "english": "what",
+      "explanation": "哪样东西",
+      "audio": "audio/什么.mp3"
+    },
+    "公鸡": {
+      "pinyin": "gōng jī",
+      "english": "rooster",
+      "explanation": "雄鸡",
+      "audio": "audio/公鸡.mp3"
+    },
+    "连": {
+      "pinyin": "lián",
+      "english": "even",
+      "explanation": "甚至",
+      "audio": "audio/连.mp3"
+    },
+    "太阳": {
+      "pinyin": "tài yáng",
+      "english": "sun",
+      "explanation": "太阳",
+      "audio": "audio/太阳.mp3"
+    },
+    "要": {
+      "pinyin": "yào",
+      "english": "will",
+      "explanation": "将要",
+      "audio": "audio/要.mp3"
+    },
+    "马上": {
+      "pinyin": "mǎ shàng",
+      "english": "immediately",
+      "explanation": "立刻",
+      "audio": "audio/马上.mp3"
+    },
+    "起床": {
+      "pinyin": "qǐ chuáng",
+      "english": "get up",
+      "explanation": "起来",
+      "audio": "audio/起床.mp3"
+    },
+    "工作": {
+      "pinyin": "gōng zuò",
+      "english": "work",
+      "explanation": "劳动",
+      "audio": "audio/工作.mp3"
+    },
+    "呢": {
+      "pinyin": "ne",
+      "english": "particle (emphasis)",
+      "explanation": "语气词",
+      "audio": "audio/呢.mp3"
+    },
+    "林老师": {
+      "pinyin": "Lín lǎo shī",
+      "english": "Teacher Lin",
+      "explanation": "林老师",
+      "audio": "audio/林老师.mp3"
+    },
+    "刚好": {
+      "pinyin": "gāng hǎo",
+      "english": "just happen to",
+      "explanation": "正好",
+      "audio": "audio/刚好.mp3"
+    },
+    "路过": {
+      "pinyin": "lù guò",
+      "english": "pass by",
+      "explanation": "经过",
+      "audio": "audio/路过.mp3"
+    },
+    "听见": {
+      "pinyin": "tīng jiàn",
+      "english": "hear",
+      "explanation": "听到",
+      "audio": "audio/听见.mp3"
+    },
+    "便": {
+      "pinyin": "biàn",
+      "english": "then, thereupon",
+      "explanation": "就",
+      "audio": "audio/便.mp3"
+    },
+    "他们": {
+      "pinyin": "tā men",
+      "english": "they, them",
+      "explanation": "第三人称复数",
+      "audio": "audio/他们.mp3"
+    },
+    "真正": {
+      "pinyin": "zhēn zhèng",
+      "english": "real, true",
+      "explanation": "真的",
+      "audio": "audio/真正.mp3"
+    },
+    "有": {
+      "pinyin": "yǒu",
+      "english": "there is/are",
+      "explanation": "存在",
+      "audio": "audio/有.mp3"
+    },
+    "人": {
+      "pinyin": "rén",
+      "english": "person",
+      "explanation": "人类",
+      "audio": "audio/人.mp3"
+    },
+    "是": {
+      "pinyin": "shì",
+      "english": "is, be",
+      "explanation": "表判断",
+      "audio": "audio/是.mp3"
+    },
+    "不会": {
+      "pinyin": "bù huì",
+      "english": "will not",
+      "explanation": "不会做",
+      "audio": "audio/不会.mp3"
+    },
+    "自己": {
+      "pinyin": "zì jǐ",
+      "english": "oneself",
+      "explanation": "自身",
+      "audio": "audio/自己.mp3"
+    },
+    "了不起": {
+      "pinyin": "liǎo bù qǐ",
+      "english": "amazing, great",
+      "explanation": "很厉害",
+      "audio": "audio/了不起.mp3"
+    },
+    "姐姐": {
+      "pinyin": "jiě jie",
+      "english": "older sister",
+      "explanation": "比自己大的女性亲属",
+      "audio": "audio/姐姐.mp3"
+    },
+    "小丽": {
+      "pinyin": "Xiǎo Lì",
+      "english": "Xiao Li (name)",
+      "explanation": "人名",
+      "audio": "audio/小丽.mp3"
+    },
+    "考": {
+      "pinyin": "kǎo",
+      "english": "test, quiz",
+      "explanation": "测验",
+      "audio": "audio/考.mp3"
+    },
+    "你": {
+      "pinyin": "nǐ",
+      "english": "you",
+      "explanation": "第二人称",
+      "audio": "audio/你.mp3"
+    },
+    "一个": {
+      "pinyin": "yí gè",
+      "english": "one, a",
+      "explanation": "一个",
+      "audio": "audio/一个.mp3"
+    },
+    "问题": {
+      "pinyin": "wèn tí",
+      "english": "question, problem",
+      "explanation": "需要回答的事",
+      "audio": "audio/问题.mp3"
+    },
+    "看": {
+      "pinyin": "kàn",
+      "english": "see if",
+      "explanation": "看看",
+      "audio": "audio/看.mp3"
+    },
+    "是不是": {
+      "pinyin": "shì bu shì",
+      "english": "whether or not",
+      "explanation": "是否",
+      "audio": "audio/是不是.mp3"
+    },
+    "细心": {
+      "pinyin": "xì xīn",
+      "english": "careful, attentive",
+      "explanation": "仔细",
+      "audio": "audio/细心.mp3"
+    },
+    "孩子": {
+      "pinyin": "hái zi",
+      "english": "child",
+      "explanation": "小孩",
+      "audio": "audio/孩子.mp3"
+    },
+    "好": {
+      "pinyin": "hǎo",
+      "english": "good, OK",
+      "explanation": "同意",
+      "audio": "audio/好.mp3"
+    },
+    "那": {
+      "pinyin": "nà",
+      "english": "then",
+      "explanation": "那么",
+      "audio": "audio/那.mp3"
+    },
+    "快": {
+      "pinyin": "kuài",
+      "english": "quickly",
+      "explanation": "赶快",
+      "audio": "audio/快.mp3"
+    },
+    "啊": {
+      "pinyin": "a",
+      "english": "particle (exclamation)",
+      "explanation": "语气词",
+      "audio": "audio/啊.mp3"
+    },
+    "着急": {
+      "pinyin": "zháo jí",
+      "english": "anxious, impatient",
+      "explanation": "心里很急",
+      "audio": "audio/着急.mp3"
+    },
+    "一座": {
+      "pinyin": "yī zuò",
+      "english": "one (measure word)",
+      "explanation": "量词",
+      "audio": "audio/一座.mp3"
+    },
+    "桥": {
+      "pinyin": "qiáo",
+      "english": "bridge",
+      "explanation": "架在河上的建筑",
+      "audio": "audio/桥.mp3"
+    },
+    "每次": {
+      "pinyin": "měi cì",
+      "english": "each time, every time",
+      "explanation": "每一次",
+      "audio": "audio/每次.mp3"
+    },
+    "只": {
+      "pinyin": "zhǐ",
+      "english": "only",
+      "explanation": "仅仅",
+      "audio": "audio/只.mp3"
+    },
+    "能": {
+      "pinyin": "néng",
+      "english": "can, able to",
+      "explanation": "可以",
+      "audio": "audio/能.mp3"
+    },
+    "让": {
+      "pinyin": "ràng",
+      "english": "let, allow",
+      "explanation": "允许",
+      "audio": "audio/让.mp3"
+    },
+    "一只": {
+      "pinyin": "yì zhī",
+      "english": "one (measure word)",
+      "explanation": "一个",
+      "audio": "audio/一只.mp3"
+    },
+    "羊": {
+      "pinyin": "yáng",
+      "english": "sheep",
+      "explanation": "绵羊或山羊",
+      "audio": "audio/羊.mp3"
+    },
+    "走过去": {
+      "pinyin": "zǒu guò qù",
+      "english": "walk across",
+      "explanation": "从这边走到那边",
+      "audio": "audio/走过去.mp3"
+    },
+    "两只": {
+      "pinyin": "liǎng zhī",
+      "english": "two (measure word)",
+      "explanation": "两个",
+      "audio": "audio/两只.mp3"
+    },
+    "过桥": {
+      "pinyin": "guò qiáo",
+      "english": "cross the bridge",
+      "explanation": "走过桥",
+      "audio": "audio/过桥.mp3"
+    },
+    "从": {
+      "pinyin": "cóng",
+      "english": "from",
+      "explanation": "起点",
+      "audio": "audio/从.mp3"
+    },
+    "东边": {
+      "pinyin": "dōng biān",
+      "english": "east side",
+      "explanation": "东面",
+      "audio": "audio/东边.mp3"
+    },
+    "过来": {
+      "pinyin": "guò lái",
+      "english": "come over",
+      "explanation": "来到这边",
+      "audio": "audio/过来.mp3"
+    },
+    "往": {
+      "pinyin": "wǎng",
+      "english": "toward",
+      "explanation": "向着",
+      "audio": "audio/往.mp3"
+    },
+    "西边": {
+      "pinyin": "xī biān",
+      "english": "west side",
+      "explanation": "西面",
+      "audio": "audio/西边.mp3"
+    },
+    "它们": {
+      "pinyin": "tā men",
+      "english": "they (animals)",
+      "explanation": "动物的复数",
+      "audio": "audio/它们.mp3"
+    },
+    "同时": {
+      "pinyin": "tóng shí",
+      "english": "at the same time",
+      "explanation": "在同一时间",
+      "audio": "audio/同时.mp3"
+    },
+    "吗": {
+      "pinyin": "ma",
+      "english": "particle (question)",
+      "explanation": "疑问语气词",
+      "audio": "audio/吗.mp3"
+    },
+    "问道": {
+      "pinyin": "wèn dào",
+      "english": "asked",
+      "explanation": "问",
+      "audio": "audio/问道.mp3"
+    },
+    "当然": {
+      "pinyin": "dāng rán",
+      "english": "of course",
+      "explanation": "肯定",
+      "audio": "audio/当然.mp3"
+    },
+    "回答": {
+      "pinyin": "huí dá",
+      "english": "answer, reply",
+      "explanation": "答复",
+      "audio": "audio/回答.mp3"
+    },
+    "道": {
+      "pinyin": "dào",
+      "english": "particle (manner)",
+      "explanation": "表示说话",
+      "audio": "audio/道.mp3"
+    },
+    "摇摇头": {
+      "pinyin": "yáo yáo tóu",
+      "english": "shake head",
+      "explanation": "摇头",
+      "audio": "audio/摇摇头.mp3"
+    },
+    "还是": {
+      "pinyin": "hái shì",
+      "english": "still",
+      "explanation": "仍然",
+      "audio": "audio/还是.mp3"
+    },
+    "那么": {
+      "pinyin": "nà me",
+      "english": "so, such",
+      "explanation": "如此",
+      "audio": "audio/那么.mp3"
+    },
+    "粗心": {
+      "pinyin": "cū xīn",
+      "english": "careless",
+      "explanation": "不仔细",
+      "audio": "audio/粗心.mp3"
+    }
+  }
+}

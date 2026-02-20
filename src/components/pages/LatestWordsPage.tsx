@@ -135,7 +135,7 @@ export function LatestWordsPage() {
     <div>
       {/* Header */}
       <header className="header-row">
-        <h1 className="page-title">最新词语</h1>
+        <h1 className="page-title">听写</h1>
         <div className="controls">
           {/* Latest/All toggle */}
           <button
