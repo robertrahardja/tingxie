@@ -97,6 +97,7 @@ export const NAV_ITEMS: NavItem[] = [
   { href: '/', label: '最新词语' },
   { href: '/phrase-matching', label: '词语搭配' },
   { href: '/p3hcl-reading-sync', label: '阅读练习' },
+  { href: '/cc1', label: '知识画报' },
   { href: '/school-tingxie', label: '学校听写' },
   { href: '/review', label: '复习词语' },
   { href: '/dashboard', label: '家长看板' },
@@ -123,4 +124,5 @@ export const STORAGE_KEYS = {
   VOCABULARY_CACHE: 'vocabulary_cache_v2',
   VOCABULARY_CACHE_TIMESTAMP: 'vocabulary_cache_timestamp_v2',
   SETTINGS: 'tingxie_settings',
+  CC1_LOOKED_UP: 'cc1_looked_up_words',
 } as const
