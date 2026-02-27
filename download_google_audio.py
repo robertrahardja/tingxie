@@ -10,22 +10,20 @@ from urllib.request import urlopen, Request
 from urllib.parse import quote
 
 WORDS = {
-    "对错": "duì cuò - right and wrong",
-    "突然": "tū rán - suddenly",
-    "原谅": "yuán liàng - to forgive",
-    "弄破": "nòng pò - to break, to damage",
-    "应该": "yīng gāi - should, ought to",
-    "来不及": "lái bu jí - too late, not enough time",
-    "像": "xiàng - to resemble, like",
-    "跌倒": "diē dǎo - to fall down",
-    "立刻扶起": "lì kè fú qǐ - immediately help up",
-    "推开": "tuī kāi - to push away",
-    "理睬": "lǐ cǎi - to pay attention to, to acknowledge",
-    "扔": "rēng - to throw",
-    "谢谢": "xiè xiè - thank you",
-    "受伤": "shòu shāng - to be injured",
-    "爬起来": "pá qǐ lái - to get up, to climb up",
-    "不好意思": "bù hǎo yì si - embarrassed, sorry",
+    "食堂": "shí táng - canteen, cafeteria",
+    "走路": "zǒu lù - to walk",
+    "眼镜": "yǎn jìng - glasses, spectacles",
+    "休息": "xiū xi - to rest",
+    "碰到": "pèng dào - to bump into, to encounter",
+    "赔钱": "péi qián - to compensate, to pay damages",
+    "生病": "shēng bìng - to be sick, to fall ill",
+    "脱": "tuō - to take off, to remove",
+    "搬动": "bān dòng - to move (something)",
+    "电视": "diàn shì - television",
+    "轻轻": "qīng qīng - gently, lightly, softly",
+    "灵机一动": "líng jī yī dòng - to have a sudden inspiration",
+    "留下一张便条": "liú xià yī zhāng biàn tiáo - to leave a note",
+    "轻手轻脚": "qīng shǒu qīng jiǎo - quietly, stealthily, on tiptoe",
 }
 
 def download_google_tts(word):

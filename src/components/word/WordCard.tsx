@@ -14,10 +14,8 @@ interface WordCardProps {
   className?: string
 }
 
-// Check if an image exists for this word
-function getImagePath(simplified: string): string {
-  return `/images/${simplified}.png`
-}
+// Check for image in multiple formats
+const IMAGE_EXTENSIONS = ['.png', '.jpg']
 
 export function WordCard({
   word,
@@ -28,22 +26,32 @@ export function WordCard({
   className,
 }: WordCardProps) {
   const [showHandwriting, setShowHandwriting] = useState(false)
-  const [imageExists, setImageExists] = useState(false)
+  const [imagePath, setImagePath] = useState<string | null>(null)
 
-  const imagePath = getImagePath(word.simplified)
-
-  // Check if image exists when word changes
+  // Check if image exists when word changes (try .png then .jpg)
   useEffect(() => {
-    setImageExists(false)
+    setImagePath(null)
+    let cancelled = false
 
-    // Check if image exists
-    fetch(imagePath, {
-      method: 'GET',
-      headers: { 'Range': 'bytes=0-0' }
-    })
-      .then((res) => setImageExists(res.ok || res.status === 206))
-      .catch(() => setImageExists(false))
-  }, [word.simplified, imagePath])
+    async function findImage() {
+      for (const ext of IMAGE_EXTENSIONS) {
+        const path = `/images/${encodeURIComponent(word.simplified)}${ext}`
+        try {
+          const res = await fetch(path, { method: 'HEAD' })
+          const contentType = res.headers.get('content-type') || ''
+          if (!cancelled && res.ok && contentType.startsWith('image/')) {
+            setImagePath(path)
+            return
+          }
+        } catch {
+          // continue to next extension
+        }
+      }
+    }
+
+    findImage()
+    return () => { cancelled = true }
+  }, [word.simplified])
 
   const handleToggleHandwriting = () => {
     setShowHandwriting(!showHandwriting)
@@ -58,7 +66,7 @@ export function WordCard({
         </div>
 
         {/* Memory Image - displayed prominently at top */}
-        {imageExists && (
+        {imagePath && (
           <div className="word-image-container">
             <img
               src={imagePath}

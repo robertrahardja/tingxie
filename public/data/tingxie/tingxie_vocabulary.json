@@ -4089,6 +4089,123 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 81,
+      "words": [
+        {
+          "simplified": "食堂",
+          "traditional": "食堂",
+          "pinyin": "shí táng",
+          "english": "canteen, cafeteria",
+          "audio": "audio/食堂.mp3",
+          "important": true
+        },
+        {
+          "simplified": "走路",
+          "traditional": "走路",
+          "pinyin": "zǒu lù",
+          "english": "to walk",
+          "audio": "audio/走路.mp3",
+          "important": true
+        },
+        {
+          "simplified": "眼镜",
+          "traditional": "眼鏡",
+          "pinyin": "yǎn jìng",
+          "english": "glasses, spectacles",
+          "audio": "audio/眼镜.mp3",
+          "important": true
+        },
+        {
+          "simplified": "休息",
+          "traditional": "休息",
+          "pinyin": "xiū xi",
+          "english": "to rest",
+          "audio": "audio/休息.mp3",
+          "important": true
+        },
+        {
+          "simplified": "碰到",
+          "traditional": "碰到",
+          "pinyin": "pèng dào",
+          "english": "to bump into, to encounter",
+          "audio": "audio/碰到.mp3",
+          "important": true
+        },
+        {
+          "simplified": "赔钱",
+          "traditional": "賠錢",
+          "pinyin": "péi qián",
+          "english": "to compensate, to pay damages",
+          "audio": "audio/赔钱.mp3",
+          "important": true
+        },
+        {
+          "simplified": "生病",
+          "traditional": "生病",
+          "pinyin": "shēng bìng",
+          "english": "to be sick, to fall ill",
+          "audio": "audio/生病.mp3",
+          "important": true
+        },
+        {
+          "simplified": "脱",
+          "traditional": "脫",
+          "pinyin": "tuō",
+          "english": "to take off, to remove",
+          "audio": "audio/脱.mp3",
+          "important": true
+        },
+        {
+          "simplified": "搬动",
+          "traditional": "搬動",
+          "pinyin": "bān dòng",
+          "english": "to move (something)",
+          "audio": "audio/搬动.mp3",
+          "important": true
+        },
+        {
+          "simplified": "电视",
+          "traditional": "電視",
+          "pinyin": "diàn shì",
+          "english": "television",
+          "audio": "audio/电视.mp3",
+          "important": true
+        },
+        {
+          "simplified": "轻轻",
+          "traditional": "輕輕",
+          "pinyin": "qīng qīng",
+          "english": "gently, lightly, softly",
+          "audio": "audio/轻轻.mp3",
+          "important": true
+        },
+        {
+          "simplified": "灵机一动",
+          "traditional": "靈機一動",
+          "pinyin": "líng jī yī dòng",
+          "english": "to have a sudden inspiration",
+          "audio": "audio/灵机一动.mp3",
+          "important": true
+        },
+        {
+          "simplified": "留下一张便条",
+          "traditional": "留下一張便條",
+          "pinyin": "liú xià yī zhāng biàn tiáo",
+          "english": "to leave a note",
+          "audio": "audio/留下一张便条.mp3",
+          "important": true
+        },
+        {
+          "simplified": "轻手轻脚",
+          "traditional": "輕手輕腳",
+          "pinyin": "qīng shǒu qīng jiǎo",
+          "english": "quietly, stealthily, on tiptoe",
+          "audio": "audio/轻手轻脚.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
