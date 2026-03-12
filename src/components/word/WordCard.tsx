@@ -15,7 +15,10 @@ interface WordCardProps {
 }
 
 // Check for image in multiple formats
-const IMAGE_EXTENSIONS = ['.png', '.jpg']
+const IMAGE_EXTENSIONS = ['.png', '.jpg', '.gif']
+
+// Cache image lookups to avoid redundant fetches (especially in StrictMode)
+const imageLookups = new Map<string, Promise<string | null>>()
 
 export function WordCard({
   word,
@@ -29,27 +32,34 @@ export function WordCard({
   const [imagePath, setImagePath] = useState<string | null>(null)
 
   // Check if image exists when word changes (try .png then .jpg)
+  // Uses shared promise cache to avoid duplicate requests from StrictMode
   useEffect(() => {
     setImagePath(null)
     let cancelled = false
 
-    async function findImage() {
-      for (const ext of IMAGE_EXTENSIONS) {
-        const path = `/images/${encodeURIComponent(word.simplified)}${ext}`
-        try {
-          const res = await fetch(path, { method: 'HEAD' })
-          const contentType = res.headers.get('content-type') || ''
-          if (!cancelled && res.ok && contentType.startsWith('image/')) {
-            setImagePath(path)
-            return
+    if (!imageLookups.has(word.simplified)) {
+      const lookup = (async () => {
+        for (const ext of IMAGE_EXTENSIONS) {
+          const path = `/images/${encodeURIComponent(word.simplified)}${ext}`
+          try {
+            const res = await fetch(path, { method: 'HEAD' })
+            const contentType = res.headers.get('content-type') || ''
+            if (res.ok && contentType.startsWith('image/')) {
+              return path
+            }
+          } catch {
+            // continue to next extension
           }
-        } catch {
-          // continue to next extension
         }
-      }
+        return null
+      })()
+      imageLookups.set(word.simplified, lookup)
     }
 
-    findImage()
+    imageLookups.get(word.simplified)!.then((path) => {
+      if (!cancelled && path) setImagePath(path)
+    })
+
     return () => { cancelled = true }
   }, [word.simplified])
 

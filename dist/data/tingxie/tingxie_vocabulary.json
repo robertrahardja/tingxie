@@ -4206,6 +4206,139 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 82,
+      "words": [
+        {
+          "simplified": "伸进",
+          "traditional": "伸進",
+          "pinyin": "shēn jìn",
+          "english": "to stretch/reach into",
+          "audio": "audio/伸进.mp3",
+          "important": true
+        },
+        {
+          "simplified": "鼻子",
+          "traditional": "鼻子",
+          "pinyin": "bí zi",
+          "english": "nose",
+          "audio": "audio/鼻子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "救护车",
+          "traditional": "救護車",
+          "pinyin": "jiù hù chē",
+          "english": "ambulance",
+          "audio": "audio/救护车.mp3",
+          "important": true
+        },
+        {
+          "simplified": "篮子",
+          "traditional": "籃子",
+          "pinyin": "lán zi",
+          "english": "basket",
+          "audio": "audio/篮子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "不停",
+          "traditional": "不停",
+          "pinyin": "bù tíng",
+          "english": "non-stop, continuously",
+          "audio": "audio/不停.mp3",
+          "important": true
+        },
+        {
+          "simplified": "满",
+          "traditional": "滿",
+          "pinyin": "mǎn",
+          "english": "full",
+          "audio": "audio/满.mp3",
+          "important": true
+        },
+        {
+          "simplified": "升",
+          "traditional": "升",
+          "pinyin": "shēng",
+          "english": "to rise, to ascend",
+          "audio": "audio/升.mp3",
+          "important": true
+        },
+        {
+          "simplified": "回答问题",
+          "traditional": "回答問題",
+          "pinyin": "huí dá wèn tí",
+          "english": "to answer a question",
+          "audio": "audio/回答问题.mp3",
+          "important": true
+        },
+        {
+          "simplified": "手拉手",
+          "traditional": "手拉手",
+          "pinyin": "shǒu lā shǒu",
+          "english": "hand in hand",
+          "audio": "audio/手拉手.mp3",
+          "important": true
+        },
+        {
+          "simplified": "船",
+          "traditional": "船",
+          "pinyin": "chuán",
+          "english": "boat, ship",
+          "audio": "audio/船.mp3",
+          "important": true
+        },
+        {
+          "simplified": "重量",
+          "traditional": "重量",
+          "pinyin": "zhòng liàng",
+          "english": "weight",
+          "audio": "audio/重量.mp3",
+          "important": true
+        },
+        {
+          "simplified": "夸",
+          "traditional": "誇",
+          "pinyin": "kuā",
+          "english": "to praise, to boast",
+          "audio": "audio/夸.mp3",
+          "important": true
+        },
+        {
+          "simplified": "竹竿",
+          "traditional": "竹竿",
+          "pinyin": "zhú gān",
+          "english": "bamboo pole",
+          "audio": "audio/竹竿.mp3",
+          "important": true
+        },
+        {
+          "simplified": "称一称",
+          "traditional": "稱一稱",
+          "pinyin": "chēng yī chēng",
+          "english": "to weigh (something)",
+          "audio": "audio/称一称.mp3",
+          "important": true
+        },
+        {
+          "simplified": "下沉",
+          "traditional": "下沉",
+          "pinyin": "xià chén",
+          "english": "to sink",
+          "audio": "audio/下沉.mp3",
+          "important": true
+        },
+        {
+          "simplified": "墙壁",
+          "traditional": "牆壁",
+          "pinyin": "qiáng bì",
+          "english": "wall",
+          "audio": "audio/墙壁.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }

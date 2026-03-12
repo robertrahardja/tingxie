@@ -17,6 +17,7 @@ import { Route as RadicalsRouteImport } from './routes/radicals'
 import { Route as PhraseMatchingRouteImport } from './routes/phrase-matching'
 import { Route as P3hclWupinInteractiveRouteImport } from './routes/p3hcl-wupin-interactive'
 import { Route as P3hclReadingSyncRouteImport } from './routes/p3hcl-reading-sync'
+import { Route as P3hclReading11RouteImport } from './routes/p3hcl-reading-11'
 import { Route as KoushiTrafficSafetyRouteImport } from './routes/koushi-traffic-safety'
 import { Route as KoushiFamilyCohesionRouteImport } from './routes/koushi-family-cohesion'
 import { Route as InstructionsRouteImport } from './routes/instructions'
@@ -64,6 +65,11 @@ const P3hclWupinInteractiveRoute = P3hclWupinInteractiveRouteImport.update({
 const P3hclReadingSyncRoute = P3hclReadingSyncRouteImport.update({
   id: '/p3hcl-reading-sync',
   path: '/p3hcl-reading-sync',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const P3hclReading11Route = P3hclReading11RouteImport.update({
+  id: '/p3hcl-reading-11',
+  path: '/p3hcl-reading-11',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KoushiTrafficSafetyRoute = KoushiTrafficSafetyRouteImport.update({
@@ -116,6 +122,7 @@ export interface FileRoutesByFullPath {
   '/instructions': typeof InstructionsRoute
   '/koushi-family-cohesion': typeof KoushiFamilyCohesionRoute
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
+  '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-sync': typeof P3hclReadingSyncRoute
   '/p3hcl-wupin-interactive': typeof P3hclWupinInteractiveRoute
   '/phrase-matching': typeof PhraseMatchingRoute
@@ -134,6 +141,7 @@ export interface FileRoutesByTo {
   '/instructions': typeof InstructionsRoute
   '/koushi-family-cohesion': typeof KoushiFamilyCohesionRoute
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
+  '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-sync': typeof P3hclReadingSyncRoute
   '/p3hcl-wupin-interactive': typeof P3hclWupinInteractiveRoute
   '/phrase-matching': typeof PhraseMatchingRoute
@@ -153,6 +161,7 @@ export interface FileRoutesById {
   '/instructions': typeof InstructionsRoute
   '/koushi-family-cohesion': typeof KoushiFamilyCohesionRoute
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
+  '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-sync': typeof P3hclReadingSyncRoute
   '/p3hcl-wupin-interactive': typeof P3hclWupinInteractiveRoute
   '/phrase-matching': typeof PhraseMatchingRoute
@@ -173,6 +182,7 @@ export interface FileRouteTypes {
     | '/instructions'
     | '/koushi-family-cohesion'
     | '/koushi-traffic-safety'
+    | '/p3hcl-reading-11'
     | '/p3hcl-reading-sync'
     | '/p3hcl-wupin-interactive'
     | '/phrase-matching'
@@ -191,6 +201,7 @@ export interface FileRouteTypes {
     | '/instructions'
     | '/koushi-family-cohesion'
     | '/koushi-traffic-safety'
+    | '/p3hcl-reading-11'
     | '/p3hcl-reading-sync'
     | '/p3hcl-wupin-interactive'
     | '/phrase-matching'
@@ -209,6 +220,7 @@ export interface FileRouteTypes {
     | '/instructions'
     | '/koushi-family-cohesion'
     | '/koushi-traffic-safety'
+    | '/p3hcl-reading-11'
     | '/p3hcl-reading-sync'
     | '/p3hcl-wupin-interactive'
     | '/phrase-matching'
@@ -228,6 +240,7 @@ export interface RootRouteChildren {
   InstructionsRoute: typeof InstructionsRoute
   KoushiFamilyCohesionRoute: typeof KoushiFamilyCohesionRoute
   KoushiTrafficSafetyRoute: typeof KoushiTrafficSafetyRoute
+  P3hclReading11Route: typeof P3hclReading11Route
   P3hclReadingSyncRoute: typeof P3hclReadingSyncRoute
   P3hclWupinInteractiveRoute: typeof P3hclWupinInteractiveRoute
   PhraseMatchingRoute: typeof PhraseMatchingRoute
@@ -294,6 +307,13 @@ declare module '@tanstack/react-router' {
       path: '/p3hcl-reading-sync'
       fullPath: '/p3hcl-reading-sync'
       preLoaderRoute: typeof P3hclReadingSyncRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/p3hcl-reading-11': {
+      id: '/p3hcl-reading-11'
+      path: '/p3hcl-reading-11'
+      fullPath: '/p3hcl-reading-11'
+      preLoaderRoute: typeof P3hclReading11RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/koushi-traffic-safety': {
@@ -364,6 +384,7 @@ const rootRouteChildren: RootRouteChildren = {
   InstructionsRoute: InstructionsRoute,
   KoushiFamilyCohesionRoute: KoushiFamilyCohesionRoute,
   KoushiTrafficSafetyRoute: KoushiTrafficSafetyRoute,
+  P3hclReading11Route: P3hclReading11Route,
   P3hclReadingSyncRoute: P3hclReadingSyncRoute,
   P3hclWupinInteractiveRoute: P3hclWupinInteractiveRoute,
   PhraseMatchingRoute: PhraseMatchingRoute,

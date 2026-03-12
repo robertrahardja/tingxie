@@ -1,0 +1,190 @@
+{
+  "wordDefinitions": {
+    "欺负": {
+      "pinyin": "qī fu",
+      "english": "to bully",
+      "explanation": "用力量或权势压迫、侮辱别人",
+      "audio": "audio/欺负.mp3"
+    },
+    "弱小": {
+      "pinyin": "ruò xiǎo",
+      "english": "weak and small",
+      "explanation": "力量小，身体弱的人",
+      "audio": "audio/弱小.mp3"
+    },
+    "公园": {
+      "pinyin": "gōng yuán",
+      "english": "park",
+      "explanation": "供公众游玩休息的场所",
+      "audio": "audio/公园.mp3"
+    },
+    "跷跷板": {
+      "pinyin": "qiāo qiāo bǎn",
+      "english": "seesaw",
+      "explanation": "儿童游乐设施，两人各坐一端上下起伏",
+      "audio": "audio/跷跷板.mp3"
+    },
+    "开心": {
+      "pinyin": "kāi xīn",
+      "english": "happy",
+      "explanation": "高兴，快乐",
+      "audio": "audio/开心.mp3"
+    },
+    "看见": {
+      "pinyin": "kàn jiàn",
+      "english": "to see",
+      "explanation": "用眼睛看到",
+      "audio": "audio/看见.mp3"
+    },
+    "故意": {
+      "pinyin": "gù yì",
+      "english": "on purpose, deliberately",
+      "explanation": "有意地，明知不对还要做",
+      "audio": "audio/故意.mp3"
+    },
+    "继续": {
+      "pinyin": "jì xù",
+      "english": "to continue",
+      "explanation": "接着做下去，不停止",
+      "audio": "audio/继续.mp3"
+    },
+    "瞪": {
+      "pinyin": "dèng",
+      "english": "to stare, to glare",
+      "explanation": "睁大眼睛看，表示生气",
+      "audio": "audio/瞪.mp3"
+    },
+    "可是": {
+      "pinyin": "kě shì",
+      "english": "but, however",
+      "explanation": "表示转折",
+      "audio": "audio/可是.mp3"
+    },
+    "还是": {
+      "pinyin": "hái shì",
+      "english": "still",
+      "explanation": "仍然，照旧",
+      "audio": "audio/还是.mp3"
+    },
+    "肯": {
+      "pinyin": "kěn",
+      "english": "willing to",
+      "explanation": "愿意，同意做某事",
+      "audio": "audio/肯.mp3"
+    },
+    "扮鬼脸": {
+      "pinyin": "bàn guǐ liǎn",
+      "english": "to make funny faces",
+      "explanation": "做出滑稽的表情来取笑别人",
+      "audio": "audio/扮鬼脸.mp3"
+    },
+    "一幕": {
+      "pinyin": "yī mù",
+      "english": "a scene",
+      "explanation": "一个场面或情景",
+      "audio": "audio/一幕.mp3"
+    },
+    "感到": {
+      "pinyin": "gǎn dào",
+      "english": "to feel",
+      "explanation": "心里觉得",
+      "audio": "audio/感到.mp3"
+    },
+    "生气": {
+      "pinyin": "shēng qì",
+      "english": "angry",
+      "explanation": "因不满而发怒",
+      "audio": "audio/生气.mp3"
+    },
+    "认为": {
+      "pinyin": "rèn wéi",
+      "english": "to think, to believe",
+      "explanation": "对某件事有自己的看法",
+      "audio": "audio/认为.mp3"
+    },
+    "行为": {
+      "pinyin": "xíng wéi",
+      "english": "behavior, conduct",
+      "explanation": "做出来的事情或动作",
+      "audio": "audio/行为.mp3"
+    },
+    "不对": {
+      "pinyin": "bú duì",
+      "english": "wrong, incorrect",
+      "explanation": "不正确，有错",
+      "audio": "audio/不对.mp3"
+    },
+    "自私": {
+      "pinyin": "zì sī",
+      "english": "selfish",
+      "explanation": "只顾自己，不管别人",
+      "audio": "audio/自私.mp3"
+    },
+    "应该": {
+      "pinyin": "yīng gāi",
+      "english": "should, ought to",
+      "explanation": "理当如此",
+      "audio": "audio/应该.mp3"
+    },
+    "自己": {
+      "pinyin": "zì jǐ",
+      "english": "oneself",
+      "explanation": "自身，本人",
+      "audio": "audio/自己.mp3"
+    },
+    "考虑": {
+      "pinyin": "kǎo lǜ",
+      "english": "to consider, to think about",
+      "explanation": "仔细想一想",
+      "audio": "audio/考虑.mp3"
+    },
+    "别人": {
+      "pinyin": "bié rén",
+      "english": "other people",
+      "explanation": "其他的人",
+      "audio": "audio/别人.mp3"
+    },
+    "感受": {
+      "pinyin": "gǎn shòu",
+      "english": "feelings",
+      "explanation": "心里的感觉和体会",
+      "audio": "audio/感受.mp3"
+    },
+    "捉弄": {
+      "pinyin": "zhuō nòng",
+      "english": "to tease, to play tricks on",
+      "explanation": "戏弄别人，让别人难堪",
+      "audio": "audio/捉弄.mp3"
+    },
+    "在场": {
+      "pinyin": "zài chǎng",
+      "english": "present (at the scene)",
+      "explanation": "在现场，在那个地方",
+      "audio": "audio/在场.mp3"
+    },
+    "立刻": {
+      "pinyin": "lì kè",
+      "english": "immediately",
+      "explanation": "马上，一点也不耽搁",
+      "audio": "audio/立刻.mp3"
+    },
+    "阻止": {
+      "pinyin": "zǔ zhǐ",
+      "english": "to stop, to prevent",
+      "explanation": "不让某人做某事",
+      "audio": "audio/阻止.mp3"
+    },
+    "因为": {
+      "pinyin": "yīn wèi",
+      "english": "because",
+      "explanation": "表示原因",
+      "audio": "audio/因为.mp3"
+    },
+    "如果": {
+      "pinyin": "rú guǒ",
+      "english": "if",
+      "explanation": "假如，表示假设",
+      "audio": "audio/如果.mp3"
+    }
+  }
+}
