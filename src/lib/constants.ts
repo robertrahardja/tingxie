@@ -96,7 +96,10 @@ export const NAV_ITEMS: NavItem[] = [
   // Main tingxie pages
   { href: '/', label: '最新词语' },
   { href: '/phrase-matching', label: '词语搭配' },
-  { href: '/p3hcl-reading-sync', label: '阅读练习' },
+  { href: '/p3hcl-reading-12', label: '口试：做家务' },
+  { href: '/shuihu-writing', label: '水壶写作' },
+  { href: '/p3hcl-reading-9', label: '阅读练习（九）' },
+  { href: '/p3hcl-reading-sync', label: '阅读练习（七）' },
   { href: '/cc1', label: '知识画报' },
   { href: '/school-tingxie', label: '学校听写' },
   { href: '/review', label: '复习词语' },

@@ -1,0 +1,364 @@
+{
+  "wordDefinitions": {
+    "厨房": {
+      "pinyin": "chú fáng",
+      "english": "kitchen",
+      "explanation": "做饭的地方",
+      "audio": "audio/厨房.mp3"
+    },
+    "准备": {
+      "pinyin": "zhǔn bèi",
+      "english": "prepare",
+      "explanation": "事先安排好",
+      "audio": "audio/准备.mp3"
+    },
+    "晚餐": {
+      "pinyin": "wǎn cān",
+      "english": "dinner",
+      "explanation": "晚上吃的饭",
+      "audio": "audio/晚餐.mp3"
+    },
+    "主动": {
+      "pinyin": "zhǔ dòng",
+      "english": "proactively, on one's own initiative",
+      "explanation": "自己愿意去做，不需要别人叫",
+      "audio": "audio/主动.mp3"
+    },
+    "上前": {
+      "pinyin": "shàng qián",
+      "english": "step forward",
+      "explanation": "走到前面去",
+      "audio": "audio/上前.mp3"
+    },
+    "帮忙": {
+      "pinyin": "bāng máng",
+      "english": "help",
+      "explanation": "帮助别人做事",
+      "audio": "audio/帮忙.mp3"
+    },
+    "食物": {
+      "pinyin": "shí wù",
+      "english": "food",
+      "explanation": "吃的东西",
+      "audio": "audio/食物.mp3"
+    },
+    "端": {
+      "pinyin": "duān",
+      "english": "carry (with both hands)",
+      "explanation": "用手平平地托着东西",
+      "audio": "audio/端.mp3"
+    },
+    "餐桌": {
+      "pinyin": "cān zhuō",
+      "english": "dining table",
+      "explanation": "吃饭用的桌子",
+      "audio": "audio/餐桌.mp3"
+    },
+    "摆": {
+      "pinyin": "bǎi",
+      "english": "set out, arrange",
+      "explanation": "把东西放好",
+      "audio": "audio/摆.mp3"
+    },
+    "碗筷": {
+      "pinyin": "wǎn kuài",
+      "english": "bowls and chopsticks",
+      "explanation": "碗和筷子",
+      "audio": "audio/碗筷.mp3"
+    },
+    "家人": {
+      "pinyin": "jiā rén",
+      "english": "family members",
+      "explanation": "一家人",
+      "audio": "audio/家人.mp3"
+    },
+    "认为": {
+      "pinyin": "rèn wéi",
+      "english": "think, believe",
+      "explanation": "觉得，以为",
+      "audio": "audio/认为.mp3"
+    },
+    "帮助": {
+      "pinyin": "bāng zhù",
+      "english": "help, assist",
+      "explanation": "给别人出力",
+      "audio": "audio/帮助.mp3"
+    },
+    "父母": {
+      "pinyin": "fù mǔ",
+      "english": "parents",
+      "explanation": "爸爸和妈妈",
+      "audio": "audio/父母.mp3"
+    },
+    "做家务": {
+      "pinyin": "zuò jiā wù",
+      "english": "do housework",
+      "explanation": "做家里的事情，如打扫、洗碗等",
+      "audio": "audio/做家务.mp3"
+    },
+    "行为": {
+      "pinyin": "xíng wéi",
+      "english": "behavior, action",
+      "explanation": "做出来的事情",
+      "audio": "audio/行为.mp3"
+    },
+    "值得": {
+      "pinyin": "zhí de",
+      "english": "worthwhile, deserve",
+      "explanation": "有价值",
+      "audio": "audio/值得.mp3"
+    },
+    "学习": {
+      "pinyin": "xué xí",
+      "english": "learn, study",
+      "explanation": "获取知识和技能",
+      "audio": "audio/学习.mp3"
+    },
+    "称赞": {
+      "pinyin": "chēng zàn",
+      "english": "praise, compliment",
+      "explanation": "说好话夸奖别人",
+      "audio": "audio/称赞.mp3"
+    },
+    "应该": {
+      "pinyin": "yīng gāi",
+      "english": "should",
+      "explanation": "应当，表示理所当然",
+      "audio": "audio/应该.mp3"
+    },
+    "减轻": {
+      "pinyin": "jiǎn qīng",
+      "english": "lighten, reduce",
+      "explanation": "使变轻，使减少",
+      "audio": "audio/减轻.mp3"
+    },
+    "负担": {
+      "pinyin": "fù dān",
+      "english": "burden",
+      "explanation": "承受的压力或责任",
+      "audio": "audio/负担.mp3"
+    },
+    "乖巧": {
+      "pinyin": "guāi qiǎo",
+      "english": "well-behaved and clever",
+      "explanation": "听话又聪明",
+      "audio": "audio/乖巧.mp3"
+    },
+    "懂事": {
+      "pinyin": "dǒng shì",
+      "english": "sensible, understanding",
+      "explanation": "明白道理，体贴别人",
+      "audio": "audio/懂事.mp3"
+    },
+    "图片": {
+      "pinyin": "tú piàn",
+      "english": "picture, image",
+      "explanation": "画或照片",
+      "audio": "audio/图片.mp3"
+    },
+    "经历": {
+      "pinyin": "jīng lì",
+      "english": "experience",
+      "explanation": "亲身遇到的事情",
+      "audio": "audio/经历.mp3"
+    },
+    "记得": {
+      "pinyin": "jì de",
+      "english": "remember",
+      "explanation": "没有忘记",
+      "audio": "audio/记得.mp3"
+    },
+    "总动员": {
+      "pinyin": "zǒng dòng yuán",
+      "english": "total mobilization, all hands on deck",
+      "explanation": "所有人都一起行动",
+      "audio": "audio/总动员.mp3"
+    },
+    "分担": {
+      "pinyin": "fēn dān",
+      "english": "share (a burden/task)",
+      "explanation": "一起分着做",
+      "audio": "audio/分担.mp3"
+    },
+    "早餐": {
+      "pinyin": "zǎo cān",
+      "english": "breakfast",
+      "explanation": "早上吃的饭",
+      "audio": "audio/早餐.mp3"
+    },
+    "午餐": {
+      "pinyin": "wǔ cān",
+      "english": "lunch",
+      "explanation": "中午吃的饭",
+      "audio": "audio/午餐.mp3"
+    },
+    "熨衣服": {
+      "pinyin": "yùn yī fu",
+      "english": "iron clothes",
+      "explanation": "用熨斗把衣服弄平",
+      "audio": "audio/熨衣服.mp3"
+    },
+    "负责": {
+      "pinyin": "fù zé",
+      "english": "be responsible for",
+      "explanation": "担当某件事",
+      "audio": "audio/负责.mp3"
+    },
+    "洗碗": {
+      "pinyin": "xǐ wǎn",
+      "english": "wash dishes",
+      "explanation": "清洗碗碟",
+      "audio": "audio/洗碗.mp3"
+    },
+    "拖地": {
+      "pinyin": "tuō dì",
+      "english": "mop the floor",
+      "explanation": "用拖把擦地板",
+      "audio": "audio/拖地.mp3"
+    },
+    "弟弟": {
+      "pinyin": "dì di",
+      "english": "younger brother",
+      "explanation": "比自己小的兄弟",
+      "audio": "audio/弟弟.mp3"
+    },
+    "虽然": {
+      "pinyin": "suī rán",
+      "english": "although",
+      "explanation": "表示让步",
+      "audio": "audio/虽然.mp3"
+    },
+    "年纪": {
+      "pinyin": "nián jì",
+      "english": "age",
+      "explanation": "年龄",
+      "audio": "audio/年纪.mp3"
+    },
+    "简单": {
+      "pinyin": "jiǎn dān",
+      "english": "simple",
+      "explanation": "不复杂",
+      "audio": "audio/简单.mp3"
+    },
+    "碗碟": {
+      "pinyin": "wǎn dié",
+      "english": "bowls and plates",
+      "explanation": "碗和盘子",
+      "audio": "audio/碗碟.mp3"
+    },
+    "吃饱": {
+      "pinyin": "chī bǎo",
+      "english": "eat until full",
+      "explanation": "吃够了",
+      "audio": "audio/吃饱.mp3"
+    },
+    "桌子": {
+      "pinyin": "zhuō zi",
+      "english": "table",
+      "explanation": "放东西的家具",
+      "audio": "audio/桌子.mp3"
+    },
+    "抹干净": {
+      "pinyin": "mā gān jìng",
+      "english": "wipe clean",
+      "explanation": "用布擦干净",
+      "audio": "audio/抹干净.mp3"
+    },
+    "洗衣机": {
+      "pinyin": "xǐ yī jī",
+      "english": "washing machine",
+      "explanation": "洗衣服的机器",
+      "audio": "audio/洗衣机.mp3"
+    },
+    "晾起来": {
+      "pinyin": "liàng qǐ lái",
+      "english": "hang up to dry",
+      "explanation": "挂起来让它干",
+      "audio": "audio/晾起来.mp3"
+    },
+    "整理": {
+      "pinyin": "zhěng lǐ",
+      "english": "organize, tidy up",
+      "explanation": "收拾好",
+      "audio": "audio/整理.mp3"
+    },
+    "书包": {
+      "pinyin": "shū bāo",
+      "english": "school bag",
+      "explanation": "装书的包",
+      "audio": "audio/书包.mp3"
+    },
+    "校鞋": {
+      "pinyin": "xiào xié",
+      "english": "school shoes",
+      "explanation": "上学穿的鞋子",
+      "audio": "audio/校鞋.mp3"
+    },
+    "收拾": {
+      "pinyin": "shōu shi",
+      "english": "tidy up, clean up",
+      "explanation": "把东西整理好",
+      "audio": "audio/收拾.mp3"
+    },
+    "整整齐齐": {
+      "pinyin": "zhěng zhěng qí qí",
+      "english": "neat and tidy",
+      "explanation": "非常整齐",
+      "audio": "audio/整整齐齐.mp3"
+    },
+    "晒干": {
+      "pinyin": "shài gān",
+      "english": "sun-dried",
+      "explanation": "在太阳下晒干",
+      "audio": "audio/晒干.mp3"
+    },
+    "折好": {
+      "pinyin": "zhé hǎo",
+      "english": "fold nicely",
+      "explanation": "把衣服叠好",
+      "audio": "audio/折好.mp3"
+    },
+    "养成": {
+      "pinyin": "yǎng chéng",
+      "english": "develop, form (a habit)",
+      "explanation": "慢慢形成",
+      "audio": "audio/养成.mp3"
+    },
+    "生活习惯": {
+      "pinyin": "shēng huó xí guàn",
+      "english": "living habits",
+      "explanation": "每天生活中做事的方式",
+      "audio": "audio/生活习惯.mp3"
+    },
+    "提高": {
+      "pinyin": "tí gāo",
+      "english": "improve, raise",
+      "explanation": "使变得更好",
+      "audio": "audio/提高.mp3"
+    },
+    "自理能力": {
+      "pinyin": "zì lǐ néng lì",
+      "english": "ability to take care of oneself",
+      "explanation": "自己照顾自己的能力",
+      "audio": "audio/自理能力.mp3"
+    },
+    "明白": {
+      "pinyin": "míng bai",
+      "english": "understand",
+      "explanation": "知道，懂得",
+      "audio": "audio/明白.mp3"
+    },
+    "辛苦": {
+      "pinyin": "xīn kǔ",
+      "english": "hard work, tiring",
+      "explanation": "很累很不容易",
+      "audio": "audio/辛苦.mp3"
+    },
+    "经常": {
+      "pinyin": "jīng cháng",
+      "english": "often, frequently",
+      "explanation": "常常",
+      "audio": "audio/经常.mp3"
+    }
+  }
+}

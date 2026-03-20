@@ -1,0 +1,314 @@
+{
+  "title": "P3 Higher Chinese Reading Practice 9",
+  "titleChinese": "三年级阅读练习（九）",
+  "audioFile": "9_P3HCL.mp4",
+  "texts": [
+    {
+      "title": "短文一",
+      "paragraphs": [
+        "周末，明华和立强一起到公园去骑脚踏车。明华骑得很快，跟在后面的立强害怕地说：“明华，你骑慢点！”",
+        "明华不但不听立强的话，反而骑得更快了。结果，明华在转弯处从脚踏车上掉了下来。立强看了，立刻下车，跑过去对明华说：“明华，你没事吧？”明华听了，难为情地说：“对不起，我以后不会再骑得那么快了。”"
+      ],
+      "audioTimestamps": [
+        {
+          "start": 0,
+          "end": 2.92,
+          "text": "短文一",
+          "english": ""
+        },
+        {
+          "start": 2.92,
+          "end": 8.76,
+          "text": "周末，明华和立强一起到公园去骑脚踏车。",
+          "english": "On the weekend, Minghua and Liqiang went to the park together to ride bicycles."
+        },
+        {
+          "start": 8.76,
+          "end": 11.04,
+          "text": "明华骑得很快，",
+          "english": "Minghua rode very fast,"
+        },
+        {
+          "start": 11.04,
+          "end": 14.72,
+          "text": "跟在后面的立强害怕地说：",
+          "english": "Liqiang, who was behind, said fearfully:"
+        },
+        {
+          "start": 14.72,
+          "end": 17.52,
+          "text": "“明华，你骑慢点！”",
+          "english": "\"Minghua, ride slower!\""
+        },
+        {
+          "start": 17.52,
+          "end": 20.72,
+          "text": "明华不但不听立强的话，",
+          "english": "Minghua not only didn’t listen to Liqiang,"
+        },
+        {
+          "start": 20.72,
+          "end": 23.32,
+          "text": "反而骑得更快了。",
+          "english": "but instead rode even faster."
+        },
+        {
+          "start": 23.32,
+          "end": 26.96,
+          "text": "结果，明华在转弯处",
+          "english": "As a result, at the turn,"
+        },
+        {
+          "start": 26.96,
+          "end": 29.8,
+          "text": "从脚踏车上掉了下来。",
+          "english": "Minghua fell off the bicycle."
+        },
+        {
+          "start": 29.8,
+          "end": 33.72,
+          "text": "立强看了，立刻下车，",
+          "english": "Liqiang saw this and immediately got off his bike,"
+        },
+        {
+          "start": 33.72,
+          "end": 36.36,
+          "text": "跑过去对明华说：",
+          "english": "ran over and said to Minghua:"
+        },
+        {
+          "start": 36.36,
+          "end": 39.0,
+          "text": "“明华，你没事吧？”",
+          "english": "\"Minghua, are you OK?\""
+        },
+        {
+          "start": 39.0,
+          "end": 42.48,
+          "text": "明华听了，难为情地说：",
+          "english": "Minghua heard this and said embarrassedly:"
+        },
+        {
+          "start": 42.48,
+          "end": 47.64,
+          "text": "“对不起，我以后不会再骑得那么快了。”",
+          "english": "\"Sorry, I won’t ride so fast again.\""
+        }
+      ]
+    },
+    {
+      "title": "短文二",
+      "paragraphs": [
+        "风很骄傲，认为自己是世界上最强的。墙壁想给风一个教训，于是和风比强。风用尽全力地吹，把人、车子和树木都吹得东歪西倒。",
+        "当风正得意时，它发现墙壁竟然一动也不动。",
+        "“你……怎么那么强呀？”风气喘如牛地说。",
+        "“不，我不是最强的，人类比我还强。”墙壁说。",
+        "从此，风再也不敢自以为是了。"
+      ],
+      "audioTimestamps": [
+        {
+          "start": 47.64,
+          "end": 49.96,
+          "text": "短文二",
+          "english": ""
+        },
+        {
+          "start": 49.96,
+          "end": 52.48,
+          "text": "风很骄傲，",
+          "english": "The wind was very proud,"
+        },
+        {
+          "start": 52.48,
+          "end": 56.24,
+          "text": "认为自己是世界上最强的。",
+          "english": "thinking it was the strongest in the world."
+        },
+        {
+          "start": 56.24,
+          "end": 59.72,
+          "text": "墙壁想给风一个教训，",
+          "english": "The wall wanted to teach the wind a lesson,"
+        },
+        {
+          "start": 59.72,
+          "end": 62.92,
+          "text": "于是和风比强。",
+          "english": "so it competed with the wind in strength."
+        },
+        {
+          "start": 62.92,
+          "end": 66.12,
+          "text": "风用尽全力地吹，",
+          "english": "The wind blew with all its might,"
+        },
+        {
+          "start": 66.12,
+          "end": 72.56,
+          "text": "把人、车子和树木都吹得东歪西倒。",
+          "english": "blowing people, cars and trees all over the place."
+        },
+        {
+          "start": 72.56,
+          "end": 75.44,
+          "text": "当风正得意时，",
+          "english": "When the wind was feeling proud,"
+        },
+        {
+          "start": 75.44,
+          "end": 79.68,
+          "text": "它发现墙壁竟然一动也不动。",
+          "english": "it discovered the wall hadn’t moved at all."
+        },
+        {
+          "start": 79.68,
+          "end": 82.76,
+          "text": "“你……怎么那么强呀？”",
+          "english": "\"You... how are you so strong?\""
+        },
+        {
+          "start": 82.76,
+          "end": 86.32,
+          "text": "风气喘如牛地说。",
+          "english": "the wind said, panting like an ox."
+        },
+        {
+          "start": 86.32,
+          "end": 89.12,
+          "text": "“不，我不是最强的，",
+          "english": "\"No, I’m not the strongest,"
+        },
+        {
+          "start": 89.12,
+          "end": 91.92,
+          "text": "人类比我还强。”",
+          "english": "humans are even stronger than me.\""
+        },
+        {
+          "start": 91.92,
+          "end": 94.12,
+          "text": "墙壁说。",
+          "english": "the wall said."
+        },
+        {
+          "start": 94.12,
+          "end": 99.92,
+          "text": "从此，风再也不敢自以为是了。",
+          "english": "From then on, the wind never dared to be conceited again."
+        }
+      ]
+    },
+    {
+      "title": "短文三",
+      "paragraphs": [
+        "甲和乙到国外旅行。晚上，当他们回到饭店时，服务生告诉他们电梯坏了，要给他们安排在楼下住一夜。他们不肯，决定走楼梯上十五层楼的客房。",
+        "当他们走到十四层楼时，甲忽然说：“这回麻烦了！”乙上气不接下气地说：“我累坏了，先回房间再说吧！”",
+        "甲结结巴巴地说：“我竟然……忘了……向服务员拿……房卡。”"
+      ],
+      "audioTimestamps": [
+        {
+          "start": 99.92,
+          "end": 102.12,
+          "text": "短文三",
+          "english": ""
+        },
+        {
+          "start": 102.12,
+          "end": 106.32,
+          "text": "甲和乙到国外旅行。",
+          "english": "Person A and Person B went travelling abroad."
+        },
+        {
+          "start": 106.32,
+          "end": 110.24,
+          "text": "晚上，当他们回到饭店时，",
+          "english": "At night, when they returned to the hotel,"
+        },
+        {
+          "start": 110.24,
+          "end": 112.44,
+          "text": "服务生告诉他们",
+          "english": "the waiter told them"
+        },
+        {
+          "start": 112.44,
+          "end": 114.04,
+          "text": "电梯坏了，",
+          "english": "the elevator was broken,"
+        },
+        {
+          "start": 114.04,
+          "end": 118.12,
+          "text": "要给他们安排在楼下住一夜。",
+          "english": "and offered to arrange for them to stay downstairs for the night."
+        },
+        {
+          "start": 118.12,
+          "end": 119.64,
+          "text": "他们不肯，",
+          "english": "They refused,"
+        },
+        {
+          "start": 119.64,
+          "end": 124.36,
+          "text": "决定走楼梯上十五层楼的客房。",
+          "english": "and decided to take the stairs to the 15th floor room."
+        },
+        {
+          "start": 124.36,
+          "end": 127.36,
+          "text": "当他们走到十四层楼时，",
+          "english": "When they reached the 14th floor,"
+        },
+        {
+          "start": 127.36,
+          "end": 129.36,
+          "text": "甲忽然说：",
+          "english": "Person A suddenly said:"
+        },
+        {
+          "start": 129.36,
+          "end": 131.6,
+          "text": "“这回麻烦了！”",
+          "english": "\"We’re in trouble this time!\""
+        },
+        {
+          "start": 131.6,
+          "end": 134.72,
+          "text": "乙上气不接下气地说：",
+          "english": "Person B said, gasping for breath:"
+        },
+        {
+          "start": 134.72,
+          "end": 136.2,
+          "text": "“我累坏了，",
+          "english": "\"I’m exhausted,"
+        },
+        {
+          "start": 136.2,
+          "end": 139.04,
+          "text": "先回房间再说吧！”",
+          "english": "let’s get back to the room first!\""
+        },
+        {
+          "start": 139.04,
+          "end": 141.8,
+          "text": "甲结结巴巴地说：",
+          "english": "Person A stammered:"
+        },
+        {
+          "start": 141.8,
+          "end": 144.84,
+          "text": "“我竟然……忘了……",
+          "english": "\"I actually... forgot..."
+        },
+        {
+          "start": 144.84,
+          "end": 147.8,
+          "text": "向服务员拿……房卡。”",
+          "english": "to get the room key card... from the staff.\""
+        }
+      ]
+    }
+  ]
+}
