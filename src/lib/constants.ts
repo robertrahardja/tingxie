@@ -23,7 +23,7 @@ export const CONSTANTS = {
   // Vocabulary row configuration
   // IMPORTANT: Update these values when adding new word sets
   VOCABULARY: {
-    LATEST_ROW_NUMBER: 81, // Current "latest words" set - update when adding new words
+    LATEST_ROW_NUMBER: 82, // Current "latest words" set - update when adding new words
     REVIEW_MODE_NAME: 'UNKNOWN_WORDS' as const,
   },
 
@@ -95,13 +95,14 @@ export interface NavItem {
 export const NAV_ITEMS: NavItem[] = [
   // Main tingxie pages
   { href: '/', label: '最新词语' },
+  { href: '/p3hcl-reading-11', label: '口试：欺负弱小' },
+  { href: '/school-tingxie', label: '学校听写' },
   { href: '/phrase-matching', label: '词语搭配' },
   { href: '/p3hcl-reading-12', label: '口试：做家务' },
   { href: '/shuihu-writing', label: '水壶写作' },
   { href: '/p3hcl-reading-9', label: '阅读练习（九）' },
   { href: '/p3hcl-reading-sync', label: '阅读练习（七）' },
   { href: '/cc1', label: '知识画报' },
-  { href: '/school-tingxie', label: '学校听写' },
   { href: '/review', label: '复习词语' },
   { href: '/dashboard', label: '家长看板' },
   { href: '/settings', label: '设置' },

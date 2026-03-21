@@ -10,20 +10,22 @@ from urllib.request import urlopen, Request
 from urllib.parse import quote
 
 WORDS = {
-    "食堂": "shí táng - canteen, cafeteria",
-    "走路": "zǒu lù - to walk",
-    "眼镜": "yǎn jìng - glasses, spectacles",
-    "休息": "xiū xi - to rest",
-    "碰到": "pèng dào - to bump into, to encounter",
-    "赔钱": "péi qián - to compensate, to pay damages",
-    "生病": "shēng bìng - to be sick, to fall ill",
-    "脱": "tuō - to take off, to remove",
-    "搬动": "bān dòng - to move (something)",
-    "电视": "diàn shì - television",
-    "轻轻": "qīng qīng - gently, lightly, softly",
-    "灵机一动": "líng jī yī dòng - to have a sudden inspiration",
-    "留下一张便条": "liú xià yī zhāng biàn tiáo - to leave a note",
-    "轻手轻脚": "qīng shǒu qīng jiǎo - quietly, stealthily, on tiptoe",
+    "伸进": "shēn jìn - to stretch/reach into",
+    "鼻子": "bí zi - nose",
+    "救护车": "jiù hù chē - ambulance",
+    "篮子": "lán zi - basket",
+    "不停": "bù tíng - non-stop, continuously",
+    "满": "mǎn - full",
+    "升": "shēng - to rise, to ascend",
+    "回答问题": "huí dá wèn tí - to answer a question",
+    "手拉手": "shǒu lā shǒu - hand in hand",
+    "船": "chuán - boat, ship",
+    "重量": "zhòng liàng - weight",
+    "夸": "kuā - to praise, to boast",
+    "竹竿": "zhú gān - bamboo pole",
+    "称一称": "chēng yī chēng - to weigh (something)",
+    "下沉": "xià chén - to sink",
+    "墙壁": "qiáng bì - wall",
 }
 
 def download_google_tts(word):
