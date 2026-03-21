@@ -359,6 +359,420 @@
       "english": "often, frequently",
       "explanation": "常常",
       "audio": "audio/经常.mp3"
+    },
+    "妈妈": {
+      "pinyin": "mā ma",
+      "english": "mother, mom",
+      "explanation": "对母亲的称呼。",
+      "audio": ""
+    },
+    "在": {
+      "pinyin": "zài",
+      "english": "at, in",
+      "explanation": "表示地点或时间。",
+      "audio": ""
+    },
+    "里": {
+      "pinyin": "lǐ",
+      "english": "inside",
+      "explanation": "表示在……里面。",
+      "audio": ""
+    },
+    "小女孩": {
+      "pinyin": "xiǎo nǚ hái",
+      "english": "little girl",
+      "explanation": "年纪小的女孩子。",
+      "audio": ""
+    },
+    "看见": {
+      "pinyin": "kàn jiàn",
+      "english": "to see",
+      "explanation": "用眼睛看到了。",
+      "audio": ""
+    },
+    "先": {
+      "pinyin": "xiān",
+      "english": "first",
+      "explanation": "表示做事的顺序，最先。",
+      "audio": ""
+    },
+    "把": {
+      "pinyin": "bǎ",
+      "english": "(particle)",
+      "explanation": "用在动词前，表示对某物做某事。",
+      "audio": ""
+    },
+    "到": {
+      "pinyin": "dào",
+      "english": "to, arrive",
+      "explanation": "表示到达某个地方。",
+      "audio": ""
+    },
+    "上": {
+      "pinyin": "shàng",
+      "english": "on, upon",
+      "explanation": "表示在……上面。",
+      "audio": ""
+    },
+    "再": {
+      "pinyin": "zài",
+      "english": "then, again",
+      "explanation": "表示接着做下一件事。",
+      "audio": ""
+    },
+    "然后": {
+      "pinyin": "rán hòu",
+      "english": "then, after that",
+      "explanation": "表示接下来。",
+      "audio": ""
+    },
+    "等着": {
+      "pinyin": "děng zhe",
+      "english": "waiting",
+      "explanation": "等待的意思。",
+      "audio": ""
+    },
+    "和": {
+      "pinyin": "hé",
+      "english": "and, with",
+      "explanation": "连接两个词语。",
+      "audio": ""
+    },
+    "一起": {
+      "pinyin": "yī qǐ",
+      "english": "together",
+      "explanation": "大家共同做某事。",
+      "audio": ""
+    },
+    "吃": {
+      "pinyin": "chī",
+      "english": "to eat",
+      "explanation": "把食物放进嘴里。",
+      "audio": ""
+    },
+    "我": {
+      "pinyin": "wǒ",
+      "english": "I, me",
+      "explanation": "第一人称代词。",
+      "audio": ""
+    },
+    "的": {
+      "pinyin": "de",
+      "english": "(possessive particle)",
+      "explanation": "表示所属关系。",
+      "audio": ""
+    },
+    "是": {
+      "pinyin": "shì",
+      "english": "is, am, are",
+      "explanation": "表示判断。",
+      "audio": ""
+    },
+    "我们": {
+      "pinyin": "wǒ men",
+      "english": "we, us",
+      "explanation": "第一人称复数代词。",
+      "audio": ""
+    },
+    "因为": {
+      "pinyin": "yīn wèi",
+      "english": "because",
+      "explanation": "表示原因。",
+      "audio": ""
+    },
+    "工作": {
+      "pinyin": "gōng zuò",
+      "english": "work",
+      "explanation": "为了挣钱而做的事情。",
+      "audio": ""
+    },
+    "很忙": {
+      "pinyin": "hěn máng",
+      "english": "very busy",
+      "explanation": "非常忙碌。",
+      "audio": ""
+    },
+    "多": {
+      "pinyin": "duō",
+      "english": "more, much",
+      "explanation": "表示数量多。",
+      "audio": ""
+    },
+    "他们": {
+      "pinyin": "tā men",
+      "english": "they, them",
+      "explanation": "第三人称复数代词。",
+      "audio": ""
+    },
+    "做": {
+      "pinyin": "zuò",
+      "english": "to do, to make",
+      "explanation": "进行某项活动。",
+      "audio": ""
+    },
+    "一个": {
+      "pinyin": "yī gè",
+      "english": "one, a",
+      "explanation": "数量词，表示一个。",
+      "audio": ""
+    },
+    "孩子": {
+      "pinyin": "hái zi",
+      "english": "child",
+      "explanation": "年纪小的人。",
+      "audio": ""
+    },
+    "如果": {
+      "pinyin": "rú guǒ",
+      "english": "if",
+      "explanation": "表示假设。",
+      "audio": ""
+    },
+    "中": {
+      "pinyin": "zhōng",
+      "english": "in, middle",
+      "explanation": "表示在……里面。",
+      "audio": ""
+    },
+    "像": {
+      "pinyin": "xiàng",
+      "english": "like, similar to",
+      "explanation": "表示相似。",
+      "audio": ""
+    },
+    "她": {
+      "pinyin": "tā",
+      "english": "she, her",
+      "explanation": "第三人称女性代词。",
+      "audio": ""
+    },
+    "一样": {
+      "pinyin": "yī yàng",
+      "english": "the same",
+      "explanation": "表示相同。",
+      "audio": ""
+    },
+    "你": {
+      "pinyin": "nǐ",
+      "english": "you",
+      "explanation": "第二人称代词。",
+      "audio": ""
+    },
+    "有没有": {
+      "pinyin": "yǒu méi yǒu",
+      "english": "have or not",
+      "explanation": "用来提问是否有过某经历。",
+      "audio": ""
+    },
+    "做过": {
+      "pinyin": "zuò guò",
+      "english": "have done",
+      "explanation": "表示过去做过某事。",
+      "audio": ""
+    },
+    "说说": {
+      "pinyin": "shuō shuō",
+      "english": "talk about",
+      "explanation": "说一说，讲述。",
+      "audio": ""
+    },
+    "星期天": {
+      "pinyin": "xīng qī tiān",
+      "english": "Sunday",
+      "explanation": "一周的第七天。",
+      "audio": ""
+    },
+    "全家": {
+      "pinyin": "quán jiā",
+      "english": "the whole family",
+      "explanation": "全部的家人。",
+      "audio": ""
+    },
+    "还要": {
+      "pinyin": "hái yào",
+      "english": "also need to",
+      "explanation": "表示还需要做某事。",
+      "audio": ""
+    },
+    "爸爸": {
+      "pinyin": "bà ba",
+      "english": "father, dad",
+      "explanation": "对父亲的称呼。",
+      "audio": ""
+    },
+    "小": {
+      "pinyin": "xiǎo",
+      "english": "small, young",
+      "explanation": "年纪小的。",
+      "audio": ""
+    },
+    "但是": {
+      "pinyin": "dàn shì",
+      "english": "but, however",
+      "explanation": "表示转折。",
+      "audio": ""
+    },
+    "一些": {
+      "pinyin": "yī xiē",
+      "english": "some",
+      "explanation": "表示少量。",
+      "audio": ""
+    },
+    "比如": {
+      "pinyin": "bǐ rú",
+      "english": "for example",
+      "explanation": "举例说明。",
+      "audio": ""
+    },
+    "吃饭": {
+      "pinyin": "chī fàn",
+      "english": "to eat (a meal)",
+      "explanation": "吃饭的意思。",
+      "audio": ""
+    },
+    "前": {
+      "pinyin": "qián",
+      "english": "before",
+      "explanation": "表示时间在……之前。",
+      "audio": ""
+    },
+    "好": {
+      "pinyin": "hǎo",
+      "english": "good, well",
+      "explanation": "表示完成或良好。",
+      "audio": ""
+    },
+    "之后": {
+      "pinyin": "zhī hòu",
+      "english": "after",
+      "explanation": "表示在……之后。",
+      "audio": ""
+    },
+    "就": {
+      "pinyin": "jiù",
+      "english": "then, at once",
+      "explanation": "表示紧接着做某事。",
+      "audio": ""
+    },
+    "还": {
+      "pinyin": "hái",
+      "english": "also, still",
+      "explanation": "表示还有，此外。",
+      "audio": ""
+    },
+    "洗好": {
+      "pinyin": "xǐ hǎo",
+      "english": "washed clean",
+      "explanation": "洗完了，洗干净了。",
+      "audio": ""
+    },
+    "衣服": {
+      "pinyin": "yī fu",
+      "english": "clothes",
+      "explanation": "穿在身上的东西。",
+      "audio": ""
+    },
+    "自己": {
+      "pinyin": "zì jǐ",
+      "english": "oneself",
+      "explanation": "指自己本人。",
+      "audio": ""
+    },
+    "并": {
+      "pinyin": "bìng",
+      "english": "and, also",
+      "explanation": "表示并且。",
+      "audio": ""
+    },
+    "洗干净": {
+      "pinyin": "xǐ gān jìng",
+      "english": "wash clean",
+      "explanation": "洗得干干净净。",
+      "audio": ""
+    },
+    "床": {
+      "pinyin": "chuáng",
+      "english": "bed",
+      "explanation": "睡觉用的家具。",
+      "audio": ""
+    },
+    "得": {
+      "pinyin": "de",
+      "english": "(complement particle)",
+      "explanation": "用在动词后面，表示程度。",
+      "audio": ""
+    },
+    "让": {
+      "pinyin": "ràng",
+      "english": "to let, to make",
+      "explanation": "使得，让某人做某事。",
+      "audio": ""
+    },
+    "了": {
+      "pinyin": "le",
+      "english": "(particle)",
+      "explanation": "语气词。",
+      "audio": ""
+    },
+    "以后": {
+      "pinyin": "yǐ hòu",
+      "english": "in the future, after",
+      "explanation": "表示将来的时间。",
+      "audio": ""
+    },
+    "不让": {
+      "pinyin": "bú ràng",
+      "english": "not let",
+      "explanation": "不要让，不使得。",
+      "audio": ""
+    },
+    "那么": {
+      "pinyin": "nà me",
+      "english": "so, that much",
+      "explanation": "表示程度，那样地。",
+      "audio": ""
+    },
+    "去": {
+      "pinyin": "qù",
+      "english": "to go",
+      "explanation": "前往某个地方。",
+      "audio": ""
+    },
+    "帮": {
+      "pinyin": "bāng",
+      "english": "to help",
+      "explanation": "帮助别人做事。",
+      "audio": ""
+    },
+    "类问题": {
+      "pinyin": "lèi wèn tí",
+      "english": "type of question",
+      "explanation": "某一类的问题。",
+      "audio": ""
+    },
+    "家务": {
+      "pinyin": "jiā wù",
+      "english": "housework",
+      "explanation": "家里的日常事务，如打扫、洗碗等。",
+      "audio": ""
+    },
+    "有": {
+      "pinyin": "yǒu",
+      "english": "have, there is",
+      "explanation": "表示拥有或存在。",
+      "audio": ""
+    },
+    "也": {
+      "pinyin": "yě",
+      "english": "also, too",
+      "explanation": "表示同样。",
+      "audio": ""
+    },
+    "会": {
+      "pinyin": "huì",
+      "english": "will, can",
+      "explanation": "表示将来会做某事。",
+      "audio": ""
     }
   }
 }

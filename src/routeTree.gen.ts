@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VocabularyRouteImport } from './routes/vocabulary'
+import { Route as ShuihuWritingRouteImport } from './routes/shuihu-writing'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as SchoolTingxieRouteImport } from './routes/school-tingxie'
 import { Route as ReviewRouteImport } from './routes/review'
@@ -17,6 +18,8 @@ import { Route as RadicalsRouteImport } from './routes/radicals'
 import { Route as PhraseMatchingRouteImport } from './routes/phrase-matching'
 import { Route as P3hclWupinInteractiveRouteImport } from './routes/p3hcl-wupin-interactive'
 import { Route as P3hclReadingSyncRouteImport } from './routes/p3hcl-reading-sync'
+import { Route as P3hclReading9RouteImport } from './routes/p3hcl-reading-9'
+import { Route as P3hclReading12RouteImport } from './routes/p3hcl-reading-12'
 import { Route as P3hclReading11RouteImport } from './routes/p3hcl-reading-11'
 import { Route as KoushiTrafficSafetyRouteImport } from './routes/koushi-traffic-safety'
 import { Route as KoushiFamilyCohesionRouteImport } from './routes/koushi-family-cohesion'
@@ -30,6 +33,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const VocabularyRoute = VocabularyRouteImport.update({
   id: '/vocabulary',
   path: '/vocabulary',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShuihuWritingRoute = ShuihuWritingRouteImport.update({
+  id: '/shuihu-writing',
+  path: '/shuihu-writing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SettingsRoute = SettingsRouteImport.update({
@@ -65,6 +73,16 @@ const P3hclWupinInteractiveRoute = P3hclWupinInteractiveRouteImport.update({
 const P3hclReadingSyncRoute = P3hclReadingSyncRouteImport.update({
   id: '/p3hcl-reading-sync',
   path: '/p3hcl-reading-sync',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const P3hclReading9Route = P3hclReading9RouteImport.update({
+  id: '/p3hcl-reading-9',
+  path: '/p3hcl-reading-9',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const P3hclReading12Route = P3hclReading12RouteImport.update({
+  id: '/p3hcl-reading-12',
+  path: '/p3hcl-reading-12',
   getParentRoute: () => rootRouteImport,
 } as any)
 const P3hclReading11Route = P3hclReading11RouteImport.update({
@@ -123,6 +141,8 @@ export interface FileRoutesByFullPath {
   '/koushi-family-cohesion': typeof KoushiFamilyCohesionRoute
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
+  '/p3hcl-reading-12': typeof P3hclReading12Route
+  '/p3hcl-reading-9': typeof P3hclReading9Route
   '/p3hcl-reading-sync': typeof P3hclReadingSyncRoute
   '/p3hcl-wupin-interactive': typeof P3hclWupinInteractiveRoute
   '/phrase-matching': typeof PhraseMatchingRoute
@@ -130,6 +150,7 @@ export interface FileRoutesByFullPath {
   '/review': typeof ReviewRoute
   '/school-tingxie': typeof SchoolTingxieRoute
   '/settings': typeof SettingsRoute
+  '/shuihu-writing': typeof ShuihuWritingRoute
   '/vocabulary': typeof VocabularyRoute
 }
 export interface FileRoutesByTo {
@@ -142,6 +163,8 @@ export interface FileRoutesByTo {
   '/koushi-family-cohesion': typeof KoushiFamilyCohesionRoute
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
+  '/p3hcl-reading-12': typeof P3hclReading12Route
+  '/p3hcl-reading-9': typeof P3hclReading9Route
   '/p3hcl-reading-sync': typeof P3hclReadingSyncRoute
   '/p3hcl-wupin-interactive': typeof P3hclWupinInteractiveRoute
   '/phrase-matching': typeof PhraseMatchingRoute
@@ -149,6 +172,7 @@ export interface FileRoutesByTo {
   '/review': typeof ReviewRoute
   '/school-tingxie': typeof SchoolTingxieRoute
   '/settings': typeof SettingsRoute
+  '/shuihu-writing': typeof ShuihuWritingRoute
   '/vocabulary': typeof VocabularyRoute
 }
 export interface FileRoutesById {
@@ -162,6 +186,8 @@ export interface FileRoutesById {
   '/koushi-family-cohesion': typeof KoushiFamilyCohesionRoute
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
+  '/p3hcl-reading-12': typeof P3hclReading12Route
+  '/p3hcl-reading-9': typeof P3hclReading9Route
   '/p3hcl-reading-sync': typeof P3hclReadingSyncRoute
   '/p3hcl-wupin-interactive': typeof P3hclWupinInteractiveRoute
   '/phrase-matching': typeof PhraseMatchingRoute
@@ -169,6 +195,7 @@ export interface FileRoutesById {
   '/review': typeof ReviewRoute
   '/school-tingxie': typeof SchoolTingxieRoute
   '/settings': typeof SettingsRoute
+  '/shuihu-writing': typeof ShuihuWritingRoute
   '/vocabulary': typeof VocabularyRoute
 }
 export interface FileRouteTypes {
@@ -183,6 +210,8 @@ export interface FileRouteTypes {
     | '/koushi-family-cohesion'
     | '/koushi-traffic-safety'
     | '/p3hcl-reading-11'
+    | '/p3hcl-reading-12'
+    | '/p3hcl-reading-9'
     | '/p3hcl-reading-sync'
     | '/p3hcl-wupin-interactive'
     | '/phrase-matching'
@@ -190,6 +219,7 @@ export interface FileRouteTypes {
     | '/review'
     | '/school-tingxie'
     | '/settings'
+    | '/shuihu-writing'
     | '/vocabulary'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -202,6 +232,8 @@ export interface FileRouteTypes {
     | '/koushi-family-cohesion'
     | '/koushi-traffic-safety'
     | '/p3hcl-reading-11'
+    | '/p3hcl-reading-12'
+    | '/p3hcl-reading-9'
     | '/p3hcl-reading-sync'
     | '/p3hcl-wupin-interactive'
     | '/phrase-matching'
@@ -209,6 +241,7 @@ export interface FileRouteTypes {
     | '/review'
     | '/school-tingxie'
     | '/settings'
+    | '/shuihu-writing'
     | '/vocabulary'
   id:
     | '__root__'
@@ -221,6 +254,8 @@ export interface FileRouteTypes {
     | '/koushi-family-cohesion'
     | '/koushi-traffic-safety'
     | '/p3hcl-reading-11'
+    | '/p3hcl-reading-12'
+    | '/p3hcl-reading-9'
     | '/p3hcl-reading-sync'
     | '/p3hcl-wupin-interactive'
     | '/phrase-matching'
@@ -228,6 +263,7 @@ export interface FileRouteTypes {
     | '/review'
     | '/school-tingxie'
     | '/settings'
+    | '/shuihu-writing'
     | '/vocabulary'
   fileRoutesById: FileRoutesById
 }
@@ -241,6 +277,8 @@ export interface RootRouteChildren {
   KoushiFamilyCohesionRoute: typeof KoushiFamilyCohesionRoute
   KoushiTrafficSafetyRoute: typeof KoushiTrafficSafetyRoute
   P3hclReading11Route: typeof P3hclReading11Route
+  P3hclReading12Route: typeof P3hclReading12Route
+  P3hclReading9Route: typeof P3hclReading9Route
   P3hclReadingSyncRoute: typeof P3hclReadingSyncRoute
   P3hclWupinInteractiveRoute: typeof P3hclWupinInteractiveRoute
   PhraseMatchingRoute: typeof PhraseMatchingRoute
@@ -248,6 +286,7 @@ export interface RootRouteChildren {
   ReviewRoute: typeof ReviewRoute
   SchoolTingxieRoute: typeof SchoolTingxieRoute
   SettingsRoute: typeof SettingsRoute
+  ShuihuWritingRoute: typeof ShuihuWritingRoute
   VocabularyRoute: typeof VocabularyRoute
 }
 
@@ -258,6 +297,13 @@ declare module '@tanstack/react-router' {
       path: '/vocabulary'
       fullPath: '/vocabulary'
       preLoaderRoute: typeof VocabularyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shuihu-writing': {
+      id: '/shuihu-writing'
+      path: '/shuihu-writing'
+      fullPath: '/shuihu-writing'
+      preLoaderRoute: typeof ShuihuWritingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/settings': {
@@ -307,6 +353,20 @@ declare module '@tanstack/react-router' {
       path: '/p3hcl-reading-sync'
       fullPath: '/p3hcl-reading-sync'
       preLoaderRoute: typeof P3hclReadingSyncRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/p3hcl-reading-9': {
+      id: '/p3hcl-reading-9'
+      path: '/p3hcl-reading-9'
+      fullPath: '/p3hcl-reading-9'
+      preLoaderRoute: typeof P3hclReading9RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/p3hcl-reading-12': {
+      id: '/p3hcl-reading-12'
+      path: '/p3hcl-reading-12'
+      fullPath: '/p3hcl-reading-12'
+      preLoaderRoute: typeof P3hclReading12RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/p3hcl-reading-11': {
@@ -385,6 +445,8 @@ const rootRouteChildren: RootRouteChildren = {
   KoushiFamilyCohesionRoute: KoushiFamilyCohesionRoute,
   KoushiTrafficSafetyRoute: KoushiTrafficSafetyRoute,
   P3hclReading11Route: P3hclReading11Route,
+  P3hclReading12Route: P3hclReading12Route,
+  P3hclReading9Route: P3hclReading9Route,
   P3hclReadingSyncRoute: P3hclReadingSyncRoute,
   P3hclWupinInteractiveRoute: P3hclWupinInteractiveRoute,
   PhraseMatchingRoute: PhraseMatchingRoute,
@@ -392,6 +454,7 @@ const rootRouteChildren: RootRouteChildren = {
   ReviewRoute: ReviewRoute,
   SchoolTingxieRoute: SchoolTingxieRoute,
   SettingsRoute: SettingsRoute,
+  ShuihuWritingRoute: ShuihuWritingRoute,
   VocabularyRoute: VocabularyRoute,
 }
 export const routeTree = rootRouteImport

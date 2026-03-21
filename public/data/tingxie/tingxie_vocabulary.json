@@ -4339,6 +4339,139 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 83,
+      "words": [
+        {
+          "simplified": "眼镜",
+          "traditional": "眼鏡",
+          "pinyin": "yǎn jìng",
+          "english": "glasses, spectacles",
+          "audio": "audio/眼镜.mp3",
+          "important": true
+        },
+        {
+          "simplified": "赔钱",
+          "traditional": "賠錢",
+          "pinyin": "péi qián",
+          "english": "to lose money, to compensate",
+          "audio": "audio/赔钱.mp3",
+          "important": true
+        },
+        {
+          "simplified": "留下便条",
+          "traditional": "留下便條",
+          "pinyin": "liú xià biàn tiáo",
+          "english": "to leave a note",
+          "audio": "audio/留下便条.mp3",
+          "important": true
+        },
+        {
+          "simplified": "轻轻搬动",
+          "traditional": "輕輕搬動",
+          "pinyin": "qīng qīng bān dòng",
+          "english": "to move gently",
+          "audio": "audio/轻轻搬动.mp3",
+          "important": true
+        },
+        {
+          "simplified": "灵机一动",
+          "traditional": "靈機一動",
+          "pinyin": "líng jī yī dòng",
+          "english": "a flash of inspiration",
+          "audio": "audio/灵机一动.mp3",
+          "important": true
+        },
+        {
+          "simplified": "轻手轻脚",
+          "traditional": "輕手輕腳",
+          "pinyin": "qīng shǒu qīng jiǎo",
+          "english": "quietly, on tiptoe",
+          "audio": "audio/轻手轻脚.mp3",
+          "important": true
+        },
+        {
+          "simplified": "碰到",
+          "traditional": "碰到",
+          "pinyin": "pèng dào",
+          "english": "to bump into, to encounter",
+          "audio": "audio/碰到.mp3",
+          "important": true
+        },
+        {
+          "simplified": "手忙脚乱",
+          "traditional": "手忙腳亂",
+          "pinyin": "shǒu máng jiǎo luàn",
+          "english": "in a flurry, flustered",
+          "audio": "audio/手忙脚乱.mp3",
+          "important": true
+        },
+        {
+          "simplified": "满头大汗",
+          "traditional": "滿頭大汗",
+          "pinyin": "mǎn tóu dà hàn",
+          "english": "sweating profusely",
+          "audio": "audio/满头大汗.mp3",
+          "important": true
+        },
+        {
+          "simplified": "部分",
+          "traditional": "部分",
+          "pinyin": "bù fen",
+          "english": "part, portion",
+          "audio": "audio/部分.mp3",
+          "important": true
+        },
+        {
+          "simplified": "脱下",
+          "traditional": "脫下",
+          "pinyin": "tuō xià",
+          "english": "to take off (clothing)",
+          "audio": "audio/脱下.mp3",
+          "important": true
+        },
+        {
+          "simplified": "重量",
+          "traditional": "重量",
+          "pinyin": "zhòng liàng",
+          "english": "weight",
+          "audio": "audio/重量.mp3",
+          "important": true
+        },
+        {
+          "simplified": "收拾整齐",
+          "traditional": "收拾整齊",
+          "pinyin": "shōu shí zhěng qí",
+          "english": "to tidy up neatly",
+          "audio": "audio/收拾整齐.mp3",
+          "important": true
+        },
+        {
+          "simplified": "救护车",
+          "traditional": "救護車",
+          "pinyin": "jiù hù chē",
+          "english": "ambulance",
+          "audio": "audio/救护车.mp3",
+          "important": true
+        },
+        {
+          "simplified": "夸奖",
+          "traditional": "誇獎",
+          "pinyin": "kuā jiǎng",
+          "english": "to praise, to compliment",
+          "audio": "audio/夸奖.mp3",
+          "important": true
+        },
+        {
+          "simplified": "回答问题",
+          "traditional": "回答問題",
+          "pinyin": "huí dá wèn tí",
+          "english": "to answer a question",
+          "audio": "audio/回答问题.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }

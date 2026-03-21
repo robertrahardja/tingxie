@@ -189,6 +189,22 @@ function P3HCLReading12Page() {
       {/* Main content */}
       <main className="vocabulary-main">
         <div style={{ padding: '20px' }}>
+          {/* Context image */}
+          <div style={{
+            marginBottom: '20px',
+            borderRadius: '12px',
+            overflow: 'hidden',
+          }}>
+            <img
+              src="/images/做家务.png"
+              alt="做家务 - doing housework"
+              style={{
+                width: '100%',
+                borderRadius: '12px',
+              }}
+            />
+          </div>
+
           {/* Audio player - sticky */}
           {data.audioFile && (
             <div style={{
