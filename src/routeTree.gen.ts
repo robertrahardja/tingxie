@@ -27,6 +27,7 @@ import { Route as InstructionsRouteImport } from './routes/instructions'
 import { Route as HandwritingRouteImport } from './routes/handwriting'
 import { Route as FamilyRouteImport } from './routes/family'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as CurriculumRouteImport } from './routes/curriculum'
 import { Route as Cc1RouteImport } from './routes/cc1'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -120,6 +121,11 @@ const DashboardRoute = DashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CurriculumRoute = CurriculumRouteImport.update({
+  id: '/curriculum',
+  path: '/curriculum',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const Cc1Route = Cc1RouteImport.update({
   id: '/cc1',
   path: '/cc1',
@@ -134,6 +140,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cc1': typeof Cc1Route
+  '/curriculum': typeof CurriculumRoute
   '/dashboard': typeof DashboardRoute
   '/family': typeof FamilyRoute
   '/handwriting': typeof HandwritingRoute
@@ -156,6 +163,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cc1': typeof Cc1Route
+  '/curriculum': typeof CurriculumRoute
   '/dashboard': typeof DashboardRoute
   '/family': typeof FamilyRoute
   '/handwriting': typeof HandwritingRoute
@@ -179,6 +187,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/cc1': typeof Cc1Route
+  '/curriculum': typeof CurriculumRoute
   '/dashboard': typeof DashboardRoute
   '/family': typeof FamilyRoute
   '/handwriting': typeof HandwritingRoute
@@ -203,6 +212,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/cc1'
+    | '/curriculum'
     | '/dashboard'
     | '/family'
     | '/handwriting'
@@ -225,6 +235,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/cc1'
+    | '/curriculum'
     | '/dashboard'
     | '/family'
     | '/handwriting'
@@ -247,6 +258,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/cc1'
+    | '/curriculum'
     | '/dashboard'
     | '/family'
     | '/handwriting'
@@ -270,6 +282,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   Cc1Route: typeof Cc1Route
+  CurriculumRoute: typeof CurriculumRoute
   DashboardRoute: typeof DashboardRoute
   FamilyRoute: typeof FamilyRoute
   HandwritingRoute: typeof HandwritingRoute
@@ -418,6 +431,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/curriculum': {
+      id: '/curriculum'
+      path: '/curriculum'
+      fullPath: '/curriculum'
+      preLoaderRoute: typeof CurriculumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cc1': {
       id: '/cc1'
       path: '/cc1'
@@ -438,6 +458,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   Cc1Route: Cc1Route,
+  CurriculumRoute: CurriculumRoute,
   DashboardRoute: DashboardRoute,
   FamilyRoute: FamilyRoute,
   HandwritingRoute: HandwritingRoute,
