@@ -96,6 +96,7 @@ export const NAV_ITEMS: NavItem[] = [
   // Main tingxie pages
   { href: '/', label: '最新词语' },
   { href: '/curriculum', label: '课程词语 P1-P3' },
+  { href: '/koushi-no-civic-mindedness', label: '口试：没有公德心' },
   { href: '/p3hcl-reading-11', label: '口试：欺负弱小' },
   { href: '/school-tingxie', label: '学校听写' },
   { href: '/phrase-matching', label: '词语搭配' },
@@ -119,7 +120,6 @@ export const NAV_ITEMS: NavItem[] = [
       { href: '/p3hcl-wupin-interactive', label: '互动阅读' },
       { href: '/koushi-family-cohesion', label: '口试：家庭凝聚力' },
       { href: '/koushi-traffic-safety', label: '口试：交通安全' },
-      { href: '/koushi-no-civic-mindedness', label: '口试：没有公德心' },
     ],
   },
 ]
