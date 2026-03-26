@@ -918,10 +918,37 @@ function KoushiNoCivicMindednessPage() {
             ))}
           </div>
           <div className="hint-box">
-            <strong>提示：</strong>
+            <strong>
+              <span className="koushi-word" onClick={() => handleWordClick('提示', 'tí shì', 'hint/tip')}>提示</span>
+              ：
+            </strong>
             <ul>
-              <li>点击任何词语查看拼音、英文翻译和听发音</li>
-              <li>播放音频时，句子会同步高亮显示英文翻译</li>
+              <li>
+                <span className="koushi-word" onClick={() => handleWordClick('点击', 'diǎn jī', 'click/tap')}>点击</span>
+                <span className="koushi-word" onClick={() => handleWordClick('任何', 'rèn hé', 'any')}>任何</span>
+                <span className="koushi-word" onClick={() => handleWordClick('词语', 'cí yǔ', 'words/vocabulary')}>词语</span>
+                <span className="koushi-word" onClick={() => handleWordClick('查看', 'chá kàn', 'view/check')}>查看</span>
+                <span className="koushi-word" onClick={() => handleWordClick('拼音', 'pīn yīn', 'pinyin')}>拼音</span>
+                、
+                <span className="koushi-word" onClick={() => handleWordClick('英文', 'yīng wén', 'English')}>英文</span>
+                <span className="koushi-word" onClick={() => handleWordClick('翻译', 'fān yì', 'translation')}>翻译</span>
+                <span className="koushi-word" onClick={() => handleWordClick('和', 'hé', 'and')}>和</span>
+                <span className="koushi-word" onClick={() => handleWordClick('听', 'tīng', 'listen')}>听</span>
+                <span className="koushi-word" onClick={() => handleWordClick('发音', 'fā yīn', 'pronunciation')}>发音</span>
+              </li>
+              <li>
+                <span className="koushi-word" onClick={() => handleWordClick('播放', 'bō fàng', 'play')}>播放</span>
+                <span className="koushi-word" onClick={() => handleWordClick('音频', 'yīn pín', 'audio')}>音频</span>
+                <span className="koushi-word" onClick={() => handleWordClick('时', 'shí', 'when')}>时</span>
+                ，
+                <span className="koushi-word" onClick={() => handleWordClick('句子', 'jù zi', 'sentence')}>句子</span>
+                <span className="koushi-word" onClick={() => handleWordClick('会', 'huì', 'will')}>会</span>
+                <span className="koushi-word" onClick={() => handleWordClick('同步', 'tóng bù', 'synchronize')}>同步</span>
+                <span className="koushi-word" onClick={() => handleWordClick('高亮', 'gāo liàng', 'highlight')}>高亮</span>
+                <span className="koushi-word" onClick={() => handleWordClick('显示', 'xiǎn shì', 'display')}>显示</span>
+                <span className="koushi-word" onClick={() => handleWordClick('英文', 'yīng wén', 'English')}>英文</span>
+                <span className="koushi-word" onClick={() => handleWordClick('翻译', 'fān yì', 'translation')}>翻译</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -1061,10 +1088,37 @@ function KoushiNoCivicMindednessPage() {
             ))}
           </div>
           <div className="hint-box">
-            <strong>提示：</strong>
+            <strong>
+              <span className="koushi-word" onClick={() => handleWordClick('提示', 'tí shì', 'hint/tip')}>提示</span>
+              ：
+            </strong>
             <ul>
-              <li>点击任何词语查看拼音、英文翻译和听发音</li>
-              <li>播放音频时，句子会同步高亮显示英文翻译</li>
+              <li>
+                <span className="koushi-word" onClick={() => handleWordClick('点击', 'diǎn jī', 'click/tap')}>点击</span>
+                <span className="koushi-word" onClick={() => handleWordClick('任何', 'rèn hé', 'any')}>任何</span>
+                <span className="koushi-word" onClick={() => handleWordClick('词语', 'cí yǔ', 'words/vocabulary')}>词语</span>
+                <span className="koushi-word" onClick={() => handleWordClick('查看', 'chá kàn', 'view/check')}>查看</span>
+                <span className="koushi-word" onClick={() => handleWordClick('拼音', 'pīn yīn', 'pinyin')}>拼音</span>
+                、
+                <span className="koushi-word" onClick={() => handleWordClick('英文', 'yīng wén', 'English')}>英文</span>
+                <span className="koushi-word" onClick={() => handleWordClick('翻译', 'fān yì', 'translation')}>翻译</span>
+                <span className="koushi-word" onClick={() => handleWordClick('和', 'hé', 'and')}>和</span>
+                <span className="koushi-word" onClick={() => handleWordClick('听', 'tīng', 'listen')}>听</span>
+                <span className="koushi-word" onClick={() => handleWordClick('发音', 'fā yīn', 'pronunciation')}>发音</span>
+              </li>
+              <li>
+                <span className="koushi-word" onClick={() => handleWordClick('播放', 'bō fàng', 'play')}>播放</span>
+                <span className="koushi-word" onClick={() => handleWordClick('音频', 'yīn pín', 'audio')}>音频</span>
+                <span className="koushi-word" onClick={() => handleWordClick('时', 'shí', 'when')}>时</span>
+                ，
+                <span className="koushi-word" onClick={() => handleWordClick('句子', 'jù zi', 'sentence')}>句子</span>
+                <span className="koushi-word" onClick={() => handleWordClick('会', 'huì', 'will')}>会</span>
+                <span className="koushi-word" onClick={() => handleWordClick('同步', 'tóng bù', 'synchronize')}>同步</span>
+                <span className="koushi-word" onClick={() => handleWordClick('高亮', 'gāo liàng', 'highlight')}>高亮</span>
+                <span className="koushi-word" onClick={() => handleWordClick('显示', 'xiǎn shì', 'display')}>显示</span>
+                <span className="koushi-word" onClick={() => handleWordClick('英文', 'yīng wén', 'English')}>英文</span>
+                <span className="koushi-word" onClick={() => handleWordClick('翻译', 'fān yì', 'translation')}>翻译</span>
+              </li>
             </ul>
           </div>
         </div>
