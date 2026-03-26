@@ -22,6 +22,7 @@ import { Route as P3hclReading9RouteImport } from './routes/p3hcl-reading-9'
 import { Route as P3hclReading12RouteImport } from './routes/p3hcl-reading-12'
 import { Route as P3hclReading11RouteImport } from './routes/p3hcl-reading-11'
 import { Route as KoushiTrafficSafetyRouteImport } from './routes/koushi-traffic-safety'
+import { Route as KoushiNoCivicMindednessRouteImport } from './routes/koushi-no-civic-mindedness'
 import { Route as KoushiFamilyCohesionRouteImport } from './routes/koushi-family-cohesion'
 import { Route as InstructionsRouteImport } from './routes/instructions'
 import { Route as HandwritingRouteImport } from './routes/handwriting'
@@ -96,6 +97,11 @@ const KoushiTrafficSafetyRoute = KoushiTrafficSafetyRouteImport.update({
   path: '/koushi-traffic-safety',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KoushiNoCivicMindednessRoute = KoushiNoCivicMindednessRouteImport.update({
+  id: '/koushi-no-civic-mindedness',
+  path: '/koushi-no-civic-mindedness',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KoushiFamilyCohesionRoute = KoushiFamilyCohesionRouteImport.update({
   id: '/koushi-family-cohesion',
   path: '/koushi-family-cohesion',
@@ -146,6 +152,7 @@ export interface FileRoutesByFullPath {
   '/handwriting': typeof HandwritingRoute
   '/instructions': typeof InstructionsRoute
   '/koushi-family-cohesion': typeof KoushiFamilyCohesionRoute
+  '/koushi-no-civic-mindedness': typeof KoushiNoCivicMindednessRoute
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-12': typeof P3hclReading12Route
@@ -169,6 +176,7 @@ export interface FileRoutesByTo {
   '/handwriting': typeof HandwritingRoute
   '/instructions': typeof InstructionsRoute
   '/koushi-family-cohesion': typeof KoushiFamilyCohesionRoute
+  '/koushi-no-civic-mindedness': typeof KoushiNoCivicMindednessRoute
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-12': typeof P3hclReading12Route
@@ -193,6 +201,7 @@ export interface FileRoutesById {
   '/handwriting': typeof HandwritingRoute
   '/instructions': typeof InstructionsRoute
   '/koushi-family-cohesion': typeof KoushiFamilyCohesionRoute
+  '/koushi-no-civic-mindedness': typeof KoushiNoCivicMindednessRoute
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-12': typeof P3hclReading12Route
@@ -218,6 +227,7 @@ export interface FileRouteTypes {
     | '/handwriting'
     | '/instructions'
     | '/koushi-family-cohesion'
+    | '/koushi-no-civic-mindedness'
     | '/koushi-traffic-safety'
     | '/p3hcl-reading-11'
     | '/p3hcl-reading-12'
@@ -241,6 +251,7 @@ export interface FileRouteTypes {
     | '/handwriting'
     | '/instructions'
     | '/koushi-family-cohesion'
+    | '/koushi-no-civic-mindedness'
     | '/koushi-traffic-safety'
     | '/p3hcl-reading-11'
     | '/p3hcl-reading-12'
@@ -264,6 +275,7 @@ export interface FileRouteTypes {
     | '/handwriting'
     | '/instructions'
     | '/koushi-family-cohesion'
+    | '/koushi-no-civic-mindedness'
     | '/koushi-traffic-safety'
     | '/p3hcl-reading-11'
     | '/p3hcl-reading-12'
@@ -288,6 +300,7 @@ export interface RootRouteChildren {
   HandwritingRoute: typeof HandwritingRoute
   InstructionsRoute: typeof InstructionsRoute
   KoushiFamilyCohesionRoute: typeof KoushiFamilyCohesionRoute
+  KoushiNoCivicMindednessRoute: typeof KoushiNoCivicMindednessRoute
   KoushiTrafficSafetyRoute: typeof KoushiTrafficSafetyRoute
   P3hclReading11Route: typeof P3hclReading11Route
   P3hclReading12Route: typeof P3hclReading12Route
@@ -396,6 +409,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KoushiTrafficSafetyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/koushi-no-civic-mindedness': {
+      id: '/koushi-no-civic-mindedness'
+      path: '/koushi-no-civic-mindedness'
+      fullPath: '/koushi-no-civic-mindedness'
+      preLoaderRoute: typeof KoushiNoCivicMindednessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/koushi-family-cohesion': {
       id: '/koushi-family-cohesion'
       path: '/koushi-family-cohesion'
@@ -464,6 +484,7 @@ const rootRouteChildren: RootRouteChildren = {
   HandwritingRoute: HandwritingRoute,
   InstructionsRoute: InstructionsRoute,
   KoushiFamilyCohesionRoute: KoushiFamilyCohesionRoute,
+  KoushiNoCivicMindednessRoute: KoushiNoCivicMindednessRoute,
   KoushiTrafficSafetyRoute: KoushiTrafficSafetyRoute,
   P3hclReading11Route: P3hclReading11Route,
   P3hclReading12Route: P3hclReading12Route,

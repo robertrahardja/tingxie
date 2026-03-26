@@ -119,6 +119,7 @@ export const NAV_ITEMS: NavItem[] = [
       { href: '/p3hcl-wupin-interactive', label: '互动阅读' },
       { href: '/koushi-family-cohesion', label: '口试：家庭凝聚力' },
       { href: '/koushi-traffic-safety', label: '口试：交通安全' },
+      { href: '/koushi-no-civic-mindedness', label: '口试：没有公德心' },
     ],
   },
 ]
