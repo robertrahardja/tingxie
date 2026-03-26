@@ -4472,6 +4472,107 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 84,
+      "words": [
+        {
+          "simplified": "胖",
+          "traditional": "胖",
+          "pinyin": "pàng",
+          "english": "fat, chubby",
+          "audio": "audio/胖.mp3",
+          "important": true
+        },
+        {
+          "simplified": "希望",
+          "traditional": "希望",
+          "pinyin": "xī wàng",
+          "english": "to hope, wish",
+          "audio": "audio/希望.mp3",
+          "important": true
+        },
+        {
+          "simplified": "努力",
+          "traditional": "努力",
+          "pinyin": "nǔ lì",
+          "english": "to work hard, effort",
+          "audio": "audio/努力.mp3",
+          "important": true
+        },
+        {
+          "simplified": "聪明懂事",
+          "traditional": "聰明懂事",
+          "pinyin": "cōng míng dǒng shì",
+          "english": "clever and sensible",
+          "audio": "audio/聪明懂事.mp3",
+          "important": true
+        },
+        {
+          "simplified": "成为",
+          "traditional": "成為",
+          "pinyin": "chéng wéi",
+          "english": "to become",
+          "audio": "audio/成为.mp3",
+          "important": true
+        },
+        {
+          "simplified": "做功课",
+          "traditional": "做功課",
+          "pinyin": "zuò gōng kè",
+          "english": "to do homework",
+          "audio": "audio/做功课.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一些",
+          "traditional": "一些",
+          "pinyin": "yī xiē",
+          "english": "some, a few",
+          "audio": "audio/一些.mp3",
+          "important": true
+        },
+        {
+          "simplified": "意思",
+          "traditional": "意思",
+          "pinyin": "yì si",
+          "english": "meaning",
+          "audio": "audio/意思.mp3",
+          "important": true
+        },
+        {
+          "simplified": "卷起",
+          "traditional": "捲起",
+          "pinyin": "juǎn qǐ",
+          "english": "to roll up",
+          "audio": "audio/卷起.mp3",
+          "important": true
+        },
+        {
+          "simplified": "举手",
+          "traditional": "舉手",
+          "pinyin": "jǔ shǒu",
+          "english": "to raise hand",
+          "audio": "audio/举手.mp3",
+          "important": true
+        },
+        {
+          "simplified": "姓名",
+          "traditional": "姓名",
+          "pinyin": "xìng míng",
+          "english": "full name (surname and given name)",
+          "audio": "audio/姓名.mp3",
+          "important": true
+        },
+        {
+          "simplified": "实现愿望",
+          "traditional": "實現願望",
+          "pinyin": "shí xiàn yuàn wàng",
+          "english": "to realize a wish, to fulfill a dream",
+          "audio": "audio/实现愿望.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
