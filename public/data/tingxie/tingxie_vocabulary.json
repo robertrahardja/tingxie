@@ -4573,6 +4573,131 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 85,
+      "words": [
+        {
+          "simplified": "奇怪",
+          "traditional": "奇怪",
+          "pinyin": "qí guài",
+          "english": "strange, weird",
+          "audio": "audio/奇怪.mp3",
+          "important": true
+        },
+        {
+          "simplified": "相信",
+          "traditional": "相信",
+          "pinyin": "xiāng xìn",
+          "english": "to believe, to trust",
+          "audio": "audio/相信.mp3",
+          "important": true
+        },
+        {
+          "simplified": "语言",
+          "traditional": "語言",
+          "pinyin": "yǔ yán",
+          "english": "language",
+          "audio": "audio/语言.mp3",
+          "important": true
+        },
+        {
+          "simplified": "按钮",
+          "traditional": "按鈕",
+          "pinyin": "àn niǔ",
+          "english": "button (to press)",
+          "audio": "audio/按钮.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一定",
+          "traditional": "一定",
+          "pinyin": "yī dìng",
+          "english": "definitely, certainly",
+          "audio": "audio/一定.mp3",
+          "important": true
+        },
+        {
+          "simplified": "闹钟响了",
+          "traditional": "鬧鐘響了",
+          "pinyin": "nào zhōng xiǎng le",
+          "english": "the alarm clock rang",
+          "audio": "audio/闹钟响了.mp3",
+          "important": true
+        },
+        {
+          "simplified": "陪伴",
+          "traditional": "陪伴",
+          "pinyin": "péi bàn",
+          "english": "to accompany, to keep company",
+          "audio": "audio/陪伴.mp3",
+          "important": true
+        },
+        {
+          "simplified": "手表",
+          "traditional": "手錶",
+          "pinyin": "shǒu biǎo",
+          "english": "wristwatch",
+          "audio": "audio/手表.mp3",
+          "important": true
+        },
+        {
+          "simplified": "伙伴",
+          "traditional": "伙伴",
+          "pinyin": "huǒ bàn",
+          "english": "partner, companion",
+          "audio": "audio/伙伴.mp3",
+          "important": true
+        },
+        {
+          "simplified": "背着",
+          "traditional": "背著",
+          "pinyin": "bēi zhe",
+          "english": "carrying on one's back",
+          "audio": "audio/背着.mp3",
+          "important": true
+        },
+        {
+          "simplified": "迟到",
+          "traditional": "遲到",
+          "pinyin": "chí dào",
+          "english": "to be late",
+          "audio": "audio/迟到.mp3",
+          "important": true
+        },
+        {
+          "simplified": "睡觉",
+          "traditional": "睡覺",
+          "pinyin": "shuì jiào",
+          "english": "to sleep",
+          "audio": "audio/睡觉.mp3",
+          "important": true
+        },
+        {
+          "simplified": "蓝颜色",
+          "traditional": "藍顏色",
+          "pinyin": "lán yán sè",
+          "english": "blue color",
+          "audio": "audio/蓝颜色.mp3",
+          "important": true
+        },
+        {
+          "simplified": "真短",
+          "traditional": "真短",
+          "pinyin": "zhēn duǎn",
+          "english": "really short",
+          "audio": "audio/真短.mp3",
+          "important": true
+        },
+        {
+          "simplified": "改掉",
+          "traditional": "改掉",
+          "pinyin": "gǎi diào",
+          "english": "to get rid of (a habit), to correct",
+          "audio": "audio/改掉.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }

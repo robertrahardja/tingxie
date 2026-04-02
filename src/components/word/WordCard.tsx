@@ -17,8 +17,39 @@ interface WordCardProps {
 // Check for image in multiple formats
 const IMAGE_EXTENSIONS = ['.png', '.jpg', '.gif']
 
-// Cache image lookups to avoid redundant fetches (especially in StrictMode)
-const imageLookups = new Map<string, Promise<string | null>>()
+// Cache resolved image paths to avoid redundant fetches
+const imageCache = new Map<string, string | null>()
+
+// Shared in-flight lookups so StrictMode double-mounts reuse the same fetch
+const inflightLookups = new Map<string, Promise<string | null>>()
+
+async function lookupImage(simplified: string): Promise<string | null> {
+  if (imageCache.has(simplified)) return imageCache.get(simplified)!
+  if (inflightLookups.has(simplified)) return inflightLookups.get(simplified)!
+
+  const lookup = (async () => {
+    for (const ext of IMAGE_EXTENSIONS) {
+      const path = `/images/${encodeURIComponent(simplified)}${ext}`
+      try {
+        const res = await fetch(path, { method: 'HEAD' })
+        const contentType = res.headers.get('content-type') || ''
+        if (res.ok && contentType.startsWith('image/')) {
+          imageCache.set(simplified, path)
+          inflightLookups.delete(simplified)
+          return path
+        }
+      } catch {
+        // continue to next extension
+      }
+    }
+    imageCache.set(simplified, null)
+    inflightLookups.delete(simplified)
+    return null
+  })()
+
+  inflightLookups.set(simplified, lookup)
+  return lookup
+}
 
 export function WordCard({
   word,
@@ -29,35 +60,21 @@ export function WordCard({
   className,
 }: WordCardProps) {
   const [showHandwriting, setShowHandwriting] = useState(false)
-  const [imagePath, setImagePath] = useState<string | null>(null)
+  const [imagePath, setImagePath] = useState<string | null>(
+    () => imageCache.get(word.simplified) ?? null
+  )
 
-  // Check if image exists when word changes (try .png then .jpg)
-  // Uses shared promise cache to avoid duplicate requests from StrictMode
   useEffect(() => {
+    if (imageCache.has(word.simplified)) {
+      setImagePath(imageCache.get(word.simplified)!)
+      return
+    }
+
     setImagePath(null)
     let cancelled = false
 
-    if (!imageLookups.has(word.simplified)) {
-      const lookup = (async () => {
-        for (const ext of IMAGE_EXTENSIONS) {
-          const path = `/images/${encodeURIComponent(word.simplified)}${ext}`
-          try {
-            const res = await fetch(path, { method: 'HEAD' })
-            const contentType = res.headers.get('content-type') || ''
-            if (res.ok && contentType.startsWith('image/')) {
-              return path
-            }
-          } catch {
-            // continue to next extension
-          }
-        }
-        return null
-      })()
-      imageLookups.set(word.simplified, lookup)
-    }
-
-    imageLookups.get(word.simplified)!.then((path) => {
-      if (!cancelled && path) setImagePath(path)
+    lookupImage(word.simplified).then((path) => {
+      if (!cancelled) setImagePath(path)
     })
 
     return () => { cancelled = true }
