@@ -4698,6 +4698,139 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 86,
+      "words": [
+        {
+          "simplified": "变化",
+          "traditional": "變化",
+          "pinyin": "biàn huà",
+          "english": "change, transformation",
+          "audio": "audio/变化.mp3",
+          "important": true
+        },
+        {
+          "simplified": "细细",
+          "traditional": "細細",
+          "pinyin": "xì xì",
+          "english": "thin, fine; carefully",
+          "audio": "audio/细细.mp3",
+          "important": true
+        },
+        {
+          "simplified": "树根",
+          "traditional": "樹根",
+          "pinyin": "shù gēn",
+          "english": "tree root",
+          "audio": "audio/树根.mp3",
+          "important": true
+        },
+        {
+          "simplified": "越来越好",
+          "traditional": "越來越好",
+          "pinyin": "yuè lái yuè hǎo",
+          "english": "better and better",
+          "audio": "audio/越来越好.mp3",
+          "important": true
+        },
+        {
+          "simplified": "哪里",
+          "traditional": "哪裡",
+          "pinyin": "nǎ lǐ",
+          "english": "where",
+          "audio": "audio/哪里.mp3",
+          "important": true
+        },
+        {
+          "simplified": "大喊大叫",
+          "traditional": "大喊大叫",
+          "pinyin": "dà hǎn dà jiào",
+          "english": "to shout loudly, to yell",
+          "audio": "audio/大喊大叫.mp3",
+          "important": true
+        },
+        {
+          "simplified": "阿姨",
+          "traditional": "阿姨",
+          "pinyin": "ā yí",
+          "english": "auntie, aunt",
+          "audio": "audio/阿姨.mp3",
+          "important": true
+        },
+        {
+          "simplified": "电脑展",
+          "traditional": "電腦展",
+          "pinyin": "diàn nǎo zhǎn",
+          "english": "computer exhibition",
+          "audio": "audio/电脑展.mp3",
+          "important": true
+        },
+        {
+          "simplified": "肚皮",
+          "traditional": "肚皮",
+          "pinyin": "dù pí",
+          "english": "belly, tummy",
+          "audio": "audio/肚皮.mp3",
+          "important": true
+        },
+        {
+          "simplified": "特别",
+          "traditional": "特別",
+          "pinyin": "tè bié",
+          "english": "special, especially",
+          "audio": "audio/特别.mp3",
+          "important": true
+        },
+        {
+          "simplified": "傍晚",
+          "traditional": "傍晚",
+          "pinyin": "bàng wǎn",
+          "english": "dusk, evening, nightfall",
+          "audio": "audio/傍晚.mp3",
+          "important": true
+        },
+        {
+          "simplified": "或者",
+          "traditional": "或者",
+          "pinyin": "huò zhě",
+          "english": "or, perhaps",
+          "audio": "audio/或者.mp3",
+          "important": true
+        },
+        {
+          "simplified": "脚踏车",
+          "traditional": "腳踏車",
+          "pinyin": "jiǎo tà chē",
+          "english": "bicycle",
+          "audio": "audio/脚踏车.mp3",
+          "important": true
+        },
+        {
+          "simplified": "附近",
+          "traditional": "附近",
+          "pinyin": "fù jìn",
+          "english": "nearby, vicinity",
+          "audio": "audio/附近.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一条鱼",
+          "traditional": "一條魚",
+          "pinyin": "yì tiáo yú",
+          "english": "one fish",
+          "audio": "audio/一条鱼.mp3",
+          "important": true
+        },
+        {
+          "simplified": "多彩",
+          "traditional": "多彩",
+          "pinyin": "duō cǎi",
+          "english": "colorful, multicolored",
+          "audio": "audio/多彩.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
