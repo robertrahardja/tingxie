@@ -95,6 +95,7 @@ export interface NavItem {
 export const NAV_ITEMS: NavItem[] = [
   // Main tingxie pages
   { href: '/', label: '最新词语' },
+  { href: '/p3-picture-composition', label: '看图作文：生日' },
   { href: '/curriculum', label: '课程词语 P1-P3' },
   { href: '/koushi-no-civic-mindedness', label: '口试：没有公德心' },
   { href: '/koushi-no-civic-mindedness-2', label: '口试：没有公德心（二）' },
