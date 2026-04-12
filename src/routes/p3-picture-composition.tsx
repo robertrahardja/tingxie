@@ -411,6 +411,227 @@ const RUBRIC_LANGUAGE: Rubric = {
   ],
 }
 
+// Hannah's own composition (corrected version) — based on her handwritten draft
+const MY_COMPOSITION: TokenSentence[] = [
+  {
+    english: 'Today is April 8th, it is my birthday. I am very happy!',
+    tokens: [
+      w('今天', 'jīn tiān', 'today'),
+      w('是', 'shì', 'is'),
+      w('四月', 'sì yuè', 'April'),
+      w('八号', 'bā hào', '8th'),
+      p('，'),
+      w('是', 'shì', 'is'),
+      w('我', 'wǒ', 'my'),
+      w('的', 'de', '(possessive)'),
+      w('生日', 'shēng rì', 'birthday'),
+      p('。'),
+      w('我', 'wǒ', 'I'),
+      w('很', 'hěn', 'very'),
+      w('开心', 'kāi xīn', 'happy'),
+      p('！'),
+    ],
+  },
+  {
+    english: 'In the morning, at school, my classmates all sang the birthday song: "Happy birthday to you..."',
+    tokens: [
+      w('上午', 'shàng wǔ', 'morning'),
+      p('，'),
+      w('我', 'wǒ', 'I'),
+      w('在', 'zài', 'at / in'),
+      w('学校', 'xué xiào', 'school'),
+      w('里', 'lǐ', 'inside'),
+      p('，'),
+      w('同学们', 'tóng xué men', 'classmates'),
+      w('都', 'dōu', 'all'),
+      w('唱', 'chàng', 'sing'),
+      w('生日歌', 'shēng rì gē', 'birthday song'),
+      p('：'),
+      p('"'),
+      w('祝', 'zhù', 'wish'),
+      w('你', 'nǐ', 'you'),
+      w('生日', 'shēng rì', 'birthday'),
+      w('快乐', 'kuài lè', 'happy'),
+      p('……"'),
+    ],
+  },
+  {
+    english: 'My classmates also gave me lots of presents.',
+    tokens: [
+      w('同学们', 'tóng xué men', 'classmates'),
+      w('也', 'yě', 'also'),
+      w('给', 'gěi', 'give'),
+      w('我', 'wǒ', 'me'),
+      w('很多', 'hěn duō', 'a lot of'),
+      w('礼物', 'lǐ wù', 'presents'),
+      p('。'),
+    ],
+  },
+  {
+    english: 'In the afternoon, after I bathed and finished my homework, Mum took me to the playground.',
+    tokens: [
+      w('下午', 'xià wǔ', 'afternoon'),
+      p('，'),
+      w('我', 'wǒ', 'I'),
+      w('冲凉', 'chōng liáng', 'take a bath'),
+      w('和', 'hé', 'and'),
+      w('做完', 'zuò wán', 'finish doing'),
+      w('功课', 'gōng kè', 'homework'),
+      w('后', 'hòu', 'after'),
+      p('，'),
+      w('妈妈', 'mā ma', 'mum'),
+      w('带', 'dài', 'bring / take'),
+      w('我', 'wǒ', 'me'),
+      w('去', 'qù', 'go to'),
+      w('游乐场', 'yóu lè chǎng', 'playground'),
+      p('。'),
+    ],
+  },
+  {
+    english: 'I played on the swing and went down the slide!',
+    tokens: [
+      w('我', 'wǒ', 'I'),
+      w('玩', 'wán', 'play'),
+      w('荡秋千', 'dàng qiū qiān', 'swing'),
+      w('和', 'hé', 'and'),
+      w('溜滑梯', 'liū huá tī', 'go down the slide'),
+      p('！'),
+    ],
+  },
+  {
+    english: 'But there was no one there, so Mum played with me.',
+    tokens: [
+      w('可是', 'kě shì', 'but / however'),
+      w('没有人', 'méi yǒu rén', 'no one'),
+      w('在', 'zài', 'at'),
+      w('那里', 'nà lǐ', 'there'),
+      p('，'),
+      w('所以', 'suǒ yǐ', 'so / therefore'),
+      w('妈妈', 'mā ma', 'mum'),
+      w('跟', 'gēn', 'with'),
+      w('我', 'wǒ', 'me'),
+      w('玩', 'wán', 'play'),
+      p('。'),
+    ],
+  },
+  {
+    english: 'In the evening, we went home to celebrate my birthday together.',
+    tokens: [
+      w('傍晚', 'bàng wǎn', 'evening'),
+      p('，'),
+      w('我们', 'wǒ men', 'we'),
+      w('回到', 'huí dào', 'return to'),
+      w('家里', 'jiā lǐ', 'home'),
+      p('，'),
+      w('一起', 'yì qǐ', 'together'),
+      w('庆祝', 'qìng zhù', 'celebrate'),
+      w('我', 'wǒ', 'my'),
+      w('的', 'de', '(possessive)'),
+      w('生日', 'shēng rì', 'birthday'),
+      p('。'),
+    ],
+  },
+  {
+    english: 'Mum prepared a big cake. We sang the birthday song and I made a wish.',
+    tokens: [
+      w('妈妈', 'mā ma', 'mum'),
+      w('准备', 'zhǔn bèi', 'prepare'),
+      w('了', 'le', '(completed action)'),
+      w('一个', 'yí ge', 'a / one'),
+      w('大', 'dà', 'big'),
+      w('蛋糕', 'dàn gāo', 'cake'),
+      p('。'),
+      w('我们', 'wǒ men', 'we'),
+      w('唱', 'chàng', 'sing'),
+      w('生日歌', 'shēng rì gē', 'birthday song'),
+      p('，'),
+      w('我', 'wǒ', 'I'),
+      w('许', 'xǔ', 'make (a wish)'),
+      w('了', 'le', '(completed action)'),
+      w('一个', 'yí ge', 'a / one'),
+      w('愿望', 'yuàn wàng', 'wish'),
+      p('。'),
+    ],
+  },
+  {
+    english: 'Mum and Dad also gave me a red packet. I was so happy!',
+    tokens: [
+      w('爸爸', 'bà ba', 'dad'),
+      w('妈妈', 'mā ma', 'mum'),
+      w('还', 'hái', 'also'),
+      w('给', 'gěi', 'give'),
+      w('我', 'wǒ', 'me'),
+      w('一个', 'yí ge', 'a / one'),
+      w('红包', 'hóng bāo', 'red packet'),
+      p('。'),
+      w('我', 'wǒ', 'I'),
+      w('好', 'hǎo', 'so'),
+      w('开心', 'kāi xīn', 'happy'),
+      p('！'),
+    ],
+  },
+  {
+    english: 'This was truly an unforgettable birthday!',
+    tokens: [
+      w('这', 'zhè', 'this'),
+      w('真是', 'zhēn shì', 'truly'),
+      w('一个', 'yí ge', 'a / one'),
+      w('难忘', 'nán wàng', 'unforgettable'),
+      w('的', 'de', '(particle)'),
+      w('生日', 'shēng rì', 'birthday'),
+      p('！'),
+    ],
+  },
+]
+
+// Corrections and tips based on Hannah's handwritten draft
+interface CorrectionItem {
+  original: string
+  corrected: string
+  explanation: string
+  explanationEn: string
+}
+
+const CORRECTIONS: CorrectionItem[] = [
+  {
+    original: '我在学校后',
+    corrected: '我在学校里',
+    explanation: '用"里"表示在里面，不是"后"',
+    explanationEn: 'Use 里 (inside) for location, not 后 (after/behind)',
+  },
+  {
+    original: '妈妈带去我去游乐场',
+    corrected: '妈妈带我去游乐场',
+    explanation: '不需要重复"去"',
+    explanationEn: 'No need to repeat 去',
+  },
+]
+
+// Good things in Hannah's writing
+interface PraiseItem {
+  text: string
+  textEn: string
+}
+
+const PRAISE_ITEMS: PraiseItem[] = [
+  {
+    text: '用了"可是……所以……"来连接句子，很棒！',
+    textEn: 'Great use of "可是...所以..." to connect sentences!',
+  },
+  {
+    text: '加了自己的想法（冲凉、做功课），内容更丰富！',
+    textEn: 'Added your own ideas (bathing, homework) — richer content!',
+  },
+  {
+    text: '三个时间段都写到了：上午、下午、傍晚',
+    textEn: 'Covered all three time periods: morning, afternoon, evening',
+  },
+  {
+    text: '用了"都"和"也"，句子更生动',
+    textEn: 'Used 都 and 也 to make sentences more vivid',
+  },
+]
+
 const SAMPLE: TokenSentence[] = [
   {
     english: 'Today is April 8th, it is my birthday.',
@@ -923,6 +1144,80 @@ function P3PictureCompositionPage() {
             </div>
           </div>
         ))}
+      </section>
+
+      <section className="space-y-3">
+        <div className="rounded-2xl bg-gradient-to-br from-pink-400 to-rose-500 p-5 shadow-lg">
+          <h2 className="text-center text-lg font-bold text-white">
+            我的作文 · My Composition
+          </h2>
+          <p className="mt-1 text-center text-xs text-pink-50">
+            Hannah's composition (corrected). Tap any word to hear it.
+          </p>
+        </div>
+
+        <div className="space-y-3">
+          {MY_COMPOSITION.map((s, i) => (
+            <ClickableSentence key={i} sentence={s} speak={speak} />
+          ))}
+        </div>
+        <button
+          onClick={() => speak(MY_COMPOSITION.map(sentenceText).join(' '), 0.8)}
+          className="mt-2 w-full rounded-xl bg-rose-600 px-6 py-4 text-center font-semibold text-white shadow-lg transition hover:bg-rose-700 active:scale-[0.98]"
+        >
+          ▶ 朗读我的作文 · Read My Composition
+        </button>
+
+        <div className="overflow-hidden rounded-2xl bg-white/95 shadow-lg">
+          <div className="bg-gradient-to-r from-emerald-500 to-green-600 px-5 py-4">
+            <h3 className="text-base font-bold text-white">
+              写得好 · What you did well
+            </h3>
+          </div>
+          <div className="space-y-3 p-4">
+            {PRAISE_ITEMS.map((item, i) => (
+              <div key={i} className="flex items-start gap-3 rounded-xl bg-emerald-50 p-3">
+                <span className="mt-0.5 text-xl">&#11088;</span>
+                <div>
+                  <p className="text-sm font-semibold text-emerald-800">{item.text}</p>
+                  <p className="mt-0.5 text-xs text-emerald-600">{item.textEn}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="overflow-hidden rounded-2xl bg-white/95 shadow-lg">
+          <div className="bg-gradient-to-r from-amber-500 to-orange-500 px-5 py-4">
+            <h3 className="text-base font-bold text-white">
+              改一改 · Things to fix
+            </h3>
+          </div>
+          <div className="space-y-3 p-4">
+            {CORRECTIONS.map((c, i) => (
+              <div key={i} className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className="rounded bg-rose-100 px-2 py-1 text-sm font-semibold text-rose-700 line-through">
+                        {c.original}
+                      </span>
+                      <span className="text-gray-400">&rarr;</span>
+                      <button
+                        onClick={() => speak(c.corrected)}
+                        className="min-h-[44px] min-w-[44px] rounded bg-emerald-100 px-3 py-2 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-200 active:scale-95"
+                      >
+                        {c.corrected}
+                      </button>
+                    </div>
+                    <p className="mt-2 text-xs text-gray-700">{c.explanation}</p>
+                    <p className="text-xs text-gray-500">{c.explanationEn}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="space-y-3">
