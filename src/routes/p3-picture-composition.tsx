@@ -411,7 +411,7 @@ const RUBRIC_LANGUAGE: Rubric = {
   ],
 }
 
-// Hannah's own composition (corrected version) — based on her handwritten draft
+// Hannah's composition — polished to full-marks level, keeping her original ideas
 const MY_COMPOSITION: TokenSentence[] = [
   {
     english: 'Today is April 8th, it is my birthday. I am very happy!',
@@ -427,13 +427,14 @@ const MY_COMPOSITION: TokenSentence[] = [
       w('生日', 'shēng rì', 'birthday'),
       p('。'),
       w('我', 'wǒ', 'I'),
-      w('很', 'hěn', 'very'),
+      w('非常', 'fēi cháng', 'very'),
       w('开心', 'kāi xīn', 'happy'),
       p('！'),
     ],
   },
   {
-    english: 'In the morning, at school, my classmates all sang the birthday song: "Happy birthday to you..."',
+    english:
+      'In the morning, at school, my classmates gathered around me and sang the birthday song together: "Happy birthday to you..."',
     tokens: [
       w('上午', 'shàng wǔ', 'morning'),
       p('，'),
@@ -443,7 +444,10 @@ const MY_COMPOSITION: TokenSentence[] = [
       w('里', 'lǐ', 'inside'),
       p('，'),
       w('同学们', 'tóng xué men', 'classmates'),
-      w('都', 'dōu', 'all'),
+      w('围着', 'wéi zhe', 'gathered around'),
+      w('我', 'wǒ', 'me'),
+      p('，'),
+      w('一起', 'yì qǐ', 'together'),
       w('唱', 'chàng', 'sing'),
       w('生日歌', 'shēng rì gē', 'birthday song'),
       p('：'),
@@ -456,19 +460,26 @@ const MY_COMPOSITION: TokenSentence[] = [
     ],
   },
   {
-    english: 'My classmates also gave me lots of presents.',
+    english: 'My classmates also gave me lots of presents. I felt very touched.',
     tokens: [
       w('同学们', 'tóng xué men', 'classmates'),
       w('也', 'yě', 'also'),
       w('给', 'gěi', 'give'),
+      w('了', 'le', '(completed action)'),
       w('我', 'wǒ', 'me'),
       w('很多', 'hěn duō', 'a lot of'),
       w('礼物', 'lǐ wù', 'presents'),
+      p('，'),
+      w('我', 'wǒ', 'I'),
+      w('觉得', 'jué de', 'feel'),
+      w('很', 'hěn', 'very'),
+      w('感动', 'gǎn dòng', 'touched / moved'),
       p('。'),
     ],
   },
   {
-    english: 'In the afternoon, after I bathed and finished my homework, Mum took me to the playground.',
+    english:
+      'In the afternoon, after I bathed and finished my homework, Mum took me to the playground to play.',
     tokens: [
       w('下午', 'xià wǔ', 'afternoon'),
       p('，'),
@@ -484,34 +495,48 @@ const MY_COMPOSITION: TokenSentence[] = [
       w('我', 'wǒ', 'me'),
       w('去', 'qù', 'go to'),
       w('游乐场', 'yóu lè chǎng', 'playground'),
+      w('玩', 'wán', 'play'),
       p('。'),
     ],
   },
   {
-    english: 'I played on the swing and went down the slide!',
+    english:
+      'I first played on the swing, then went down the slide, and played until I was sweating all over!',
     tokens: [
       w('我', 'wǒ', 'I'),
-      w('玩', 'wán', 'play'),
-      w('荡秋千', 'dàng qiū qiān', 'swing'),
-      w('和', 'hé', 'and'),
+      w('先', 'xiān', 'first'),
+      w('荡秋千', 'dàng qiū qiān', 'play on swing'),
+      p('，'),
+      w('再', 'zài', 'then'),
       w('溜滑梯', 'liū huá tī', 'go down the slide'),
+      p('，'),
+      w('玩得', 'wán de', 'played until'),
+      w('满头大汗', 'mǎn tóu dà hàn', 'sweating all over'),
       p('！'),
     ],
   },
   {
-    english: 'But there was no one there, so Mum played with me.',
+    english:
+      'But there was no one else there, so Mum played with me. We had a lot of fun together!',
     tokens: [
       w('可是', 'kě shì', 'but / however'),
-      w('没有人', 'méi yǒu rén', 'no one'),
-      w('在', 'zài', 'at'),
       w('那里', 'nà lǐ', 'there'),
+      w('没有', 'méi yǒu', 'did not have'),
+      w('其他', 'qí tā', 'other'),
+      w('小朋友', 'xiǎo péng yǒu', 'children'),
       p('，'),
       w('所以', 'suǒ yǐ', 'so / therefore'),
       w('妈妈', 'mā ma', 'mum'),
-      w('跟', 'gēn', 'with'),
+      w('陪', 'péi', 'accompany'),
       w('我', 'wǒ', 'me'),
+      w('一起', 'yì qǐ', 'together'),
       w('玩', 'wán', 'play'),
       p('。'),
+      w('我们', 'wǒ men', 'we'),
+      w('玩得', 'wán de', 'played'),
+      w('很', 'hěn', 'very'),
+      w('开心', 'kāi xīn', 'happy'),
+      p('！'),
     ],
   },
   {
@@ -532,9 +557,12 @@ const MY_COMPOSITION: TokenSentence[] = [
     ],
   },
   {
-    english: 'Mum prepared a big cake. We sang the birthday song and I made a wish.',
+    english:
+      'Mum prepared a big cake for me. We sang the birthday song together, and I made a wish.',
     tokens: [
       w('妈妈', 'mā ma', 'mum'),
+      w('为', 'wèi', 'for'),
+      w('我', 'wǒ', 'me'),
       w('准备', 'zhǔn bèi', 'prepare'),
       w('了', 'le', '(completed action)'),
       w('一个', 'yí ge', 'a / one'),
@@ -542,6 +570,7 @@ const MY_COMPOSITION: TokenSentence[] = [
       w('蛋糕', 'dàn gāo', 'cake'),
       p('。'),
       w('我们', 'wǒ men', 'we'),
+      w('一起', 'yì qǐ', 'together'),
       w('唱', 'chàng', 'sing'),
       w('生日歌', 'shēng rì gē', 'birthday song'),
       p('，'),
@@ -554,19 +583,23 @@ const MY_COMPOSITION: TokenSentence[] = [
     ],
   },
   {
-    english: 'Mum and Dad also gave me a red packet. I was so happy!',
+    english: 'Dad and Mum also gave me a red packet. I was so happy I could not stop smiling!',
     tokens: [
       w('爸爸', 'bà ba', 'dad'),
       w('妈妈', 'mā ma', 'mum'),
       w('还', 'hái', 'also'),
       w('给', 'gěi', 'give'),
+      w('了', 'le', '(completed action)'),
       w('我', 'wǒ', 'me'),
       w('一个', 'yí ge', 'a / one'),
       w('红包', 'hóng bāo', 'red packet'),
       p('。'),
       w('我', 'wǒ', 'I'),
-      w('好', 'hǎo', 'so'),
       w('开心', 'kāi xīn', 'happy'),
+      w('得', 'de', '(degree complement)'),
+      w('笑', 'xiào', 'smile'),
+      w('个', 'ge', '(measure word)'),
+      w('不停', 'bù tíng', 'non-stop'),
       p('！'),
     ],
   },
@@ -584,7 +617,7 @@ const MY_COMPOSITION: TokenSentence[] = [
   },
 ]
 
-// Corrections and tips based on Hannah's handwritten draft
+// Corrections and tips — what to upgrade from Hannah's original draft to get full marks
 interface CorrectionItem {
   original: string
   corrected: string
@@ -604,6 +637,30 @@ const CORRECTIONS: CorrectionItem[] = [
     corrected: '妈妈带我去游乐场',
     explanation: '不需要重复"去"',
     explanationEn: 'No need to repeat 去',
+  },
+  {
+    original: '没有人在那里',
+    corrected: '那里没有其他小朋友',
+    explanation: '先说地点再说"没有"，加"其他小朋友"更具体',
+    explanationEn: 'Place the location first, then 没有. Use 其他小朋友 (other children) for specificity',
+  },
+  {
+    original: '妈妈跟我玩',
+    corrected: '妈妈陪我一起玩',
+    explanation: '"陪"比"跟"更恰当，表示陪伴',
+    explanationEn: '陪 (accompany) is more expressive than 跟 (with) here',
+  },
+  {
+    original: '我很开心',
+    corrected: '我开心得笑个不停',
+    explanation: '用"得"补语让感受更生动，不要只写"很开心"',
+    explanationEn: 'Use a 得-complement to make feelings vivid — don\'t just say 很开心',
+  },
+  {
+    original: '（缺少感受）',
+    corrected: '我觉得很感动',
+    explanation: '每段加感受（开心、感动、难忘）拿高分！',
+    explanationEn: 'Add feelings after each scene (happy, touched, unforgettable) for top marks!',
   },
 ]
 
@@ -629,6 +686,10 @@ const PRAISE_ITEMS: PraiseItem[] = [
   {
     text: '用了"都"和"也"，句子更生动',
     textEn: 'Used 都 and 也 to make sentences more vivid',
+  },
+  {
+    text: '直接引用"祝你生日快乐"，写法很好！',
+    textEn: 'Direct quote of the birthday song — great technique!',
   },
 ]
 
@@ -1149,10 +1210,10 @@ function P3PictureCompositionPage() {
       <section className="space-y-3">
         <div className="rounded-2xl bg-gradient-to-br from-pink-400 to-rose-500 p-5 shadow-lg">
           <h2 className="text-center text-lg font-bold text-white">
-            我的作文 · My Composition
+            我的作文（满分版）· My Composition (Full Marks)
           </h2>
           <p className="mt-1 text-center text-xs text-pink-50">
-            Hannah's composition (corrected). Tap any word to hear it.
+            Based on Hannah's ideas, polished for top marks. Tap any word to hear it.
           </p>
         </div>
 
@@ -1190,7 +1251,7 @@ function P3PictureCompositionPage() {
         <div className="overflow-hidden rounded-2xl bg-white/95 shadow-lg">
           <div className="bg-gradient-to-r from-amber-500 to-orange-500 px-5 py-4">
             <h3 className="text-base font-bold text-white">
-              改一改 · Things to fix
+              改一改 · How to get full marks
             </h3>
           </div>
           <div className="space-y-3 p-4">
