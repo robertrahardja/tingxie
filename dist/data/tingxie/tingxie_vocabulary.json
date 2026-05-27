@@ -4831,6 +4831,107 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 87,
+      "words": [
+        {
+          "simplified": "报纸",
+          "traditional": "報紙",
+          "pinyin": "bào zhǐ",
+          "english": "newspaper",
+          "audio": "audio/报纸.mp3",
+          "important": true
+        },
+        {
+          "simplified": "杂志",
+          "traditional": "雜誌",
+          "pinyin": "zá zhì",
+          "english": "magazine",
+          "audio": "audio/杂志.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一束鲜花",
+          "traditional": "一束鮮花",
+          "pinyin": "yí shù xiān huā",
+          "english": "a bouquet of fresh flowers",
+          "audio": "audio/一束鲜花.mp3",
+          "important": true
+        },
+        {
+          "simplified": "需要",
+          "traditional": "需要",
+          "pinyin": "xū yào",
+          "english": "to need, to require",
+          "audio": "audio/需要.mp3",
+          "important": true
+        },
+        {
+          "simplified": "扔",
+          "traditional": "扔",
+          "pinyin": "rēng",
+          "english": "to throw, to toss",
+          "audio": "audio/扔.mp3",
+          "important": true
+        },
+        {
+          "simplified": "比赛",
+          "traditional": "比賽",
+          "pinyin": "bǐ sài",
+          "english": "competition, match",
+          "audio": "audio/比赛.mp3",
+          "important": true
+        },
+        {
+          "simplified": "没关系",
+          "traditional": "沒關係",
+          "pinyin": "méi guān xi",
+          "english": "it doesn't matter, never mind",
+          "audio": "audio/没关系.mp3",
+          "important": true
+        },
+        {
+          "simplified": "不要紧",
+          "traditional": "不要緊",
+          "pinyin": "bú yào jǐn",
+          "english": "it's not serious, not a problem",
+          "audio": "audio/不要紧.mp3",
+          "important": true
+        },
+        {
+          "simplified": "花盆",
+          "traditional": "花盆",
+          "pinyin": "huā pén",
+          "english": "flower pot",
+          "audio": "audio/花盆.mp3",
+          "important": true
+        },
+        {
+          "simplified": "溜走",
+          "traditional": "溜走",
+          "pinyin": "liū zǒu",
+          "english": "to slip away, to sneak off",
+          "audio": "audio/溜走.mp3",
+          "important": true
+        },
+        {
+          "simplified": "地板",
+          "traditional": "地板",
+          "pinyin": "dì bǎn",
+          "english": "floor, floorboard",
+          "audio": "audio/地板.mp3",
+          "important": true
+        },
+        {
+          "simplified": "道歉",
+          "traditional": "道歉",
+          "pinyin": "dào qiàn",
+          "english": "to apologize",
+          "audio": "audio/道歉.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
