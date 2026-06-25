@@ -4932,6 +4932,115 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 88,
+      "words": [
+        {
+          "simplified": "裤子",
+          "traditional": "褲子",
+          "pinyin": "kù zi",
+          "english": "pants, trousers",
+          "audio": "audio/裤子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "裙子",
+          "traditional": "裙子",
+          "pinyin": "qún zi",
+          "english": "skirt",
+          "audio": "audio/裙子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "吊扇",
+          "traditional": "吊扇",
+          "pinyin": "diào shàn",
+          "english": "ceiling fan",
+          "audio": "audio/吊扇.mp3",
+          "important": true
+        },
+        {
+          "simplified": "歪歪斜斜",
+          "traditional": "歪歪斜斜",
+          "pinyin": "wāi wāi xié xié",
+          "english": "crooked, askew, slanting",
+          "audio": "audio/歪歪斜斜.mp3",
+          "important": true
+        },
+        {
+          "simplified": "比较",
+          "traditional": "比較",
+          "pinyin": "bǐ jiào",
+          "english": "to compare, comparatively",
+          "audio": "audio/比较.mp3",
+          "important": true
+        },
+        {
+          "simplified": "晒太阳",
+          "traditional": "曬太陽",
+          "pinyin": "shài tài yáng",
+          "english": "to bask in the sun, to sunbathe",
+          "audio": "audio/晒太阳.mp3",
+          "important": true
+        },
+        {
+          "simplified": "灯笼",
+          "traditional": "燈籠",
+          "pinyin": "dēng long",
+          "english": "lantern",
+          "audio": "audio/灯笼.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一个洞",
+          "traditional": "一個洞",
+          "pinyin": "yí gè dòng",
+          "english": "a hole",
+          "audio": "audio/一个洞.mp3",
+          "important": true
+        },
+        {
+          "simplified": "称重量",
+          "traditional": "稱重量",
+          "pinyin": "chēng zhòng liàng",
+          "english": "to weigh, to measure weight",
+          "audio": "audio/称重量.mp3",
+          "important": true
+        },
+        {
+          "simplified": "喷水",
+          "traditional": "噴水",
+          "pinyin": "pēn shuǐ",
+          "english": "to spray water, to spurt water",
+          "audio": "audio/喷水.mp3",
+          "important": true
+        },
+        {
+          "simplified": "挂起来",
+          "traditional": "掛起來",
+          "pinyin": "guà qǐ lái",
+          "english": "to hang up",
+          "audio": "audio/挂起来.mp3",
+          "important": true
+        },
+        {
+          "simplified": "下沉",
+          "traditional": "下沉",
+          "pinyin": "xià chén",
+          "english": "to sink, to descend",
+          "audio": "audio/下沉.mp3",
+          "important": true
+        },
+        {
+          "simplified": "墙壁",
+          "traditional": "牆壁",
+          "pinyin": "qiáng bì",
+          "english": "wall",
+          "audio": "audio/墙壁.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
