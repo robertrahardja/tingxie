@@ -56,3 +56,5 @@ __pycache__/
 # Cloudflare
 .dev.vars
 .wrangler/
+# direnv (holds Cloudflare secrets - never commit)
+.envrc
