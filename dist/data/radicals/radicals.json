@@ -1,6 +1,6 @@
 {
   "title": "部首学习",
-  "description": "Chinese Radicals for Primary Students",
+  "description": "All 214 Kangxi radicals for Chinese learning",
   "radicals": [
     {
       "number": 1,
@@ -8,7 +8,12 @@
       "pinyin": "yī",
       "meaning": "one",
       "strokes": 1,
-      "examples": ["七", "三", "上", "下"],
+      "examples": [
+        "七",
+        "三",
+        "上",
+        "下"
+      ],
       "audio": "audio/radicals/一.mp3"
     },
     {
@@ -17,7 +22,11 @@
       "pinyin": "gǔn",
       "meaning": "line/stick",
       "strokes": 1,
-      "examples": ["中", "串", "丰"],
+      "examples": [
+        "中",
+        "串",
+        "丰"
+      ],
       "audio": "audio/radicals/丨.mp3"
     },
     {
@@ -26,7 +35,11 @@
       "pinyin": "zhǔ",
       "meaning": "dot",
       "strokes": 1,
-      "examples": ["主", "丸", "为"],
+      "examples": [
+        "主",
+        "丸",
+        "为"
+      ],
       "audio": "audio/radicals/丶.mp3"
     },
     {
@@ -35,8 +48,67 @@
       "pinyin": "piě",
       "meaning": "slash",
       "strokes": 1,
-      "examples": ["乃", "久", "乏"],
+      "examples": [
+        "乃",
+        "久",
+        "乏"
+      ],
       "audio": "audio/radicals/丿.mp3"
+    },
+    {
+      "number": 5,
+      "radical": "乙",
+      "pinyin": "yǐ",
+      "meaning": "second",
+      "strokes": 1,
+      "examples": [
+        "乞",
+        "也",
+        "乱",
+        "习"
+      ],
+      "audio": "audio/radicals/乙.mp3"
+    },
+    {
+      "number": 6,
+      "radical": "亅",
+      "pinyin": "jué",
+      "meaning": "hook",
+      "strokes": 1,
+      "examples": [
+        "了",
+        "予",
+        "事"
+      ],
+      "audio": "audio/radicals/亅.mp3"
+    },
+    {
+      "number": 7,
+      "radical": "二",
+      "pinyin": "èr",
+      "meaning": "two",
+      "strokes": 2,
+      "examples": [
+        "五",
+        "井",
+        "些",
+        "亚"
+      ],
+      "audio": "audio/radicals/二.mp3"
+    },
+    {
+      "number": 8,
+      "radical": "亠",
+      "pinyin": "tóu",
+      "meaning": "lid",
+      "strokes": 2,
+      "examples": [
+        "交",
+        "京",
+        "夜",
+        "市"
+      ],
+      "audio": "audio/radicals/亠.mp3"
     },
     {
       "number": 9,
@@ -44,7 +116,12 @@
       "pinyin": "rén",
       "meaning": "person",
       "strokes": 2,
-      "examples": ["个", "介", "从", "众"],
+      "examples": [
+        "个",
+        "介",
+        "从",
+        "众"
+      ],
       "audio": "audio/radicals/人.mp3"
     },
     {
@@ -53,7 +130,12 @@
       "pinyin": "ér",
       "meaning": "legs/son",
       "strokes": 2,
-      "examples": ["元", "兄", "先", "光"],
+      "examples": [
+        "元",
+        "兄",
+        "先",
+        "光"
+      ],
       "audio": "audio/radicals/儿.mp3"
     },
     {
@@ -62,7 +144,11 @@
       "pinyin": "rù",
       "meaning": "enter",
       "strokes": 2,
-      "examples": ["内", "全", "两"],
+      "examples": [
+        "内",
+        "全",
+        "两"
+      ],
       "audio": "audio/radicals/入.mp3"
     },
     {
@@ -71,7 +157,12 @@
       "pinyin": "bā",
       "meaning": "eight",
       "strokes": 2,
-      "examples": ["公", "六", "兵", "其"],
+      "examples": [
+        "公",
+        "六",
+        "兵",
+        "其"
+      ],
       "audio": "audio/radicals/八.mp3"
     },
     {
@@ -80,8 +171,27 @@
       "pinyin": "jiōng",
       "meaning": "borders",
       "strokes": 2,
-      "examples": ["内", "同", "网", "周"],
+      "examples": [
+        "内",
+        "同",
+        "网",
+        "周"
+      ],
       "audio": "audio/radicals/冂.mp3"
+    },
+    {
+      "number": 14,
+      "radical": "冖",
+      "pinyin": "mì",
+      "meaning": "cover",
+      "strokes": 2,
+      "examples": [
+        "写",
+        "军",
+        "冠",
+        "农"
+      ],
+      "audio": "audio/radicals/冖.mp3"
     },
     {
       "number": 15,
@@ -89,8 +199,41 @@
       "pinyin": "bīng",
       "meaning": "ice",
       "strokes": 2,
-      "examples": ["冬", "冷", "冰", "凉"],
+      "examples": [
+        "冬",
+        "冷",
+        "冰",
+        "凉"
+      ],
       "audio": "audio/radicals/冫.mp3"
+    },
+    {
+      "number": 16,
+      "radical": "几",
+      "pinyin": "jī",
+      "meaning": "small table",
+      "strokes": 2,
+      "examples": [
+        "凡",
+        "凳",
+        "凤",
+        "秃"
+      ],
+      "audio": "audio/radicals/几.mp3"
+    },
+    {
+      "number": 17,
+      "radical": "凵",
+      "pinyin": "kǎn",
+      "meaning": "open box",
+      "strokes": 2,
+      "examples": [
+        "出",
+        "凶",
+        "凸",
+        "凹"
+      ],
+      "audio": "audio/radicals/凵.mp3"
     },
     {
       "number": 18,
@@ -98,7 +241,12 @@
       "pinyin": "dāo",
       "meaning": "knife",
       "strokes": 2,
-      "examples": ["分", "切", "刊", "列"],
+      "examples": [
+        "分",
+        "切",
+        "刊",
+        "列"
+      ],
       "audio": "audio/radicals/刀.mp3"
     },
     {
@@ -107,7 +255,12 @@
       "pinyin": "lì",
       "meaning": "power/strength",
       "strokes": 2,
-      "examples": ["加", "办", "功", "动"],
+      "examples": [
+        "加",
+        "办",
+        "功",
+        "动"
+      ],
       "audio": "audio/radicals/力.mp3"
     },
     {
@@ -116,8 +269,52 @@
       "pinyin": "bāo",
       "meaning": "wrap",
       "strokes": 2,
-      "examples": ["包", "匀", "勺"],
+      "examples": [
+        "包",
+        "匀",
+        "勺"
+      ],
       "audio": "audio/radicals/勹.mp3"
+    },
+    {
+      "number": 21,
+      "radical": "匕",
+      "pinyin": "bǐ",
+      "meaning": "spoon",
+      "strokes": 2,
+      "examples": [
+        "北",
+        "化",
+        "匙",
+        "它"
+      ],
+      "audio": "audio/radicals/匕.mp3"
+    },
+    {
+      "number": 22,
+      "radical": "匚",
+      "pinyin": "fāng",
+      "meaning": "box",
+      "strokes": 2,
+      "examples": [
+        "区",
+        "匠",
+        "匹",
+        "医"
+      ],
+      "audio": "audio/radicals/匚.mp3"
+    },
+    {
+      "number": 23,
+      "radical": "匸",
+      "pinyin": "xì",
+      "meaning": "hiding place",
+      "strokes": 2,
+      "examples": [
+        "匿",
+        "匾"
+      ],
+      "audio": "audio/radicals/匸.mp3"
     },
     {
       "number": 24,
@@ -125,7 +322,12 @@
       "pinyin": "shí",
       "meaning": "ten",
       "strokes": 2,
-      "examples": ["千", "午", "半", "华"],
+      "examples": [
+        "千",
+        "午",
+        "半",
+        "华"
+      ],
       "audio": "audio/radicals/十.mp3"
     },
     {
@@ -134,8 +336,54 @@
       "pinyin": "bǔ",
       "meaning": "divination",
       "strokes": 2,
-      "examples": ["上", "下", "卡"],
+      "examples": [
+        "上",
+        "下",
+        "卡"
+      ],
       "audio": "audio/radicals/卜.mp3"
+    },
+    {
+      "number": 26,
+      "radical": "卩",
+      "pinyin": "jié",
+      "meaning": "seal",
+      "strokes": 2,
+      "examples": [
+        "卫",
+        "印",
+        "却",
+        "卷"
+      ],
+      "audio": "audio/radicals/卩.mp3"
+    },
+    {
+      "number": 27,
+      "radical": "厂",
+      "pinyin": "chǎng",
+      "meaning": "cliff, factory",
+      "strokes": 2,
+      "examples": [
+        "厅",
+        "历",
+        "厚",
+        "原"
+      ],
+      "audio": "audio/radicals/厂.mp3"
+    },
+    {
+      "number": 28,
+      "radical": "厶",
+      "pinyin": "sī",
+      "meaning": "private",
+      "strokes": 2,
+      "examples": [
+        "去",
+        "台",
+        "县",
+        "参"
+      ],
+      "audio": "audio/radicals/厶.mp3"
     },
     {
       "number": 29,
@@ -143,7 +391,12 @@
       "pinyin": "yòu",
       "meaning": "again/right hand",
       "strokes": 2,
-      "examples": ["友", "双", "发", "取"],
+      "examples": [
+        "友",
+        "双",
+        "发",
+        "取"
+      ],
       "audio": "audio/radicals/又.mp3"
     },
     {
@@ -152,7 +405,12 @@
       "pinyin": "kǒu",
       "meaning": "mouth",
       "strokes": 3,
-      "examples": ["吃", "喝", "叫", "听"],
+      "examples": [
+        "吃",
+        "喝",
+        "叫",
+        "听"
+      ],
       "audio": "audio/radicals/口.mp3"
     },
     {
@@ -161,7 +419,12 @@
       "pinyin": "wéi",
       "meaning": "enclosure",
       "strokes": 3,
-      "examples": ["四", "回", "国", "园"],
+      "examples": [
+        "四",
+        "回",
+        "国",
+        "园"
+      ],
       "audio": "audio/radicals/囗.mp3"
     },
     {
@@ -170,7 +433,12 @@
       "pinyin": "tǔ",
       "meaning": "earth/soil",
       "strokes": 3,
-      "examples": ["地", "场", "坐", "城"],
+      "examples": [
+        "地",
+        "场",
+        "坐",
+        "城"
+      ],
       "audio": "audio/radicals/土.mp3"
     },
     {
@@ -179,17 +447,37 @@
       "pinyin": "shì",
       "meaning": "scholar",
       "strokes": 3,
-      "examples": ["声", "壳", "壮"],
+      "examples": [
+        "声",
+        "壳",
+        "壮"
+      ],
       "audio": "audio/radicals/士.mp3"
     },
     {
-      "number": 35,
+      "number": 34,
       "radical": "夂",
       "pinyin": "zhǐ",
       "meaning": "go slowly",
       "strokes": 3,
-      "examples": ["冬", "处", "夏", "复"],
+      "examples": [
+        "冬",
+        "处",
+        "夏",
+        "复"
+      ],
       "audio": "audio/radicals/夂.mp3"
+    },
+    {
+      "number": 35,
+      "radical": "夊",
+      "pinyin": "suī",
+      "meaning": "go slowly",
+      "strokes": 3,
+      "examples": [
+        "夏"
+      ],
+      "audio": "audio/radicals/夊.mp3"
     },
     {
       "number": 36,
@@ -197,7 +485,12 @@
       "pinyin": "xī",
       "meaning": "evening/sunset",
       "strokes": 3,
-      "examples": ["外", "多", "夜", "梦"],
+      "examples": [
+        "外",
+        "多",
+        "夜",
+        "梦"
+      ],
       "audio": "audio/radicals/夕.mp3"
     },
     {
@@ -206,7 +499,12 @@
       "pinyin": "dà",
       "meaning": "big",
       "strokes": 3,
-      "examples": ["天", "太", "头", "奇"],
+      "examples": [
+        "天",
+        "太",
+        "头",
+        "奇"
+      ],
       "audio": "audio/radicals/大.mp3"
     },
     {
@@ -215,7 +513,12 @@
       "pinyin": "nǚ",
       "meaning": "woman",
       "strokes": 3,
-      "examples": ["好", "妈", "姐", "她"],
+      "examples": [
+        "好",
+        "妈",
+        "姐",
+        "她"
+      ],
       "audio": "audio/radicals/女.mp3"
     },
     {
@@ -224,7 +527,12 @@
       "pinyin": "zǐ",
       "meaning": "child/son",
       "strokes": 3,
-      "examples": ["字", "学", "孩", "孙"],
+      "examples": [
+        "字",
+        "学",
+        "孩",
+        "孙"
+      ],
       "audio": "audio/radicals/子.mp3"
     },
     {
@@ -233,7 +541,12 @@
       "pinyin": "mián",
       "meaning": "roof",
       "strokes": 3,
-      "examples": ["家", "安", "宝", "室"],
+      "examples": [
+        "家",
+        "安",
+        "宝",
+        "室"
+      ],
       "audio": "audio/radicals/宀.mp3"
     },
     {
@@ -242,7 +555,12 @@
       "pinyin": "cùn",
       "meaning": "inch",
       "strokes": 3,
-      "examples": ["对", "寻", "导", "射"],
+      "examples": [
+        "对",
+        "寻",
+        "导",
+        "射"
+      ],
       "audio": "audio/radicals/寸.mp3"
     },
     {
@@ -251,8 +569,51 @@
       "pinyin": "xiǎo",
       "meaning": "small",
       "strokes": 3,
-      "examples": ["少", "尖", "尘"],
+      "examples": [
+        "少",
+        "尖",
+        "尘"
+      ],
       "audio": "audio/radicals/小.mp3"
+    },
+    {
+      "number": 43,
+      "radical": "尢",
+      "pinyin": "wāng",
+      "meaning": "lame",
+      "strokes": 3,
+      "examples": [
+        "尤",
+        "就",
+        "尬",
+        "尴"
+      ],
+      "audio": "audio/radicals/尢.mp3"
+    },
+    {
+      "number": 44,
+      "radical": "尸",
+      "pinyin": "shī",
+      "meaning": "body, corpse",
+      "strokes": 3,
+      "examples": [
+        "尺",
+        "尾",
+        "局",
+        "屋"
+      ],
+      "audio": "audio/radicals/尸.mp3"
+    },
+    {
+      "number": 45,
+      "radical": "屮",
+      "pinyin": "chè",
+      "meaning": "sprout",
+      "strokes": 3,
+      "examples": [
+        "屯"
+      ],
+      "audio": "audio/radicals/屮.mp3"
     },
     {
       "number": 46,
@@ -260,7 +621,12 @@
       "pinyin": "shān",
       "meaning": "mountain",
       "strokes": 3,
-      "examples": ["岛", "岸", "峰", "崖"],
+      "examples": [
+        "岛",
+        "岸",
+        "峰",
+        "崖"
+      ],
       "audio": "audio/radicals/山.mp3"
     },
     {
@@ -269,8 +635,40 @@
       "pinyin": "chuān",
       "meaning": "river",
       "strokes": 3,
-      "examples": ["川", "州", "巡"],
+      "examples": [
+        "川",
+        "州",
+        "巡"
+      ],
       "audio": "audio/radicals/巛.mp3"
+    },
+    {
+      "number": 48,
+      "radical": "工",
+      "pinyin": "gōng",
+      "meaning": "work",
+      "strokes": 3,
+      "examples": [
+        "左",
+        "巧",
+        "功",
+        "攻"
+      ],
+      "audio": "audio/radicals/工.mp3"
+    },
+    {
+      "number": 49,
+      "radical": "己",
+      "pinyin": "jǐ",
+      "meaning": "oneself",
+      "strokes": 3,
+      "examples": [
+        "已",
+        "记",
+        "纪",
+        "改"
+      ],
+      "audio": "audio/radicals/己.mp3"
     },
     {
       "number": 50,
@@ -278,8 +676,40 @@
       "pinyin": "jīn",
       "meaning": "cloth/towel",
       "strokes": 3,
-      "examples": ["布", "帮", "帽", "幕"],
+      "examples": [
+        "布",
+        "帮",
+        "帽",
+        "幕"
+      ],
       "audio": "audio/radicals/巾.mp3"
+    },
+    {
+      "number": 51,
+      "radical": "干",
+      "pinyin": "gān",
+      "meaning": "dry, shield",
+      "strokes": 3,
+      "examples": [
+        "平",
+        "刊",
+        "汗",
+        "赶"
+      ],
+      "audio": "audio/radicals/干.mp3"
+    },
+    {
+      "number": 52,
+      "radical": "幺",
+      "pinyin": "yāo",
+      "meaning": "tiny, thread",
+      "strokes": 3,
+      "examples": [
+        "幻",
+        "幼",
+        "幽"
+      ],
+      "audio": "audio/radicals/幺.mp3"
     },
     {
       "number": 53,
@@ -287,8 +717,95 @@
       "pinyin": "guǎng",
       "meaning": "wide/shelter",
       "strokes": 3,
-      "examples": ["店", "床", "座", "庭"],
+      "examples": [
+        "店",
+        "床",
+        "座",
+        "庭"
+      ],
       "audio": "audio/radicals/广.mp3"
+    },
+    {
+      "number": 54,
+      "radical": "廴",
+      "pinyin": "yǐn",
+      "meaning": "long stride",
+      "strokes": 3,
+      "examples": [
+        "建",
+        "延",
+        "廷"
+      ],
+      "audio": "audio/radicals/廴.mp3"
+    },
+    {
+      "number": 55,
+      "radical": "廾",
+      "pinyin": "gǒng",
+      "meaning": "hands joined",
+      "strokes": 3,
+      "examples": [
+        "开",
+        "弄",
+        "异",
+        "弃"
+      ],
+      "audio": "audio/radicals/廾.mp3"
+    },
+    {
+      "number": 56,
+      "radical": "弋",
+      "pinyin": "yì",
+      "meaning": "dart",
+      "strokes": 3,
+      "examples": [
+        "式",
+        "代",
+        "试"
+      ],
+      "audio": "audio/radicals/弋.mp3"
+    },
+    {
+      "number": 57,
+      "radical": "弓",
+      "pinyin": "gōng",
+      "meaning": "bow",
+      "strokes": 3,
+      "examples": [
+        "引",
+        "张",
+        "弟",
+        "弯"
+      ],
+      "audio": "audio/radicals/弓.mp3"
+    },
+    {
+      "number": 58,
+      "radical": "彐",
+      "pinyin": "jì",
+      "meaning": "snout",
+      "strokes": 3,
+      "examples": [
+        "归",
+        "寻",
+        "灵",
+        "雪"
+      ],
+      "audio": "audio/radicals/彐.mp3"
+    },
+    {
+      "number": 59,
+      "radical": "彡",
+      "pinyin": "shān",
+      "meaning": "hair strokes",
+      "strokes": 3,
+      "examples": [
+        "形",
+        "影",
+        "彩",
+        "参"
+      ],
+      "audio": "audio/radicals/彡.mp3"
     },
     {
       "number": 60,
@@ -296,7 +813,12 @@
       "pinyin": "chì",
       "meaning": "step",
       "strokes": 3,
-      "examples": ["行", "很", "得", "往"],
+      "examples": [
+        "行",
+        "很",
+        "得",
+        "往"
+      ],
       "audio": "audio/radicals/彳.mp3"
     },
     {
@@ -305,7 +827,12 @@
       "pinyin": "xīn",
       "meaning": "heart",
       "strokes": 4,
-      "examples": ["想", "思", "意", "感"],
+      "examples": [
+        "想",
+        "思",
+        "意",
+        "感"
+      ],
       "audio": "audio/radicals/心.mp3"
     },
     {
@@ -314,7 +841,12 @@
       "pinyin": "gē",
       "meaning": "weapon",
       "strokes": 4,
-      "examples": ["我", "成", "战", "或"],
+      "examples": [
+        "我",
+        "成",
+        "战",
+        "或"
+      ],
       "audio": "audio/radicals/戈.mp3"
     },
     {
@@ -323,7 +855,11 @@
       "pinyin": "hù",
       "meaning": "door",
       "strokes": 4,
-      "examples": ["房", "所", "扇"],
+      "examples": [
+        "房",
+        "所",
+        "扇"
+      ],
       "audio": "audio/radicals/户.mp3"
     },
     {
@@ -332,25 +868,64 @@
       "pinyin": "shǒu",
       "meaning": "hand",
       "strokes": 4,
-      "examples": ["打", "拿", "找", "把"],
+      "examples": [
+        "打",
+        "拿",
+        "找",
+        "把"
+      ],
       "audio": "audio/radicals/手.mp3"
     },
     {
+      "number": 65,
+      "radical": "支",
+      "pinyin": "zhī",
+      "meaning": "branch",
+      "strokes": 4,
+      "examples": [
+        "枝",
+        "技",
+        "翅"
+      ],
+      "audio": "audio/radicals/支.mp3"
+    },
+    {
       "number": 66,
+      "radical": "攴",
+      "pinyin": "pū",
+      "meaning": "tap, hit",
+      "strokes": 4,
+      "examples": [
+        "收",
+        "改",
+        "放",
+        "教"
+      ],
+      "audio": "audio/radicals/攴.mp3"
+    },
+    {
+      "number": 67,
       "radical": "文",
       "pinyin": "wén",
       "meaning": "writing/literature",
       "strokes": 4,
-      "examples": ["放", "故", "教", "数"],
+      "examples": [
+        "蚊",
+        "纹",
+        "这"
+      ],
       "audio": "audio/radicals/文.mp3"
     },
     {
-      "number": 67,
+      "number": 68,
       "radical": "斗",
       "pinyin": "dǒu",
       "meaning": "fight/ladle",
       "strokes": 4,
-      "examples": ["料", "斜"],
+      "examples": [
+        "料",
+        "斜"
+      ],
       "audio": "audio/radicals/斗.mp3"
     },
     {
@@ -359,7 +934,11 @@
       "pinyin": "jīn",
       "meaning": "axe/catty",
       "strokes": 4,
-      "examples": ["新", "断", "斯"],
+      "examples": [
+        "新",
+        "断",
+        "斯"
+      ],
       "audio": "audio/radicals/斤.mp3"
     },
     {
@@ -368,8 +947,24 @@
       "pinyin": "fāng",
       "meaning": "square/direction",
       "strokes": 4,
-      "examples": ["放", "旁", "族", "旅"],
+      "examples": [
+        "放",
+        "旁",
+        "族",
+        "旅"
+      ],
       "audio": "audio/radicals/方.mp3"
+    },
+    {
+      "number": 71,
+      "radical": "无",
+      "pinyin": "wú",
+      "meaning": "not, without",
+      "strokes": 4,
+      "examples": [
+        "既"
+      ],
+      "audio": "audio/radicals/无.mp3"
     },
     {
       "number": 72,
@@ -377,7 +972,12 @@
       "pinyin": "rì",
       "meaning": "sun/day",
       "strokes": 4,
-      "examples": ["早", "明", "时", "星"],
+      "examples": [
+        "早",
+        "明",
+        "时",
+        "星"
+      ],
       "audio": "audio/radicals/日.mp3"
     },
     {
@@ -386,7 +986,11 @@
       "pinyin": "yuē",
       "meaning": "say",
       "strokes": 4,
-      "examples": ["曲", "更", "书"],
+      "examples": [
+        "曲",
+        "更",
+        "曾"
+      ],
       "audio": "audio/radicals/曰.mp3"
     },
     {
@@ -395,7 +999,12 @@
       "pinyin": "yuè",
       "meaning": "moon/month",
       "strokes": 4,
-      "examples": ["明", "朋", "期", "望"],
+      "examples": [
+        "明",
+        "朋",
+        "期",
+        "望"
+      ],
       "audio": "audio/radicals/月.mp3"
     },
     {
@@ -404,7 +1013,12 @@
       "pinyin": "mù",
       "meaning": "tree/wood",
       "strokes": 4,
-      "examples": ["林", "树", "果", "本"],
+      "examples": [
+        "林",
+        "树",
+        "果",
+        "本"
+      ],
       "audio": "audio/radicals/木.mp3"
     },
     {
@@ -413,7 +1027,12 @@
       "pinyin": "qiàn",
       "meaning": "yawn/lack",
       "strokes": 4,
-      "examples": ["次", "欢", "歌", "款"],
+      "examples": [
+        "次",
+        "欢",
+        "歌",
+        "款"
+      ],
       "audio": "audio/radicals/欠.mp3"
     },
     {
@@ -422,8 +1041,27 @@
       "pinyin": "zhǐ",
       "meaning": "stop",
       "strokes": 4,
-      "examples": ["正", "步", "此", "武"],
+      "examples": [
+        "正",
+        "步",
+        "此",
+        "武"
+      ],
       "audio": "audio/radicals/止.mp3"
+    },
+    {
+      "number": 78,
+      "radical": "歹",
+      "pinyin": "dǎi",
+      "meaning": "bad, death",
+      "strokes": 4,
+      "examples": [
+        "死",
+        "列",
+        "残",
+        "殊"
+      ],
+      "audio": "audio/radicals/歹.mp3"
     },
     {
       "number": 79,
@@ -431,8 +1069,79 @@
       "pinyin": "shū",
       "meaning": "weapon",
       "strokes": 4,
-      "examples": ["段", "般", "没"],
+      "examples": [
+        "段",
+        "般",
+        "没"
+      ],
       "audio": "audio/radicals/殳.mp3"
+    },
+    {
+      "number": 80,
+      "radical": "毋",
+      "pinyin": "wú",
+      "meaning": "do not",
+      "strokes": 4,
+      "examples": [
+        "母",
+        "每",
+        "毒"
+      ],
+      "audio": "audio/radicals/毋.mp3"
+    },
+    {
+      "number": 81,
+      "radical": "比",
+      "pinyin": "bǐ",
+      "meaning": "compare",
+      "strokes": 4,
+      "examples": [
+        "皆",
+        "批",
+        "毕"
+      ],
+      "audio": "audio/radicals/比.mp3"
+    },
+    {
+      "number": 82,
+      "radical": "毛",
+      "pinyin": "máo",
+      "meaning": "fur, hair",
+      "strokes": 4,
+      "examples": [
+        "毯",
+        "笔",
+        "尾",
+        "毫"
+      ],
+      "audio": "audio/radicals/毛.mp3"
+    },
+    {
+      "number": 83,
+      "radical": "氏",
+      "pinyin": "shì",
+      "meaning": "clan",
+      "strokes": 4,
+      "examples": [
+        "民",
+        "纸",
+        "昏",
+        "低"
+      ],
+      "audio": "audio/radicals/氏.mp3"
+    },
+    {
+      "number": 84,
+      "radical": "气",
+      "pinyin": "qì",
+      "meaning": "air, gas",
+      "strokes": 4,
+      "examples": [
+        "汽",
+        "氧",
+        "氢"
+      ],
+      "audio": "audio/radicals/气.mp3"
     },
     {
       "number": 85,
@@ -440,7 +1149,12 @@
       "pinyin": "shuǐ",
       "meaning": "water",
       "strokes": 4,
-      "examples": ["河", "海", "洗", "游"],
+      "examples": [
+        "河",
+        "海",
+        "洗",
+        "游"
+      ],
       "audio": "audio/radicals/水.mp3"
     },
     {
@@ -449,7 +1163,12 @@
       "pinyin": "huǒ",
       "meaning": "fire",
       "strokes": 4,
-      "examples": ["灯", "烧", "热", "煮"],
+      "examples": [
+        "灯",
+        "烧",
+        "热",
+        "煮"
+      ],
       "audio": "audio/radicals/火.mp3"
     },
     {
@@ -458,7 +1177,11 @@
       "pinyin": "zhǎo",
       "meaning": "claw",
       "strokes": 4,
-      "examples": ["爬", "爱", "采"],
+      "examples": [
+        "爬",
+        "爱",
+        "采"
+      ],
       "audio": "audio/radicals/爪.mp3"
     },
     {
@@ -467,8 +1190,36 @@
       "pinyin": "fù",
       "meaning": "father",
       "strokes": 4,
-      "examples": ["爸", "爷"],
+      "examples": [
+        "爸",
+        "爷"
+      ],
       "audio": "audio/radicals/父.mp3"
+    },
+    {
+      "number": 89,
+      "radical": "爻",
+      "pinyin": "yáo",
+      "meaning": "crossed lines",
+      "strokes": 4,
+      "examples": [
+        "爽"
+      ],
+      "audio": "audio/radicals/爻.mp3"
+    },
+    {
+      "number": 90,
+      "radical": "爿",
+      "pinyin": "pán",
+      "meaning": "half tree trunk",
+      "strokes": 4,
+      "examples": [
+        "壮",
+        "状",
+        "将",
+        "妆"
+      ],
+      "audio": "audio/radicals/爿.mp3"
     },
     {
       "number": 91,
@@ -476,8 +1227,25 @@
       "pinyin": "piàn",
       "meaning": "slice",
       "strokes": 4,
-      "examples": ["版", "牌"],
+      "examples": [
+        "版",
+        "牌"
+      ],
       "audio": "audio/radicals/片.mp3"
+    },
+    {
+      "number": 92,
+      "radical": "牙",
+      "pinyin": "yá",
+      "meaning": "tooth, fang",
+      "strokes": 4,
+      "examples": [
+        "呀",
+        "芽",
+        "穿",
+        "雅"
+      ],
+      "audio": "audio/radicals/牙.mp3"
     },
     {
       "number": 93,
@@ -485,7 +1253,11 @@
       "pinyin": "niú",
       "meaning": "ox/cow",
       "strokes": 4,
-      "examples": ["牧", "物", "特"],
+      "examples": [
+        "牧",
+        "物",
+        "特"
+      ],
       "audio": "audio/radicals/牛.mp3"
     },
     {
@@ -494,8 +1266,25 @@
       "pinyin": "quǎn",
       "meaning": "dog",
       "strokes": 4,
-      "examples": ["狗", "猫", "狼", "猪"],
+      "examples": [
+        "狗",
+        "猫",
+        "狼",
+        "猪"
+      ],
       "audio": "audio/radicals/犬.mp3"
+    },
+    {
+      "number": 95,
+      "radical": "玄",
+      "pinyin": "xuán",
+      "meaning": "dark, mysterious",
+      "strokes": 5,
+      "examples": [
+        "率",
+        "畜"
+      ],
+      "audio": "audio/radicals/玄.mp3"
     },
     {
       "number": 96,
@@ -503,8 +1292,76 @@
       "pinyin": "yù",
       "meaning": "jade",
       "strokes": 5,
-      "examples": ["王", "玩", "现", "球"],
+      "examples": [
+        "王",
+        "玩",
+        "现",
+        "球"
+      ],
       "audio": "audio/radicals/玉.mp3"
+    },
+    {
+      "number": 97,
+      "radical": "瓜",
+      "pinyin": "guā",
+      "meaning": "melon",
+      "strokes": 5,
+      "examples": [
+        "瓣",
+        "瓢",
+        "孤"
+      ],
+      "audio": "audio/radicals/瓜.mp3"
+    },
+    {
+      "number": 98,
+      "radical": "瓦",
+      "pinyin": "wǎ",
+      "meaning": "tile",
+      "strokes": 5,
+      "examples": [
+        "瓶",
+        "瓷",
+        "瓮"
+      ],
+      "audio": "audio/radicals/瓦.mp3"
+    },
+    {
+      "number": 99,
+      "radical": "甘",
+      "pinyin": "gān",
+      "meaning": "sweet",
+      "strokes": 5,
+      "examples": [
+        "甜",
+        "某"
+      ],
+      "audio": "audio/radicals/甘.mp3"
+    },
+    {
+      "number": 100,
+      "radical": "生",
+      "pinyin": "shēng",
+      "meaning": "life, birth",
+      "strokes": 5,
+      "examples": [
+        "星",
+        "胜",
+        "姓"
+      ],
+      "audio": "audio/radicals/生.mp3"
+    },
+    {
+      "number": 101,
+      "radical": "用",
+      "pinyin": "yòng",
+      "meaning": "use",
+      "strokes": 5,
+      "examples": [
+        "甩",
+        "佣"
+      ],
+      "audio": "audio/radicals/用.mp3"
     },
     {
       "number": 102,
@@ -512,8 +1369,26 @@
       "pinyin": "tián",
       "meaning": "field",
       "strokes": 5,
-      "examples": ["男", "界", "留", "画"],
+      "examples": [
+        "男",
+        "界",
+        "留",
+        "画"
+      ],
       "audio": "audio/radicals/田.mp3"
+    },
+    {
+      "number": 103,
+      "radical": "疋",
+      "pinyin": "pǐ",
+      "meaning": "bolt of cloth",
+      "strokes": 5,
+      "examples": [
+        "蛋",
+        "楚",
+        "疑"
+      ],
+      "audio": "audio/radicals/疋.mp3"
     },
     {
       "number": 104,
@@ -521,8 +1396,24 @@
       "pinyin": "nè",
       "meaning": "sickness",
       "strokes": 5,
-      "examples": ["病", "痛", "疼"],
+      "examples": [
+        "病",
+        "痛",
+        "疼"
+      ],
       "audio": "audio/radicals/疒.mp3"
+    },
+    {
+      "number": 105,
+      "radical": "癶",
+      "pinyin": "bō",
+      "meaning": "footsteps",
+      "strokes": 5,
+      "examples": [
+        "登",
+        "癸"
+      ],
+      "audio": "audio/radicals/癶.mp3"
     },
     {
       "number": 106,
@@ -530,8 +1421,41 @@
       "pinyin": "bái",
       "meaning": "white",
       "strokes": 5,
-      "examples": ["百", "的", "皮", "皇"],
+      "examples": [
+        "百",
+        "的",
+        "皇",
+        "泉"
+      ],
       "audio": "audio/radicals/白.mp3"
+    },
+    {
+      "number": 107,
+      "radical": "皮",
+      "pinyin": "pí",
+      "meaning": "skin",
+      "strokes": 5,
+      "examples": [
+        "波",
+        "破",
+        "披",
+        "疲"
+      ],
+      "audio": "audio/radicals/皮.mp3"
+    },
+    {
+      "number": 108,
+      "radical": "皿",
+      "pinyin": "mǐn",
+      "meaning": "dish",
+      "strokes": 5,
+      "examples": [
+        "盆",
+        "盒",
+        "盘",
+        "盖"
+      ],
+      "audio": "audio/radicals/皿.mp3"
     },
     {
       "number": 109,
@@ -539,8 +1463,25 @@
       "pinyin": "mù",
       "meaning": "eye",
       "strokes": 5,
-      "examples": ["看", "眼", "睡", "相"],
+      "examples": [
+        "看",
+        "眼",
+        "睡",
+        "相"
+      ],
       "audio": "audio/radicals/目.mp3"
+    },
+    {
+      "number": 110,
+      "radical": "矛",
+      "pinyin": "máo",
+      "meaning": "spear",
+      "strokes": 5,
+      "examples": [
+        "柔",
+        "茅"
+      ],
+      "audio": "audio/radicals/矛.mp3"
     },
     {
       "number": 111,
@@ -548,7 +1489,11 @@
       "pinyin": "shǐ",
       "meaning": "arrow",
       "strokes": 5,
-      "examples": ["知", "短", "矮"],
+      "examples": [
+        "知",
+        "短",
+        "矮"
+      ],
       "audio": "audio/radicals/矢.mp3"
     },
     {
@@ -557,7 +1502,12 @@
       "pinyin": "shí",
       "meaning": "stone",
       "strokes": 5,
-      "examples": ["破", "硬", "码", "研"],
+      "examples": [
+        "破",
+        "硬",
+        "码",
+        "研"
+      ],
       "audio": "audio/radicals/石.mp3"
     },
     {
@@ -566,8 +1516,25 @@
       "pinyin": "shì",
       "meaning": "show/spirit",
       "strokes": 5,
-      "examples": ["社", "祝", "神", "福"],
+      "examples": [
+        "社",
+        "祝",
+        "神",
+        "福"
+      ],
       "audio": "audio/radicals/示.mp3"
+    },
+    {
+      "number": 114,
+      "radical": "禸",
+      "pinyin": "róu",
+      "meaning": "track",
+      "strokes": 5,
+      "examples": [
+        "离",
+        "禹"
+      ],
+      "audio": "audio/radicals/禸.mp3"
     },
     {
       "number": 115,
@@ -575,7 +1542,12 @@
       "pinyin": "hé",
       "meaning": "grain",
       "strokes": 5,
-      "examples": ["和", "种", "秋", "科"],
+      "examples": [
+        "和",
+        "种",
+        "秋",
+        "科"
+      ],
       "audio": "audio/radicals/禾.mp3"
     },
     {
@@ -584,7 +1556,11 @@
       "pinyin": "xué",
       "meaning": "cave/hole",
       "strokes": 5,
-      "examples": ["空", "穷", "窗"],
+      "examples": [
+        "空",
+        "穷",
+        "窗"
+      ],
       "audio": "audio/radicals/穴.mp3"
     },
     {
@@ -593,7 +1569,12 @@
       "pinyin": "lì",
       "meaning": "stand",
       "strokes": 5,
-      "examples": ["站", "童", "端", "竞"],
+      "examples": [
+        "站",
+        "童",
+        "端",
+        "竞"
+      ],
       "audio": "audio/radicals/立.mp3"
     },
     {
@@ -602,7 +1583,12 @@
       "pinyin": "zhú",
       "meaning": "bamboo",
       "strokes": 6,
-      "examples": ["笑", "答", "等", "筷"],
+      "examples": [
+        "笑",
+        "答",
+        "等",
+        "筷"
+      ],
       "audio": "audio/radicals/竹.mp3"
     },
     {
@@ -611,7 +1597,12 @@
       "pinyin": "mǐ",
       "meaning": "rice",
       "strokes": 6,
-      "examples": ["粉", "糖", "精", "糕"],
+      "examples": [
+        "粉",
+        "糖",
+        "精",
+        "糕"
+      ],
       "audio": "audio/radicals/米.mp3"
     },
     {
@@ -620,8 +1611,26 @@
       "pinyin": "mì",
       "meaning": "silk/thread",
       "strokes": 6,
-      "examples": ["红", "纸", "组", "给"],
+      "examples": [
+        "红",
+        "纸",
+        "组",
+        "给"
+      ],
       "audio": "audio/radicals/糸.mp3"
+    },
+    {
+      "number": 121,
+      "radical": "缶",
+      "pinyin": "fǒu",
+      "meaning": "jar",
+      "strokes": 6,
+      "examples": [
+        "缸",
+        "缺",
+        "罐"
+      ],
+      "audio": "audio/radicals/缶.mp3"
     },
     {
       "number": 122,
@@ -629,7 +1638,11 @@
       "pinyin": "wǎng",
       "meaning": "net",
       "strokes": 6,
-      "examples": ["罗", "罚", "置"],
+      "examples": [
+        "罗",
+        "罚",
+        "置"
+      ],
       "audio": "audio/radicals/网.mp3"
     },
     {
@@ -638,7 +1651,12 @@
       "pinyin": "yáng",
       "meaning": "sheep",
       "strokes": 6,
-      "examples": ["美", "着", "群", "义"],
+      "examples": [
+        "美",
+        "着",
+        "群",
+        "义"
+      ],
       "audio": "audio/radicals/羊.mp3"
     },
     {
@@ -647,8 +1665,49 @@
       "pinyin": "yǔ",
       "meaning": "feather",
       "strokes": 6,
-      "examples": ["习", "翅", "翻"],
+      "examples": [
+        "习",
+        "翅",
+        "翻"
+      ],
       "audio": "audio/radicals/羽.mp3"
+    },
+    {
+      "number": 125,
+      "radical": "老",
+      "pinyin": "lǎo",
+      "meaning": "old",
+      "strokes": 6,
+      "examples": [
+        "考",
+        "孝",
+        "者"
+      ],
+      "audio": "audio/radicals/老.mp3"
+    },
+    {
+      "number": 126,
+      "radical": "而",
+      "pinyin": "ér",
+      "meaning": "and, beard",
+      "strokes": 6,
+      "examples": [
+        "耐",
+        "耍"
+      ],
+      "audio": "audio/radicals/而.mp3"
+    },
+    {
+      "number": 127,
+      "radical": "耒",
+      "pinyin": "lěi",
+      "meaning": "plow",
+      "strokes": 6,
+      "examples": [
+        "耕",
+        "耗"
+      ],
+      "audio": "audio/radicals/耒.mp3"
     },
     {
       "number": 128,
@@ -656,8 +1715,26 @@
       "pinyin": "ěr",
       "meaning": "ear",
       "strokes": 6,
-      "examples": ["听", "聪", "联", "职"],
+      "examples": [
+        "听",
+        "聪",
+        "联",
+        "职"
+      ],
       "audio": "audio/radicals/耳.mp3"
+    },
+    {
+      "number": 129,
+      "radical": "聿",
+      "pinyin": "yù",
+      "meaning": "writing brush",
+      "strokes": 6,
+      "examples": [
+        "律",
+        "建",
+        "肃"
+      ],
+      "audio": "audio/radicals/聿.mp3"
     },
     {
       "number": 130,
@@ -665,8 +1742,130 @@
       "pinyin": "ròu",
       "meaning": "meat/flesh",
       "strokes": 6,
-      "examples": ["肚", "胖", "脸", "腿"],
+      "examples": [
+        "肚",
+        "胖",
+        "脸",
+        "腿"
+      ],
       "audio": "audio/radicals/肉.mp3"
+    },
+    {
+      "number": 131,
+      "radical": "臣",
+      "pinyin": "chén",
+      "meaning": "minister",
+      "strokes": 6,
+      "examples": [
+        "卧",
+        "宦"
+      ],
+      "audio": "audio/radicals/臣.mp3"
+    },
+    {
+      "number": 132,
+      "radical": "自",
+      "pinyin": "zì",
+      "meaning": "self",
+      "strokes": 6,
+      "examples": [
+        "臭",
+        "息",
+        "鼻"
+      ],
+      "audio": "audio/radicals/自.mp3"
+    },
+    {
+      "number": 133,
+      "radical": "至",
+      "pinyin": "zhì",
+      "meaning": "arrive",
+      "strokes": 6,
+      "examples": [
+        "到",
+        "室",
+        "屋",
+        "致"
+      ],
+      "audio": "audio/radicals/至.mp3"
+    },
+    {
+      "number": 134,
+      "radical": "臼",
+      "pinyin": "jiù",
+      "meaning": "mortar",
+      "strokes": 6,
+      "examples": [
+        "舅",
+        "舀",
+        "稻"
+      ],
+      "audio": "audio/radicals/臼.mp3"
+    },
+    {
+      "number": 135,
+      "radical": "舌",
+      "pinyin": "shé",
+      "meaning": "tongue",
+      "strokes": 6,
+      "examples": [
+        "甜",
+        "话",
+        "活",
+        "乱"
+      ],
+      "audio": "audio/radicals/舌.mp3"
+    },
+    {
+      "number": 136,
+      "radical": "舛",
+      "pinyin": "chuǎn",
+      "meaning": "oppose",
+      "strokes": 6,
+      "examples": [
+        "舞",
+        "舜"
+      ],
+      "audio": "audio/radicals/舛.mp3"
+    },
+    {
+      "number": 137,
+      "radical": "舟",
+      "pinyin": "zhōu",
+      "meaning": "boat",
+      "strokes": 6,
+      "examples": [
+        "船",
+        "航",
+        "舱",
+        "般"
+      ],
+      "audio": "audio/radicals/舟.mp3"
+    },
+    {
+      "number": 138,
+      "radical": "艮",
+      "pinyin": "gèn",
+      "meaning": "stopping, tough",
+      "strokes": 6,
+      "examples": [
+        "很",
+        "根",
+        "银",
+        "跟"
+      ],
+      "audio": "audio/radicals/艮.mp3"
+    },
+    {
+      "number": 139,
+      "radical": "色",
+      "pinyin": "sè",
+      "meaning": "color",
+      "strokes": 6,
+      "examples": [
+        "艳"
+      ],
+      "audio": "audio/radicals/色.mp3"
     },
     {
       "number": 140,
@@ -674,7 +1873,12 @@
       "pinyin": "cǎo",
       "meaning": "grass",
       "strokes": 6,
-      "examples": ["花", "草", "苹", "菜"],
+      "examples": [
+        "花",
+        "草",
+        "苹",
+        "菜"
+      ],
       "audio": "audio/radicals/艸.mp3"
     },
     {
@@ -683,7 +1887,11 @@
       "pinyin": "hū",
       "meaning": "tiger",
       "strokes": 6,
-      "examples": ["虎", "虑", "虚"],
+      "examples": [
+        "虎",
+        "虑",
+        "虚"
+      ],
       "audio": "audio/radicals/虍.mp3"
     },
     {
@@ -692,8 +1900,38 @@
       "pinyin": "chóng",
       "meaning": "insect",
       "strokes": 6,
-      "examples": ["蛋", "蜜", "蝴", "蝶"],
+      "examples": [
+        "蛋",
+        "蜜",
+        "蝴",
+        "蝶"
+      ],
       "audio": "audio/radicals/虫.mp3"
+    },
+    {
+      "number": 143,
+      "radical": "血",
+      "pinyin": "xuè",
+      "meaning": "blood",
+      "strokes": 6,
+      "examples": [
+        "恤",
+        "衅"
+      ],
+      "audio": "audio/radicals/血.mp3"
+    },
+    {
+      "number": 144,
+      "radical": "行",
+      "pinyin": "xíng",
+      "meaning": "walk, go",
+      "strokes": 6,
+      "examples": [
+        "街",
+        "衔",
+        "衡"
+      ],
+      "audio": "audio/radicals/行.mp3"
     },
     {
       "number": 145,
@@ -701,7 +1939,12 @@
       "pinyin": "yī",
       "meaning": "clothing",
       "strokes": 6,
-      "examples": ["初", "被", "裤", "裙"],
+      "examples": [
+        "初",
+        "被",
+        "裤",
+        "裙"
+      ],
       "audio": "audio/radicals/衣.mp3"
     },
     {
@@ -710,7 +1953,11 @@
       "pinyin": "yà",
       "meaning": "cover",
       "strokes": 6,
-      "examples": ["西", "要", "覆"],
+      "examples": [
+        "西",
+        "要",
+        "覆"
+      ],
       "audio": "audio/radicals/襾.mp3"
     },
     {
@@ -720,8 +1967,26 @@
       "pinyin": "jiàn",
       "meaning": "see",
       "strokes": 7,
-      "examples": ["观", "规", "视", "觉"],
+      "examples": [
+        "观",
+        "规",
+        "视",
+        "觉"
+      ],
       "audio": "audio/radicals/见.mp3"
+    },
+    {
+      "number": 148,
+      "radical": "角",
+      "pinyin": "jiǎo",
+      "meaning": "horn",
+      "strokes": 7,
+      "examples": [
+        "解",
+        "触",
+        "确"
+      ],
+      "audio": "audio/radicals/角.mp3"
     },
     {
       "number": 149,
@@ -729,8 +1994,68 @@
       "pinyin": "yán",
       "meaning": "speech/words",
       "strokes": 7,
-      "examples": ["说", "话", "语", "读"],
+      "examples": [
+        "说",
+        "话",
+        "语",
+        "读"
+      ],
       "audio": "audio/radicals/言.mp3"
+    },
+    {
+      "number": 150,
+      "radical": "谷",
+      "pinyin": "gǔ",
+      "meaning": "valley",
+      "strokes": 7,
+      "examples": [
+        "欲",
+        "容",
+        "俗",
+        "浴"
+      ],
+      "audio": "audio/radicals/谷.mp3"
+    },
+    {
+      "number": 151,
+      "radical": "豆",
+      "pinyin": "dòu",
+      "meaning": "bean",
+      "strokes": 7,
+      "examples": [
+        "短",
+        "豌",
+        "逗",
+        "痘"
+      ],
+      "audio": "audio/radicals/豆.mp3"
+    },
+    {
+      "number": 152,
+      "radical": "豕",
+      "pinyin": "shǐ",
+      "meaning": "pig",
+      "strokes": 7,
+      "examples": [
+        "家",
+        "象",
+        "豪",
+        "逐"
+      ],
+      "audio": "audio/radicals/豕.mp3"
+    },
+    {
+      "number": 153,
+      "radical": "豸",
+      "pinyin": "zhì",
+      "meaning": "badger",
+      "strokes": 7,
+      "examples": [
+        "豹",
+        "豺",
+        "貌"
+      ],
+      "audio": "audio/radicals/豸.mp3"
     },
     {
       "number": 154,
@@ -739,8 +2064,25 @@
       "pinyin": "bèi",
       "meaning": "shell/money",
       "strokes": 7,
-      "examples": ["买", "贵", "费", "资"],
+      "examples": [
+        "买",
+        "贵",
+        "费",
+        "资"
+      ],
       "audio": "audio/radicals/贝.mp3"
+    },
+    {
+      "number": 155,
+      "radical": "赤",
+      "pinyin": "chì",
+      "meaning": "red",
+      "strokes": 7,
+      "examples": [
+        "赫",
+        "赦"
+      ],
+      "audio": "audio/radicals/赤.mp3"
     },
     {
       "number": 156,
@@ -748,7 +2090,12 @@
       "pinyin": "zǒu",
       "meaning": "walk/run",
       "strokes": 7,
-      "examples": ["起", "超", "越", "趣"],
+      "examples": [
+        "起",
+        "超",
+        "越",
+        "趣"
+      ],
       "audio": "audio/radicals/走.mp3"
     },
     {
@@ -757,8 +2104,26 @@
       "pinyin": "zú",
       "meaning": "foot",
       "strokes": 7,
-      "examples": ["跑", "跳", "路", "踢"],
+      "examples": [
+        "跑",
+        "跳",
+        "路",
+        "踢"
+      ],
       "audio": "audio/radicals/足.mp3"
+    },
+    {
+      "number": 158,
+      "radical": "身",
+      "pinyin": "shēn",
+      "meaning": "body",
+      "strokes": 7,
+      "examples": [
+        "射",
+        "躲",
+        "躺"
+      ],
+      "audio": "audio/radicals/身.mp3"
     },
     {
       "number": 159,
@@ -767,8 +2132,40 @@
       "pinyin": "chē",
       "meaning": "vehicle/cart",
       "strokes": 7,
-      "examples": ["轮", "转", "轻", "输"],
+      "examples": [
+        "轮",
+        "转",
+        "轻",
+        "输"
+      ],
       "audio": "audio/radicals/车.mp3"
+    },
+    {
+      "number": 160,
+      "radical": "辛",
+      "pinyin": "xīn",
+      "meaning": "bitter, spicy",
+      "strokes": 7,
+      "examples": [
+        "辣",
+        "辨",
+        "辫",
+        "辞"
+      ],
+      "audio": "audio/radicals/辛.mp3"
+    },
+    {
+      "number": 161,
+      "radical": "辰",
+      "pinyin": "chén",
+      "meaning": "morning",
+      "strokes": 7,
+      "examples": [
+        "晨",
+        "辱",
+        "唇"
+      ],
+      "audio": "audio/radicals/辰.mp3"
     },
     {
       "number": 162,
@@ -776,7 +2173,12 @@
       "pinyin": "chuò",
       "meaning": "walk",
       "strokes": 7,
-      "examples": ["边", "近", "进", "过"],
+      "examples": [
+        "边",
+        "近",
+        "进",
+        "过"
+      ],
       "audio": "audio/radicals/辵.mp3"
     },
     {
@@ -785,8 +2187,53 @@
       "pinyin": "yì",
       "meaning": "city",
       "strokes": 7,
-      "examples": ["都", "部", "邮"],
+      "examples": [
+        "都",
+        "部",
+        "邮"
+      ],
       "audio": "audio/radicals/邑.mp3"
+    },
+    {
+      "number": 164,
+      "radical": "酉",
+      "pinyin": "yǒu",
+      "meaning": "wine jar",
+      "strokes": 7,
+      "examples": [
+        "酒",
+        "配",
+        "醒",
+        "酸"
+      ],
+      "audio": "audio/radicals/酉.mp3"
+    },
+    {
+      "number": 165,
+      "radical": "采",
+      "pinyin": "cǎi",
+      "meaning": "pick, distinguish",
+      "strokes": 7,
+      "examples": [
+        "释",
+        "番",
+        "悉"
+      ],
+      "audio": "audio/radicals/采.mp3"
+    },
+    {
+      "number": 166,
+      "radical": "里",
+      "pinyin": "lǐ",
+      "meaning": "inside, village",
+      "strokes": 7,
+      "examples": [
+        "野",
+        "量",
+        "重",
+        "理"
+      ],
+      "audio": "audio/radicals/里.mp3"
     },
     {
       "number": 167,
@@ -794,7 +2241,12 @@
       "pinyin": "jīn",
       "meaning": "gold/metal",
       "strokes": 8,
-      "examples": ["银", "铁", "钱", "钟"],
+      "examples": [
+        "银",
+        "铁",
+        "钱",
+        "钟"
+      ],
       "audio": "audio/radicals/金.mp3"
     },
     {
@@ -804,7 +2256,9 @@
       "pinyin": "cháng",
       "meaning": "long",
       "strokes": 8,
-      "examples": ["张"],
+      "examples": [
+        "张"
+      ],
       "audio": "audio/radicals/长.mp3"
     },
     {
@@ -814,7 +2268,12 @@
       "pinyin": "mén",
       "meaning": "gate/door",
       "strokes": 8,
-      "examples": ["开", "关", "间", "闪"],
+      "examples": [
+        "开",
+        "关",
+        "间",
+        "闪"
+      ],
       "audio": "audio/radicals/门.mp3"
     },
     {
@@ -823,8 +2282,38 @@
       "pinyin": "fù",
       "meaning": "mound/hill",
       "strokes": 8,
-      "examples": ["阳", "阴", "院", "除"],
+      "examples": [
+        "阳",
+        "阴",
+        "院",
+        "除"
+      ],
       "audio": "audio/radicals/阜.mp3"
+    },
+    {
+      "number": 171,
+      "radical": "隶",
+      "pinyin": "lì",
+      "meaning": "slave",
+      "strokes": 8,
+      "examples": [
+        "逮"
+      ],
+      "audio": "audio/radicals/隶.mp3"
+    },
+    {
+      "number": 172,
+      "radical": "隹",
+      "pinyin": "zhuī",
+      "meaning": "short-tailed bird",
+      "strokes": 8,
+      "examples": [
+        "集",
+        "难",
+        "谁",
+        "推"
+      ],
+      "audio": "audio/radicals/隹.mp3"
     },
     {
       "number": 173,
@@ -832,17 +2321,104 @@
       "pinyin": "yǔ",
       "meaning": "rain",
       "strokes": 8,
-      "examples": ["雪", "雷", "电", "云"],
+      "examples": [
+        "雪",
+        "雷",
+        "电",
+        "云"
+      ],
       "audio": "audio/radicals/雨.mp3"
     },
     {
-      "number": 175,
+      "number": 174,
       "radical": "青",
       "pinyin": "qīng",
       "meaning": "blue/green",
       "strokes": 8,
-      "examples": ["清", "晴", "情", "请"],
+      "examples": [
+        "清",
+        "晴",
+        "情",
+        "请"
+      ],
       "audio": "audio/radicals/青.mp3"
+    },
+    {
+      "number": 175,
+      "radical": "非",
+      "pinyin": "fēi",
+      "meaning": "not, wrong",
+      "strokes": 8,
+      "examples": [
+        "靠",
+        "悲",
+        "罪",
+        "辈"
+      ],
+      "audio": "audio/radicals/非.mp3"
+    },
+    {
+      "number": 176,
+      "radical": "面",
+      "pinyin": "miàn",
+      "meaning": "face",
+      "strokes": 9,
+      "examples": [
+        "缅"
+      ],
+      "audio": "audio/radicals/面.mp3"
+    },
+    {
+      "number": 177,
+      "radical": "革",
+      "pinyin": "gé",
+      "meaning": "leather",
+      "strokes": 9,
+      "examples": [
+        "鞋",
+        "鞭",
+        "靴",
+        "勒"
+      ],
+      "audio": "audio/radicals/革.mp3"
+    },
+    {
+      "number": 178,
+      "radical": "韦",
+      "traditional": "韋",
+      "pinyin": "wéi",
+      "meaning": "soft leather",
+      "strokes": 9,
+      "examples": [
+        "韧",
+        "伟",
+        "围"
+      ],
+      "audio": "audio/radicals/韦.mp3"
+    },
+    {
+      "number": 179,
+      "radical": "韭",
+      "pinyin": "jiǔ",
+      "meaning": "leek",
+      "strokes": 9,
+      "examples": [
+        "韭"
+      ],
+      "audio": "audio/radicals/韭.mp3"
+    },
+    {
+      "number": 180,
+      "radical": "音",
+      "pinyin": "yīn",
+      "meaning": "sound",
+      "strokes": 9,
+      "examples": [
+        "韵",
+        "意",
+        "暗"
+      ],
+      "audio": "audio/radicals/音.mp3"
     },
     {
       "number": 181,
@@ -851,8 +2427,38 @@
       "pinyin": "yè",
       "meaning": "page/head",
       "strokes": 9,
-      "examples": ["顶", "项", "须", "题"],
+      "examples": [
+        "顶",
+        "项",
+        "须",
+        "题"
+      ],
       "audio": "audio/radicals/页.mp3"
+    },
+    {
+      "number": 182,
+      "radical": "风",
+      "traditional": "風",
+      "pinyin": "fēng",
+      "meaning": "wind",
+      "strokes": 9,
+      "examples": [
+        "飘",
+        "飓"
+      ],
+      "audio": "audio/radicals/风.mp3"
+    },
+    {
+      "number": 183,
+      "radical": "飞",
+      "traditional": "飛",
+      "pinyin": "fēi",
+      "meaning": "fly",
+      "strokes": 9,
+      "examples": [
+        "飞"
+      ],
+      "audio": "audio/radicals/飞.mp3"
     },
     {
       "number": 184,
@@ -860,8 +2466,35 @@
       "pinyin": "shí",
       "meaning": "food/eat",
       "strokes": 9,
-      "examples": ["饭", "饮", "饱", "饿"],
+      "examples": [
+        "饭",
+        "饮",
+        "饱",
+        "饿"
+      ],
       "audio": "audio/radicals/食.mp3"
+    },
+    {
+      "number": 185,
+      "radical": "首",
+      "pinyin": "shǒu",
+      "meaning": "head",
+      "strokes": 9,
+      "examples": [
+        "道"
+      ],
+      "audio": "audio/radicals/首.mp3"
+    },
+    {
+      "number": 186,
+      "radical": "香",
+      "pinyin": "xiāng",
+      "meaning": "fragrant",
+      "strokes": 9,
+      "examples": [
+        "馨"
+      ],
+      "audio": "audio/radicals/香.mp3"
     },
     {
       "number": 187,
@@ -870,8 +2503,98 @@
       "pinyin": "mǎ",
       "meaning": "horse",
       "strokes": 10,
-      "examples": ["骑", "验", "驾"],
+      "examples": [
+        "骑",
+        "验",
+        "驾"
+      ],
       "audio": "audio/radicals/马.mp3"
+    },
+    {
+      "number": 188,
+      "radical": "骨",
+      "pinyin": "gǔ",
+      "meaning": "bone",
+      "strokes": 10,
+      "examples": [
+        "滑",
+        "骼",
+        "髓"
+      ],
+      "audio": "audio/radicals/骨.mp3"
+    },
+    {
+      "number": 189,
+      "radical": "高",
+      "pinyin": "gāo",
+      "meaning": "tall",
+      "strokes": 10,
+      "examples": [
+        "搞",
+        "稿",
+        "敲"
+      ],
+      "audio": "audio/radicals/高.mp3"
+    },
+    {
+      "number": 190,
+      "radical": "髟",
+      "pinyin": "biāo",
+      "meaning": "long hair",
+      "strokes": 10,
+      "examples": [
+        "鬓",
+        "髦"
+      ],
+      "audio": "audio/radicals/髟.mp3"
+    },
+    {
+      "number": 191,
+      "radical": "鬥",
+      "pinyin": "dòu",
+      "meaning": "fight",
+      "strokes": 10,
+      "examples": [
+        "鬧"
+      ],
+      "audio": "audio/radicals/鬥.mp3"
+    },
+    {
+      "number": 192,
+      "radical": "鬯",
+      "pinyin": "chàng",
+      "meaning": "sacrificial wine",
+      "strokes": 10,
+      "examples": [
+        "鬱"
+      ],
+      "audio": "audio/radicals/鬯.mp3"
+    },
+    {
+      "number": 193,
+      "radical": "鬲",
+      "pinyin": "lì",
+      "meaning": "cauldron",
+      "strokes": 10,
+      "examples": [
+        "融",
+        "隔"
+      ],
+      "audio": "audio/radicals/鬲.mp3"
+    },
+    {
+      "number": 194,
+      "radical": "鬼",
+      "pinyin": "guǐ",
+      "meaning": "ghost",
+      "strokes": 10,
+      "examples": [
+        "魂",
+        "魔",
+        "魅",
+        "愧"
+      ],
+      "audio": "audio/radicals/鬼.mp3"
     },
     {
       "number": 195,
@@ -880,7 +2603,11 @@
       "pinyin": "yú",
       "meaning": "fish",
       "strokes": 11,
-      "examples": ["鲜", "鲤", "鱼"],
+      "examples": [
+        "鲜",
+        "鲤",
+        "鱼"
+      ],
       "audio": "audio/radicals/鱼.mp3"
     },
     {
@@ -890,8 +2617,232 @@
       "pinyin": "niǎo",
       "meaning": "bird",
       "strokes": 11,
-      "examples": ["鸡", "鸭", "鹅"],
+      "examples": [
+        "鸡",
+        "鸭",
+        "鹅"
+      ],
       "audio": "audio/radicals/鸟.mp3"
+    },
+    {
+      "number": 197,
+      "radical": "卤",
+      "traditional": "鹵",
+      "pinyin": "lǔ",
+      "meaning": "salt",
+      "strokes": 11,
+      "examples": [
+        "卤"
+      ],
+      "audio": "audio/radicals/卤.mp3"
+    },
+    {
+      "number": 198,
+      "radical": "鹿",
+      "pinyin": "lù",
+      "meaning": "deer",
+      "strokes": 11,
+      "examples": [
+        "麒",
+        "麟"
+      ],
+      "audio": "audio/radicals/鹿.mp3"
+    },
+    {
+      "number": 199,
+      "radical": "麦",
+      "traditional": "麥",
+      "pinyin": "mài",
+      "meaning": "wheat",
+      "strokes": 11,
+      "examples": [
+        "麸"
+      ],
+      "audio": "audio/radicals/麦.mp3"
+    },
+    {
+      "number": 200,
+      "radical": "麻",
+      "pinyin": "má",
+      "meaning": "hemp",
+      "strokes": 11,
+      "examples": [
+        "磨",
+        "摩",
+        "魔",
+        "嘛"
+      ],
+      "audio": "audio/radicals/麻.mp3"
+    },
+    {
+      "number": 201,
+      "radical": "黄",
+      "traditional": "黃",
+      "pinyin": "huáng",
+      "meaning": "yellow",
+      "strokes": 12,
+      "examples": [
+        "横",
+        "簧"
+      ],
+      "audio": "audio/radicals/黄.mp3"
+    },
+    {
+      "number": 202,
+      "radical": "黍",
+      "pinyin": "shǔ",
+      "meaning": "millet",
+      "strokes": 12,
+      "examples": [
+        "黎",
+        "黏"
+      ],
+      "audio": "audio/radicals/黍.mp3"
+    },
+    {
+      "number": 203,
+      "radical": "黑",
+      "pinyin": "hēi",
+      "meaning": "black",
+      "strokes": 12,
+      "examples": [
+        "默",
+        "墨",
+        "黛"
+      ],
+      "audio": "audio/radicals/黑.mp3"
+    },
+    {
+      "number": 204,
+      "radical": "黹",
+      "pinyin": "zhǐ",
+      "meaning": "embroidery",
+      "strokes": 12,
+      "examples": [
+        "黹"
+      ],
+      "audio": "audio/radicals/黹.mp3"
+    },
+    {
+      "number": 205,
+      "radical": "黾",
+      "traditional": "黽",
+      "pinyin": "mǐn",
+      "meaning": "frog",
+      "strokes": 13,
+      "examples": [
+        "蝇",
+        "绳"
+      ],
+      "audio": "audio/radicals/黾.mp3"
+    },
+    {
+      "number": 206,
+      "radical": "鼎",
+      "pinyin": "dǐng",
+      "meaning": "tripod cauldron",
+      "strokes": 13,
+      "examples": [
+        "鼎"
+      ],
+      "audio": "audio/radicals/鼎.mp3"
+    },
+    {
+      "number": 207,
+      "radical": "鼓",
+      "pinyin": "gǔ",
+      "meaning": "drum",
+      "strokes": 13,
+      "examples": [
+        "鼓"
+      ],
+      "audio": "audio/radicals/鼓.mp3"
+    },
+    {
+      "number": 208,
+      "radical": "鼠",
+      "pinyin": "shǔ",
+      "meaning": "rat, mouse",
+      "strokes": 13,
+      "examples": [
+        "鼠"
+      ],
+      "audio": "audio/radicals/鼠.mp3"
+    },
+    {
+      "number": 209,
+      "radical": "鼻",
+      "pinyin": "bí",
+      "meaning": "nose",
+      "strokes": 14,
+      "examples": [
+        "鼾"
+      ],
+      "audio": "audio/radicals/鼻.mp3"
+    },
+    {
+      "number": 210,
+      "radical": "齐",
+      "traditional": "齊",
+      "pinyin": "qí",
+      "meaning": "even, neat",
+      "strokes": 14,
+      "examples": [
+        "挤",
+        "济",
+        "剂"
+      ],
+      "audio": "audio/radicals/齐.mp3"
+    },
+    {
+      "number": 211,
+      "radical": "齿",
+      "traditional": "齒",
+      "pinyin": "chǐ",
+      "meaning": "tooth",
+      "strokes": 15,
+      "examples": [
+        "龄",
+        "龈"
+      ],
+      "audio": "audio/radicals/齿.mp3"
+    },
+    {
+      "number": 212,
+      "radical": "龙",
+      "traditional": "龍",
+      "pinyin": "lóng",
+      "meaning": "dragon",
+      "strokes": 16,
+      "examples": [
+        "笼",
+        "聋",
+        "庞"
+      ],
+      "audio": "audio/radicals/龙.mp3"
+    },
+    {
+      "number": 213,
+      "radical": "龟",
+      "traditional": "龜",
+      "pinyin": "guī",
+      "meaning": "turtle",
+      "strokes": 16,
+      "examples": [
+        "龟"
+      ],
+      "audio": "audio/radicals/龟.mp3"
+    },
+    {
+      "number": 214,
+      "radical": "龠",
+      "pinyin": "yuè",
+      "meaning": "flute",
+      "strokes": 17,
+      "examples": [
+        "龠"
+      ],
+      "audio": "audio/radicals/龠.mp3"
     }
   ]
 }

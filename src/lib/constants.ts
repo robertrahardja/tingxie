@@ -23,7 +23,7 @@ export const CONSTANTS = {
   // Vocabulary row configuration
   // IMPORTANT: Update these values when adding new word sets
   VOCABULARY: {
-    LATEST_ROW_NUMBER: 88, // Current "latest words" set - update when adding new words
+    LATEST_ROW_NUMBER: 89, // Current "latest words" set - update when adding new words
     REVIEW_MODE_NAME: 'UNKNOWN_WORDS' as const,
   },
 

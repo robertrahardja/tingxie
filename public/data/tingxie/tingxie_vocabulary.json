@@ -5041,6 +5041,139 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 89,
+      "words": [
+        {
+          "simplified": "收拾",
+          "traditional": "收拾",
+          "pinyin": "shōu shi",
+          "english": "to tidy up, to pack",
+          "audio": "audio/收拾.mp3",
+          "important": true
+        },
+        {
+          "simplified": "漂亮",
+          "traditional": "漂亮",
+          "pinyin": "piào liang",
+          "english": "pretty, beautiful",
+          "audio": "audio/漂亮.mp3",
+          "important": true
+        },
+        {
+          "simplified": "追上",
+          "traditional": "追上",
+          "pinyin": "zhuī shàng",
+          "english": "to catch up with",
+          "audio": "audio/追上.mp3",
+          "important": true
+        },
+        {
+          "simplified": "觉得",
+          "traditional": "覺得",
+          "pinyin": "jué de",
+          "english": "to feel, to think",
+          "audio": "audio/觉得.mp3",
+          "important": true
+        },
+        {
+          "simplified": "决定",
+          "traditional": "決定",
+          "pinyin": "jué dìng",
+          "english": "to decide",
+          "audio": "audio/决定.mp3",
+          "important": true
+        },
+        {
+          "simplified": "保持",
+          "traditional": "保持",
+          "pinyin": "bǎo chí",
+          "english": "to keep, to maintain",
+          "audio": "audio/保持.mp3",
+          "important": true
+        },
+        {
+          "simplified": "伸出手",
+          "traditional": "伸出手",
+          "pinyin": "shēn chū shǒu",
+          "english": "to stretch out one's hand",
+          "audio": "audio/伸出手.mp3",
+          "important": true
+        },
+        {
+          "simplified": "浪费",
+          "traditional": "浪費",
+          "pinyin": "làng fèi",
+          "english": "to waste",
+          "audio": "audio/浪费.mp3",
+          "important": true
+        },
+        {
+          "simplified": "一份报纸",
+          "traditional": "一份報紙",
+          "pinyin": "yī fèn bào zhǐ",
+          "english": "a (copy of a) newspaper",
+          "audio": "audio/一份报纸.mp3",
+          "important": true
+        },
+        {
+          "simplified": "废物",
+          "traditional": "廢物",
+          "pinyin": "fèi wù",
+          "english": "waste, rubbish",
+          "audio": "audio/废物.mp3",
+          "important": true
+        },
+        {
+          "simplified": "使用",
+          "traditional": "使用",
+          "pinyin": "shǐ yòng",
+          "english": "to use",
+          "audio": "audio/使用.mp3",
+          "important": true
+        },
+        {
+          "simplified": "环境",
+          "traditional": "環境",
+          "pinyin": "huán jìng",
+          "english": "environment",
+          "audio": "audio/环境.mp3",
+          "important": true
+        },
+        {
+          "simplified": "塑料袋",
+          "traditional": "塑料袋",
+          "pinyin": "sù liào dài",
+          "english": "plastic bag",
+          "audio": "audio/塑料袋.mp3",
+          "important": true
+        },
+        {
+          "simplified": "责任",
+          "traditional": "責任",
+          "pinyin": "zé rèn",
+          "english": "responsibility",
+          "audio": "audio/责任.mp3",
+          "important": true
+        },
+        {
+          "simplified": "如果",
+          "traditional": "如果",
+          "pinyin": "rú guǒ",
+          "english": "if",
+          "audio": "audio/如果.mp3",
+          "important": true
+        },
+        {
+          "simplified": "乱扔垃圾",
+          "traditional": "亂扔垃圾",
+          "pinyin": "luàn rēng lā jī",
+          "english": "to litter",
+          "audio": "audio/乱扔垃圾.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
