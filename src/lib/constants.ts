@@ -95,6 +95,7 @@ export interface NavItem {
 export const NAV_ITEMS: NavItem[] = [
   // Main tingxie pages
   { href: '/', label: '最新词语' },
+  { href: '/radicals', label: '部首学习' },
   { href: '/p3-picture-composition', label: '看图作文：生日' },
   { href: '/curriculum', label: '课程词语 P1-P3' },
   { href: '/koushi-no-civic-mindedness', label: '口试：没有公德心' },
@@ -116,7 +117,6 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { href: '/vocabulary', label: '词汇浏览' },
       { href: '/handwriting', label: '笔画练习' },
-      { href: '/radicals', label: '部首学习' },
       { href: '/family', label: '家庭称呼' },
       { href: '/instructions', label: '指示词汇' },
       { href: '/p3hcl-wupin-interactive', label: '互动阅读' },
