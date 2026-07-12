@@ -5174,6 +5174,107 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 90,
+      "words": [
+        {
+          "simplified": "亮晶晶",
+          "traditional": "亮晶晶",
+          "pinyin": "liàng jīng jīng",
+          "english": "sparkling, glittering",
+          "audio": "audio/亮晶晶.mp3",
+          "important": true
+        },
+        {
+          "simplified": "世界",
+          "traditional": "世界",
+          "pinyin": "shì jiè",
+          "english": "world",
+          "audio": "audio/世界.mp3",
+          "important": true
+        },
+        {
+          "simplified": "文件夹",
+          "traditional": "文件夾",
+          "pinyin": "wén jiàn jiá",
+          "english": "folder, file holder",
+          "audio": "audio/文件夹.mp3",
+          "important": true
+        },
+        {
+          "simplified": "国庆",
+          "traditional": "國慶",
+          "pinyin": "guó qìng",
+          "english": "National Day",
+          "audio": "audio/国庆.mp3",
+          "important": true
+        },
+        {
+          "simplified": "指着",
+          "traditional": "指著",
+          "pinyin": "zhǐ zhe",
+          "english": "pointing at",
+          "audio": "audio/指着.mp3",
+          "important": true
+        },
+        {
+          "simplified": "唱国歌",
+          "traditional": "唱國歌",
+          "pinyin": "chàng guó gē",
+          "english": "to sing the national anthem",
+          "audio": "audio/唱国歌.mp3",
+          "important": true
+        },
+        {
+          "simplified": "兴奋",
+          "traditional": "興奮",
+          "pinyin": "xīng fèn",
+          "english": "excited",
+          "audio": "audio/兴奋.mp3",
+          "important": true
+        },
+        {
+          "simplified": "新加坡",
+          "traditional": "新加坡",
+          "pinyin": "xīn jiā pō",
+          "english": "Singapore",
+          "audio": "audio/新加坡.mp3",
+          "important": true
+        },
+        {
+          "simplified": "礼物",
+          "traditional": "禮物",
+          "pinyin": "lǐ wù",
+          "english": "gift, present",
+          "audio": "audio/礼物.mp3",
+          "important": true
+        },
+        {
+          "simplified": "设计",
+          "traditional": "設計",
+          "pinyin": "shè jì",
+          "english": "to design; design",
+          "audio": "audio/设计.mp3",
+          "important": true
+        },
+        {
+          "simplified": "国旗",
+          "traditional": "國旗",
+          "pinyin": "guó qí",
+          "english": "national flag",
+          "audio": "audio/国旗.mp3",
+          "important": true
+        },
+        {
+          "simplified": "竖起大拇指",
+          "traditional": "豎起大拇指",
+          "pinyin": "shù qǐ dà mǔ zhǐ",
+          "english": "to give a thumbs-up",
+          "audio": "audio/竖起大拇指.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
