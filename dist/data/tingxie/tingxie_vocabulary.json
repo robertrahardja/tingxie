@@ -5275,6 +5275,139 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 91,
+      "words": [
+        {
+          "simplified": "真假",
+          "traditional": "真假",
+          "pinyin": "zhēn jiǎ",
+          "english": "true or false; real or fake",
+          "audio": "audio/真假.mp3",
+          "important": true
+        },
+        {
+          "simplified": "眼睛",
+          "traditional": "眼睛",
+          "pinyin": "yǎn jīng",
+          "english": "eyes",
+          "audio": "audio/眼睛.mp3",
+          "important": true
+        },
+        {
+          "simplified": "圆圆",
+          "traditional": "圓圓",
+          "pinyin": "yuán yuán",
+          "english": "round, very round",
+          "audio": "audio/圆圆.mp3",
+          "important": true
+        },
+        {
+          "simplified": "饿了",
+          "traditional": "餓了",
+          "pinyin": "è le",
+          "english": "hungry; got hungry",
+          "audio": "audio/饿了.mp3",
+          "important": true
+        },
+        {
+          "simplified": "散步",
+          "traditional": "散步",
+          "pinyin": "sàn bù",
+          "english": "to take a walk, to stroll",
+          "audio": "audio/散步.mp3",
+          "important": true
+        },
+        {
+          "simplified": "咬断",
+          "traditional": "咬斷",
+          "pinyin": "yǎo duàn",
+          "english": "to bite off, to bite through",
+          "audio": "audio/咬断.mp3",
+          "important": true
+        },
+        {
+          "simplified": "吃饱",
+          "traditional": "吃飽",
+          "pinyin": "chī bǎo",
+          "english": "to eat one's fill, to be full",
+          "audio": "audio/吃饱.mp3",
+          "important": true
+        },
+        {
+          "simplified": "慢慢",
+          "traditional": "慢慢",
+          "pinyin": "màn màn",
+          "english": "slowly",
+          "audio": "audio/慢慢.mp3",
+          "important": true
+        },
+        {
+          "simplified": "熊猫",
+          "traditional": "熊貓",
+          "pinyin": "xióng māo",
+          "english": "panda",
+          "audio": "audio/熊猫.mp3",
+          "important": true
+        },
+        {
+          "simplified": "软硬",
+          "traditional": "軟硬",
+          "pinyin": "ruǎn yìng",
+          "english": "soft and hard",
+          "audio": "audio/软硬.mp3",
+          "important": true
+        },
+        {
+          "simplified": "嘴巴",
+          "traditional": "嘴巴",
+          "pinyin": "zuǐ bā",
+          "english": "mouth",
+          "audio": "audio/嘴巴.mp3",
+          "important": true
+        },
+        {
+          "simplified": "笨重",
+          "traditional": "笨重",
+          "pinyin": "bèn zhòng",
+          "english": "clumsy and heavy, cumbersome",
+          "audio": "audio/笨重.mp3",
+          "important": true
+        },
+        {
+          "simplified": "打滚",
+          "traditional": "打滾",
+          "pinyin": "dǎ gǔn",
+          "english": "to roll about, to roll around",
+          "audio": "audio/打滚.mp3",
+          "important": true
+        },
+        {
+          "simplified": "有趣",
+          "traditional": "有趣",
+          "pinyin": "yǒu qù",
+          "english": "interesting, fun",
+          "audio": "audio/有趣.mp3",
+          "important": true
+        },
+        {
+          "simplified": "强壮",
+          "traditional": "強壯",
+          "pinyin": "qiáng zhuàng",
+          "english": "strong, sturdy",
+          "audio": "audio/强壮.mp3",
+          "important": true
+        },
+        {
+          "simplified": "懒洋洋地躺着",
+          "traditional": "懶洋洋地躺著",
+          "pinyin": "lǎn yáng yáng de tǎng zhe",
+          "english": "lying around lazily",
+          "audio": "audio/懒洋洋地躺着.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
