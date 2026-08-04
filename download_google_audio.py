@@ -10,22 +10,20 @@ from urllib.request import urlopen, Request
 from urllib.parse import quote
 
 WORDS = {
-    "伸进": "shēn jìn - to stretch/reach into",
-    "鼻子": "bí zi - nose",
-    "救护车": "jiù hù chē - ambulance",
-    "篮子": "lán zi - basket",
-    "不停": "bù tíng - non-stop, continuously",
-    "满": "mǎn - full",
-    "升": "shēng - to rise, to ascend",
-    "回答问题": "huí dá wèn tí - to answer a question",
-    "手拉手": "shǒu lā shǒu - hand in hand",
-    "船": "chuán - boat, ship",
-    "重量": "zhòng liàng - weight",
-    "夸": "kuā - to praise, to boast",
-    "竹竿": "zhú gān - bamboo pole",
-    "称一称": "chēng yī chēng - to weigh (something)",
-    "下沉": "xià chén - to sink",
-    "墙壁": "qiáng bì - wall",
+    "小偷": "xiǎo tōu - thief",
+    "桌子": "zhuō zi - table",
+    "逃走": "táo zǒu - to flee",
+    "吓得发抖": "xià dé fā dǒu - to tremble with fright",
+    "同班": "tóng bān - same class",
+    "课室": "kè shì - classroom",
+    "挖掉": "wā diào - to dig out",
+    "肚皮": "dù pí - belly",
+    "哈哈大笑": "hā hā dà xiào - to laugh heartily",
+    "简单": "jiǎn dān - simple",
+    "练习": "liàn xí - to practice",
+    "怀里": "huái lǐ - in one's arms",
+    "闹笑话": "nào xiào huà - to make a fool of oneself",
+    "不敢": "bù gǎn - to not dare",
 }
 
 def download_google_tts(word):

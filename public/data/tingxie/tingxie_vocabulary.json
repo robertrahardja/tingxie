@@ -5408,6 +5408,123 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 92,
+      "words": [
+        {
+          "simplified": "小偷",
+          "traditional": "小偷",
+          "pinyin": "xiǎo tōu",
+          "english": "thief",
+          "audio": "audio/小偷.mp3",
+          "important": true
+        },
+        {
+          "simplified": "桌子",
+          "traditional": "桌子",
+          "pinyin": "zhuō zi",
+          "english": "table",
+          "audio": "audio/桌子.mp3",
+          "important": true
+        },
+        {
+          "simplified": "逃走",
+          "traditional": "逃走",
+          "pinyin": "táo zǒu",
+          "english": "to flee, to run away",
+          "audio": "audio/逃走.mp3",
+          "important": true
+        },
+        {
+          "simplified": "吓得发抖",
+          "traditional": "嚇得發抖",
+          "pinyin": "xià dé fā dǒu",
+          "english": "to tremble with fright",
+          "audio": "audio/吓得发抖.mp3",
+          "important": true
+        },
+        {
+          "simplified": "同班",
+          "traditional": "同班",
+          "pinyin": "tóng bān",
+          "english": "same class, classmate",
+          "audio": "audio/同班.mp3",
+          "important": true
+        },
+        {
+          "simplified": "课室",
+          "traditional": "課室",
+          "pinyin": "kè shì",
+          "english": "classroom",
+          "audio": "audio/课室.mp3",
+          "important": true
+        },
+        {
+          "simplified": "挖掉",
+          "traditional": "挖掉",
+          "pinyin": "wā diào",
+          "english": "to dig out, to gouge out",
+          "audio": "audio/挖掉.mp3",
+          "important": true
+        },
+        {
+          "simplified": "肚皮",
+          "traditional": "肚皮",
+          "pinyin": "dù pí",
+          "english": "belly, stomach",
+          "audio": "audio/肚皮.mp3",
+          "important": true
+        },
+        {
+          "simplified": "哈哈大笑",
+          "traditional": "哈哈大笑",
+          "pinyin": "hā hā dà xiào",
+          "english": "to laugh heartily, to roar with laughter",
+          "audio": "audio/哈哈大笑.mp3",
+          "important": true
+        },
+        {
+          "simplified": "简单",
+          "traditional": "簡單",
+          "pinyin": "jiǎn dān",
+          "english": "simple, easy",
+          "audio": "audio/简单.mp3",
+          "important": true
+        },
+        {
+          "simplified": "练习",
+          "traditional": "練習",
+          "pinyin": "liàn xí",
+          "english": "to practice, exercise",
+          "audio": "audio/练习.mp3",
+          "important": true
+        },
+        {
+          "simplified": "怀里",
+          "traditional": "懷裡",
+          "pinyin": "huái lǐ",
+          "english": "in one's arms, in one's embrace",
+          "audio": "audio/怀里.mp3",
+          "important": true
+        },
+        {
+          "simplified": "闹笑话",
+          "traditional": "鬧笑話",
+          "pinyin": "nào xiào huà",
+          "english": "to make a fool of oneself, to make a blunder",
+          "audio": "audio/闹笑话.mp3",
+          "important": true
+        },
+        {
+          "simplified": "不敢",
+          "traditional": "不敢",
+          "pinyin": "bù gǎn",
+          "english": "to not dare",
+          "audio": "audio/不敢.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
