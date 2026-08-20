@@ -98,6 +98,7 @@ export const NAV_ITEMS: NavItem[] = [
   { href: '/radicals', label: '部首学习' },
   { href: '/p3-picture-composition', label: '看图作文：生日' },
   { href: '/curriculum', label: '课程词语 P1-P3' },
+  { href: '/curriculum-test', label: '听写测验 P1-P3' },
   { href: '/koushi-no-civic-mindedness', label: '口试：没有公德心' },
   { href: '/koushi-no-civic-mindedness-2', label: '口试：没有公德心（二）' },
   { href: '/p3hcl-reading-11', label: '口试：欺负弱小' },
