@@ -2265,6 +2265,36 @@ body {
   font-style: italic;
 }
 
+/* The pinyin is the question being tested — student writes the characters. */
+.pinyin-question {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #2c6cb0;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+  word-break: break-word;
+}
+
+.pinyin-question.primary {
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+/* Hidden until 显示答案 — the student writes from the audio alone. */
+.pinyin-question.covered {
+  filter: blur(8px);
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Revealed state of the toggle — quieter than the "show" affordance. */
+.reveal-btn.is-revealed {
+  background: #f1f3f5;
+  color: #667;
+  border-color: #dde1e5;
+}
+
 .keyword-section {
   margin-top: 12px;
   padding-top: 12px;

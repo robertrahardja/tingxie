@@ -8,7 +8,10 @@ export const Route = createFileRoute('/school-tingxie')({
 })
 
 // Chinese number mapping
-const CHINESE_NUMBERS = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十']
+const CHINESE_NUMBERS = [
+  '一', '二', '三', '四', '五', '六', '七', '八', '九', '十',
+  '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十',
+]
 
 function SchoolTingxiePage() {
   const [data, setData] = useState<SchoolVocabularyData | null>(null)
@@ -101,7 +104,12 @@ function SchoolTingxiePage() {
     if (item.type === 'pinyin') {
       return (
         <div className="sentence-content-wrapper">
-          <div className="pinyin-display">{item.pinyin}</div>
+          <div
+            className={`pinyin-question primary ${isRevealed ? '' : 'covered'}`}
+            onClick={() => !isRevealed && setIsRevealed(true)}
+          >
+            {item.pinyin}
+          </div>
           <div
             className={`sentence-content ${isRevealed ? '' : 'covered'}`}
             onClick={() => !isRevealed && setIsRevealed(true)}
@@ -116,6 +124,14 @@ function SchoolTingxiePage() {
       return (
         <div className="sentence-content-wrapper">
           {item.label && <div className="moxie-label">{item.label}</div>}
+          {item.pinyin && (
+            <div
+              className={`pinyin-question ${isRevealed ? '' : 'covered'}`}
+              onClick={() => !isRevealed && setIsRevealed(true)}
+            >
+              {item.pinyin}
+            </div>
+          )}
           <div
             className={`sentence-content ${isRevealed ? '' : 'covered'}`}
             onClick={() => !isRevealed && setIsRevealed(true)}
@@ -130,6 +146,14 @@ function SchoolTingxiePage() {
     // sentence type (default)
     return (
       <div className="sentence-content-wrapper">
+        {item.pinyin && (
+          <div
+            className={`pinyin-question ${isRevealed ? '' : 'covered'}`}
+            onClick={() => !isRevealed && setIsRevealed(true)}
+          >
+            {item.pinyin}
+          </div>
+        )}
         <div
           className={`sentence-content ${isRevealed ? '' : 'covered'}`}
           onClick={() => !isRevealed && setIsRevealed(true)}
@@ -298,11 +322,12 @@ function SchoolTingxiePage() {
 
             {renderContent(currentItem)}
 
-            {!isRevealed && (
-              <button className="reveal-btn" onClick={() => setIsRevealed(true)}>
-                显示答案
-              </button>
-            )}
+            <button
+              className={`reveal-btn ${isRevealed ? 'is-revealed' : ''}`}
+              onClick={() => setIsRevealed((v) => !v)}
+            >
+              {isRevealed ? '隐藏答案' : '显示答案'}
+            </button>
 
             {isRevealed && (
               <div className="answer-section">

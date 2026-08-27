@@ -5525,6 +5525,123 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 93,
+      "words": [
+        {
+          "simplified": "捞出了",
+          "traditional": "撈出了",
+          "pinyin": "lāo chū le",
+          "english": "to scoop out, to fish out",
+          "audio": "audio/捞出了.mp3",
+          "important": true
+        },
+        {
+          "simplified": "摘下了",
+          "traditional": "摘下了",
+          "pinyin": "zhāi xià le",
+          "english": "to pick off, to take down",
+          "audio": "audio/摘下了.mp3",
+          "important": true
+        },
+        {
+          "simplified": "失去",
+          "traditional": "失去",
+          "pinyin": "shī qù",
+          "english": "to lose",
+          "audio": "audio/失去.mp3",
+          "important": true
+        },
+        {
+          "simplified": "金银",
+          "traditional": "金銀",
+          "pinyin": "jīn yín",
+          "english": "gold and silver",
+          "audio": "audio/金银.mp3",
+          "important": true
+        },
+        {
+          "simplified": "等",
+          "traditional": "等",
+          "pinyin": "děng",
+          "english": "to wait",
+          "audio": "audio/等.mp3",
+          "important": true
+        },
+        {
+          "simplified": "立刻",
+          "traditional": "立刻",
+          "pinyin": "lì kè",
+          "english": "immediately, at once",
+          "audio": "audio/立刻.mp3",
+          "important": true
+        },
+        {
+          "simplified": "检查",
+          "traditional": "檢查",
+          "pinyin": "jiǎn chá",
+          "english": "to check, to inspect",
+          "audio": "audio/检查.mp3",
+          "important": true
+        },
+        {
+          "simplified": "决定",
+          "traditional": "決定",
+          "pinyin": "jué dìng",
+          "english": "to decide, decision",
+          "audio": "audio/决定.mp3",
+          "important": true
+        },
+        {
+          "simplified": "感到",
+          "traditional": "感到",
+          "pinyin": "gǎn dào",
+          "english": "to feel, to sense",
+          "audio": "audio/感到.mp3",
+          "important": true
+        },
+        {
+          "simplified": "劳动",
+          "traditional": "勞動",
+          "pinyin": "láo dòng",
+          "english": "labour, to work",
+          "audio": "audio/劳动.mp3",
+          "important": true
+        },
+        {
+          "simplified": "神仙",
+          "traditional": "神仙",
+          "pinyin": "shén xiān",
+          "english": "immortal, deity",
+          "audio": "audio/神仙.mp3",
+          "important": true
+        },
+        {
+          "simplified": "签名",
+          "traditional": "簽名",
+          "pinyin": "qiān míng",
+          "english": "to sign one's name, signature",
+          "audio": "audio/签名.mp3",
+          "important": true
+        },
+        {
+          "simplified": "银牌",
+          "traditional": "銀牌",
+          "pinyin": "yín pái",
+          "english": "silver medal",
+          "audio": "audio/银牌.mp3",
+          "important": true
+        },
+        {
+          "simplified": "农夫",
+          "traditional": "農夫",
+          "pinyin": "nóng fū",
+          "english": "farmer",
+          "audio": "audio/农夫.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }

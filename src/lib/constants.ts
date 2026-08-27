@@ -23,7 +23,7 @@ export const CONSTANTS = {
   // Vocabulary row configuration
   // IMPORTANT: Update these values when adding new word sets
   VOCABULARY: {
-    LATEST_ROW_NUMBER: 92, // Current "latest words" set - update when adding new words
+    LATEST_ROW_NUMBER: 93, // Current "latest words" set - update when adding new words
     REVIEW_MODE_NAME: 'UNKNOWN_WORDS' as const,
   },
 
@@ -95,6 +95,7 @@ export interface NavItem {
 export const NAV_ITEMS: NavItem[] = [
   // Main tingxie pages
   { href: '/', label: '最新词语' },
+  { href: '/school-tingxie', label: '学校听写' },
   { href: '/radicals', label: '部首学习' },
   { href: '/p3-picture-composition', label: '看图作文：生日' },
   { href: '/curriculum', label: '课程词语 P1-P3' },
@@ -102,7 +103,6 @@ export const NAV_ITEMS: NavItem[] = [
   { href: '/koushi-no-civic-mindedness', label: '口试：没有公德心' },
   { href: '/koushi-no-civic-mindedness-2', label: '口试：没有公德心（二）' },
   { href: '/p3hcl-reading-11', label: '口试：欺负弱小' },
-  { href: '/school-tingxie', label: '学校听写' },
   { href: '/phrase-matching', label: '词语搭配' },
   { href: '/p3hcl-reading-12', label: '口试：做家务' },
   { href: '/shuihu-writing', label: '水壶写作' },
