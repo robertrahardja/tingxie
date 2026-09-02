@@ -5642,6 +5642,139 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 94,
+      "words": [
+        {
+          "simplified": "跳舞",
+          "traditional": "跳舞",
+          "pinyin": "tiào wǔ",
+          "english": "to dance",
+          "audio": "audio/跳舞.mp3",
+          "important": true
+        },
+        {
+          "simplified": "圈起来",
+          "traditional": "圈起來",
+          "pinyin": "quān qǐ lái",
+          "english": "to circle (something)",
+          "audio": "audio/圈起来.mp3",
+          "important": true
+        },
+        {
+          "simplified": "数学试卷",
+          "traditional": "數學試卷",
+          "pinyin": "shù xué shì juàn",
+          "english": "maths exam paper",
+          "audio": "audio/数学试卷.mp3",
+          "important": true
+        },
+        {
+          "simplified": "检查答案",
+          "traditional": "檢查答案",
+          "pinyin": "jiǎn chá dá àn",
+          "english": "to check the answers",
+          "audio": "audio/检查答案.mp3",
+          "important": true
+        },
+        {
+          "simplified": "不敢抬头",
+          "traditional": "不敢抬頭",
+          "pinyin": "bù gǎn tái tóu",
+          "english": "to not dare to raise one's head",
+          "audio": "audio/不敢抬头.mp3",
+          "important": true
+        },
+        {
+          "simplified": "低",
+          "traditional": "低",
+          "pinyin": "dī",
+          "english": "low; to lower",
+          "audio": "audio/低.mp3",
+          "important": true
+        },
+        {
+          "simplified": "摘下",
+          "traditional": "摘下",
+          "pinyin": "zhāi xià",
+          "english": "to take off, to pick",
+          "audio": "audio/摘下.mp3",
+          "important": true
+        },
+        {
+          "simplified": "消息",
+          "traditional": "消息",
+          "pinyin": "xiāo xi",
+          "english": "news, message",
+          "audio": "audio/消息.mp3",
+          "important": true
+        },
+        {
+          "simplified": "终于",
+          "traditional": "終於",
+          "pinyin": "zhōng yú",
+          "english": "finally, at last",
+          "audio": "audio/终于.mp3",
+          "important": true
+        },
+        {
+          "simplified": "决定",
+          "traditional": "決定",
+          "pinyin": "jué dìng",
+          "english": "to decide, decision",
+          "audio": "audio/决定.mp3",
+          "important": true
+        },
+        {
+          "simplified": "代替",
+          "traditional": "代替",
+          "pinyin": "dài tì",
+          "english": "to replace, to substitute for",
+          "audio": "audio/代替.mp3",
+          "important": true
+        },
+        {
+          "simplified": "认识",
+          "traditional": "認識",
+          "pinyin": "rèn shi",
+          "english": "to know, to recognise",
+          "audio": "audio/认识.mp3",
+          "important": true
+        },
+        {
+          "simplified": "失去",
+          "traditional": "失去",
+          "pinyin": "shī qù",
+          "english": "to lose",
+          "audio": "audio/失去.mp3",
+          "important": true
+        },
+        {
+          "simplified": "感到",
+          "traditional": "感到",
+          "pinyin": "gǎn dào",
+          "english": "to feel, to sense",
+          "audio": "audio/感到.mp3",
+          "important": true
+        },
+        {
+          "simplified": "立刻",
+          "traditional": "立刻",
+          "pinyin": "lì kè",
+          "english": "immediately, at once",
+          "audio": "audio/立刻.mp3",
+          "important": true
+        },
+        {
+          "simplified": "银牌",
+          "traditional": "銀牌",
+          "pinyin": "yín pái",
+          "english": "silver medal",
+          "audio": "audio/银牌.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
