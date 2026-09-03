@@ -45,6 +45,10 @@ export function useAudioPlayer() {
         if (!response.ok) {
           throw new Error(`Failed to fetch audio: ${response.status} ${response.statusText}`)
         }
+        // The SPA fallback answers missing files with index.html and a 200.
+        if ((response.headers.get('content-type') ?? '').includes('text/html')) {
+          throw new Error(`Audio file not found (got HTML): ${absolutePath}`)
+        }
 
         // Create audio blob from response
         const blob = await response.blob()

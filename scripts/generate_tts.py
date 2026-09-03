@@ -37,7 +37,13 @@ def key(text: str) -> str:
 
 
 def fill(text: str, answer: str) -> str:
-    return text.replace("____", answer)
+    """Fill blanks; a paired connector like 因为……所以…… fills two blanks."""
+    parts = [p for p in answer.split("……") if p] if "……" in answer else [answer]
+    if len(parts) > 1 and text.count("____") >= len(parts):
+        for p in parts:
+            text = text.replace("____", p, 1)
+        return text
+    return text.replace("____", answer, 1)
 
 
 def collect() -> set[str]:
@@ -73,19 +79,26 @@ def collect() -> set[str]:
 
                 for line in g.get("passage", []):
                     add(filled_line(line))
+                for w in bank:  # bank buttons speak the bare word
+                    add(w)
                 for q in g.get("questions", []):
-                    opts = q.get("options") or g.get("bank") or []
+                    opts = q.get("options") or bank
+                    for o in opts:  # practice mode speaks the tapped option
+                        add(o)
                     ans = opts[q["answer"] - 1] if opts and q.get("answer") else ""
                     if q.get("text"):
                         if "____" in q["text"]:
                             add(fill(q["text"], ans))
                         else:
                             add(q["text"])
-                            add(ans)
             for it in sec.get("items", []):
                 add(it.get("answer"))
+                for o in it.get("original", []):
+                    add(o)
                 for s in it.get("sentences", []):
                     add(s["zh"])
+                for v in it.get("vocab", []):
+                    add(v["w"])
     return texts
 
 

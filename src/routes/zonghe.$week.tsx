@@ -97,7 +97,15 @@ const TABS: { id: Tab; label: string }[] = [
 
 const NUM = ['①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧']
 
-const fillBlank = (text: string, answer: string) => text.replace('____', answer)
+// A paired connector like 因为……所以…… fills two blanks; otherwise fill the first.
+const answerParts = (text: string, answer: string) => {
+  const parts = answer.includes('……') ? answer.split('……').filter(Boolean) : [answer]
+  const blanks = text.split('____').length - 1
+  return parts.length > 1 && blanks >= parts.length ? parts : [answer]
+}
+
+const fillBlank = (text: string, answer: string) =>
+  answerParts(text, answer).reduce((t, p) => t.replace('____', p), text)
 
 // ---------- page ----------
 
@@ -470,7 +478,7 @@ function QuestionCard({
                 disabled={!practice || picked != null}
                 onClick={() => {
                   setPicked(idx)
-                  speak(hasBlank ? fillBlank(q.text, opt) : opt)
+                  speak(opt)
                 }}
                 className={cn(
                   'min-h-11 rounded-xl border-2 px-3 py-2 text-left text-[15px] leading-6 transition-colors',
@@ -505,14 +513,20 @@ function QuestionCard({
 
 function renderFilled(text: string, answer: string) {
   if (!text.includes('____')) return <span>{text}</span>
-  const [a, b] = text.split('____')
+  const parts = answerParts(text, answer)
+  const segs = text.split('____')
   return (
     <>
-      <span>{a}</span>
-      <span className="mx-0.5 rounded bg-green-100 px-1.5 font-bold text-green-800 underline decoration-2 underline-offset-4">
-        {answer}
-      </span>
-      <span>{b}</span>
+      {segs.map((seg, i) => (
+        <span key={i}>
+          {seg}
+          {i < segs.length - 1 && (
+            <span className="mx-0.5 rounded bg-green-100 px-1.5 font-bold text-green-800 underline decoration-2 underline-offset-4">
+              {parts[i] ?? (i === 0 ? answer : '____')}
+            </span>
+          )}
+        </span>
+      ))}
     </>
   )
 }
