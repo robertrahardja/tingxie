@@ -96,6 +96,7 @@ export const NAV_ITEMS: NavItem[] = [
   // Main tingxie pages
   { href: '/', label: '最新词语' },
   { href: '/school-tingxie', label: '学校听写' },
+  { href: '/zonghe/34', label: '综合练习 34（答案）' },
   { href: '/radicals', label: '部首学习' },
   { href: '/p3-picture-composition', label: '看图作文：生日' },
   { href: '/curriculum', label: '课程词语 P1-P3' },

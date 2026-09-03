@@ -34,6 +34,7 @@ import { Route as CurriculumTestRouteImport } from './routes/curriculum-test'
 import { Route as CurriculumRouteImport } from './routes/curriculum'
 import { Route as Cc1RouteImport } from './routes/cc1'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ZongheWeekRouteImport } from './routes/zonghe.$week'
 
 const VocabularyRoute = VocabularyRouteImport.update({
   id: '/vocabulary',
@@ -161,6 +162,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ZongheWeekRoute = ZongheWeekRouteImport.update({
+  id: '/zonghe/$week',
+  path: '/zonghe/$week',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -188,6 +194,7 @@ export interface FileRoutesByFullPath {
   '/settings': typeof SettingsRoute
   '/shuihu-writing': typeof ShuihuWritingRoute
   '/vocabulary': typeof VocabularyRoute
+  '/zonghe/$week': typeof ZongheWeekRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -215,6 +222,7 @@ export interface FileRoutesByTo {
   '/settings': typeof SettingsRoute
   '/shuihu-writing': typeof ShuihuWritingRoute
   '/vocabulary': typeof VocabularyRoute
+  '/zonghe/$week': typeof ZongheWeekRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -243,6 +251,7 @@ export interface FileRoutesById {
   '/settings': typeof SettingsRoute
   '/shuihu-writing': typeof ShuihuWritingRoute
   '/vocabulary': typeof VocabularyRoute
+  '/zonghe/$week': typeof ZongheWeekRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -272,6 +281,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/shuihu-writing'
     | '/vocabulary'
+    | '/zonghe/$week'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -299,6 +309,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/shuihu-writing'
     | '/vocabulary'
+    | '/zonghe/$week'
   id:
     | '__root__'
     | '/'
@@ -326,6 +337,7 @@ export interface FileRouteTypes {
     | '/settings'
     | '/shuihu-writing'
     | '/vocabulary'
+    | '/zonghe/$week'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -354,6 +366,7 @@ export interface RootRouteChildren {
   SettingsRoute: typeof SettingsRoute
   ShuihuWritingRoute: typeof ShuihuWritingRoute
   VocabularyRoute: typeof VocabularyRoute
+  ZongheWeekRoute: typeof ZongheWeekRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -533,6 +546,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/zonghe/$week': {
+      id: '/zonghe/$week'
+      path: '/zonghe/$week'
+      fullPath: '/zonghe/$week'
+      preLoaderRoute: typeof ZongheWeekRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -562,6 +582,7 @@ const rootRouteChildren: RootRouteChildren = {
   SettingsRoute: SettingsRoute,
   ShuihuWritingRoute: ShuihuWritingRoute,
   VocabularyRoute: VocabularyRoute,
+  ZongheWeekRoute: ZongheWeekRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
