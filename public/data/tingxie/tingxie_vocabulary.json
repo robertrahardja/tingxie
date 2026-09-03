@@ -5775,6 +5775,139 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 95,
+      "words": [
+        {
+          "simplified": "扔垃圾",
+          "traditional": "扔垃圾",
+          "pinyin": "rēng lā jī",
+          "english": "to throw rubbish / to litter",
+          "audio": "audio/扔垃圾.mp3",
+          "important": true
+        },
+        {
+          "simplified": "收拾",
+          "traditional": "收拾",
+          "pinyin": "shōu shi",
+          "english": "to tidy up, to clear away",
+          "audio": "audio/收拾.mp3",
+          "important": true
+        },
+        {
+          "simplified": "爱护",
+          "traditional": "愛護",
+          "pinyin": "ài hù",
+          "english": "to cherish, to take good care of",
+          "audio": "audio/爱护.mp3",
+          "important": true
+        },
+        {
+          "simplified": "伸出手",
+          "traditional": "伸出手",
+          "pinyin": "shēn chū shǒu",
+          "english": "to reach out one's hand",
+          "audio": "audio/伸出手.mp3",
+          "important": true
+        },
+        {
+          "simplified": "漂亮",
+          "traditional": "漂亮",
+          "pinyin": "piào liang",
+          "english": "beautiful, pretty",
+          "audio": "audio/漂亮.mp3",
+          "important": true
+        },
+        {
+          "simplified": "吃惊",
+          "traditional": "吃驚",
+          "pinyin": "chī jīng",
+          "english": "to be startled, to be surprised",
+          "audio": "audio/吃惊.mp3",
+          "important": true
+        },
+        {
+          "simplified": "周末",
+          "traditional": "週末",
+          "pinyin": "zhōu mò",
+          "english": "weekend",
+          "audio": "audio/周末.mp3",
+          "important": true
+        },
+        {
+          "simplified": "保持卫生",
+          "traditional": "保持衛生",
+          "pinyin": "bǎo chí wèi shēng",
+          "english": "to keep clean / maintain hygiene",
+          "audio": "audio/保持卫生.mp3",
+          "important": true
+        },
+        {
+          "simplified": "觉得",
+          "traditional": "覺得",
+          "pinyin": "jué de",
+          "english": "to feel, to think",
+          "audio": "audio/觉得.mp3",
+          "important": true
+        },
+        {
+          "simplified": "决定",
+          "traditional": "決定",
+          "pinyin": "jué dìng",
+          "english": "to decide, decision",
+          "audio": "audio/决定.mp3",
+          "important": true
+        },
+        {
+          "simplified": "浪费",
+          "traditional": "浪費",
+          "pinyin": "làng fèi",
+          "english": "to waste",
+          "audio": "audio/浪费.mp3",
+          "important": true
+        },
+        {
+          "simplified": "不能追上",
+          "traditional": "不能追上",
+          "pinyin": "bù néng zhuī shàng",
+          "english": "cannot catch up with",
+          "audio": "audio/不能追上.mp3",
+          "important": true
+        },
+        {
+          "simplified": "仔细",
+          "traditional": "仔細",
+          "pinyin": "zǐ xì",
+          "english": "careful, attentive",
+          "audio": "audio/仔细.mp3",
+          "important": true
+        },
+        {
+          "simplified": "转身",
+          "traditional": "轉身",
+          "pinyin": "zhuǎn shēn",
+          "english": "to turn around",
+          "audio": "audio/转身.mp3",
+          "important": true
+        },
+        {
+          "simplified": "组屋",
+          "traditional": "組屋",
+          "pinyin": "zǔ wū",
+          "english": "HDB flat (public housing)",
+          "audio": "audio/组屋.mp3",
+          "important": true
+        },
+        {
+          "simplified": "报纸",
+          "traditional": "報紙",
+          "pinyin": "bào zhǐ",
+          "english": "newspaper",
+          "audio": "audio/报纸.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
