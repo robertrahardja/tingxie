@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useAudioPlayer } from '@/hooks/useAudioPlayer'
 import { ttsPath } from '@/lib/tts'
@@ -108,7 +108,7 @@ function ZonghePage() {
   const [error, setError] = useState<string | null>(null)
   const [tab, setTab] = useState<Tab>('answers')
   const [practice, setPractice] = useState(false)
-  const { play } = useAudioPlayer()
+  const { play, stop } = useAudioPlayer()
 
   useEffect(() => {
     let alive = true
@@ -190,7 +190,7 @@ function ZonghePage() {
         />
       )}
       {tab === 'rewrite' && rewrite && <RewriteTab section={rewrite} speak={speak} />}
-      {tab === 'oral' && oral && <OralTab section={oral} speak={speak} />}
+      {tab === 'oral' && oral && <OralTab section={oral} speak={speak} stopOther={stop} />}
       {tab === 'words' && <WordsTab data={words} speak={speak} />}
     </div>
   )
@@ -574,28 +574,74 @@ function RewriteTab({ section, speak }: { section: Section; speak: (t: string) =
 
 // ---------- oral ----------
 
-function OralTab({ section, speak }: { section: Section; speak: (t: string) => void }) {
+function OralTab({
+  section,
+  speak,
+  stopOther,
+}: {
+  section: Section
+  speak: (t: string) => void
+  stopOther: () => void
+}) {
   const items = (section.items ?? []) as OralItem[]
-  const { play, stop } = useAudioPlayer()
   const [playingAll, setPlayingAll] = useState<string | null>(null)
+  // "读全篇" plays sentence after sentence, waiting for each clip to end.
+  const chain = useRef<{ audio: HTMLAudioElement | null; cancelled: boolean } | null>(null)
+
+  const stopAll = useCallback(() => {
+    if (chain.current) {
+      chain.current.cancelled = true
+      chain.current.audio?.pause()
+      chain.current = null
+    }
+    setPlayingAll(null)
+  }, [])
+
+  useEffect(() => stopAll, [stopAll])
+
+  const speakOne = useCallback(
+    (t: string) => {
+      stopAll()
+      speak(t)
+    },
+    [speak, stopAll]
+  )
 
   const playAll = useCallback(
     async (it: OralItem) => {
       if (playingAll === it.title) {
-        stop()
-        setPlayingAll(null)
+        stopAll()
         return
       }
+      stopAll()
+      stopOther()
+      const run = { audio: null as HTMLAudioElement | null, cancelled: false }
+      chain.current = run
       setPlayingAll(it.title)
       for (const s of it.sentences) {
-        const path = await ttsPath(s.zh)
-        const ok = await play(path)
-        if (!ok) break
-        await new Promise((r) => setTimeout(r, 400))
+        if (run.cancelled) break
+        const audio = new Audio(await ttsPath(s.zh))
+        run.audio = audio
+        const finished = new Promise<void>((resolve) => {
+          audio.onended = () => resolve()
+          audio.onerror = () => resolve()
+          audio.onpause = () => resolve()
+        })
+        try {
+          await audio.play()
+          await finished
+        } catch {
+          break
+        }
+        if (run.cancelled) break
+        await new Promise((r) => setTimeout(r, 500))
       }
-      setPlayingAll(null)
+      if (chain.current === run) {
+        chain.current = null
+        setPlayingAll(null)
+      }
     },
-    [play, stop, playingAll]
+    [playingAll, stopAll, stopOther]
   )
 
   return (
@@ -616,7 +662,7 @@ function OralTab({ section, speak }: { section: Section; speak: (t: string) => v
           </div>
           {it.sentences.map((s, i) => (
             <div key={i} className="mb-2 flex items-start gap-2">
-              <SpeakButton text={s.zh} speak={speak} small />
+              <SpeakButton text={s.zh} speak={speakOne} small />
               <div className="flex-1">
                 <p className="text-[17px] leading-8 text-gray-900">{emphasise(s.zh)}</p>
                 <p className="text-xs text-gray-500">{s.en}</p>
@@ -629,7 +675,7 @@ function OralTab({ section, speak }: { section: Section; speak: (t: string) => v
                 <button
                   key={v.w}
                   type="button"
-                  onClick={() => speak(v.w)}
+                  onClick={() => speakOne(v.w)}
                   className="rounded-lg bg-amber-50 px-2 py-1 text-left text-sm active:bg-amber-100"
                 >
                   <span className="font-bold text-gray-900">{v.w}</span>

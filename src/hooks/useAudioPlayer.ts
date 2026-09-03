@@ -84,6 +84,10 @@ export function useAudioPlayer() {
       await audio.play()
       return true
     } catch (error) {
+      // A newer play() interrupting this one is expected, not a failure.
+      if (error instanceof DOMException && error.name === 'AbortError') {
+        return false
+      }
       console.warn(ERRORS.AUDIO_PLAYBACK, error)
       console.log('Failed audio path was:', audioPath)
       return false
