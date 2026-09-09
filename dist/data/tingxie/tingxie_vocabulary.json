@@ -5908,6 +5908,139 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 96,
+      "words": [
+        {
+          "simplified": "一直",
+          "traditional": "一直",
+          "pinyin": "yì zhí",
+          "english": "always, all along; straight ahead",
+          "audio": "audio/一直.mp3",
+          "important": true
+        },
+        {
+          "simplified": "环保袋",
+          "traditional": "環保袋",
+          "pinyin": "huán bǎo dài",
+          "english": "reusable (eco-friendly) shopping bag",
+          "audio": "audio/环保袋.mp3",
+          "important": true
+        },
+        {
+          "simplified": "停车场",
+          "traditional": "停車場",
+          "pinyin": "tíng chē chǎng",
+          "english": "car park",
+          "audio": "audio/停车场.mp3",
+          "important": true
+        },
+        {
+          "simplified": "兴奋",
+          "traditional": "興奮",
+          "pinyin": "xīng fèn",
+          "english": "excited",
+          "audio": "audio/兴奋.mp3",
+          "important": true
+        },
+        {
+          "simplified": "世界",
+          "traditional": "世界",
+          "pinyin": "shì jiè",
+          "english": "world",
+          "audio": "audio/世界.mp3",
+          "important": true
+        },
+        {
+          "simplified": "弯弯",
+          "traditional": "彎彎",
+          "pinyin": "wān wān",
+          "english": "curved, crescent-shaped (e.g. 弯弯的月亮)",
+          "audio": "audio/弯弯.mp3",
+          "important": true
+        },
+        {
+          "simplified": "国旗",
+          "traditional": "國旗",
+          "pinyin": "guó qí",
+          "english": "national flag",
+          "audio": "audio/国旗.mp3",
+          "important": true
+        },
+        {
+          "simplified": "唱国歌",
+          "traditional": "唱國歌",
+          "pinyin": "chàng guó gē",
+          "english": "to sing the national anthem",
+          "audio": "audio/唱国歌.mp3",
+          "important": true
+        },
+        {
+          "simplified": "礼物",
+          "traditional": "禮物",
+          "pinyin": "lǐ wù",
+          "english": "gift, present",
+          "audio": "audio/礼物.mp3",
+          "important": true
+        },
+        {
+          "simplified": "亮晶晶",
+          "traditional": "亮晶晶",
+          "pinyin": "liàng jīng jīng",
+          "english": "sparkling, glittering",
+          "audio": "audio/亮晶晶.mp3",
+          "important": true
+        },
+        {
+          "simplified": "新加坡",
+          "traditional": "新加坡",
+          "pinyin": "xīn jiā pō",
+          "english": "Singapore",
+          "audio": "audio/新加坡.mp3",
+          "important": true
+        },
+        {
+          "simplified": "养着",
+          "traditional": "養著",
+          "pinyin": "yǎng zhe",
+          "english": "keeping, raising (a pet or plant)",
+          "audio": "audio/养着.mp3",
+          "important": true
+        },
+        {
+          "simplified": "尽力",
+          "traditional": "盡力",
+          "pinyin": "jìn lì",
+          "english": "to do one's best, to try one's hardest",
+          "audio": "audio/尽力.mp3",
+          "important": true
+        },
+        {
+          "simplified": "指着",
+          "traditional": "指著",
+          "pinyin": "zhǐ zhe",
+          "english": "pointing at",
+          "audio": "audio/指着.mp3",
+          "important": true
+        },
+        {
+          "simplified": "森林",
+          "traditional": "森林",
+          "pinyin": "sēn lín",
+          "english": "forest",
+          "audio": "audio/森林.mp3",
+          "important": true
+        },
+        {
+          "simplified": "沙滩",
+          "traditional": "沙灘",
+          "pinyin": "shā tān",
+          "english": "sandy beach",
+          "audio": "audio/沙滩.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
