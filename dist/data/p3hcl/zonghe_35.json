@@ -1,0 +1,353 @@
+{
+  "week": 35,
+  "title": "P3HCL 综合练习 35",
+  "dates": "7/9/2026 - 13/9/2026",
+  "source": "HCL Education Centre · 35_09072026_P3HCL.pdf",
+  "student": "耶恩",
+  "note": "本周口试练习《校园》（第8-9页）和复习的四篇口试都在“口试复习”里。听写词语（第10页）在“最新词语”第96组。课后练习（第6-7页）在“课后练习”里，还没做。",
+  "sections": [
+    {
+      "id": "mcq",
+      "kind": "mcq",
+      "title": "一、语文应用",
+      "points": "30题30分",
+      "instruction": "从各题所提供的四个选项中，选出正确的答案。",
+      "groups": [
+        {
+          "questions": [
+            {"n": 1, "text": "哥哥很____，总是能想出很多好主意。", "options": ["懂事", "听话", "聪明", "小心"], "answer": 3, "student": 3,
+             "why": "能想出很多好主意，说明哥哥很“聪明”（clever）。懂事＝sensible，听话＝obedient，小心＝careful，都和“好主意”没关系。",
+             "en": "My brother is very clever. He can always think of many good ideas."},
+            {"n": 2, "text": "小明打破了邻居的花盆，给邻居写了张____认错。", "options": ["便条", "贺卡", "笔记", "信件"], "answer": 1, "student": 1,
+             "why": "“一张便条”（a note）是写几句话的小纸条，用来留言、认错。贺卡是祝贺用的，笔记是上课记的，信件一般说“一封信”。",
+             "en": "Xiaoming broke the neighbour's flower pot, so he wrote the neighbour a note to apologise."},
+            {"n": 3, "text": "____妈妈给妹妹买了手表，妹妹上学再也不迟到了。", "options": ["只要", "如果", "将来", "自从"], "answer": 4, "student": 1,
+             "why": "妈妈已经买了手表（过去的事），从那时起妹妹就不迟到了——用“自从”（since）。“只要／如果”说的是还没发生的条件，后面要配“就”：只要……就……。",
+             "en": "Ever since Mum bought my sister a watch, she has never been late for school again."},
+            {"n": 4, "text": "最近的天气____很大，你出门时最好带一把伞。", "options": ["开始", "变化", "成为", "发生"], "answer": 2, "student": 2,
+             "why": "“天气变化很大”＝the weather changes a lot（一会儿晴一会儿雨）。“变化”在这里是名词。开始／成为／发生都不能说“很大”。",
+             "en": "The weather has been changing a lot recently. You'd better take an umbrella when you go out."},
+            {"n": 5, "text": "那个掉进河里的小孩____地喊救命。", "options": ["总是", "已经", "常常", "不停"], "answer": 4, "student": 4,
+             "why": "掉进河里很危险，会“不停地喊救命”（keep shouting for help）。“总是／常常”是平时常做的事，不是这一次。",
+             "en": "The child who fell into the river kept shouting for help."},
+            {"n": 6, "text": "我家就在学校____，走路几分钟就到了。", "options": ["接近", "靠近", "附近", "远近"], "answer": 3, "student": 3,
+             "why": "“在学校附近”＝near the school。“附近”是地方，可以放在“在……”后面。“接近／靠近”是动词（走近）。",
+             "en": "My home is near the school. It only takes a few minutes to walk there."},
+            {"n": 7, "text": "小狗看见主人回家，就____地跑过来。", "options": ["难过", "兴奋", "生气", "害怕"], "answer": 2, "student": 1,
+             "why": "小狗看见主人回家很开心，所以是“兴奋地跑过来”（run over excitedly）。“难过”是 sad——小狗见到主人不会难过！",
+             "en": "When the puppy saw its owner come home, it ran over excitedly."},
+            {"n": 8, "text": "孩子们都____在父母的关爱下，快乐地成长。", "options": ["不要", "需要", "正要", "重要"], "answer": 2, "student": 2,
+             "why": "孩子“需要”父母的关爱（need parents' love）。“重要”是形容词，不能接“在……下”。",
+             "en": "Children all need to grow up happily under their parents' loving care."},
+            {"n": 9, "text": "妈妈说要带我们去动物园，我____地跳了起来。", "options": ["兴奋", "欢乐", "好奇", "着急"], "answer": 1, "student": 2,
+             "why": "听到好消息，高兴得跳起来＝“兴奋地跳了起来”（第7题的“兴奋”！）。“欢乐”多用来形容气氛（欢乐的节日），不说“欢乐地跳起来”。“好奇”是 curious。",
+             "en": "Mum said she would take us to the zoo, and I jumped up excitedly."},
+            {"n": 10, "text": "我们不应该在墙上乱画，这会____环境。", "options": ["爱护", "照顾", "破坏", "浪费"], "answer": 3, "student": 3,
+             "why": "乱画是坏事，会“破坏环境”（damage the environment）。“爱护环境”是相反的意思。",
+             "en": "We shouldn't scribble on the walls. That damages the environment."},
+            {"n": 11, "text": "____爷爷老了，但是他的力气还很大。", "options": ["虽然", "因为", "如果", "只要"], "answer": 1, "student": 1,
+             "why": "后面有“但是”，前面就要配“虽然”。虽然……但是……＝although…。",
+             "en": "Although Grandpa is old, he is still very strong."},
+            {"n": 12, "text": "哥哥在我生日那天____了一张明信片送给我。", "options": ["利用", "翻到", "结出", "设计"], "answer": 4, "student": 4,
+             "why": "“设计了一张明信片”＝designed a postcard，自己画、自己做。“结出”是植物结果子，“翻到”是翻书。",
+             "en": "On my birthday, my brother designed a postcard and gave it to me."},
+            {"n": 13, "text": "绿豆____水才能长出健康的小芽。", "options": ["保护", "需要", "请求", "希望"], "answer": 2, "student": 2,
+             "why": "绿豆“需要水”（needs water）才能发芽。“请求／希望”是人做的动作。",
+             "en": "Green beans need water before they can grow healthy sprouts."},
+            {"n": 14, "text": "爸爸妈妈____我长大，我爱他们。", "options": ["陪伴", "知道", "认识", "发现"], "answer": 1, "student": 1,
+             "why": "“陪伴我长大”＝be with me as I grow up，一直在我身边。“知道／认识／发现”后面不能接“我长大”。",
+             "en": "Mum and Dad have been by my side as I grew up. I love them."},
+            {"n": 15, "text": "叔叔____新加坡到别的国家工作。", "options": ["留下", "转身", "离开", "迟到"], "answer": 3, "student": 4,
+             "why": "去别的国家工作，就要“离开新加坡”（leave Singapore）。“迟到”是 late，后面不能接地方。“留下”是留在这里，意思相反。",
+             "en": "My uncle left Singapore to work in another country."},
+            {"n": 16, "text": "只要妹妹努力，就能____当老师的愿望。", "options": ["相信", "争取", "实现", "习惯"], "answer": 3, "student": 3,
+             "why": "“实现愿望”＝make a wish come true，是固定搭配（第34周第8题也考过）。",
+             "en": "As long as my sister works hard, she can realise her wish of becoming a teacher."},
+            {"n": 17, "text": "想要在考试中得到好分数，我们还需要更____。", "options": ["努力", "用力", "出力", "尽力"], "answer": 1, "student": 1,
+             "why": "读书要“更努力”（work harder）。“用力／出力”是身体用力气（用力推）。“尽力”＝try one's best，前面不能加“更”。",
+             "en": "To get good marks in the exam, we still need to work harder."},
+            {"n": 18, "text": "虽然这几道数学题很难，____我都会做。", "options": ["果然", "但是", "所以", "结果"], "answer": 2, "student": 2,
+             "why": "前面有“虽然”，后面配“但是”。题目难（坏）↔ 我都会做（好），意思相反。",
+             "en": "Although these maths questions are difficult, I can do them all."},
+            {"n": 19, "text": "我和爸爸喜欢____公园里的小路散步。", "options": ["跟着", "沿着", "接着", "追着"], "answer": 2, "student": 4,
+             "why": "“沿着小路散步”＝walk along the path。“沿着”后面接路、河、海边（第34周第26题也有“沿着”）。“追着”是 chase，“跟着”是 follow（跟着人）。",
+             "en": "Dad and I like to take walks along the little path in the park."},
+            {"n": 20, "text": "周末，全家大扫除，我负责____厕所。", "options": ["保护", "搬动", "整理", "清洗"], "answer": 4, "student": 4,
+             "why": "厕所要“清洗”（wash / scrub）。“整理”是把东西弄整齐（整理房间）。第34周第23题：洗衣服也是“清洗”。",
+             "en": "At the weekend, the whole family does spring cleaning. I'm in charge of washing the toilet."},
+            {"n": 21, "text": "弟弟喝太多汽水，____生病了。", "options": ["以后", "将来", "结果", "一时"], "answer": 3, "student": 3,
+             "why": "喝太多汽水（原因）→ 生病（结果），用“结果”（as a result）。“以后／将来”是时间。",
+             "en": "My brother drank too much soft drink, and as a result he fell ill."},
+            {"n": 22, "text": "我上学快迟到了，爸爸要我____上车。", "options": ["一定", "必须", "赶快", "刚好"], "answer": 3, "student": 3,
+             "why": "快迟到了，要“赶快上车”（hurry up and get in the car）。“一定／必须”＝must，这里说的是要快一点。",
+             "en": "I was about to be late for school, so Dad told me to hurry up and get in the car."},
+            {"n": 23, "text": "那只猴子表演溜滑轮的样子很____。", "options": ["生动", "精彩", "特别", "有趣"], "answer": 4, "student": 4,
+             "why": "猴子溜滑轮的“样子”很好笑、很好玩＝“有趣”（funny）。“精彩”是形容表演本身（表演很精彩），不形容“样子”。",
+             "en": "The monkey looked really funny when it performed on roller skates."},
+            {"n": 24, "text": "弟弟被雨淋湿了，他冷得全身____。", "options": ["发抖", "舞动", "摇摆", "停止"], "answer": 1, "student": 1,
+             "why": "冷得全身“发抖”（shiver with cold）。第34周第11题：吓得直发抖——害怕和冷都会发抖。",
+             "en": "My brother got drenched in the rain. He was so cold that his whole body shivered."},
+            {"n": 25, "text": "表姐想____利用，把别人不要的瓶子做成花瓶。", "options": ["礼物", "动物", "废物", "宠物"], "answer": 3, "student": 3,
+             "why": "“废物利用”＝make use of waste（识读字词第4号）。别人不要的瓶子是“废物”。",
+             "en": "My cousin wants to recycle waste by turning bottles other people don't want into vases."},
+            {"n": 26, "text": "你____在三点以前到图书馆报到，不然就来不及参加比赛了。", "options": ["立刻", "一定", "没有", "必须"], "answer": 4, "student": 4,
+             "why": "“必须”＝must（一定要做）。“一定”要说“一定要”才通顺。“立刻”是 immediately，可是句子说的是“三点以前”。",
+             "en": "You must report at the library before three o'clock, or you'll be too late to join the competition."},
+            {"n": 27, "text": "小华忘了学听写，____一个字都不会写。", "options": ["结果", "可是", "或者", "只有"], "answer": 1, "student": 1,
+             "why": "忘了学（原因）→ 一个字都不会写（结果），用“结果”。“可是”是转折（but），前后意思要相反。",
+             "en": "Xiaohua forgot to study for the spelling test. As a result, he couldn't write a single word."},
+            {"n": 28, "text": "老师____大家同学之间应该互相学习、互相帮忙。", "options": ["答应", "告诉", "决定", "请求"], "answer": 2, "student": 2,
+             "why": "老师“告诉大家……”（tell everyone that…），后面是老师说的话。“答应”是 agree，“请求”是 ask politely。",
+             "en": "The teacher told everyone that classmates should learn from and help one another."},
+            {"n": 29, "text": "妈妈拿了水果后，就____给老板。", "options": ["赔钱", "借钱", "收钱", "付钱"], "answer": 4, "student": 4,
+             "why": "买东西要“付钱给老板”（pay the shopkeeper）。“收钱”是老板收，“赔钱”是弄坏东西要赔。",
+             "en": "After taking the fruit, Mum paid the shopkeeper."},
+            {"n": 30, "text": "只要你认错，大家就会____你。", "options": ["原谅", "关心", "忘记", "生气"], "answer": 1, "student": 1,
+             "why": "认错以后，大家就会“原谅你”（forgive you）。第34周第1题的选项里也有“原谅”。",
+             "en": "As long as you admit your mistake, everyone will forgive you."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "open",
+      "kind": "open",
+      "title": "二、阅读理解",
+      "points": "3题7分",
+      "instruction": "根据短文的内容和上下文的意思，回答下列问题。答案都在短文里，找到那一段，用完整的句子写出来。",
+      "groups": [
+        {
+          "passage": [
+            "上个星期天，乐乐和妈妈一起搭巴士到市场去买东西。出门前，妈妈叫乐乐不要乱跑，市场那儿人太多，乐乐可能会走失。乐乐听了，点了点头。",
+            "等了一会儿，她们才搭上了巴士。找到座位后，乐乐就乖乖地坐下。过了几个站，乐乐看到一位老爷爷满头大汗，慢慢地走上巴士。老爷爷的手上拿了很多东西。她担心老爷爷会跌倒，便上前去扶他。",
+            "老爷爷坐下后，乐乐连忙从背包里拿了一张纸巾给他，说：“老爷爷，这张纸巾给您抹汗。”老爷爷接过纸巾，笑着说：“谢谢你啊，小妹妹。”乐乐说：“不客气。”",
+            "妈妈看见乐乐帮助老爷爷，便笑着说：“你真是我的好宝宝，也是个乐于助人的好孩子。”乐乐听了，心里乐开了花。"
+          ],
+          "passageEn": "Last Sunday, Lele and her mum took the bus to the market. Before leaving, Mum told Lele not to run about, because the market was crowded and she might get lost. On the bus, Lele saw an old man, dripping with sweat, slowly getting on with lots of things in his hands. Worried he might fall, she went to help him to a seat, then gave him a tissue to wipe his sweat. Mum praised her as a helpful child, and Lele was overjoyed.",
+          "questions": [
+            {"n": 31, "text": "为什么妈妈叫乐乐不要乱跑？", "points": 2, "answer": 1, "student": 1,
+             "model": "因为市场那儿人太多，乐乐可能会走失，所以妈妈叫乐乐不要乱跑。",
+             "written": "因为市场那儿人太多，妈妈担心乐乐可能会走失，所以妈妈叫乐乐不要乱跑。",
+             "why": "答案在第1段：“妈妈叫乐乐不要乱跑，市场那儿人太多，乐乐可能会走失。”问“为什么”，就用“因为……所以……”把原因写出来。你写的答案很完整！",
+             "en": "Because there were too many people at the market and Lele might get lost, Mum told her not to run about."},
+            {"n": 32, "text": "搭巴士的时候，乐乐看见了什么？", "points": 2, "answer": 1, "student": 1,
+             "model": "乐乐看见一位老爷爷满头大汗，慢慢地走上巴士，手上还拿了很多东西。",
+             "written": "搭巴士的时候，乐乐看见了一位老爷爷满头大汗，慢慢地走上巴士，他的手上拿了很多东西。",
+             "why": "答案在第2段。问“看见了什么”，要把看见的人和他的样子都写出来：老爷爷、满头大汗、慢慢走上巴士、手上拿了很多东西。",
+             "en": "On the bus, Lele saw an old man, dripping with sweat, slowly getting on the bus with lots of things in his hands."},
+            {"n": 33, "text": "乐乐是个怎样的孩子？为什么？", "points": 3, "answer": 1, "student": 1,
+             "model": "乐乐是个乐于助人的好孩子。因为她看到老爷爷满头大汗、手上拿了很多东西，担心老爷爷会跌倒，便上前去扶他，还拿纸巾给老爷爷抹汗。",
+             "written": "A) 乐乐是一个乐于助人的好孩子。B) 因为她担心老爷爷会跌倒，便上前去扶他。老爷爷坐下后，她连忙从背包里拿了一张纸巾给老爷爷抹汗。",
+             "why": "这题有两个部分（3分）：①怎样的孩子——第4段妈妈说她是“乐于助人的好孩子”；②为什么——第2、3段她做的两件事：扶老爷爷、给纸巾抹汗。两部分都写了才拿满分，你都写到了。",
+             "en": "Lele is a helpful child, because she helped the old man to his seat and gave him a tissue to wipe his sweat."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complete",
+      "kind": "complete",
+      "title": "三、完成句子",
+      "points": "5题5分",
+      "instruction": "从表中选出适当的短句。有一句用不到。",
+      "groups": [
+        {
+          "bank": ["小偷爬进窗口的时候", "没想到今天却没怎么动筷子", "以后谁还敢相信你", "虽然外面还下着大雨", "那个叔叔在公共场所抽烟", "一个天气晴朗的下午"],
+          "questions": [
+            {"n": 34, "text": "____，屋主正好回来了。", "answer": 1, "student": 1,
+             "why": "“……的时候，屋主正好回来了”——小偷正在爬窗口，屋主刚好回来。“正好”＝just at that moment。",
+             "en": "Just as the thief was climbing in through the window, the owner of the house came back."},
+            {"n": 35, "text": "你一次又一次地说假话，____？", "answer": 3, "student": 3,
+             "why": "句尾是“？”，要找问句：“以后谁还敢相信你？”一直说假话，别人就不敢相信你了。",
+             "en": "You lie again and again. Who will dare to believe you in future?"},
+            {"n": 36, "text": "____，真是太没有公德心了！", "answer": 5, "student": 5,
+             "why": "“没有公德心”的行为：在公共场所抽烟（口试常考！）。",
+             "en": "That man is smoking in a public place. He really has no civic-mindedness!"},
+            {"n": 37, "text": "小胖一向很能吃，____。", "answer": 2, "student": 2,
+             "why": "“一向很能吃”（平时吃很多）↔“今天却没怎么动筷子”（今天几乎没吃）。“却”表示和平时不一样。",
+             "en": "Fatty can usually eat a lot, but unexpectedly he hardly touched his food today."},
+            {"n": 38, "text": "____，但是他还是坚持来上课。", "answer": 4, "student": 4,
+             "why": "后面有“但是”，前面找“虽然……”。下大雨还是来上课＝坚持。",
+             "en": "Although it was still raining heavily outside, he still insisted on coming to class."}
+          ],
+          "unused": "一个天气晴朗的下午"
+        }
+      ]
+    },
+    {
+      "id": "rewrite",
+      "kind": "rewrite",
+      "title": "课后练习 一、仿写句子和扩写句子",
+      "points": "5题10分",
+      "instruction": "根据括号里的句式，把句子改写或合并。这是本周的课后作业（第6页），先自己写，再看答案。",
+      "items": [
+        {"n": 1, "original": ["小明看到大黑狗。", "小明吓得哭了。"], "pattern": "一……就……",
+         "answer": "小明一看到大黑狗，就吓得哭了。",
+         "why": "“一……就……”＝as soon as…：第一件事一发生，第二件事马上跟着发生。“一”放在动词“看到”前面，“就”放在第二句动词前面；第二句的“小明”去掉。",
+         "en": "As soon as Xiaoming saw the big black dog, he burst into tears with fright."},
+        {"n": 2, "original": ["姐姐多看书。", "姐姐的作文一定会写得好。"], "pattern": "只要……就……",
+         "answer": "只要姐姐多看书，她的作文就一定会写得好。",
+         "why": "“只要……就……”＝as long as…：前面是条件（多看书），后面是结果（作文写得好）。“就”放在“一定”前面；第二句的“姐姐”改成“她”。",
+         "en": "As long as my sister reads more, her compositions will surely be well written."},
+        {"n": 3, "original": ["小华被老师骂了一顿后，他不敢不做功课了。"], "pattern": "自从",
+         "answer": "自从小华被老师骂了一顿后，他就不敢不做功课了。",
+         "why": "“自从……后”＝since (that time)。“自从”放在句子最前面，后半句加“就”（和第34周第3题一样）。“不敢不做”＝一定做。",
+         "en": "Ever since Xiaohua was scolded by the teacher, he hasn't dared to skip his homework."},
+        {"n": 4, "original": ["爸爸对弟弟说：“早点睡觉。”"], "pattern": "……叫……",
+         "answer": "爸爸叫弟弟早点睡觉。",
+         "why": "把“对……说：‘……’”改成“叫……（做什么）”，冒号和引号都去掉。“叫”＝tell someone to do something。",
+         "en": "Dad told my brother to go to bed early."},
+        {"n": 5, "original": ["奶奶对妹妹说：“收拾好书包就上床睡觉。”"], "pattern": "……叫……",
+         "answer": "奶奶叫妹妹收拾好书包就上床睡觉。",
+         "why": "和第4题一样：奶奶叫妹妹＋奶奶说的话（去掉冒号和引号）。",
+         "en": "Grandma told my sister to go to bed once she had packed her school bag."}
+      ]
+    },
+    {
+      "id": "homework-cloze",
+      "kind": "cloze",
+      "tab": "rewrite",
+      "title": "课后练习 二、短文填空",
+      "points": "5题5分",
+      "instruction": "从所提供的词语中，选出短文中所缺的词语（第7页）。讲义里第一个空印成了 Q49，其实是 Q6。先自己填，再点“显示答案”。",
+      "groups": [
+        {
+          "bank": ["吃惊", "认识", "结果", "立刻", "仍然", "附近", "摔倒", "得意"],
+          "passage": [
+            "小文和小华是好朋友。一天，小文和小华一起到【6】的公园游玩。这时，小文看到一棵大树，就问小华：“你会爬树吗？”小华【7】回答道：“当然会啦！”“那我们来比一比看谁爬得高！”小文话一说完，两人就开始拼命地往上爬。",
+            "没过多久，小文就爬到了树顶。小华看到了，非常【8】，没想到小文动作那么快。小华也没有停下来，【9】往上爬。",
+            "突然，小文一不小心，从树上跌了下来，【10】受伤了。小文痛得大哭了起来，小华看见了，马上爬下来扶起小文。"
+          ],
+          "passageEn": "Xiaowen and Xiaohua are good friends. One day they went to the nearby park. Xiaowen asked whether Xiaohua could climb trees; Xiaohua replied at once, “Of course!” and they raced up a big tree. Xiaowen reached the top quickly, which surprised Xiaohua, who still kept climbing. Suddenly Xiaowen slipped and fell, and as a result got hurt. Xiaohua climbed down at once to help him up.",
+          "questions": [
+            {"n": 6, "text": "小文和小华一起到____的公园游玩。", "answer": 6, "student": null,
+             "why": "去“附近的公园”＝the nearby park。“附近”放在“的”前面，说是哪里的公园。",
+             "en": "Xiaowen and Xiaohua went to play in the nearby park."},
+            {"n": 7, "text": "小华____回答道：“当然会啦！”", "answer": 4, "alt": 8, "student": null,
+             "why": "小华马上回答＝“立刻回答道”（replied at once）。“得意”（pleased with oneself）意思也说得通，不过一般要说“得意地回答”。",
+             "en": "Xiaohua replied at once: “Of course I can!”"},
+            {"n": 8, "text": "小华看到了，非常____，没想到小文动作那么快。", "answer": 1, "student": null,
+             "why": "“非常吃惊”＝very surprised；后面的“没想到”就是吃惊的原因。",
+             "en": "Xiaohua was very surprised. He didn't expect Xiaowen to be so fast."},
+            {"n": 9, "text": "小华也没有停下来，____往上爬。", "answer": 5, "student": null,
+             "why": "没有停下来＝“仍然往上爬”（still kept climbing）。仍然＝still。",
+             "en": "Xiaohua didn't stop either. He still kept climbing up."},
+            {"n": 10, "text": "从树上跌了下来，____受伤了。", "answer": 3, "student": null,
+             "why": "跌下来（原因）→ 受伤（结果）：“结果受伤了”。和课堂练习第21、27题一样！",
+             "en": "He fell from the tree and, as a result, got hurt."}
+          ],
+          "unused": "认识、摔倒、得意（或立刻）"
+        }
+      ]
+    },
+    {
+      "id": "oral",
+      "kind": "oral",
+      "title": "口试：本周《校园》＋复习四篇（熟读五次）",
+      "instruction": "作业三：朗读第8-9页《校园》图片4、图片5和总结。作业四：复习之前学过的四篇口试，每篇读五次。看法感受用 F（感受）-O（看法）-R（原因）-IF（如果）四步。",
+      "items": [
+        {"title": "校园 · 图片4",
+         "sentences": [
+           {"zh": "在图片中间，我看到有一位绑着马尾的女生跪在池塘边，把手伸进池塘想捉鱼。", "en": "In the middle of the picture, I see a girl with a ponytail kneeling by the pond, putting her hand into the water to catch fish."},
+           {"zh": "旁边有一名戴着眼镜的男生看见了，十分惊讶，连忙上前阻止她。", "en": "A boy wearing glasses next to her sees this. He is very surprised and hurries over to stop her."},
+           {"zh": "看了这一幕，我感到很担心。", "en": "(F 感受) Seeing this, I feel very worried."},
+           {"zh": "我认为女生这样做是很危险的。", "en": "(O 看法) I think what the girl is doing is very dangerous."},
+           {"zh": "因为女生有可能会不小心掉进池塘里，后果将不堪设想。", "en": "(R 原因) Because she might accidentally fall into the pond, and the consequences would be unthinkable."},
+           {"zh": "如果当时我在场的话，我会立刻上前去阻止她。", "en": "(IF 如果) If I had been there, I would have gone up at once to stop her."}
+         ],
+         "vocab": [
+           {"w": "绑着马尾", "py": "bǎng zhe mǎ wěi", "en": "with a ponytail"},
+           {"w": "跪", "py": "guì", "en": "to kneel"},
+           {"w": "池塘", "py": "chí táng", "en": "pond"},
+           {"w": "惊讶", "py": "jīng yà", "en": "surprised"},
+           {"w": "阻止", "py": "zǔ zhǐ", "en": "to stop (someone)"},
+           {"w": "危险", "py": "wēi xiǎn", "en": "dangerous"},
+           {"w": "后果不堪设想", "py": "hòu guǒ bù kān shè xiǎng", "en": "the consequences would be unthinkable"}
+         ]},
+        {"title": "校园 · 图片5",
+         "sentences": [
+           {"zh": "在图片右下角，我看到在树荫下，有一群同学正在观看两位同学下国际象棋。", "en": "In the bottom right corner, I see a group of pupils in the shade of a tree watching two classmates play chess."},
+           {"zh": "这两位同学的棋艺看起来不分上下。", "en": "The two players look equally matched."},
+           {"zh": "在一旁围观的同学们也看得津津有味，都为他们感到紧张。", "en": "The pupils watching are absorbed in the game and feel nervous for them."},
+           {"zh": "看了这一幕，我感到很开心。", "en": "(F 感受) Seeing this, I feel very happy."},
+           {"zh": "我认为除了学习之外，课外活动对学生来说也是十分必要的。", "en": "(O 看法) I think that besides studying, co-curricular activities are also very necessary for students."},
+           {"zh": "因为是一种很有益的活动，可以锻炼我们的思维能力，提高专注力。", "en": "(R 原因) Because it is a very beneficial activity that trains our thinking and improves concentration."},
+           {"zh": "如果是我，我也会积极参加各类课外活动。", "en": "(IF 如果) If it were me, I would also actively take part in all kinds of co-curricular activities."}
+         ],
+         "vocab": [
+           {"w": "树荫", "py": "shù yīn", "en": "shade of a tree"},
+           {"w": "国际象棋", "py": "guó jì xiàng qí", "en": "chess"},
+           {"w": "棋艺", "py": "qí yì", "en": "chess skill"},
+           {"w": "不分上下", "py": "bù fēn shàng xià", "en": "equally matched"},
+           {"w": "围观", "py": "wéi guān", "en": "to stand around watching"},
+           {"w": "津津有味", "py": "jīn jīn yǒu wèi", "en": "with great interest"},
+           {"w": "锻炼", "py": "duàn liàn", "en": "to train, to exercise"},
+           {"w": "思维能力", "py": "sī wéi néng lì", "en": "thinking ability"},
+           {"w": "专注力", "py": "zhuān zhù lì", "en": "concentration"},
+           {"w": "积极", "py": "jī jí", "en": "actively"}
+         ]},
+        {"title": "校园 · 总结",
+         "sentences": [
+           {"zh": "总之，我觉得在校园时，我们应该注意自己的言行举止，做一个有公德心、有爱心的好学生，这样我们的校园生活才会更加美好。", "en": "In short, I think that at school we should mind our words and behaviour and be good students who are civic-minded and caring, so that our school life will be even better."}
+         ],
+         "vocab": [
+           {"w": "总之", "py": "zǒng zhī", "en": "in short"},
+           {"w": "言行举止", "py": "yán xíng jǔ zhǐ", "en": "words and behaviour"},
+           {"w": "公德心", "py": "gōng dé xīn", "en": "civic-mindedness"},
+           {"w": "美好", "py": "měi hǎo", "en": "wonderful"}
+         ]},
+        {"title": "霸占座位",
+         "sentences": [
+           {"zh": "我认为霸占座位是一种自私的行为。", "en": "I think hogging seats is a selfish behaviour."},
+           {"zh": "因为他不应该只想到自己，而不考虑别人的感受。", "en": "Because he should not think only of himself without considering other people's feelings."}
+         ],
+         "vocab": [
+           {"w": "霸占", "py": "bà zhàn", "en": "to hog, to occupy"},
+           {"w": "座位", "py": "zuò wèi", "en": "seat"},
+           {"w": "自私", "py": "zì sī", "en": "selfish"},
+           {"w": "考虑", "py": "kǎo lǜ", "en": "to consider"},
+           {"w": "感受", "py": "gǎn shòu", "en": "feelings"}
+         ]},
+        {"title": "大声讲电话",
+         "sentences": [
+           {"zh": "我认为在公共场所大声讲电话是一种没有公德心的行为。", "en": "I think talking loudly on the phone in a public place shows no civic-mindedness."},
+           {"zh": "因为在公共场所使用手机应该小声一点，不要影响别人。", "en": "Because when using a phone in public we should keep our voice down and not disturb others."}
+         ],
+         "vocab": [
+           {"w": "公共场所", "py": "gōng gòng chǎng suǒ", "en": "public place"},
+           {"w": "公德心", "py": "gōng dé xīn", "en": "civic-mindedness"},
+           {"w": "使用", "py": "shǐ yòng", "en": "to use"},
+           {"w": "影响", "py": "yǐng xiǎng", "en": "to affect, to disturb"}
+         ]},
+        {"title": "在鞋店里吃东西",
+         "sentences": [
+           {"zh": "我认为在鞋店里吃东西是一种没有公德心的行为。", "en": "I think eating in a shoe shop shows no civic-mindedness."},
+           {"zh": "因为鞋店是公共场所，他应该遵守公共规则，不应该在鞋店里吃东西，以免冰淇淋掉在地上弄脏地面，引来蚊虫，破坏鞋店的环境卫生。", "en": "Because a shoe shop is a public place, he should follow the rules and not eat there, so that ice cream does not drop on the floor, dirty it, attract insects and spoil the shop's hygiene."}
+         ],
+         "vocab": [
+           {"w": "遵守", "py": "zūn shǒu", "en": "to obey, to follow"},
+           {"w": "公共规则", "py": "gōng gòng guī zé", "en": "public rules"},
+           {"w": "以免", "py": "yǐ miǎn", "en": "so as to avoid"},
+           {"w": "冰淇淋", "py": "bīng qí lín", "en": "ice cream"},
+           {"w": "弄脏", "py": "nòng zāng", "en": "to dirty"},
+           {"w": "引来蚊虫", "py": "yǐn lái wén chóng", "en": "attract mosquitoes and insects"},
+           {"w": "环境卫生", "py": "huán jìng wèi shēng", "en": "environmental hygiene"}
+         ]},
+        {"title": "乱涂乱画",
+         "sentences": [
+           {"zh": "我认为在公共场所乱涂乱画是一种没有公德心的行为。", "en": "I think scribbling in public places shows no civic-mindedness."},
+           {"zh": "因为墙壁是公物，他们不应该为了一时的好玩而在上面乱涂乱画，如果每个人都这样做，那么我们就不会有干净整洁的环境了，也会增加清洁工人的负担。", "en": "Because the walls are public property, they should not scribble on them for a moment's fun. If everyone did that, we would no longer have a clean and tidy environment, and it would add to the cleaners' burden."}
+         ],
+         "vocab": [
+           {"w": "乱涂乱画", "py": "luàn tú luàn huà", "en": "to scribble and doodle"},
+           {"w": "墙壁", "py": "qiáng bì", "en": "wall"},
+           {"w": "公物", "py": "gōng wù", "en": "public property"},
+           {"w": "一时的好玩", "py": "yī shí de hǎo wán", "en": "a moment's fun"},
+           {"w": "整洁", "py": "zhěng jié", "en": "neat and tidy"},
+           {"w": "增加", "py": "zēng jiā", "en": "to increase"},
+           {"w": "负担", "py": "fù dān", "en": "burden"}
+         ]}
+      ]
+    }
+  ]
+}

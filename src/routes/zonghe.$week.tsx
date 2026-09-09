@@ -20,6 +20,11 @@ interface Question {
   alt?: number
   why: string
   en: string
+  // kind "open" (written answers): answer is always 1; student 1 = her answer
+  // was accepted, 2 = needs correction, null = blank.
+  model?: string
+  written?: string | null
+  points?: number
 }
 
 interface Group {
@@ -48,13 +53,17 @@ interface OralItem {
 
 interface Section {
   id: string
-  kind: 'mcq' | 'match' | 'cloze' | 'complete' | 'reading' | 'rewrite' | 'oral'
+  kind: 'mcq' | 'match' | 'cloze' | 'complete' | 'reading' | 'open' | 'rewrite' | 'oral'
   title: string
   points?: string
   instruction?: string
   groups?: Group[]
   items?: (RewriteItem | OralItem)[]
+  // "rewrite" puts a question section (e.g. a homework cloze) under the 课后练习 tab.
+  tab?: 'answers' | 'rewrite'
 }
+
+const ANSWER_KINDS: Section['kind'][] = ['mcq', 'match', 'cloze', 'complete', 'reading', 'open']
 
 interface ZongheData {
   week: number
@@ -161,10 +170,11 @@ function ZonghePage() {
     )
   }
 
-  const answerSections = data.sections.filter((s) =>
-    ['mcq', 'match', 'cloze', 'complete', 'reading'].includes(s.kind)
+  const answerSections = data.sections.filter(
+    (s) => ANSWER_KINDS.includes(s.kind) && s.tab !== 'rewrite'
   )
   const rewrite = data.sections.find((s) => s.kind === 'rewrite')
+  const homework = data.sections.filter((s) => ANSWER_KINDS.includes(s.kind) && s.tab === 'rewrite')
   const oral = data.sections.find((s) => s.kind === 'oral')
 
   return (
@@ -197,9 +207,11 @@ function ZonghePage() {
           note={data.note}
         />
       )}
-      {tab === 'rewrite' && rewrite && <RewriteTab section={rewrite} speak={speak} />}
+      {tab === 'rewrite' && rewrite && (
+        <RewriteTab section={rewrite} homework={homework} speak={speak} />
+      )}
       {tab === 'oral' && oral && <OralTab section={oral} speak={speak} stopOther={stop} />}
-      {tab === 'words' && <WordsTab data={words} speak={speak} />}
+      {tab === 'words' && <WordsTab data={words} week={data.week} speak={speak} />}
     </div>
   )
 }
@@ -382,10 +394,85 @@ function GroupView({
         </Card>
       )}
 
-      {group.questions.map((q) => (
-        <QuestionCard key={q.n} q={q} bank={bank} kind={section.kind} practice={practice} speak={speak} />
-      ))}
+      {group.questions.map((q) =>
+        section.kind === 'open' ? (
+          <OpenCard key={q.n} q={q} practice={practice} speak={speak} />
+        ) : (
+          <QuestionCard key={q.n} q={q} bank={bank} kind={section.kind} practice={practice} speak={speak} />
+        )
+      )}
     </div>
+  )
+}
+
+// A written-answer question (阅读理解 问答): shows what she wrote, then the model answer.
+function OpenCard({ q, practice, speak }: { q: Question; practice: boolean; speak: (t: string) => void }) {
+  const [shown, setShown] = useState(false)
+  useEffect(() => setShown(false), [practice])
+  const reveal = !practice || shown
+  const ok = q.student === 1
+  return (
+    <Card>
+      <div className="flex items-start gap-2">
+        <span className="mt-0.5 shrink-0 rounded-full bg-indigo-600 px-2 py-0.5 text-xs font-bold text-white">
+          Q{q.n}
+        </span>
+        <div className="flex-1">
+          <p className="text-[17px] leading-8 text-gray-900">
+            {q.text}
+            {q.points != null && <span className="ml-1 text-xs text-gray-400">（{q.points}分）</span>}
+          </p>
+          {!practice && q.student != null && (
+            <div className="mt-2 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-2 text-[15px] leading-7 text-gray-800">
+              <div className="mb-1 flex flex-wrap items-center gap-2 text-sm">
+                <span className="font-bold text-gray-500">你写的：</span>
+                <span
+                  className={cn(
+                    'rounded-full px-2 py-0.5 font-bold',
+                    ok ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-600'
+                  )}
+                >
+                  {ok ? '✓ 答对了' : '✗ 要改正'}
+                </span>
+                {q.unsure && <span className="text-xs text-gray-500">（{q.unsure}）</span>}
+              </div>
+              {q.written && <p>{q.written}</p>}
+            </div>
+          )}
+          {!practice && q.student == null && (
+            <span className="mt-1 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-sm font-bold text-amber-700">
+              没做
+            </span>
+          )}
+        </div>
+        <SpeakButton text={q.text} speak={speak} />
+      </div>
+
+      {practice && !shown && (
+        <button
+          type="button"
+          className="mt-3 min-h-11 w-full rounded-xl border-2 border-indigo-600 py-2 text-sm font-bold text-indigo-700 active:bg-indigo-50"
+          onClick={() => setShown(true)}
+        >
+          看答案
+        </button>
+      )}
+
+      {reveal && q.model && (
+        <div className="mt-3">
+          <div className="mb-1 text-xs font-bold text-green-700">参考答案</div>
+          <div className="flex items-start gap-2">
+            <p className="flex-1 text-[17px] font-bold leading-8 text-green-800">{q.model}</p>
+            <SpeakButton text={q.model} speak={speak} />
+          </div>
+          <div className="mt-2 rounded-xl bg-indigo-50 p-3 text-sm leading-6 text-gray-800">
+            <div className="mb-1 font-bold text-indigo-700">怎么找答案？</div>
+            <p>{q.why}</p>
+            <p className="mt-1 text-xs text-gray-500">{q.en}</p>
+          </div>
+        </div>
+      )}
+    </Card>
   )
 }
 
@@ -533,9 +620,19 @@ function renderFilled(text: string, answer: string) {
 
 // ---------- rewrite ----------
 
-function RewriteTab({ section, speak }: { section: Section; speak: (t: string) => void }) {
+function RewriteTab({
+  section,
+  homework,
+  speak,
+}: {
+  section: Section
+  homework: Section[]
+  speak: (t: string) => void
+}) {
   const items = (section.items ?? []) as RewriteItem[]
   const [shown, setShown] = useState<Record<number, boolean>>({})
+  // Homework question sections start in practice mode: she fills the blanks first.
+  const [practice, setPractice] = useState(true)
   return (
     <>
       <h2 className="mb-1 text-lg font-bold text-white drop-shadow">
@@ -582,6 +679,30 @@ function RewriteTab({ section, speak }: { section: Section; speak: (t: string) =
           </Card>
         )
       })}
+
+      {homework.map((s) => (
+        <section key={s.id} className="mb-6 mt-8">
+          <div className="mb-1 flex items-center justify-between gap-2">
+            <h2 className="text-lg font-bold text-white drop-shadow">
+              {s.title}
+              {s.points && <span className="ml-2 text-sm font-normal opacity-90">（{s.points}）</span>}
+            </h2>
+            <button
+              className={cn(
+                'min-h-11 shrink-0 rounded-full border-2 border-white px-3 py-1.5 text-sm font-bold',
+                practice ? 'bg-white text-indigo-700' : 'bg-indigo-600 text-white'
+              )}
+              onClick={() => setPractice(!practice)}
+            >
+              {practice ? '显示答案' : '自己再做一次'}
+            </button>
+          </div>
+          {s.instruction && <p className="mb-3 text-sm text-white/90">{s.instruction}</p>}
+          {(s.groups ?? []).map((g, gi) => (
+            <GroupView key={gi} section={s} group={g} practice={practice} speak={speak} />
+          ))}
+        </section>
+      ))}
     </>
   )
 }
@@ -720,8 +841,9 @@ function emphasise(zh: string) {
 
 // ---------- words ----------
 
-function WordsTab({ data, speak }: { data: WordsData; speak: (t: string) => void }) {
-  const [wk, setWk] = useState(0)
+function WordsTab({ data, week, speak }: { data: WordsData; week: number; speak: (t: string) => void }) {
+  // Open on this week's list when there is one.
+  const [wk, setWk] = useState(() => Math.max(0, data.weeks.findIndex((w) => w.week === week)))
   const [hideMeaning, setHideMeaning] = useState(false)
   const cur = data.weeks[wk]
   return (
@@ -757,7 +879,7 @@ function WordsTab({ data, speak }: { data: WordsData; speak: (t: string) => void
             {hideMeaning ? '显示意思' : '考一考'}
           </button>
         </div>
-        {cur.week === 34 && cur.kind === '识写字词' && (
+        {cur.week === week && cur.kind === '识写字词' && (
           <p className="mt-2 text-xs text-gray-600">
             本周听写的 16 个词在{' '}
             <Link to="/" className="font-bold text-indigo-700 underline">

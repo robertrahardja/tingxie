@@ -91,6 +91,7 @@ def collect() -> set[str]:
                             add(fill(q["text"], ans))
                         else:
                             add(q["text"])
+                    add(q.get("model"))  # kind "open": the model written answer
             for it in sec.get("items", []):
                 add(it.get("answer"))
                 for o in it.get("original", []):

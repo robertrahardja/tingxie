@@ -80,6 +80,14 @@ to `NAV_ITEMS` in `src/lib/constants.ts`.
     // kind "cloze": group also has "passage": lines with 【49】 markers.
     // kind "reading": group has "passage" lines, "passageEn", and questions
     // with "options" and no blank.
+    // kind "open" (阅读理解 with written answers, week 35): group has
+    // "passage"/"passageEn"; each question has "model" (model answer),
+    // "written" (what she wrote, or null), "points", and uses the numeric
+    // convention answer: 1, student: 1 = accepted / 2 = needs correction /
+    // null = blank, so the scoreboard keeps working.
+    // Any question section may add "tab": "rewrite" to appear under the
+    // 课后练习 tab instead (used for a homework 短文填空); it starts in
+    // practice mode there.
     { "id": "rewrite", "kind": "rewrite", "title": "课后练习 · 扩写句子",
       "items": [{ "n": 1, "original": ["A句", "B句"], "pattern": "虽然……但是……",
                   "answer": "…", "why": "…", "en": "…" }] },
@@ -107,6 +115,16 @@ rewrite originals and answers, oral sentences and vocab, words and
 collocations. If a button is silent, the clip is missing: the audio hook
 now logs `Audio file not found (got HTML)` because the SPA fallback serves
 `index.html` for unknown paths. Re-run the generator.
+
+## Week 35 result (for reference)
+
+From `35_09072026_P3HCL.pdf` (Week 35, 7/9–13/9/2026). 课堂练习: 33 correct,
+5 wrong, 0 blank out of 38 (30 MCQ + 3 written reading answers + 5 完成句子).
+Wrong: Q3 自从, Q7 兴奋, Q9 兴奋, Q15 离开, Q19 沿着. The three written
+reading answers were all acceptable. 课后练习 (5 rewrites + 短文填空 Q6–10)
+was still blank. The 口试练习《校园》(pages 8–9) went into the 口试复习 tab
+of this page together with the four revision passages, not into the koushi
+app. 听写 words are tingxie row 96.
 
 ## Week 34 result (for reference)
 
