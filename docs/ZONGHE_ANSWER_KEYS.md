@@ -94,6 +94,9 @@ to `NAV_ITEMS` in `src/lib/constants.ts`.
     { "id": "oral", "kind": "oral", "title": "本周作业 · 复习口试",
       // optional: the booklet's 看图说话 picture, shown once above the passages
       "image": "/images/zonghe35/xiaoyuan.jpg", "imageCaption": "…",
+      // optional: the centre's own recording (their .mp4 files are audio-only;
+      // transcode with ffmpeg to mono 64k MP3 under public/audio/zonghe<week>/)
+      "audio": "/audio/zonghe35/xiaoyuan-xia.mp3", "audioCaption": "…",
       "items": [{ "title": "乐于助人",
                   // optional: a crop of the part this passage describes
                   "image": "/images/zonghe35/xiaoyuan-4.jpg", "imageCaption": "…",

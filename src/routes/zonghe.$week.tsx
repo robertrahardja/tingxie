@@ -67,6 +67,9 @@ interface Section {
   // kind "oral": the whole booklet picture, shown once above the passages.
   image?: string
   imageCaption?: string
+  // kind "oral": the tuition centre's own recording of the passages.
+  audio?: string
+  audioCaption?: string
 }
 
 const ANSWER_KINDS: Section['kind'][] = ['mcq', 'match', 'cloze', 'complete', 'reading', 'open']
@@ -799,6 +802,24 @@ function OralTab({
           {section.imageCaption && (
             <p className="mt-2 px-1 text-sm leading-6 text-gray-700">{section.imageCaption}</p>
           )}
+        </Card>
+      )}
+      {section.audio && (
+        <Card>
+          <div className="mb-1 text-lg font-bold text-gray-900">🎧 老师朗读</div>
+          {section.audioCaption && (
+            <p className="mb-2 text-sm leading-6 text-gray-600">{section.audioCaption}</p>
+          )}
+          <audio
+            controls
+            preload="metadata"
+            src={section.audio}
+            className="w-full"
+            onPlay={() => {
+              stopAll()
+              stopOther()
+            }}
+          />
         </Card>
       )}
       {items.map((it) => (
