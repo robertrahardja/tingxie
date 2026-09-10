@@ -97,6 +97,10 @@ to `NAV_ITEMS` in `src/lib/constants.ts`.
       // optional: the centre's own recording (their .mp4 files are audio-only;
       // transcode with ffmpeg to mono 64k MP3 under public/audio/zonghe<week>/)
       "audio": "/audio/zonghe35/xiaoyuan-xia.mp3", "audioCaption": "…",
+      // optional: the numbered parts as a thumbnail strip under the picture;
+      // `item` is the passage title a tap scrolls to, `current` = this week
+      "parts": [{ "n": 4, "image": "/images/zonghe35/xiaoyuan-4.jpg",
+                  "label": "池塘边捉鱼", "item": "校园 · 图片4", "current": true }],
       "items": [{ "title": "乐于助人",
                   // optional: a crop of the part this passage describes
                   "image": "/images/zonghe35/xiaoyuan-4.jpg", "imageCaption": "…",

@@ -70,6 +70,9 @@ interface Section {
   // kind "oral": the tuition centre's own recording of the passages.
   audio?: string
   audioCaption?: string
+  // kind "oral": the numbered parts of the picture; `item` names the passage
+  // card a part jumps to, `current` marks the parts this week's passages cover.
+  parts?: { n: number; image: string; label: string; item?: string; current?: boolean }[]
 }
 
 const ANSWER_KINDS: Section['kind'][] = ['mcq', 'match', 'cloze', 'complete', 'reading', 'open']
@@ -246,9 +249,11 @@ function SpeakButton({ text, speak, small }: { text: string; speak: (t: string) 
   )
 }
 
-function Card({ children, className }: { children: React.ReactNode; className?: string }) {
+function Card({ children, className, id }: { children: React.ReactNode; className?: string; id?: string }) {
   return (
-    <div className={cn('mb-3 rounded-2xl bg-white p-4 shadow-md', className)}>{children}</div>
+    <div id={id} className={cn('mb-3 rounded-2xl bg-white p-4 shadow-md', className)}>
+      {children}
+    </div>
   )
 }
 
@@ -802,6 +807,40 @@ function OralTab({
           {section.imageCaption && (
             <p className="mt-2 px-1 text-sm leading-6 text-gray-700">{section.imageCaption}</p>
           )}
+          {section.parts && section.parts.length > 0 && (
+            <div className="mt-3 grid grid-cols-3 gap-2 md:grid-cols-5">
+              {section.parts.map((p) => (
+                <button
+                  key={p.n}
+                  type="button"
+                  onClick={() =>
+                    p.item &&
+                    document
+                      .getElementById(`oral-${p.item}`)
+                      ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                  className={cn(
+                    'overflow-hidden rounded-xl border-2 bg-white text-left',
+                    p.current ? 'border-indigo-500 shadow-md' : 'border-gray-200 opacity-75',
+                    p.item && 'active:bg-indigo-50'
+                  )}
+                >
+                  <div className="relative aspect-[4/3] bg-gray-50">
+                    <img src={p.image} alt={`第${p.n}部分：${p.label}`} className="h-full w-full object-cover" />
+                    <span className="absolute left-1 top-1 rounded-full bg-white/90 px-1.5 text-xs font-bold text-gray-800 shadow">
+                      {p.n}
+                    </span>
+                    {p.current && (
+                      <span className="absolute right-1 top-1 rounded-full bg-indigo-600 px-1.5 py-0.5 text-[10px] font-bold text-white">
+                        本周
+                      </span>
+                    )}
+                  </div>
+                  <div className="px-1.5 py-1 text-xs leading-4 text-gray-700">{p.label}</div>
+                </button>
+              ))}
+            </div>
+          )}
         </Card>
       )}
       {section.audio && (
@@ -823,7 +862,7 @@ function OralTab({
         </Card>
       )}
       {items.map((it) => (
-        <Card key={it.title}>
+        <Card key={it.title} className="scroll-mt-4" id={`oral-${it.title}`}>
           <div className="mb-2 flex items-center justify-between">
             <h3 className="text-lg font-bold text-gray-900">《{it.title}》</h3>
             <button

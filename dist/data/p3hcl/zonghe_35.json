@@ -245,9 +245,16 @@
       "kind": "oral",
       "title": "口试：本周《校园》＋复习四篇（熟读五次）",
       "image": "/images/zonghe35/xiaoyuan.jpg",
-      "imageCaption": "综合练习五《校园》：图里有 5 个部分。本周说的是图片 4（图片中间）和图片 5（图片右下角），最后加一段总结。",
+      "imageCaption": "综合练习五《校园》：图里有 5 个部分。本周《校园 · 下》说图片 4（图片中间）和图片 5（图片右下角），最后加一段总结。点下面的第 4、第 5 部分可以跳到那一段。",
       "audio": "/audio/zonghe35/xiaoyuan-xia.mp3",
       "audioCaption": "补习中心的录音《校园 · 下》（1分41秒）：图片4、图片5和总结。先听老师读一遍，再跟着一句一句读，最后自己读五次。",
+      "parts": [
+        {"n": 1, "image": "/images/zonghe35/xiaoyuan-1.jpg", "label": "花园里浇花种花"},
+        {"n": 2, "image": "/images/zonghe35/xiaoyuan-2.jpg", "label": "桥上，东西掉进池塘"},
+        {"n": 3, "image": "/images/zonghe35/xiaoyuan-3.jpg", "label": "跑步跌倒，同学来扶"},
+        {"n": 4, "image": "/images/zonghe35/xiaoyuan-4.jpg", "label": "池塘边捉鱼，很危险", "item": "校园 · 图片4", "current": true},
+        {"n": 5, "image": "/images/zonghe35/xiaoyuan-5.jpg", "label": "树荫下看同学下棋", "item": "校园 · 图片5", "current": true}
+      ],
       "instruction": "作业三：朗读第8-9页《校园》图片4、图片5和总结。作业四：复习之前学过的四篇口试，每篇读五次。看法感受用 F（感受）-O（看法）-R（原因）-IF（如果）四步。",
       "items": [
         {"title": "校园 · 图片4",
@@ -295,6 +302,8 @@
            {"w": "积极", "py": "jī jí", "en": "actively"}
          ]},
         {"title": "校园 · 总结",
+         "image": "/images/zonghe35/xiaoyuan.jpg",
+         "imageCaption": "总结说的是整个校园：五个部分一起看。",
          "sentences": [
            {"zh": "总之，我觉得在校园时，我们应该注意自己的言行举止，做一个有公德心、有爱心的好学生，这样我们的校园生活才会更加美好。", "en": "In short, I think that at school we should mind our words and behaviour and be good students who are civic-minded and caring, so that our school life will be even better."}
          ],
