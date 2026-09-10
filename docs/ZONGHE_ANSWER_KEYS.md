@@ -45,8 +45,13 @@ to `NAV_ITEMS` in `src/lib/constants.ts`.
 3. Append any new word-list weeks to `words_w34_w40.json` (or start a new
    file and point the route at it).
 4. Add the nav entry.
-5. Generate audio (the only Python on this machine with `edge_tts` is the
-   mise one; system `python3` has no pip):
+5. Build the tappable-word data (see “Tappable words” below), then generate
+   audio (the only Python on this machine with `edge_tts` is the mise one;
+   system `python3` has no pip):
+
+   ```bash
+   ~/.local/share/mise/installs/python/3.14.6/bin/python scripts/build_zonghe_words.py
+   ```
 
    ```bash
    ~/.local/share/mise/installs/python/3.14.6/bin/python scripts/generate_tts.py
@@ -115,6 +120,25 @@ A paired connector answer such as `因为……所以……` fills two blanks.
 
 Word list entries: `{ "n", "w", "py", "en", "c" }` where `c` is the
 booklet's collocation; several are separated with ` / `.
+
+## Tappable words
+
+Every Chinese text on the page (questions, options, passages, model answers,
+explanations, instructions, captions, oral passages, word lists) is split
+into words; tapping a word opens a bottom card with pinyin, meaning and
+sound. The data comes from `public/data/p3hcl/zonghe_<week>_words.json`,
+built by
+
+```bash
+~/.local/share/mise/installs/python/3.14.6/bin/python scripts/build_zonghe_words.py
+```
+
+(jieba for segmentation, pypinyin for readings, CC-CEDICT for meanings —
+CC BY-SA 4.0, cached at `~/.cache/tingxie/cedict.txt.gz`). Hand-written
+glosses in the week JSON and the word lists win over CEDICT; names, function
+words and words CEDICT lacks are in `OVERRIDES` in the script. Run it after
+editing a week's JSON, then run `generate_tts.py` so every word has a clip.
+A text that is not in the file renders as plain, non-tappable text.
 
 ## What the page speaks
 

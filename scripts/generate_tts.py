@@ -60,7 +60,14 @@ def collect() -> set[str]:
             for c in (w.get("c") or "").split("/"):
                 add(c.strip())
 
+    # every tappable word (zonghe_<week>_words.json, built by build_zonghe_words.py)
+    for f in sorted(DATA.glob("zonghe_*_words.json")):
+        for w in json.loads(f.read_text())["dict"]:
+            add(w)
+
     for f in sorted(DATA.glob("zonghe_*.json")):
+        if f.stem.endswith("_words"):
+            continue
         z = json.loads(f.read_text())
         for sec in z["sections"]:
             for g in sec.get("groups", []):

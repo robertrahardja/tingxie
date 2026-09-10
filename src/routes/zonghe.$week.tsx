@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useAudioPlayer } from '@/hooks/useAudioPlayer'
 import { ttsPath } from '@/lib/tts'
@@ -107,6 +107,25 @@ interface WordsData {
   weeks: WordWeek[]
 }
 
+// zonghe_<week>_words.json (scripts/build_zonghe_words.py): every text on the
+// page split into words, plus pinyin + meaning for every word.
+interface WordBank {
+  seg: Record<string, string[]>
+  dict: Record<string, { py: string; en: string }>
+}
+
+interface WordInfo {
+  py?: string
+  en?: string
+}
+
+const HAN = /[一-鿿]/
+
+const WordsCtx = createContext<{
+  bank: WordBank | null
+  open: (word: string, info?: WordInfo) => void
+}>({ bank: null, open: () => {} })
+
 type Tab = 'answers' | 'rewrite' | 'oral' | 'words'
 
 const TABS: { id: Tab; label: string }[] = [
@@ -125,15 +144,14 @@ const answerParts = (text: string, answer: string) => {
   return parts.length > 1 && blanks >= parts.length ? parts : [answer]
 }
 
-const fillBlank = (text: string, answer: string) =>
-  answerParts(text, answer).reduce((t, p) => t.replace('____', p), text)
-
 // ---------- page ----------
 
 function ZonghePage() {
   const { week } = Route.useParams()
   const [data, setData] = useState<ZongheData | null>(null)
   const [words, setWords] = useState<WordsData | null>(null)
+  const [bank, setBank] = useState<WordBank | null>(null)
+  const [sheet, setSheet] = useState<{ word: string; info?: WordInfo } | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [tab, setTab] = useState<Tab>('answers')
   const [practice, setPractice] = useState(false)
@@ -147,11 +165,16 @@ function ZonghePage() {
         return r.json() as Promise<ZongheData>
       }),
       fetch('/data/p3hcl/words_w34_w40.json').then((r) => r.json() as Promise<WordsData>),
+      // optional; the SPA fallback answers unknown paths with HTML, which fails to parse
+      fetch(`/data/p3hcl/zonghe_${week}_words.json`)
+        .then((r) => r.json() as Promise<WordBank>)
+        .catch(() => null),
     ])
-      .then(([z, w]) => {
+      .then(([z, w, b]) => {
         if (!alive) return
         setData(z)
         setWords(w)
+        setBank(b && b.seg && b.dict ? b : null)
       })
       .catch((e: Error) => alive && setError(e.message))
     return () => {
@@ -166,6 +189,10 @@ function ZonghePage() {
     },
     [play]
   )
+
+  const openWord = useCallback((word: string, info?: WordInfo) => setSheet({ word, info }), [])
+  const closeWord = useCallback(() => setSheet(null), [])
+  const ctx = useMemo(() => ({ bank, open: openWord }), [bank, openWord])
 
   if (error) {
     return (
@@ -190,6 +217,7 @@ function ZonghePage() {
   const oral = data.sections.find((s) => s.kind === 'oral')
 
   return (
+    <WordsCtx.Provider value={ctx}>
     <div className="page-container">
       <header className="mb-4 text-white">
         <h1 className="page-title text-2xl md:text-3xl">{data.title}</h1>
@@ -224,7 +252,9 @@ function ZonghePage() {
       )}
       {tab === 'oral' && oral && <OralTab section={oral} speak={speak} stopOther={stop} />}
       {tab === 'words' && <WordsTab data={words} week={data.week} speak={speak} />}
+      {sheet && <WordSheet word={sheet.word} info={sheet.info} onClose={closeWord} speak={speak} />}
     </div>
+    </WordsCtx.Provider>
   )
 }
 
@@ -254,6 +284,204 @@ function Card({ children, className, id }: { children: React.ReactNode; classNam
     <div id={id} className={cn('mb-3 rounded-2xl bg-white p-4 shadow-md', className)}>
       {children}
     </div>
+  )
+}
+
+// ---------- tappable words ----------
+
+/** Where the answer words sit inside a blank-filled sentence. */
+function fillWithRanges(text: string, answer: string) {
+  const parts = answerParts(text, answer)
+  const segs = text.split('____')
+  let filled = ''
+  const ranges: [number, number][] = []
+  segs.forEach((seg, i) => {
+    filled += seg
+    if (i < segs.length - 1) {
+      const p = parts[i] ?? (i === 0 ? answer : '____')
+      ranges.push([filled.length, filled.length + p.length])
+      filled += p
+    }
+  })
+  return { filled, ranges }
+}
+
+/**
+ * Renders a text as tappable words (when the word bank has it segmented).
+ * `ranges` marks answer words (green); with `hide` they show as blanks.
+ * `bold` names words to emphasise (我认为 / 因为 in oral passages).
+ */
+function Seg({
+  text,
+  ranges,
+  hide,
+  bold,
+  light,
+  className,
+}: {
+  text: string
+  ranges?: [number, number][]
+  hide?: boolean
+  bold?: string[]
+  light?: boolean
+  className?: string
+}) {
+  const { bank, open } = useContext(WordsCtx)
+  const tokens = bank?.seg[text.trim()]
+  if (!tokens) {
+    if (ranges && hide) {
+      // no segmentation: blank the answer spans
+      let out = ''
+      let pos = 0
+      for (const [s, e] of ranges) {
+        out += text.slice(pos, s) + '____'
+        pos = e
+      }
+      return <span className={className}>{out + text.slice(pos)}</span>
+    }
+    if (ranges) return <span className={className}>{renderRanges(text, ranges)}</span>
+    return <span className={className}>{text}</span>
+  }
+  let pos = 0
+  const nodes: React.ReactNode[] = []
+  tokens.forEach((tok, i) => {
+    const start = pos
+    const end = pos + tok.length
+    pos = end
+    const range = ranges?.find(([s, e]) => start >= s && end <= e)
+    if (range && hide) {
+      if (start === range[0]) {
+        nodes.push(
+          <span key={i} className="mx-0.5 inline-block w-14 border-b-2 border-gray-400 align-baseline">
+            &nbsp;
+          </span>
+        )
+      }
+      return
+    }
+    const answerCls = range && 'rounded bg-green-100 font-bold text-green-800 underline decoration-2 underline-offset-4'
+    if (!HAN.test(tok)) {
+      nodes.push(
+        <span key={i} className={cn(answerCls)}>
+          {tok}
+        </span>
+      )
+      return
+    }
+    nodes.push(
+      <button
+        key={i}
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation()
+          open(tok)
+        }}
+        className={cn(
+          'inline rounded px-px py-1 align-baseline transition-colors',
+          light ? 'active:bg-white/30' : 'active:bg-indigo-100',
+          bold?.includes(tok) && (light ? 'font-bold' : 'font-bold text-indigo-700'),
+          answerCls
+        )}
+      >
+        {tok}
+      </button>
+    )
+  })
+  return <span className={className}>{nodes}</span>
+}
+
+function renderRanges(text: string, ranges: [number, number][]) {
+  const nodes: React.ReactNode[] = []
+  let pos = 0
+  ranges.forEach(([s, e], i) => {
+    nodes.push(<span key={`t${i}`}>{text.slice(pos, s)}</span>)
+    nodes.push(
+      <span key={`a${i}`} className="mx-0.5 rounded bg-green-100 px-1.5 font-bold text-green-800 underline decoration-2 underline-offset-4">
+        {text.slice(s, e)}
+      </span>
+    )
+    pos = e
+  })
+  nodes.push(<span key="end">{text.slice(pos)}</span>)
+  return nodes
+}
+
+/** Bottom card with the tapped word: pinyin, meaning, sound; a phrase lists its words. */
+function WordSheet({
+  word,
+  info,
+  onClose,
+  speak,
+}: {
+  word: string
+  info?: WordInfo
+  onClose: () => void
+  speak: (t: string) => void
+}) {
+  const { bank, open } = useContext(WordsCtx)
+  const entry = bank?.dict[word]
+  const py = info?.py ?? entry?.py ?? ''
+  const en = info?.en ?? entry?.en ?? ''
+  const parts = bank?.seg[word]?.filter((t) => HAN.test(t)) ?? []
+  const showParts = parts.length > 1 ? parts : []
+  useEffect(() => {
+    speak(word)
+  }, [word, speak])
+  return (
+    <>
+      <div className="fixed inset-0 z-40 bg-black/25" onClick={onClose} />
+      <div
+        className="fixed inset-x-0 bottom-0 z-50 mx-auto max-w-lg rounded-t-3xl bg-white p-5 pb-8 shadow-2xl"
+        role="dialog"
+        aria-label={word}
+      >
+        <div className="flex items-start gap-3">
+          <div className="min-w-0 flex-1">
+            <div className="text-3xl font-bold leading-tight text-gray-900">{word}</div>
+            {py && <div className="mt-1 text-lg text-indigo-700">{py}</div>}
+            {en ? (
+              <div className="mt-1 text-[15px] leading-6 text-gray-700">{en}</div>
+            ) : showParts.length === 0 ? (
+              <div className="mt-1 text-sm text-gray-400">（没有解释）</div>
+            ) : null}
+          </div>
+          <button
+            type="button"
+            onClick={() => speak(word)}
+            aria-label="再听一次"
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-xl text-indigo-700 active:bg-indigo-200"
+          >
+            🔊
+          </button>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="关闭"
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gray-100 text-lg text-gray-600 active:bg-gray-200"
+          >
+            ✕
+          </button>
+        </div>
+        {showParts.length > 0 && (
+          <div className="mt-3">
+            <div className="mb-1 text-xs text-gray-500">点一个词看意思：</div>
+            <div className="flex flex-wrap gap-2">
+              {showParts.map((p, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => open(p)}
+                  className="rounded-lg bg-amber-50 px-2 py-1 text-[15px] text-amber-900 active:bg-amber-100"
+                >
+                  {p}
+                  {bank?.dict[p]?.py && <span className="ml-1 text-xs text-indigo-600">{bank.dict[p].py}</span>}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </>
   )
 }
 
@@ -318,7 +546,7 @@ function AnswersTab({ sections, practice, setPractice, speak, note }: AnswersTab
         </div>
         <p className="mt-2 text-xs text-gray-500">
           共 {stats.total} 题。答错的题目要特别看“为什么”。
-          {note && <> {note}</>}
+          {note && <> <Seg text={note} /></>}
         </p>
         {wrongList.length > 0 && (
           <p className="mt-2 text-sm text-gray-700">
@@ -334,7 +562,7 @@ function AnswersTab({ sections, practice, setPractice, speak, note }: AnswersTab
             {s.title}
             {s.points && <span className="ml-2 text-sm font-normal opacity-90">（{s.points}）</span>}
           </h2>
-          {s.instruction && <p className="mb-3 text-sm text-white/90">{s.instruction}</p>}
+          {s.instruction && <p className="mb-3 text-sm text-white/90"><Seg text={s.instruction} light /></p>}
           {(s.groups ?? []).map((g, gi) => (
             <GroupView key={gi} section={s} group={g} practice={practice} speak={speak} />
           ))}
@@ -365,6 +593,7 @@ function GroupView({
   speak: (t: string) => void
 }) {
   const bank = group.bank
+  const { open } = useContext(WordsCtx)
   // Passage lines are spoken with the answers filled in (same text the TTS script generates).
   const spokenLine = (line: string) =>
     line.replace(/【(\d+)】/g, (_, n) => {
@@ -373,7 +602,11 @@ function GroupView({
     })
   return (
     <div className="mb-4">
-      {group.label && <h3 className="mb-2 font-bold text-white/95">{group.label}</h3>}
+      {group.label && (
+        <h3 className="mb-2 font-bold text-white/95">
+          <Seg text={group.label} light />
+        </h3>
+      )}
 
       {group.passage && (
         <Card>
@@ -394,7 +627,7 @@ function GroupView({
               <button
                 key={i}
                 type="button"
-                onClick={() => speak(w)}
+                onClick={() => open(w)}
                 className="flex min-h-11 items-center gap-1 rounded-lg px-1 py-1 text-left active:bg-indigo-50"
               >
                 <span className="text-indigo-600">{NUM[i]}</span>
@@ -403,7 +636,9 @@ function GroupView({
             ))}
           </div>
           {group.unused && !practice && (
-            <p className="mt-2 text-xs text-gray-500">用不到：{group.unused}</p>
+            <p className="mt-2 text-xs text-gray-500">
+              用不到：<Seg text={group.unused} />
+            </p>
           )}
         </Card>
       )}
@@ -433,7 +668,7 @@ function OpenCard({ q, practice, speak }: { q: Question; practice: boolean; spea
         </span>
         <div className="flex-1">
           <p className="text-[17px] leading-8 text-gray-900">
-            {q.text}
+            <Seg text={q.text} />
             {q.points != null && <span className="ml-1 text-xs text-gray-400">（{q.points}分）</span>}
           </p>
           {!practice && q.student != null && (
@@ -476,12 +711,14 @@ function OpenCard({ q, practice, speak }: { q: Question; practice: boolean; spea
         <div className="mt-3">
           <div className="mb-1 text-xs font-bold text-green-700">参考答案</div>
           <div className="flex items-start gap-2">
-            <p className="flex-1 text-[17px] font-bold leading-8 text-green-800">{q.model}</p>
+            <p className="flex-1 text-[17px] font-bold leading-8 text-green-800">
+              <Seg text={q.model} />
+            </p>
             <SpeakButton text={q.model} speak={speak} />
           </div>
           <div className="mt-2 rounded-xl bg-indigo-50 p-3 text-sm leading-6 text-gray-800">
             <div className="mb-1 font-bold text-indigo-700">怎么找答案？</div>
-            <p>{q.why}</p>
+            <p><Seg text={q.why} /></p>
             <p className="mt-1 text-xs text-gray-500">{q.en}</p>
           </div>
         </div>
@@ -498,7 +735,7 @@ function highlightBlanks(line: string) {
         Q{p.replace(/[【】]/g, '')}
       </span>
     ) : (
-      <span key={i}>{p}</span>
+      <Seg key={i} text={p} />
     )
   )
 }
@@ -517,12 +754,15 @@ function QuestionCard({
   speak: (t: string) => void
 }) {
   const options = q.options ?? bank ?? []
+  const { open } = useContext(WordsCtx)
   const [picked, setPicked] = useState<number | null>(null)
   useEffect(() => setPicked(null), [practice])
   const reveal = !practice || picked != null
   const answerText = options[q.answer - 1] ?? ''
   const hasBlank = q.text.includes('____')
-  const filled = hasBlank ? fillBlank(q.text, answerText) : q.text
+  const { filled, ranges } = hasBlank
+    ? fillWithRanges(q.text, answerText)
+    : { filled: q.text, ranges: [] as [number, number][] }
   const studentOk = q.student != null && (q.student === q.answer || q.student === q.alt)
   const showOptionsInline = kind === 'mcq' || kind === 'reading'
 
@@ -534,11 +774,7 @@ function QuestionCard({
         </span>
         <div className="flex-1">
           <p className="text-[17px] leading-8 text-gray-900">
-            {reveal ? (
-              renderFilled(q.text, answerText)
-            ) : (
-              <span>{q.text}</span>
-            )}
+            <Seg text={filled} ranges={hasBlank ? ranges : undefined} hide={!reveal} />
           </p>
           {q.student != null && !practice && (
             <div className="mt-1 flex flex-wrap items-center gap-2 text-sm">
@@ -576,10 +812,14 @@ function QuestionCard({
               <button
                 key={i}
                 type="button"
-                disabled={!practice || picked != null}
+                disabled={practice && picked != null}
                 onClick={() => {
-                  setPicked(idx)
-                  speak(opt)
+                  if (practice) {
+                    setPicked(idx)
+                    speak(opt)
+                  } else {
+                    open(opt)
+                  }
                 }}
                 className={cn(
                   'min-h-11 rounded-xl border-2 px-3 py-2 text-left text-[15px] leading-6 transition-colors',
@@ -596,7 +836,7 @@ function QuestionCard({
         </div>
       ) : (
         <p className="mt-2 text-sm text-gray-700">
-          答案：<span className="font-bold text-green-700">({q.answer}) {answerText}</span>
+          答案：<span className="font-bold text-green-700">({q.answer}) <Seg text={answerText} /></span>
           {q.alt && <span className="text-gray-500">（({q.alt}) {options[q.alt - 1]} 也可以）</span>}
         </p>
       )}
@@ -604,31 +844,11 @@ function QuestionCard({
       {reveal && (
         <div className="mt-3 rounded-xl bg-indigo-50 p-3 text-sm leading-6 text-gray-800">
           <div className="mb-1 font-bold text-indigo-700">为什么？</div>
-          <p>{q.why}</p>
+          <p><Seg text={q.why} /></p>
           <p className="mt-1 text-xs text-gray-500">{q.en}</p>
         </div>
       )}
     </Card>
-  )
-}
-
-function renderFilled(text: string, answer: string) {
-  if (!text.includes('____')) return <span>{text}</span>
-  const parts = answerParts(text, answer)
-  const segs = text.split('____')
-  return (
-    <>
-      {segs.map((seg, i) => (
-        <span key={i}>
-          {seg}
-          {i < segs.length - 1 && (
-            <span className="mx-0.5 rounded bg-green-100 px-1.5 font-bold text-green-800 underline decoration-2 underline-offset-4">
-              {parts[i] ?? (i === 0 ? answer : '____')}
-            </span>
-          )}
-        </span>
-      ))}
-    </>
   )
 }
 
@@ -653,7 +873,7 @@ function RewriteTab({
         {section.title}
         {section.points && <span className="ml-2 text-sm font-normal opacity-90">（{section.points}）</span>}
       </h2>
-      {section.instruction && <p className="mb-3 text-sm text-white/90">{section.instruction}</p>}
+      {section.instruction && <p className="mb-3 text-sm text-white/90"><Seg text={section.instruction} light /></p>}
       {items.map((it) => {
         const open = !!shown[it.n]
         return (
@@ -667,7 +887,7 @@ function RewriteTab({
             {it.original.map((o, i) => (
               <p key={i} className="flex items-center gap-2 text-[16px] leading-7 text-gray-800">
                 {it.original.length > 1 && <span className="text-gray-400">({String.fromCharCode(65 + i)})</span>}
-                <span>{o}</span>
+                <Seg text={o} />
                 <SpeakButton text={o} speak={speak} small />
               </p>
             ))}
@@ -681,11 +901,13 @@ function RewriteTab({
             {open && (
               <div className="mt-3">
                 <div className="flex items-start gap-2">
-                  <p className="flex-1 text-[17px] font-bold leading-8 text-green-800">{it.answer}</p>
+                  <p className="flex-1 text-[17px] font-bold leading-8 text-green-800">
+                    <Seg text={it.answer} />
+                  </p>
                   <SpeakButton text={it.answer} speak={speak} />
                 </div>
                 <div className="mt-2 rounded-xl bg-indigo-50 p-3 text-sm leading-6 text-gray-800">
-                  <p>{it.why}</p>
+                  <p><Seg text={it.why} /></p>
                   <p className="mt-1 text-xs text-gray-500">{it.en}</p>
                 </div>
               </div>
@@ -711,7 +933,7 @@ function RewriteTab({
               {practice ? '显示答案' : '自己再做一次'}
             </button>
           </div>
-          {s.instruction && <p className="mb-3 text-sm text-white/90">{s.instruction}</p>}
+          {s.instruction && <p className="mb-3 text-sm text-white/90"><Seg text={s.instruction} light /></p>}
           {(s.groups ?? []).map((g, gi) => (
             <GroupView key={gi} section={s} group={g} practice={practice} speak={speak} />
           ))}
@@ -733,6 +955,7 @@ function OralTab({
   stopOther: () => void
 }) {
   const items = (section.items ?? []) as OralItem[]
+  const { open } = useContext(WordsCtx)
   const [playingAll, setPlayingAll] = useState<string | null>(null)
   // "读全篇" plays sentence after sentence, waiting for each clip to end.
   const chain = useRef<{ audio: HTMLAudioElement | null; cancelled: boolean } | null>(null)
@@ -796,7 +1019,7 @@ function OralTab({
   return (
     <>
       <h2 className="mb-1 text-lg font-bold text-white drop-shadow">{section.title}</h2>
-      {section.instruction && <p className="mb-3 text-sm text-white/90">{section.instruction}</p>}
+      {section.instruction && <p className="mb-3 text-sm text-white/90"><Seg text={section.instruction} light /></p>}
       {section.image && (
         <Card className="p-2">
           <img
@@ -805,7 +1028,9 @@ function OralTab({
             className="w-full rounded-xl"
           />
           {section.imageCaption && (
-            <p className="mt-2 px-1 text-sm leading-6 text-gray-700">{section.imageCaption}</p>
+            <p className="mt-2 px-1 text-sm leading-6 text-gray-700">
+              <Seg text={section.imageCaption} />
+            </p>
           )}
           {section.parts && section.parts.length > 0 && (
             <div className="mt-3 grid grid-cols-3 gap-2 md:grid-cols-5">
@@ -847,7 +1072,9 @@ function OralTab({
         <Card>
           <div className="mb-1 text-lg font-bold text-gray-900">🎧 老师朗读</div>
           {section.audioCaption && (
-            <p className="mb-2 text-sm leading-6 text-gray-600">{section.audioCaption}</p>
+            <p className="mb-2 text-sm leading-6 text-gray-600">
+              <Seg text={section.audioCaption} />
+            </p>
           )}
           <audio
             controls
@@ -881,7 +1108,9 @@ function OralTab({
                 className="mx-auto max-h-72 w-auto max-w-full rounded-xl border border-gray-200"
               />
               {it.imageCaption && (
-                <figcaption className="mt-1 text-center text-xs text-gray-500">{it.imageCaption}</figcaption>
+                <figcaption className="mt-1 text-center text-xs text-gray-500">
+                  <Seg text={it.imageCaption} />
+                </figcaption>
               )}
             </figure>
           )}
@@ -889,7 +1118,9 @@ function OralTab({
             <div key={i} className="mb-2 flex items-start gap-2">
               <SpeakButton text={s.zh} speak={speakOne} small />
               <div className="flex-1">
-                <p className="text-[17px] leading-8 text-gray-900">{emphasise(s.zh)}</p>
+                <p className="text-[17px] leading-8 text-gray-900">
+                  <Seg text={s.zh} bold={['我认为', '因为']} />
+                </p>
                 <p className="text-xs text-gray-500">{s.en}</p>
               </div>
             </div>
@@ -900,7 +1131,10 @@ function OralTab({
                 <button
                   key={v.w}
                   type="button"
-                  onClick={() => speakOne(v.w)}
+                  onClick={() => {
+                    stopAll()
+                    open(v.w, { py: v.py, en: v.en })
+                  }}
                   className="rounded-lg bg-amber-50 px-2 py-1 text-left text-sm active:bg-amber-100"
                 >
                   <span className="font-bold text-gray-900">{v.w}</span>
@@ -913,19 +1147,6 @@ function OralTab({
         </Card>
       ))}
     </>
-  )
-}
-
-function emphasise(zh: string) {
-  const parts = zh.split(/(我认为|因为)/)
-  return parts.map((p, i) =>
-    p === '我认为' || p === '因为' ? (
-      <strong key={i} className="text-indigo-700">
-        {p}
-      </strong>
-    ) : (
-      <span key={i}>{p}</span>
-    )
   )
 }
 
@@ -986,7 +1207,8 @@ function WordsTab({ data, week, speak }: { data: WordsData; week: number; speak:
   )
 }
 
-function WordRow({ w, hide, speak }: { w: WordEntry; hide: boolean; speak: (t: string) => void }) {
+function WordRow({ w, hide }: { w: WordEntry; hide: boolean; speak: (t: string) => void }) {
+  const { open: openWord } = useContext(WordsCtx)
   const [open, setOpen] = useState(false)
   useEffect(() => setOpen(false), [hide])
   const show = !hide || open
@@ -1003,7 +1225,7 @@ function WordRow({ w, hide, speak }: { w: WordEntry; hide: boolean; speak: (t: s
         type="button"
         onClick={(e) => {
           e.stopPropagation()
-          speak(w.w.replace('…', ''))
+          openWord(w.w.replace('…', ''), { py: w.py, en: w.en })
         }}
         className="shrink-0 text-2xl font-bold text-gray-900"
       >
@@ -1021,7 +1243,7 @@ function WordRow({ w, hide, speak }: { w: WordEntry; hide: boolean; speak: (t: s
               type="button"
               onClick={(e) => {
                 e.stopPropagation()
-                speak(c)
+                openWord(c)
               }}
               className="rounded-lg bg-amber-50 px-2 py-0.5 text-sm text-amber-800 active:bg-amber-100"
             >
