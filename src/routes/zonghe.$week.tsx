@@ -49,6 +49,9 @@ interface OralItem {
   title: string
   sentences: { zh: string; en: string }[]
   vocab: { w: string; py: string; en: string }[]
+  // The part of the booklet picture this passage describes (e.g. a crop of 图片4).
+  image?: string
+  imageCaption?: string
 }
 
 interface Section {
@@ -61,6 +64,9 @@ interface Section {
   items?: (RewriteItem | OralItem)[]
   // "rewrite" puts a question section (e.g. a homework cloze) under the 课后练习 tab.
   tab?: 'answers' | 'rewrite'
+  // kind "oral": the whole booklet picture, shown once above the passages.
+  image?: string
+  imageCaption?: string
 }
 
 const ANSWER_KINDS: Section['kind'][] = ['mcq', 'match', 'cloze', 'complete', 'reading', 'open']
@@ -783,6 +789,18 @@ function OralTab({
     <>
       <h2 className="mb-1 text-lg font-bold text-white drop-shadow">{section.title}</h2>
       {section.instruction && <p className="mb-3 text-sm text-white/90">{section.instruction}</p>}
+      {section.image && (
+        <Card className="p-2">
+          <img
+            src={section.image}
+            alt={section.imageCaption ?? section.title}
+            className="w-full rounded-xl"
+          />
+          {section.imageCaption && (
+            <p className="mt-2 px-1 text-sm leading-6 text-gray-700">{section.imageCaption}</p>
+          )}
+        </Card>
+      )}
       {items.map((it) => (
         <Card key={it.title}>
           <div className="mb-2 flex items-center justify-between">
@@ -795,6 +813,18 @@ function OralTab({
               {playingAll === it.title ? '⏹ 停止' : '▶ 读全篇'}
             </button>
           </div>
+          {it.image && (
+            <figure className="mb-3">
+              <img
+                src={it.image}
+                alt={it.imageCaption ?? it.title}
+                className="mx-auto max-h-72 w-auto max-w-full rounded-xl border border-gray-200"
+              />
+              {it.imageCaption && (
+                <figcaption className="mt-1 text-center text-xs text-gray-500">{it.imageCaption}</figcaption>
+              )}
+            </figure>
+          )}
           {it.sentences.map((s, i) => (
             <div key={i} className="mb-2 flex items-start gap-2">
               <SpeakButton text={s.zh} speak={speakOne} small />

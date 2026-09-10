@@ -92,7 +92,11 @@ to `NAV_ITEMS` in `src/lib/constants.ts`.
       "items": [{ "n": 1, "original": ["A句", "B句"], "pattern": "虽然……但是……",
                   "answer": "…", "why": "…", "en": "…" }] },
     { "id": "oral", "kind": "oral", "title": "本周作业 · 复习口试",
+      // optional: the booklet's 看图说话 picture, shown once above the passages
+      "image": "/images/zonghe35/xiaoyuan.jpg", "imageCaption": "…",
       "items": [{ "title": "乐于助人",
+                  // optional: a crop of the part this passage describes
+                  "image": "/images/zonghe35/xiaoyuan-4.jpg", "imageCaption": "…",
                   "sentences": [{ "zh": "…", "en": "…" }],
                   "vocab": [{ "w": "称赞", "py": "chēng zàn", "en": "to praise" }] }] }
   ]

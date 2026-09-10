@@ -244,9 +244,13 @@
       "id": "oral",
       "kind": "oral",
       "title": "口试：本周《校园》＋复习四篇（熟读五次）",
+      "image": "/images/zonghe35/xiaoyuan.jpg",
+      "imageCaption": "综合练习五《校园》：图里有 5 个部分。本周说的是图片 4（图片中间）和图片 5（图片右下角），最后加一段总结。",
       "instruction": "作业三：朗读第8-9页《校园》图片4、图片5和总结。作业四：复习之前学过的四篇口试，每篇读五次。看法感受用 F（感受）-O（看法）-R（原因）-IF（如果）四步。",
       "items": [
         {"title": "校园 · 图片4",
+         "image": "/images/zonghe35/xiaoyuan-4.jpg",
+         "imageCaption": "图片中间（第4部分）：女生跪在池塘边捉鱼，戴眼镜的男生上前阻止。",
          "sentences": [
            {"zh": "在图片中间，我看到有一位绑着马尾的女生跪在池塘边，把手伸进池塘想捉鱼。", "en": "In the middle of the picture, I see a girl with a ponytail kneeling by the pond, putting her hand into the water to catch fish."},
            {"zh": "旁边有一名戴着眼镜的男生看见了，十分惊讶，连忙上前阻止她。", "en": "A boy wearing glasses next to her sees this. He is very surprised and hurries over to stop her."},
@@ -265,6 +269,8 @@
            {"w": "后果不堪设想", "py": "hòu guǒ bù kān shè xiǎng", "en": "the consequences would be unthinkable"}
          ]},
         {"title": "校园 · 图片5",
+         "image": "/images/zonghe35/xiaoyuan-5.jpg",
+         "imageCaption": "图片右下角（第5部分）：树荫下，同学们围观两位同学下国际象棋。",
          "sentences": [
            {"zh": "在图片右下角，我看到在树荫下，有一群同学正在观看两位同学下国际象棋。", "en": "In the bottom right corner, I see a group of pupils in the shade of a tree watching two classmates play chess."},
            {"zh": "这两位同学的棋艺看起来不分上下。", "en": "The two players look equally matched."},
