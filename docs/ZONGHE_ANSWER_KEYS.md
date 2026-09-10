@@ -22,7 +22,12 @@ Live example: <https://tingxie.rr-startech-innovation.workers.dev/zonghe/34>
 ## Files
 
 ```text
-src/routes/zonghe.$week.tsx        the page (one route for every week)
+src/routes/zonghe.$week.tsx        the route (one for every week), a thin wrapper
+src/components/zonghe/ZonghePage.tsx   data loading, tabs, word sheet
+src/components/zonghe/{Answers,Rewrite,Oral,Words}Tab.tsx   one file per tab
+src/components/zonghe/words.tsx    tappable words: Seg, WordSheet, WordsCtx
+src/components/zonghe/shared.tsx   Card, SpeakButton
+src/lib/zonghe/types.ts            data types + blank-filling helpers
 src/lib/tts.ts                     sha256(text)[:16] → /audio/tts/<key>.mp3
 public/data/p3hcl/zonghe_<week>.json   exercises, answers, explanations
 public/data/p3hcl/words_w34_w40.json   word lists (one entry per week/kind)
