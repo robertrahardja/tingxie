@@ -167,7 +167,9 @@
 "责打",
 "愚昧",
 "人",
-"一百下",
+"一",
+"百",
+"下",
 "。"
 ],
 "恶人只寻背叛，所以必有严厉的使者奉差攻击他。": [
@@ -850,9 +852,17 @@
 "py": "yú mèi",
 "en": "foolish; not wanting to learn"
 },
-"一百下": {
-"py": "yī bǎi xià",
-"en": "一 one + 百 hundred + 下 down"
+"一": {
+"py": "yī",
+"en": "one; single; a (article)"
+},
+"百": {
+"py": "bǎi",
+"en": "hundred; numerous; all kinds of"
+},
+"下": {
+"py": "xià",
+"en": "down; downwards; below"
 },
 "恶人": {
 "py": "è rén",

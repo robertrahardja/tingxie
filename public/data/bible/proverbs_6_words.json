@@ -518,7 +518,8 @@
 "他",
 "必",
 "赔还",
-"七倍",
+"七",
+"倍",
 "，",
 "必将",
 "家",
@@ -1469,9 +1470,13 @@
 "py": "péi hái",
 "en": "赔 to compensate for loss + 还 still"
 },
-"七倍": {
-"py": "qī bèi",
-"en": "七 seven + 倍 -fold"
+"七": {
+"py": "qī",
+"en": "seven; 7"
+},
+"倍": {
+"py": "bèi",
+"en": "(two, three etc) -fold; times (multiplier); double"
 },
 "必将": {
 "py": "bì jiāng",

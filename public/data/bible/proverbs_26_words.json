@@ -282,7 +282,8 @@
 "看",
 "自己",
 "比",
-"七个",
+"七",
+"个",
 "善于",
 "应对",
 "的",
@@ -991,9 +992,13 @@
 "py": "kàn",
 "en": "to see; to look at; to read; to watch"
 },
-"七个": {
-"py": "qī gè",
-"en": "七 seven + 个"
+"七": {
+"py": "qī",
+"en": "seven; 7"
+},
+"个": {
+"py": "gè",
+"en": "(classifier used before a noun that has no specific classifier)"
 },
 "善于": {
 "py": "shàn yú",

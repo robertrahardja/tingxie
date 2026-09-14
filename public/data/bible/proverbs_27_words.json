@@ -7,7 +7,8 @@
 "自夸",
 "，",
 "因为",
-"一日",
+"一",
+"日",
 "要",
 "生",
 "何事",
@@ -536,9 +537,13 @@
 "py": "yīn wèi",
 "en": "because; owing to; on account of"
 },
-"一日": {
-"py": "yī rì",
-"en": "一 one + 日 sun"
+"一": {
+"py": "yī",
+"en": "one; single; a (article)"
+},
+"日": {
+"py": "rì",
+"en": "(bound form) sun; day; day of the month"
 },
 "要": {
 "py": "yào",
@@ -1075,10 +1080,6 @@
 "之": {
 "py": "zhī",
 "en": "'s; of (old word)"
-},
-"日": {
-"py": "rì",
-"en": "(bound form) sun; day; day of the month"
 },
 "滴漏": {
 "py": "dī lòu",

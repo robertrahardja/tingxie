@@ -1039,8 +1039,18 @@ SKIP_GLOSS = ("CL:", "variant of", "see ", "also written", "old variant", "used 
 # character composition ("必 surely will + 如 as"). Rather than list every one
 # in DEL_WORDS, peel these off any token no dictionary knows — it generalises
 # to the chapters nobody has inspected by hand.
-PEEL_HEAD = "必我这你他她其之所乃就要能可有无不多同当因以为使人义手口心舌致合用求谋作民吐反只且便"
-PEEL_TAIL = "必我这你他她其之所乃就要能可有无不多同当因以为得中里上下人义手口心舌致合用求谋作民吐"
+# 箴言 also counts constantly ("有三样…共有四样", 七倍, 两个) and stacks 之
+# between nouns (天之高, 地之厚, 血之罪), which jieba glues the same way.
+PEEL_HEAD = (
+    "必我这你他她其之所乃就要能可有无不多同当因以为使人义"
+    "手口心舌致合用求谋作民吐反只且便"
+    "一两三四五六七八九十百千"
+)
+PEEL_TAIL = (
+    "必我这你他她其之所乃就要能可有无不多同当因以为得中里上下人义"
+    "手口心舌致合用求谋作民吐"
+    "样个倍件宗次高厚"
+)
 
 
 def peel(token: str, known) -> list[str]:

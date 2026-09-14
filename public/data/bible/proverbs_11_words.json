@@ -110,7 +110,8 @@
 ],
 "恶人一死，他的指望必灭绝；罪人的盼望也必灭没。": [
 "恶人",
-"一死",
+"一",
+"死",
 "，",
 "他",
 "的",
@@ -759,9 +760,13 @@
 "py": "zhōng",
 "en": "(bound form) China; Chinese"
 },
-"一死": {
-"py": "yī sǐ",
-"en": "一 one + 死 to die"
+"一": {
+"py": "yī",
+"en": "one; single; a (article)"
+},
+"死": {
+"py": "sǐ",
+"en": "to die; impassable; uncrossable"
 },
 "指望": {
 "py": "zhǐ wàng",

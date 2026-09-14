@@ -433,7 +433,8 @@
 ],
 "有一条路，人以为正，至终成为死亡之路。": [
 "有",
-"一条",
+"一",
+"条",
 "路",
 "，",
 "人",
@@ -1250,9 +1251,13 @@
 "py": "yī zhì",
 "en": "to treat (an illness); medical treatment"
 },
-"一条": {
-"py": "yī tiáo",
-"en": "一 one + 条 strip"
+"一": {
+"py": "yī",
+"en": "one; single; a (article)"
+},
+"条": {
+"py": "tiáo",
+"en": "strip; item; article"
 },
 "路": {
 "py": "lù",
