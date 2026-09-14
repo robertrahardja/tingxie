@@ -49,13 +49,50 @@ $PY scripts/generate_bible_tts.py 1
 
 Omit the chapter numbers to do all 31.
 
-### English
+### English — two lines, and the difference matters
 
-`public/data/bible/proverbs_en.json` maps `"<chapter>:<verse>"` to a
-kid-level English line, **written by hand** — CC-CEDICT glosses words, not
-verses, and a public-domain English Bible (WEB) reads as hard as the Chinese.
-Aim at "what this verse is saying" at P2/P3 level. A verse with no entry is
-emitted with `"en": ""` and the page just omits the line.
+Each verse carries **two** English lines, and the page labels both:
+
+| Field | Label | What it is |
+|---|---|---|
+| `kjv` | `KJV` | King James Version — a real translation, public domain |
+| `en` | `简单说` | a hand-written plain-English paraphrase, P2/P3 level |
+
+`kjv` comes from `https://ebible.org/Scriptures/eng-kjv_vpl.zip` (1769
+standardised text). `build_bible_text.py` strips the `¶` paragraph marks and
+unwraps the `[bracketed]` words the 1611 translators supplied — "A wise [man]
+will hear" reads as broken punctuation to a child, and the convention carries
+nothing a P3 reader can use.
+
+`en` lives in `public/data/bible/proverbs_en.json`, keyed `"<chapter>:<verse>"`,
+**written by hand**. The KJV's archaic English ("to give subtilty to the
+simple") is harder than the Chinese, so it does not serve a P2 reader on its
+own — that is the only reason the paraphrase exists.
+
+> **Never present `en` as scripture.** It is not a translation and has no
+> authority behind it. The page marks it 简单说 on an amber chip and says so
+> again in the footer. If that labelling is ever removed, the paraphrase must
+> go too.
+
+A verse with no entry is emitted with `"en": ""` and the page omits the line.
+
+#### On the NKJV
+
+Asked for and declined: the NKJV is copyrighted by Thomas Nelson, and their
+permissions are cumulative — ~500 verses **and** not a complete book of the
+Bible **and** under 25% of the work. Proverbs is 915 verses and *is* a
+complete book, so it fails on two counts independently, and "personal,
+non-commercial" is not among the conditions. A deployed Worker on a public URL
+is distribution. Chapters 1–9 alone (~250 verses) would be inside the
+allowance if it ever comes up again; the whole book is not.
+
+#### On the KJV and the Crown patent
+
+eBible's own notice: the KJV is "firmly in the Public Domain" outside the UK.
+Letters patent give CUP/OUP/Collins the exclusive right to **print** it in the
+UK or import printed copies — a printing restriction, not a restriction on a
+web page served from Cloudflare. Safe here; worth knowing before anyone prints
+a booklet from it in Britain.
 
 ### Audio
 

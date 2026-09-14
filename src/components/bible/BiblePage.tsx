@@ -186,7 +186,13 @@ export function BiblePage({ book, chapter }: { book: string; chapter: string }) 
         <ChapterNav book={book} chapter={ch} chapters={meta.chapters} />
 
         <p className="mt-4 px-1 text-center text-[11px] leading-5 text-white/70">
-          经文：和合本（1919，公有领域）· 词典：CC-CEDICT（CC BY-SA 4.0）· 朗读：语音合成
+          中文：和合本（1919，公有领域）· English: King James Version (public domain)
+          <br />
+          <span className="text-amber-200/90">
+            「简单说」是为了帮助阅读而写的白话解释，不是圣经译文。
+          </span>
+          <br />
+          词典：CC-CEDICT（CC BY-SA 4.0）· 朗读：语音合成
         </p>
 
         {sheet && (
@@ -231,8 +237,26 @@ function VerseRow({
         <p className="text-[17px] leading-9 text-gray-900">
           <Seg text={verse.zh} />
         </p>
-        {showEn && verse.en && (
-          <p className="mt-1 text-xs leading-5 text-gray-500">{verse.en}</p>
+        {showEn && (verse.kjv || verse.en) && (
+          <div className="mt-2 space-y-1.5">
+            {verse.kjv && (
+              <p className="text-xs leading-5 text-gray-600">
+                <span className="mr-1.5 rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-500">
+                  KJV
+                </span>
+                {verse.kjv}
+              </p>
+            )}
+            {verse.en && (
+              /* Clearly not scripture: a plain-English paraphrase, labelled. */
+              <p className="text-xs leading-5 text-gray-500">
+                <span className="mr-1.5 rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-bold text-amber-800">
+                  简单说
+                </span>
+                {verse.en}
+              </p>
+            )}
+          </div>
         )}
       </div>
     </div>

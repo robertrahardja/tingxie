@@ -10,15 +10,23 @@ titles, etc., have been removed", which is what keeps this to the 1919 和合本
 wording (public domain) plus punctuation. Do NOT swap in the HTML edition:
 that one carries the 1988 section headings, which are not ours to ship.
 
-English lines are written by hand in public/data/bible/proverbs_en.json
-(kid-level, one per verse); any verse without one is emitted with "en": "".
+Each verse carries two English lines, and the page labels which is which:
+
+  "kjv"  the King James Version, from eBible's eng-kjv_vpl.zip. Public domain
+         (the Crown letters patent restricts *printing* in the UK only, not a
+         web page). This is a real translation.
+  "en"   a plain-English paraphrase written by hand in proverbs_en.json, at
+         P2/P3 reading level. NOT a translation and not authoritative — it
+         exists because the KJV's archaic English is harder than the Chinese.
+
+Never present "en" as scripture; the page marks it 简单说 / "in simple words".
 
 Writes public/data/bible/proverbs_<n>.json:
     { "book": "箴言", "bookEn": "Proverbs", "chapter": 1, "chapters": 31,
-      "verses": [ { "n": 1, "zh": "…", "en": "…" }, … ] }
+      "verses": [ { "n": 1, "zh": "…", "kjv": "…", "en": "…" }, … ] }
 
 Usage:
-    python3 scripts/build_bible_text.py <path-to-cmn-cu89s_vpl.txt> [chapters…]
+    python3 scripts/build_bible_text.py <cmn-cu89s_vpl.txt> <eng-kjv_vpl.txt> [chapters…]
 """
 
 import json
@@ -49,34 +57,64 @@ def clean(text: str) -> str:
     return re.sub(r"\s+", "", text).strip()
 
 
+def clean_en(text: str) -> str:
+    """
+    KJV VPL markup, removed for a child reading it:
+      ¶        paragraph mark, meaningless here
+      [words]  words the 1611 translators supplied, italicised in print.
+               Unwrapped rather than dropped — "A wise [man] will hear"
+               reads as broken punctuation, and the convention carries
+               nothing a P3 reader can use.
+    """
+    text = text.replace("¶", " ")
+    text = re.sub(r"\[([^\]]*)\]", r"\1", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def read_vpl(src: Path, book: str) -> dict[tuple[int, int], str]:
+    """{(chapter, verse): text} for one book of a verse-per-line archive."""
+    out: dict[tuple[int, int], str] = {}
+    line = re.compile(rf"^{book} (\d+):(\d+) (.*)$")
+    for lineno, raw in enumerate(src.read_text(encoding="utf-8").splitlines(), 1):
+        if raw.strip() and not ANY_VERSE.match(raw):
+            sys.exit(
+                f"ABORT: {src.name}:{lineno} is not a verse line — this looks like an\n"
+                f"HTML edition, which carries section headings. Use *_vpl.zip.\n"
+                f"  {raw[:80]}"
+            )
+        m = line.match(raw)
+        if m:
+            out[(int(m.group(1)), int(m.group(2)))] = m.group(3)
+    return out
+
+
 def main() -> None:
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 3:
         sys.exit(__doc__)
-    src = Path(sys.argv[1])
-    want = {int(a) for a in sys.argv[2:]} or set(range(1, CHAPTERS + 1))
+    zh_src, kjv_src = Path(sys.argv[1]), Path(sys.argv[2])
+    want = {int(a) for a in sys.argv[3:]} or set(range(1, CHAPTERS + 1))
 
     english: dict[str, str] = {}
     if EN_FILE.exists():
         english = json.loads(EN_FILE.read_text(encoding="utf-8"))
 
-    chapters: dict[int, list[dict]] = {}
-    for lineno, raw in enumerate(src.read_text(encoding="utf-8").splitlines(), 1):
-        if raw.strip() and not ANY_VERSE.match(raw):
-            sys.exit(
-                f"ABORT: {src.name}:{lineno} is not a verse line — this looks like the\n"
-                f"HTML edition, which carries the 1988 section headings. Use *_vpl.zip.\n"
-                f"  {raw[:80]}"
-            )
-        m = LINE.match(raw)
-        if not m:
-            continue
-        ch, vs, text = int(m.group(1)), int(m.group(2)), clean(m.group(3))
-        chapters.setdefault(ch, []).append(
-            {"n": vs, "zh": text, "en": english.get(f"{ch}:{vs}", "")}
-        )
+    zh = read_vpl(zh_src, BOOK)
+    kjv = read_vpl(kjv_src, BOOK)
+    if not zh:
+        sys.exit(f"no {BOOK} lines in {zh_src}")
+    if not kjv:
+        sys.exit(f"no {BOOK} lines in {kjv_src}")
 
-    if not chapters:
-        sys.exit(f"no {BOOK} lines in {src}")
+    chapters: dict[int, list[dict]] = {}
+    for (ch, vs), text in sorted(zh.items()):
+        chapters.setdefault(ch, []).append(
+            {
+                "n": vs,
+                "zh": clean(text),
+                "kjv": clean_en(kjv.get((ch, vs), "")),
+                "en": english.get(f"{ch}:{vs}", ""),
+            }
+        )
 
     OUT.mkdir(parents=True, exist_ok=True)
     total = 0

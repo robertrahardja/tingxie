@@ -3,7 +3,12 @@
 export interface Verse {
   n: number
   zh: string
-  /** Kid-level English, hand-written in public/data/bible/proverbs_en.json. */
+  /** King James Version — a real translation, public domain. */
+  kjv: string
+  /**
+   * A plain-English paraphrase, hand-written at P2/P3 level. NOT a translation
+   * and not authoritative: the page always labels it 简单说, never as scripture.
+   */
   en: string
 }
 
