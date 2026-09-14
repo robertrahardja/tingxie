@@ -1,0 +1,194 @@
+{
+ "book": "箴言",
+ "bookEn": "Proverbs",
+ "chapter": 31,
+ "chapters": 31,
+ "verses": [
+  {
+   "n": 1,
+   "zh": "利慕伊勒王的言语，是他母亲教训他的真言。",
+   "kjv": "The words of king Lemuel, the prophecy that his mother taught him.",
+   "en": "The words of King Lemuel — the message his mother taught him:"
+  },
+  {
+   "n": 2,
+   "zh": "我的儿啊，我腹中生的儿啊，我许愿得的儿啊！我当怎样教训你呢？",
+   "kjv": "What, my son? and what, the son of my womb? and what, the son of my vows?",
+   "en": "My son! Son that I gave birth to! Son that I promised to God! What shall I teach you?"
+  },
+  {
+   "n": 3,
+   "zh": "不要将你的精力给妇女；也不要有败坏君王的行为。",
+   "kjv": "Give not thy strength unto women, nor thy ways to that which destroyeth kings.",
+   "en": "Do not give your strength away to women, or your ways to what ruins kings."
+  },
+  {
+   "n": 4,
+   "zh": "利慕伊勒啊，君王喝酒，君王喝酒不相宜；王子说浓酒在那里也不相宜；",
+   "kjv": "It is not for kings, O Lemuel, it is not for kings to drink wine; nor for princes strong drink:",
+   "en": "Lemuel, it is not for kings to drink wine, and not for rulers to crave strong drink,"
+  },
+  {
+   "n": 5,
+   "zh": "恐怕喝了就忘记律例，颠倒一切困苦人的是非。",
+   "kjv": "Lest they drink, and forget the law, and pervert the judgment of any of the afflicted.",
+   "en": "or they will drink and forget the law, and take away what is fair from people who are suffering."
+  },
+  {
+   "n": 6,
+   "zh": "可以把浓酒给将亡的人喝，把清酒给苦心的人喝，",
+   "kjv": "Give strong drink unto him that is ready to perish, and wine unto those that be of heavy hearts.",
+   "en": "Give strong drink to someone who is dying, and wine to someone whose heart is heavy."
+  },
+  {
+   "n": 7,
+   "zh": "让他喝了，就忘记他的贫穷，不再记念他的苦楚。",
+   "kjv": "Let him drink, and forget his poverty, and remember his misery no more.",
+   "en": "Let them drink and forget how poor they are, and remember their misery no more."
+  },
+  {
+   "n": 8,
+   "zh": "你当为哑巴开口，为一切孤独的伸冤。",
+   "kjv": "Open thy mouth for the dumb in the cause of all such as are appointed to destruction.",
+   "en": "Speak up for people who cannot speak for themselves, for the rights of everyone left with nothing."
+  },
+  {
+   "n": 9,
+   "zh": "你当开口按公义判断，为困苦和穷乏的辨屈。",
+   "kjv": "Open thy mouth, judge righteously, and plead the cause of the poor and needy.",
+   "en": "Speak up and judge fairly; defend the poor and the needy."
+  },
+  {
+   "n": 10,
+   "zh": "才德的妇人谁能得着呢？她的价值远胜过珍珠。",
+   "kjv": "Who can find a virtuous woman? for her price is far above rubies.",
+   "en": "Who can find a capable wife? She is worth far more than jewels."
+  },
+  {
+   "n": 11,
+   "zh": "她丈夫心里倚靠她，必不缺少利益；",
+   "kjv": "The heart of her husband doth safely trust in her, so that he shall have no need of spoil.",
+   "en": "Her husband trusts her completely, and he lacks nothing of value."
+  },
+  {
+   "n": 12,
+   "zh": "她一生使丈夫有益无损。",
+   "kjv": "She will do him good and not evil all the days of her life.",
+   "en": "She does him good and never harm, all the days of her life."
+  },
+  {
+   "n": 13,
+   "zh": "她寻找羊绒和麻，甘心用手做工。",
+   "kjv": "She seeketh wool, and flax, and worketh willingly with her hands.",
+   "en": "She looks for wool and flax and works gladly with her hands."
+  },
+  {
+   "n": 14,
+   "zh": "她好像商船从远方运粮来，",
+   "kjv": "She is like the merchants’ ships; she bringeth her food from afar.",
+   "en": "She is like trading ships, bringing food from far away."
+  },
+  {
+   "n": 15,
+   "zh": "未到黎明她就起来，把食物分给家中的人，将当做的工分派婢女。",
+   "kjv": "She riseth also while it is yet night, and giveth meat to her household, and a portion to her maidens.",
+   "en": "She gets up while it is still dark to give her household food and to set the servant girls their work."
+  },
+  {
+   "n": 16,
+   "zh": "她想得田地就买来；用手所得之利栽种葡萄园。",
+   "kjv": "She considereth a field, and buyeth it: with the fruit of her hands she planteth a vineyard.",
+   "en": "She looks at a field and buys it; with what she has earned she plants a vineyard."
+  },
+  {
+   "n": 17,
+   "zh": "她以能力束腰，使膀臂有力。",
+   "kjv": "She girdeth her loins with strength, and strengtheneth her arms.",
+   "en": "She rolls up her sleeves and makes her arms strong."
+  },
+  {
+   "n": 18,
+   "zh": "她觉得所经营的有利；她的灯终夜不灭。",
+   "kjv": "She perceiveth that her merchandise is good: her candle goeth not out by night.",
+   "en": "She knows her work is worth doing, and her lamp does not go out at night."
+  },
+  {
+   "n": 19,
+   "zh": "她手拿捻线竿，手把纺线车。",
+   "kjv": "She layeth her hands to the spindle, and her hands hold the distaff.",
+   "en": "Her hands hold the spinning stick and the spindle."
+  },
+  {
+   "n": 20,
+   "zh": "她张手周济困苦人，伸手帮补穷乏人。",
+   "kjv": "She stretcheth out her hand to the poor; yea, she reacheth forth her hands to the needy.",
+   "en": "She opens her hand to the poor and reaches out to help those in need."
+  },
+  {
+   "n": 21,
+   "zh": "她不因下雪为家里的人担心，因为全家都穿着朱红衣服。",
+   "kjv": "She is not afraid of the snow for her household: for all her household are clothed with scarlet.",
+   "en": "She is not worried about snow for her household, because they are all warmly dressed in red."
+  },
+  {
+   "n": 22,
+   "zh": "她为自己制作绣花毯子；她的衣服是细麻和紫色布做的。",
+   "kjv": "She maketh herself coverings of tapestry; her clothing is silk and purple.",
+   "en": "She makes her own bed coverings; her clothes are fine linen and purple."
+  },
+  {
+   "n": 23,
+   "zh": "她丈夫在城门口与本地的长老同坐，为众人所认识。",
+   "kjv": "Her husband is known in the gates, when he sitteth among the elders of the land.",
+   "en": "Her husband is respected at the city gate, where he sits with the town elders."
+  },
+  {
+   "n": 24,
+   "zh": "她做细麻布衣裳出卖，又将腰带卖与商家。",
+   "kjv": "She maketh fine linen, and selleth it; and delivereth girdles unto the merchant.",
+   "en": "She makes fine linen clothes and sells them, and supplies belts to the traders."
+  },
+  {
+   "n": 25,
+   "zh": "能力和威仪是她的衣服；她想到日后的景况就喜笑。",
+   "kjv": "Strength and honour are her clothing; and she shall rejoice in time to come.",
+   "en": "Strength and dignity are what she wears, and she can laugh at whatever is coming."
+  },
+  {
+   "n": 26,
+   "zh": "她开口就发智慧；她舌上有仁慈的法则。",
+   "kjv": "She openeth her mouth with wisdom; and in her tongue is the law of kindness.",
+   "en": "She opens her mouth with wisdom, and kind teaching is on her tongue."
+  },
+  {
+   "n": 27,
+   "zh": "她观察家务，并不吃闲饭。",
+   "kjv": "She looketh well to the ways of her household, and eateth not the bread of idleness.",
+   "en": "She watches over her household and never eats the bread of laziness."
+  },
+  {
+   "n": 28,
+   "zh": "她的儿女起来称她有福；她的丈夫也称赞她，",
+   "kjv": "Her children arise up, and call her blessed; her husband also, and he praiseth her.",
+   "en": "Her children stand up and call her happy, and her husband praises her too:"
+  },
+  {
+   "n": 29,
+   "zh": "说：才德的女子很多，惟独你超过一切。",
+   "kjv": "Many daughters have done virtuously, but thou excellest them all.",
+   "en": "\"Many women do capable things, but you are better than them all.\""
+  },
+  {
+   "n": 30,
+   "zh": "艳丽是虚假的，美容是虚浮的；惟敬畏耶和华的妇女必得称赞。",
+   "kjv": "Favour is deceitful, and beauty is vain: but a woman that feareth the LORD, she shall be praised.",
+   "en": "Charm can fool you and beauty does not last, but a woman who respects the LORD deserves the praise."
+  },
+  {
+   "n": 31,
+   "zh": "愿她享受操作所得的；愿她的工作在城门口荣耀她。",
+   "kjv": "Give her of the fruit of her hands; and let her own works praise her in the gates.",
+   "en": "Give her the reward she has earned, and let what she has done be praised at the city gate."
+  }
+ ]
+}

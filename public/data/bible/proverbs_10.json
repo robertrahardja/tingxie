@@ -1,0 +1,200 @@
+{
+ "book": "箴言",
+ "bookEn": "Proverbs",
+ "chapter": 10,
+ "chapters": 31,
+ "verses": [
+  {
+   "n": 1,
+   "zh": "所罗门的箴言：智慧之子使父亲欢乐；愚昧之子叫母亲担忧。",
+   "kjv": "The proverbs of Solomon. A wise son maketh a glad father: but a foolish son is the heaviness of his mother.",
+   "en": "The wise sayings of Solomon. A wise son makes his father glad; a foolish son makes his mother sad."
+  },
+  {
+   "n": 2,
+   "zh": "不义之财毫无益处；惟有公义能救人脱离死亡。",
+   "kjv": "Treasures of wickedness profit nothing: but righteousness delivereth from death.",
+   "en": "Money got by doing wrong is no use at all, but doing right saves a person from death."
+  },
+  {
+   "n": 3,
+   "zh": "耶和华不使义人受饥饿；恶人所欲的，他必推开。",
+   "kjv": "The LORD will not suffer the soul of the righteous to famish: but he casteth away the substance of the wicked.",
+   "en": "The LORD will not let a good person go hungry, but he pushes away what bad people are greedy for."
+  },
+  {
+   "n": 4,
+   "zh": "手懒的，要受贫穷；手勤的，却要富足。",
+   "kjv": "He becometh poor that dealeth with a slack hand: but the hand of the diligent maketh rich.",
+   "en": "Lazy hands make a person poor, but hard-working hands make a person rich."
+  },
+  {
+   "n": 5,
+   "zh": "夏天聚敛的，是智慧之子；收割时沉睡的，是贻羞之子。",
+   "kjv": "He that gathereth in summer is a wise son: but he that sleepeth in harvest is a son that causeth shame.",
+   "en": "Gathering crops in summer is what a wise son does; sleeping through harvest is what a shameful son does."
+  },
+  {
+   "n": 6,
+   "zh": "福祉临到义人的头；强暴蒙蔽恶人的口。",
+   "kjv": "Blessings are upon the head of the just: but violence covereth the mouth of the wicked.",
+   "en": "Blessings rest on the head of a good person, but violence covers the mouth of a bad one."
+  },
+  {
+   "n": 7,
+   "zh": "义人的纪念被称赞；恶人的名字必朽烂。",
+   "kjv": "The memory of the just is blessed: but the name of the wicked shall rot.",
+   "en": "People remember a good person kindly, but the name of a bad person rots away."
+  },
+  {
+   "n": 8,
+   "zh": "心中智慧的，必受命令；口里愚妄的，必致倾倒。",
+   "kjv": "The wise in heart will receive commandments: but a prating fool shall fall.",
+   "en": "A wise heart takes in commands, but a person who babbles foolishly will fall."
+  },
+  {
+   "n": 9,
+   "zh": "行正直路的，步步安稳；走弯曲道的，必致败露。",
+   "kjv": "He that walketh uprightly walketh surely: but he that perverteth his ways shall be known.",
+   "en": "Walking honestly means walking safely; walking crooked ways means being found out."
+  },
+  {
+   "n": 10,
+   "zh": "以眼传神的，使人忧患；口里愚妄的，必致倾倒。",
+   "kjv": "He that winketh with the eye causeth sorrow: but a prating fool shall fall.",
+   "en": "Someone who winks slyly causes trouble, and a person who babbles foolishly will fall."
+  },
+  {
+   "n": 11,
+   "zh": "义人的口是生命的泉源；强暴蒙蔽恶人的口。",
+   "kjv": "The mouth of a righteous man is a well of life: but violence covereth the mouth of the wicked.",
+   "en": "A good person's mouth is a well of life, but violence covers the mouth of a bad one."
+  },
+  {
+   "n": 12,
+   "zh": "恨能挑启争端；爱能遮掩一切过错。",
+   "kjv": "Hatred stirreth up strifes: but love covereth all sins.",
+   "en": "Hate stirs up quarrels, but love covers over every wrong."
+  },
+  {
+   "n": 13,
+   "zh": "明哲人嘴里有智慧；无知人背上受刑杖。",
+   "kjv": "In the lips of him that hath understanding wisdom is found: but a rod is for the back of him that is void of understanding.",
+   "en": "Wisdom is found on the lips of someone who understands, but a stick is for the back of someone with no sense."
+  },
+  {
+   "n": 14,
+   "zh": "智慧人积存知识；愚妄人的口速致败坏。",
+   "kjv": "Wise men lay up knowledge: but the mouth of the foolish is near destruction.",
+   "en": "Wise people store up what they know, but a fool's mouth brings ruin close."
+  },
+  {
+   "n": 15,
+   "zh": "富户的财物是他的坚城；穷人的贫乏是他的败坏。",
+   "kjv": "The rich man’s wealth is his strong city: the destruction of the poor is their poverty.",
+   "en": "A rich person's money is like a strong city; being poor is what ruins the poor."
+  },
+  {
+   "n": 16,
+   "zh": "义人的勤劳致生；恶人的进项致死。",
+   "kjv": "The labour of the righteous tendeth to life: the fruit of the wicked to sin.",
+   "en": "A good person's work leads to life; what a bad person earns leads to sin."
+  },
+  {
+   "n": 17,
+   "zh": "谨守训诲的，乃在生命的道上；违弃责备的，便失迷了路。",
+   "kjv": "He is in the way of life that keepeth instruction: but he that refuseth reproof erreth.",
+   "en": "Whoever keeps to teaching is on the road of life, but whoever refuses correction gets lost."
+  },
+  {
+   "n": 18,
+   "zh": "隐藏怨恨的，有说谎的嘴；口出谗谤的，是愚妄的人。",
+   "kjv": "He that hideth hatred with lying lips, and he that uttereth a slander, is a fool.",
+   "en": "Hiding hate means lying lips, and spreading gossip makes a person a fool."
+  },
+  {
+   "n": 19,
+   "zh": "多言多语难免有过；禁止嘴唇是有智慧。",
+   "kjv": "In the multitude of words there wanteth not sin: but he that refraineth his lips is wise.",
+   "en": "Too many words always bring wrongdoing; holding your tongue is wise."
+  },
+  {
+   "n": 20,
+   "zh": "义人的舌乃似高银；恶人的心所值无几。",
+   "kjv": "The tongue of the just is as choice silver: the heart of the wicked is little worth.",
+   "en": "A good person's tongue is like fine silver; a bad person's heart is worth very little."
+  },
+  {
+   "n": 21,
+   "zh": "义人的口教养多人；愚昧人因无知而死亡。",
+   "kjv": "The lips of the righteous feed many: but fools die for want of wisdom.",
+   "en": "A good person's words feed many, but fools die because they have no sense."
+  },
+  {
+   "n": 22,
+   "zh": "耶和华所赐的福使人富足，并不加上忧虑。",
+   "kjv": "The blessing of the LORD, it maketh rich, and he addeth no sorrow with it.",
+   "en": "The LORD's blessing makes a person rich, and he adds no sorrow to it."
+  },
+  {
+   "n": 23,
+   "zh": "愚妄人以行恶为戏耍；明哲人却以智慧为乐。",
+   "kjv": "It is as sport to a fool to do mischief: but a man of understanding hath wisdom.",
+   "en": "A fool thinks doing wrong is a game, but a person who understands enjoys wisdom."
+  },
+  {
+   "n": 24,
+   "zh": "恶人所怕的，必临到他；义人所愿的，必蒙应允。",
+   "kjv": "The fear of the wicked, it shall come upon him: but the desire of the righteous shall be granted.",
+   "en": "What a bad person dreads will happen to them; what a good person wants will be given."
+  },
+  {
+   "n": 25,
+   "zh": "暴风一过，恶人归于无有；义人的根基却是永久。",
+   "kjv": "As the whirlwind passeth, so is the wicked no more: but the righteous is an everlasting foundation.",
+   "en": "When the storm passes, bad people are gone, but good people stand firm for ever."
+  },
+  {
+   "n": 26,
+   "zh": "懒惰人叫差他的人如醋倒牙，如烟薰目。",
+   "kjv": "As vinegar to the teeth, and as smoke to the eyes, so is the sluggard to them that send him.",
+   "en": "Like vinegar on the teeth or smoke in the eyes, that is what a lazy person is to whoever sends him."
+  },
+  {
+   "n": 27,
+   "zh": "敬畏耶和华使人日子加多；但恶人的年岁必被减少。",
+   "kjv": "The fear of the LORD prolongeth days: but the years of the wicked shall be shortened.",
+   "en": "Respecting the LORD adds days to your life, but a bad person's years are cut short."
+  },
+  {
+   "n": 28,
+   "zh": "义人的盼望必得喜乐；恶人的指望必致灭没。",
+   "kjv": "The hope of the righteous shall be gladness: but the expectation of the wicked shall perish.",
+   "en": "What good people hope for ends in joy, but what bad people expect comes to nothing."
+  },
+  {
+   "n": 29,
+   "zh": "耶和华的道是正直人的保障，却成了作孽人的败坏。",
+   "kjv": "The way of the LORD is strength to the upright: but destruction shall be to the workers of iniquity.",
+   "en": "The LORD's way is a safe place for honest people, but ruin for those who do wrong."
+  },
+  {
+   "n": 30,
+   "zh": "义人永不挪移；恶人不得住在地上。",
+   "kjv": "The righteous shall never be removed: but the wicked shall not inhabit the earth.",
+   "en": "Good people will never be shaken loose, but bad people will not stay in the land."
+  },
+  {
+   "n": 31,
+   "zh": "义人的口滋生智慧；乖谬的舌必被割断。",
+   "kjv": "The mouth of the just bringeth forth wisdom: but the froward tongue shall be cut out.",
+   "en": "A good person's mouth grows wisdom, but a twisted tongue will be cut off."
+  },
+  {
+   "n": 32,
+   "zh": "义人的嘴能令人喜悦；恶人的口说乖谬的话。",
+   "kjv": "The lips of the righteous know what is acceptable: but the mouth of the wicked speaketh frowardness.",
+   "en": "A good person's lips know what is fitting, but a bad person's mouth says twisted things."
+  }
+ ]
+}

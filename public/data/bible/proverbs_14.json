@@ -1,0 +1,218 @@
+{
+ "book": "箴言",
+ "bookEn": "Proverbs",
+ "chapter": 14,
+ "chapters": 31,
+ "verses": [
+  {
+   "n": 1,
+   "zh": "智慧妇人建立家室；愚妄妇人亲手拆毁。",
+   "kjv": "Every wise woman buildeth her house: but the foolish plucketh it down with her hands.",
+   "en": "A wise woman builds up her home, but a foolish one pulls it down with her own hands."
+  },
+  {
+   "n": 2,
+   "zh": "行动正直的，敬畏耶和华；行事乖僻的，却藐视他。",
+   "kjv": "He that walketh in his uprightness feareth the LORD: but he that is perverse in his ways despiseth him.",
+   "en": "Living honestly shows you respect the LORD; living crookedly shows you look down on him."
+  },
+  {
+   "n": 3,
+   "zh": "愚妄人口中骄傲，如杖责打己身；智慧人的嘴必保守自己。",
+   "kjv": "In the mouth of the foolish is a rod of pride: but the lips of the wise shall preserve them.",
+   "en": "A fool's proud talk is a stick on his own back, but wise lips keep a person safe."
+  },
+  {
+   "n": 4,
+   "zh": "家里无牛，槽头干净；土产加多乃凭牛力。",
+   "kjv": "Where no oxen are, the crib is clean: but much increase is by the strength of the ox.",
+   "en": "With no ox the feeding trough stays clean, but it takes an ox's strength to bring in a big harvest."
+  },
+  {
+   "n": 5,
+   "zh": "诚实见证人不说谎话；假见证人吐出谎言。",
+   "kjv": "A faithful witness will not lie: but a false witness will utter lies.",
+   "en": "A truthful witness does not lie, but a false witness pours out lies."
+  },
+  {
+   "n": 6,
+   "zh": "亵慢人寻智慧，却寻不着；聪明人易得知识。",
+   "kjv": "A scorner seeketh wisdom, and findeth it not: but knowledge is easy unto him that understandeth.",
+   "en": "Someone who sneers looks for wisdom and never finds it, but knowledge comes easily to a person who understands."
+  },
+  {
+   "n": 7,
+   "zh": "到愚昧人面前，不见他嘴中有知识。",
+   "kjv": "Go from the presence of a foolish man, when thou perceivest not in him the lips of knowledge.",
+   "en": "Walk away from a foolish person; you will find no knowledge on his lips."
+  },
+  {
+   "n": 8,
+   "zh": "通达人的智慧在乎明白己道；愚昧人的愚妄乃是诡诈。",
+   "kjv": "The wisdom of the prudent is to understand his way: but the folly of fools is deceit.",
+   "en": "A sensible person's wisdom is understanding their own way; a fool's foolishness is fooling themselves."
+  },
+  {
+   "n": 9,
+   "zh": "愚妄人犯罪，以为戏耍；正直人互相喜悦。",
+   "kjv": "Fools make a mock at sin: but among the righteous there is favour.",
+   "en": "Fools laugh at doing wrong, but good people treat each other kindly."
+  },
+  {
+   "n": 10,
+   "zh": "心中的苦楚，自己知道；心里的喜乐，外人无干。",
+   "kjv": "The heart knoweth his own bitterness; and a stranger doth not intermeddle with his joy.",
+   "en": "Your heart knows its own sadness, and a stranger cannot share its joy."
+  },
+  {
+   "n": 11,
+   "zh": "奸恶人的房屋必倾倒；正直人的帐棚必兴盛。",
+   "kjv": "The house of the wicked shall be overthrown: but the tabernacle of the upright shall flourish.",
+   "en": "The house of bad people will be knocked down, but the tent of honest people will do well."
+  },
+  {
+   "n": 12,
+   "zh": "有一条路，人以为正，至终成为死亡之路。",
+   "kjv": "There is a way which seemeth right unto a man, but the end thereof are the ways of death.",
+   "en": "There is a road that looks right to a person, but in the end it leads to death."
+  },
+  {
+   "n": 13,
+   "zh": "人在喜笑中，心也忧愁；快乐至极就生愁苦。",
+   "kjv": "Even in laughter the heart is sorrowful; and the end of that mirth is heaviness.",
+   "en": "Even while laughing the heart can ache, and that happiness can end in sadness."
+  },
+  {
+   "n": 14,
+   "zh": "心中背道的，必满得自己的结果；善人必从自己的行为得以知足。",
+   "kjv": "The backslider in heart shall be filled with his own ways: and a good man shall be satisfied from himself.",
+   "en": "A person whose heart turns away gets filled with their own ways, but a good person is satisfied with theirs."
+  },
+  {
+   "n": 15,
+   "zh": "愚蒙人是话都信；通达人步步谨慎。",
+   "kjv": "The simple believeth every word: but the prudent man looketh well to his going.",
+   "en": "A simple person believes anything, but a sensible person watches every step."
+  },
+  {
+   "n": 16,
+   "zh": "智慧人惧怕，就远离恶事；愚妄人却狂傲自恃。",
+   "kjv": "A wise man feareth, and departeth from evil: but the fool rageth, and is confident.",
+   "en": "A wise person is careful and stays away from wrong, but a fool rages and is sure of himself."
+  },
+  {
+   "n": 17,
+   "zh": "轻易发怒的，行事愚妄；设立诡计的，被人恨恶。",
+   "kjv": "He that is soon angry dealeth foolishly: and a man of wicked devices is hated.",
+   "en": "Getting angry quickly makes a person act foolishly, and someone full of sly plans is hated."
+  },
+  {
+   "n": 18,
+   "zh": "愚蒙人得愚昧为产业；通达人得知识为冠冕。",
+   "kjv": "The simple inherit folly: but the prudent are crowned with knowledge.",
+   "en": "Simple people end up with foolishness, but sensible people are crowned with knowledge."
+  },
+  {
+   "n": 19,
+   "zh": "坏人俯伏在善人面前；恶人俯伏在义人门口。",
+   "kjv": "The evil bow before the good; and the wicked at the gates of the righteous.",
+   "en": "Bad people will bow down before good people, and the wicked at the gate of those who do right."
+  },
+  {
+   "n": 20,
+   "zh": "贫穷人连邻舍也恨他；富足人朋友最多。",
+   "kjv": "The poor is hated even of his own neighbour: but the rich hath many friends.",
+   "en": "A poor person is disliked even by their neighbour, but a rich person has many friends."
+  },
+  {
+   "n": 21,
+   "zh": "藐视邻舍的，这人有罪；怜悯贫穷的，这人有福。",
+   "kjv": "He that despiseth his neighbour sinneth: but he that hath mercy on the poor, happy is he.",
+   "en": "Looking down on your neighbour is doing wrong, but being kind to poor people brings happiness."
+  },
+  {
+   "n": 22,
+   "zh": "谋恶的，岂非走入迷途吗？谋善的，必得慈爱和诚实。",
+   "kjv": "Do they not err that devise evil? but mercy and truth shall be to them that devise good.",
+   "en": "Do those who plan evil not go astray? But those who plan good find kindness and honesty."
+  },
+  {
+   "n": 23,
+   "zh": "诸般勤劳都有益处；嘴上多言乃致穷乏。",
+   "kjv": "In all labour there is profit: but the talk of the lips tendeth only to penury.",
+   "en": "All hard work brings something in, but talk alone leads to being poor."
+  },
+  {
+   "n": 24,
+   "zh": "智慧人的财为自己的冠冕；愚妄人的愚昧终是愚昧。",
+   "kjv": "The crown of the wise is their riches: but the foolishness of fools is folly.",
+   "en": "Wise people's riches are their crown, but the foolishness of fools stays foolishness."
+  },
+  {
+   "n": 25,
+   "zh": "作真见证的，救人性命；吐出谎言的，施行诡诈。",
+   "kjv": "A true witness delivereth souls: but a deceitful witness speaketh lies.",
+   "en": "A truthful witness saves lives, but someone who pours out lies is playing tricks."
+  },
+  {
+   "n": 26,
+   "zh": "敬畏耶和华的，大有倚靠；他的儿女也有避难所。",
+   "kjv": "In the fear of the LORD is strong confidence: and his children shall have a place of refuge.",
+   "en": "Respecting the LORD makes a person strong and sure, and gives their children a safe place."
+  },
+  {
+   "n": 27,
+   "zh": "敬畏耶和华就是生命的泉源，可以使人离开死亡的网罗。",
+   "kjv": "The fear of the LORD is a fountain of life, to depart from the snares of death.",
+   "en": "Respecting the LORD is a fountain of life that turns you away from deadly traps."
+  },
+  {
+   "n": 28,
+   "zh": "帝王荣耀在乎民多；君王衰败在乎民少。",
+   "kjv": "In the multitude of people is the king’s honour: but in the want of people is the destruction of the prince.",
+   "en": "A king's glory is having many people; a ruler is ruined when there are few."
+  },
+  {
+   "n": 29,
+   "zh": "不轻易发怒的，大有聪明；性情暴躁的，大显愚妄。",
+   "kjv": "He that is slow to wrath is of great understanding: but he that is hasty of spirit exalteth folly.",
+   "en": "Being slow to get angry shows real understanding; a quick temper shows great foolishness."
+  },
+  {
+   "n": 30,
+   "zh": "心中安静是肉体的生命；嫉妒是骨中的朽烂。",
+   "kjv": "A sound heart is the life of the flesh: but envy the rottenness of the bones.",
+   "en": "A peaceful heart gives the body life, but jealousy rots the bones."
+  },
+  {
+   "n": 31,
+   "zh": "欺压贫寒的，是辱没造他的主；怜悯穷乏的，乃是尊敬主。",
+   "kjv": "He that oppresseth the poor reproacheth his Maker: but he that honoureth him hath mercy on the poor.",
+   "en": "Bullying a poor person insults the God who made them, but being kind to the needy honours him."
+  },
+  {
+   "n": 32,
+   "zh": "恶人在所行的恶上必被推倒；义人临死，有所投靠。",
+   "kjv": "The wicked is driven away in his wickedness: but the righteous hath hope in his death.",
+   "en": "Bad people are knocked down by their own wrongdoing, but a good person has somewhere to turn even in death."
+  },
+  {
+   "n": 33,
+   "zh": "智慧存在聪明人心中；愚昧人心里所存的，显而易见。",
+   "kjv": "Wisdom resteth in the heart of him that hath understanding: but that which is in the midst of fools is made known.",
+   "en": "Wisdom rests in the heart of a person who understands, but what is in a fool's heart shows plainly."
+  },
+  {
+   "n": 34,
+   "zh": "公义使邦国高举；罪恶是人民的羞辱。",
+   "kjv": "Righteousness exalteth a nation: but sin is a reproach to any people.",
+   "en": "Doing right lifts a nation up, but doing wrong brings shame on a people."
+  },
+  {
+   "n": 35,
+   "zh": "智慧的臣子蒙王恩惠；贻羞的仆人遭其震怒。",
+   "kjv": "The king’s favour is toward a wise servant: but his wrath is against him that causeth shame.",
+   "en": "A king is pleased with a wise servant, but angry with one who brings shame."
+  }
+ ]
+}

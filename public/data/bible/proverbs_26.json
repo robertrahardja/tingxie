@@ -1,0 +1,170 @@
+{
+ "book": "箴言",
+ "bookEn": "Proverbs",
+ "chapter": 26,
+ "chapters": 31,
+ "verses": [
+  {
+   "n": 1,
+   "zh": "夏天落雪，收割时下雨，都不相宜；愚昧人得尊荣也是如此。",
+   "kjv": "As snow in summer, and as rain in harvest, so honour is not seemly for a fool.",
+   "en": "Snow in summer and rain at harvest are both out of place — and so is honour given to a fool."
+  },
+  {
+   "n": 2,
+   "zh": "麻雀往来，燕子翻飞；这样，无故的咒诅也必不临到。",
+   "kjv": "As the bird by wandering, as the swallow by flying, so the curse causeless shall not come.",
+   "en": "Like a fluttering sparrow or a darting swallow, a curse with no reason behind it never lands."
+  },
+  {
+   "n": 3,
+   "zh": "鞭子是为打马，辔头是为勒驴；刑杖是为打愚昧人的背。",
+   "kjv": "A whip for the horse, a bridle for the ass, and a rod for the fool’s back.",
+   "en": "A whip for the horse, a bridle for the donkey, and a stick for the back of a fool."
+  },
+  {
+   "n": 4,
+   "zh": "不要照愚昧人的愚妄话回答他，恐怕你与他一样。",
+   "kjv": "Answer not a fool according to his folly, lest thou also be like unto him.",
+   "en": "Do not answer a fool with his own foolishness, or you will end up just like him."
+  },
+  {
+   "n": 5,
+   "zh": "要照愚昧人的愚妄话回答他，免得他自以为有智慧。",
+   "kjv": "Answer a fool according to his folly, lest he be wise in his own conceit.",
+   "en": "Answer a fool with his own foolishness, or he will think he is wise."
+  },
+  {
+   "n": 6,
+   "zh": "借愚昧人手寄信的，是砍断自己的脚，自受损害。",
+   "kjv": "He that sendeth a message by the hand of a fool cutteth off the feet, and drinketh damage.",
+   "en": "Sending a message by a fool is like cutting off your own feet and asking for trouble."
+  },
+  {
+   "n": 7,
+   "zh": "瘸子的脚空存无用；箴言在愚昧人的口中也是如此。",
+   "kjv": "The legs of the lame are not equal: so is a parable in the mouth of fools.",
+   "en": "A wise saying in a fool's mouth is as useless as the legs of someone who cannot walk."
+  },
+  {
+   "n": 8,
+   "zh": "将尊荣给愚昧人的，好像人把石子包在机弦里。",
+   "kjv": "As he that bindeth a stone in a sling, so is he that giveth honour to a fool.",
+   "en": "Giving honour to a fool is like tying a stone into a sling."
+  },
+  {
+   "n": 9,
+   "zh": "箴言在愚昧人的口中，好像荆棘刺入醉汉的手。",
+   "kjv": "As a thorn goeth up into the hand of a drunkard, so is a parable in the mouth of fools.",
+   "en": "A wise saying in a fool's mouth is like a thorn stuck in a drunk person's hand."
+  },
+  {
+   "n": 10,
+   "zh": "雇愚昧人的，与雇过路人的，就像射伤众人的弓箭手。",
+   "kjv": "The great God that formed all things both rewardeth the fool, and rewardeth transgressors.",
+   "en": "Hiring a fool or a passer-by is like an archer firing arrows at everyone."
+  },
+  {
+   "n": 11,
+   "zh": "愚昧人行愚妄事，行了又行，就如狗转过来吃它所吐的。",
+   "kjv": "As a dog returneth to his vomit, so a fool returneth to his folly.",
+   "en": "A fool goes back to his foolishness again and again, like a dog going back to its vomit."
+  },
+  {
+   "n": 12,
+   "zh": "你见自以为有智慧的人吗？愚昧人比他更有指望。",
+   "kjv": "Seest thou a man wise in his own conceit? there is more hope of a fool than of him.",
+   "en": "Do you see someone who thinks he is wise? There is more hope for a fool than for him."
+  },
+  {
+   "n": 13,
+   "zh": "懒惰人说：道上有猛狮，街上有壮狮。",
+   "kjv": "The slothful man saith, There is a lion in the way; a lion is in the streets.",
+   "en": "A lazy person says, \"There is a fierce lion on the road! A lion in the streets!\""
+  },
+  {
+   "n": 14,
+   "zh": "门在枢纽转动，懒惰人在床上也是如此。",
+   "kjv": "As the door turneth upon his hinges, so doth the slothful upon his bed.",
+   "en": "A door turns on its hinges, and a lazy person turns over in bed."
+  },
+  {
+   "n": 15,
+   "zh": "懒惰人放手在盘子里，就是向口撤回也以为劳乏。",
+   "kjv": "The slothful hideth his hand in his bosom; it grieveth him to bring it again to his mouth.",
+   "en": "A lazy person puts his hand in the dish and finds it too much trouble to lift it back to his mouth."
+  },
+  {
+   "n": 16,
+   "zh": "懒惰人看自己比七个善于应对的人更有智慧。",
+   "kjv": "The sluggard is wiser in his own conceit than seven men that can render a reason.",
+   "en": "A lazy person thinks he is wiser than seven people who can give a sensible answer."
+  },
+  {
+   "n": 17,
+   "zh": "过路被事激动，管理不干己的争竞，好像人揪住狗耳。",
+   "kjv": "He that passeth by, and meddleth with strife belonging not to him, is like one that taketh a dog by the ears.",
+   "en": "Jumping into someone else's quarrel as you pass by is like grabbing a dog by the ears."
+  },
+  {
+   "n": 18,
+   "zh": "人欺凌邻舍，却说：我岂不是戏耍吗？他就像疯狂的人抛掷火把、利箭，与杀人的兵器。",
+   "kjv": "As a mad man who casteth firebrands, arrows, and death, So is the man that deceiveth his neighbour, and saith, Am not I in sport?",
+   "en": "Someone who tricks their neighbour and then says \"I was only joking!\" is like a madman throwing firebrands, arrows and death about."
+  },
+  {
+   "n": 20,
+   "zh": "火缺了柴就必熄灭；无人传舌，争竞便止息。",
+   "kjv": "Where no wood is, there the fire goeth out: so where there is no talebearer, the strife ceaseth.",
+   "en": "Without wood a fire goes out, and without a gossip a quarrel dies down."
+  },
+  {
+   "n": 21,
+   "zh": "好争竞的人煽惑争端，就如余火加炭，火上加柴一样。",
+   "kjv": "As coals are to burning coals, and wood to fire; so is a contentious man to kindle strife.",
+   "en": "As coals feed hot coals and wood feeds fire, so a quarrelsome person keeps a fight burning."
+  },
+  {
+   "n": 22,
+   "zh": "传舌人的言语，如同美食，深入人的心腹。",
+   "kjv": "The words of a talebearer are as wounds, and they go down into the innermost parts of the belly.",
+   "en": "A gossip's words go down like tasty bites, deep into a person's insides."
+  },
+  {
+   "n": 23,
+   "zh": "火热的嘴，奸恶的心，好像银渣包的瓦器。",
+   "kjv": "Burning lips and a wicked heart are like a potsherd covered with silver dross.",
+   "en": "Warm words from a wicked heart are like a cheap clay pot coated with silver waste."
+  },
+  {
+   "n": 24,
+   "zh": "怨恨人的，用嘴粉饰，心里却藏着诡诈；",
+   "kjv": "He that hateth dissembleth with his lips, and layeth up deceit within him;",
+   "en": "Someone who hates you covers it up with their words while hiding tricks inside,"
+  },
+  {
+   "n": 25,
+   "zh": "他用甜言蜜语，你不可信他，因为他心中有七样可憎恶的。",
+   "kjv": "When he speaketh fair, believe him not: for there are seven abominations in his heart.",
+   "en": "so when they speak sweetly do not believe them, because their heart is full of wickedness."
+  },
+  {
+   "n": 26,
+   "zh": "他虽用诡诈遮掩自己的怨恨，他的邪恶必在会中显露。",
+   "kjv": "Whose hatred is covered by deceit, his wickedness shall be shewed before the whole congregation.",
+   "en": "Their hatred may be hidden behind tricks, but their wickedness will be shown to everyone."
+  },
+  {
+   "n": 27,
+   "zh": "挖陷坑的，自己必掉在其中；滚石头的，石头必反滚在他身上。",
+   "kjv": "Whoso diggeth a pit shall fall therein: and he that rolleth a stone, it will return upon him.",
+   "en": "Whoever digs a pit falls into it, and whoever rolls a stone will have it roll back on them."
+  },
+  {
+   "n": 28,
+   "zh": "虚谎的舌恨他所压伤的人；谄媚的口败坏人的事。",
+   "kjv": "A lying tongue hateth those that are afflicted by it; and a flattering mouth worketh ruin.",
+   "en": "A lying tongue hates the people it hurts, and smooth talk ruins others."
+  }
+ ]
+}

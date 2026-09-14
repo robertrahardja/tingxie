@@ -53,7 +53,15 @@ ANY_VERSE = re.compile(r"^[A-Z0-9]{3} \d+:\d+ ")
 
 
 def clean(text: str) -> str:
-    """VPL pads poetic half-lines with runs of spaces; collapse them."""
+    """
+    VPL pads poetic half-lines with runs of spaces; collapse them.
+
+    The CUV uses the same [bracket] convention as the KJV for words the
+    translators supplied (智[慧]要救你, 恶[人]的乖僻). Unwrap them: left in,
+    jieba segments 恶[人]的 as one lump and the brackets show up mid-sentence
+    on the page.
+    """
+    text = re.sub(r"\[([^\]]*)\]", r"\1", text)
     return re.sub(r"\s+", "", text).strip()
 
 
@@ -105,13 +113,29 @@ def main() -> None:
     if not kjv:
         sys.exit(f"no {BOOK} lines in {kjv_src}")
 
+    # The CUV merges a few verse pairs into one line (23:31+32, 26:18+19),
+    # which is why Proverbs is 913 lines but numbered to 915. The KJV keeps
+    # them separate, so those KJV verses have no Chinese line to join to —
+    # fold each orphan onto the Chinese verse that swallowed it, or its text
+    # would be silently dropped from the page.
+    zh_numbers = {(ch, vs) for (ch, vs) in zh}
+    orphans: dict[tuple[int, int], list[str]] = {}
+    for (ch, vs) in sorted(kjv):
+        if (ch, vs) in zh_numbers:
+            continue
+        prev = max((v for (c, v) in zh_numbers if c == ch and v < vs), default=None)
+        if prev is None:
+            sys.exit(f"ABORT: KJV {BOOK} {ch}:{vs} has no Chinese verse before it")
+        orphans.setdefault((ch, prev), []).append(kjv[(ch, vs)])
+
     chapters: dict[int, list[dict]] = {}
     for (ch, vs), text in sorted(zh.items()):
+        english_kjv = " ".join([kjv.get((ch, vs), ""), *orphans.get((ch, vs), [])])
         chapters.setdefault(ch, []).append(
             {
                 "n": vs,
                 "zh": clean(text),
-                "kjv": clean_en(kjv.get((ch, vs), "")),
+                "kjv": clean_en(english_kjv),
                 "en": english.get(f"{ch}:{vs}", ""),
             }
         )

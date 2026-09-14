@@ -120,7 +120,7 @@
 "法则",
 "；"
 ],
-"因为这要作你头上的华冠，你项上的[金]链。": [
+"因为这要作你头上的华冠，你项上的金链。": [
 "因为",
 "这",
 "要",
@@ -134,10 +134,7 @@
 "项",
 "上",
 "的",
-"[",
-"金",
-"]",
-"链",
+"金链",
 "。"
 ],
 "我儿，恶人若引诱你，你不可随从。": [
@@ -830,13 +827,9 @@
 "py": "shàng",
 "en": "(bound form) up; upper; above; previous; first; to climb; to get onto"
 },
-"金": {
-"py": "jīn",
-"en": "Jurchen Jin dynasty (1115–1234)"
-},
-"链": {
-"py": "liàn",
-"en": "chain; cable (unit of length: 100 fathoms, about 185 m)"
+"金链": {
+"py": "jīn liàn",
+"en": "金 Jurchen Jin dynasty + 链 chain"
 },
 "恶人": {
 "py": "è rén",
@@ -892,7 +885,7 @@
 },
 "蹲伏": {
 "py": "dūn fú",
-"en": "to crouch down and hide"
+"en": "to crouch and wait"
 },
 "害": {
 "py": "hài",
@@ -1044,7 +1037,7 @@
 },
 "急速": {
 "py": "jí sù",
-"en": "hurried; at a great speed; rapid (development)"
+"en": "in a great hurry"
 },
 "血": {
 "py": "xuè",
@@ -1056,7 +1049,7 @@
 },
 "网罗": {
 "py": "wǎng luó",
-"en": "a net for catching birds"
+"en": "a trap; a net"
 },
 "设": {
 "py": "shè",
@@ -1080,7 +1073,7 @@
 },
 "躲避": {
 "py": "duǒ bì",
-"en": "to hide; to evade; to dodge"
+"en": "to turn aside; to get out of the way"
 },
 "这些": {
 "py": "zhè xiē",
@@ -1360,7 +1353,7 @@
 },
 "暴风": {
 "py": "bào fēng",
-"en": "windstorm; (meteorology) storm (force 11 wind)"
+"en": "a storm wind"
 },
 "急难": {
 "py": "jí nàn",
@@ -1440,7 +1433,7 @@
 },
 "计谋": {
 "py": "jì móu",
-"en": "stratagem; scheme"
+"en": "a plan"
 },
 "背道": {
 "py": "bèi dào",
