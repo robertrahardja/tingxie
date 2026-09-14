@@ -4,8 +4,8 @@ import { useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { ttsPath } from '@/lib/tts'
 import { cn } from '@/lib/utils'
 import type { OralItem, Section } from '@/lib/zonghe/types'
-import { Card, SpeakButton } from './shared'
-import { Seg, WordsCtx } from './words'
+import { Card, SpeakButton } from '@/components/shared/ui'
+import { Seg, WordsCtx } from '@/components/shared/words'
 
 export function OralTab({
   section,

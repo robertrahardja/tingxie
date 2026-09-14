@@ -111,6 +111,7 @@ export const NAV_ITEMS: NavItem[] = [
   { href: '/p3hcl-reading-9', label: '阅读练习（九）' },
   { href: '/p3hcl-reading-sync', label: '阅读练习（七）' },
   { href: '/cc1', label: '知识画报' },
+  { href: '/bible/proverbs/1', label: '圣经：箴言' },
   { href: '/review', label: '复习词语' },
   { href: '/dashboard', label: '家长看板' },
   { href: '/settings', label: '设置' },

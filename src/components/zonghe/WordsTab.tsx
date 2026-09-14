@@ -4,8 +4,8 @@ import { useContext, useEffect, useState } from 'react'
 import { Link } from '@tanstack/react-router'
 import { cn } from '@/lib/utils'
 import type { WordEntry, WordsData } from '@/lib/zonghe/types'
-import { Card } from './shared'
-import { WordsCtx } from './words'
+import { Card } from '@/components/shared/ui'
+import { WordsCtx } from '@/components/shared/words'
 
 export function WordsTab({ data, week }: { data: WordsData; week: number }) {
   // Open on this week's list when there is one.

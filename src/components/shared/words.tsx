@@ -2,8 +2,8 @@
 // buttons; tapping one opens the WordSheet with pinyin, meaning and sound.
 import { createContext, useContext, useEffect } from 'react'
 import { cn } from '@/lib/utils'
-import { HAN } from '@/lib/zonghe/types'
-import type { WordBank, WordInfo } from '@/lib/zonghe/types'
+import { HAN } from '@/lib/shared/words'
+import type { WordBank, WordInfo } from '@/lib/shared/words'
 
 export const WordsCtx = createContext<{
   bank: WordBank | null

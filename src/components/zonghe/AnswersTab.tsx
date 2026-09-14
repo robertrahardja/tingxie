@@ -5,8 +5,8 @@ import { useContext, useEffect, useMemo, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { fillWithRanges } from '@/lib/zonghe/types'
 import type { Group, Question, Section } from '@/lib/zonghe/types'
-import { Card, NUM, SpeakButton } from './shared'
-import { Seg, WordsCtx } from './words'
+import { Card, NUM, SpeakButton } from '@/components/shared/ui'
+import { Seg, WordsCtx } from '@/components/shared/words'
 
 interface AnswersTabProps {
   sections: Section[]

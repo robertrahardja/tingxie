@@ -11,7 +11,7 @@ import { AnswersTab } from './AnswersTab'
 import { OralTab } from './OralTab'
 import { RewriteTab } from './RewriteTab'
 import { WordsTab } from './WordsTab'
-import { WordSheet, WordsCtx } from './words'
+import { WordSheet, WordsCtx } from '@/components/shared/words'
 
 type Tab = 'answers' | 'rewrite' | 'oral' | 'words'
 

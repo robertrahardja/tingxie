@@ -35,6 +35,7 @@ import { Route as CurriculumRouteImport } from './routes/curriculum'
 import { Route as Cc1RouteImport } from './routes/cc1'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ZongheWeekRouteImport } from './routes/zonghe.$week'
+import { Route as BibleBookChapterRouteImport } from './routes/bible.$book.$chapter'
 
 const VocabularyRoute = VocabularyRouteImport.update({
   id: '/vocabulary',
@@ -167,6 +168,11 @@ const ZongheWeekRoute = ZongheWeekRouteImport.update({
   path: '/zonghe/$week',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BibleBookChapterRoute = BibleBookChapterRouteImport.update({
+  id: '/bible/$book/$chapter',
+  path: '/bible/$book/$chapter',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -195,6 +201,7 @@ export interface FileRoutesByFullPath {
   '/shuihu-writing': typeof ShuihuWritingRoute
   '/vocabulary': typeof VocabularyRoute
   '/zonghe/$week': typeof ZongheWeekRoute
+  '/bible/$book/$chapter': typeof BibleBookChapterRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -223,6 +230,7 @@ export interface FileRoutesByTo {
   '/shuihu-writing': typeof ShuihuWritingRoute
   '/vocabulary': typeof VocabularyRoute
   '/zonghe/$week': typeof ZongheWeekRoute
+  '/bible/$book/$chapter': typeof BibleBookChapterRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -252,6 +260,7 @@ export interface FileRoutesById {
   '/shuihu-writing': typeof ShuihuWritingRoute
   '/vocabulary': typeof VocabularyRoute
   '/zonghe/$week': typeof ZongheWeekRoute
+  '/bible/$book/$chapter': typeof BibleBookChapterRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -282,6 +291,7 @@ export interface FileRouteTypes {
     | '/shuihu-writing'
     | '/vocabulary'
     | '/zonghe/$week'
+    | '/bible/$book/$chapter'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -310,6 +320,7 @@ export interface FileRouteTypes {
     | '/shuihu-writing'
     | '/vocabulary'
     | '/zonghe/$week'
+    | '/bible/$book/$chapter'
   id:
     | '__root__'
     | '/'
@@ -338,6 +349,7 @@ export interface FileRouteTypes {
     | '/shuihu-writing'
     | '/vocabulary'
     | '/zonghe/$week'
+    | '/bible/$book/$chapter'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -367,6 +379,7 @@ export interface RootRouteChildren {
   ShuihuWritingRoute: typeof ShuihuWritingRoute
   VocabularyRoute: typeof VocabularyRoute
   ZongheWeekRoute: typeof ZongheWeekRoute
+  BibleBookChapterRoute: typeof BibleBookChapterRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -553,6 +566,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ZongheWeekRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bible/$book/$chapter': {
+      id: '/bible/$book/$chapter'
+      path: '/bible/$book/$chapter'
+      fullPath: '/bible/$book/$chapter'
+      preLoaderRoute: typeof BibleBookChapterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -583,6 +603,7 @@ const rootRouteChildren: RootRouteChildren = {
   ShuihuWritingRoute: ShuihuWritingRoute,
   VocabularyRoute: VocabularyRoute,
   ZongheWeekRoute: ZongheWeekRoute,
+  BibleBookChapterRoute: BibleBookChapterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import type { RewriteItem, Section } from '@/lib/zonghe/types'
 import { GroupView } from './AnswersTab'
-import { Card, SpeakButton } from './shared'
-import { Seg } from './words'
+import { Card, SpeakButton } from '@/components/shared/ui'
+import { Seg } from '@/components/shared/words'
 
 export function RewriteTab({
   section,

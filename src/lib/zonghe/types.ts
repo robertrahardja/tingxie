@@ -98,19 +98,10 @@ export interface WordsData {
   weeks: WordWeek[]
 }
 
-// zonghe_<week>_words.json (scripts/build_zonghe_words.py): every text on the
-// page split into words, plus pinyin + meaning for every word.
-export interface WordBank {
-  seg: Record<string, string[]>
-  dict: Record<string, { py: string; en: string }>
-}
-
-export interface WordInfo {
-  py?: string
-  en?: string
-}
-
-export const HAN = /[一-鿿]/
+// The word bank and HAN now live in lib/shared/words.ts, shared with the
+// Bible pages; re-exported here so the zonghe tabs keep importing one module.
+export type { WordBank, WordInfo } from '@/lib/shared/words'
+export { HAN } from '@/lib/shared/words'
 
 // A paired connector like 因为……所以…… fills two blanks; otherwise fill the first.
 const answerParts = (text: string, answer: string) => {
