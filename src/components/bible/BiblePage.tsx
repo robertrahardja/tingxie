@@ -226,7 +226,9 @@ function VerseRow({
       </span>
       <SpeakButton text={verse.zh} speak={speak} small />
       <div className="min-w-0 flex-1">
-        <p className="text-[19px] leading-9 text-gray-900">
+        {/* leading-9 keeps each word button 44px tall (36px line + py-1), the
+            touch-target minimum; don't tighten it without adding padding. */}
+        <p className="text-[17px] leading-9 text-gray-900">
           <Seg text={verse.zh} />
         </p>
         {showEn && verse.en && (
