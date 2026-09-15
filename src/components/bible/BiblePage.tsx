@@ -238,15 +238,9 @@ function VerseRow({
           <Seg text={verse.zh} />
         </p>
         {showEn && (verse.kjv || verse.en) && (
+          /* The plain-English line comes first — it is the one a P3 reader can
+             actually use — with the KJV under it as the real translation. */
           <div className="mt-2 space-y-1.5">
-            {verse.kjv && (
-              <p className="text-xs leading-5 text-gray-600">
-                <span className="mr-1.5 rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-500">
-                  KJV
-                </span>
-                {verse.kjv}
-              </p>
-            )}
             {verse.en && (
               /* Clearly not scripture: a plain-English paraphrase, labelled. */
               <p className="text-xs leading-5 text-gray-500">
@@ -254,6 +248,14 @@ function VerseRow({
                   简单说
                 </span>
                 {verse.en}
+              </p>
+            )}
+            {verse.kjv && (
+              <p className="text-xs leading-5 text-gray-600">
+                <span className="mr-1.5 rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-500">
+                  KJV
+                </span>
+                {verse.kjv}
               </p>
             )}
           </div>
