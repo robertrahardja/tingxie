@@ -120,9 +120,10 @@
 "法则",
 "；"
 ],
-"因为这要作你头上的华冠，你项上的[金]链。": [
+"因为这要作你头上的华冠，你项上的金链。": [
 "因为",
-"这要",
+"这",
+"要",
 "作",
 "你",
 "头上",
@@ -133,10 +134,7 @@
 "项",
 "上",
 "的",
-"[",
-"金",
-"]",
-"链",
+"金链",
 "。"
 ],
 "我儿，恶人若引诱你，你不可随从。": [
@@ -185,11 +183,13 @@
 "把",
 "他们",
 "活活",
-"吞下",
+"吞",
+"下",
 "；",
 "他们",
 "如同",
-"下坑",
+"下",
+"坑",
 "的",
 "人",
 "，",
@@ -270,7 +270,8 @@
 "飞鸟",
 "，",
 "网罗",
-"设在",
+"设",
+"在",
 "眼前",
 "仍",
 "不",
@@ -284,14 +285,18 @@
 "，",
 "是",
 "为",
-"自流",
-"己血",
+"自",
+"流",
+"己",
+"血",
 "；",
 "蹲伏",
 "，",
 "是",
 "为",
-"自害己",
+"自",
+"害",
+"己",
 "命",
 "。"
 ],
@@ -311,7 +316,8 @@
 "贪恋",
 "之心",
 "乃",
-"夺去",
+"夺",
+"去",
 "得",
 "财者",
 "之命",
@@ -372,13 +378,15 @@
 ],
 "你们当因我的责备回转；我要将我的灵浇灌你们，将我的话指示你们。": [
 "你们",
-"当因",
+"当",
+"因",
 "我",
 "的",
 "责备",
 "回转",
 "；",
-"我要",
+"我",
+"要",
 "将",
 "我",
 "的",
@@ -409,7 +417,9 @@
 "；"
 ],
 "反轻弃我一切的劝戒，不肯受我的责备。": [
-"反轻弃",
+"反",
+"轻",
+"弃",
 "我",
 "一切",
 "的",
@@ -435,7 +445,8 @@
 "临到",
 "你们",
 "，",
-"我必",
+"我",
+"必",
 "嗤笑",
 "。"
 ],
@@ -464,7 +475,9 @@
 "那时",
 "，",
 "你们",
-"必呼求",
+"必",
+"呼",
+"求",
 "我",
 "，",
 "我",
@@ -472,7 +485,8 @@
 "不",
 "答应",
 "，",
-"恳切地",
+"恳切",
+"地",
 "寻找",
 "我",
 "，",
@@ -510,7 +524,8 @@
 ],
 "所以必吃自结的果子，充满自设的计谋。": [
 "所以",
-"必吃",
+"必",
+"吃",
 "自结",
 "的",
 "果子",
@@ -526,14 +541,17 @@
 "人",
 "背道",
 "，",
-"必杀",
+"必",
+"杀",
 "己身",
 "；",
 "愚顽",
 "人",
 "安逸",
 "，",
-"必害己",
+"必",
+"害",
+"己",
 "命",
 "。"
 ],
@@ -547,7 +565,8 @@
 "安然",
 "居住",
 "，",
-"得享",
+"得",
+"享",
 "安静",
 "，",
 "不怕",
@@ -658,7 +677,7 @@
 },
 "灵明": {
 "py": "líng míng",
-"en": "灵 quick + 明 Ming Dynasty"
+"en": "clever; quick to understand"
 },
 "少年人": {
 "py": "shào nián rén",
@@ -686,7 +705,7 @@
 },
 "学问": {
 "py": "xué wèn",
-"en": "learning; knowledge; scholarship"
+"en": "learning; knowledge"
 },
 "聪明人": {
 "py": "cōng míng rén",
@@ -702,7 +721,7 @@
 },
 "智谋": {
 "py": "zhì móu",
-"en": "resourcefulness; ingenuity"
+"en": "wise planning"
 },
 "明白": {
 "py": "míng bai",
@@ -710,7 +729,7 @@
 },
 "譬喻": {
 "py": "pì yù",
-"en": "analogy; metaphor; simile"
+"en": "a word picture; a comparison"
 },
 "懂得": {
 "py": "dǒng de",
@@ -718,11 +737,11 @@
 },
 "言词": {
 "py": "yán cí",
-"en": ""
+"en": "words; sayings"
 },
 "谜语": {
 "py": "mí yǔ",
-"en": "riddle; conundrum"
+"en": "a riddle"
 },
 "敬畏": {
 "py": "jìng wèi",
@@ -784,9 +803,9 @@
 "py": "yīn wèi",
 "en": "because; owing to; on account of"
 },
-"这要": {
-"py": "zhè yào",
-"en": "这 this + 要 to want"
+"这": {
+"py": "zhè",
+"en": "(pronoun) this; these; (bound form) this; the (followed by a noun)"
 },
 "作": {
 "py": "zuò",
@@ -798,7 +817,7 @@
 },
 "华冠": {
 "py": "huá guān",
-"en": "华 Mount Hua 華山|华山[Hua4 Shan1] in Shaanxi + 冠 hat"
+"en": "a beautiful crown"
 },
 "项": {
 "py": "xiàng",
@@ -808,13 +827,9 @@
 "py": "shàng",
 "en": "(bound form) up; upper; above; previous; first; to climb; to get onto"
 },
-"金": {
-"py": "jīn",
-"en": "Jurchen Jin dynasty (1115–1234)"
-},
-"链": {
-"py": "liàn",
-"en": "chain; cable (unit of length: 100 fathoms, about 185 m)"
+"金链": {
+"py": "jīn liàn",
+"en": "金 Jurchen Jin dynasty + 链 chain"
 },
 "恶人": {
 "py": "è rén",
@@ -858,19 +873,19 @@
 },
 "埋伏": {
 "py": "mái fú",
-"en": "to ambush; to lie in wait for; to lie low"
+"en": "to hide and wait to attack"
 },
 "流人": {
 "py": "liú rén",
-"en": "流 to flow + 人 person"
+"en": "to shed someone's blood; to kill"
 },
 "之血": {
 "py": "zhī xuè",
-"en": "之 's + 血 blood"
+"en": "the blood of …"
 },
 "蹲伏": {
 "py": "dūn fú",
-"en": "to crouch low and bend forward"
+"en": "to crouch and wait"
 },
 "害": {
 "py": "hài",
@@ -890,7 +905,7 @@
 },
 "阴间": {
 "py": "yīn jiān",
-"en": "the nether world; Hades; (neologism) (slang) disturbing"
+"en": "the place of the dead"
 },
 "把": {
 "py": "bǎ",
@@ -900,17 +915,21 @@
 "py": "huó huó",
 "en": "while still alive; simply; totally"
 },
-"吞下": {
-"py": "tūn xià",
-"en": "吞 to swallow + 下 down"
+"吞": {
+"py": "tūn",
+"en": "to swallow; to take"
+},
+"下": {
+"py": "xià",
+"en": "down; downwards; below"
 },
 "如同": {
 "py": "rú tóng",
 "en": "like; as"
 },
-"下坑": {
-"py": "xià kēng",
-"en": "下 down + 坑 pit"
+"坑": {
+"py": "kēng",
+"en": "pit; hollow; depression; (mining) pit; shaft; tunnel"
 },
 "被": {
 "py": "bèi",
@@ -918,11 +937,7 @@
 },
 "囫囵": {
 "py": "hú lún",
-"en": "whole"
-},
-"吞": {
-"py": "tūn",
-"en": "to swallow; to take"
+"en": "whole; all in one piece"
 },
 "了": {
 "py": "le",
@@ -982,7 +997,7 @@
 },
 "囊袋": {
 "py": "náng dài",
-"en": "pouch"
+"en": "a money bag"
 },
 "不要": {
 "py": "bù yào",
@@ -1022,7 +1037,7 @@
 },
 "急速": {
 "py": "jí sù",
-"en": "hurried; at a great speed; rapid (development)"
+"en": "in a great hurry"
 },
 "血": {
 "py": "xuè",
@@ -1034,11 +1049,15 @@
 },
 "网罗": {
 "py": "wǎng luó",
-"en": "net for fishing or bird catching; (fig.) fetters"
+"en": "a trap; a net"
 },
-"设在": {
-"py": "shè zài",
-"en": "设 to set up + 在 to exist"
+"设": {
+"py": "shè",
+"en": "to set up; to put in place; (math.) given; suppose; if"
+},
+"在": {
+"py": "zài",
+"en": "to exist; to be alive;  to be (located) at"
 },
 "眼前": {
 "py": "yǎn qián",
@@ -1054,7 +1073,7 @@
 },
 "躲避": {
 "py": "duǒ bì",
-"en": "to hide; to evade; to dodge"
+"en": "to turn aside; to get out of the way"
 },
 "这些": {
 "py": "zhè xiē",
@@ -1064,17 +1083,17 @@
 "py": "wèi",
 "en": "because of; for; to"
 },
-"自流": {
-"py": "zì liú",
-"en": "自 self + 流 to flow"
+"自": {
+"py": "zì",
+"en": "(bound form) self; oneself; from; since; naturally"
 },
-"己血": {
-"py": "jǐ xuè",
-"en": "己 self + 血 blood"
+"流": {
+"py": "liú",
+"en": "to flow; to disseminate; to circulate or spread"
 },
-"自害己": {
-"py": "zì hài jǐ",
-"en": "自 self + 害 to do harm to + 己 self"
+"己": {
+"py": "jǐ",
+"en": "self; oneself; sixth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]"
 },
 "命": {
 "py": "mìng",
@@ -1086,11 +1105,11 @@
 },
 "贪恋": {
 "py": "tān liàn",
-"en": "to cling to; to be reluctant to give up (sth)"
+"en": "to be greedy for"
 },
 "财利": {
 "py": "cái lì",
-"en": "wealth and profit; riches"
+"en": "money and profit"
 },
 "所行": {
 "py": "suǒ xíng",
@@ -1098,7 +1117,7 @@
 },
 "之路": {
 "py": "zhī lù",
-"en": "之 's + 路 road"
+"en": "the road of …; the way of …"
 },
 "都": {
 "py": "dōu",
@@ -1108,33 +1127,25 @@
 "py": "rú cǐ",
 "en": "like this; so; such"
 },
-"这": {
-"py": "zhè",
-"en": "(pronoun) this; these; (bound form) this; the (followed by a noun)"
-},
 "之心": {
 "py": "zhī xīn",
-"en": "之 's + 心 heart"
+"en": "the heart of …"
 },
 "乃": {
 "py": "nǎi",
 "en": "is; truly is (old word)"
 },
-"夺去": {
-"py": "duó qù",
-"en": "夺 to seize + 去 to go"
+"夺": {
+"py": "duó",
+"en": "to seize; to take away forcibly; to wrest control of"
 },
 "财者": {
 "py": "cái zhě",
-"en": "财 money + 者 one who ..."
+"en": "the one who has the money"
 },
 "之命": {
 "py": "zhī mìng",
-"en": "之 's + 命 life"
-},
-"在": {
-"py": "zài",
-"en": "to exist; to be alive;  to be (located) at"
+"en": "the life of …"
 },
 "街市": {
 "py": "jiē shì",
@@ -1146,7 +1157,7 @@
 },
 "宽阔": {
 "py": "kuān kuò",
-"en": "expansive; wide; width"
+"en": "wide and open"
 },
 "处": {
 "py": "chù",
@@ -1194,7 +1205,7 @@
 },
 "亵慢": {
 "py": "xiè màn",
-"en": "irreverent; slighting"
+"en": "to mock; to sneer at what is good"
 },
 "喜欢": {
 "py": "xǐ huan",
@@ -1202,7 +1213,7 @@
 },
 "愚顽": {
 "py": "yú wán",
-"en": "ignorant and stubborn"
+"en": "stubborn and foolish"
 },
 "恨恶": {
 "py": "hèn wù",
@@ -1220,9 +1231,13 @@
 "py": "ne",
 "en": "(sentence-final particle) used in questions to link back to prior discou"
 },
-"当因": {
-"py": "dāng yīn",
-"en": "当 dong + 因 cause"
+"当": {
+"py": "dāng",
+"en": "(onom.) dong; ding dong (bell)"
+},
+"因": {
+"py": "yīn",
+"en": "cause; reason; because"
 },
 "我": {
 "py": "wǒ",
@@ -1230,15 +1245,11 @@
 },
 "责备": {
 "py": "zé bèi",
-"en": "to blame; to criticize; condemnation"
+"en": "to correct someone; to tell them off"
 },
 "回转": {
 "py": "huí zhuǎn",
 "en": "to revolve; to rotate; to turn around; to turn back; to go back"
-},
-"我要": {
-"py": "wǒ yào",
-"en": "我 I + 要 to want"
 },
 "灵": {
 "py": "líng",
@@ -1246,7 +1257,7 @@
 },
 "浇灌": {
 "py": "jiāo guàn",
-"en": "to water; to irrigate"
+"en": "to pour out (like watering a plant)"
 },
 "的话": {
 "py": "de huà",
@@ -1280,9 +1291,17 @@
 "py": "lǐ huì",
 "en": "to understand; to pay attention to; to take notice of"
 },
-"反轻弃": {
-"py": "fǎn qīng qì",
-"en": "反 contrary + 轻 light + 弃 to abandon"
+"反": {
+"py": "fǎn",
+"en": "contrary; in reverse; inside out or upside down"
+},
+"轻": {
+"py": "qīng",
+"en": "light; easy; gentle"
+},
+"弃": {
+"py": "qì",
+"en": "to abandon; to relinquish; to discard"
 },
 "一切": {
 "py": "yī qiè",
@@ -1290,7 +1309,7 @@
 },
 "劝戒": {
 "py": "quàn jiè",
-"en": ""
+"en": "advice; a warning meant to help"
 },
 "受": {
 "py": "shòu",
@@ -1320,13 +1339,9 @@
 "py": "lín dào",
 "en": "to befall"
 },
-"我必": {
-"py": "wǒ bì",
-"en": "我 I + 必 surely will"
-},
 "嗤笑": {
 "py": "chī xiào",
-"en": "to sneer at"
+"en": "to laugh at someone unkindly"
 },
 "狂风": {
 "py": "kuáng fēng",
@@ -1338,7 +1353,7 @@
 },
 "暴风": {
 "py": "bào fēng",
-"en": "windstorm; (meteorology) storm (force 11 wind)"
+"en": "a storm wind"
 },
 "急难": {
 "py": "jí nàn",
@@ -1356,9 +1371,13 @@
 "py": "nà shí",
 "en": "then; at that time; in those days"
 },
-"必呼求": {
-"py": "bì hū qiú",
-"en": "必 surely will + 呼 to call + 求 to seek"
+"呼": {
+"py": "hū",
+"en": "to call; to cry; to shout"
+},
+"求": {
+"py": "qiú",
+"en": "to seek; to look for; to request"
 },
 "却": {
 "py": "què",
@@ -1368,9 +1387,13 @@
 "py": "dā ying",
 "en": "to answer; to respond; to answer positively; to agree; to accept"
 },
-"恳切地": {
-"py": "kěn qiè dì",
-"en": "恳 earnest + 切 definitely + 地 earth"
+"恳切": {
+"py": "kěn qiè",
+"en": "earnestly; really meaning it"
+},
+"地": {
+"py": "dì",
+"en": "earth; ground; field"
 },
 "寻找": {
 "py": "xún zhǎo",
@@ -1388,13 +1411,13 @@
 "py": "suǒ yǐ",
 "en": "therefore; as a result; so"
 },
-"必吃": {
-"py": "bì chī",
-"en": "必 surely will + 吃 to eat"
+"吃": {
+"py": "chī",
+"en": "to eat; to consume; to eat at (a cafeteria etc); to eradicate"
 },
 "自结": {
 "py": "zì jié",
-"en": "自 self + 结 knot"
+"en": "what one grew oneself"
 },
 "果子": {
 "py": "guǒ zi",
@@ -1406,31 +1429,27 @@
 },
 "自设": {
 "py": "zì shè",
-"en": "自 self + 设 to set up"
+"en": "what one planned oneself"
 },
 "计谋": {
 "py": "jì móu",
-"en": "stratagem; scheme"
+"en": "a plan"
 },
 "背道": {
 "py": "bèi dào",
-"en": "背 the back of a body or object + 道 road"
+"en": "to turn away from the right path"
 },
-"必杀": {
-"py": "bì shā",
-"en": "必 surely will + 杀 to kill"
+"杀": {
+"py": "shā",
+"en": "to kill; to slay; to murder; to attack; to weaken; to reduce"
 },
 "己身": {
 "py": "jǐ shēn",
-"en": "己 self + 身 body"
+"en": "one's own self"
 },
 "安逸": {
 "py": "ān yì",
-"en": "easy and comfortable; easy"
-},
-"必害己": {
-"py": "bì hài jǐ",
-"en": "必 surely will + 害 to do harm to + 己 self"
+"en": "taking it easy; not caring"
 },
 "惟有": {
 "py": "wéi yǒu",
@@ -1438,15 +1457,15 @@
 },
 "安然": {
 "py": "ān rán",
-"en": "calmly; without qualms; free from worry"
+"en": "safely; without worry"
 },
 "居住": {
 "py": "jū zhù",
 "en": "to reside; to dwell; to live in a place"
 },
-"得享": {
-"py": "dé xiǎng",
-"en": "得 to obtain + 享 to enjoy"
+"享": {
+"py": "xiǎng",
+"en": "to enjoy; to benefit; to have the use of"
 },
 "安静": {
 "py": "ān jìng",
@@ -1458,11 +1477,7 @@
 },
 "灾祸": {
 "py": "zāi huò",
-"en": "disaster"
-},
-"流": {
-"py": "liú",
-"en": "to flow; to disseminate; to circulate or spread"
+"en": "disaster; something very bad"
 }
 }
 }

@@ -1,0 +1,194 @@
+{
+ "book": "箴言",
+ "bookEn": "Proverbs",
+ "chapter": 11,
+ "chapters": 31,
+ "verses": [
+  {
+   "n": 1,
+   "zh": "诡诈的天平为耶和华所憎恶；公平的法码为他所喜悦。",
+   "kjv": "A false balance is abomination to the LORD: but a just weight is his delight.",
+   "en": "The LORD hates a scale that cheats, but an honest weight makes him glad."
+  },
+  {
+   "n": 2,
+   "zh": "骄傲来，羞耻也来；谦逊人却有智慧。",
+   "kjv": "When pride cometh, then cometh shame: but with the lowly is wisdom.",
+   "en": "When pride comes, shame comes with it, but humble people have wisdom."
+  },
+  {
+   "n": 3,
+   "zh": "正直人的纯正必引导自己；奸诈人的乖僻必毁灭自己。",
+   "kjv": "The integrity of the upright shall guide them: but the perverseness of transgressors shall destroy them.",
+   "en": "Honest people are guided by being honest, but cheats are destroyed by their own crookedness."
+  },
+  {
+   "n": 4,
+   "zh": "发怒的日子资财无益；惟有公义能救人脱离死亡。",
+   "kjv": "Riches profit not in the day of wrath: but righteousness delivereth from death.",
+   "en": "Money is no help on the day of anger, but doing right saves a person from death."
+  },
+  {
+   "n": 5,
+   "zh": "完全人的义必指引他的路；但恶人必因自己的恶跌倒。",
+   "kjv": "The righteousness of the perfect shall direct his way: but the wicked shall fall by his own wickedness.",
+   "en": "Doing right makes a whole-hearted person's path straight, but bad people fall over their own badness."
+  },
+  {
+   "n": 6,
+   "zh": "正直人的义必拯救自己；奸诈人必陷在自己的罪孽中。",
+   "kjv": "The righteousness of the upright shall deliver them: but transgressors shall be taken in their own naughtiness.",
+   "en": "Honest people are rescued by doing right, but cheats are trapped by their own greed."
+  },
+  {
+   "n": 7,
+   "zh": "恶人一死，他的指望必灭绝；罪人的盼望也必灭没。",
+   "kjv": "When a wicked man dieth, his expectation shall perish: and the hope of unjust men perisheth.",
+   "en": "When a bad person dies, everything they expected dies too; all they hoped for comes to nothing."
+  },
+  {
+   "n": 8,
+   "zh": "义人得脱离患难，有恶人来代替他。",
+   "kjv": "The righteous is delivered out of trouble, and the wicked cometh in his stead.",
+   "en": "A good person is brought safely out of trouble, and the bad person ends up there instead."
+  },
+  {
+   "n": 9,
+   "zh": "不虔敬的人用口败坏邻舍；义人却因知识得救。",
+   "kjv": "An hypocrite with his mouth destroyeth his neighbour: but through knowledge shall the just be delivered.",
+   "en": "A person who pretends can ruin a neighbour with their mouth, but knowing things rescues good people."
+  },
+  {
+   "n": 10,
+   "zh": "义人享福，合城喜乐；恶人灭亡，人都欢呼。",
+   "kjv": "When it goeth well with the righteous, the city rejoiceth: and when the wicked perish, there is shouting.",
+   "en": "When good people do well, the whole city is glad; when bad people fall, people shout for joy."
+  },
+  {
+   "n": 11,
+   "zh": "城因正直人祝福便高举，却因邪恶人的口就倾覆。",
+   "kjv": "By the blessing of the upright the city is exalted: but it is overthrown by the mouth of the wicked.",
+   "en": "A city is lifted up by the blessing of honest people, but pulled down by the mouths of bad ones."
+  },
+  {
+   "n": 12,
+   "zh": "藐视邻舍的，毫无智慧；明哲人却静默不言。",
+   "kjv": "He that is void of wisdom despiseth his neighbour: but a man of understanding holdeth his peace.",
+   "en": "Looking down on your neighbour shows no sense; someone who understands keeps quiet."
+  },
+  {
+   "n": 13,
+   "zh": "往来传舌的，泄漏密事；心中诚实的，遮隐事情。",
+   "kjv": "A talebearer revealeth secrets: but he that is of a faithful spirit concealeth the matter.",
+   "en": "A gossip gives away secrets, but someone trustworthy keeps a matter hidden."
+  },
+  {
+   "n": 14,
+   "zh": "无智谋，民就败落；谋士多，人便安居。",
+   "kjv": "Where no counsel is, the people fall: but in the multitude of counsellors there is safety.",
+   "en": "Without good advice a people falls, but with many advisers there is safety."
+  },
+  {
+   "n": 15,
+   "zh": "为外人作保的，必受亏损；恨恶击掌的，却得安稳。",
+   "kjv": "He that is surety for a stranger shall smart for it: and he that hateth suretiship is sure.",
+   "en": "Promising to pay a stranger's debt brings loss, but refusing to shake on it keeps you safe."
+  },
+  {
+   "n": 16,
+   "zh": "恩德的妇女得尊荣；强暴的男子得资财。",
+   "kjv": "A gracious woman retaineth honour: and strong men retain riches.",
+   "en": "A kind woman is honoured, and forceful men get rich."
+  },
+  {
+   "n": 17,
+   "zh": "仁慈的人善待自己；残忍的人扰害己身。",
+   "kjv": "The merciful man doeth good to his own soul: but he that is cruel troubleth his own flesh.",
+   "en": "A kind person does themselves good, but a cruel person brings trouble on themselves."
+  },
+  {
+   "n": 18,
+   "zh": "恶人经营，得虚浮的工价；撒义种的，得实在的果效。",
+   "kjv": "The wicked worketh a deceitful work: but to him that soweth righteousness shall be a sure reward.",
+   "en": "A bad person earns empty wages, but whoever plants what is right gets a real reward."
+  },
+  {
+   "n": 19,
+   "zh": "恒心为义的，必得生命；追求邪恶的，必致死亡。",
+   "kjv": "As righteousness tendeth to life: so he that pursueth evil pursueth it to his own death.",
+   "en": "Sticking to what is right leads to life; chasing what is evil leads to death."
+  },
+  {
+   "n": 20,
+   "zh": "心中乖僻的，为耶和华所憎恶；行事完全的，为他所喜悦。",
+   "kjv": "They that are of a froward heart are abomination to the LORD: but such as are upright in their way are his delight.",
+   "en": "The LORD hates a twisted heart, but he delights in people who live whole and straight."
+  },
+  {
+   "n": 21,
+   "zh": "恶人虽然连手，必不免受罚；义人的后裔必得拯救。",
+   "kjv": "Though hand join in hand, the wicked shall not be unpunished: but the seed of the righteous shall be delivered.",
+   "en": "Be sure of this: bad people will not go unpunished, but the children of good people will be safe."
+  },
+  {
+   "n": 22,
+   "zh": "妇女美貌而无见识，如同金环带在猪鼻上。",
+   "kjv": "As a jewel of gold in a swine’s snout, so is a fair woman which is without discretion.",
+   "en": "A beautiful woman with no sense is like a gold ring in a pig's nose."
+  },
+  {
+   "n": 23,
+   "zh": "义人的心愿尽得好处；恶人的指望致干忿怒。",
+   "kjv": "The desire of the righteous is only good: but the expectation of the wicked is wrath.",
+   "en": "What good people want ends in good; what bad people expect ends in anger."
+  },
+  {
+   "n": 24,
+   "zh": "有施散的，却更增添；有吝惜过度的，反致穷乏。",
+   "kjv": "There is that scattereth, and yet increaseth; and there is that withholdeth more than is meet, but it tendeth to poverty.",
+   "en": "One person gives freely and gets more; another holds back too much and ends up poor."
+  },
+  {
+   "n": 25,
+   "zh": "好施舍的，必得丰裕；滋润人的，必得滋润。",
+   "kjv": "The liberal soul shall be made fat: and he that watereth shall be watered also himself.",
+   "en": "A generous person will do well; whoever gives others a drink will be given one."
+  },
+  {
+   "n": 26,
+   "zh": "屯粮不卖的，民必咒诅他；情愿出卖的，人必为他祝福。",
+   "kjv": "He that withholdeth corn, the people shall curse him: but blessing shall be upon the head of him that selleth it.",
+   "en": "People curse whoever hoards grain, but they bless whoever is willing to sell it."
+  },
+  {
+   "n": 27,
+   "zh": "恳切求善的，就求得恩惠；惟独求恶的，恶必临到他身。",
+   "kjv": "He that diligently seeketh good procureth favour: but he that seeketh mischief, it shall come unto him.",
+   "en": "Whoever works hard at doing good finds kindness, but whoever looks for trouble will get it."
+  },
+  {
+   "n": 28,
+   "zh": "倚仗自己财物的，必跌倒；义人必发旺，如青叶。",
+   "kjv": "He that trusteth in his riches shall fall: but the righteous shall flourish as a branch.",
+   "en": "Whoever leans on their money will fall, but good people grow green like a leaf."
+  },
+  {
+   "n": 29,
+   "zh": "扰害己家的，必承受清风；愚昧人必作慧心人的仆人。",
+   "kjv": "He that troubleth his own house shall inherit the wind: and the fool shall be servant to the wise of heart.",
+   "en": "Whoever brings trouble on their own family inherits nothing but wind, and a fool ends up serving the wise."
+  },
+  {
+   "n": 30,
+   "zh": "义人所结的果子就是生命树；有智慧的，必能得人。",
+   "kjv": "The fruit of the righteous is a tree of life; and he that winneth souls is wise.",
+   "en": "What a good person grows is a tree of life, and a wise person wins others over."
+  },
+  {
+   "n": 31,
+   "zh": "看哪，义人在世尚且受报，何况恶人和罪人呢？",
+   "kjv": "Behold, the righteous shall be recompensed in the earth: much more the wicked and the sinner.",
+   "en": "Look — if good people get what is coming to them here on earth, how much more bad people and sinners!"
+  }
+ ]
+}

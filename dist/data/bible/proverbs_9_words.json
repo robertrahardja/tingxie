@@ -1,0 +1,771 @@
+{
+"seg": {
+"智慧建造房屋，凿成七根柱子，": [
+"智慧",
+"建造",
+"房屋",
+"，",
+"凿成",
+"七",
+"根",
+"柱子",
+"，"
+],
+"宰杀牲畜，调和旨酒，设摆筵席；": [
+"宰杀",
+"牲畜",
+"，",
+"调和",
+"旨酒",
+"，",
+"设摆",
+"筵席",
+"；"
+],
+"打发使女出去，自己在城中至高处呼叫，": [
+"打发",
+"使女",
+"出去",
+"，",
+"自己",
+"在",
+"城中",
+"至",
+"高处",
+"呼叫",
+"，"
+],
+"说：谁是愚蒙人，可以转到这里来！又对那无知的人说：": [
+"说",
+"：",
+"谁",
+"是",
+"愚蒙",
+"人",
+"，",
+"可以",
+"转",
+"到",
+"这里",
+"来",
+"！",
+"又",
+"对",
+"那",
+"无知",
+"的",
+"人",
+"说",
+"："
+],
+"你们来，吃我的饼，喝我调和的酒。": [
+"你们",
+"来",
+"，",
+"吃",
+"我",
+"的",
+"饼",
+"，",
+"喝",
+"我",
+"调和",
+"的",
+"酒",
+"。"
+],
+"你们愚蒙人，要舍弃愚蒙，就得存活，并要走光明的道。": [
+"你们",
+"愚蒙",
+"人",
+"，",
+"要",
+"舍弃",
+"愚蒙",
+"，",
+"就",
+"得",
+"存活",
+"，",
+"并",
+"要",
+"走",
+"光明",
+"的",
+"道",
+"。"
+],
+"指斥亵慢人的，必受辱骂；责备恶人的，必被玷污。": [
+"指斥",
+"亵慢",
+"人",
+"的",
+"，",
+"必受",
+"辱骂",
+"；",
+"责备",
+"恶人",
+"的",
+"，",
+"必",
+"被",
+"玷污",
+"。"
+],
+"不要责备亵慢人，恐怕他恨你；要责备智慧人，他必爱你。": [
+"不要",
+"责备",
+"亵慢",
+"人",
+"，",
+"恐怕",
+"他",
+"恨",
+"你",
+"；",
+"要",
+"责备",
+"智慧",
+"人",
+"，",
+"他",
+"必",
+"爱",
+"你",
+"。"
+],
+"教导智慧人，他就越发有智慧；指示义人，他就增长学问。": [
+"教导",
+"智慧",
+"人",
+"，",
+"他",
+"就",
+"越发",
+"有",
+"智慧",
+"；",
+"指示",
+"义人",
+"，",
+"他",
+"就",
+"增长",
+"学问",
+"。"
+],
+"敬畏耶和华是智慧的开端；认识至圣者便是聪明。": [
+"敬畏",
+"耶和华",
+"是",
+"智慧",
+"的",
+"开端",
+"；",
+"认识",
+"至",
+"圣者",
+"便是",
+"聪明",
+"。"
+],
+"你借着我，日子必增多，年岁也必加添。": [
+"你",
+"借着",
+"我",
+"，",
+"日子",
+"必",
+"增多",
+"，",
+"年岁",
+"也",
+"必",
+"加添",
+"。"
+],
+"你若有智慧，是与自己有益；你若亵慢，就必独自担当。": [
+"你",
+"若",
+"有",
+"智慧",
+"，",
+"是",
+"与",
+"自己",
+"有益",
+"；",
+"你",
+"若",
+"亵慢",
+"，",
+"就",
+"必",
+"独自",
+"担当",
+"。"
+],
+"愚昧的妇人喧嚷；她是愚蒙，一无所知。": [
+"愚昧",
+"的",
+"妇人",
+"喧嚷",
+"；",
+"她",
+"是",
+"愚蒙",
+"，",
+"一无所知",
+"。"
+],
+"她坐在自己的家门口，坐在城中高处的座位上，": [
+"她",
+"坐",
+"在",
+"自己",
+"的",
+"家门",
+"口",
+"，",
+"坐",
+"在",
+"城中",
+"高处",
+"的",
+"座位",
+"上",
+"，"
+],
+"呼叫过路的，就是直行其道的人，": [
+"呼叫",
+"过路",
+"的",
+"，",
+"就是",
+"直行",
+"其",
+"道",
+"的",
+"人",
+"，"
+],
+"偷来的水是甜的，暗吃的饼是好的。": [
+"偷来",
+"的",
+"水",
+"是",
+"甜",
+"的",
+"，",
+"暗吃",
+"的",
+"饼",
+"是",
+"好",
+"的",
+"。"
+],
+"人却不知有阴魂在她那里；她的客在阴间的深处。": [
+"人",
+"却",
+"不知",
+"有",
+"阴魂",
+"在",
+"她",
+"那里",
+"；",
+"她",
+"的",
+"客",
+"在",
+"阴间",
+"的",
+"深处",
+"。"
+],
+"偷来": [
+"偷",
+"来"
+]
+},
+"dict": {
+"智慧": {
+"py": "zhì huì",
+"en": "wisdom; being wise"
+},
+"建造": {
+"py": "jiàn zào",
+"en": "to construct; to build"
+},
+"房屋": {
+"py": "fáng wū",
+"en": "house; building"
+},
+"凿成": {
+"py": "záo chéng",
+"en": "to carve out (of stone)"
+},
+"七": {
+"py": "qī",
+"en": "seven; 7"
+},
+"根": {
+"py": "gēn",
+"en": "root; basis"
+},
+"柱子": {
+"py": "zhù zi",
+"en": "a pillar holding up a roof"
+},
+"宰杀": {
+"py": "zǎi shā",
+"en": "to kill (an animal)"
+},
+"牲畜": {
+"py": "shēng chù",
+"en": "farm animals"
+},
+"调和": {
+"py": "tiáo hé",
+"en": "mixed together"
+},
+"旨酒": {
+"py": "zhǐ jiǔ",
+"en": "good wine"
+},
+"设摆": {
+"py": "shè bǎi",
+"en": "to set out (a table)"
+},
+"筵席": {
+"py": "yán xí",
+"en": "a feast"
+},
+"打发": {
+"py": "dǎ fa",
+"en": "to dispatch sb to do sth; to make sb leave; to pass (the time)"
+},
+"使女": {
+"py": "shǐ nǚ",
+"en": "a servant girl"
+},
+"出去": {
+"py": "chū qù",
+"en": "to go out"
+},
+"自己": {
+"py": "zì jǐ",
+"en": "oneself; (attributive) one's own"
+},
+"在": {
+"py": "zài",
+"en": "to exist; to be alive;  to be (located) at"
+},
+"城中": {
+"py": "chéng zhōng",
+"en": ""
+},
+"至": {
+"py": "zhì",
+"en": "to arrive; most; to"
+},
+"高处": {
+"py": "gāo chù",
+"en": "high place; elevation"
+},
+"呼叫": {
+"py": "hū jiào",
+"en": "to shout; to yell; (telecommunications) to call"
+},
+"说": {
+"py": "shuō",
+"en": "to speak; to talk; to say; to explain; to comment; to scold; to tell off"
+},
+"谁": {
+"py": "shéi",
+"en": "who; also pr. [shui2]"
+},
+"是": {
+"py": "shì",
+"en": "to be (followed by substantives only); correct; right; true"
+},
+"愚蒙": {
+"py": "yú méng",
+"en": "simple; not knowing much yet"
+},
+"人": {
+"py": "rén",
+"en": "person; people"
+},
+"可以": {
+"py": "kě yǐ",
+"en": "can; may; possible"
+},
+"转": {
+"py": "zhuǎn",
+"en": "to turn; to change direction; to transfer"
+},
+"到": {
+"py": "dào",
+"en": "to reach; to arrive; to leave for; to go to; to (a place)"
+},
+"这里": {
+"py": "zhè lǐ",
+"en": "here"
+},
+"来": {
+"py": "lái",
+"en": "to come; (used as a substitute for a more specific verb)"
+},
+"又": {
+"py": "yòu",
+"en": "(once) again; also; both... and..."
+},
+"对": {
+"py": "duì",
+"en": "right; correct; towards; at; for; concerning; regarding"
+},
+"那": {
+"py": "nà",
+"en": "(specifier) that; the; those (colloquial pr. [nei4])"
+},
+"无知": {
+"py": "wú zhī",
+"en": "ignorant; ignorance"
+},
+"的": {
+"py": "de",
+"en": "'s / of (joins a describing word to a noun)"
+},
+"你们": {
+"py": "nǐ men",
+"en": "you (plural)"
+},
+"吃": {
+"py": "chī",
+"en": "to eat; to consume; to eat at (a cafeteria etc); to eradicate"
+},
+"我": {
+"py": "wǒ",
+"en": "I; me; my"
+},
+"饼": {
+"py": "bǐng",
+"en": "round flat cake; cookie; cake"
+},
+"喝": {
+"py": "hē",
+"en": "to drink"
+},
+"酒": {
+"py": "jiǔ",
+"en": "wine; liquor; spirits"
+},
+"要": {
+"py": "yào",
+"en": "to want; to need; to ask for; will; shall; about to; need to; should"
+},
+"舍弃": {
+"py": "shě qì",
+"en": "to give up; to abandon; to abort"
+},
+"就": {
+"py": "jiù",
+"en": "(after a suppositional clause) in that case; then"
+},
+"得": {
+"py": "dé",
+"en": "to obtain; to get; to gain"
+},
+"存活": {
+"py": "cún huó",
+"en": "to survive (a serious accident); survival"
+},
+"并": {
+"py": "bìng",
+"en": "and; furthermore; also"
+},
+"走": {
+"py": "zǒu",
+"en": "to walk; to go; to run"
+},
+"光明": {
+"py": "guāng míng",
+"en": "light; radiance; (fig.) bright (prospects etc)"
+},
+"道": {
+"py": "dào",
+"en": "road; path (CL:條|条[tiao2],股[gu3]); (bound form) way; reason; principle"
+},
+"指斥": {
+"py": "zhǐ chì",
+"en": "to tell someone off"
+},
+"亵慢": {
+"py": "xiè màn",
+"en": "to mock; to sneer at what is good"
+},
+"必受": {
+"py": "bì shòu",
+"en": "will surely receive"
+},
+"辱骂": {
+"py": "rǔ mà",
+"en": "insults"
+},
+"责备": {
+"py": "zé bèi",
+"en": "to correct someone; to tell them off"
+},
+"恶人": {
+"py": "è rén",
+"en": "evil person; vile creature; villain; (archaic) ugly person"
+},
+"必": {
+"py": "bì",
+"en": "surely will"
+},
+"被": {
+"py": "bèi",
+"en": "quilt; to cover (with); (literary) to suffer (a misfortune)"
+},
+"玷污": {
+"py": "diàn wū",
+"en": "to be stained; to be spoiled"
+},
+"不要": {
+"py": "bù yào",
+"en": "don't!; must not"
+},
+"恐怕": {
+"py": "kǒng pà",
+"en": "fear; to dread; I'm afraid that..."
+},
+"他": {
+"py": "tā",
+"en": "(third-person singular) (since the early 20th century, usu. male) he"
+},
+"恨": {
+"py": "hèn",
+"en": "to hate; to regret"
+},
+"你": {
+"py": "nǐ",
+"en": "you"
+},
+"爱": {
+"py": "ài",
+"en": "to love; to be fond of; to like; affection; to be inclined (to do sth)"
+},
+"教导": {
+"py": "jiào dǎo",
+"en": "to instruct; to teach; guidance"
+},
+"越发": {
+"py": "yuè fā",
+"en": "increasingly; more and more; ever more"
+},
+"有": {
+"py": "yǒu",
+"en": "to have; there is; (bound form) having; with; -ful; -ed"
+},
+"指示": {
+"py": "zhǐ shì",
+"en": "to point out; to indicate; to instruct"
+},
+"义人": {
+"py": "yì rén",
+"en": "righteous man"
+},
+"增长": {
+"py": "zēng zhǎng",
+"en": "to grow; to increase"
+},
+"学问": {
+"py": "xué wèn",
+"en": "learning; knowledge"
+},
+"敬畏": {
+"py": "jìng wèi",
+"en": "to respect deeply (with awe)"
+},
+"耶和华": {
+"py": "Yē hé huá",
+"en": "the LORD (God's name in the Bible)"
+},
+"开端": {
+"py": "kāi duān",
+"en": "the beginning; where it starts"
+},
+"认识": {
+"py": "rèn shi",
+"en": "to know; to recognize; to be familiar with"
+},
+"圣者": {
+"py": "shèng zhě",
+"en": "holy one; saint"
+},
+"便是": {
+"py": "biàn shì",
+"en": "(emphasizes that sth is precisely or exactly as stated); precisely"
+},
+"聪明": {
+"py": "cōng ming",
+"en": "intelligent; clever; bright; acute"
+},
+"借着": {
+"py": "jiè zhe",
+"en": "by means of; through; with the help of"
+},
+"日子": {
+"py": "rì zi",
+"en": "day; a (calendar) date; days of one's life"
+},
+"增多": {
+"py": "zēng duō",
+"en": "to increase; to grow in number"
+},
+"年岁": {
+"py": "nián suì",
+"en": "years of age; age"
+},
+"也": {
+"py": "yě",
+"en": "also; too; as well; (not ...) either"
+},
+"加添": {
+"py": "jiā tiān",
+"en": "to add to"
+},
+"若": {
+"py": "ruò",
+"en": "to seem; like; as"
+},
+"与": {
+"py": "yǔ",
+"en": "(formal) and; together with (linking parallel nouns, verbs, or phrases)"
+},
+"有益": {
+"py": "yǒu yì",
+"en": "useful; beneficial; profitable"
+},
+"独自": {
+"py": "dú zì",
+"en": "alone"
+},
+"担当": {
+"py": "dān dāng",
+"en": "to carry it yourself"
+},
+"愚昧": {
+"py": "yú mèi",
+"en": "foolish; not wanting to learn"
+},
+"妇人": {
+"py": "fù rén",
+"en": "married woman"
+},
+"喧嚷": {
+"py": "xuān rǎng",
+"en": "loud and noisy"
+},
+"她": {
+"py": "tā",
+"en": "she"
+},
+"一无所知": {
+"py": "yī wú suǒ zhī",
+"en": " not knowing anything at all; completely ignorant"
+},
+"坐": {
+"py": "zuò",
+"en": "to sit; to take a seat; to take (a bus, airplane etc)"
+},
+"家门": {
+"py": "jiā mén",
+"en": "house door; family clan"
+},
+"口": {
+"py": "kǒu",
+"en": "mouth"
+},
+"座位": {
+"py": "zuò wèi",
+"en": "seat"
+},
+"上": {
+"py": "shàng",
+"en": "(bound form) up; upper; above; previous; first; to climb; to get onto"
+},
+"过路": {
+"py": "guò lù",
+"en": ""
+},
+"就是": {
+"py": "jiù shì",
+"en": "exactly; precisely; only; simply; just"
+},
+"直行": {
+"py": "zhí xíng",
+"en": "to go straight; straight forward"
+},
+"其": {
+"py": "qí",
+"en": "his; her; its"
+},
+"偷来": {
+"py": "tōu lái",
+"en": "偷 to steal + 来 to come"
+},
+"水": {
+"py": "shuǐ",
+"en": "Shui ethnic group"
+},
+"甜": {
+"py": "tián",
+"en": "sweet; (fig.) pleasant; endearing; lovely"
+},
+"暗吃": {
+"py": "àn chī",
+"en": "暗 dark + 吃 to eat"
+},
+"好": {
+"py": "hǎo",
+"en": "good; appropriate; proper; all right!"
+},
+"却": {
+"py": "què",
+"en": "but; yet; however"
+},
+"不知": {
+"py": "bù zhī",
+"en": "not to know; unaware; unknowingly"
+},
+"阴魂": {
+"py": "yīn hún",
+"en": "the spirits of the dead"
+},
+"那里": {
+"py": "nà li",
+"en": "there; that place"
+},
+"客": {
+"py": "kè",
+"en": "customer; visitor; guest"
+},
+"阴间": {
+"py": "yīn jiān",
+"en": "the place of the dead"
+},
+"深处": {
+"py": "shēn chù",
+"en": "abyss; depths; deepest or most distant part"
+},
+"偷": {
+"py": "tōu",
+"en": "to steal; to pilfer; to snatch"
+}
+}
+}

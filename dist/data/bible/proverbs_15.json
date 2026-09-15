@@ -1,0 +1,206 @@
+{
+ "book": "箴言",
+ "bookEn": "Proverbs",
+ "chapter": 15,
+ "chapters": 31,
+ "verses": [
+  {
+   "n": 1,
+   "zh": "回答柔和，使怒消退；言语暴戾，触动怒气。",
+   "kjv": "A soft answer turneth away wrath: but grievous words stir up anger.",
+   "en": "A gentle answer calms anger down, but harsh words stir it up."
+  },
+  {
+   "n": 2,
+   "zh": "智慧人的舌善发知识；愚昧人的口吐出愚昧。",
+   "kjv": "The tongue of the wise useth knowledge aright: but the mouth of fools poureth out foolishness.",
+   "en": "A wise person's tongue uses knowledge well, but a fool's mouth pours out foolishness."
+  },
+  {
+   "n": 3,
+   "zh": "耶和华的眼目无处不在；恶人善人，他都鉴察。",
+   "kjv": "The eyes of the LORD are in every place, beholding the evil and the good.",
+   "en": "The LORD's eyes are everywhere, watching both the bad and the good."
+  },
+  {
+   "n": 4,
+   "zh": "温良的舌是生命树；乖谬的嘴使人心碎。",
+   "kjv": "A wholesome tongue is a tree of life: but perverseness therein is a breach in the spirit.",
+   "en": "A kind tongue is a tree of life, but a twisted one breaks a person's spirit."
+  },
+  {
+   "n": 5,
+   "zh": "愚妄人藐视父亲的管教；领受责备的，得着见识。",
+   "kjv": "A fool despiseth his father’s instruction: but he that regardeth reproof is prudent.",
+   "en": "A fool looks down on his father's teaching, but taking correction makes a person sensible."
+  },
+  {
+   "n": 6,
+   "zh": "义人家中多有财宝；恶人得利反受扰害。",
+   "kjv": "In the house of the righteous is much treasure: but in the revenues of the wicked is trouble.",
+   "en": "A good person's house holds much treasure, but what a bad person earns brings trouble."
+  },
+  {
+   "n": 7,
+   "zh": "智慧人的嘴播扬知识；愚昧人的心并不如此。",
+   "kjv": "The lips of the wise disperse knowledge: but the heart of the foolish doeth not so.",
+   "en": "Wise lips spread knowledge around; a foolish heart does nothing of the kind."
+  },
+  {
+   "n": 8,
+   "zh": "恶人献祭，为耶和华所憎恶；正直人祈祷，为他所喜悦。",
+   "kjv": "The sacrifice of the wicked is an abomination to the LORD: but the prayer of the upright is his delight.",
+   "en": "The LORD hates what a bad person offers, but the prayer of an honest person makes him glad."
+  },
+  {
+   "n": 9,
+   "zh": "恶人的道路，为耶和华所憎恶；追求公义的，为他所喜爱。",
+   "kjv": "The way of the wicked is an abomination unto the LORD: but he loveth him that followeth after righteousness.",
+   "en": "The LORD hates the road bad people walk, but he loves whoever chases after what is right."
+  },
+  {
+   "n": 10,
+   "zh": "舍弃正路的，必受严刑；恨恶责备的，必致死亡。",
+   "kjv": "Correction is grievous unto him that forsaketh the way: and he that hateth reproof shall die.",
+   "en": "Leaving the right path brings hard correction, and hating correction leads to death."
+  },
+  {
+   "n": 11,
+   "zh": "阴间和灭亡尚在耶和华眼前，何况世人的心呢？",
+   "kjv": "Hell and destruction are before the LORD: how much more then the hearts of the children of men?",
+   "en": "Even the place of the dead lies open before the LORD — how much more a person's heart!"
+  },
+  {
+   "n": 12,
+   "zh": "亵慢人不爱受责备；他也不就近智慧人。",
+   "kjv": "A scorner loveth not one that reproveth him: neither will he go unto the wise.",
+   "en": "Someone who sneers does not like being corrected, and will not go near wise people."
+  },
+  {
+   "n": 13,
+   "zh": "心中喜乐，面带笑容；心里忧愁，灵被损伤。",
+   "kjv": "A merry heart maketh a cheerful countenance: but by sorrow of the heart the spirit is broken.",
+   "en": "A glad heart makes a cheerful face, but a sad heart crushes the spirit."
+  },
+  {
+   "n": 14,
+   "zh": "聪明人心求知识；愚昧人口吃愚昧。",
+   "kjv": "The heart of him that hath understanding seeketh knowledge: but the mouth of fools feedeth on foolishness.",
+   "en": "A person who understands looks for knowledge, but a fool's mouth feeds on foolishness."
+  },
+  {
+   "n": 15,
+   "zh": "困苦人的日子都是愁苦；心中欢畅的，常享丰筵。",
+   "kjv": "All the days of the afflicted are evil: but he that is of a merry heart hath a continual feast.",
+   "en": "Every day is hard for someone who is suffering, but a cheerful heart is like a feast that never ends."
+  },
+  {
+   "n": 16,
+   "zh": "少有财宝，敬畏耶和华，强如多有财宝，烦乱不安。",
+   "kjv": "Better is little with the fear of the LORD than great treasure and trouble therewith.",
+   "en": "Better to have little and respect the LORD than to have great treasure and live in turmoil."
+  },
+  {
+   "n": 17,
+   "zh": "吃素菜，彼此相爱，强如吃肥牛，彼此相恨。",
+   "kjv": "Better is a dinner of herbs where love is, than a stalled ox and hatred therewith.",
+   "en": "Better a dinner of vegetables where there is love than a fat roast where there is hate."
+  },
+  {
+   "n": 18,
+   "zh": "暴怒的人挑启争端；忍怒的人止息纷争。",
+   "kjv": "A wrathful man stirreth up strife: but he that is slow to anger appeaseth strife.",
+   "en": "A hot-tempered person stirs up quarrels, but someone slow to anger calms them down."
+  },
+  {
+   "n": 19,
+   "zh": "懒惰人的道像荆棘的篱笆；正直人的路是平坦的大道。",
+   "kjv": "The way of the slothful man is as an hedge of thorns: but the way of the righteous is made plain.",
+   "en": "A lazy person's road is like a hedge of thorns, but an honest person's path is a level highway."
+  },
+  {
+   "n": 20,
+   "zh": "智慧子使父亲喜乐；愚昧人藐视母亲。",
+   "kjv": "A wise son maketh a glad father: but a foolish man despiseth his mother.",
+   "en": "A wise son makes his father glad, but a foolish person looks down on his mother."
+  },
+  {
+   "n": 21,
+   "zh": "无知的人以愚妄为乐；聪明的人按正直而行。",
+   "kjv": "Folly is joy to him that is destitute of wisdom: but a man of understanding walketh uprightly.",
+   "en": "Foolishness is fun to someone with no sense, but a person who understands walks straight."
+  },
+  {
+   "n": 22,
+   "zh": "不先商议，所谋无效；谋士众多，所谋乃成。",
+   "kjv": "Without counsel purposes are disappointed: but in the multitude of counsellors they are established.",
+   "en": "Without talking it over, plans fall apart; with many advisers, they succeed."
+  },
+  {
+   "n": 23,
+   "zh": "口善应对，自觉喜乐；话合其时，何等美好。",
+   "kjv": "A man hath joy by the answer of his mouth: and a word spoken in due season, how good is it!",
+   "en": "It is a joy to give a good answer, and a word at just the right time — how good that is!"
+  },
+  {
+   "n": 24,
+   "zh": "智慧人从生命的道上升，使他远离在下的阴间。",
+   "kjv": "The way of life is above to the wise, that he may depart from hell beneath.",
+   "en": "For a wise person the road of life leads upward, away from the place of the dead below."
+  },
+  {
+   "n": 25,
+   "zh": "耶和华必拆毁骄傲人的家，却要立定寡妇的地界。",
+   "kjv": "The LORD will destroy the house of the proud: but he will establish the border of the widow.",
+   "en": "The LORD tears down a proud person's house, but he protects a widow's boundary line."
+  },
+  {
+   "n": 26,
+   "zh": "恶谋为耶和华所憎恶；良言乃为纯净。",
+   "kjv": "The thoughts of the wicked are an abomination to the LORD: but the words of the pure are pleasant words.",
+   "en": "The LORD hates wicked plans, but kind words are pure to him."
+  },
+  {
+   "n": 27,
+   "zh": "贪恋财利的，扰害己家；恨恶贿赂的，必得存活。",
+   "kjv": "He that is greedy of gain troubleth his own house; but he that hateth gifts shall live.",
+   "en": "Being greedy for money brings trouble on your own family, but hating bribes brings life."
+  },
+  {
+   "n": 28,
+   "zh": "义人的心，思量如何回答；恶人的口吐出恶言。",
+   "kjv": "The heart of the righteous studieth to answer: but the mouth of the wicked poureth out evil things.",
+   "en": "A good person thinks before answering, but a bad person's mouth pours out evil."
+  },
+  {
+   "n": 29,
+   "zh": "耶和华远离恶人，却听义人的祷告。",
+   "kjv": "The LORD is far from the wicked: but he heareth the prayer of the righteous.",
+   "en": "The LORD stays far from bad people, but he listens to the prayer of good ones."
+  },
+  {
+   "n": 30,
+   "zh": "眼有光，使心喜乐；好信息，使骨滋润。",
+   "kjv": "The light of the eyes rejoiceth the heart: and a good report maketh the bones fat.",
+   "en": "A bright look makes the heart glad, and good news gives strength to the bones."
+  },
+  {
+   "n": 31,
+   "zh": "听从生命责备的，必常在智慧人中。",
+   "kjv": "The ear that heareth the reproof of life abideth among the wise.",
+   "en": "Whoever listens to correction that gives life will be at home among the wise."
+  },
+  {
+   "n": 32,
+   "zh": "弃绝管教的，轻看自己的生命；听从责备的，却得智慧。",
+   "kjv": "He that refuseth instruction despiseth his own soul: but he that heareth reproof getteth understanding.",
+   "en": "Refusing to be taught means not caring about your own life; taking correction means gaining sense."
+  },
+  {
+   "n": 33,
+   "zh": "敬畏耶和华是智慧的训诲；尊荣以前，必有谦卑。",
+   "kjv": "The fear of the LORD is the instruction of wisdom; and before honour is humility.",
+   "en": "Respecting the LORD teaches you wisdom, and humility comes before honour."
+  }
+ ]
+}
