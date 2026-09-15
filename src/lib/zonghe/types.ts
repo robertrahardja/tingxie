@@ -98,10 +98,10 @@ export interface WordsData {
   weeks: WordWeek[]
 }
 
-// The word bank and HAN now live in lib/shared/words.ts, shared with the
-// Bible pages; re-exported here so the zonghe tabs keep importing one module.
+// The word bank types now live in lib/shared/words.ts, shared with the Bible
+// pages; re-exported here so ZonghePage keeps importing one module. HAN is not
+// re-exported — everything that tests it imports it from the shared module.
 export type { WordBank, WordInfo } from '@/lib/shared/words'
-export { HAN } from '@/lib/shared/words'
 
 // A paired connector like 因为……所以…… fills two blanks; otherwise fill the first.
 const answerParts = (text: string, answer: string) => {
