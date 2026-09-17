@@ -6041,6 +6041,139 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 97,
+      "words": [
+        {
+          "simplified": "沿着",
+          "traditional": "沿著",
+          "pinyin": "yán zhe",
+          "english": "along, following (a path, river, wall)",
+          "audio": "audio/沿着.mp3",
+          "important": true
+        },
+        {
+          "simplified": "拍照片",
+          "traditional": "拍照片",
+          "pinyin": "pāi zhào piàn",
+          "english": "to take a photo",
+          "audio": "audio/拍照片.mp3",
+          "important": true
+        },
+        {
+          "simplified": "讨论",
+          "traditional": "討論",
+          "pinyin": "tǎo lùn",
+          "english": "to discuss",
+          "audio": "audio/讨论.mp3",
+          "important": true
+        },
+        {
+          "simplified": "检查",
+          "traditional": "檢查",
+          "pinyin": "jiǎn chá",
+          "english": "to check, to inspect",
+          "audio": "audio/检查.mp3",
+          "important": true
+        },
+        {
+          "simplified": "仍然",
+          "traditional": "仍然",
+          "pinyin": "réng rán",
+          "english": "still, as before",
+          "audio": "audio/仍然.mp3",
+          "important": true
+        },
+        {
+          "simplified": "急忙",
+          "traditional": "急忙",
+          "pinyin": "jí máng",
+          "english": "hurriedly, in a rush",
+          "audio": "audio/急忙.mp3",
+          "important": true
+        },
+        {
+          "simplified": "地图",
+          "traditional": "地圖",
+          "pinyin": "dì tú",
+          "english": "map",
+          "audio": "audio/地图.mp3",
+          "important": true
+        },
+        {
+          "simplified": "眼睛圆圆",
+          "traditional": "眼睛圓圓",
+          "pinyin": "yǎn jīng yuán yuán",
+          "english": "with big round eyes",
+          "audio": "audio/眼睛圆圆.mp3",
+          "important": true
+        },
+        {
+          "simplified": "咬断",
+          "traditional": "咬斷",
+          "pinyin": "yǎo duàn",
+          "english": "to bite through, to bite off",
+          "audio": "audio/咬断.mp3",
+          "important": true
+        },
+        {
+          "simplified": "吃饱",
+          "traditional": "吃飽",
+          "pinyin": "chī bǎo",
+          "english": "to eat one's fill, to be full",
+          "audio": "audio/吃饱.mp3",
+          "important": true
+        },
+        {
+          "simplified": "慢慢",
+          "traditional": "慢慢",
+          "pinyin": "màn màn",
+          "english": "slowly",
+          "audio": "audio/慢慢.mp3",
+          "important": true
+        },
+        {
+          "simplified": "软软",
+          "traditional": "軟軟",
+          "pinyin": "ruǎn ruǎn",
+          "english": "soft, squishy",
+          "audio": "audio/软软.mp3",
+          "important": true
+        },
+        {
+          "simplified": "笨重",
+          "traditional": "笨重",
+          "pinyin": "bèn zhòng",
+          "english": "bulky and heavy, cumbersome",
+          "audio": "audio/笨重.mp3",
+          "important": true
+        },
+        {
+          "simplified": "有趣",
+          "traditional": "有趣",
+          "pinyin": "yǒu qù",
+          "english": "interesting, fun",
+          "audio": "audio/有趣.mp3",
+          "important": true
+        },
+        {
+          "simplified": "打滚",
+          "traditional": "打滾",
+          "pinyin": "dǎ gǔn",
+          "english": "to roll around (on the ground)",
+          "audio": "audio/打滚.mp3",
+          "important": true
+        },
+        {
+          "simplified": "小偷",
+          "traditional": "小偷",
+          "pinyin": "xiǎo tōu",
+          "english": "thief",
+          "audio": "audio/小偷.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
