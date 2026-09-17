@@ -46,6 +46,38 @@ def fill(text: str, answer: str) -> str:
     return text.replace("____", answer, 1)
 
 
+def add_keben(k: dict, add) -> None:
+    """Mirror the 🔊 buttons on /keben/<lesson> (src/components/keben/)."""
+    for w in k.get("revise", []):  # 字词表 tab
+        add(w["w"])
+    for sec in k["sections"]:
+        for it in sec.get("items", []):
+            add(it.get("word"))  # 一、连一连
+            add(it.get("answer"))  # 二、找词语
+            add(it.get("correct"))  # 三、错字小侦探
+            add(it.get("text"))  # 四、排一排
+            add(it.get("w"))  # 六、涂一涂
+        for line in sec.get("passage", []):  # 五、阅读
+            add(line)
+        for r in (sec.get("key") or {}).get("rows", []):
+            add(r.get("zh"))
+        for q in sec.get("questions", []):
+            add(q.get("answer"))
+            for st in q.get("steps", []):
+                add(st.get("full"))
+        for verse in sec.get("verses", []):  # 七、儿歌
+            for line in verse:
+                add(line)
+        for p in sec.get("patterns", []):
+            for a in p.get("answers", []):
+                add(a)
+        if sec.get("question"):
+            add(sec["question"].get("answer"))
+        for r in sec.get("rows", []):  # 八、倒过来的词语
+            add(r.get("a"))
+            add(r.get("b"))
+
+
 def collect() -> set[str]:
     texts: set[str] = set()
 
@@ -60,10 +92,17 @@ def collect() -> set[str]:
             for c in (w.get("c") or "").split("/"):
                 add(c.strip())
 
-    # every tappable word (zonghe_<week>_words.json, built by build_zonghe_words.py)
-    for f in sorted(DATA.glob("zonghe_*_words.json")):
-        for w in json.loads(f.read_text())["dict"]:
-            add(w)
+    # every tappable word (<page>_words.json, built by the build_*_words.py scripts)
+    for pattern in ("zonghe_*_words.json", "keben_*_words.json"):
+        for f in sorted(DATA.glob(pattern)):
+            for w in json.loads(f.read_text())["dict"]:
+                add(w)
+
+    # /keben/<lesson>: every string with a 🔊 button next to it
+    for f in sorted(DATA.glob("keben_*.json")):
+        if f.stem.endswith("_words"):
+            continue
+        add_keben(json.loads(f.read_text()), add)
 
     for f in sorted(DATA.glob("zonghe_*.json")):
         if f.stem.endswith("_words"):

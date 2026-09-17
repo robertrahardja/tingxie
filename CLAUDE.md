@@ -166,6 +166,7 @@ useMobileViewport()
 | `/koushi-family-cohesion` | Oral exam practice |
 | `/p3hcl-reading-sync` | Reading practice |
 | `/zonghe/$week` | Weekly 综合练习 answer key, 课后练习, 口试复习, 字词表 (see `docs/ZONGHE_ANSWER_KEYS.md`) |
+| `/keben/$lesson` | 活动本 lesson answer key: 练习, 阅读, 儿歌, 字词表 (see `docs/KEBEN_ANSWER_KEYS.md`) |
 | `/p3hcl-wupin-interactive` | Interactive reading |
 
 ## Data Format

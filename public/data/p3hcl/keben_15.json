@@ -1,0 +1,621 @@
+{
+  "lesson": 15,
+  "title": "第十五课 · 华文真有趣",
+  "book": "华文 3A 活动本",
+  "pages": "61-72",
+  "source": "16092026_hw.pdf",
+  "student": "耶恩",
+  "note": "课本活动本第十五课的答案。点一点词语可以听读音、看意思。",
+  "sections": [
+    {
+      "id": "pinyin",
+      "kind": "pinyin",
+      "title": "一、连一连，写一写",
+      "page": 61,
+      "instruction": "把图画和词语连起来，然后写上正确的拼音。",
+      "items": [
+        {
+          "n": 1,
+          "word": "看漫画",
+          "full": "kàn màn huà",
+          "given": "kàn",
+          "answer": "màn huà",
+          "en": "to read comics",
+          "picture": "一个男生躲在墙后看漫画书"
+        },
+        {
+          "n": 2,
+          "word": "偷东西",
+          "full": "tōu dōng xi",
+          "given": "dōng xi",
+          "answer": "tōu",
+          "en": "to steal things",
+          "picture": "小偷在拿桌上的东西"
+        },
+        {
+          "n": 3,
+          "word": "全身发抖",
+          "full": "quán shēn fā dǒu",
+          "given": "quán shēn",
+          "answer": "fā dǒu",
+          "en": "to tremble all over",
+          "picture": "女生抱着自己，全身发抖"
+        },
+        {
+          "n": 4,
+          "word": "吓了一跳",
+          "full": "xià le yí tiào",
+          "given": "le yí tiào",
+          "answer": "xià",
+          "en": "to be startled",
+          "picture": "女生被吓到，头发都飞起来了"
+        },
+        {
+          "n": 5,
+          "word": "钻进怀里",
+          "full": "zuān jìn huái lǐ",
+          "given": "jìn huái lǐ",
+          "answer": "zuān",
+          "en": "to burrow into someone's arms",
+          "picture": "小猫钻进女生的怀里"
+        },
+        {
+          "n": 6,
+          "word": "冒出冷汗",
+          "full": "mào chū lěng hàn",
+          "given": "mào chū",
+          "answer": "lěng hàn",
+          "en": "to break out in a cold sweat",
+          "picture": "男生很害怕，头上冒出冷汗"
+        }
+      ]
+    },
+    {
+      "id": "find",
+      "kind": "riddle",
+      "title": "二、找词语",
+      "page": "62-63",
+      "instruction": "根据提示，圈出词语，写上号码。（词语在蜂窝里）",
+      "items": [
+        {
+          "n": 1,
+          "clue": "容易。",
+          "hint": "两个字",
+          "answer": "简单",
+          "py": "jiǎn dān",
+          "en": "simple, easy",
+          "why": "「简单」就是不难、很容易的意思。"
+        },
+        {
+          "n": 2,
+          "clue": "想忍但忍不了。",
+          "hint": "三个字",
+          "answer": "忍不住",
+          "py": "rěn bú zhù",
+          "en": "cannot help doing something",
+          "why": "「忍不住」是很想忍，可是忍不了，结果还是做了。"
+        },
+        {
+          "n": 3,
+          "clue": "朱月坡姓什么？",
+          "hint": "一个字",
+          "answer": "朱",
+          "py": "Zhū",
+          "en": "the surname Zhu",
+          "why": "名字的第一个字是姓，所以他姓「朱」。"
+        },
+        {
+          "n": 4,
+          "clue": "不害怕，胆子大。",
+          "hint": "一个字",
+          "answer": "敢",
+          "py": "gǎn",
+          "en": "to dare, be bold",
+          "why": "「敢」就是不怕，有胆量去做。"
+        },
+        {
+          "n": 5,
+          "clue": "快速地跑走、躲开。",
+          "hint": "两个字",
+          "answer": "逃走",
+          "py": "táo zǒu",
+          "en": "to flee, run away",
+          "why": "有危险时很快地跑开，就是「逃走」。"
+        },
+        {
+          "n": 6,
+          "clue": "大笑时发出的声音。",
+          "hint": "两个字",
+          "answer": "哈哈",
+          "py": "hā hā",
+          "en": "ha-ha (sound of laughing)",
+          "why": "「哈哈」是笑的声音，是象声词。"
+        },
+        {
+          "n": 7,
+          "clue": "吃惊时发出的声音。",
+          "hint": "两个字",
+          "answer": "哎呀",
+          "py": "āi yā",
+          "en": "oh dear! (surprise)",
+          "why": "吃惊、意外的时候会说「哎呀」。"
+        },
+        {
+          "n": 8,
+          "clue": "受伤时会觉得怎么样？",
+          "hint": "一个字",
+          "answer": "痛",
+          "py": "tòng",
+          "en": "painful, to hurt",
+          "why": "受伤了会觉得「痛」。"
+        }
+      ],
+      "grid": [
+        "哈", "不", "痛", "怀", "吓", "哈", "冒", "图", "简", "敢", "间", "忍",
+        "画", "单", "漫", "偷", "不", "朱", "抖", "逃", "哎", "住", "走", "呀", "钻"
+      ],
+      "gridNote": "蜂窝里的字：哈哈、简单、忍不住、朱、敢、逃走、哎呀、痛 要圈起来；其他（不、怀、吓、冒、图、画、漫、偷、抖、住、走、钻、间）是干扰字。"
+    },
+    {
+      "id": "errors",
+      "kind": "error",
+      "title": "三、错字小侦探",
+      "page": 64,
+      "instruction": "圈出句子中的错字，把正确的字写在框里。",
+      "items": [
+        {
+          "n": 1,
+          "sentence": "他在地上蛙了一个洞。",
+          "wrong": "蛙",
+          "right": "挖",
+          "py": "wā",
+          "correct": "他在地上挖了一个洞。",
+          "why": "「挖」是用手或工具把土弄开；「蛙」是青蛙的蛙。",
+          "en": "He dug a hole in the ground."
+        },
+        {
+          "n": 2,
+          "sentence": "这道问题很间单，我会回答。",
+          "wrong": "间",
+          "right": "简",
+          "py": "jiǎn",
+          "correct": "这道问题很简单，我会回答。",
+          "why": "「简单」用竹字头的「简」；「间」是中间的间。",
+          "en": "This question is very simple; I can answer it."
+        },
+        {
+          "n": 3,
+          "sentence": "他们都是三年及乙班的学生。",
+          "wrong": "及",
+          "right": "级",
+          "py": "jí",
+          "correct": "他们都是三年级乙班的学生。",
+          "why": "「年级」用绞丝旁的「级」；「及」是以及的及。",
+          "en": "They are all students of Primary 3, Class B."
+        },
+        {
+          "n": 4,
+          "sentence": "妈妈把洗好的床甲拿到阳台去晒。",
+          "wrong": "甲",
+          "right": "单",
+          "py": "dān",
+          "correct": "妈妈把洗好的床单拿到阳台去晒。",
+          "why": "铺在床上的布是「床单」；「甲」是指甲的甲。",
+          "en": "Mum took the washed bedsheet to the balcony to dry."
+        },
+        {
+          "n": 5,
+          "sentence": "弟弟今天头很病，所以没有去上学。",
+          "wrong": "病",
+          "right": "痛",
+          "py": "tòng",
+          "correct": "弟弟今天头很痛，所以没有去上学。",
+          "why": "说「头很痛」，不说「头很病」；「病」是生病的病。",
+          "en": "My brother had a bad headache today, so he did not go to school."
+        },
+        {
+          "n": 6,
+          "sentence": "森林里发生了火灾，动物们赶快讨走。",
+          "wrong": "讨",
+          "right": "逃",
+          "py": "táo",
+          "correct": "森林里发生了火灾，动物们赶快逃走。",
+          "why": "快跑开是「逃走」，用走之旁；「讨」是讨论的讨。",
+          "en": "A fire broke out in the forest, and the animals quickly fled."
+        },
+        {
+          "n": 7,
+          "sentence": "听了这个笑话，同学们都合合大笑起来。",
+          "wrong": "合合",
+          "right": "哈哈",
+          "py": "hā hā",
+          "correct": "听了这个笑话，同学们都哈哈大笑起来。",
+          "why": "笑的声音是「哈哈」，有口字旁；「合」是合起来的合。",
+          "en": "After hearing the joke, the classmates burst out laughing."
+        },
+        {
+          "n": 8,
+          "sentence": "姐姐不在家的时候，妹妹认不住吃了她的糖果。",
+          "wrong": "认",
+          "right": "忍",
+          "py": "rěn",
+          "correct": "姐姐不在家的时候，妹妹忍不住吃了她的糖果。",
+          "why": "「忍不住」用心字底的「忍」；「认」是认识的认。",
+          "en": "While her sister was out, the younger girl could not resist eating her sweets."
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "kind": "order",
+      "title": "四、写一写，排一排",
+      "page": 65,
+      "instruction": "根据拼音，把正确的汉字写在格子里，然后把句子排一排。",
+      "items": [
+        {
+          "order": 1,
+          "given": true,
+          "text": "一天，休息时，丽丽一个人在班上看漫画。",
+          "blanks": [
+            { "py": "bān", "zi": "班" },
+            { "py": "màn", "zi": "漫" }
+          ],
+          "en": "One day, during recess, Lili was reading comics alone in class."
+        },
+        {
+          "order": 2,
+          "text": "突然，她听到门外有奇怪的声音，便问道：“是谁啊？”",
+          "blanks": [],
+          "en": "Suddenly she heard a strange sound outside the door, so she asked, \"Who is it?\""
+        },
+        {
+          "order": 3,
+          "text": "但是，她问了几遍都没有人回答。",
+          "blanks": [],
+          "en": "But she asked several times and nobody answered."
+        },
+        {
+          "order": 4,
+          "text": "这时，她听到有人在偷偷地笑。",
+          "blanks": [
+            { "py": "tōu", "zi": "偷" },
+            { "py": "tōu", "zi": "偷" }
+          ],
+          "en": "Just then, she heard someone giggling secretly."
+        },
+        {
+          "order": 5,
+          "given": true,
+          "text": "丽丽很害怕，她全身发抖，冒出冷汗。",
+          "blanks": [
+            { "py": "dǒu", "zi": "抖" },
+            { "py": "mào", "zi": "冒" }
+          ],
+          "en": "Lili was very frightened; she trembled all over and broke out in a cold sweat."
+        },
+        {
+          "order": 6,
+          "text": "她马上钻到桌子下面，不敢出来。",
+          "blanks": [
+            { "py": "zuān", "zi": "钻" },
+            { "py": "gǎn", "zi": "敢" }
+          ],
+          "en": "She immediately crawled under the table and dared not come out."
+        },
+        {
+          "order": 7,
+          "text": "原来是明华躲在课室外，想要吓丽丽。",
+          "blanks": [
+            { "py": "shì", "zi": "室" },
+            { "py": "xià", "zi": "吓" }
+          ],
+          "en": "It turned out to be Minghua hiding outside the classroom, wanting to scare Lili."
+        }
+      ],
+      "orderNote": "课本上已经写好 1 和 4 两个号码：第一句（看漫画）是 1，「丽丽很害怕…」是 4。其他句子按故事发生的先后填。"
+    },
+    {
+      "id": "reading",
+      "kind": "reading",
+      "title": "五、阅读放大镜 ·《读字条》",
+      "page": "66-68",
+      "instruction": "读短文，回答问题。",
+      "passage": [
+        "古时候，有个官员请了一位老师来家里教儿子读书。",
+        "这个官员不想给老师吃好的，就写了一张字条给老师：",
+        "「没鸡鸭也好没鱼虾也好青菜不可少」",
+        "老师看了，点了点头。",
+        "吃饭时，老师看见桌上的饭菜，很不高兴，就问官员：「怎么都是青菜？」",
+        "看到老师生气了，官员马上回答：「字条上不是写着『没鸡鸭也好，没鱼虾也好，青菜不可少』吗？你刚刚答应了啊。」",
+        "听了官员的话，老师摇摇头，不以为然地说：「不对。你的意思是『没鸡，鸭也好；没鱼，虾也好；青菜不可少』。」官员听了，一句话也说不出来。",
+        "后来的每一餐，老师都有肉和菜吃。"
+      ],
+      "passageEn": "In the old days, an official hired a teacher to teach his son at home. Not wanting to feed the teacher well, he wrote a note. Because the note had no punctuation, the teacher read it a different way — and from then on he was served meat at every meal.",
+      "key": {
+        "title": "字条的两种读法",
+        "rows": [
+          {
+            "who": "官员的意思",
+            "zh": "没鸡鸭也好，没鱼虾也好，青菜不可少。",
+            "en": "No chicken or duck is fine, no fish or prawn is fine — but vegetables are a must."
+          },
+          {
+            "who": "老师的意思",
+            "zh": "没鸡，鸭也好；没鱼，虾也好；青菜不可少。",
+            "en": "No chicken? Then duck. No fish? Then prawns. And vegetables too."
+          }
+        ],
+        "note": "同样的字，断句（标点）不同，意思就完全不一样了。这就是这一课「华文真有趣」的意思。"
+      },
+      "questions": [
+        {
+          "n": 1,
+          "q": "查词典，找出「不以为然」的意思。",
+          "type": "open",
+          "answer": "不以为然：不认为是对的；不同意别人的说法。",
+          "en": "bù yǐ wéi rán — to not agree; to think something is not right."
+        },
+        {
+          "n": 2,
+          "q": "以下哪些句子是对的，哪些是错的？请在圈里打 ✓ 或 ✗。",
+          "type": "tf",
+          "sub": [
+            {
+              "n": "(1)",
+              "zh": "官员只想给老师吃鸡、鸭、鱼和虾。",
+              "answer": false,
+              "why": "官员不想给老师吃好的，只给他吃青菜。"
+            },
+            {
+              "n": "(2)",
+              "zh": "看见桌上的饭菜，老师很不满意。",
+              "answer": true,
+              "why": "短文里说老师「很不高兴」，就是不满意。"
+            },
+            {
+              "n": "(3)",
+              "zh": "老师希望每一餐除了青菜，还有别的食物。",
+              "answer": true,
+              "why": "老师的读法是要有鸡、鸭、鱼、虾，后来每餐都有肉和菜。"
+            },
+            {
+              "n": "(4)",
+              "zh": "官员和老师认为字条的意思是一样的。",
+              "answer": false,
+              "why": "两个人断句不同，意思刚好相反。"
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "q": "根据短文内容，填写事情的经过。",
+          "type": "flow",
+          "steps": [
+            {
+              "blank": "吃饭时",
+              "text": "＿＿＿＿＿，老师看见桌上只有青菜，就很不高兴地问官员怎么都是青菜。",
+              "full": "吃饭时，老师看见桌上只有青菜，就很不高兴地问官员怎么都是青菜。"
+            },
+            {
+              "blank": "看到老师生气了",
+              "text": "＿＿＿＿＿，官员马上说：「你不是答应了，可以没有＿＿＿和＿＿＿，但一定要有＿＿＿吗？」",
+              "full": "看到老师生气了，官员马上说：「你不是答应了，可以没有鸡鸭和鱼虾，但一定要有青菜吗？」",
+              "extra": ["鸡鸭", "鱼虾", "青菜"]
+            },
+            {
+              "blank": "听了官员的话",
+              "text": "＿＿＿＿＿，老师摇摇头，对他说：「＿＿＿＿＿。」",
+              "full": "听了官员的话，老师摇摇头，对他说：「不对。我的意思是『没鸡，鸭也好；没鱼，虾也好；青菜不可少』。」"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colour",
+      "kind": "colour",
+      "title": "六、找一找，涂一涂",
+      "page": 69,
+      "instruction": "请将下列词语的拼音找出来，并涂上颜色。看看是什么？",
+      "items": [
+        { "n": 1, "w": "痛", "py": "tòng", "en": "pain, to hurt" },
+        { "n": 2, "w": "钻", "py": "zuān", "en": "to burrow, drill" },
+        { "n": 3, "w": "发抖", "py": "fā dǒu", "en": "to tremble" },
+        { "n": 4, "w": "逃走", "py": "táo zǒu", "en": "to flee" },
+        { "n": 5, "w": "哎呀", "py": "āi yā", "en": "oh dear!" },
+        { "n": 6, "w": "小偷", "py": "xiǎo tōu", "en": "thief" },
+        { "n": 7, "w": "漫画", "py": "màn huà", "en": "comics" },
+        { "n": 8, "w": "简单", "py": "jiǎn dān", "en": "simple" }
+      ],
+      "distractors": [
+        { "py": "jiǎn dāo", "w": "剪刀", "en": "scissors" },
+        { "py": "tóng", "w": "同", "en": "same" },
+        { "py": "quán shēn", "w": "全身", "en": "whole body" },
+        { "py": "rěn", "w": "忍", "en": "to endure" },
+        { "py": "lěng hàn", "w": "冷汗", "en": "cold sweat" },
+        { "py": "ā yí", "w": "阿姨", "en": "auntie" },
+        { "py": "zhū", "w": "朱", "en": "surname Zhu" },
+        { "py": "huái lǐ", "w": "怀里", "en": "in one's arms" },
+        { "py": "yǒu qù", "w": "有趣", "en": "interesting" },
+        { "py": "mào hàn", "w": "冒汗", "en": "to sweat" },
+        { "py": "xià", "w": "吓", "en": "to scare" },
+        { "py": "xiǎo gǒu", "w": "小狗", "en": "puppy" },
+        { "py": "mǎ yǐ", "w": "蚂蚁", "en": "ant" }
+      ],
+      "result": "田",
+      "resultNote": "涂好八个格子以后，中间露出来的形状是「田」字。"
+    },
+    {
+      "id": "song",
+      "kind": "song",
+      "title": "七、阅读加油站 ·《欢乐伙伴》",
+      "page": "70-71",
+      "instruction": "读儿歌，完成以下活动。",
+      "verses": [
+        [
+          "听一听，说一说，",
+          "小小的课堂，大大的舞台，",
+          "一起来分享，美好的生活，快乐的童年。"
+        ],
+        [
+          "读一读，写一写，",
+          "小小的方块，大大的力量，",
+          "一起去发现，神奇的世界，欢乐的伙伴。"
+        ],
+        [
+          "转啊转啊转啊转啊转，",
+          "转个圈找朋友，朋友就在身旁。",
+          "追啊追啊追啊追啊追，",
+          "追着成长的梦，梦里有你真棒！"
+        ],
+        [
+          "跳啊跳啊跳啊跳啊跳，",
+          "跳上欢乐列车，开始愉快旅程。",
+          "飞啊飞啊飞啊飞啊飞，",
+          "飞向学习乐园，翻过那最高峰。"
+        ],
+        [
+          "学一学，用一用，",
+          "你在我周围，生活真精彩，",
+          "学习的路上，有你的陪伴，永远忘不了。",
+          "玩乐中学习，学习中成长，欢乐的伙伴。"
+        ]
+      ],
+      "patterns": [
+        {
+          "label": "＿ 一 ＿",
+          "given": "听一听",
+          "answers": ["说一说", "读一读", "写一写", "学一学", "用一用"]
+        },
+        {
+          "label": "＿ 啊 ＿",
+          "given": "转啊转",
+          "answers": ["追啊追", "跳啊跳", "飞啊飞"]
+        },
+        {
+          "label": "＿＿ 的……",
+          "given": "小小的课堂",
+          "answers": [
+            "大大的舞台",
+            "小小的方块",
+            "大大的力量",
+            "美好的生活",
+            "快乐的童年",
+            "神奇的世界",
+            "欢乐的伙伴",
+            "成长的梦",
+            "学习的路上"
+          ],
+          "note": "如果老师只要「叠词 + 的」，就写：小小的课堂、大大的舞台、小小的方块、大大的力量。"
+        }
+      ],
+      "question": {
+        "q": "「欢乐伙伴」指的是什么？为什么说有了「欢乐伙伴」生活真精彩？",
+        "answer": "「欢乐伙伴」指的是一起学习华文的同学和朋友，也指课本里那一个个方块字（华文）。因为有了他们，我们可以一起分享、一起去发现神奇的世界；学习的路上有人陪伴，我们在玩乐中学习，在学习中成长，所以生活真精彩。",
+        "en": "\"Joyful companions\" means the classmates and friends who learn Chinese together — and also the Chinese characters themselves. With them we share, explore and grow, so life is truly wonderful."
+      }
+    },
+    {
+      "id": "reverse",
+      "kind": "table",
+      "title": "八、「球拍」和「拍球」",
+      "page": 72,
+      "instruction": "你知道哪些可以倒过来的词语？查一查词典，看看它们的意思一样吗？",
+      "columns": ["词语", "意思", "倒过来", "意思", "一样吗？"],
+      "rows": [
+        {
+          "n": 1,
+          "given": true,
+          "a": "球拍",
+          "aMean": "用来打球的拍子",
+          "b": "拍球",
+          "bMean": "打球",
+          "same": false,
+          "aPy": "qiú pāi",
+          "bPy": "pāi qiú"
+        },
+        {
+          "n": 2,
+          "a": "刷牙",
+          "aMean": "用牙刷清洁牙齿",
+          "b": "牙刷",
+          "bMean": "用来刷牙的用具",
+          "same": false,
+          "aPy": "shuā yá",
+          "bPy": "yá shuā"
+        },
+        {
+          "n": 3,
+          "a": "女儿",
+          "aMean": "父母的女孩子",
+          "b": "儿女",
+          "bMean": "儿子和女儿",
+          "same": false,
+          "aPy": "nǚ ér",
+          "bPy": "ér nǚ"
+        },
+        {
+          "n": 4,
+          "a": "少年",
+          "aMean": "十几岁的孩子",
+          "b": "年少",
+          "bMean": "年纪小",
+          "same": false,
+          "aPy": "shào nián",
+          "bPy": "nián shào"
+        },
+        {
+          "n": 5,
+          "a": "蜜蜂",
+          "aMean": "会采蜜的昆虫",
+          "b": "蜂蜜",
+          "bMean": "蜜蜂做出来的甜浆",
+          "same": false,
+          "aPy": "mì fēng",
+          "bPy": "fēng mì",
+          "mine": true
+        },
+        {
+          "n": 6,
+          "a": "牛奶",
+          "aMean": "牛产的奶",
+          "b": "奶牛",
+          "bMean": "专门产奶的牛",
+          "same": false,
+          "aPy": "niú nǎi",
+          "bPy": "nǎi niú",
+          "mine": true
+        }
+      ],
+      "more": [
+        { "a": "色彩", "b": "彩色", "same": true, "note": "意思很接近，都是颜色。" },
+        { "a": "代替", "b": "替代", "same": true, "note": "意思一样。" },
+        { "a": "演讲", "b": "讲演", "same": true, "note": "意思一样。" },
+        { "a": "故事", "b": "事故", "same": false, "note": "故事是 story，事故是 accident。" },
+        { "a": "上马", "b": "马上", "same": false, "note": "上马是骑上马，马上是立刻。" }
+      ]
+    }
+  ],
+  "revise": [
+    { "w": "漫画", "py": "màn huà", "en": "comics" },
+    { "w": "偷", "py": "tōu", "en": "to steal" },
+    { "w": "小偷", "py": "xiǎo tōu", "en": "thief" },
+    { "w": "发抖", "py": "fā dǒu", "en": "to tremble" },
+    { "w": "全身", "py": "quán shēn", "en": "whole body" },
+    { "w": "吓", "py": "xià", "en": "to scare, startle" },
+    { "w": "钻", "py": "zuān", "en": "to burrow, drill" },
+    { "w": "怀里", "py": "huái lǐ", "en": "in one's arms" },
+    { "w": "冷汗", "py": "lěng hàn", "en": "cold sweat" },
+    { "w": "简单", "py": "jiǎn dān", "en": "simple" },
+    { "w": "忍不住", "py": "rěn bú zhù", "en": "cannot help it" },
+    { "w": "敢", "py": "gǎn", "en": "to dare" },
+    { "w": "逃走", "py": "táo zǒu", "en": "to flee" },
+    { "w": "哈哈", "py": "hā hā", "en": "ha-ha" },
+    { "w": "哎呀", "py": "āi yā", "en": "oh dear!" },
+    { "w": "痛", "py": "tòng", "en": "pain" },
+    { "w": "挖", "py": "wā", "en": "to dig" },
+    { "w": "床单", "py": "chuáng dān", "en": "bedsheet" },
+    { "w": "年级", "py": "nián jí", "en": "grade, level" },
+    { "w": "不以为然", "py": "bù yǐ wéi rán", "en": "to not agree" }
+  ]
+}
