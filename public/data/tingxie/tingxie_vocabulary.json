@@ -6174,6 +6174,131 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 98,
+      "words": [
+        {
+          "simplified": "课室",
+          "traditional": "課室",
+          "pinyin": "kè shì",
+          "english": "classroom",
+          "audio": "audio/课室.mp3",
+          "important": true
+        },
+        {
+          "simplified": "漫画",
+          "traditional": "漫畫",
+          "pinyin": "màn huà",
+          "english": "comic, cartoon",
+          "audio": "audio/漫画.mp3",
+          "important": true
+        },
+        {
+          "simplified": "吓得逃走",
+          "traditional": "嚇得逃走",
+          "pinyin": "xià de táo zǒu",
+          "english": "to be so frightened that one runs away",
+          "audio": "audio/吓得逃走.mp3",
+          "important": true
+        },
+        {
+          "simplified": "冒出冷汗",
+          "traditional": "冒出冷汗",
+          "pinyin": "mào chū lěng hàn",
+          "english": "to break out in a cold sweat",
+          "audio": "audio/冒出冷汗.mp3",
+          "important": true
+        },
+        {
+          "simplified": "掉",
+          "traditional": "掉",
+          "pinyin": "diào",
+          "english": "to drop, to fall",
+          "audio": "audio/掉.mp3",
+          "important": true
+        },
+        {
+          "simplified": "练习",
+          "traditional": "練習",
+          "pinyin": "liàn xí",
+          "english": "to practise; exercise",
+          "audio": "audio/练习.mp3",
+          "important": true
+        },
+        {
+          "simplified": "肚皮",
+          "traditional": "肚皮",
+          "pinyin": "dù pí",
+          "english": "belly, tummy",
+          "audio": "audio/肚皮.mp3",
+          "important": true
+        },
+        {
+          "simplified": "数学简单",
+          "traditional": "數學簡單",
+          "pinyin": "shù xué jiǎn dān",
+          "english": "maths is easy",
+          "audio": "audio/数学简单.mp3",
+          "important": true
+        },
+        {
+          "simplified": "泡泡",
+          "traditional": "泡泡",
+          "pinyin": "pào pao",
+          "english": "bubble",
+          "audio": "audio/泡泡.mp3",
+          "important": true
+        },
+        {
+          "simplified": "立刻",
+          "traditional": "立刻",
+          "pinyin": "lì kè",
+          "english": "immediately, at once",
+          "audio": "audio/立刻.mp3",
+          "important": true
+        },
+        {
+          "simplified": "结果",
+          "traditional": "結果",
+          "pinyin": "jié guǒ",
+          "english": "result, outcome; as a result",
+          "audio": "audio/结果.mp3",
+          "important": true
+        },
+        {
+          "simplified": "闹笑话",
+          "traditional": "鬧笑話",
+          "pinyin": "nào xiào huà",
+          "english": "to make a laughing stock of oneself",
+          "audio": "audio/闹笑话.mp3",
+          "important": true
+        },
+        {
+          "simplified": "不敢挖",
+          "traditional": "不敢挖",
+          "pinyin": "bù gǎn wā",
+          "english": "not daring to dig",
+          "audio": "audio/不敢挖.mp3",
+          "important": true
+        },
+        {
+          "simplified": "痛",
+          "traditional": "痛",
+          "pinyin": "tòng",
+          "english": "to hurt; painful",
+          "audio": "audio/痛.mp3",
+          "important": true
+        },
+        {
+          "simplified": "跳舞",
+          "traditional": "跳舞",
+          "pinyin": "tiào wǔ",
+          "english": "to dance",
+          "audio": "audio/跳舞.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
