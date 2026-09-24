@@ -94,7 +94,8 @@ export function ZonghePage({ week }: { week: string }) {
   const answerSections = data.sections.filter(
     (s) => ANSWER_KINDS.includes(s.kind) && s.tab !== 'rewrite'
   )
-  const rewrite = data.sections.find((s) => s.kind === 'rewrite')
+  // A week may carry more than one 课后练习 block (e.g. 37: 扩写句子 + 组句成段).
+  const rewrites = data.sections.filter((s) => s.kind === 'rewrite')
   const homework = data.sections.filter((s) => ANSWER_KINDS.includes(s.kind) && s.tab === 'rewrite')
   const oral = data.sections.find((s) => s.kind === 'oral')
 
@@ -129,7 +130,16 @@ export function ZonghePage({ week }: { week: string }) {
             note={data.note}
           />
         )}
-        {tab === 'rewrite' && rewrite && <RewriteTab section={rewrite} homework={homework} speak={speak} />}
+        {tab === 'rewrite' &&
+          rewrites.map((r, i) => (
+            <RewriteTab
+              key={r.id}
+              section={r}
+              // The homework question sections hang off the last block only.
+              homework={i === rewrites.length - 1 ? homework : []}
+              speak={speak}
+            />
+          ))}
         {tab === 'oral' && oral && <OralTab section={oral} speak={speak} stopOther={stop} />}
         {tab === 'words' && <WordsTab data={words} week={data.week} />}
         {sheet && <WordSheet word={sheet.word} info={sheet.info} onClose={closeWord} speak={speak} />}

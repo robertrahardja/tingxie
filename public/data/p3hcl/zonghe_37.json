@@ -1,0 +1,550 @@
+{
+  "week": 37,
+  "title": "P3HCL 综合练习 37",
+  "dates": "21/9/2026 - 27/9/2026",
+  "source": "37_21092026_P3HCL.pdf",
+  "student": "耶恩",
+  "note": "字词总复习二（第一课～第十七课）。课堂练习是两篇阅读理解（第1-6页），你已经做完了，答案和讲解都在“课堂练习”里。课后练习（第7-9页）是扩写句子、组合句子和组句成段，还没做——先自己写，再按“看答案”。听写词语（第11页）在“最新词语”第98组。口试《小贩中心》和要复习的三篇在“口试复习”里。",
+  "sections": [
+    {
+      "id": "open",
+      "kind": "open",
+      "title": "一、阅读理解一",
+      "points": "4题11分",
+      "instruction": "根据短文的内容，回答下面的问题。答案都在短文里：先找到那一段，再用完整的句子写出来。",
+      "groups": [
+        {
+          "passage": [
+            "小月的哥哥叫小阳，他做事很粗心，很爱说话。小月和哥哥不一样，她做什么事都很细心，每一件事情都努力做到最好。",
+            "一天放学后，小阳和小月一起坐校车回家。小阳把考卷从书包里拿出来看，可是他没看多久就开始和朋友们谈天。结果，他随手把考卷留在校车上。",
+            "小月和哥哥回到家后，奶奶就叫他们把功课拿出来做。小阳在书包里找来找去，突然大喊起来：“啊！怎么办？我忘记把考卷带回家给爸爸妈妈签名！”小月说：“哥哥，我记得你在校车上看考卷，然后……”",
+            "小阳这才想起来，可是他更着急了！他说：“校车司机会不会把我的考卷丢掉啊？”奶奶看他很担心，就说：“不然你打电话给校车司机，让他帮忙先把考卷收起来，明天你上车时再跟他拿？”小阳听了，点点头。",
+            "第二天，校车司机把考卷还给了小阳，并笑着说：“下次让妹妹照顾你！”小阳看了看妹妹，脸红了起来，真想在地上挖个洞钻进去。"
+          ],
+          "passageEn": "Xiaoyue's brother Xiaoyang is careless and talkative; Xiaoyue is the opposite — careful, and she tries her best at everything. One day on the school bus home, Xiaoyang took his exam paper out to look at it, but soon started chatting with friends and casually left the paper on the bus. At home, Grandma told them to do their homework, and Xiaoyang suddenly cried out that he had forgotten to bring the paper home for his parents to sign. Xiaoyue reminded him he had been reading it on the bus. Grandma suggested he phone the bus driver to keep it for him and collect it the next day. The next day the driver returned it, joking that next time he should let his sister look after him — and Xiaoyang blushed, wishing he could dig a hole and hide in it.",
+          "questions": [
+            {
+              "n": 1,
+              "text": "小阳是个怎样的孩子？（2分）",
+              "points": 2,
+              "answer": 1,
+              "student": 1,
+              "model": "小阳是个做事很粗心、很爱说话的孩子。",
+              "written": "小阳是一个做事很粗心，很爱说话的孩子。",
+              "why": "答案在第1段第一句：“他做事很粗心，很爱说话。”问“怎样的孩子”，要用“小阳是个……的孩子”这个句式，把两个特点都写进去。你写对了！",
+              "en": "Xiaoyang is a careless and talkative child."
+            },
+            {
+              "n": 2,
+              "text": "为什么小阳回家后找不到他的考卷？（3分）",
+              "points": 3,
+              "answer": 1,
+              "student": 1,
+              "model": "因为小阳在校车上把考卷拿出来看，可是没看多久就和朋友们谈天，随手把考卷留在校车上，所以他回家后找不到考卷。",
+              "written": "因为小阳把考卷从书包里拿出来看，可是没看多久就开始和朋友们谈天，然后他随手把考卷留在校车上，所以他回家后找不到他的考卷。",
+              "why": "答案在第2段。问“为什么”要用“因为……所以……”。3分表示要写全过程：①拿出来看 ②和朋友谈天 ③随手留在校车上。你三点都写到了，很完整。",
+              "en": "Because on the school bus Xiaoyang took his paper out to read, soon started chatting with friends, and casually left it on the bus."
+            },
+            {
+              "n": 3,
+              "text": "根据文章内容，把答案写在表格里：小阳的感受（找不到考卷时／听了校车司机的话后）（2分）",
+              "points": 2,
+              "answer": 1,
+              "student": 1,
+              "model": "找不到考卷时：感到很着急。　听了校车司机的话后：感到不好意思。",
+              "written": "找不到考卷时：感到着急。　听了校车司机的话后：感到不好意思。",
+              "why": "①第4段“他更着急了”→着急；②第5段“脸红了起来，真想在地上挖个洞钻进去”＝很不好意思（embarrassed）。表格题只要写感受的词语就可以，不用写整句。两格你都答对了。",
+              "en": "When he could not find the paper: anxious. After hearing what the bus driver said: embarrassed."
+            },
+            {
+              "n": 4,
+              "text": "小阳是怎样拿回考卷的？（4分）",
+              "points": 4,
+              "answer": 1,
+              "student": 1,
+              "model": "小阳听了奶奶的话，打电话给校车司机，让他帮忙先把考卷收起来。第二天，小阳上车时再跟司机拿回考卷。",
+              "written": "小阳听奶奶的话，打电话给校车司机，让他帮忙先把考卷收起来，第二天小阳上车时再跟司机拿回考卷。",
+              "why": "答案在第4、5段。4分要写两个步骤：①打电话给校车司机，请他先收起来；②第二天上车时跟司机拿回来。你两步都写到了，只是“听奶奶的话”写成“听奶奶的话”更顺：“小阳听了奶奶的话”。",
+              "en": "Xiaoyang followed Grandma's advice and phoned the bus driver to keep the paper for him, then collected it from the driver when he boarded the bus the next day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading-a",
+      "kind": "reading",
+      "title": "二、阅读理解二 · A组",
+      "points": "3题6分",
+      "instruction": "根据内容回答下列问题，并把代表它的数字写在括号里。",
+      "groups": [
+        {
+          "passage": [
+            "小光一看到班上的垃圾桶快满了，他就会去倒；只要看到课室的地上有垃圾，他就会去清理，还会叫同学们不要乱丢垃圾。",
+            "一天，他在网上看到了关于停止使用吸管的活动后，便在班上跟全班同学说吸管对人体的害处，还有它给环境带来的危害。同学们听了，都不再使用吸管了。",
+            "老师看到了就对他说：“小光，你想不想让更多的人明白使用吸管的害处？”“当然想！我应该怎么做呢？”小光好奇地问。",
+            "老师说：“下个星期一升旗礼后，我安排五分钟的时间让你向全年级的同学们进行演讲。”“什么？我要向全年级的同学演讲？”小光听了，突然觉得有点害怕。这时，老师和班上的同学们都为他加油，还有两个同学愿意陪他上台呢！",
+            "最后，小光完成了演讲，也成功地让越来越多的同学决定不再使用吸管。小光和他的朋友们都笑了，老师也满意地笑了。"
+          ],
+          "passageEn": "Xiaoguang empties the class rubbish bin when it is nearly full, clears litter off the classroom floor, and tells classmates not to litter. One day, after seeing an online campaign to stop using straws, he told his class about the harm straws do to the body and the environment, and his classmates stopped using them. His teacher asked whether he would like more people to understand this, and arranged for him to give a five-minute speech to the whole level after Monday's flag-raising. Xiaoguang felt frightened, but his teacher and classmates cheered him on and two friends offered to go on stage with him. In the end he gave the speech and persuaded more and more students to give up straws — and everyone, including the teacher, smiled.",
+          "questions": [
+            {
+              "n": 5,
+              "text": "小光在班上做了什么事？",
+              "options": [
+                "让同学们多使用吸管。",
+                "要同学们去清理课室。",
+                "叫大家不要乱丢垃圾。"
+              ],
+              "answer": 3,
+              "student": 3,
+              "why": "第1段最后一句：“还会叫同学们不要乱丢垃圾。”（1）相反——他是叫大家“不要”用吸管；（2）是他自己去清理，不是叫同学去。所以选（3）。",
+              "en": "He tells everyone not to litter."
+            },
+            {
+              "n": 6,
+              "text": "为什么老师要小光向全年级的同学演讲？",
+              "options": [
+                "因为老师想让更多的人明白使用吸管的害处。",
+                "因为老师知道班上的同学都会去为小光加油。",
+                "因为老师要让他们都参加不乱丢垃圾的活动。"
+              ],
+              "answer": 1,
+              "student": 1,
+              "why": "第3段老师问：“你想不想让更多的人明白使用吸管的害处？”——这就是演讲的目的，所以选（1）。（2）加油是同学做的事，不是原因；（3）演讲讲的是吸管，不是乱丢垃圾。",
+              "en": "Because the teacher wanted more people to understand the harm caused by straws.",
+              "unsure": "先写别的，后改成 1"
+            },
+            {
+              "n": 7,
+              "text": "看到同学们都不再使用吸管了，老师有什么感受？",
+              "options": ["开心", "吃惊", "好奇"],
+              "answer": 1,
+              "student": 3,
+              "why": "最后一段：“老师也满意地笑了。”满意地笑＝很开心，所以选（1）开心。“好奇”是第3段小光问问题时的样子（“小光好奇地问”），不是老师的感受——看清楚题目问的是谁。",
+              "en": "The teacher felt happy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reading-b",
+      "kind": "reading",
+      "title": "二、阅读理解二 · B组（便条）",
+      "points": "2题4分",
+      "instruction": "读小美写给小丽的便条，回答下列问题，把代表它的数字写在括号里。",
+      "groups": [
+        {
+          "passage": [
+            "小丽：",
+            "　　刚才我去你家找你，可是你不在家。本来我们约好今天下午3点去公园打羽毛球，可是我妈妈生病了，我要在家照顾她，所以我不能和你见面了。对不起，请你原谅我！",
+            "　　　　　　　　　　　　　　　　小美",
+            "　　　　　　　　　　　　　　　　11月4日　上午9点"
+          ],
+          "passageEn": "A note from Xiaomei to Xiaoli: she came to Xiaoli's house but Xiaoli was out. They had arranged to play badminton in the park at 3 p.m., but Xiaomei's mother has fallen ill and she must stay home to look after her, so she cannot meet Xiaoli. She apologises and asks for forgiveness. Signed Xiaomei, 4 November, 9 a.m.",
+          "questions": [
+            {
+              "n": 8,
+              "text": "小丽和小美两个人本来约好要去做什么？",
+              "options": [
+                "一起去买羽毛球。",
+                "一起去打羽毛球。",
+                "去参加打球比赛。"
+              ],
+              "answer": 2,
+              "student": 2,
+              "why": "便条里写：“本来我们约好今天下午3点去公园打羽毛球。”是“打”羽毛球，不是“买”，也没有说比赛。所以选（2）。",
+              "en": "They had arranged to play badminton together."
+            },
+            {
+              "n": 9,
+              "text": "关于本文，以下哪一项是对的？",
+              "options": [
+                "小美准备去买药。",
+                "小美要照顾妈妈。",
+                "小美去医院看病。"
+              ],
+              "answer": 2,
+              "student": 2,
+              "why": "便条里写：“我妈妈生病了，我要在家照顾她。”是在“家”照顾妈妈——没有说去买药，也没有说去医院。所以选（2）。",
+              "en": "Xiaomei has to look after her mother."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "note",
+      "kind": "open",
+      "title": "二、阅读理解二 · Q10 写便条",
+      "points": "1题4分",
+      "instruction": "如果你是小丽，看到小美的便条后，请你也给她写一张便条，告诉她没有关系，下次再约一起打羽毛球，并祝她的妈妈早日康复。",
+      "groups": [
+        {
+          "passage": [
+            "写便条要有四个部分：①开头写收信人的名字“小美：”；②中间写内容（三件事：没关系、下次再约、祝妈妈早日康复）；③结尾写自己的名字“小丽”；④最后写日期和时间。",
+            "题目已经给了日期：11月4日　下午1点。"
+          ],
+          "passageEn": "A note has four parts: the reader's name, the message, your own name, and the date and time. Here the message must cover three things: it's all right, let's arrange badminton another time, and I hope your mother gets well soon.",
+          "questions": [
+            {
+              "n": 10,
+              "text": "请你以小丽的身份写一张便条给小美。（4分）",
+              "points": 4,
+              "answer": 1,
+              "student": 1,
+              "model": "小美：\n　　看到你的便条后，我想告诉你没有关系，你先好好照顾妈妈吧！我们下次再约一起打羽毛球。祝你的妈妈早日康复！\n　　　　　　　　小丽\n　　　　　　　　11月4日　下午1点",
+              "written": "小美：看到你的便条后，想告诉你没有关系，我们下次再约一起打羽毛球吧！并祝你的妈妈早日康复。",
+              "why": "三件事你都写到了（没关系、下次再约、祝妈妈早日康复），很好！记得开头“想告诉你”前面要加“我”——“我想告诉你”，句子才完整。另外便条的名字和日期（小丽／11月4日／下午1点）题目下面已经印好了，不用再写一次。",
+              "en": "Xiaomei: After reading your note, I want to tell you it's quite all right — take good care of your mother first. Let's arrange to play badminton another time. I hope your mother gets well soon! — Xiaoli, 4 Nov, 1 p.m."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rewrite",
+      "kind": "rewrite",
+      "title": "课后练习 一、扩写或组合句子",
+      "points": "10题20分",
+      "instruction": "Q1-Q5：把括号里面的词语加在句子中适当的地方。Q6-Q10：用括号里的词语，把两个句子合成一个句子。这是本周的课后作业（第7-8页），先自己写，再按“看答案”。",
+      "items": [
+        {
+          "n": 1,
+          "original": ["弟弟哭了起来。"],
+          "pattern": "伤心地",
+          "answer": "弟弟伤心地哭了起来。",
+          "why": "“伤心地”是形容“怎么哭”的，要放在动词“哭”的前面。凡是“……地”都是这样：放在动作的前面。",
+          "en": "My little brother started crying sadly."
+        },
+        {
+          "n": 2,
+          "original": ["我喝杯子里的牛奶。"],
+          "pattern": "大口大口地",
+          "answer": "我大口大口地喝杯子里的牛奶。",
+          "why": "“大口大口地”说的是“怎么喝”，所以放在动词“喝”的前面，不能放在“牛奶”前面。",
+          "en": "I drank the milk in the cup in big gulps."
+        },
+        {
+          "n": 3,
+          "original": ["为了得到第一名，我们向前跑。"],
+          "pattern": "头也不回地",
+          "answer": "为了得到第一名，我们头也不回地向前跑。",
+          "why": "“头也不回地”形容“怎么跑”，放在动词“跑”前面。注意前面“为了得到第一名”是原因，不要动它。",
+          "en": "To win first place, we ran forward without looking back."
+        },
+        {
+          "n": 4,
+          "original": ["昨天下午，奶奶把报纸折成纸盒。"],
+          "pattern": "一张一张的",
+          "answer": "昨天下午，奶奶把一张一张的报纸折成纸盒。",
+          "why": "这里是“……的”，不是“……地”。“……的”放在名词前面，形容东西：一张一张的“报纸”。（如果是“地”才放在动词前面。）",
+          "en": "Yesterday afternoon, Grandma folded the sheets of newspaper one by one into paper boxes."
+        },
+        {
+          "n": 5,
+          "original": ["小乐和弟弟一起看一本故事书。"],
+          "pattern": "有趣的",
+          "answer": "小乐和弟弟一起看一本有趣的故事书。",
+          "why": "“有趣的”是“的”，放在名词“故事书”前面。要放在“一本”的后面：一本有趣的故事书。",
+          "en": "Xiaole and his brother read an interesting storybook together."
+        },
+        {
+          "n": 6,
+          "original": ["我们可以游泳。", "我们可以打球。"],
+          "pattern": "……或者……",
+          "answer": "我们可以游泳或者打球。",
+          "why": "“或者”＝or，用来连接两个可以选择的事。两句的主语都是“我们可以”，所以只写一次，后面把两件事用“或者”连起来。",
+          "en": "We can go swimming or play ball."
+        },
+        {
+          "n": 7,
+          "original": ["妹妹可以到图书馆借书。", "妹妹可以到图书馆看报纸。"],
+          "pattern": "……或者……",
+          "answer": "妹妹可以到图书馆借书或者看报纸。",
+          "why": "两句相同的部分“妹妹可以到图书馆”只写一次，不同的部分（借书／看报纸）用“或者”连起来。",
+          "en": "My sister can borrow books or read newspapers at the library."
+        },
+        {
+          "n": 8,
+          "original": ["小乐可以去海边。", "小乐可以去公园。"],
+          "pattern": "……或者……",
+          "answer": "小乐可以去海边或者公园。",
+          "why": "相同的“小乐可以去”只写一次，两个地方用“或者”连起来。第二个“去”可以省掉。",
+          "en": "Xiaole can go to the beach or the park."
+        },
+        {
+          "n": 9,
+          "original": ["妈妈工作太忙了。", "妈妈休息的时间都没有。"],
+          "pattern": "……连……",
+          "answer": "妈妈工作太忙了，连休息的时间都没有。",
+          "why": "“连……都……”＝even…：用来强调“忙到什么程度”。“连”放在“休息的时间”前面，后面用“都没有”。第二句的“妈妈”去掉。",
+          "en": "Mum is so busy with work that she doesn't even have time to rest."
+        },
+        {
+          "n": 10,
+          "original": ["小明做完功课。", "小明会去楼下打球。"],
+          "pattern": "只要……就……",
+          "answer": "只要小明做完功课，他就会去楼下打球。",
+          "why": "“只要……就……”＝as long as…：前面是条件（做完功课），后面是结果（去打球）。“就”放在“会”的前面；第二句的“小明”改成“他”。",
+          "en": "As long as Xiaoming finishes his homework, he will go downstairs to play ball."
+        }
+      ]
+    },
+    {
+      "id": "order",
+      "kind": "rewrite",
+      "title": "课后练习 二、组句成段",
+      "points": "5题5分",
+      "instruction": "根据先后顺序把下面的句子重新排列，组成一段合理的内容。第（1）句已经给你了：“今天是母亲节，是一个特别的日子。”在括号里写上2-6的数字。",
+      "items": [
+        {
+          "n": 11,
+          "original": ["回到家后，我们花了两个小时把午餐煮好。"],
+          "pattern": "第 5 句",
+          "answer": "（5）回到家后，我们花了两个小时把午餐煮好。",
+          "why": "先去巴刹买东西（4），买了鸡蛋、猪肉和白菜（3），买完才“回到家后”煮午餐——所以这句排第5。",
+          "en": "(5) After getting home, we spent two hours cooking lunch."
+        },
+        {
+          "n": 12,
+          "original": ["我们想要为妈妈煮好吃的午餐，让她高兴高兴。"],
+          "pattern": "第 2 句",
+          "answer": "（2）我们想要为妈妈煮好吃的午餐，让她高兴高兴。",
+          "why": "第（1）句说“今天是母亲节”，接下来最自然的是说“我们打算做什么”——想为妈妈煮午餐。这是整段的原因，所以排第2。",
+          "en": "(2) We wanted to cook a delicious lunch for Mum to make her happy."
+        },
+        {
+          "n": 13,
+          "original": ["走啊走，逛啊逛，我们买了一些鸡蛋、猪肉和白菜。"],
+          "pattern": "第 4 句",
+          "answer": "（4）走啊走，逛啊逛，我们买了一些鸡蛋、猪肉和白菜。",
+          "why": "要先“去巴刹”（第3句），到了巴刹才会“走啊走，逛啊逛”地买东西，所以这句排第4。",
+          "en": "(4) We walked and browsed, and bought some eggs, pork and cabbage."
+        },
+        {
+          "n": 14,
+          "original": ["所以天刚刚亮，我就跟着爸爸去附近的巴刹买东西。"],
+          "pattern": "第 3 句",
+          "answer": "（3）所以天刚刚亮，我就跟着爸爸去附近的巴刹买东西。",
+          "why": "句子开头有“所以”，表示它接在原因（第2句“想为妈妈煮午餐”）后面。“天刚刚亮”是一天里最早的时间，所以排第3。",
+          "en": "(3) So at daybreak, I followed Dad to the nearby market to buy things."
+        },
+        {
+          "n": 15,
+          "original": ["妈妈看着满桌的美食，心里乐开了花。"],
+          "pattern": "第 6 句",
+          "answer": "（6）妈妈看着满桌的美食，心里乐开了花。",
+          "why": "一定要先把午餐煮好（第5句），妈妈才看得到“满桌的美食”。这是结果，也是整段的结尾，所以排最后第6。",
+          "en": "(6) Mum looked at the table full of delicious food and was overjoyed."
+        }
+      ]
+    },
+    {
+      "id": "oral",
+      "kind": "oral",
+      "title": "口试：《小贩中心》＋复习三篇（熟读五次）",
+      "image": "/images/zonghe37/xiaofanzhongxin.jpg",
+      "imageCaption": "综合练习七《小贩中心》：图里有 4 个部分。第11页只印出了图片3和图片4的描述（图片1和图片2的那两行被上面那张纸挡住了），所以图片1、图片2的句子是按图意补写的，供你练习。点下面的第1-4部分可以跳到那一段。",
+      "parts": [
+        {
+          "n": 1,
+          "image": "/images/zonghe37/part-1.jpg",
+          "label": "两个男孩在吃饭",
+          "item": "小贩中心 · 图片1",
+          "current": true
+        },
+        {
+          "n": 2,
+          "image": "/images/zonghe37/part-2.jpg",
+          "label": "老人收碗盘，男子递钱",
+          "item": "小贩中心 · 图片2",
+          "current": true
+        },
+        {
+          "n": 3,
+          "image": "/images/zonghe37/part-3.jpg",
+          "label": "买鸡饭，小贩热情招呼",
+          "item": "小贩中心 · 图片3",
+          "current": true
+        },
+        {
+          "n": 4,
+          "image": "/images/zonghe37/part-4.jpg",
+          "label": "男士大声讲电话，女士阻止",
+          "item": "小贩中心 · 图片4",
+          "current": true
+        }
+      ],
+      "instruction": "朗读口试：2026学年三年级口试册（三），第5页～第7页经历类问题，每天朗读一次，请家长在旁边签名。阅读计划：综合练习37，第9页到第10页。本周作业四：复习之前学过的三篇口试，每篇熟读五次。看法感受用 F（感受）-O（看法）-R（原因）-IF（如果）四步。",
+      "items": [
+        {
+          "title": "小贩中心 · 图片1",
+          "image": "/images/zonghe37/part-1.jpg",
+          "imageCaption": "图片左下角（第1部分）：两个男孩坐在桌子旁吃饭。（这一段是按图意补写的，因为第11页上这一行被挡住了。）",
+          "sentences": [
+            {
+              "zh": "这是一个小贩中心。在图片的左下角，我看到有两个男孩坐在桌子旁吃饭。",
+              "en": "This is a hawker centre. In the bottom left of the picture, I see two boys sitting at a table eating."
+            },
+            {
+              "zh": "他们一边吃，一边开心地聊天。",
+              "en": "They are eating and chatting happily at the same time."
+            }
+          ],
+          "vocab": [
+            { "w": "小贩中心", "py": "xiǎo fàn zhōng xīn", "en": "hawker centre" },
+            { "w": "一边……一边……", "py": "yì biān … yì biān …", "en": "doing two things at once" }
+          ]
+        },
+        {
+          "title": "小贩中心 · 图片2",
+          "image": "/images/zonghe37/part-2.jpg",
+          "imageCaption": "图片左上角（第2部分）：一位老人在收拾桌上的碗盘，一名男子把钱递给他。（这一段是按图意补写的。）",
+          "sentences": [
+            {
+              "zh": "在图片的左上角，我看到有一位老爷爷正在收拾桌上的碗盘。",
+              "en": "In the top left of the picture, I see an elderly man clearing the bowls and plates from a table."
+            },
+            {
+              "zh": "坐在旁边的一位男士看见了，便把钱递给他，谢谢他的帮忙。",
+              "en": "A man sitting nearby sees this and hands him some money to thank him for his help."
+            }
+          ],
+          "vocab": [
+            { "w": "收拾", "py": "shōu shi", "en": "to clear up, to tidy" },
+            { "w": "碗盘", "py": "wǎn pán", "en": "bowls and plates" },
+            { "w": "递", "py": "dì", "en": "to hand over, to pass" }
+          ]
+        },
+        {
+          "title": "小贩中心 · 图片3",
+          "image": "/images/zonghe37/part-3.jpg",
+          "imageCaption": "图片右上角（第3部分）：一个女孩在卖鸡饭的摊位前买鸡饭，小贩热情地招呼她。",
+          "sentences": [
+            {
+              "zh": "在卖鸡饭的摊位前，有一个女孩正在买鸡饭，那个卖鸡饭的小贩正热情地招呼她。",
+              "en": "In front of the chicken rice stall, a girl is buying chicken rice, and the hawker is greeting her warmly."
+            }
+          ],
+          "vocab": [
+            { "w": "摊位", "py": "tān wèi", "en": "stall" },
+            { "w": "招呼", "py": "zhāo hū", "en": "to greet, to serve" },
+            { "w": "热情", "py": "rè qíng", "en": "warm, enthusiastic" }
+          ]
+        },
+        {
+          "title": "小贩中心 · 图片4",
+          "image": "/images/zonghe37/part-4.jpg",
+          "imageCaption": "图片右边（第4部分）：一个男士大声讲电话，一位短发女士挥手阻止他。这一段后面要接“感想”和“结论”。",
+          "sentences": [
+            {
+              "zh": "在这个小女孩的身后，有一个男士正在大声地讲电话。",
+              "en": "Behind the little girl, a man is talking loudly on his phone."
+            },
+            {
+              "zh": "站在旁边的一个短发女士看见了，连忙走上前，挥手阻止他的行为。",
+              "en": "A short-haired woman standing nearby sees this, hurries forward and waves to stop him."
+            },
+            {
+              "zh": "看了这一幕，我感到十分生气。",
+              "en": "(F 感受) Seeing this, I feel very angry."
+            },
+            {
+              "zh": "我认为这个男士太没有公德心了。",
+              "en": "(O 看法) I think this man has no public spirit at all."
+            },
+            {
+              "zh": "因为这里是公共场所，他不应该在这里大声讲电话，更不应该只考虑自己，而不顾别人的感受。",
+              "en": "(R 原因) Because this is a public place; he should not talk loudly here, and should not think only of himself without caring about others' feelings."
+            },
+            {
+              "zh": "如果当时我在场的话，我也会像那名女士一样，马上去提醒他。",
+              "en": "(IF 如果) If I had been there, I would have done as that woman did and reminded him at once."
+            },
+            {
+              "zh": "总之，我觉得在公共场所时，我们应该注意自己的言行举止，做一个有公德心、有爱心的好公民。",
+              "en": "(结论) In short, I think that in public places we should mind our words and behaviour, and be good citizens with public spirit and a kind heart."
+            }
+          ],
+          "vocab": [
+            { "w": "男士", "py": "nán shì", "en": "gentleman, man" },
+            { "w": "短发", "py": "duǎn fà", "en": "short hair" },
+            { "w": "挥手阻止", "py": "huī shǒu zǔ zhǐ", "en": "to wave to stop someone" },
+            { "w": "一幕", "py": "yí mù", "en": "a scene" },
+            { "w": "公共场所", "py": "gōng gòng chǎng suǒ", "en": "public place" },
+            { "w": "公德心", "py": "gōng dé xīn", "en": "public spirit, civic-mindedness" },
+            { "w": "不顾", "py": "bú gù", "en": "to disregard" },
+            { "w": "感受", "py": "gǎn shòu", "en": "feelings" },
+            { "w": "提醒", "py": "tí xǐng", "en": "to remind" },
+            { "w": "言行举止", "py": "yán xíng jǔ zhǐ", "en": "words and behaviour" }
+          ]
+        },
+        {
+          "title": "复习一《在组屋楼下踢足球》",
+          "sentences": [
+            {
+              "zh": "我认为他们这种行为是非常没有公德心的。",
+              "en": "I think their behaviour shows a complete lack of public spirit."
+            },
+            {
+              "zh": "因为组屋楼下是公共场所，人来人往。",
+              "en": "Because the void deck is a public place, with people coming and going all the time."
+            },
+            {
+              "zh": "一不小心球可能会打到别人，害别人受伤。",
+              "en": "If they are not careful the ball might hit someone and hurt them."
+            }
+          ],
+          "vocab": [
+            { "w": "组屋", "py": "zǔ wū", "en": "HDB flat" },
+            { "w": "行为", "py": "xíng wéi", "en": "behaviour" },
+            { "w": "人来人往", "py": "rén lái rén wǎng", "en": "people coming and going" },
+            { "w": "受伤", "py": "shòu shāng", "en": "to get hurt" }
+          ]
+        },
+        {
+          "title": "复习二《浪费水》",
+          "sentences": [
+            {
+              "zh": "我认为小男孩浪费水的行为是没有公德心的。",
+              "en": "I think the little boy's wasting of water shows a lack of public spirit."
+            },
+            {
+              "zh": "因为水是宝贵的，他不应该只顾着好玩而随意浪费。",
+              "en": "Because water is precious, and he should not waste it carelessly just for fun."
+            }
+          ],
+          "vocab": [
+            { "w": "浪费", "py": "làng fèi", "en": "to waste" },
+            { "w": "宝贵", "py": "bǎo guì", "en": "precious" },
+            { "w": "只顾着", "py": "zhǐ gù zhe", "en": "to care only about" },
+            { "w": "随意", "py": "suí yì", "en": "casually, as one pleases" }
+          ]
+        },
+        {
+          "title": "复习三《做家务》",
+          "sentences": [
+            {
+              "zh": "我认为小女孩主动帮助父母做家务的行为是值得我们学习和称赞的。",
+              "en": "I think the girl taking the initiative to help her parents with housework is worth learning from and praising."
+            },
+            {
+              "zh": "因为父母工作很忙，我们应该多帮他们做家务，减轻他们的负担，做一个乖巧懂事的孩子。",
+              "en": "Because our parents are very busy with work, we should help more with the housework to lighten their burden, and be well-behaved, sensible children."
+            }
+          ],
+          "vocab": [
+            { "w": "主动", "py": "zhǔ dòng", "en": "to take the initiative" },
+            { "w": "家务", "py": "jiā wù", "en": "housework" },
+            { "w": "值得", "py": "zhí dé", "en": "to be worth" },
+            { "w": "称赞", "py": "chēng zàn", "en": "to praise" },
+            { "w": "减轻负担", "py": "jiǎn qīng fù dān", "en": "to lighten the burden" },
+            { "w": "乖巧懂事", "py": "guāi qiǎo dǒng shì", "en": "well-behaved and sensible" }
+          ]
+        }
+      ]
+    }
+  ]
+}
