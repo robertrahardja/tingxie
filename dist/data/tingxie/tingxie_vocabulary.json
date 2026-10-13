@@ -6299,6 +6299,107 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 99,
+      "words": [
+        {
+          "simplified": "环境",
+          "traditional": "環境",
+          "pinyin": "huán jìng",
+          "english": "environment",
+          "audio": "audio/环境.mp3",
+          "important": true
+        },
+        {
+          "simplified": "打招呼",
+          "traditional": "打招呼",
+          "pinyin": "dǎ zhāo hu",
+          "english": "to greet",
+          "audio": "audio/打招呼.mp3",
+          "important": true
+        },
+        {
+          "simplified": "缩手",
+          "traditional": "縮手",
+          "pinyin": "suō shǒu",
+          "english": "to draw back one's hand",
+          "audio": "audio/缩手.mp3",
+          "important": true
+        },
+        {
+          "simplified": "人人有责",
+          "traditional": "人人有責",
+          "pinyin": "rén rén yǒu zé",
+          "english": "everyone has a responsibility",
+          "audio": "audio/人人有责.mp3",
+          "important": true
+        },
+        {
+          "simplified": "设计",
+          "traditional": "設計",
+          "pinyin": "shè jì",
+          "english": "to design; design",
+          "audio": "audio/设计.mp3",
+          "important": true
+        },
+        {
+          "simplified": "其中",
+          "traditional": "其中",
+          "pinyin": "qí zhōng",
+          "english": "among them, within",
+          "audio": "audio/其中.mp3",
+          "important": true
+        },
+        {
+          "simplified": "塑料袋",
+          "traditional": "塑料袋",
+          "pinyin": "sù liào dài",
+          "english": "plastic bag",
+          "audio": "audio/塑料袋.mp3",
+          "important": true
+        },
+        {
+          "simplified": "信封",
+          "traditional": "信封",
+          "pinyin": "xìn fēng",
+          "english": "envelope",
+          "audio": "audio/信封.mp3",
+          "important": true
+        },
+        {
+          "simplified": "必须",
+          "traditional": "必須",
+          "pinyin": "bì xū",
+          "english": "must, have to",
+          "audio": "audio/必须.mp3",
+          "important": true
+        },
+        {
+          "simplified": "印度",
+          "traditional": "印度",
+          "pinyin": "yìn dù",
+          "english": "India",
+          "audio": "audio/印度.mp3",
+          "important": true
+        },
+        {
+          "simplified": "任务",
+          "traditional": "任務",
+          "pinyin": "rèn wù",
+          "english": "task, mission",
+          "audio": "audio/任务.mp3",
+          "important": true
+        },
+        {
+          "simplified": "竖起大拇指",
+          "traditional": "豎起大拇指",
+          "pinyin": "shù qǐ dà mǔ zhǐ",
+          "english": "to give a thumbs up",
+          "audio": "audio/竖起大拇指.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
