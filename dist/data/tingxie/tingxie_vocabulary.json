@@ -6400,6 +6400,107 @@
           "important": true
         }
       ]
+    },
+    {
+      "row": 100,
+      "words": [
+        {
+          "simplified": "散步",
+          "traditional": "散步",
+          "pinyin": "sàn bù",
+          "english": "to take a stroll",
+          "audio": "audio/散步.mp3",
+          "important": true
+        },
+        {
+          "simplified": "强弱",
+          "traditional": "強弱",
+          "pinyin": "qiáng ruò",
+          "english": "strong and weak; strength",
+          "audio": "audio/强弱.mp3",
+          "important": true
+        },
+        {
+          "simplified": "钓鱼",
+          "traditional": "釣魚",
+          "pinyin": "diào yú",
+          "english": "to fish",
+          "audio": "audio/钓鱼.mp3",
+          "important": true
+        },
+        {
+          "simplified": "有始无终",
+          "traditional": "有始無終",
+          "pinyin": "yǒu shǐ wú zhōng",
+          "english": "to start but not finish",
+          "audio": "audio/有始无终.mp3",
+          "important": true
+        },
+        {
+          "simplified": "玩耍",
+          "traditional": "玩耍",
+          "pinyin": "wán shuǎ",
+          "english": "to play",
+          "audio": "audio/玩耍.mp3",
+          "important": true
+        },
+        {
+          "simplified": "怀里",
+          "traditional": "懷裡",
+          "pinyin": "huái lǐ",
+          "english": "in one's arms; bosom",
+          "audio": "audio/怀里.mp3",
+          "important": true
+        },
+        {
+          "simplified": "感到",
+          "traditional": "感到",
+          "pinyin": "gǎn dào",
+          "english": "to feel",
+          "audio": "audio/感到.mp3",
+          "important": true
+        },
+        {
+          "simplified": "半途而废",
+          "traditional": "半途而廢",
+          "pinyin": "bàn tú ér fèi",
+          "english": "to give up halfway",
+          "audio": "audio/半途而废.mp3",
+          "important": true
+        },
+        {
+          "simplified": "农夫劳动",
+          "traditional": "農夫勞動",
+          "pinyin": "nóng fū láo dòng",
+          "english": "the farmer works",
+          "audio": "audio/农夫劳动.mp3",
+          "important": true
+        },
+        {
+          "simplified": "念",
+          "traditional": "念",
+          "pinyin": "niàn",
+          "english": "to read aloud; to miss",
+          "audio": "audio/念.mp3",
+          "important": true
+        },
+        {
+          "simplified": "传",
+          "traditional": "傳",
+          "pinyin": "chuán",
+          "english": "to pass on; to spread",
+          "audio": "audio/传.mp3",
+          "important": true
+        },
+        {
+          "simplified": "签名",
+          "traditional": "簽名",
+          "pinyin": "qiān míng",
+          "english": "to sign one's name; signature",
+          "audio": "audio/签名.mp3",
+          "important": true
+        }
+      ]
     }
   ]
 }
