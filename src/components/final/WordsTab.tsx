@@ -29,6 +29,8 @@ export function WordsTab({
 }) {
   const [filter, setFilter] = useState<Filter>(data.lessons[0]?.lesson ?? 'all')
   const [starOnly, setStarOnly] = useState(false)
+  // 重点优先: 不会 words first, then ★, then the newest lessons (test + 听写 only)
+  const [priority, setPriority] = useState(true)
   const [mode, setMode] = useState<Mode>('browse')
 
   const entries = useMemo(() => {
@@ -84,10 +86,18 @@ export function WordsTab({
             {label}
           </button>
         ))}
-        <label className="ml-auto flex min-h-11 items-center gap-2 text-sm text-white">
-          <input type="checkbox" checked={starOnly} onChange={(e) => setStarOnly(e.target.checked)} />
-          只看 ★
-        </label>
+        <div className="ml-auto flex flex-wrap items-center gap-x-4">
+          {mode !== 'browse' && (
+            <label className="flex min-h-11 items-center gap-2 text-sm text-white">
+              <input type="checkbox" checked={priority} onChange={(e) => setPriority(e.target.checked)} />
+              重点优先
+            </label>
+          )}
+          <label className="flex min-h-11 items-center gap-2 text-sm text-white">
+            <input type="checkbox" checked={starOnly} onChange={(e) => setStarOnly(e.target.checked)} />
+            只看 ★
+          </label>
+        </div>
       </div>
 
       {entries.length === 0 ? (
@@ -98,8 +108,10 @@ export function WordsTab({
         <BrowseList entries={entries} unknown={unknown} toggleUnknown={toggleUnknown} speak={speak} />
       ) : (
         <TestRun
-          key={`${mode}-${String(filter)}-${starOnly}`}
+          key={`${mode}-${String(filter)}-${starOnly}-${priority}`}
           entries={entries}
+          unknown={unknown}
+          priority={priority}
           dictation={mode === 'dictation'}
           toggleUnknown={toggleUnknown}
           speak={speak}
@@ -220,19 +232,34 @@ function Details({ w, speak }: { w: VocabWord; speak: (t: string) => void }) {
 }
 
 /** One card at a time; 会 / 不会 updates the stored list and moves on. */
+/** 重点优先: 不会 words, then ★ words, then the rest; newest lesson first within each. */
+function priorityOrder(entries: Entry[], unknown: Set<string>): Entry[] {
+  const tier = (e: Entry) => (unknown.has(e.key) ? 0 : e.w.star ? 1 : 2)
+  return entries
+    .map((e) => ({ e, r: Math.random() }))
+    .sort((a, b) => tier(a.e) - tier(b.e) || b.e.lesson.lesson - a.e.lesson.lesson || a.r - b.r)
+    .map((x) => x.e)
+}
+
 function TestRun({
   entries,
+  unknown,
+  priority,
   dictation,
   toggleUnknown,
   speak,
 }: {
   entries: Entry[]
+  unknown: Set<string>
+  priority: boolean
   dictation: boolean
   toggleUnknown: (k: string, on?: boolean) => void
   speak: (t: string) => void
 }) {
-  // shuffle once per run
-  const [order] = useState(() => [...entries].sort(() => Math.random() - 0.5))
+  // order fixed once per run (marking words mid-run doesn't reshuffle)
+  const [order] = useState(() =>
+    priority ? priorityOrder(entries, unknown) : [...entries].sort(() => Math.random() - 0.5)
+  )
   const [i, setI] = useState(0)
   const [shown, setShown] = useState(false)
   // key -> true (会) / false (不会); a card with no entry was skipped or not reached
