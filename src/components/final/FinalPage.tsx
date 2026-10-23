@@ -6,6 +6,8 @@ import { useAudioPlayer } from '@/hooks/useAudioPlayer'
 import { ttsPath } from '@/lib/tts'
 import { cn } from '@/lib/utils'
 import type { QuestionsData, SentencesData, VocabData } from '@/lib/final/types'
+import { PicsContext } from './Pic'
+import type { PicMap } from './Pic'
 import { PlanTab } from './PlanTab'
 import { QuizTab } from './QuizTab'
 import { SentencesTab } from './SentencesTab'
@@ -24,9 +26,12 @@ const TABS: { id: Tab; label: string }[] = [
 const BASE = '/data/p3hcl/final'
 
 function useFinalData() {
-  const [data, setData] = useState<{ vocab: VocabData; sentences: SentencesData; questions: QuestionsData } | null>(
-    null
-  )
+  const [data, setData] = useState<{
+    vocab: VocabData
+    sentences: SentencesData
+    questions: QuestionsData
+    pics: PicMap
+  } | null>(null)
   const [error, setError] = useState<string | null>(null)
   useEffect(() => {
     let alive = true
@@ -35,8 +40,15 @@ function useFinalData() {
         if (!r.ok) throw new Error(`加载失败：${f}`)
         return r.json() as Promise<T>
       })
-    Promise.all([get<VocabData>('vocab.json'), get<SentencesData>('sentences.json'), get<QuestionsData>('questions.json')])
-      .then(([vocab, sentences, questions]) => alive && setData({ vocab, sentences, questions }))
+    // pictures are optional: a missing pics.json just means no pictures
+    const pics = get<PicMap>('pics.json').catch(() => ({}) as PicMap)
+    Promise.all([
+      get<VocabData>('vocab.json'),
+      get<SentencesData>('sentences.json'),
+      get<QuestionsData>('questions.json'),
+      pics,
+    ])
+      .then(([vocab, sentences, questions, pics]) => alive && setData({ vocab, sentences, questions, pics }))
       .catch((e: Error) => alive && setError(e.message))
     return () => {
       alive = false
@@ -80,6 +92,7 @@ export function FinalPage() {
   }
 
   return (
+    <PicsContext.Provider value={data.pics}>
     <div className="page-container">
       <header className="mb-4 text-white">
         <h1 className="page-title text-2xl md:text-3xl">期末复习</h1>
@@ -101,5 +114,6 @@ export function FinalPage() {
       {tab === 'sentences' && <SentencesTab data={data.sentences} speak={speak} />}
       {tab === 'quiz' && <QuizTab data={data.questions} speak={speak} />}
     </div>
+    </PicsContext.Provider>
   )
 }

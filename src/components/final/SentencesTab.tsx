@@ -4,19 +4,20 @@
 import { useState } from 'react'
 import { Card, SpeakButton } from '@/components/shared/ui'
 import type { Pattern, SentencesData } from '@/lib/final/types'
+import { Pic } from './Pic'
 
 export function SentencesTab({ data, speak }: { data: SentencesData; speak: (t: string) => void }) {
   return (
     <div>
       <p className="mb-3 text-sm text-white/90">先自己说一说、写一写，再点“看答案”。</p>
       {data.patterns.map((p, i) => (
-        <PatternCard key={i} p={p} speak={speak} />
+        <PatternCard key={i} pi={i} p={p} speak={speak} />
       ))}
     </div>
   )
 }
 
-function PatternCard({ p, speak }: { p: Pattern; speak: (t: string) => void }) {
+function PatternCard({ pi, p, speak }: { pi: number; p: Pattern; speak: (t: string) => void }) {
   const [open, setOpen] = useState<Set<number>>(new Set())
   const toggle = (i: number) =>
     setOpen((s) => {
@@ -38,6 +39,7 @@ function PatternCard({ p, speak }: { p: Pattern; speak: (t: string) => void }) {
         {p.items.map((it, i) => (
           <div key={i} className="rounded-xl bg-gray-50 p-3">
             <div className="mb-1 text-xs font-semibold text-gray-500">{it.practice ? '练一练' : '学校例句'}</div>
+            <Pic id={`s-${pi}-${i}`} className="mb-2 h-20 w-full" />
             <div className="whitespace-pre-line text-[16px] leading-7 text-gray-900">{it.prompt}</div>
             {open.has(i) && (
               <div className="mt-2 space-y-2">

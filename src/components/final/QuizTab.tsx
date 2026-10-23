@@ -4,9 +4,10 @@ import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import { Card, NUM, SpeakButton } from '@/components/shared/ui'
 import type { QuestionsData, QuizItem, QuizSection } from '@/lib/final/types'
+import { Pic } from './Pic'
 
 /** The stem with the right option in the blank, for the 🔊 button. */
-export function filledStem(it: QuizItem): string {
+function filledStem(it: QuizItem): string {
   const stem = it.stem ?? it.prompt ?? ''
   const ans = it.options && it.answer ? it.options[it.answer - 1] : ''
   return ans && stem.includes('____') ? stem.replace('____', ans) : stem
@@ -46,7 +47,7 @@ export function QuizTab({ data, speak }: { data: QuestionsData; speak: (t: strin
             </button>
           </div>
           {set.sections.map((sec, i) => (
-            <SectionCard key={i} sec={sec} speak={speak} />
+            <SectionCard key={i} sec={sec} picPrefix={`q-${setIdx}-${i}`} speak={speak} />
           ))}
         </div>
       )}
@@ -54,7 +55,15 @@ export function QuizTab({ data, speak }: { data: QuestionsData; speak: (t: strin
   )
 }
 
-function SectionCard({ sec, speak }: { sec: QuizSection; speak: (t: string) => void }) {
+function SectionCard({
+  sec,
+  picPrefix,
+  speak,
+}: {
+  sec: QuizSection
+  picPrefix: string
+  speak: (t: string) => void
+}) {
   const passage = Array.isArray(sec.passage) ? sec.passage.join('\n') : sec.passage
   return (
     <Card>
@@ -68,9 +77,9 @@ function SectionCard({ sec, speak }: { sec: QuizSection; speak: (t: string) => v
       <div className="space-y-4">
         {sec.items.map((it, i) =>
           sec.kind === 'mcq' && it.options?.length ? (
-            <McqItem key={i} it={it} speak={speak} />
+            <McqItem key={i} it={it} picId={`${picPrefix}-${it.n}`} speak={speak} />
           ) : (
-            <OpenItem key={i} it={it} speak={speak} />
+            <OpenItem key={i} it={it} picId={`${picPrefix}-${it.n}`} speak={speak} />
           )
         )}
       </div>
@@ -78,12 +87,13 @@ function SectionCard({ sec, speak }: { sec: QuizSection; speak: (t: string) => v
   )
 }
 
-function McqItem({ it, speak }: { it: QuizItem; speak: (t: string) => void }) {
+function McqItem({ it, picId, speak }: { it: QuizItem; picId: string; speak: (t: string) => void }) {
   const [picked, setPicked] = useState<number | null>(null)
   const done = picked !== null
   const right = done && picked === it.answer
   return (
     <div className="rounded-xl bg-gray-50 p-3">
+      <Pic id={picId} className="mb-2 h-20 w-full" />
       <div className="text-[16px] leading-7 text-gray-900">
         <span className="mr-1 font-semibold text-indigo-700">Q{it.n}</span>
         {it.stem ?? it.prompt}
@@ -136,10 +146,11 @@ function McqItem({ it, speak }: { it: QuizItem; speak: (t: string) => void }) {
   )
 }
 
-function OpenItem({ it, speak }: { it: QuizItem; speak: (t: string) => void }) {
+function OpenItem({ it, picId, speak }: { it: QuizItem; picId: string; speak: (t: string) => void }) {
   const [shown, setShown] = useState(false)
   return (
     <div className="rounded-xl bg-gray-50 p-3">
+      <Pic id={picId} className="mb-2 h-20 w-full" />
       <div className="whitespace-pre-line text-[16px] leading-7 text-gray-900">
         <span className="mr-1 font-semibold text-indigo-700">Q{it.n}</span>
         {it.prompt ?? it.stem}

@@ -2,6 +2,8 @@
 // updates the stored list, 上一个 / 跳过 move without marking.
 import { useState } from 'react'
 import { Card, SpeakButton } from '@/components/shared/ui'
+import { wordPicId } from '@/lib/final/types'
+import { Pic } from './Pic'
 import { Details, WordFace } from './WordParts'
 import type { Entry } from './WordParts'
 
@@ -77,6 +79,7 @@ export function TestRun({
         )}
       </div>
       <Card className="min-h-56">
+        <Pic id={wordPicId(e.lesson, e.w)} className="mb-3 h-28 w-full" />
         {dictation && !shown ? (
           <div className="flex flex-col items-center gap-3 py-6">
             <button

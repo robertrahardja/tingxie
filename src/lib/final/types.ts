@@ -82,5 +82,8 @@ export interface QuestionsData {
   sets: QuizSet[]
 }
 
+/** Picture id of a word: lesson + position in the lesson (matches pics.json). */
+export const wordPicId = (lesson: VocabLesson, w: VocabWord) => `v-${lesson.lesson}-${lesson.words.indexOf(w)}`
+
 /** Stable key for a word across sessions (the 不会 list lives in localStorage). */
 export const wordKey = (lesson: number, w: VocabWord) => `${lesson}:${w.word}`
