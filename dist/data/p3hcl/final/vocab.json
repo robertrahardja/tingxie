@@ -1,0 +1,5219 @@
+{
+ "lessons": [
+  {
+   "lesson": 1,
+   "title": null,
+   "source": "SD11.pdf p1-2",
+   "words": [
+    {
+     "n": 1,
+     "part": "课文",
+     "word": "成功",
+     "pinyin": "chéng gōng",
+     "english": "success",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "功课、用功、功夫"
+      }
+     ],
+     "example": "只要努力，一定会成功。"
+    },
+    {
+     "n": 2,
+     "part": "课文",
+     "word": "当",
+     "pinyin": "dāng",
+     "english": "be",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "理所当然、上当受骗"
+      }
+     ],
+     "example": "妹妹长大后想当一名医生。"
+    },
+    {
+     "n": 3,
+     "part": "课文",
+     "word": "希望",
+     "pinyin": "xī wàng",
+     "english": "hope / wish",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "失望、看望"
+      }
+     ],
+     "example": "我希望每天开开心心去上学。"
+    },
+    {
+     "n": 4,
+     "part": "课文",
+     "word": "成为",
+     "pinyin": "chéng wéi",
+     "english": "become",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "成绩、完成、成语、因为、为什么、为了"
+      }
+     ],
+     "example": "我将来想成为一名太空人。"
+    },
+    {
+     "n": 5,
+     "part": "课文",
+     "word": "练习",
+     "pinyin": "liàn xí",
+     "english": "practise",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "练习唱歌"
+      }
+     ],
+     "example": "你只要常常练习，就能做得更好。"
+    },
+    {
+     "n": 6,
+     "part": "课文",
+     "word": "就",
+     "pinyin": "jiù",
+     "english": "right away",
+     "star": false,
+     "extras": [],
+     "example": "哥哥一回到家就看电视。"
+    },
+    {
+     "n": 7,
+     "part": "课文",
+     "word": "讲故事",
+     "pinyin": "jiǎng gù shì",
+     "english": "story telling",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "讲话、讲课、演讲"
+      }
+     ],
+     "example": "我喜欢唱歌，也喜欢讲故事。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 8,
+     "part": "课文",
+     "word": "努力",
+     "pinyin": "nǔ lì",
+     "english": "strive",
+     "star": true,
+     "extras": [],
+     "example": "只要你努力学习，就能进步。"
+    },
+    {
+     "n": 9,
+     "part": "课文",
+     "word": "愿望",
+     "pinyin": "yuàn wàng",
+     "english": "ambition /wish",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "心愿、实现愿望"
+      }
+     ],
+     "example": "妹妹的愿望是长大后当一名医生。"
+    },
+    {
+     "n": 10,
+     "part": "课文",
+     "word": "实现",
+     "pinyin": "shí xiàn",
+     "english": "achieve/fulfill",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "事实、真实、果实"
+      }
+     ],
+     "example": "经过多年的努力，姐姐终于实现了愿望。"
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "课文",
+     "pinyin": "kè wén",
+     "english": "text",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "课本、功课、课室"
+      }
+     ],
+     "example": "这篇课文很有趣。"
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "做作业",
+     "pinyin": "zuò zuò yè",
+     "english": "doing homework",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "做工、做事"
+      }
+     ],
+     "example": "我每天放学回家，都会先做作业。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "第一个",
+     "pinyin": "dì yī ge",
+     "english": "first",
+     "star": false,
+     "extras": [],
+     "example": "班长是班上第一个到学校的学生。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "交功课",
+     "pinyin": "jiāo gōng kè",
+     "english": "hand in homework",
+     "star": false,
+     "extras": [],
+     "example": "我们每天早上都要交功课。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "举手",
+     "pinyin": "jǔ shǒu",
+     "english": "raise hand",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "举起双手"
+      }
+     ],
+     "example": "发问之前，请先举手。"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "每一件事",
+     "pinyin": "měi yī jiàn shì",
+     "english": "everything",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "一件衣服"
+      }
+     ],
+     "example": "妈妈叫我做的每一件事，我都做好了。"
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "读",
+     "pinyin": "dú",
+     "english": "read",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "朗读、默读"
+      }
+     ],
+     "example": "我很喜欢读华文故事书。"
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "一遍",
+     "pinyin": "yī biàn",
+     "english": "once",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词／搭配",
+       "text": "读一遍、普遍、几遍"
+      }
+     ],
+     "example": "老师请我再读一遍课文。",
+     "note": "已改正学校笔记上的错字/拼音"
+    }
+   ],
+   "note": "Header reads 三年级随堂笔记（第一课）; no 《title》 and no 读一读/课文 headings printed, so part is set to 课文."
+  },
+  {
+   "lesson": 3,
+   "title": "",
+   "source": "SD17.pdf p1-2",
+   "words": [
+    {
+     "n": 1,
+     "part": "课文",
+     "word": "蓝色",
+     "pinyin": "lán sè",
+     "english": "blue",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "蓝天"
+      }
+     ],
+     "example": "海鸟在蓝色的大海上自由自在地飞着。"
+    },
+    {
+     "n": 2,
+     "part": "课文",
+     "word": "床",
+     "pinyin": "chuáng",
+     "english": "bed",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "床单、起床、睡床、一条床单、准时起床"
+      }
+     ],
+     "example": "妈妈每天早上叫我起床。"
+    },
+    {
+     "n": 3,
+     "part": "课文",
+     "word": "按钮",
+     "pinyin": "àn niǔ",
+     "english": "button",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "按住、按时"
+      }
+     ],
+     "example": "她一按按钮，门就开了。"
+    },
+    {
+     "n": 4,
+     "part": "课文",
+     "word": "盖子",
+     "pinyin": "gài zi",
+     "english": "lid; cap",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "打开盖子、盖住、表盖、打开盖子"
+      }
+     ],
+     "example": "你把水壶的盖子打开。",
+     "note": "Page lists 打开盖子 twice in 组词/搭配 (duplicate on the handout)."
+    },
+    {
+     "n": 5,
+     "part": "课文",
+     "word": "闹钟",
+     "pinyin": "nào zhōng",
+     "english": "alarm clock",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "钟声、时钟"
+      }
+     ],
+     "example": "我每天早上一听到闹钟响，就会马上起床。"
+    },
+    {
+     "n": 6,
+     "part": "课文",
+     "word": "伙伴",
+     "pinyin": "huǒ bàn",
+     "english": "partner; friends",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "合伙、同伴、陪伴"
+      }
+     ],
+     "example": "休息时间，我喜欢和几个要好的伙伴在草场踢球。"
+    },
+    {
+     "n": 7,
+     "part": "课文",
+     "word": "背着",
+     "pinyin": "bēi zhe",
+     "english": "carry on the back",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "背包、背后、背着书包"
+      }
+     ],
+     "example": "我和弟弟每天背着书包一起上学。"
+    },
+    {
+     "n": 8,
+     "part": "课文",
+     "word": "手表",
+     "pinyin": "shǒu biǎo",
+     "english": "watch",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "钟表、表演、外表"
+      }
+     ],
+     "example": "这只手表是爸爸买给我的生日礼物。"
+    },
+    {
+     "n": 9,
+     "part": "课文",
+     "word": "颜色",
+     "pinyin": "yán sè",
+     "english": "colour",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "五颜六色"
+      }
+     ],
+     "example": "新加坡的国旗有红白两种颜色。"
+    },
+    {
+     "n": 10,
+     "part": "课文",
+     "word": "响",
+     "pinyin": "xiǎng",
+     "english": "sound; ring",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "响声、影响、响亮"
+      }
+     ],
+     "example": "上课铃声一响，同学们就回到课室。"
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "睡觉",
+     "pinyin": "shuì jiào",
+     "english": "sleep",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "上床睡觉、睡衣、睡着"
+      }
+     ],
+     "example": "明天一早还要上学，你现在应该睡觉了。"
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "改掉",
+     "pinyin": "gǎi diào",
+     "english": "get rid of bad habits",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "改过、改变、改正"
+      }
+     ],
+     "example": "在老师的帮助下，我终于改掉粗心的坏习惯。"
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "迟到",
+     "pinyin": "chí dào",
+     "english": "late",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "迟早、上学迟到"
+      }
+     ],
+     "example": "今天闹钟没有响，结果我上学迟到了。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "字",
+     "pinyin": "zì",
+     "english": "word; character",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "写字、名字、生字"
+      }
+     ],
+     "example": "你的名字叫什么？"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "陪伴",
+     "pinyin": "péi bàn",
+     "english": "accompany",
+     "star": true,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "陪同、陪伴家人、互相陪伴"
+      }
+     ],
+     "example": "当我生病时，妈妈每天都会在床边陪伴我。"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "喝",
+     "pinyin": "hē",
+     "english": "drink",
+     "star": false,
+     "extras": [
+      {
+       "label": "组词/搭配",
+       "text": "喝水、喝茶、喝汤"
+      }
+     ],
+     "example": "运动后要记得多喝水。"
+    }
+   ]
+  },
+  {
+   "lesson": 4,
+   "title": "小蝌蚪找妈妈",
+   "source": "SD3.pdf p1-3 (p4 blank)",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "变",
+     "pinyin": "biàn",
+     "english": "change",
+     "star": false,
+     "extras": [],
+     "example": "花朵的颜色由浅变深了。"
+    },
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "变化",
+     "pinyin": "biàn huà",
+     "english": "change",
+     "star": false,
+     "extras": [],
+     "example": "毛毛虫变成了蝴蝶，这真是一个奇妙的变化！",
+     "sub": true
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "短",
+     "pinyin": "duǎn",
+     "english": "short",
+     "star": false,
+     "extras": [],
+     "example": "姐姐的头发长长的，弟弟的头发短短的。"
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "绿",
+     "pinyin": "lǜ",
+     "english": "green",
+     "star": false,
+     "extras": [],
+     "example": "绿色的小树一天天长高，变成了大树。"
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "变化",
+     "pinyin": "biàn huà",
+     "english": "change",
+     "star": false,
+     "extras": [],
+     "example": "毛毛虫变成了蝴蝶，这真是一个奇妙的变化！",
+     "note": "Same word and example as the 变化 sub-entry under item 1 (repeated on the handout)."
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "细",
+     "pinyin": "xì",
+     "english": "fine",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "细心"
+      },
+      {
+       "label": "搭配",
+       "text": "做事细心"
+      }
+     ],
+     "example": "妈妈用细细的线来缝衣服。",
+     "note": "Example has ruby pinyin over 缝衣服: féng (缝) and fú (服); in 衣服 the 服 is normally neutral tone (yī fu, as in item 15)."
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "根",
+     "pinyin": "gēn",
+     "english": "root；也能作为量词使用。",
+     "star": false,
+     "extras": [],
+     "example": "大树的根伸到了泥土里去。哥哥在夜市里买了一根（量词）香肠。"
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "越",
+     "pinyin": "yuè",
+     "english": "表示程度加深。Even more",
+     "star": true,
+     "extras": [],
+     "example": "经过多次练习后，明文写的字越来越整齐了！"
+    },
+    {
+     "n": 8,
+     "part": "课文",
+     "word": "着",
+     "pinyin": "zhe",
+     "english": "表示正在进行",
+     "star": true,
+     "extras": [
+      {
+       "label": "常见结构",
+       "text": "动词（action verb）+着"
+      }
+     ],
+     "example": "老师看着学生。门开着。"
+    },
+    {
+     "n": 9,
+     "part": "课文",
+     "word": "尾巴",
+     "pinyin": "wěi ba",
+     "english": "tail",
+     "star": true,
+     "extras": [],
+     "example": "小狗看见主人，开心地摇着尾巴。"
+    },
+    {
+     "n": 10,
+     "part": "课文",
+     "word": "条",
+     "pinyin": "tiáo",
+     "english": "量词",
+     "star": false,
+     "extras": [
+      {
+       "label": "词组",
+       "text": "一条鱼/一条绳子/一条蛇/一条路/一条河/一条围巾/一条裙子"
+      }
+     ],
+     "example": null,
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "阿",
+     "pinyin": "ā",
+     "english": "称呼用的前缀，用在人名或亲人称呼前",
+     "star": true,
+     "extras": [
+      {
+       "label": "",
+       "text": "阿姨、阿爸、阿妈"
+      },
+      {
+       "label": "",
+       "text": "阿明、阿华、阿康、阿欢"
+      }
+     ],
+     "example": null,
+     "note": "Example words are listed without a label on the page."
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "阿姨",
+     "pinyin": "ā yí",
+     "english": "妈妈的姐妹或者（礼貌称呼）用来称呼比自己年长的女性。",
+     "star": true,
+     "extras": [],
+     "example": "陈阿姨有一头乌黑亮丽的长发。",
+     "note": "Printed as 阿*姨: the star sits before 姨, marking that character."
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "哪",
+     "pinyin": "nǎ",
+     "english": "where",
+     "star": false,
+     "extras": [],
+     "example": "你知道音乐室在哪里吗？",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "喊",
+     "pinyin": "hǎn",
+     "english": "shout; scream",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "大声叫喊"
+      }
+     ],
+     "example": "上课时，我们不能大喊大叫。"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "衣服",
+     "pinyin": "yī fu",
+     "english": "clothes",
+     "star": true,
+     "extras": [],
+     "example": "这几天的天气变冷了，妈妈就给宝宝多穿几件衣服。"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "肚皮",
+     "pinyin": "dù pí",
+     "english": "abdomen",
+     "star": true,
+     "extras": [],
+     "example": "小猫翻过身来，让主人摸它的肚皮。"
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "孩子",
+     "pinyin": "hái zi",
+     "english": "children; kids",
+     "star": false,
+     "extras": [],
+     "example": "弟弟每天自己收拾书包，自己做功课，真是个好孩子！"
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "找",
+     "pinyin": "zhǎo",
+     "english": "find",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "找东西"
+      }
+     ],
+     "example": "欢欢的文具盒不见了,她找了很久都没有找到。"
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "已经",
+     "pinyin": "yǐ jīng",
+     "english": "already, has happened, is completed",
+     "star": false,
+     "extras": [],
+     "example": "绿豆已经发芽了，我们很快就有豆芽吃了。"
+    }
+   ]
+  },
+  {
+   "lesson": 5,
+   "title": "一个特别的日子",
+   "source": "SD18.pdf p1-2",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "电脑",
+     "pinyin": "diàn nǎo",
+     "english": "computer",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "平板电脑"
+      }
+     ],
+     "example": "哥哥上了中学后，爸爸买了一台新的电脑给他。"
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "美食",
+     "pinyin": "měi shí",
+     "english": "delicious food",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "品尝美食"
+      }
+     ],
+     "example": "美食让人感到快乐。"
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "多彩",
+     "pinyin": "duō cǎi",
+     "english": "colorful",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "生活多彩"
+      }
+     ],
+     "example": "校园生活多彩又快乐"
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "傍晚",
+     "pinyin": "bàng wǎn",
+     "english": "evening",
+     "star": false,
+     "extras": [
+      {
+       "label": "备注",
+       "text": "*傍-高华生字  晚-普华生字"
+      }
+     ],
+     "example": "傍晚，天空中突然下起了大雨。"
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "脚踏车",
+     "pinyin": "jiǎo tà chē",
+     "english": "bicycle",
+     "star": true,
+     "extras": [],
+     "example": "每个星期天早上，我都会去公园骑脚踏车。"
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "或者",
+     "pinyin": "huò zhě",
+     "english": "连接词，or",
+     "star": false,
+     "extras": [],
+     "example": "今天晚上你可以吃炒饭或者炒面。"
+    },
+    {
+     "n": 7,
+     "part": "课文",
+     "word": "特别",
+     "pinyin": "tè bié",
+     "english": "special",
+     "star": true,
+     "extras": [],
+     "example": "这只手表很特别，它的形状是三角形的。"
+    },
+    {
+     "n": 8,
+     "part": "课文",
+     "word": "号",
+     "pinyin": "hào",
+     "english": "这里指日期，如：一月五号",
+     "star": false,
+     "extras": [],
+     "example": "五月六号是妹妹的生日。"
+    },
+    {
+     "n": 9,
+     "part": "课文",
+     "word": "附近",
+     "pinyin": "fù jìn",
+     "english": "nearby",
+     "star": true,
+     "extras": [],
+     "example": "学校的附近有很多组屋。"
+    },
+    {
+     "n": 10,
+     "part": "课文",
+     "word": "付钱",
+     "pinyin": "fù qián",
+     "english": "pay",
+     "star": true,
+     "extras": [],
+     "example": "买完东西后，我就去排队付钱。"
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "扫地",
+     "pinyin": "sǎo dì",
+     "english": "sweep the floor",
+     "star": false,
+     "extras": [],
+     "example": "我经常在家扫地，是妈妈的好帮手。"
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "事情",
+     "pinyin": "shì qing",
+     "english": "thing, matter",
+     "star": true,
+     "extras": [],
+     "example": "无论做什么事情，我们都要坚持到底。"
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "都",
+     "pinyin": "dōu",
+     "english": "all",
+     "star": false,
+     "extras": [],
+     "example": "我们班的同学都很努力。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "收到",
+     "pinyin": "shōu dào",
+     "english": "receive",
+     "star": false,
+     "extras": [],
+     "example": "新年，我收到了很多红包。"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "知道",
+     "pinyin": "zhī dào",
+     "english": "know",
+     "star": false,
+     "extras": [],
+     "example": "你知道这本书的名字吗？"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "准备",
+     "pinyin": "zhǔn bèi",
+     "english": "prepare, ready",
+     "star": true,
+     "extras": [],
+     "example": "今年，我准备了一张特别的生日卡给爸爸。"
+    }
+   ]
+  },
+  {
+   "lesson": 6,
+   "title": "说句对不起",
+   "source": "SD6pdf.pdf p1-2",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "应该",
+     "pinyin": "yīng gāi",
+     "english": "should",
+     "star": false,
+     "extras": [
+      {
+       "label": "形近字",
+       "text": "孩子"
+      }
+     ],
+     "example": "你不应该把纸张丢在地上。"
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "错",
+     "pinyin": "cuò",
+     "english": "wrong",
+     "star": false,
+     "extras": [],
+     "example": "这个字你写错了，请你改一改。"
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "推",
+     "pinyin": "tuī",
+     "english": "push",
+     "star": false,
+     "extras": [],
+     "example": "小明生气地推开门，跑了出去。"
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "弄破",
+     "pinyin": "nòng pò",
+     "english": "broken",
+     "star": false,
+     "extras": [],
+     "example": "你弄破了邻居的花盆，就得买新的赔给他。"
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "没关系",
+     "pinyin": "méi guān xi",
+     "english": "it's ok",
+     "star": false,
+     "extras": [],
+     "example": "没关系，你不是故意的，我不怪你。"
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "撞",
+     "pinyin": "zhuàng",
+     "english": "hit",
+     "star": true,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "撞到、撞倒"
+      }
+     ],
+     "example": "明明在玩你追我跑的时候，不小心撞到了丽华。"
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "原谅",
+     "pinyin": "yuán liàng",
+     "english": "forgive",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "原谅别人"
+      },
+      {
+       "label": "形近字",
+       "text": "凉快 cooling"
+      }
+     ],
+     "example": "他已经向你认错了，你就原谅他吧。"
+    },
+    {
+     "n": 8,
+     "part": "课文",
+     "word": "像",
+     "pinyin": "xiàng",
+     "english": "just like",
+     "star": false,
+     "extras": [],
+     "example": "他的脸红得像一个苹果。"
+    },
+    {
+     "n": 9,
+     "part": "课文",
+     "word": "来不及",
+     "pinyin": "lái bu jí",
+     "english": "unable to stop in time",
+     "star": false,
+     "extras": [
+      {
+       "label": "形近字",
+       "text": "开心极了 very happy"
+      },
+      {
+       "label": "音近字",
+       "text": "着急"
+      }
+     ],
+     "example": "我还来不及叫住他，他就走了。"
+    },
+    {
+     "n": 10,
+     "part": "课文",
+     "word": "爬",
+     "pinyin": "pá",
+     "english": "climb",
+     "star": false,
+     "extras": [],
+     "example": "弟弟学小狗在地上爬。"
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "怎么",
+     "pinyin": "zěn me",
+     "english": "how",
+     "star": false,
+     "extras": [],
+     "example": "已经晚上十一点了，你怎么还没睡觉？"
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "不好意思",
+     "pinyin": "bù hǎo yì si",
+     "english": "embarrassed",
+     "star": false,
+     "extras": [],
+     "example": "小明不好意思地低下头向老师认错。"
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "扶",
+     "pinyin": "fú",
+     "english": "support with the hand",
+     "star": false,
+     "extras": [],
+     "example": "妈妈看见妹妹跌倒了，马上扶她起来。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "谢谢",
+     "pinyin": "xiè xie",
+     "english": "thank you",
+     "star": false,
+     "extras": [],
+     "example": "小丽帮了我，我向她说：“谢谢你！”"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "谁",
+     "pinyin": "shéi",
+     "english": "who",
+     "star": true,
+     "extras": [],
+     "example": "这个杯子是谁打破的？"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "跌倒",
+     "pinyin": "diē dǎo",
+     "english": "fall down",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "跌倒受伤"
+      }
+     ],
+     "example": "小丽在跑步时不小心跌倒了。"
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "受伤",
+     "pinyin": "shòu shāng",
+     "english": "injured",
+     "star": true,
+     "extras": [],
+     "example": "国华受伤了，所以不能参加比赛。"
+    }
+   ]
+  },
+  {
+   "lesson": 7,
+   "title": "懂事的小安",
+   "source": "SD4.pdf p1-3",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "碎",
+     "pinyin": "suì",
+     "english": "break into pieces",
+     "star": false,
+     "extras": [],
+     "example": "弟弟打碎了花瓶，被妈妈骂。"
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "赔",
+     "pinyin": "péi",
+     "english": "compensate",
+     "star": true,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "赔罪、赔钱、赔偿"
+      }
+     ],
+     "example": "你弄坏了同学的文具，就得买新的赔给他。"
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "留",
+     "pinyin": "liú",
+     "english": "leave something behind, stay",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "留下便条"
+      }
+     ],
+     "example": "今天我要留下来打扫课室。"
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "张",
+     "pinyin": "zhāng",
+     "english": "a piece of; open",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "一张纸、一张便条、张开翅膀"
+      }
+     ],
+     "example": "老师发了一张纸给我们画画。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "便条",
+     "pinyin": "biàn tiáo",
+     "english": "notes; memo",
+     "star": true,
+     "extras": [],
+     "example": "小明留下一张便条就走了。"
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "花盆",
+     "pinyin": "huā pén",
+     "english": "flower pot",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "打破花盆"
+      }
+     ],
+     "example": "妈妈在花盆里种了美丽的花。"
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "道歉",
+     "pinyin": "dào qiàn",
+     "english": "apologize",
+     "star": false,
+     "extras": [],
+     "example": "做错事就要道歉。"
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "食堂",
+     "pinyin": "shí táng",
+     "english": "canteen",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "课堂、礼堂、教堂"
+      }
+     ],
+     "example": "休息时，我们去食堂吃东西。"
+    },
+    {
+     "n": 9,
+     "part": "读一读",
+     "word": "溜走",
+     "pinyin": "liū zǒu",
+     "english": "secretly leave",
+     "star": false,
+     "extras": [
+      {
+       "label": "辨析",
+       "text": "溜–留"
+      }
+     ],
+     "example": "小偷悄悄地从后门溜走了。"
+    },
+    {
+     "n": 10,
+     "part": "读一读",
+     "word": "踩",
+     "pinyin": "cǎi",
+     "english": "step on",
+     "star": false,
+     "extras": [],
+     "example": "我走路时踩到了鞋带，跌倒了。"
+    },
+    {
+     "n": 11,
+     "part": "读一读",
+     "word": "眼镜",
+     "pinyin": "yǎn jìng",
+     "english": "spectacles",
+     "star": true,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "镜子 mirror"
+      }
+     ],
+     "example": "哥哥近视了，需要戴眼镜。"
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "病",
+     "pinyin": "bìng",
+     "english": "sick",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "生病、病人、病房、看病"
+      }
+     ],
+     "example": "妹妹生病了，要在家里休息。"
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "休息",
+     "pinyin": "xiū xi",
+     "english": "rest",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "休息时间、躺着休息"
+      }
+     ],
+     "example": "妈妈生病了，正在房里休息，我们不要吵她。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "电视",
+     "pinyin": "diàn shì",
+     "english": "television",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "电视节目"
+      },
+      {
+       "label": "辨析",
+       "text": "视–祝、现"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "轻轻地",
+     "pinyin": "qīng qīng de",
+     "english": "gently; lightly",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "轻轻地走路、轻轻地放下、脚步轻快"
+      }
+     ],
+     "example": "文文轻轻地拍了我一下，提醒我别再说话了。"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "脱鞋",
+     "pinyin": "tuō xié",
+     "english": "take off shoes",
+     "star": true,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "脱衣服、脱袜子"
+      }
+     ],
+     "example": "我一回家就把鞋子脱掉。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "走路",
+     "pinyin": "zǒu lù",
+     "english": "walk",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "马路、路过"
+      }
+     ],
+     "example": "我每天走路去学校。"
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "搬动",
+     "pinyin": "bān dòng",
+     "english": "move",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "搬动家具、搬动椅子"
+      }
+     ],
+     "example": "搬到新家后，我每天都走路上学。"
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "碰",
+     "pinyin": "pèng",
+     "english": "knock on",
+     "star": true,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "碰撞、碰到、碰倒"
+      }
+     ],
+     "example": "我的笔碰到桌子了，发出了响声。"
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "地板",
+     "pinyin": "dì bǎn",
+     "english": "floor",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "白板、木板、板擦、老板"
+      }
+     ],
+     "example": "妈妈每个星期天都会洗地板。"
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "灵机一动",
+     "pinyin": "líng jī yí dòng",
+     "english": "a sudden inspiration",
+     "star": true,
+     "extras": [],
+     "example": "我灵机一动，想到一个好办法。"
+    }
+   ]
+  },
+  {
+   "lesson": 8,
+   "title": "折衣服",
+   "source": "SD19.pdf p1-4",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "需要",
+     "pinyin": "xū yào",
+     "english": "need",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "需求"
+      },
+      {
+       "label": "搭配",
+       "text": "需要工作、需要喝水"
+      }
+     ],
+     "example": "老师说大家需要带一盒彩色笔去学校，妈妈便带我去买。"
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "硬纸板",
+     "pinyin": "yìng zhǐ bǎn",
+     "english": "cardboard",
+     "star": true,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "纸张、纸巾、纸盘"
+      },
+      {
+       "label": "搭配",
+       "text": "一张硬纸板"
+      }
+     ],
+     "example": "美术老师要我们用硬纸板做手工。"
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "贺卡",
+     "pinyin": "hè kǎ",
+     "english": "greeting card",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "祝贺、贺年卡"
+      },
+      {
+       "label": "搭配",
+       "text": "收到贺卡、生日贺卡"
+      }
+     ],
+     "example": "爸爸的生日到了，我送了一张生日贺卡给他。"
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "部分",
+     "pinyin": "bù fen",
+     "english": "a part; a portion",
+     "star": true,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "部位、全部"
+      }
+     ],
+     "example": "这个蛋糕太大了，我吃不完，把部分的蛋糕和邻居分享。"
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "涂上",
+     "pinyin": "tú shàng",
+     "english": "spread",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "涂改、涂鸦、涂抹"
+      },
+      {
+       "label": "搭配",
+       "text": "涂上颜色、涂上果酱"
+      }
+     ],
+     "example": "弟弟在面包涂上牛油和咖椰。"
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "挂",
+     "pinyin": "guà",
+     "english": "hang",
+     "star": false,
+     "extras": [
+      {
+       "label": "字辩",
+       "text": "青蛙、娃娃、鞋子"
+      },
+      {
+       "label": "构词",
+       "text": "高挂、挂在、挂着"
+      },
+      {
+       "label": "搭配",
+       "text": "挂衣服、挂图、挂照片"
+      }
+     ],
+     "example": "妈妈把画挂在墙上。"
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "然后",
+     "pinyin": "rán hòu",
+     "english": "then",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "忽然、突然"
+      }
+     ],
+     "example": "妈妈先把线穿过这个洞，然后把线的两端绑紧。"
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "接着",
+     "pinyin": "jiē zhe",
+     "english": "then",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "接过、接受、迎接"
+      },
+      {
+       "label": "★构词",
+       "text": "看着、坐着、站着"
+      },
+      {
+       "label": "★字辩",
+       "text": "看着"
+      }
+     ],
+     "example": "妈妈先把线穿过这个洞，接着把线的两端绑紧。"
+    },
+    {
+     "n": 9,
+     "part": "读一读",
+     "word": "吊在",
+     "pinyin": "diào zài",
+     "english": "hang",
+     "star": false,
+     "extras": [
+      {
+       "label": "字辩",
+       "text": "发呆"
+      },
+      {
+       "label": "构词",
+       "text": "吊着、吊挂、吊死"
+      }
+     ],
+     "example": "妈妈把年花吊在阳台上。"
+    },
+    {
+     "n": 10,
+     "part": "读一读",
+     "word": "小洞",
+     "pinyin": "xiǎo dòng",
+     "english": "small hole/small cave",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "大洞、打洞、洞口"
+      }
+     ],
+     "example": "小狗在草地上挖了一个小洞，把骨头埋在小洞里。"
+    },
+    {
+     "n": 11,
+     "part": "读一读",
+     "word": "灯笼",
+     "pinyin": "dēng lóng",
+     "english": "lantern",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "鸟笼、笼子"
+      }
+     ],
+     "example": "中秋节到了，爷爷买了一个灯笼给弟弟。"
+    },
+    {
+     "n": 12,
+     "part": "读一读",
+     "word": "裙子",
+     "pinyin": "qún zi",
+     "english": "skirt/dress",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "长裙、短裙、裤裙"
+      }
+     ],
+     "example": "姐姐穿的裙子真好看。"
+    },
+    {
+     "n": 13,
+     "part": "读一读",
+     "word": "裤子",
+     "pinyin": "kù zi",
+     "english": "pants/shorts/trousers",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "长裤、短裤、裤裙"
+      }
+     ],
+     "example": "哥哥穿了一条短裤去跑步。"
+    },
+    {
+     "n": 14,
+     "part": "读一读",
+     "word": "穿过去",
+     "pinyin": "chuān guò qù",
+     "english": "go through",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "刺穿、穿破、穿衣"
+      }
+     ],
+     "example": "我们先在硬纸卡上戳一个洞，再把线穿过去。"
+    },
+    {
+     "n": 15,
+     "part": "读一读",
+     "word": "客厅",
+     "pinyin": "kè tīng",
+     "english": "living room",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "客人、客房、乘客"
+      },
+      {
+       "label": "★构词",
+       "text": "餐厅、饭厅"
+      }
+     ],
+     "example": "我们坐在客厅里的沙发看电视。"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "开始",
+     "pinyin": "kāi shǐ",
+     "english": "begin",
+     "star": false,
+     "extras": [
+      {
+       "label": "字辩",
+       "text": "抬起、怡情"
+      },
+      {
+       "label": "构词",
+       "text": "始终、原始"
+      },
+      {
+       "label": "搭配",
+       "text": "从头开始、开始工作、开始读书"
+      }
+     ],
+     "example": "铃声一响，我们就开始上课了。"
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "请求",
+     "pinyin": "qǐng qiú",
+     "english": "make a request",
+     "star": false,
+     "extras": [
+      {
+       "label": "字辩",
+       "text": "救命"
+      },
+      {
+       "label": "构词",
+       "text": "要求、求人、求救"
+      },
+      {
+       "label": "搭配",
+       "text": "请求原谅、答应请求"
+      }
+     ],
+     "example": "我请求父母带我去参观动物园。"
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "让",
+     "pinyin": "ràng",
+     "english": "allow",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "让位、让座、让人、让开、让路"
+      }
+     ],
+     "example": "弟弟看见一位行动不便的老婆婆上了巴士，让老婆婆坐下。"
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "比较",
+     "pinyin": "bǐ jiào",
+     "english": "compare",
+     "star": false,
+     "extras": [
+      {
+       "label": "字辩",
+       "text": "咬破、摔跤"
+      },
+      {
+       "label": "构词",
+       "text": "计较"
+      },
+      {
+       "label": "搭配",
+       "text": "互相比较、比较开心"
+      }
+     ],
+     "example": "这个数学题比较难，我们都不会做。"
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "晒",
+     "pinyin": "shài",
+     "english": "putting things under the sun to dry",
+     "star": false,
+     "extras": [
+      {
+       "label": "字辩",
+       "text": "花洒"
+      },
+      {
+       "label": "构词",
+       "text": "晒干、晒黑、暴晒"
+      }
+     ],
+     "example": "妈妈把洗好的衣服拿到阳台去晒。"
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "重",
+     "pinyin": "zhòng",
+     "english": "heavy",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "重量、体重、称重、重大、沉重"
+      }
+     ],
+     "example": "这块石头太重了，谁也搬不动。"
+    },
+    {
+     "n": 22,
+     "part": "课文",
+     "word": "歪",
+     "pinyin": "wāi",
+     "english": "crooked",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "歪斜、歪曲"
+      }
+     ],
+     "example": "老师提醒大家不要把字写歪，要写得整齐。"
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "乱塞",
+     "pinyin": "luàn sāi",
+     "english": "squeeze in something untidily",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "弄乱、乱丢"
+      },
+      {
+       "label": "搭配",
+       "text": "乱塞玩具、乱塞衣服"
+      },
+      {
+       "label": "字辩",
+       "text": "比赛"
+      },
+      {
+       "label": "构词",
+       "text": "塞进、塞住、塞车、阻塞(zǔ sè)"
+      }
+     ],
+     "example": "放学的铃声响了，妹妹把书本随便乱塞进书包后，就跑出课室。"
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "累",
+     "pinyin": "lèi",
+     "english": "tired",
+     "star": true,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "累坏、疲累、劳累"
+      }
+     ],
+     "example": "爸爸工作了一整天，回到家里已经很累了。"
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "满头大汗",
+     "pinyin": "mǎn tóu dà hàn",
+     "english": "sweating profusely",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "汗水、流汗"
+      }
+     ],
+     "example": "今天的天气太热了，路上的行人都热得满头大汗。"
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "整齐",
+     "pinyin": "zhěng qí",
+     "english": "neat & tidy",
+     "star": true,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "整理、工整"
+      },
+      {
+       "label": "搭配",
+       "text": "整整齐齐、排列整齐、收拾整齐"
+      },
+      {
+       "label": "构词",
+       "text": "齐全、齐备"
+      }
+     ],
+     "example": "图书馆管理员把故事书排列整齐，等待学生们来借阅。"
+    }
+   ]
+  },
+  {
+   "lesson": 9,
+   "title": "曹冲称象",
+   "source": "SD7.pdf p1-3 (p4 blank)",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "熊",
+     "pinyin": "xióng",
+     "english": "bear",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "倒进",
+     "pinyin": "dào jìn",
+     "english": "pour into",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "倒进杯子"
+      }
+     ],
+     "example": "弟弟把牛奶倒进杯子里喝。"
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "伸进",
+     "pinyin": "shēn jìn",
+     "english": "reach into",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "伸进口袋"
+      }
+     ],
+     "example": "爷爷把手伸进口袋，拿了五块钱给弟弟买饭吃。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "坑",
+     "pinyin": "kēng",
+     "english": "hole; pit; hollow",
+     "star": false,
+     "extras": [],
+     "example": "他一不小心掉进坑里，爬不上来。"
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "鼻子",
+     "pinyin": "bí zi",
+     "english": "nose",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "河",
+     "pinyin": "hé",
+     "english": "river",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "河边、河水"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "救",
+     "pinyin": "jiù",
+     "english": "save/rescue",
+     "star": false,
+     "extras": [],
+     "example": "小猫掉进坑里，我们合力把它救了上来。"
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "小猴子",
+     "pinyin": "xiǎo hóu zi",
+     "english": "little monkey",
+     "star": false,
+     "extras": [
+      {
+       "label": "辨析",
+       "text": "时候(shí hou)、水喉(shuǐ hóu)、喉咙(hóu lóng)"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "时候",
+     "pinyin": "shí hou",
+     "english": "time; moment",
+     "star": false,
+     "extras": [],
+     "example": null,
+     "sub": true,
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "水喉",
+     "pinyin": "shuǐ hóu",
+     "english": "water tap",
+     "star": false,
+     "extras": [],
+     "example": null,
+     "sub": true,
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "喉咙",
+     "pinyin": "hóu lóng",
+     "english": "throat",
+     "star": false,
+     "extras": [],
+     "example": null,
+     "sub": true,
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 9,
+     "part": "读一读",
+     "word": "竹竿",
+     "pinyin": "zhú gān",
+     "english": "bamboo stick",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "抓住竹竿"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 10,
+     "part": "读一读",
+     "word": "篮子",
+     "pinyin": "lán zi",
+     "english": "basket",
+     "star": false,
+     "extras": [
+      {
+       "label": "辨析",
+       "text": "蓝色 blue"
+      }
+     ],
+     "example": "早上，妈妈提着篮子上巴刹买菜。"
+    },
+    {
+     "n": 11,
+     "part": "读一读",
+     "word": "不停",
+     "pinyin": "bù tíng",
+     "english": "non stop",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "不停叫喊、不停责骂(zé mà)"
+      }
+     ],
+     "example": "这只小狗一看到人就叫个不停。"
+    },
+    {
+     "n": 12,
+     "part": "读一读",
+     "word": "船",
+     "pinyin": "chuán",
+     "english": "ship/boat",
+     "star": true,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 13,
+     "part": "读一读",
+     "word": "满",
+     "pinyin": "mǎn",
+     "english": "full",
+     "star": false,
+     "extras": [],
+     "example": "杯子里的水满了，你别再倒了。"
+    },
+    {
+     "n": 14,
+     "part": "读一读",
+     "word": "喷",
+     "pinyin": "pēn",
+     "english": "spray/spout",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "喷水、喷泉(quán)"
+      }
+     ],
+     "example": "哥哥喜欢在游泳池里拿玩具水枪喷水。"
+    },
+    {
+     "n": 15,
+     "part": "读一读",
+     "word": "升",
+     "pinyin": "shēng",
+     "english": "rise",
+     "star": false,
+     "extras": [],
+     "example": "太阳每天从东方升起来。"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "像",
+     "pinyin": "xiàng",
+     "english": "look like/similar",
+     "star": false,
+     "extras": [],
+     "example": "妹妹的脸红得像苹果一样。"
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "称",
+     "pinyin": "chēng",
+     "english": "weigh",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "称出重量"
+      }
+     ],
+     "example": "我称了一下体重，发现自己又胖了。"
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "官",
+     "pinyin": "guān",
+     "english": "government officer",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "官员、当官、做官"
+      },
+      {
+       "label": "辨析",
+       "text": "宫、管、馆"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "墙",
+     "pinyin": "qiáng",
+     "english": "wall",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "墙壁(bì)、围墙"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "谁",
+     "pinyin": "shéi/ shuí",
+     "english": "who / anyone",
+     "star": false,
+     "extras": [
+      {
+       "label": "辨析",
+       "text": "准、难、堆"
+      }
+     ],
+     "example": "谁打破了妈妈心爱的花瓶？"
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "回答",
+     "pinyin": "huí dá",
+     "english": "reply/answer",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "回答问题/大声回答"
+      }
+     ],
+     "example": "如果你要回答问题，请先举手。"
+    },
+    {
+     "n": 22,
+     "part": "课文",
+     "word": "拉",
+     "pinyin": "lā",
+     "english": "pull",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "拉手/拉绳/拉开"
+      },
+      {
+       "label": "辨析",
+       "text": "位、粒、垃"
+      }
+     ],
+     "example": "每天放学后，我和好朋友，手拉着手走回家。"
+    },
+    {
+     "n": 23,
+     "part": "课文",
+     "word": "下沉",
+     "pinyin": "xià chén",
+     "english": "sink",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "不断下沉/慢慢下沉"
+      }
+     ],
+     "example": "那只船正在下沉，赶快救船上的人！"
+    },
+    {
+     "n": 24,
+     "part": "课文",
+     "word": "最后",
+     "pinyin": "zuì hòu",
+     "english": "finally",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "最后一次"
+      }
+     ],
+     "example": "最后，大家帮小明找到了他的书包。"
+    },
+    {
+     "n": 25,
+     "part": "课文",
+     "word": "问题",
+     "pinyin": "wèn tí",
+     "english": "question; problem",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "回答问题/解决(jiě jué)问题"
+      }
+     ],
+     "example": "这个问题很容易，大家都抢着举手回答。"
+    },
+    {
+     "n": 26,
+     "part": "课文",
+     "word": "重量",
+     "pinyin": "zhòng liàng",
+     "english": "weight",
+     "star": false,
+     "extras": [],
+     "example": "你的力气小，举不起这样的重量。"
+    },
+    {
+     "n": 27,
+     "part": "课文",
+     "word": "夸",
+     "pinyin": "kuā",
+     "english": "praise",
+     "star": false,
+     "extras": [],
+     "example": "小乐喜欢帮助别人，大家都夸他是个好孩子。"
+    },
+    {
+     "n": 28,
+     "part": "课文",
+     "word": "神童",
+     "pinyin": "shén tóng",
+     "english": "child prodigy",
+     "star": false,
+     "extras": [],
+     "example": "他真是个神童，八岁就考上大学了！"
+    }
+   ]
+  },
+  {
+   "lesson": 10,
+   "title": "胡姬花是大家的",
+   "source": "SD8.pdf p1-3 (p4 blank)",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "扔",
+     "pinyin": "rēng",
+     "english": "throw",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "扔掉"
+      }
+     ],
+     "example": "弟弟把纸袋扔出窗外。"
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "垃圾",
+     "pinyin": "lā jī",
+     "english": "trash / rubbish",
+     "star": false,
+     "extras": [],
+     "example": "乱扔垃圾会破坏环境。"
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "收拾",
+     "pinyin": "shōu shi",
+     "english": "tidy up",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "拾起来 (pick up)"
+      }
+     ],
+     "example": "桌子太乱了，快把它收拾整齐吧！"
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "蚊子",
+     "pinyin": "wén zi",
+     "english": "mosquito",
+     "star": false,
+     "extras": [],
+     "example": "这里到处都是垃圾，引来了很多蚊虫。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "乌鸦",
+     "pinyin": "wū yā",
+     "english": "crow",
+     "star": false,
+     "extras": [],
+     "example": "树上有很多乌鸦。"
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "随地吐痰",
+     "pinyin": "suí dì tǔ tán",
+     "english": "spitting",
+     "star": false,
+     "extras": [],
+     "example": "随地吐痰是不好的习惯。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "保持",
+     "pinyin": "bǎo chí",
+     "english": "maintain",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "保持卫生、保持水准、保证、环保袋"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "环境",
+     "pinyin": "huán jìng",
+     "english": "environment",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "爱护环境、破坏环境、保护环境"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 9,
+     "part": "读一读",
+     "word": "脏",
+     "pinyin": "zāng",
+     "english": "dirty",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "肮脏"
+      }
+     ],
+     "example": "小明的手很脏，老师叫他先洗手再吃东西。"
+    },
+    {
+     "n": 10,
+     "part": "读一读",
+     "word": "衣橱",
+     "pinyin": "yī chú",
+     "english": "wardrobe",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "书橱、橱柜(guì)"
+      },
+      {
+       "label": "辨字",
+       "text": "厨房"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "周末",
+     "pinyin": "zhōu mò",
+     "english": "weekend",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "周日、一周、周末愉快"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "仔细",
+     "pinyin": "zǐ xì",
+     "english": "careful",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "仔细观察"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "啊",
+     "pinyin": "ā",
+     "english": "ah! (surprise, understanding or relief)",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "好美啊！好险啊！"
+      }
+     ],
+     "example": null,
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "招手",
+     "pinyin": "zhāo shǒu",
+     "english": "waving",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "招呼、招待、不打自招"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "吃惊",
+     "pinyin": "chī jīng",
+     "english": "surprised/shocked",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "惊奇、惊讶、大吃一惊、惊呼"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "转身",
+     "pinyin": "zhuǎn shēn",
+     "english": "turn around",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "转动、倒转、转身离开、转身就走"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "怎么",
+     "pinyin": "zěn me",
+     "english": "how",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "怎么办、怎么样、怎么了"
+      }
+     ],
+     "example": null,
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "缩手",
+     "pinyin": "suō shǒu",
+     "english": "withdraw your hands",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "收缩、缩小、伸手/缩手"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "追",
+     "pinyin": "zhuī",
+     "english": "chase",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "追上、追跑、你追我跑"
+      }
+     ],
+     "example": null
+    }
+   ]
+  },
+  {
+   "lesson": 11,
+   "title": "环保小天使",
+   "source": "SD9.pdf p1-3 (p4 blank)",
+   "words": [
+    {
+     "n": 1,
+     "part": "课文",
+     "word": "环保袋",
+     "pinyin": "huán bǎo dài",
+     "english": "recycle bag",
+     "star": false,
+     "extras": [],
+     "example": "我把刚买的日用品装在一个环保袋里。"
+    },
+    {
+     "n": 2,
+     "part": "课文",
+     "word": "代替",
+     "pinyin": "dài tì",
+     "english": "replace",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "用它代替　用来代替"
+      }
+     ],
+     "example": "小明今天生病了，由我代替他参加比赛。"
+    },
+    {
+     "n": 3,
+     "part": "课文",
+     "word": "塑料袋",
+     "pinyin": "sù liào dài",
+     "english": "plastic bag",
+     "star": false,
+     "extras": [],
+     "example": "奶奶手里提着一个装满水果的塑料袋。"
+    },
+    {
+     "n": 4,
+     "part": "课文",
+     "word": "巴刹",
+     "pinyin": "bā shā",
+     "english": "market",
+     "star": false,
+     "extras": [],
+     "example": "婆婆常常去住家附近的巴刹买菜。"
+    },
+    {
+     "n": 5,
+     "part": "课文",
+     "word": "装",
+     "pinyin": "zhuāng",
+     "english": "put inside; contain",
+     "star": false,
+     "extras": [],
+     "example": "妈妈把日用品装进环保袋里。"
+    },
+    {
+     "n": 6,
+     "part": "课文",
+     "word": "使用",
+     "pinyin": "shǐ yòng",
+     "english": "use",
+     "star": true,
+     "extras": [],
+     "example": "多使用环保袋可以保护环境。"
+    },
+    {
+     "n": 7,
+     "part": "课文",
+     "word": "报纸",
+     "pinyin": "bào zhǐ",
+     "english": "newspaper",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "读过报纸　回收报纸"
+      }
+     ],
+     "example": "爸爸每天早上都会看报纸。"
+    },
+    {
+     "n": 8,
+     "part": "课文",
+     "word": "废物",
+     "pinyin": "fèi wù",
+     "english": "rubbish",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "利用废物　回收废物"
+      }
+     ],
+     "example": "读过的报纸，我们可以废物利用。"
+    },
+    {
+     "n": 9,
+     "part": "课文",
+     "word": "瓶子",
+     "pinyin": "píng zi",
+     "english": "bottle",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "打破瓶子　利用瓶子"
+      }
+     ],
+     "example": "妹妹不小心把桌上的玻璃瓶子打破了。"
+    },
+    {
+     "n": 10,
+     "part": "课文",
+     "word": "组屋",
+     "pinyin": "zǔ wū",
+     "english": "HDB flat",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "组屋楼下　住在组屋"
+      }
+     ],
+     "example": "我们一家人住在新加坡的一间四方式组屋里。"
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "并排",
+     "pinyin": "bìng pái",
+     "english": "side by side",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "并排坐着　并排放着"
+      }
+     ],
+     "example": "我们一家人并排坐在沙发上看电视。"
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "停车场",
+     "pinyin": "tíng chē chǎng",
+     "english": "car park",
+     "star": false,
+     "extras": [],
+     "example": "停车场里停满了五颜六色的汽车。"
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "辆",
+     "pinyin": "liàng",
+     "english": "quantifier (car, bicycle, etc.)",
+     "star": false,
+     "extras": [],
+     "example": "马路边停着一辆粉红色的小汽车。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "浪费",
+     "pinyin": "làng fèi",
+     "english": "waste",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "浪费时间　浪费金钱"
+      }
+     ],
+     "example": "我们出门前要记得关灯，这样才不会浪费电。"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "海洋",
+     "pinyin": "hǎi yáng",
+     "english": "oceans",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "保护海洋　海洋生物"
+      }
+     ],
+     "example": "我们要保护海洋，不要把垃圾扔进海里。"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "所以",
+     "pinyin": "suǒ yǐ",
+     "english": "so",
+     "star": false,
+     "extras": [],
+     "example": "妹妹很努力，所以考得一百分。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "日用品",
+     "pinyin": "rì yòng pǐn",
+     "english": "daily necessities",
+     "star": false,
+     "extras": [],
+     "example": "妈妈一到周末就会去超市买日用品。"
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "认为",
+     "pinyin": "rèn wéi",
+     "english": "think",
+     "star": false,
+     "extras": [],
+     "example": "我认为四处涂鸦是不对的，因为会破坏环境。"
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "责任",
+     "pinyin": "zé rèn",
+     "english": "responsibility",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "个人责任　责任重大"
+      }
+     ],
+     "example": "保护环境是大家的责任。"
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "如果",
+     "pinyin": "rú guǒ",
+     "english": "if",
+     "star": true,
+     "extras": [],
+     "example": "如果今天下雨，我们就在家读故事书。"
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "尽一份力",
+     "pinyin": "jìn yí fèn lì",
+     "english": "play a part to help",
+     "star": false,
+     "extras": [],
+     "example": "节约用水能为爱护环境尽一份力。"
+    }
+   ],
+   "note": "No 读一读 section; all words sit under the 第十一课《环保小天使》 heading."
+  },
+  {
+   "lesson": 12,
+   "title": "",
+   "source": "SD10.pdf p1-5 (p6 blank)",
+   "note": "Main list 1-40 has no section heading; items with a 'section' field come from the page's sections 2 (只出现普华的词语单) and 3 (只出现在高华词语单), numbered from 1 again.",
+   "words": [
+    {
+     "n": 1,
+     "part": "课文",
+     "word": "呢",
+     "pinyin": "ne",
+     "english": "question particle / modal particle",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "你呢、他呢"
+      }
+     ],
+     "example": "我喜欢唱歌，你呢？"
+    },
+    {
+     "n": 2,
+     "part": "课文",
+     "word": "设计",
+     "pinyin": "shè jì",
+     "english": "design",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "设计卡片"
+      }
+     ],
+     "example": "老师要我们设计一张明信片。"
+    },
+    {
+     "n": 3,
+     "part": "课文",
+     "word": "种族",
+     "pinyin": "zhǒng zú",
+     "english": "race",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "不同种族"
+      }
+     ],
+     "example": "新加坡是个多元种族的国家。"
+    },
+    {
+     "n": 4,
+     "part": "课文",
+     "word": "多元种族",
+     "pinyin": "duō yuán zhǒng zú",
+     "english": "multi-racial",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "多元种族国家"
+      }
+     ],
+     "example": "新加坡是一个多元种族国家。"
+    },
+    {
+     "n": 5,
+     "part": "课文",
+     "word": "印度人",
+     "pinyin": "Yìn dù rén",
+     "english": "Indian",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "印度人朋友"
+      }
+     ],
+     "example": "我的邻居是印度人。"
+    },
+    {
+     "n": 6,
+     "part": "课文",
+     "word": "国旗",
+     "pinyin": "guó qí",
+     "english": "national flag",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "升国旗"
+      }
+     ],
+     "example": "弟弟在纸上画了一面国旗。"
+    },
+    {
+     "n": 7,
+     "part": "课文",
+     "word": "世界",
+     "pinyin": "shì jiè",
+     "english": "world",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "世界各地"
+      }
+     ],
+     "example": "我长大后想到世界各地旅游。"
+    },
+    {
+     "n": 8,
+     "part": "课文",
+     "word": "五颗",
+     "pinyin": "wǔ kē",
+     "english": "five pieces (for small round things)",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "五颗星星"
+      }
+     ],
+     "example": "我在河边捡了五颗圆圆的小石子。"
+    },
+    {
+     "n": 9,
+     "part": "课文",
+     "word": "兴奋",
+     "pinyin": "xīng fèn",
+     "english": "excited",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "感到兴奋"
+      }
+     ],
+     "example": "能够和家人一起去旅游，我感到很兴奋。"
+    },
+    {
+     "n": 10,
+     "part": "课文",
+     "word": "亮晶晶",
+     "pinyin": "liàng jīng jīng",
+     "english": "glittering",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "亮晶晶的星星"
+      }
+     ],
+     "example": "夜里，天上有很多亮晶晶的小星星。"
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "华人",
+     "pinyin": "Huá rén",
+     "english": "Chinese",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "华人文化"
+      }
+     ],
+     "example": "新加坡的华人能用英语和华语交流。"
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "国庆日",
+     "pinyin": "Guó qìng Rì",
+     "english": "National Day",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "庆祝国庆日"
+      }
+     ],
+     "example": "国庆日那天，我看了飞行表演。"
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "唱国歌",
+     "pinyin": "chàng guó gē",
+     "english": "sing the National Anthem",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "一起唱国歌"
+      }
+     ],
+     "example": "升旗礼上，我们一起唱国歌。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "国歌",
+     "pinyin": "guó gē",
+     "english": "National Anthem",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "唱国歌"
+      }
+     ],
+     "example": "唱国歌的时候，小月的心情很激动。"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "明信片",
+     "pinyin": "míng xìn piàn",
+     "english": "postcard",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "设计明信片"
+      }
+     ],
+     "example": "老师要我们设计一张明信片。"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "左上角",
+     "pinyin": "zuǒ shàng jiǎo",
+     "english": "top left-hand corner",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "左上角的位置"
+      }
+     ],
+     "example": "海报的左上角画着一朵美丽的胡姬花。"
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "左下角",
+     "pinyin": "zuǒ xià jiǎo",
+     "english": "bottom left-hand corner",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "左下角的位置"
+      }
+     ],
+     "example": "我在卡片的左下角写上了自己的名字。"
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "右上角",
+     "pinyin": "yòu shàng jiǎo",
+     "english": "top right-hand corner",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "右上角的位置"
+      }
+     ],
+     "example": "我把星星贴纸贴在卡片的右上角。"
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "右下角",
+     "pinyin": "yòu xià jiǎo",
+     "english": "bottom right-hand corner",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "右下角的位置"
+      }
+     ],
+     "example": "我在生日卡的右下角写了祝福的话。"
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "护照",
+     "pinyin": "hù zhào",
+     "english": "passport",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "办理护照"
+      }
+     ],
+     "example": "我的护照快要过期了。"
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "马来人",
+     "pinyin": "Mǎ lái rén",
+     "english": "Malay",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "马来人朋友"
+      }
+     ],
+     "example": "我们学校里有华人、马来人、印度人和欧亚人。"
+    },
+    {
+     "n": 22,
+     "part": "课文",
+     "word": "欧亚人",
+     "pinyin": "Ōu-Yà rén",
+     "english": "Eurasian",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "欧亚人同学"
+      }
+     ],
+     "example": "我们学校里有华人、马来人、印度人和欧亚人。"
+    },
+    {
+     "n": 23,
+     "part": "课文",
+     "word": "沙爹",
+     "pinyin": "shā diē",
+     "english": "satay",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "吃沙爹"
+      }
+     ],
+     "example": "沙爹是新加坡非常有名的美食。"
+    },
+    {
+     "n": 24,
+     "part": "课文",
+     "word": "鱼尾狮",
+     "pinyin": "yú wěi shī",
+     "english": "Merlion",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "鱼尾狮公园"
+      }
+     ],
+     "example": "很多游客都喜欢到鱼尾狮公园拍照。"
+    },
+    {
+     "n": 25,
+     "part": "课文",
+     "word": "胡姬花",
+     "pinyin": "hú jī huā",
+     "english": "orchid",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "胡姬花园"
+      }
+     ],
+     "example": "公园里的胡姬花五颜六色，十分漂亮。"
+    },
+    {
+     "n": 26,
+     "part": "课文",
+     "word": "中间",
+     "pinyin": "zhōng jiān",
+     "english": "middle",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "站在中间"
+      }
+     ],
+     "example": "老师站在教室的中间讲话。"
+    },
+    {
+     "n": 27,
+     "part": "课文",
+     "word": "图案",
+     "pinyin": "tú àn",
+     "english": "pattern",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "美丽的图案"
+      }
+     ],
+     "example": "妹妹的水壶上有白雪公主的图案。"
+    },
+    {
+     "n": 28,
+     "part": "课文",
+     "word": "美食天堂",
+     "pinyin": "měi shí tiān táng",
+     "english": "food paradise",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "美食天堂"
+      }
+     ],
+     "example": "新加坡被大家称为美食天堂。"
+    },
+    {
+     "n": 29,
+     "part": "课文",
+     "word": "机场",
+     "pinyin": "jī chǎng",
+     "english": "airport",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "前往机场"
+      }
+     ],
+     "example": "我们现在就要出发去机场了。"
+    },
+    {
+     "n": 30,
+     "part": "课文",
+     "word": "上边",
+     "pinyin": "shàng bian",
+     "english": "above",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "桌子上边"
+      }
+     ],
+     "example": "蛋糕上边有一些水果。"
+    },
+    {
+     "n": 31,
+     "part": "课文",
+     "word": "下边",
+     "pinyin": "xià bian",
+     "english": "below",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "桌子下边"
+      }
+     ],
+     "example": "桌子下边有一只小猫。"
+    },
+    {
+     "n": 32,
+     "part": "课文",
+     "word": "不错",
+     "pinyin": "bú cuò",
+     "english": "not bad; good",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "味道不错"
+      }
+     ],
+     "example": "妈妈做的鱼汤味道很不错。"
+    },
+    {
+     "n": 33,
+     "part": "课文",
+     "word": "信心",
+     "pinyin": "xìn xīn",
+     "english": "confidence",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "充满信心"
+      }
+     ],
+     "example": "哥哥不管做什么事都很有信心。"
+    },
+    {
+     "n": 34,
+     "part": "课文",
+     "word": "变成",
+     "pinyin": "biàn chéng",
+     "english": "turn into",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "变成蝴蝶"
+      }
+     ],
+     "example": "小小的种子可以变成美丽的花朵。"
+    },
+    {
+     "n": 35,
+     "part": "课文",
+     "word": "文件夹",
+     "pinyin": "wén jiàn jiā",
+     "english": "file",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "打开文件夹"
+      }
+     ],
+     "example": "阿文从文件夹里抽出一张白纸，开始画画。"
+    },
+    {
+     "n": 36,
+     "part": "课文",
+     "word": "其中",
+     "pinyin": "qí zhōng",
+     "english": "among them",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "其中一个"
+      }
+     ],
+     "example": "动物园里有各种动物，其中大熊猫最受欢迎。"
+    },
+    {
+     "n": 37,
+     "part": "课文",
+     "word": "竖起",
+     "pinyin": "shù qǐ",
+     "english": "raise; put up",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "竖起大拇指"
+      }
+     ],
+     "example": "妈妈竖起大拇指夸我做得对。"
+    },
+    {
+     "n": 38,
+     "part": "课文",
+     "word": "大拇指",
+     "pinyin": "dà mǔ zhǐ",
+     "english": "thumb",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "竖起大拇指"
+      }
+     ],
+     "example": "爸爸竖起大拇指，称赞我是个懂事的孩子。"
+    },
+    {
+     "n": 39,
+     "part": "课文",
+     "word": "谜语",
+     "pinyin": "mí yǔ",
+     "english": "riddle",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "猜谜语"
+      }
+     ],
+     "example": "爸爸出了个谜语给我们猜。"
+    },
+    {
+     "n": 40,
+     "part": "课文",
+     "word": "合唱团",
+     "pinyin": "hé chàng tuán",
+     "english": "choir",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "参加合唱团"
+      }
+     ],
+     "example": "学校合唱团正在练习国庆日要演唱的歌曲。"
+    },
+    {
+     "n": 1,
+     "part": "课文",
+     "word": "新加坡",
+     "pinyin": "Xīn Jiā pō",
+     "english": "Singapore",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "美丽的新加坡"
+      }
+     ],
+     "example": "新加坡是个美丽的花园城市。",
+     "section": "只出现普华的词语单（2个）"
+    },
+    {
+     "n": 2,
+     "part": "课文",
+     "word": "礼物",
+     "pinyin": "lǐ wù",
+     "english": "gift",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "生日礼物"
+      }
+     ],
+     "example": "我很喜欢妈妈送给我的生日礼物。",
+     "section": "只出现普华的词语单（2个）"
+    },
+    {
+     "n": 1,
+     "part": "课文",
+     "word": "狮子",
+     "pinyin": "shī zi",
+     "english": "lion",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "凶猛的狮子"
+      }
+     ],
+     "example": "动物园里有狮子、猴子等动物。",
+     "section": "只出现在高华词语单（5个）"
+    },
+    {
+     "n": 2,
+     "part": "课文",
+     "word": "老虎",
+     "pinyin": "lǎo hǔ",
+     "english": "tiger",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "大老虎"
+      }
+     ],
+     "example": "很多动物看到老虎，都很怕它。",
+     "section": "只出现在高华词语单（5个）"
+    },
+    {
+     "n": 3,
+     "part": "课文",
+     "word": "指着",
+     "pinyin": "zhǐ zhe",
+     "english": "point at",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "指着地图"
+      }
+     ],
+     "example": "弟弟指着桌上的蛋糕，说他想吃。",
+     "section": "只出现在高华词语单（5个）"
+    },
+    {
+     "n": 4,
+     "part": "课文",
+     "word": "弯弯的",
+     "pinyin": "wān wān de",
+     "english": "curved",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "弯弯的月亮"
+      }
+     ],
+     "example": "天上有弯弯的月亮。",
+     "section": "只出现在高华词语单（5个）"
+    },
+    {
+     "n": 5,
+     "part": "课文",
+     "word": "一座",
+     "pinyin": "yí zuò",
+     "english": "a; one (measure word for buildings, bridges, mountains, etc.)",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "一座小桥"
+      }
+     ],
+     "example": "公园里有一座小桥。",
+     "section": "只出现在高华词语单（5个）"
+    }
+   ]
+  },
+  {
+   "lesson": 13,
+   "title": "袋鼠在哪里",
+   "source": "latest.pdf p1-3",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "虾",
+     "pinyin": "xiā",
+     "english": "prawn",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "湖",
+     "pinyin": "hú",
+     "english": "lake",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "森林",
+     "pinyin": "sēn lín",
+     "english": "forest",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "狐狸",
+     "pinyin": "hú li",
+     "english": "fox",
+     "star": false,
+     "extras": [],
+     "example": null,
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "狼",
+     "pinyin": "láng",
+     "english": "wolf",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "山洞",
+     "pinyin": "shān dòng",
+     "english": "cave",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "猩猩",
+     "pinyin": "xīng xing",
+     "english": "gorilla",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "沙滩",
+     "pinyin": "shā tān",
+     "english": "beach",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 9,
+     "part": "读一读",
+     "word": "养",
+     "pinyin": "yǎng",
+     "english": "raise / support",
+     "star": false,
+     "extras": [],
+     "example": "林伯伯家里养了三只狗。"
+    },
+    {
+     "n": 10,
+     "part": "读一读",
+     "word": "沿着",
+     "pinyin": "yán zhe",
+     "english": "follows a route",
+     "star": false,
+     "extras": [],
+     "example": "你沿着这条路直走，就会到我家。"
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "信封",
+     "pinyin": "xìn fēng",
+     "english": "envelope",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "必须",
+     "pinyin": "bì xū",
+     "english": "must / have to",
+     "star": false,
+     "extras": [],
+     "example": "我们每天必须喝至少六杯水。"
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "拍照",
+     "pinyin": "pāi zhào",
+     "english": "take a photograph",
+     "star": false,
+     "extras": [],
+     "example": "很多人出国游玩都喜欢拍照留念。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "讨论",
+     "pinyin": "tǎo lùn",
+     "english": "discuss",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "小组讨论、讨论问题、讨论方法"
+      }
+     ],
+     "example": "我们讨论了很久，但还是没有结果。"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "带领",
+     "pinyin": "dài lǐng",
+     "english": "lead/guide",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "领队/领袖(leader)、领带(tie)"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "任务",
+     "pinyin": "rèn wù",
+     "english": "task / mission",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "完成任务"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "漂亮",
+     "pinyin": "piào liang",
+     "english": "pretty",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "漂亮的衣服、漂亮的孔雀"
+      },
+      {
+       "label": "辨字",
+       "text": "信封邮票、国旗飘扬"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "虽然",
+     "pinyin": "suī rán",
+     "english": "although",
+     "star": false,
+     "extras": [],
+     "example": "虽然国华不能参加比赛，但是他一点都不难过。（虽然……但是……）"
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "仍然",
+     "pinyin": "réng rán",
+     "english": "still",
+     "star": false,
+     "extras": [],
+     "example": "我已经有好几年没见到陈叔叔了，他的样子仍然没变。"
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "桥",
+     "pinyin": "qiáo",
+     "english": "bridge",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "天桥"
+      },
+      {
+       "label": "辨字",
+       "text": "南侨小学、华侨、侨民"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "一棵树",
+     "pinyin": "yì kē shù",
+     "english": "a tree",
+     "star": false,
+     "extras": [
+      {
+       "label": "辨字",
+       "text": "水果、一颗牙齿"
+      }
+     ],
+     "example": null,
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 22,
+     "part": "课文",
+     "word": "图片",
+     "pinyin": "tú piàn",
+     "english": "picture",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "图画(picture)、画图(drawing)"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 23,
+     "part": "课文",
+     "word": "指着",
+     "pinyin": "zhǐ zhe",
+     "english": "pointing",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "手指、拇指、食指、中指、无名指、小指"
+      }
+     ],
+     "example": "小华指着天空，说：“看！那里有一架飞机！”"
+    },
+    {
+     "n": 24,
+     "part": "课文",
+     "word": "急忙",
+     "pinyin": "jí máng",
+     "english": "hastily / hurriedly",
+     "star": false,
+     "extras": [],
+     "example": "小华上学快迟到了，他急忙冲出家门。"
+    }
+   ]
+  },
+  {
+   "lesson": 14,
+   "title": "可爱的大熊猫",
+   "source": "latest.pdf p5-10",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "假",
+     "pinyin": "jiǎ",
+     "english": "fake",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "假话、假山、真假"
+      }
+     ],
+     "example": "我们都不应该说假话。"
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "硬",
+     "pinyin": "yìng",
+     "english": "hard",
+     "star": true,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "硬币、坚硬"
+      }
+     ],
+     "example": "这块石头很硬。"
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "软",
+     "pinyin": "ruǎn",
+     "english": "soft",
+     "star": true,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "软糖、柔软"
+      }
+     ],
+     "example": "这块面包很软。"
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "强",
+     "pinyin": "qiáng",
+     "english": "strong",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "强壮、强大"
+      }
+     ],
+     "example": "明伟的身体很强壮。"
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "弱",
+     "pinyin": "ruò",
+     "english": "weak",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "弱小、柔弱"
+      }
+     ],
+     "example": "这只小鸟看起来很弱小，需要我们的保护。"
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "吞",
+     "pinyin": "tūn",
+     "english": "swallow",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "慢吞吞、吞吞吐吐"
+      }
+     ],
+     "example": "青蛙一口吞下了小虫子。"
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "慢",
+     "pinyin": "màn",
+     "english": "slow",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "慢慢、慢走、慢吞吞"
+      }
+     ],
+     "example": "小乌龟在慢慢地爬着。"
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "懒",
+     "pinyin": "lǎn",
+     "english": "lazy",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "懒人、偷懒、懒惰"
+      }
+     ],
+     "example": "我们做事不能偷懒。"
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "懒洋洋",
+     "pinyin": "lǎn yáng yáng",
+     "english": "lazily",
+     "star": false,
+     "extras": [],
+     "example": "小猫懒洋洋地躺在沙发上晒太阳。",
+     "sub": true
+    },
+    {
+     "n": 9,
+     "part": "读一读",
+     "word": "苦",
+     "pinyin": "kǔ",
+     "english": "bitter",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "苦味、苦瓜、辛苦、吃苦"
+      }
+     ],
+     "example": "学习虽然很辛苦，但是我们不能放弃。"
+    },
+    {
+     "n": 10,
+     "part": "读一读",
+     "word": "咸",
+     "pinyin": "xián",
+     "english": "salty",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "咸味、咸鱼"
+      }
+     ],
+     "example": "大海里的水是咸的，不能直接喝。"
+    },
+    {
+     "n": 11,
+     "part": "读一读",
+     "word": "淡",
+     "pinyin": "dàn",
+     "english": "mild",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "清淡、淡水"
+      }
+     ],
+     "example": "这道菜的味道有点淡，需要加一点盐。"
+    },
+    {
+     "n": 12,
+     "part": "读一读",
+     "word": "滑",
+     "pinyin": "huá",
+     "english": "smooth",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "光滑、滑梯"
+      }
+     ],
+     "example": "小狗的毛滑滑的，眼睛圆圆的。"
+    },
+    {
+     "n": 13,
+     "part": "读一读",
+     "word": "眼睛",
+     "pinyin": "yǎn jing",
+     "english": "eyes",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "一双眼睛、明亮的眼睛、大大的眼睛"
+      }
+     ],
+     "example": "她有一双明亮的大眼睛。"
+    },
+    {
+     "n": 14,
+     "part": "读一读",
+     "word": "灰",
+     "pinyin": "huī",
+     "english": "grey",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "灰色、灰尘、灰心"
+      }
+     ],
+     "example": "这件灰色的上衣很好看。"
+    },
+    {
+     "n": 15,
+     "part": "读一读",
+     "word": "嘴",
+     "pinyin": "zuǐ",
+     "english": "mouth",
+     "star": true,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "嘴巴、张嘴、嘴边"
+      }
+     ],
+     "example": "小猫张开嘴巴喵喵地叫着。"
+    },
+    {
+     "n": 16,
+     "part": "读一读",
+     "word": "饿",
+     "pinyin": "è",
+     "english": "hungry",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "很饿、不饿"
+      }
+     ],
+     "example": "弟弟很饿，看到午餐就大口大口地吃起来。"
+    },
+    {
+     "n": 17,
+     "part": "读一读",
+     "word": "饱",
+     "pinyin": "bǎo",
+     "english": "full",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "吃饱、很饱"
+      }
+     ],
+     "example": "妹妹只吃了一碗饭就饱了。"
+    },
+    {
+     "n": 18,
+     "part": "读一读",
+     "word": "散步",
+     "pinyin": "sàn bù",
+     "english": "stroll",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "出去散步、一起散步"
+      }
+     ],
+     "example": "周末，我喜欢去公园散步。"
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "熊猫",
+     "pinyin": "xióng māo",
+     "english": "panda",
+     "star": true,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "一只熊猫、可爱的熊猫"
+      }
+     ],
+     "example": "我最喜欢的动物是可爱的大熊猫。"
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "胖胖的",
+     "pinyin": "pàng pàng de",
+     "english": "chubby",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "胖胖的熊猫、胖胖的小手"
+      }
+     ],
+     "example": "弟弟的小手胖胖的，摸起来软软的。"
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "尾巴",
+     "pinyin": "wěi ba",
+     "english": "tail",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "一条尾巴、长长的尾巴"
+      }
+     ],
+     "example": "猴子有一条长长的尾巴。"
+    },
+    {
+     "n": 22,
+     "part": "课文",
+     "word": "圆圆的",
+     "pinyin": "yuán yuán de",
+     "english": "round",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "圆圆的眼睛、圆圆的太阳"
+      }
+     ],
+     "example": "他用彩色笔画了一个圆圆的太阳和一条小河。"
+    },
+    {
+     "n": 23,
+     "part": "课文",
+     "word": "玩耍",
+     "pinyin": "wán shuǎ",
+     "english": "play",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "一起玩耍、开心地玩耍"
+      }
+     ],
+     "example": "孩子们在公园里开心地玩耍。"
+    },
+    {
+     "n": 24,
+     "part": "课文",
+     "word": "笨重",
+     "pinyin": "bèn zhòng",
+     "english": "bulky",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "笨重的身体、笨重的行李"
+      }
+     ],
+     "example": "这个笨重的箱子很难搬动。"
+    },
+    {
+     "n": 25,
+     "part": "课文",
+     "word": "打滚",
+     "pinyin": "dǎ gǔn",
+     "english": "roll",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "满地打滚、笑得打滚、高兴地打滚"
+      }
+     ],
+     "example": "小狗看到主人回来了，开心地在地上打滚。"
+    },
+    {
+     "n": 25,
+     "part": "课文",
+     "word": "滚来滚去",
+     "pinyin": "gǔn lái gǔn qù",
+     "english": "roll around",
+     "star": false,
+     "extras": [],
+     "example": "这个篮球在地上滚来滚去。",
+     "sub": true
+    },
+    {
+     "n": 25,
+     "part": "课文",
+     "word": "圆滚滚",
+     "pinyin": "yuán gǔn gǔn",
+     "english": "round (body)",
+     "star": false,
+     "extras": [],
+     "example": "大熊猫看起来圆滚滚的，很可爱。",
+     "sub": true
+    },
+    {
+     "n": 26,
+     "part": "课文",
+     "word": "咬断",
+     "pinyin": "yǎo duàn",
+     "english": "biting off",
+     "star": false,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "用力咬断、一口咬断"
+      }
+     ],
+     "example": "小狗把绳子咬断，然后跑开了。"
+    },
+    {
+     "n": 27,
+     "part": "课文",
+     "word": "够",
+     "pinyin": "gòu",
+     "english": "enough",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "能够、足够、不够"
+      }
+     ],
+     "example": "他准备的水果够我们吃好几天。"
+    },
+    {
+     "n": 28,
+     "part": "课文",
+     "word": "有趣",
+     "pinyin": "yǒu qù",
+     "english": "interesting",
+     "star": true,
+     "extras": [
+      {
+       "label": "词语搭配",
+       "text": "非常有趣、有趣的故事、有趣的游戏"
+      }
+     ],
+     "example": "这个故事真有趣，我听得入了迷。"
+    },
+    {
+     "n": 29,
+     "part": "课文",
+     "word": "躺",
+     "pinyin": "tǎng",
+     "english": "lying down",
+     "star": false,
+     "extras": [
+      {
+       "label": "配词",
+       "text": "躺下、躺着"
+      }
+     ],
+     "example": "弟弟累了，躺在床上休息。"
+    }
+   ]
+  },
+  {
+   "lesson": 15,
+   "title": "谁是朱肚皮",
+   "source": "latest.pdf p11-13",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "小偷",
+     "pinyin": "xiǎo tōu",
+     "english": "thief",
+     "star": false,
+     "extras": [],
+     "example": "当他发现小偷时，马上打电话报警。"
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "课室",
+     "pinyin": "kè shì",
+     "english": "classroom",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "吓得",
+     "pinyin": "xià de",
+     "english": "scared",
+     "star": false,
+     "extras": [],
+     "example": "听到打雷声，弟弟吓得大哭起来。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "逃走",
+     "pinyin": "táo zǒu",
+     "english": "escape",
+     "star": false,
+     "extras": [],
+     "example": "看到警察赶到，那个坏蛋连忙逃走了。"
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "痛",
+     "pinyin": "tòng",
+     "english": "pain",
+     "star": false,
+     "extras": [],
+     "example": "他最近牙痛，什么也吃不下。"
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "冒出冷汗",
+     "pinyin": "mào chū lěng hàn",
+     "english": "break out in cold sweat",
+     "star": false,
+     "extras": [],
+     "example": "看到那辆车飞快地冲过来，小丽吓得冒出冷汗。"
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "发抖",
+     "pinyin": "fā dǒu",
+     "english": "shaking; trembling",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "全身发抖"
+      }
+     ],
+     "example": "天太冷了，他冻得不停地发抖。"
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "不敢",
+     "pinyin": "bù gǎn",
+     "english": "do not dare to",
+     "star": false,
+     "extras": [],
+     "example": "天黑了，弟弟不敢一个人在家。"
+    },
+    {
+     "n": 9,
+     "part": "读一读",
+     "word": "钻",
+     "pinyin": "zuān",
+     "english": "drill into a hole",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "钻石 (diamond)"
+      }
+     ],
+     "example": "一看到小猫，那只老鼠马上钻进洞里。"
+    },
+    {
+     "n": 10,
+     "part": "课文",
+     "word": "朱",
+     "pinyin": "zhū",
+     "english": "surname",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "简单",
+     "pinyin": "jiǎn dān",
+     "english": "simple, easy",
+     "star": false,
+     "extras": [],
+     "example": "这个问题很简单，我们都会回答。"
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "漫画",
+     "pinyin": "màn huà",
+     "english": "comics",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "忍不住",
+     "pinyin": "rěn bu zhù",
+     "english": "can't help",
+     "star": false,
+     "extras": [],
+     "example": "每次我听到这个故事，都忍不住要哭。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "哈哈大笑",
+     "pinyin": "hā hā dà xiào",
+     "english": "laughing",
+     "star": false,
+     "extras": [],
+     "example": "听了老师的话，同学们都哈哈大笑起来。"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "哎呀",
+     "pinyin": "āi yā",
+     "english": "oops! / oh no!",
+     "star": false,
+     "extras": [],
+     "example": "到了食堂时，小丽突然大喊：“哎呀！我忘了带钱包。”"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "挖洞",
+     "pinyin": "wā dòng",
+     "english": "digging a hole",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "冷",
+     "pinyin": "lěng",
+     "english": "cold",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词/搭配",
+       "text": "冷气机、冷得发抖、冷冻、冰冷"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "写字班",
+     "pinyin": "xiě zì bān",
+     "english": "writing class",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "班长、班级"
+      },
+      {
+       "label": "辨字",
+       "text": "斑马"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "练习",
+     "pinyin": "liàn xí",
+     "english": "practise",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "桌子",
+     "pinyin": "zhuō zi",
+     "english": "desk/table",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 22,
+     "part": "课文",
+     "word": "肚子",
+     "pinyin": "dù zi",
+     "english": "abdomen",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 23,
+     "part": "课文",
+     "word": "闹钟",
+     "pinyin": "nào zhōng",
+     "english": "alarm clock",
+     "star": false,
+     "extras": [],
+     "example": null
+    }
+   ]
+  },
+  {
+   "lesson": 16,
+   "title": "学习要认真",
+   "source": "latest.pdf p17-19",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "无",
+     "pinyin": "wú",
+     "english": "do not have",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "无聊、无论如何"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "终",
+     "pinyin": "zhōng",
+     "english": "end",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "终于、终点"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "蛇",
+     "pinyin": "shé",
+     "english": "snake",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "半途而废",
+     "pinyin": "bàn tú ér fèi",
+     "english": "give up halfway",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "途中"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "勤",
+     "pinyin": "qín",
+     "english": "hardworking",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "勤劳"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "俩",
+     "pinyin": "liǎ",
+     "english": "two (people); both",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "兄弟俩、姐妹俩"
+      }
+     ],
+     "example": null,
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "跳舞",
+     "pinyin": "tiào wǔ",
+     "english": "dance",
+     "star": true,
+     "extras": [],
+     "example": "姐姐的爱好是跳舞，她的舞跳得很棒。"
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "吹泡泡",
+     "pinyin": "chuī pào pao",
+     "english": "blow bubbles",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 9,
+     "part": "读一读",
+     "word": "结果",
+     "pinyin": "jié guǒ",
+     "english": "result/outcome/finally",
+     "star": false,
+     "extras": [],
+     "example": "她没有好好学习，结果作业都不会做。"
+    },
+    {
+     "n": 10,
+     "part": "读一读",
+     "word": "轮",
+     "pinyin": "lún",
+     "english": "wheel",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "滑轮、车轮、轮流"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 11,
+     "part": "读一读",
+     "word": "钓鱼",
+     "pinyin": "diào yú",
+     "english": "fishing",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 12,
+     "part": "读一读",
+     "word": "数学",
+     "pinyin": "shù xué",
+     "english": "mathematics",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 13,
+     "part": "读一读",
+     "word": "题",
+     "pinyin": "tí",
+     "english": "question",
+     "star": false,
+     "extras": [],
+     "example": "我很快就把这些数学题做完了。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "圈",
+     "pinyin": "quān",
+     "english": "circle",
+     "star": true,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "却",
+     "pinyin": "què",
+     "english": "but /however",
+     "star": false,
+     "extras": [],
+     "example": "弟弟喜欢数学，却不喜欢华文。"
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "认识",
+     "pinyin": "rèn shí",
+     "english": "know/recognize",
+     "star": false,
+     "extras": [],
+     "example": "只要认真学习，我们就能认识很多字。"
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "别",
+     "pinyin": "bié",
+     "english": "don’t / other",
+     "star": false,
+     "extras": [],
+     "example": "别把灯关了。"
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "念",
+     "pinyin": "niàn",
+     "english": "read aloud",
+     "star": false,
+     "extras": [],
+     "example": "我把这几个字念出来。"
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "代替",
+     "pinyin": "dài tì",
+     "english": "replace",
+     "star": true,
+     "extras": [],
+     "example": "如果有字不会写，你可以先用拼音代替。"
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "传",
+     "pinyin": "chuán",
+     "english": "pass",
+     "star": false,
+     "extras": [],
+     "example": "老师让我们把作业从后面传到前面。"
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "感到",
+     "pinyin": "gǎn dào",
+     "english": "feel",
+     "star": false,
+     "extras": [],
+     "example": "弟弟感到很难过，因为他的玩具熊坏了。"
+    },
+    {
+     "n": 22,
+     "part": "课文",
+     "word": "低下头",
+     "pinyin": "dī xià tóu",
+     "english": "lower one’s head",
+     "star": false,
+     "extras": [],
+     "example": "妹妹做错事，低下头向妈妈认错。"
+    },
+    {
+     "n": 23,
+     "part": "课文",
+     "word": "抬",
+     "pinyin": "tái",
+     "english": "raise/lift/carry",
+     "star": false,
+     "extras": [],
+     "example": "这些东西很重，快帮我抬一下。"
+    },
+    {
+     "n": 24,
+     "part": "课文",
+     "word": "终于",
+     "pinyin": "zhōng yú",
+     "english": "finally",
+     "star": false,
+     "extras": [],
+     "example": "我等了很久，巴士终于慢慢开进车站。"
+    }
+   ]
+  },
+  {
+   "lesson": 17,
+   "title": "两分",
+   "source": "latest.pdf p15-16",
+   "words": [
+    {
+     "n": 1,
+     "part": "读一读",
+     "word": "农夫",
+     "pinyin": "nóng fū",
+     "english": "farmer",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 2,
+     "part": "读一读",
+     "word": "渔夫",
+     "pinyin": "yú fū",
+     "english": "fisherman",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 3,
+     "part": "读一读",
+     "word": "金",
+     "pinyin": "jīn",
+     "english": "gold",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 4,
+     "part": "读一读",
+     "word": "银",
+     "pinyin": "yín",
+     "english": "silver",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 5,
+     "part": "读一读",
+     "word": "银牌",
+     "pinyin": "yín pái",
+     "english": "silver medal",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 6,
+     "part": "读一读",
+     "word": "捞出",
+     "pinyin": "lāo chū",
+     "english": "fish out; scoop",
+     "star": false,
+     "extras": [],
+     "example": "小明看到小鱼掉进水沟里，赶紧拿着网子把小鱼捞出来。"
+    },
+    {
+     "n": 7,
+     "part": "读一读",
+     "word": "摘下",
+     "pinyin": "zhāi xià",
+     "english": "pick; pluck",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "摘下帽子、摘下椰子"
+      }
+     ],
+     "example": null
+    },
+    {
+     "n": 8,
+     "part": "读一读",
+     "word": "失去",
+     "pinyin": "shī qù",
+     "english": "lose",
+     "star": false,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "失去机会；失去知觉"
+      }
+     ],
+     "example": "由于太迟报名，所以我失去参加画画比赛的机会。"
+    },
+    {
+     "n": 9,
+     "part": "读一读",
+     "word": "铁",
+     "pinyin": "tiě",
+     "english": "iron; metal",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 10,
+     "part": "课文",
+     "word": "试卷",
+     "pinyin": "shì juàn",
+     "english": "test paper; examination paper",
+     "star": true,
+     "extras": [
+      {
+       "label": "构词",
+       "text": "华文试卷、发回试卷"
+      }
+     ],
+     "example": null,
+     "note": "'paper' is printed after a picture, continuing the gloss."
+    },
+    {
+     "n": 11,
+     "part": "课文",
+     "word": "签名",
+     "pinyin": "qiān míng",
+     "english": "Sign one’s name; Signature",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 12,
+     "part": "课文",
+     "word": "消息",
+     "pinyin": "xiāo xi",
+     "english": "news; information",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "报告消息、好消息、坏消息"
+      }
+     ],
+     "example": "我三步并作两步地跑回家，告诉妈妈好消息。"
+    },
+    {
+     "n": 13,
+     "part": "课文",
+     "word": "等",
+     "pinyin": "děng",
+     "english": "wait",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "等待、等候"
+      }
+     ],
+     "example": "妈妈让我放学后在校门口等她。"
+    },
+    {
+     "n": 14,
+     "part": "课文",
+     "word": "答案",
+     "pinyin": "dá àn",
+     "english": "answer",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "答案正确、答案完整、找到答案"
+      }
+     ],
+     "example": "我认真想了一会儿，终于找到了正确的答案。"
+    },
+    {
+     "n": 15,
+     "part": "课文",
+     "word": "百",
+     "pinyin": "bǎi",
+     "english": "hundred",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 16,
+     "part": "课文",
+     "word": "千",
+     "pinyin": "qiān",
+     "english": "thousand",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 17,
+     "part": "课文",
+     "word": "万",
+     "pinyin": "wàn",
+     "english": "ten thousand",
+     "star": false,
+     "extras": [],
+     "example": null
+    },
+    {
+     "n": 18,
+     "part": "课文",
+     "word": "减",
+     "pinyin": "jiǎn",
+     "english": "subtract; minus",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "减少、减掉"
+      }
+     ],
+     "example": "我们应该减少使用塑料袋。"
+    },
+    {
+     "n": 19,
+     "part": "课文",
+     "word": "算",
+     "pinyin": "suàn",
+     "english": "calculate",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "打算、算一遍"
+      }
+     ],
+     "example": "这道数学题你做错了，请你再仔细算一遍。"
+    },
+    {
+     "n": 20,
+     "part": "课文",
+     "word": "立刻",
+     "pinyin": "lì kè",
+     "english": "immediately",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "立刻检查、立刻阻止、立刻上前"
+      }
+     ],
+     "example": "老师一进来，同学们立刻安静下来。"
+    },
+    {
+     "n": 21,
+     "part": "课文",
+     "word": "检查",
+     "pinyin": "jiǎn chá",
+     "english": "examine",
+     "star": false,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "检查身体、检查试卷、仔细检查"
+      }
+     ],
+     "example": "我做完作业后，认真检查了一遍。",
+     "note": "已改正学校笔记上的错字/拼音"
+    },
+    {
+     "n": 22,
+     "part": "课文",
+     "word": "感到",
+     "pinyin": "gǎn dào",
+     "english": "feel",
+     "star": true,
+     "extras": [
+      {
+       "label": "搭配",
+       "text": "感到惭愧、感到难过、感到害怕"
+      }
+     ],
+     "example": "听到自己得了第一名，我感到非常开心。",
+     "note": "已改正学校笔记上的错字/拼音"
+    }
+   ]
+  }
+ ]
+}

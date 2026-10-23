@@ -78,6 +78,29 @@ def add_keben(k: dict, add) -> None:
             add(r.get("b"))
 
 
+def add_final(add) -> None:
+    """Mirror the 🔊 buttons on /p3-final (src/components/final/)."""
+    final = DATA / "final"
+    if not final.exists():
+        return
+    for lesson in json.loads((final / "vocab.json").read_text())["lessons"]:
+        for w in lesson["words"]:
+            add(w["word"])
+            add(w.get("example"))
+    for p in json.loads((final / "sentences.json").read_text())["patterns"]:
+        for it in p["items"]:
+            add(it.get("model"))
+    for st in json.loads((final / "questions.json").read_text())["sets"]:
+        for sec in st["sections"]:
+            for it in sec["items"]:
+                add(it.get("model"))
+                stem = it.get("stem") or it.get("prompt") or ""
+                opts = it.get("options") or []
+                ans = opts[it["answer"] - 1] if opts and it.get("answer") else ""
+                # matches filledStem() in QuizTab.tsx
+                add(stem.replace("____", ans, 1) if ans and "____" in stem else stem)
+
+
 def collect() -> set[str]:
     texts: set[str] = set()
 
@@ -103,6 +126,8 @@ def collect() -> set[str]:
         if f.stem.endswith("_words"):
             continue
         add_keben(json.loads(f.read_text()), add)
+
+    add_final(add)
 
     for f in sorted(DATA.glob("zonghe_*.json")):
         if f.stem.endswith("_words"):

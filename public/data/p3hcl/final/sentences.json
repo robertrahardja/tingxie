@@ -1,0 +1,405 @@
+{
+ "sources": [
+  "latest.pdf p21-24 (printed table + student's handwritten 答案)",
+  "qizi1.pdf p1-2 (same table with printed teacher answers + student annotations)"
+ ],
+ "lessons_without_pattern": [
+  6,
+  8,
+  12,
+  15,
+  17
+ ],
+ "patterns": [
+  {
+   "lesson": 1,
+   "page": "p10",
+   "pattern": "结合两个句子，不重复/转换人称",
+   "instruction": "把两个句子合成一句，不重复主语，或把重复的人名换成人称代词（他/她/它）。",
+   "items": [
+    {
+     "prompt": "a: 我叫小乐。 b: 我今年九岁。",
+     "student": "我叫小乐，今年九岁。",
+     "model": "我叫小乐，今年九岁。",
+     "ok": true,
+     "model_source": "qizi1.pdf printed answer"
+    },
+    {
+     "prompt": "a: 小乐忘记带伞。 b: 我和小乐共用一把伞。",
+     "student": "小乐忘记带伞，我和他共用一把伞。",
+     "model": "小乐忘记带伞，我和他共用一把伞。",
+     "ok": true,
+     "model_source": "qizi1.pdf printed answer",
+     "student_note": "他 is written like 口+也 and 一 is cramped next to 把; content is correct.",
+     "uncertain": true
+    },
+    {
+     "prompt": "a: 我叫小美。\nb: 我喜欢画画。",
+     "model": "我叫小美，喜欢画画。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 妹妹哭了。\nb: 妈妈抱起妹妹。",
+     "model": "妹妹哭了，妈妈抱起她。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 小狗很饿。\nb: 我给小狗一根骨头。",
+     "model": "小狗很饿，我给它一根骨头。",
+     "practice": true
+    }
+   ],
+   "annotations": "qizi1: student starred this row and wrote 'sure come in test'; wrote 他/她/它 + 们 at top of page. qizi1: student wrote 'cannot repeat, must 他'."
+  },
+  {
+   "lesson": 2,
+   "page": "p21",
+   "pattern": "“只要……就……”",
+   "instruction": "用“只要……就……”把两个句子合成一句。",
+   "items": [
+    {
+     "prompt": "a: 小华愿意认错。 b: 大家会原谅小华。",
+     "student": "小华只要原意认错，大家会原谅她",
+     "model": "只要小华愿意认错，大家就会原谅他。",
+     "ok": false,
+     "model_source": "qizi1.pdf printed answer",
+     "student_note": "Missing 就 (must be 大家就会原谅他); 愿 written as 原; last character runs off the scan edge (looks like 她).",
+     "uncertain": true
+    },
+    {
+     "prompt": "a: 你每天练习。\nb: 你的字会越写越好。",
+     "model": "只要你每天练习，你的字就会越写越好。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 我们节约用水。\nb: 我们能保护地球。",
+     "model": "只要我们节约用水，就能保护地球。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 弟弟做完功课。\nb: 弟弟可以看电视。",
+     "model": "只要弟弟做完功课，就可以看电视。",
+     "practice": true
+    }
+   ],
+   "annotations": "qizi1: student glossed 'if only … then'."
+  },
+  {
+   "lesson": 3,
+   "page": "p34",
+   "pattern": "“一……就……”",
+   "instruction": "用“一……就……”把两个句子合成一句。",
+   "items": [
+    {
+     "prompt": "a: 弟弟回到家。 b: 弟弟去冲凉。",
+     "student": null,
+     "model": "弟弟一回到家，就去冲凉。",
+     "ok": null,
+     "model_source": "qizi1.pdf printed answer"
+    },
+    {
+     "prompt": "a: 下课铃声响了。\nb: 同学们跑去食堂。",
+     "model": "下课铃声一响，同学们就跑去食堂。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 妹妹看到妈妈。\nb: 妹妹笑了。",
+     "model": "妹妹一看到妈妈，就笑了。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 爸爸下班回家。\nb: 爸爸陪我下棋。",
+     "model": "爸爸一下班回家，就陪我下棋。",
+     "practice": true
+    }
+   ],
+   "annotations": "qizi1: student notes 'very important'; 一 = 只要, 'always in front'; 就 'must', 'follow behind by action'."
+  },
+  {
+   "lesson": 4,
+   "page": "p45",
+   "pattern": "扩写句子（形容词）",
+   "instruction": "把括号里的词语加进句子里，扩写句子。",
+   "items": [
+    {
+     "prompt": "小蝌蚪摆动着尾巴。（长长的）",
+     "student": null,
+     "model": "小蝌蚪摆动着长长的尾巴。",
+     "ok": null,
+     "model_source": "qizi1.pdf printed answer"
+    },
+    {
+     "prompt": "妹妹穿着裙子。（漂亮的）",
+     "model": "妹妹穿着漂亮的裙子。",
+     "practice": true
+    },
+    {
+     "prompt": "花园里开满了花。（五颜六色的）",
+     "model": "花园里开满了五颜六色的花。",
+     "practice": true
+    },
+    {
+     "prompt": "大熊猫吃着竹子。（绿绿的）",
+     "model": "大熊猫吃着绿绿的竹子。",
+     "practice": true
+    }
+   ],
+   "annotations": "qizi1: student notes 'very important'; 的 + thing (的 goes before a noun)."
+  },
+  {
+   "lesson": 5,
+   "page": "p59",
+   "pattern": "“或者”",
+   "instruction": "用“或者”把两个句子合成一句。",
+   "items": [
+    {
+     "prompt": "a: 你可以去操场踢球。 b: 你可以去操场跑步。",
+     "student": null,
+     "model": "你可以去操场踢球或者跑步。",
+     "ok": null,
+     "model_source": "qizi1.pdf printed answer"
+    },
+    {
+     "prompt": "a: 周末我们可以去公园。\nb: 周末我们可以去图书馆。",
+     "model": "周末我们可以去公园或者图书馆。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 你可以喝牛奶。\nb: 你可以喝果汁。",
+     "model": "你可以喝牛奶或者果汁。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 下课时我会看书。\nb: 下课时我会和同学聊天。",
+     "model": "下课时我会看书或者和同学聊天。",
+     "practice": true
+    }
+   ],
+   "annotations": "qizi1: student notes 'same word cancel off, very important' (strike the repeated 你可以去操场 in b)."
+  },
+  {
+   "lesson": 7,
+   "page": "p86",
+   "pattern": "扩写句子（形容词）",
+   "instruction": "把括号里的词语加进句子里，扩写句子。",
+   "items": [
+    {
+     "prompt": "我把门关上。（轻轻地）",
+     "student": null,
+     "model": "我轻轻地把门关上。",
+     "ok": null,
+     "model_source": "qizi1.pdf printed answer"
+    },
+    {
+     "prompt": "弟弟走进房间。（慢慢地）",
+     "model": "弟弟慢慢地走进房间。",
+     "practice": true
+    },
+    {
+     "prompt": "小鸟在天空中飞。（自由自在地）",
+     "model": "小鸟在天空中自由自在地飞。",
+     "practice": true
+    },
+    {
+     "prompt": "同学们做功课。（认真地）",
+     "model": "同学们认真地做功课。",
+     "practice": true
+    }
+   ],
+   "annotations": "qizi1: student notes 'very important copy'; 地 + action (地 is followed by an action), action + 得. Pattern label on page says 形容词 although 轻轻地 is an adverbial."
+  },
+  {
+   "lesson": 9,
+   "page": null,
+   "pattern": "对话改成陈述句",
+   "instruction": "把对话改成陈述句（去掉冒号和引号，换成“叫”）。",
+   "items": [
+    {
+     "prompt": "小熊对大家说：“想想办法吧。”",
+     "student": "小熊叫大家想想办法吧。",
+     "model": "小熊叫大家想想办法。",
+     "ok": false,
+     "model_source": "qizi1.pdf printed answer",
+     "student_note": "Kept 吧; a statement drops 吧 (official answer: 小熊叫大家想想办法。)."
+    },
+    {
+     "prompt": "妈妈对我说：“快去洗手吧。”",
+     "model": "妈妈叫我快去洗手。",
+     "practice": true
+    },
+    {
+     "prompt": "老师对同学们说：“排好队。”",
+     "model": "老师叫同学们排好队。",
+     "practice": true
+    },
+    {
+     "prompt": "哥哥对弟弟说：“把玩具收好。”",
+     "model": "哥哥叫弟弟把玩具收好。",
+     "practice": true
+    }
+   ],
+   "annotations": "qizi1: student wrote 叫 above 对…说 and 'Don't add corner, no comma' (no colon or quotation marks)."
+  },
+  {
+   "lesson": 10,
+   "page": null,
+   "pattern": "“因为”",
+   "instruction": "用“因为”把两个句子合成一句。",
+   "items": [
+    {
+     "prompt": "a: 乱丢垃圾是不对的。 b: 乱丢垃圾会引来害虫。",
+     "student": "乱丢垃圾是不对的，因为会引来害……",
+     "model": "乱丢垃圾是不对的，因为会引来害虫。",
+     "ok": true,
+     "model_source": "qizi1.pdf printed answer",
+     "student_note": "Answer runs off the right edge of the scan after 害 (presumably 害虫。).",
+     "uncertain": true
+    },
+    {
+     "prompt": "a: 小明迟到了。\nb: 小明早上起晚了。",
+     "model": "小明迟到了，因为他早上起晚了。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 我很开心。\nb: 我考了一百分。",
+     "model": "我很开心，因为我考了一百分。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 我们要多喝水。\nb: 天气很热。",
+     "model": "我们要多喝水，因为天气很热。",
+     "practice": true
+    }
+   ],
+   "annotations": "Student struck out 乱丢垃圾 in b (repeated subject). qizi1 note: 'same as 大…'."
+  },
+  {
+   "lesson": 11,
+   "page": null,
+   "pattern": "“如果……就……”",
+   "instruction": "用“如果……就……”把两个句子合成一句。",
+   "items": [
+    {
+     "prompt": "a: 大家购物时都用环保袋。 b: 大家能为环保尽一份力。",
+     "student": null,
+     "model": "如果大家购物时都用环保袋，就能为环保尽一份力。",
+     "ok": null,
+     "model_source": "qizi1.pdf printed answer"
+    },
+    {
+     "prompt": "a: 明天下雨。\nb: 我们不去公园。",
+     "model": "如果明天下雨，我们就不去公园。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 你遇到困难。\nb: 你可以请老师帮忙。",
+     "model": "如果你遇到困难，就可以请老师帮忙。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 大家不乱丢垃圾。\nb: 我们的学校会很干净。",
+     "model": "如果大家不乱丢垃圾，我们的学校就会很干净。",
+     "practice": true
+    }
+   ],
+   "annotations": "Student struck out 大家 in b on latest.pdf."
+  },
+  {
+   "lesson": 13,
+   "page": null,
+   "pattern": "“虽然……但是……”",
+   "instruction": "用“虽然……但是……”把两个句子合成一句。",
+   "items": [
+    {
+     "prompt": "a: 小华是最后一名。 b: 小华仍然很开心。",
+     "student": null,
+     "model": "虽然小华是最后一名，但是仍然很开心。",
+     "ok": null,
+     "model_source": "qizi1.pdf printed answer",
+     "model_alternatives": [
+      "虽然是最后一名，但是小华仍然很开心。",
+      "小华虽然是最后一名，但是仍然很开心。"
+     ]
+    },
+    {
+     "prompt": "a: 外面下着大雨。\nb: 爸爸还是去上班了。",
+     "model": "虽然外面下着大雨，但是爸爸还是去上班了。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 这道题很难。\nb: 小华做出来了。",
+     "model": "虽然这道题很难，但是小华做出来了。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 弟弟很累。\nb: 弟弟仍然帮妈妈做家务。",
+     "model": "虽然弟弟很累，但是他仍然帮妈妈做家务。",
+     "practice": true
+    }
+   ],
+   "annotations": "qizi1: student glossed 'Although … but …'."
+  },
+  {
+   "lesson": 14,
+   "page": null,
+   "pattern": "xx的，yy的，zz的",
+   "instruction": "把三个句子合成一句，主语只写一次。",
+   "items": [
+    {
+     "prompt": "a: 小狗的毛滑滑的。 b: 小狗的尾巴短短的。 c: 小狗的眼睛圆圆的。",
+     "student": null,
+     "model": "小狗的毛滑滑的，尾巴短短的，眼睛圆圆的。",
+     "ok": null,
+     "model_source": "qizi1.pdf printed answer"
+    },
+    {
+     "prompt": "a: 大熊猫的身体胖胖的。\nb: 大熊猫的尾巴短短的。\nc: 大熊猫的眼睛黑黑的。",
+     "model": "大熊猫的身体胖胖的，尾巴短短的，眼睛黑黑的。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 妹妹的脸圆圆的。\nb: 妹妹的头发长长的。\nc: 妹妹的眼睛大大的。",
+     "model": "妹妹的脸圆圆的，头发长长的，眼睛大大的。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 苹果的皮红红的。\nb: 苹果的肉白白的。\nc: 苹果的味道甜甜的。",
+     "model": "苹果的皮红红的，肉白白的，味道甜甜的。",
+     "practice": true
+    }
+   ],
+   "annotations": "qizi1: student circled the repeated 小狗的."
+  },
+  {
+   "lesson": 16,
+   "page": null,
+   "pattern": "“却”",
+   "instruction": "用“却”把两个句子合成一句。",
+   "items": [
+    {
+     "prompt": "a: 小华爱看故事书。 b: 小华不爱写字。",
+     "student": null,
+     "model": "小华爱看故事书，却不爱写字。",
+     "ok": null,
+     "model_source": "qizi1.pdf printed answer"
+    },
+    {
+     "prompt": "a: 哥哥喜欢踢足球。\nb: 哥哥不喜欢游泳。",
+     "model": "哥哥喜欢踢足球，却不喜欢游泳。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 天气很冷。\nb: 弟弟只穿了一件短袖衣服。",
+     "model": "天气很冷，弟弟却只穿了一件短袖衣服。",
+     "practice": true
+    },
+    {
+     "prompt": "a: 小明很努力。\nb: 小明没有考到好成绩。",
+     "model": "小明很努力，却没有考到好成绩。",
+     "practice": true
+    }
+   ],
+   "annotations": "qizi1: student glossed 却 = 但是."
+  }
+ ]
+}

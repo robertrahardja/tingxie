@@ -22,6 +22,7 @@ import { Route as P3hclReading9RouteImport } from './routes/p3hcl-reading-9'
 import { Route as P3hclReading12RouteImport } from './routes/p3hcl-reading-12'
 import { Route as P3hclReading11RouteImport } from './routes/p3hcl-reading-11'
 import { Route as P3PictureCompositionRouteImport } from './routes/p3-picture-composition'
+import { Route as P3FinalRouteImport } from './routes/p3-final'
 import { Route as KoushiTrafficSafetyRouteImport } from './routes/koushi-traffic-safety'
 import { Route as KoushiNoCivicMindedness2RouteImport } from './routes/koushi-no-civic-mindedness-2'
 import { Route as KoushiNoCivicMindednessRouteImport } from './routes/koushi-no-civic-mindedness'
@@ -101,6 +102,11 @@ const P3hclReading11Route = P3hclReading11RouteImport.update({
 const P3PictureCompositionRoute = P3PictureCompositionRouteImport.update({
   id: '/p3-picture-composition',
   path: '/p3-picture-composition',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const P3FinalRoute = P3FinalRouteImport.update({
+  id: '/p3-final',
+  path: '/p3-final',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KoushiTrafficSafetyRoute = KoushiTrafficSafetyRouteImport.update({
@@ -193,6 +199,7 @@ export interface FileRoutesByFullPath {
   '/koushi-no-civic-mindedness': typeof KoushiNoCivicMindednessRoute
   '/koushi-no-civic-mindedness-2': typeof KoushiNoCivicMindedness2Route
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
+  '/p3-final': typeof P3FinalRoute
   '/p3-picture-composition': typeof P3PictureCompositionRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-12': typeof P3hclReading12Route
@@ -223,6 +230,7 @@ export interface FileRoutesByTo {
   '/koushi-no-civic-mindedness': typeof KoushiNoCivicMindednessRoute
   '/koushi-no-civic-mindedness-2': typeof KoushiNoCivicMindedness2Route
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
+  '/p3-final': typeof P3FinalRoute
   '/p3-picture-composition': typeof P3PictureCompositionRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-12': typeof P3hclReading12Route
@@ -254,6 +262,7 @@ export interface FileRoutesById {
   '/koushi-no-civic-mindedness': typeof KoushiNoCivicMindednessRoute
   '/koushi-no-civic-mindedness-2': typeof KoushiNoCivicMindedness2Route
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
+  '/p3-final': typeof P3FinalRoute
   '/p3-picture-composition': typeof P3PictureCompositionRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-12': typeof P3hclReading12Route
@@ -286,6 +295,7 @@ export interface FileRouteTypes {
     | '/koushi-no-civic-mindedness'
     | '/koushi-no-civic-mindedness-2'
     | '/koushi-traffic-safety'
+    | '/p3-final'
     | '/p3-picture-composition'
     | '/p3hcl-reading-11'
     | '/p3hcl-reading-12'
@@ -316,6 +326,7 @@ export interface FileRouteTypes {
     | '/koushi-no-civic-mindedness'
     | '/koushi-no-civic-mindedness-2'
     | '/koushi-traffic-safety'
+    | '/p3-final'
     | '/p3-picture-composition'
     | '/p3hcl-reading-11'
     | '/p3hcl-reading-12'
@@ -346,6 +357,7 @@ export interface FileRouteTypes {
     | '/koushi-no-civic-mindedness'
     | '/koushi-no-civic-mindedness-2'
     | '/koushi-traffic-safety'
+    | '/p3-final'
     | '/p3-picture-composition'
     | '/p3hcl-reading-11'
     | '/p3hcl-reading-12'
@@ -377,6 +389,7 @@ export interface RootRouteChildren {
   KoushiNoCivicMindednessRoute: typeof KoushiNoCivicMindednessRoute
   KoushiNoCivicMindedness2Route: typeof KoushiNoCivicMindedness2Route
   KoushiTrafficSafetyRoute: typeof KoushiTrafficSafetyRoute
+  P3FinalRoute: typeof P3FinalRoute
   P3PictureCompositionRoute: typeof P3PictureCompositionRoute
   P3hclReading11Route: typeof P3hclReading11Route
   P3hclReading12Route: typeof P3hclReading12Route
@@ -486,6 +499,13 @@ declare module '@tanstack/react-router' {
       path: '/p3-picture-composition'
       fullPath: '/p3-picture-composition'
       preLoaderRoute: typeof P3PictureCompositionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/p3-final': {
+      id: '/p3-final'
+      path: '/p3-final'
+      fullPath: '/p3-final'
+      preLoaderRoute: typeof P3FinalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/koushi-traffic-safety': {
@@ -609,6 +629,7 @@ const rootRouteChildren: RootRouteChildren = {
   KoushiNoCivicMindednessRoute: KoushiNoCivicMindednessRoute,
   KoushiNoCivicMindedness2Route: KoushiNoCivicMindedness2Route,
   KoushiTrafficSafetyRoute: KoushiTrafficSafetyRoute,
+  P3FinalRoute: P3FinalRoute,
   P3PictureCompositionRoute: P3PictureCompositionRoute,
   P3hclReading11Route: P3hclReading11Route,
   P3hclReading12Route: P3hclReading12Route,
