@@ -117,6 +117,13 @@ function McqItem({ it, speak }: { it: QuizItem; speak: (t: string) => void }) {
               {right ? '✓ 对了！' : `✗ 答案是 ${NUM[(it.answer ?? 1) - 1]}`}
             </span>
             <SpeakButton text={filledStem(it)} speak={speak} small />
+            <button
+              type="button"
+              onClick={() => setPicked(null)}
+              className="ml-auto min-h-11 rounded-full bg-gray-200 px-3 text-sm font-semibold text-gray-700"
+            >
+              再试一次
+            </button>
           </div>
           {it.explanation && (
             <div className="mt-1 whitespace-pre-line rounded-lg bg-white p-2 text-sm leading-6 text-gray-700">
@@ -137,24 +144,25 @@ function OpenItem({ it, speak }: { it: QuizItem; speak: (t: string) => void }) {
         <span className="mr-1 font-semibold text-indigo-700">Q{it.n}</span>
         {it.prompt ?? it.stem}
       </div>
-      {shown ? (
-        it.model && (
-          <div className="mt-2 flex items-start gap-2 rounded-lg bg-emerald-50 p-2">
-            <span className="flex-1 whitespace-pre-line text-[16px] leading-7 font-semibold text-emerald-900">
-              {it.model}
-            </span>
-            <SpeakButton text={it.model} speak={speak} small />
-          </div>
-        )
-      ) : (
-        <button
-          type="button"
-          onClick={() => setShown(true)}
-          className="mt-2 min-h-11 rounded-full bg-indigo-600 px-4 text-sm font-semibold text-white"
-        >
-          看答案
-        </button>
+      {shown && it.model && (
+        <div className="mt-2 flex items-start gap-2 rounded-lg bg-emerald-50 p-2">
+          <span className="flex-1 whitespace-pre-line text-[16px] leading-7 font-semibold text-emerald-900">
+            {it.model}
+          </span>
+          <SpeakButton text={it.model} speak={speak} small />
+        </div>
       )}
+      <button
+        type="button"
+        onClick={() => setShown((v) => !v)}
+        className={
+          shown
+            ? 'mt-2 min-h-11 rounded-full bg-gray-200 px-4 text-sm font-semibold text-gray-700'
+            : 'mt-2 min-h-11 rounded-full bg-indigo-600 px-4 text-sm font-semibold text-white'
+        }
+      >
+        {shown ? '收起答案' : '看答案'}
+      </button>
     </div>
   )
 }

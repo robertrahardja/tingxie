@@ -39,7 +39,7 @@ function PatternCard({ p, speak }: { p: Pattern; speak: (t: string) => void }) {
           <div key={i} className="rounded-xl bg-gray-50 p-3">
             <div className="mb-1 text-xs font-semibold text-gray-500">{it.practice ? '练一练' : '学校例句'}</div>
             <div className="whitespace-pre-line text-[16px] leading-7 text-gray-900">{it.prompt}</div>
-            {open.has(i) ? (
+            {open.has(i) && (
               <div className="mt-2 space-y-2">
                 <div className="flex items-start gap-2 rounded-lg bg-emerald-50 p-2">
                   <span className="flex-1 text-[16px] leading-7 font-semibold text-emerald-900">{it.model}</span>
@@ -51,15 +51,18 @@ function PatternCard({ p, speak }: { p: Pattern; speak: (t: string) => void }) {
                   </div>
                 )}
               </div>
-            ) : (
-              <button
-                type="button"
-                onClick={() => toggle(i)}
-                className="mt-2 min-h-11 rounded-full bg-indigo-600 px-4 text-sm font-semibold text-white"
-              >
-                看答案
-              </button>
             )}
+            <button
+              type="button"
+              onClick={() => toggle(i)}
+              className={
+                open.has(i)
+                  ? 'mt-2 min-h-11 rounded-full bg-gray-200 px-4 text-sm font-semibold text-gray-700'
+                  : 'mt-2 min-h-11 rounded-full bg-indigo-600 px-4 text-sm font-semibold text-white'
+              }
+            >
+              {open.has(i) ? '收起答案' : '看答案'}
+            </button>
           </div>
         ))}
       </div>
