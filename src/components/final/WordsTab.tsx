@@ -235,14 +235,41 @@ function TestRun({
   const [order] = useState(() => [...entries].sort(() => Math.random() - 0.5))
   const [i, setI] = useState(0)
   const [shown, setShown] = useState(false)
-  const [wrong, setWrong] = useState<Entry[]>([])
+  // key -> true (会) / false (不会); a card with no entry was skipped or not reached
+  const [results, setResults] = useState<Record<string, boolean>>({})
+  const wrong = order.filter((e) => results[e.key] === false)
+  const known = order.filter((e) => results[e.key] === true).length
+  const skipped = order.length - known - wrong.length
+  const go = (n: number) => {
+    setShown(false)
+    setI(n)
+  }
 
   if (i >= order.length) {
     return (
       <Card className="text-center">
         <div className="text-2xl font-bold text-gray-900">完成！🎉</div>
         <div className="mt-2 text-gray-700">
-          会 {order.length - wrong.length} / {order.length}
+          会 {known} / {order.length}
+          {skipped > 0 && <span className="text-gray-500"> · 跳过 {skipped}</span>}
+        </div>
+        <div className="mt-3 flex justify-center gap-2">
+          <button
+            type="button"
+            onClick={() => go(order.length - 1)}
+            className="min-h-11 rounded-full bg-gray-200 px-4 text-sm font-semibold text-gray-700"
+          >
+            ← 回到上一个
+          </button>
+          {skipped > 0 && (
+            <button
+              type="button"
+              onClick={() => go(order.findIndex((e) => results[e.key] === undefined))}
+              className="min-h-11 rounded-full bg-indigo-600 px-4 text-sm font-semibold text-white"
+            >
+              做跳过的词
+            </button>
+          )}
         </div>
         {wrong.length > 0 && (
           <div className="mt-3 text-left">
@@ -266,17 +293,21 @@ function TestRun({
   }
 
   const e = order[i]
-  const answer = (known: boolean) => {
-    toggleUnknown(e.key, !known)
-    if (!known) setWrong((w) => [...w, e])
-    setShown(false)
-    setI(i + 1)
+  const answer = (isKnown: boolean) => {
+    toggleUnknown(e.key, !isKnown)
+    setResults((r) => ({ ...r, [e.key]: isKnown }))
+    go(i + 1)
   }
 
   return (
     <div>
       <div className="mb-2 text-sm text-white/90">
         {i + 1} / {order.length} · 第{e.lesson.lesson}课
+        {results[e.key] !== undefined && (
+          <span className="ml-2 rounded-full bg-white/20 px-2 py-0.5 text-xs">
+            {results[e.key] ? '之前：会' : '之前：不会'}
+          </span>
+        )}
       </div>
       <Card className="min-h-56">
         {dictation && !shown ? (
@@ -345,6 +376,23 @@ function TestRun({
           </button>
         </div>
       )}
+      <div className="mt-3 grid grid-cols-2 gap-3">
+        <button
+          type="button"
+          disabled={i === 0}
+          onClick={() => go(i - 1)}
+          className="min-h-11 rounded-2xl bg-white/20 text-[15px] font-semibold text-white disabled:opacity-40"
+        >
+          ← 上一个
+        </button>
+        <button
+          type="button"
+          onClick={() => go(i + 1)}
+          className="min-h-11 rounded-2xl bg-white/20 text-[15px] font-semibold text-white"
+        >
+          跳过 →
+        </button>
+      </div>
     </div>
   )
 }
