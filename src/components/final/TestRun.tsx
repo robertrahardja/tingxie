@@ -79,7 +79,7 @@ export function TestRun({
         )}
       </div>
       <Card className="min-h-56">
-        <Pic id={wordPicId(e.lesson, e.w)} className="mb-3 h-28 w-full" />
+        <Pic id={wordPicId(e.lesson, e.w)} className="mb-3 h-44 w-full" />
         {dictation && !shown ? (
           <div className="flex flex-col items-center gap-3 py-6">
             <button

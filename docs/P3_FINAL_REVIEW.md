@@ -35,17 +35,19 @@ with the mise python after editing any of the JSON files:
 ## Pictures
 
 `public/data/p3hcl/final/pics.json` maps an item id to an image path under
-`public/`, shown as a tile by `Pic.tsx` (words in 看/自测/听写, 句子变变变
-items, 练习 questions). It is currently empty, so no tiles show. Ids:
+`public/images/p3final/`, shown as a tile by `Pic.tsx` (words in 看/自测/听写;
+句子变变变 and 练习 items are supported by id but have none yet). Ids:
 `v-<lesson>-<index in lesson>` (`wordPicId`), `s-<pattern>-<item>`,
-`q-<set>-<section>-<n>`. Only add text-free images: the tile sits above the
-answer on 听写 cards.
+`q-<set>-<section>-<n>`. Items without an entry show no tile.
 
-An emoji version (488 items) was shipped in 6200fe4 and removed at the
-user's request. Photos could not be fetched: Google shows a CAPTCHA and Bing
-returns junk from this network (second attempt, 2026-10-24, failed on the
-first three queries). Get an image API key (Pexels / Pixabay) before trying
-again.
+The 100 photos are from Pixabay (API search, picked by eye, no Chinese text;
+sources in `public/images/p3final/ATTRIBUTION.md`). Only concrete nouns and
+actions have one. Google (CAPTCHA) and Bing (junk results) block automated
+image search from this network; the Pixabay key lives in
+`~/.config/tingxie/keys.env` (`PIXABAY_KEY`). The tile sits above the answer on
+听写 cards, so never add an image that shows the word.
+
+An emoji version (6200fe4) was shipped first and removed at the user's request.
 
 ## Practice papers
 
