@@ -34,13 +34,18 @@ with the mise python after editing any of the JSON files:
 
 ## Pictures
 
-`public/data/p3hcl/final/pics.json` maps an item id to 1–3 emoji, shown as a
-tile by `Pic.tsx` (words in 看/自测/听写, 句子变变变 items, 练习 questions).
-Ids: `v-<lesson>-<index in lesson>` (`wordPicId`), `s-<pattern>-<item>`,
-`q-<set>-<section>-<n>`. Particles and pure spelling questions have no entry
-and show no tile. Emoji, not photos: Google and Bing both block automated
-image search from this network (CAPTCHA / junk results), and emoji can never
-spell out the answer on a 听写 card. After adding items, give them an id here.
+`public/data/p3hcl/final/pics.json` maps an item id to an image path under
+`public/`, shown as a tile by `Pic.tsx` (words in 看/自测/听写, 句子变变变
+items, 练习 questions). It is currently empty, so no tiles show. Ids:
+`v-<lesson>-<index in lesson>` (`wordPicId`), `s-<pattern>-<item>`,
+`q-<set>-<section>-<n>`. Only add text-free images: the tile sits above the
+answer on 听写 cards.
+
+An emoji version (488 items) was shipped in 6200fe4 and removed at the
+user's request. Photos could not be fetched: Google shows a CAPTCHA and Bing
+returns junk from this network (second attempt, 2026-10-24, failed on the
+first three queries). Get an image API key (Pexels / Pixabay) before trying
+again.
 
 ## Practice papers
 

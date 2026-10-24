@@ -34,7 +34,7 @@ export function BrowseList({
           {(i === 0 || entries[i - 1].lesson !== e.lesson) && <LessonHeading lesson={e.lesson} />}
           <Card className={cn(e.w.sub && 'ml-4')}>
             <div className="flex items-start gap-3">
-              <Pic id={wordPicId(e.lesson, e.w)} small className="h-16 w-20 shrink-0" />
+              <Pic id={wordPicId(e.lesson, e.w)} className="h-16 w-20 shrink-0" />
               <div className="min-w-0 flex-1">
                 <WordFace w={e.w} />
               </div>
