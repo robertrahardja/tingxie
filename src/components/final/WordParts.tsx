@@ -48,17 +48,22 @@ export function Details({ w, speak }: { w: VocabWord; speak: (t: string) => void
 
 export type Filter = 'all' | 'unknown' | number
 
-/** The words the current chips select: one lesson / all / only 不会, optionally only ★. */
+/**
+ * The words the current chips select: one lesson / all / only 不会, optionally only ★.
+ * `scope` limits everything to a fixed word list (the /p3-weak page).
+ */
 export function buildEntries(
   data: VocabData,
   filter: Filter,
   starOnly: boolean,
-  unknown: Set<string>
+  unknown: Set<string>,
+  scope?: Set<string>
 ): Entry[] {
   const lessons = data.lessons.filter((l) => typeof filter !== 'number' || l.lesson === filter)
   return lessons.flatMap((lesson) =>
     lesson.words
       .map((w) => ({ lesson, w, key: wordKey(lesson.lesson, w) }))
-      .filter((e) => (filter !== 'unknown' || unknown.has(e.key)) && (!starOnly || e.w.star))
+      .filter((e) => (!scope || scope.has(e.key)) && (filter !== 'unknown' || unknown.has(e.key)))
+      .filter((e) => !starOnly || e.w.star)
   )
 }

@@ -22,6 +22,16 @@ in `src/components/final/`.
 - **句子变变变**: patterns, with the model answer behind 看答案.
 - **练习**: MCQs with the sheet's 解释; open items show a model answer.
 
+## /p3-weak (fixed 不会 review list)
+
+`/p3-weak` reviews a snapshot of Hannah's 不会 list: the word keys in
+`public/data/p3hcl/final/weak.json` (111, copied from her
+`p3final_unknown` on 2026-10-24). It reuses `WordsTab` with a `scope`
+set, so 看 / 自测 / 听写, pictures and 重点优先 all work. 会 marks are kept
+in localStorage `p3weak_known`, separate from `/p3-final`. To refresh the
+snapshot, paste a new `localStorage.getItem('p3final_unknown')` array
+into `weak.json`.
+
 ## Audio
 
 `scripts/generate_tts.py` collects the page's strings via `add_final()`

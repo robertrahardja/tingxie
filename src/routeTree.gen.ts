@@ -21,6 +21,7 @@ import { Route as P3hclReadingSyncRouteImport } from './routes/p3hcl-reading-syn
 import { Route as P3hclReading9RouteImport } from './routes/p3hcl-reading-9'
 import { Route as P3hclReading12RouteImport } from './routes/p3hcl-reading-12'
 import { Route as P3hclReading11RouteImport } from './routes/p3hcl-reading-11'
+import { Route as P3WeakRouteImport } from './routes/p3-weak'
 import { Route as P3PictureCompositionRouteImport } from './routes/p3-picture-composition'
 import { Route as P3FinalRouteImport } from './routes/p3-final'
 import { Route as KoushiTrafficSafetyRouteImport } from './routes/koushi-traffic-safety'
@@ -97,6 +98,11 @@ const P3hclReading12Route = P3hclReading12RouteImport.update({
 const P3hclReading11Route = P3hclReading11RouteImport.update({
   id: '/p3hcl-reading-11',
   path: '/p3hcl-reading-11',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const P3WeakRoute = P3WeakRouteImport.update({
+  id: '/p3-weak',
+  path: '/p3-weak',
   getParentRoute: () => rootRouteImport,
 } as any)
 const P3PictureCompositionRoute = P3PictureCompositionRouteImport.update({
@@ -201,6 +207,7 @@ export interface FileRoutesByFullPath {
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
   '/p3-final': typeof P3FinalRoute
   '/p3-picture-composition': typeof P3PictureCompositionRoute
+  '/p3-weak': typeof P3WeakRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-12': typeof P3hclReading12Route
   '/p3hcl-reading-9': typeof P3hclReading9Route
@@ -232,6 +239,7 @@ export interface FileRoutesByTo {
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
   '/p3-final': typeof P3FinalRoute
   '/p3-picture-composition': typeof P3PictureCompositionRoute
+  '/p3-weak': typeof P3WeakRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-12': typeof P3hclReading12Route
   '/p3hcl-reading-9': typeof P3hclReading9Route
@@ -264,6 +272,7 @@ export interface FileRoutesById {
   '/koushi-traffic-safety': typeof KoushiTrafficSafetyRoute
   '/p3-final': typeof P3FinalRoute
   '/p3-picture-composition': typeof P3PictureCompositionRoute
+  '/p3-weak': typeof P3WeakRoute
   '/p3hcl-reading-11': typeof P3hclReading11Route
   '/p3hcl-reading-12': typeof P3hclReading12Route
   '/p3hcl-reading-9': typeof P3hclReading9Route
@@ -297,6 +306,7 @@ export interface FileRouteTypes {
     | '/koushi-traffic-safety'
     | '/p3-final'
     | '/p3-picture-composition'
+    | '/p3-weak'
     | '/p3hcl-reading-11'
     | '/p3hcl-reading-12'
     | '/p3hcl-reading-9'
@@ -328,6 +338,7 @@ export interface FileRouteTypes {
     | '/koushi-traffic-safety'
     | '/p3-final'
     | '/p3-picture-composition'
+    | '/p3-weak'
     | '/p3hcl-reading-11'
     | '/p3hcl-reading-12'
     | '/p3hcl-reading-9'
@@ -359,6 +370,7 @@ export interface FileRouteTypes {
     | '/koushi-traffic-safety'
     | '/p3-final'
     | '/p3-picture-composition'
+    | '/p3-weak'
     | '/p3hcl-reading-11'
     | '/p3hcl-reading-12'
     | '/p3hcl-reading-9'
@@ -391,6 +403,7 @@ export interface RootRouteChildren {
   KoushiTrafficSafetyRoute: typeof KoushiTrafficSafetyRoute
   P3FinalRoute: typeof P3FinalRoute
   P3PictureCompositionRoute: typeof P3PictureCompositionRoute
+  P3WeakRoute: typeof P3WeakRoute
   P3hclReading11Route: typeof P3hclReading11Route
   P3hclReading12Route: typeof P3hclReading12Route
   P3hclReading9Route: typeof P3hclReading9Route
@@ -492,6 +505,13 @@ declare module '@tanstack/react-router' {
       path: '/p3hcl-reading-11'
       fullPath: '/p3hcl-reading-11'
       preLoaderRoute: typeof P3hclReading11RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/p3-weak': {
+      id: '/p3-weak'
+      path: '/p3-weak'
+      fullPath: '/p3-weak'
+      preLoaderRoute: typeof P3WeakRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/p3-picture-composition': {
@@ -631,6 +651,7 @@ const rootRouteChildren: RootRouteChildren = {
   KoushiTrafficSafetyRoute: KoushiTrafficSafetyRoute,
   P3FinalRoute: P3FinalRoute,
   P3PictureCompositionRoute: P3PictureCompositionRoute,
+  P3WeakRoute: P3WeakRoute,
   P3hclReading11Route: P3hclReading11Route,
   P3hclReading12Route: P3hclReading12Route,
   P3hclReading9Route: P3hclReading9Route,

@@ -7,23 +7,27 @@ import { Card } from '@/components/shared/ui'
 import { BrowseList } from './BrowseList'
 import { buildEntries } from './WordParts'
 import type { Filter } from './WordParts'
+import { ModeBar } from './ModeBar'
+import type { Mode } from './ModeBar'
 import { TestRun } from './TestRun'
+import { wordKey } from '@/lib/final/types'
 import type { VocabData } from '@/lib/final/types'
-
-type Mode = 'browse' | 'test' | 'dictation'
 
 export function WordsTab({
   data,
   unknown,
   toggleUnknown,
   speak,
+  scope,
 }: {
   data: VocabData
   unknown: Set<string>
   toggleUnknown: (k: string, on?: boolean) => void
   speak: (t: string) => void
+  /** Show only these word keys (the /p3-weak review list); starts on 不会. */
+  scope?: Set<string>
 }) {
-  const [filter, setFilter] = useState<Filter>(data.lessons[0]?.lesson ?? 'all')
+  const [filter, setFilter] = useState<Filter>(scope ? 'unknown' : (data.lessons[0]?.lesson ?? 'all'))
   const [starOnly, setStarOnly] = useState(false)
   // 重点优先: 不会 words first, then ★, then the newest lessons (test + 听写 only)
   const [priority, setPriority] = useState(true)
@@ -31,11 +35,14 @@ export function WordsTab({
 
   // a running TestRun keeps its own ordered copy, so marking words mid-test is safe
   const entries = useMemo(
-    () => buildEntries(data, filter, starOnly, unknown),
-    [data, filter, starOnly, unknown]
+    () => buildEntries(data, filter, starOnly, unknown, scope),
+    [data, filter, starOnly, unknown, scope]
   )
 
-  const total = data.lessons.reduce((n, l) => n + l.words.length, 0)
+  const total = scope?.size ?? data.lessons.reduce((n, l) => n + l.words.length, 0)
+  const lessons = scope
+    ? data.lessons.filter((l) => l.words.some((w) => scope.has(wordKey(l.lesson, w))))
+    : data.lessons
 
   return (
     <div>
@@ -46,46 +53,21 @@ export function WordsTab({
         <Chip active={filter === 'unknown'} onClick={() => setFilter('unknown')} warn>
           不会 {unknown.size}
         </Chip>
-        {data.lessons.map((l) => (
+        {lessons.map((l) => (
           <Chip key={l.lesson} active={filter === l.lesson} onClick={() => setFilter(l.lesson)}>
             第{l.lesson}课
           </Chip>
         ))}
       </div>
 
-      <div className="mb-4 flex flex-wrap items-center gap-2">
-        {(
-          [
-            ['browse', '📖 看'],
-            ['test', '🧠 自测'],
-            ['dictation', '✏️ 听写'],
-          ] as [Mode, string][]
-        ).map(([m, label]) => (
-          <button
-            key={m}
-            type="button"
-            onClick={() => setMode(m)}
-            className={cn(
-              'min-h-11 rounded-full px-4 text-[15px] font-semibold',
-              mode === m ? 'bg-white text-indigo-700 shadow' : 'bg-white/20 text-white'
-            )}
-          >
-            {label}
-          </button>
-        ))}
-        <div className="ml-auto flex flex-wrap items-center gap-x-4">
-          {mode !== 'browse' && (
-            <label className="flex min-h-11 items-center gap-2 text-sm text-white">
-              <input type="checkbox" checked={priority} onChange={(e) => setPriority(e.target.checked)} />
-              重点优先
-            </label>
-          )}
-          <label className="flex min-h-11 items-center gap-2 text-sm text-white">
-            <input type="checkbox" checked={starOnly} onChange={(e) => setStarOnly(e.target.checked)} />
-            只看 ★
-          </label>
-        </div>
-      </div>
+      <ModeBar
+        mode={mode}
+        setMode={setMode}
+        priority={priority}
+        setPriority={setPriority}
+        starOnly={starOnly}
+        setStarOnly={setStarOnly}
+      />
 
       {entries.length === 0 ? (
         <Card className="text-center text-gray-500">
